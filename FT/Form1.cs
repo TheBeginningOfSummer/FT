@@ -19,24 +19,30 @@ namespace FT
         {
             InitializeComponent();
             tabControl1.Selecting += new TabControlCancelEventHandler(tabControl1_Selecting);
-
-            //数据库初始化
-            SensorDataManager.InitializeDatabase();
-            //设置查询探测器类型
-            CB_SensorType.Items.Add("");
-            CB_SensorType.Items.Add("金属");
-            CB_SensorType.Items.Add("陶瓷");
-            CB_SensorType.Items.Add("晶圆");
-            //设置查询时间上下限
-            DTP_MinTime.Value = Convert.ToDateTime(DateTime.Now.AddDays(-7));
-            DTP_MaxTime.Value = Convert.ToDateTime(DateTime.Now.AddDays(1));
-
-            //托盘数据
-            trayManager = new TrayManager();
-            //托盘类型设置
-            foreach (var trayType in trayManager.TrayType)
+            try
             {
-                CB_TypeOfTray.Items.Add(trayType.Key);
+                //数据库初始化
+                SensorDataManager.InitializeDatabase();
+                //设置查询探测器类型
+                CB_SensorType.Items.Add("");
+                CB_SensorType.Items.Add("金属");
+                CB_SensorType.Items.Add("陶瓷");
+                CB_SensorType.Items.Add("晶圆");
+                //设置查询时间上下限
+                DTP_MinTime.Value = Convert.ToDateTime(DateTime.Now.AddDays(-7));
+                DTP_MaxTime.Value = Convert.ToDateTime(DateTime.Now.AddDays(1));
+
+                //托盘数据
+                trayManager = new TrayManager();
+                //托盘类型设置
+                foreach (var trayType in trayManager.TrayType)
+                {
+                    CB_TypeOfTray.Items.Add(trayType.Key);
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "程序初始化");
             }
         }
 
