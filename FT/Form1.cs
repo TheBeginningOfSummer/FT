@@ -1,4 +1,5 @@
 ﻿using FT.Data;
+using MyToolkit;
 using System;
 using System.Drawing;
 using System.Threading.Tasks;
@@ -164,7 +165,7 @@ namespace FT
                 tray.UpdateTrayLabel(PN_Trays);
             }
         }
-
+        
         private void BTN_MappingTest_Click(object sender, EventArgs e)
         {
             PN_Trays.Controls.Clear();
@@ -172,19 +173,7 @@ namespace FT
 
         private void BTN_MappingTest2_Click(object sender, EventArgs e)
         {
-            //Task.Run(() =>
-            //{
-            //    foreach (var tray in trayManager.Trays)
-            //    {
-            //        tray.TrayNumber = "2333";
-            //        foreach (var item in tray.Sensors)
-            //        {
-            //            item.Value.SensorCode = "123";
-            //            //item.Value.SensorQuality = 0;
-            //            Thread.Sleep(100);
-            //        }
-            //    }
-            //});
+            //JsonManager.SaveJsonString(Environment.CurrentDirectory+"\\Configuration.json",)
         }
         #endregion
         

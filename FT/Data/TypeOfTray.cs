@@ -26,6 +26,7 @@ namespace FT.Data
 
     public class TypeOfTray
     {
+        public int Index { get; set; }
         public string TrayType { get; set; }
         public int Length { get; set; }
         public int Width { get; set; }
