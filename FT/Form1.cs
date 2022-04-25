@@ -173,7 +173,7 @@ namespace FT
 
         private void BTN_MappingTest2_Click(object sender, EventArgs e)
         {
-            JsonManager.SaveJsonString(Environment.CurrentDirectory + "\\Configuration.json", "123", "321");
+            //JsonManager.SaveJsonString(Environment.CurrentDirectory + "\\Configuration.json", "123", "321");
         }
         #endregion
         
