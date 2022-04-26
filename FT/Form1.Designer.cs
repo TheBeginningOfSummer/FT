@@ -7090,7 +7090,7 @@
             this.groupBox14.Size = new System.Drawing.Size(150, 315);
             this.groupBox14.TabIndex = 171;
             this.groupBox14.TabStop = false;
-            this.groupBox14.Text = "测试2";
+            this.groupBox14.Text = "测试3";
             // 
             // Y100
             // 
@@ -10000,7 +10000,7 @@
             this.groupBox8.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox8.Name = "groupBox8";
             this.groupBox8.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox8.Size = new System.Drawing.Size(150, 315);
+            this.groupBox8.Size = new System.Drawing.Size(152, 315);
             this.groupBox8.TabIndex = 111;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "测试3";

@@ -39,6 +39,8 @@ namespace FT
                 {
                     CB_TypeOfTray.Items.Add(trayType.Key);
                 }
+
+                //Correction correction = new Correction(this);
             }
             catch (Exception e)
             {
@@ -57,9 +59,9 @@ namespace FT
                         communication.RefreshData();
 
                         //当前托盘索引更新
-                        trayManager.TrayIndex = int.Parse(communication.ReadDataString[20]);
+                        trayManager.TrayIndex = int.Parse(communication.ReadTestInformation[20]);
                         //托盘数据初始化
-                        if (communication.ReadDataBool[2])
+                        if (communication.ReadFlagBits[2])
                         {
                             trayManager.InitializeTrays(CB_TypeOfTray.Text);
                             foreach (var tray in trayManager.Trays)
@@ -67,34 +69,35 @@ namespace FT
                                 tray.UpdateTrayLabel(PN_Trays);
                             }
                             //托盘初始化完成,PLC检测到此值为true后，将PLC标志位[2]置为false
-                            communication.WriteDataBool[2] = true;
+                            communication.WriteFlagBits[2] = true;
                         }
                         //托盘扫码完成
-                        if (communication.ReadDataBool[0])
+                        if (communication.ReadFlagBits[0])
                         {
-                            trayManager.SetTrayNumber(communication.ReadDataString[4]);
+                            trayManager.SetTrayNumber(communication.ReadTestInformation[4]);
                             //托盘扫码完成,PLC检测到此值为true后，将PLC标志位[0]置为false
-                            communication.WriteDataBool[0] = true;
+                            communication.WriteFlagBits[0] = true;
                         }
                         //产品测试完成
-                        if (communication.ReadDataBool[1])
+                        if (communication.ReadFlagBits[1])
                         {
-                            SensorData sensor = new SensorData(communication.ReadDataString[0],
-                                communication.ReadDataString[1],
-                                communication.ReadDataString[2],
-                                int.Parse(communication.ReadDataString[3]),
-                                communication.ReadDataString[4],
-                                int.Parse(communication.ReadDataString[5]),
-                                communication.ReadDataString[6],
-                                communication.ReadDataString[7],
-                                communication.ReadDataString[8]);
+                            SensorData sensor = new SensorData(communication.ReadTestInformation[0],
+                                communication.ReadTestInformation[1],
+                                communication.ReadTestInformation[2],
+                                int.Parse(communication.ReadTestInformation[3]),
+                                communication.ReadTestInformation[4],
+                                int.Parse(communication.ReadTestInformation[5]),
+                                communication.ReadTestInformation[6],
+                                communication.ReadTestInformation[7],
+                                communication.ReadTestInformation[8]);
                             //Mapping图更新
                             trayManager.SetSensorDataInTray(sensor);
                             //数据库数据存储
                             SensorDataManager.AddSensor(sensor);
                             //产品信息录入完成。PLC检测到此值为true后，将PLC标志位[1]置为false
-                            communication.WriteDataBool[1] = true;
+                            communication.WriteFlagBits[1] = true;
                         }
+                        //
 
                         communication.RefreshData();
                     }
