@@ -53,14 +53,14 @@ namespace FT
         {
             compolet = CompoletSingleton.GetCompolet();
 
-            ReadFlagBits = new bool[100];
             ReadPLCIO = new bool[400];
             ReadLocation = new double[200];
+            ReadFlagBits = new bool[100];
             ReadTestInformation = new string[100];
 
-            WriteFlagBits = new bool[50];
             WritePLCIO = new bool[700];
             WriteProductionData = new int[100];
+            WriteFlagBits = new bool[50];
         }
 
         public void RefreshData()

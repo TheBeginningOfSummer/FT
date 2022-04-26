@@ -2,6 +2,7 @@
 using MyToolkit;
 using System;
 using System.Drawing;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -9,11 +10,11 @@ namespace FT
 {
     public partial class Form1 : Form
     {
-        LogFile logfile;
-
         Communication communication = Communication.singleton;
         //托盘数据
         TrayManager trayManager;
+
+        LogFile logfile;
 
         public Form1()
         {
@@ -39,8 +40,6 @@ namespace FT
                 {
                     CB_TypeOfTray.Items.Add(trayType.Key);
                 }
-
-                //Correction correction = new Correction(this);
             }
             catch (Exception e)
             {
@@ -56,6 +55,7 @@ namespace FT
                 {
                     try
                     {
+                        Thread.Sleep(300);
                         communication.RefreshData();
 
                         //当前托盘索引更新
@@ -97,7 +97,12 @@ namespace FT
                             //产品信息录入完成。PLC检测到此值为true后，将PLC标志位[1]置为false
                             communication.WriteFlagBits[1] = true;
                         }
-                        //
+                        //示教界面数据更新
+                        SetTextBoxText(txtX示教吸1实盘第一列, communication.ReadLocation[24]);
+                        SetTextBoxText(txtX示教吸2实盘第一列, communication.ReadLocation[25]);
+
+                        //IO信息界面
+                        SetLabelColor(communication.ReadPLCIO[0], X00);
 
                         communication.RefreshData();
                     }
@@ -116,6 +121,11 @@ namespace FT
             {
                 if (e.TabPageIndex == 20) e.Cancel = true;
             }
+
+        }
+
+        private void ManualBtn_Click(object sender, EventArgs e)
+        {
 
         }
 
@@ -139,18 +149,24 @@ namespace FT
             
         }
 
-        private void ManualBtn_Click(object sender, EventArgs e)
+        public void SetLabelColor(bool plcIO, Label indicator)
         {
+            if (plcIO)
+            {
+                indicator.Invoke(new Action(() => indicator.BackColor = Color.Lime));
+            }
+            else
+            {
+                indicator.Invoke(new Action(() => indicator.BackColor = Color.White));
+            }
+        }
 
+        public void SetTextBoxText<T>(TextBox textBox, T variable)
+        {
+            textBox.Invoke(new Action(() => textBox.Text = variable.ToString()));
         }
 
         #region 数据库操作
-        private void BTN_AddItem_Click(object sender, EventArgs e)
-        {
-            //SensorData sensor = new SensorData("1008", "类型2", "1-2", 0, "11111", 2, "合格", DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), "default");
-            //SensorDataManager.AddSensor(sensor);
-        }
-
         private void BTN_SensorInquire_Click(object sender, EventArgs e)
         {
             try
@@ -184,10 +200,20 @@ namespace FT
         {
             //JsonManager.SaveJsonString(Environment.CurrentDirectory + "\\Configuration.json", "123", "321");
         }
+
         #endregion
-        
 
+        #region 示教操作
+        private void btnX示教吸1实盘第一列_MouseDown(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[30] = true;
+        }
 
+        private void btnX示教吸1实盘第一列_MouseUp(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[30] = false;
+        }
 
+        #endregion
     }
 }

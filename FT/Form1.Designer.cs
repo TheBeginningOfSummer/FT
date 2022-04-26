@@ -1352,7 +1352,6 @@
             this.LB_SensorCode = new System.Windows.Forms.Label();
             this.LB_InquireCondition = new System.Windows.Forms.Label();
             this.BTN_SensorInquire = new System.Windows.Forms.Button();
-            this.BTN_AddItem = new System.Windows.Forms.Button();
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.tabPage5 = new System.Windows.Forms.TabPage();
@@ -6845,7 +6844,7 @@
             this.GB_Trays.Controls.Add(this.PN_Trays);
             this.GB_Trays.Location = new System.Drawing.Point(3, 3);
             this.GB_Trays.Name = "GB_Trays";
-            this.GB_Trays.Size = new System.Drawing.Size(1174, 651);
+            this.GB_Trays.Size = new System.Drawing.Size(1250, 651);
             this.GB_Trays.TabIndex = 0;
             this.GB_Trays.TabStop = false;
             this.GB_Trays.Text = "上料盘";
@@ -6856,7 +6855,7 @@
             this.PN_Trays.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PN_Trays.Location = new System.Drawing.Point(3, 20);
             this.PN_Trays.Name = "PN_Trays";
-            this.PN_Trays.Size = new System.Drawing.Size(1168, 628);
+            this.PN_Trays.Size = new System.Drawing.Size(1244, 628);
             this.PN_Trays.TabIndex = 0;
             // 
             // tabPage4
@@ -17233,6 +17232,8 @@
             this.btnX示教吸1实盘第一列.TabIndex = 44;
             this.btnX示教吸1实盘第一列.Text = "吸1实盘第一列";
             this.btnX示教吸1实盘第一列.UseVisualStyleBackColor = true;
+            this.btnX示教吸1实盘第一列.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnX示教吸1实盘第一列_MouseDown);
+            this.btnX示教吸1实盘第一列.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnX示教吸1实盘第一列_MouseUp);
             // 
             // label370
             // 
@@ -17256,7 +17257,6 @@
             this.tabPage6.Controls.Add(this.LB_SensorCode);
             this.tabPage6.Controls.Add(this.LB_InquireCondition);
             this.tabPage6.Controls.Add(this.BTN_SensorInquire);
-            this.tabPage6.Controls.Add(this.BTN_AddItem);
             this.tabPage6.Controls.Add(this.dataGridView);
             this.tabPage6.Controls.Add(this.textBox1);
             this.tabPage6.Location = new System.Drawing.Point(4, 44);
@@ -17271,7 +17271,7 @@
             // 
             this.CB_SensorType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.CB_SensorType.FormattingEnabled = true;
-            this.CB_SensorType.Location = new System.Drawing.Point(1046, 60);
+            this.CB_SensorType.Location = new System.Drawing.Point(1127, 60);
             this.CB_SensorType.Name = "CB_SensorType";
             this.CB_SensorType.Size = new System.Drawing.Size(121, 24);
             this.CB_SensorType.TabIndex = 14;
@@ -17280,7 +17280,7 @@
             // 
             this.LB_SensorType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.LB_SensorType.AutoSize = true;
-            this.LB_SensorType.Location = new System.Drawing.Point(986, 63);
+            this.LB_SensorType.Location = new System.Drawing.Point(1065, 63);
             this.LB_SensorType.Name = "LB_SensorType";
             this.LB_SensorType.Size = new System.Drawing.Size(56, 17);
             this.LB_SensorType.TabIndex = 13;
@@ -17290,7 +17290,7 @@
             // 
             this.LB_InquireTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.LB_InquireTime.AutoSize = true;
-            this.LB_InquireTime.Location = new System.Drawing.Point(986, 98);
+            this.LB_InquireTime.Location = new System.Drawing.Point(1065, 98);
             this.LB_InquireTime.Name = "LB_InquireTime";
             this.LB_InquireTime.Size = new System.Drawing.Size(104, 17);
             this.LB_InquireTime.TabIndex = 12;
@@ -17301,7 +17301,7 @@
             this.DTP_MaxTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.DTP_MaxTime.CustomFormat = "yyyy-MM-dd HH:mm:ss";
             this.DTP_MaxTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DTP_MaxTime.Location = new System.Drawing.Point(988, 148);
+            this.DTP_MaxTime.Location = new System.Drawing.Point(1068, 148);
             this.DTP_MaxTime.Name = "DTP_MaxTime";
             this.DTP_MaxTime.ShowUpDown = true;
             this.DTP_MaxTime.Size = new System.Drawing.Size(160, 24);
@@ -17312,7 +17312,7 @@
             this.DTP_MinTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.DTP_MinTime.CustomFormat = "yyyy-MM-dd HH:mm:ss";
             this.DTP_MinTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DTP_MinTime.Location = new System.Drawing.Point(989, 118);
+            this.DTP_MinTime.Location = new System.Drawing.Point(1068, 118);
             this.DTP_MinTime.Name = "DTP_MinTime";
             this.DTP_MinTime.ShowUpDown = true;
             this.DTP_MinTime.Size = new System.Drawing.Size(160, 24);
@@ -17322,7 +17322,7 @@
             // TB_SensorCode
             // 
             this.TB_SensorCode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TB_SensorCode.Location = new System.Drawing.Point(1046, 30);
+            this.TB_SensorCode.Location = new System.Drawing.Point(1127, 33);
             this.TB_SensorCode.Name = "TB_SensorCode";
             this.TB_SensorCode.Size = new System.Drawing.Size(100, 24);
             this.TB_SensorCode.TabIndex = 9;
@@ -17331,7 +17331,7 @@
             // 
             this.LB_SensorCode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.LB_SensorCode.AutoSize = true;
-            this.LB_SensorCode.Location = new System.Drawing.Point(986, 33);
+            this.LB_SensorCode.Location = new System.Drawing.Point(1065, 36);
             this.LB_SensorCode.Name = "LB_SensorCode";
             this.LB_SensorCode.Size = new System.Drawing.Size(56, 17);
             this.LB_SensorCode.TabIndex = 8;
@@ -17342,7 +17342,7 @@
             this.LB_InquireCondition.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.LB_InquireCondition.AutoSize = true;
             this.LB_InquireCondition.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LB_InquireCondition.Location = new System.Drawing.Point(986, 3);
+            this.LB_InquireCondition.Location = new System.Drawing.Point(1065, 3);
             this.LB_InquireCondition.Name = "LB_InquireCondition";
             this.LB_InquireCondition.Size = new System.Drawing.Size(93, 17);
             this.LB_InquireCondition.TabIndex = 7;
@@ -17351,24 +17351,13 @@
             // BTN_SensorInquire
             // 
             this.BTN_SensorInquire.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BTN_SensorInquire.Location = new System.Drawing.Point(989, 195);
+            this.BTN_SensorInquire.Location = new System.Drawing.Point(1068, 195);
             this.BTN_SensorInquire.Name = "BTN_SensorInquire";
             this.BTN_SensorInquire.Size = new System.Drawing.Size(75, 23);
             this.BTN_SensorInquire.TabIndex = 6;
             this.BTN_SensorInquire.Text = "查询";
             this.BTN_SensorInquire.UseVisualStyleBackColor = true;
             this.BTN_SensorInquire.Click += new System.EventHandler(this.BTN_SensorInquire_Click);
-            // 
-            // BTN_AddItem
-            // 
-            this.BTN_AddItem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BTN_AddItem.Location = new System.Drawing.Point(991, 500);
-            this.BTN_AddItem.Name = "BTN_AddItem";
-            this.BTN_AddItem.Size = new System.Drawing.Size(75, 23);
-            this.BTN_AddItem.TabIndex = 3;
-            this.BTN_AddItem.Text = "添加";
-            this.BTN_AddItem.UseVisualStyleBackColor = true;
-            this.BTN_AddItem.Click += new System.EventHandler(this.BTN_AddItem_Click);
             // 
             // dataGridView
             // 
@@ -17381,13 +17370,13 @@
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.ReadOnly = true;
             this.dataGridView.RowTemplate.Height = 23;
-            this.dataGridView.Size = new System.Drawing.Size(976, 683);
+            this.dataGridView.Size = new System.Drawing.Size(1056, 683);
             this.dataGridView.TabIndex = 2;
             // 
             // textBox1
             // 
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(989, 662);
+            this.textBox1.Location = new System.Drawing.Point(1068, 662);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(76, 24);
@@ -19558,7 +19547,6 @@
         private System.Windows.Forms.TextBox txtBk1示教当前位置;
         private System.Windows.Forms.Label label456;
         private System.Windows.Forms.DataGridView dataGridView;
-        private System.Windows.Forms.Button BTN_AddItem;
         private System.Windows.Forms.Button BTN_SensorInquire;
         private System.Windows.Forms.Label LB_InquireCondition;
         private System.Windows.Forms.DateTimePicker DTP_MaxTime;

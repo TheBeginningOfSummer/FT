@@ -12,7 +12,6 @@ using LitJson;
 
 namespace MyToolkit
 {
-
     public class DataConverter
     {
         public static byte[] HexStringToBytes(string hexString)
@@ -40,53 +39,6 @@ namespace MyToolkit
             }
             return hexString;
         }
-
-        //public static string HexStringToIntString(string hexString)
-        //{
-        //    if (int.TryParse(hexString, System.Globalization.NumberStyles.HexNumber, null, out int result))
-        //    {
-        //        return result.ToString();
-        //    }
-        //    return string.Empty;
-        //}
-
-        //public static int HexStringToInt(string hexString)
-        //{
-        //    if (int.TryParse(hexString, System.Globalization.NumberStyles.HexNumber, null, out int result))
-        //    {
-        //        return result;
-        //    }
-        //    return -1;
-        //}
-
-        //public static string IntStringToTwoDigitsHexString(string intString)
-        //{
-        //    if (int.TryParse(intString, out int result))
-        //    {
-        //        if (result < 0 || result > 255)
-        //            return "";
-        //        return result.ToString("X2");
-        //    }
-        //    return "";
-        //}
-
-        //public static string IntStringToFourDigitsHexString(string intString)
-        //{
-        //    if (int.TryParse(intString, out int result))
-        //    {
-        //        if (result < 0 || result > 65535)
-        //            return "";
-        //        return result.ToString("X4");
-        //    }
-        //    return "";
-        //}
-    //    //高低位互换
-    //    public static string LowHighReverse(string hexString)
-    //    {
-    //        byte[] bytes = HexStringToBytes(hexString);
-    //        Array.Reverse(bytes);
-    //        return BytesToHexString(bytes);
-    //    }
     }
 
     public class FileManager
