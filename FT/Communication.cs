@@ -39,7 +39,7 @@ namespace FT
         /// <summary>
         /// 读取运动参数
         /// </summary>
-        public double[] ReadPLCPmt { get; set; }
+        public double[] ReadPLCPmt { get; private set; }
         #endregion
 
         #region 写入PLC的数据
@@ -197,6 +197,13 @@ namespace FT
                 ReadBoolVariables(ReadPLCAlarm, "PlcOutAlarm", 16, 87);
                 ReadBoolVariables(ReadPLCAlarm, "PlcOutAlarm", 100, 117);
                 ReadBoolVariables(ReadPLCAlarm, "PlcOutAlarm", 120, 155);
+                #endregion
+
+                #region 读参数信息
+                for (int i = 0; i < 25; i++)
+                {
+                    ReadPLCPmt[i] = compolet.ReadVariableReal("PlcInPmt[" + i.ToString() + "]");
+                }
                 #endregion
             }
             catch (Exception ex)
