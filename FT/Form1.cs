@@ -56,7 +56,7 @@ namespace FT
                     try
                     {
                         Thread.Sleep(300);
-                        communication.RefreshData();
+                        communication.ReadData();
 
                         //当前托盘索引更新
                         trayManager.TrayIndex = int.Parse(communication.ReadTestInformation[20]);
@@ -104,7 +104,7 @@ namespace FT
                         //IO信息界面
                         SetLabelColor(communication.ReadPLCIO[0], X00);
 
-                        communication.RefreshData();
+                        communication.WriteData();
                     }
                     catch (Exception)
                     {
