@@ -1,6 +1,7 @@
 ﻿using FT.Data;
 using MyToolkit;
 using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Threading;
 using System.Threading.Tasks;
@@ -13,6 +14,8 @@ namespace FT
         Communication communication = Communication.singleton;
         //托盘数据
         TrayManager trayManager;
+        //报警信息
+        Dictionary<int, string> alarmInformation = new Dictionary<int, string>();
 
         LogFile logfile;
 

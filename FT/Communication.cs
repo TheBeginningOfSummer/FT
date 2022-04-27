@@ -36,6 +36,10 @@ namespace FT
         /// 读报警信息
         /// </summary>
         public bool[] ReadPLCAlarm { get; private set; }
+        /// <summary>
+        /// 读取运动参数
+        /// </summary>
+        public double[] ReadPLCPmt { get; set; }
         #endregion
 
         #region 写入PLC的数据
@@ -66,6 +70,7 @@ namespace FT
             ReadFlagBits = new bool[100];
             ReadTestInformation = new string[100];
             ReadPLCAlarm = new bool[200];
+            ReadPLCPmt = new double[50];
 
             WritePLCIO = new bool[700];
             WriteProductionData = new int[50];
@@ -355,6 +360,13 @@ namespace FT
 
                 #region 读报警信息
                 ReadBoolVariables(ReadPLCAlarm, "PlcOutAlarm", 0, 158);
+                #endregion
+
+                #region 读参数信息
+                for (int i = 0; i < 25; i++)
+                {
+                    ReadPLCPmt[i] = compolet.ReadVariableReal("PlcInPmt[" + i.ToString() + "]");
+                }
                 #endregion
             }
             catch (Exception ex)
