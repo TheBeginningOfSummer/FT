@@ -10,10 +10,10 @@ namespace FT
     public class LogFile
     {
 
-        public void Writelog(string strlog)
+        public void Writelog(string strlog, string fileName)
         {
             string strFilePath = AppDomain.CurrentDomain.BaseDirectory + "log";
-            string strFileName = DateTime.Now.ToString("yyyyMMdd") + ".log";
+            string strFileName = DateTime.Now.ToString("yyyyMMdd") + fileName + ".log";
             strFileName = strFilePath + "\\" + strFileName;
             if (!Directory.Exists(strFilePath))
             {

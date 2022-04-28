@@ -323,9 +323,9 @@
             this.groupBox44 = new System.Windows.Forms.GroupBox();
             this.btnJD4打开 = new System.Windows.Forms.Button();
             this.btnJD4加紧 = new System.Windows.Forms.Button();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtJD4指定位置 = new System.Windows.Forms.TextBox();
             this.label367 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtJD4当前位置 = new System.Windows.Forms.TextBox();
             this.btnJD4指定位置 = new System.Windows.Forms.Button();
             this.label368 = new System.Windows.Forms.Label();
             this.btnJD4停止 = new System.Windows.Forms.Button();
@@ -1542,7 +1542,7 @@
             this.TC_Main.Multiline = true;
             this.TC_Main.Name = "TC_Main";
             this.TC_Main.SelectedIndex = 0;
-            this.TC_Main.Size = new System.Drawing.Size(1264, 737);
+            this.TC_Main.Size = new System.Drawing.Size(1280, 737);
             this.TC_Main.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.TC_Main.TabIndex = 0;
             // 
@@ -1557,7 +1557,7 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage1.Size = new System.Drawing.Size(1256, 689);
+            this.tabPage1.Size = new System.Drawing.Size(1272, 689);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "自动操作";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -1566,7 +1566,7 @@
             // 
             this.ManualBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.ManualBtn.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.ManualBtn.Location = new System.Drawing.Point(212, 575);
+            this.ManualBtn.Location = new System.Drawing.Point(345, 575);
             this.ManualBtn.Margin = new System.Windows.Forms.Padding(2);
             this.ManualBtn.Name = "ManualBtn";
             this.ManualBtn.Size = new System.Drawing.Size(104, 47);
@@ -1578,7 +1578,7 @@
             // 
             this.InitialBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.InitialBtn.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.InitialBtn.Location = new System.Drawing.Point(892, 575);
+            this.InitialBtn.Location = new System.Drawing.Point(1025, 575);
             this.InitialBtn.Margin = new System.Windows.Forms.Padding(2);
             this.InitialBtn.Name = "InitialBtn";
             this.InitialBtn.Size = new System.Drawing.Size(104, 47);
@@ -1590,7 +1590,7 @@
             // 
             this.StopBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.StopBtn.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.StopBtn.Location = new System.Drawing.Point(728, 575);
+            this.StopBtn.Location = new System.Drawing.Point(861, 575);
             this.StopBtn.Margin = new System.Windows.Forms.Padding(2);
             this.StopBtn.Name = "StopBtn";
             this.StopBtn.Size = new System.Drawing.Size(104, 47);
@@ -1602,7 +1602,7 @@
             // 
             this.StartBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.StartBtn.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.StartBtn.Location = new System.Drawing.Point(550, 575);
+            this.StartBtn.Location = new System.Drawing.Point(683, 575);
             this.StartBtn.Margin = new System.Windows.Forms.Padding(2);
             this.StartBtn.Name = "StartBtn";
             this.StartBtn.Size = new System.Drawing.Size(104, 47);
@@ -1614,7 +1614,7 @@
             // 
             this.AutoBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.AutoBtn.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.AutoBtn.Location = new System.Drawing.Point(383, 575);
+            this.AutoBtn.Location = new System.Drawing.Point(516, 575);
             this.AutoBtn.Margin = new System.Windows.Forms.Padding(2);
             this.AutoBtn.Name = "AutoBtn";
             this.AutoBtn.Size = new System.Drawing.Size(104, 47);
@@ -1634,7 +1634,7 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage2.Size = new System.Drawing.Size(1256, 689);
+            this.tabPage2.Size = new System.Drawing.Size(1272, 689);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "手动气缸";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -2881,7 +2881,7 @@
             this.tabPage7.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage7.Size = new System.Drawing.Size(1256, 689);
+            this.tabPage7.Size = new System.Drawing.Size(1272, 689);
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "手动电机1";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -5040,7 +5040,7 @@
             this.tabPage9.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage9.Name = "tabPage9";
             this.tabPage9.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage9.Size = new System.Drawing.Size(1256, 689);
+            this.tabPage9.Size = new System.Drawing.Size(1272, 689);
             this.tabPage9.TabIndex = 8;
             this.tabPage9.Text = "手动电机2";
             this.tabPage9.UseVisualStyleBackColor = true;
@@ -5049,9 +5049,9 @@
             // 
             this.groupBox44.Controls.Add(this.btnJD4打开);
             this.groupBox44.Controls.Add(this.btnJD4加紧);
-            this.groupBox44.Controls.Add(this.textBox6);
+            this.groupBox44.Controls.Add(this.txtJD4指定位置);
             this.groupBox44.Controls.Add(this.label367);
-            this.groupBox44.Controls.Add(this.textBox7);
+            this.groupBox44.Controls.Add(this.txtJD4当前位置);
             this.groupBox44.Controls.Add(this.btnJD4指定位置);
             this.groupBox44.Controls.Add(this.label368);
             this.groupBox44.Controls.Add(this.btnJD4停止);
@@ -5088,13 +5088,13 @@
             this.btnJD4加紧.Text = "加紧";
             this.btnJD4加紧.UseVisualStyleBackColor = true;
             // 
-            // textBox6
+            // txtJD4指定位置
             // 
-            this.textBox6.Location = new System.Drawing.Point(84, 45);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(68, 21);
-            this.textBox6.TabIndex = 51;
+            this.txtJD4指定位置.Location = new System.Drawing.Point(84, 45);
+            this.txtJD4指定位置.Margin = new System.Windows.Forms.Padding(2);
+            this.txtJD4指定位置.Name = "txtJD4指定位置";
+            this.txtJD4指定位置.Size = new System.Drawing.Size(68, 21);
+            this.txtJD4指定位置.TabIndex = 51;
             // 
             // label367
             // 
@@ -5107,14 +5107,14 @@
             this.label367.TabIndex = 50;
             this.label367.Text = "指定位置";
             // 
-            // textBox7
+            // txtJD4当前位置
             // 
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox7.Location = new System.Drawing.Point(84, 23);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(67, 14);
-            this.textBox7.TabIndex = 49;
+            this.txtJD4当前位置.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtJD4当前位置.Location = new System.Drawing.Point(84, 23);
+            this.txtJD4当前位置.Margin = new System.Windows.Forms.Padding(2);
+            this.txtJD4当前位置.Name = "txtJD4当前位置";
+            this.txtJD4当前位置.Size = new System.Drawing.Size(67, 14);
+            this.txtJD4当前位置.TabIndex = 49;
             // 
             // btnJD4指定位置
             // 
@@ -6798,7 +6798,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 44);
             this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1256, 689);
+            this.tabPage3.Size = new System.Drawing.Size(1272, 689);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Mapping信息";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -6842,7 +6842,7 @@
             this.GB_Trays.Controls.Add(this.PN_Trays);
             this.GB_Trays.Location = new System.Drawing.Point(3, 3);
             this.GB_Trays.Name = "GB_Trays";
-            this.GB_Trays.Size = new System.Drawing.Size(1250, 651);
+            this.GB_Trays.Size = new System.Drawing.Size(1251, 651);
             this.GB_Trays.TabIndex = 0;
             this.GB_Trays.TabStop = false;
             this.GB_Trays.Text = "上料盘";
@@ -6853,7 +6853,7 @@
             this.PN_Trays.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PN_Trays.Location = new System.Drawing.Point(3, 20);
             this.PN_Trays.Name = "PN_Trays";
-            this.PN_Trays.Size = new System.Drawing.Size(1244, 628);
+            this.PN_Trays.Size = new System.Drawing.Size(1245, 628);
             this.PN_Trays.TabIndex = 0;
             // 
             // tabPage4
@@ -7010,7 +7010,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 44);
             this.tabPage4.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1256, 689);
+            this.tabPage4.Size = new System.Drawing.Size(1272, 689);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "I/O信息";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -13854,7 +13854,7 @@
             this.tabPage8.Location = new System.Drawing.Point(4, 44);
             this.tabPage8.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Size = new System.Drawing.Size(1256, 689);
+            this.tabPage8.Size = new System.Drawing.Size(1272, 689);
             this.tabPage8.TabIndex = 7;
             this.tabPage8.Text = "示教";
             this.tabPage8.UseVisualStyleBackColor = true;
@@ -17259,7 +17259,7 @@
             this.tabPage6.Location = new System.Drawing.Point(4, 44);
             this.tabPage6.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(1256, 689);
+            this.tabPage6.Size = new System.Drawing.Size(1272, 689);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "信息追溯";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -17366,6 +17366,7 @@
             this.dataGridView.Location = new System.Drawing.Point(3, 3);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.ReadOnly = true;
+            this.dataGridView.RowHeadersWidth = 51;
             this.dataGridView.RowTemplate.Height = 23;
             this.dataGridView.Size = new System.Drawing.Size(1056, 683);
             this.dataGridView.TabIndex = 2;
@@ -17379,7 +17380,7 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 44);
             this.tabPage5.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(1256, 689);
+            this.tabPage5.Size = new System.Drawing.Size(1272, 689);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "参数设置";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -18345,8 +18346,9 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1264, 734);
             this.Controls.Add(this.TC_Main);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -19454,9 +19456,9 @@
         private System.Windows.Forms.GroupBox groupBox44;
         private System.Windows.Forms.Button btnJD4打开;
         private System.Windows.Forms.Button btnJD4加紧;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtJD4指定位置;
         private System.Windows.Forms.Label label367;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtJD4当前位置;
         private System.Windows.Forms.Button btnJD4指定位置;
         private System.Windows.Forms.Label label368;
         private System.Windows.Forms.Button btnJD4停止;

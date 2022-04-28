@@ -32,7 +32,7 @@ namespace MyToolkit
             string hexString = "";
             if (bytes != null)
             {
-                for (int i = 0;i < bytes.Length; i++)
+                for (int i = 0; i < bytes.Length; i++)
                 {
                     hexString += bytes[i].ToString("X2");
                 }
@@ -84,7 +84,7 @@ namespace MyToolkit
                 Directory.CreateDirectory(path);
             }
             path = path + fileName + ".json";
-            
+
             string jsonString = JsonMapper.ToJson(data);
             byte[] jsonBytes = Encoding.UTF8.GetBytes(jsonString);
             FileStream file = new FileStream(path, FileMode.Create);
@@ -93,20 +93,23 @@ namespace MyToolkit
             file.Close();
         }
 
-        public static T ReadJsonString<T>(string path)
+        public static T ReadJsonString<T>(string path, string fileName)
         {
             try
             {
-                if (File.Exists(path))
+                if (!Directory.Exists(path))
                 {
-                    FileStream file = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-                    StreamReader stream = new StreamReader(file);
-                    T jsonData = JsonMapper.ToObject<T>(stream.ReadToEnd());
-                    file.Flush();
-                    file.Close();
-                    //T jsonData = JsonMapper.ToObject<T>(File.ReadAllText(path));
-                    return jsonData;
+                    Directory.CreateDirectory(path);
                 }
+                path = path + fileName + ".json";
+
+                FileStream file = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+                StreamReader stream = new StreamReader(file);
+                T jsonData = JsonMapper.ToObject<T>(stream.ReadToEnd());
+                file.Flush();
+                file.Close();
+                //T jsonData = JsonMapper.ToObject<T>(File.ReadAllText(path));
+                return jsonData;
             }
             catch (Exception)
             {

@@ -22,13 +22,13 @@ namespace FT
             try
             {
                 //读取托盘种类配置文件
-                TrayType = JsonManager.ReadJsonString<Dictionary<string, TypeOfTray>>(Environment.CurrentDirectory + "\\Configuration\\TypeOfTray.json");
+                TrayType = JsonManager.ReadJsonString<Dictionary<string, TypeOfTray>>(Environment.CurrentDirectory + "\\Configuration\\", "TypeOfTray");
                 //读取Mapping图布局配置文件
-                MappingLayout = JsonManager.ReadJsonString<List<Position>>(Environment.CurrentDirectory + "\\Configuration\\MappingLayout.json");
+                MappingLayout = JsonManager.ReadJsonString<List<Position>>(Environment.CurrentDirectory + "\\Configuration\\", "MappingLayout");
             }
-            catch (Exception e)
+            catch (Exception)
             {
-                logfile.Writelog("读取托盘配置数据：" + e.Message);
+                //logfile.Writelog("读取托盘配置数据：" + e.Message);
             }
         }
 

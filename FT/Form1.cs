@@ -44,8 +44,7 @@ namespace FT
                     CB_TypeOfTray.Items.Add(trayType.Key);
                 }
                 //报警信息读取
-                alarmInformation = JsonManager.ReadJsonString<Dictionary<string, string>>(Environment.CurrentDirectory + "\\Configuration\\Alarm.json");
-                
+                alarmInformation = JsonManager.ReadJsonString<Dictionary<string, string>>(Environment.CurrentDirectory + "\\Configuration\\", "Alarm");
             }
             catch (Exception e)
             {
@@ -57,7 +56,7 @@ namespace FT
         {
             if (true)//禁用某个Tab
             {
-                if (e.TabPageIndex == 2) e.Cancel = true;
+                if (e.TabPageIndex == 20) e.Cancel = true;
             }
         }
 
@@ -70,7 +69,7 @@ namespace FT
                     try
                     {
                         Thread.Sleep(300);
-                        communication.ReadData();
+                        communication.RefreshData();
 
                         //当前托盘索引更新
                         trayManager.TrayIndex = int.Parse(communication.ReadTestInformation[20]);
@@ -112,6 +111,7 @@ namespace FT
                             communication.WriteFlagBits[1] = true;
                         }
 
+                        #region 更新数据
                         //示教界面数据更新
                         SetTextBoxText(txtX示教吸1实盘第一列, communication.ReadLocation[24]);
                         SetTextBoxText(txtX示教吸2实盘第一列, communication.ReadLocation[25]);
@@ -225,8 +225,8 @@ namespace FT
                         SetTextBoxText(txt实盘示教当前位置, communication.ReadLocation[2]);
                         SetTextBoxText(txtNG盘示教当前位置, communication.ReadLocation[3]);
                         SetTextBoxText(txt倒实盘示教当前位置, communication.ReadLocation[4]);
-                        SetTextBoxText(txt平移示教当前位置, communication.ReadLocation[5]);
-                        //SetTextBoxText(txtX示教当前位置, communication.ReadLocation[6]);
+                        //SetTextBoxText(txt平移示教当前位置, communication.ReadLocation[5]);
+                        SetTextBoxText(txtX示教当前位置, communication.ReadLocation[6]);
                         SetTextBoxText(txtBYX示教当前位置, communication.ReadLocation[7]);
                         SetTextBoxText(txtBYY示教当前位置, communication.ReadLocation[8]);
                         SetTextBoxText(txtBYZ示教当前位置, communication.ReadLocation[9]);
@@ -379,38 +379,38 @@ namespace FT
                         SetLabelColor(communication.ReadPLCIO[109], X109);
                         SetLabelColor(communication.ReadPLCIO[110], X110);
                         SetLabelColor(communication.ReadPLCIO[111], X111);
-                        SetLabelColor(communication.ReadPLCIO[112], X112);
-                        SetLabelColor(communication.ReadPLCIO[113], X113);
-                        SetLabelColor(communication.ReadPLCIO[114], X114);
-                        SetLabelColor(communication.ReadPLCIO[115], X115);
-                        SetLabelColor(communication.ReadPLCIO[116], X116);
-                        SetLabelColor(communication.ReadPLCIO[117], X117);
-                        SetLabelColor(communication.ReadPLCIO[118], X118);
-                        SetLabelColor(communication.ReadPLCIO[119], X119);
-                        SetLabelColor(communication.ReadPLCIO[120], X120);
-                        SetLabelColor(communication.ReadPLCIO[121], X121);
-                        SetLabelColor(communication.ReadPLCIO[122], X122);
-                        SetLabelColor(communication.ReadPLCIO[123], X123);
-                        SetLabelColor(communication.ReadPLCIO[124], X124);
-                        SetLabelColor(communication.ReadPLCIO[125], X125);
-                        SetLabelColor(communication.ReadPLCIO[126], X126);
-                        SetLabelColor(communication.ReadPLCIO[127], X127);
-                        SetLabelColor(communication.ReadPLCIO[128], X128);
-                        SetLabelColor(communication.ReadPLCIO[129], X129);
-                        SetLabelColor(communication.ReadPLCIO[130], X130);
-                        SetLabelColor(communication.ReadPLCIO[131], X131);
-                        SetLabelColor(communication.ReadPLCIO[132], X132);
-                        SetLabelColor(communication.ReadPLCIO[133], X133);
-                        SetLabelColor(communication.ReadPLCIO[134], X134);
-                        SetLabelColor(communication.ReadPLCIO[135], X135);
-                        SetLabelColor(communication.ReadPLCIO[136], X136);
-                        SetLabelColor(communication.ReadPLCIO[137], X137);
-                        SetLabelColor(communication.ReadPLCIO[138], X138);
-                        SetLabelColor(communication.ReadPLCIO[139], X139);
-                        SetLabelColor(communication.ReadPLCIO[140], X140);
-                        SetLabelColor(communication.ReadPLCIO[141], X141);
-                        SetLabelColor(communication.ReadPLCIO[142], X142);
-                        SetLabelColor(communication.ReadPLCIO[143], X143);
+                        //SetLabelColor(communication.ReadPLCIO[112], X112);
+                        //SetLabelColor(communication.ReadPLCIO[113], X113);
+                        //SetLabelColor(communication.ReadPLCIO[114], X114);
+                        //SetLabelColor(communication.ReadPLCIO[115], X115);
+                        //SetLabelColor(communication.ReadPLCIO[116], X116);
+                        //SetLabelColor(communication.ReadPLCIO[117], X117);
+                        //SetLabelColor(communication.ReadPLCIO[118], X118);
+                        //SetLabelColor(communication.ReadPLCIO[119], X119);
+                        //SetLabelColor(communication.ReadPLCIO[120], X120);
+                        //SetLabelColor(communication.ReadPLCIO[121], X121);
+                        //SetLabelColor(communication.ReadPLCIO[122], X122);
+                        //SetLabelColor(communication.ReadPLCIO[123], X123);
+                        //SetLabelColor(communication.ReadPLCIO[124], X124);
+                        //SetLabelColor(communication.ReadPLCIO[125], X125);
+                        //SetLabelColor(communication.ReadPLCIO[126], X126);
+                        //SetLabelColor(communication.ReadPLCIO[127], X127);
+                        //SetLabelColor(communication.ReadPLCIO[128], X128);
+                        //SetLabelColor(communication.ReadPLCIO[129], X129);
+                        //SetLabelColor(communication.ReadPLCIO[130], X130);
+                        //SetLabelColor(communication.ReadPLCIO[131], X131);
+                        //SetLabelColor(communication.ReadPLCIO[132], X132);
+                        //SetLabelColor(communication.ReadPLCIO[133], X133);
+                        //SetLabelColor(communication.ReadPLCIO[134], X134);
+                        //SetLabelColor(communication.ReadPLCIO[135], X135);
+                        //SetLabelColor(communication.ReadPLCIO[136], X136);
+                        //SetLabelColor(communication.ReadPLCIO[137], X137);
+                        //SetLabelColor(communication.ReadPLCIO[138], X138);
+                        //SetLabelColor(communication.ReadPLCIO[139], X139);
+                        //SetLabelColor(communication.ReadPLCIO[140], X140);
+                        //SetLabelColor(communication.ReadPLCIO[141], X141);
+                        //SetLabelColor(communication.ReadPLCIO[142], X142);
+                        //SetLabelColor(communication.ReadPLCIO[143], X143);
 
                         SetLabelColor(communication.ReadPLCIO[150], Y00);
                         SetLabelColor(communication.ReadPLCIO[151], Y01);
@@ -524,22 +524,22 @@ namespace FT
                         SetLabelColor(communication.ReadPLCIO[259], Y109);
                         SetLabelColor(communication.ReadPLCIO[260], Y110);
                         SetLabelColor(communication.ReadPLCIO[261], Y111);
-                        SetLabelColor(communication.ReadPLCIO[262], Y112);
-                        SetLabelColor(communication.ReadPLCIO[263], Y113);
-                        SetLabelColor(communication.ReadPLCIO[264], Y114);
-                        SetLabelColor(communication.ReadPLCIO[265], Y115);
-                        SetLabelColor(communication.ReadPLCIO[266], Y116);
-                        SetLabelColor(communication.ReadPLCIO[267], Y117);
-                        SetLabelColor(communication.ReadPLCIO[268], Y118);
-                        SetLabelColor(communication.ReadPLCIO[269], Y119);
-                        SetLabelColor(communication.ReadPLCIO[270], Y120);
-                        SetLabelColor(communication.ReadPLCIO[271], Y121);
-                        SetLabelColor(communication.ReadPLCIO[272], Y122);
-                        SetLabelColor(communication.ReadPLCIO[273], Y123);
-                        SetLabelColor(communication.ReadPLCIO[274], Y124);
-                        SetLabelColor(communication.ReadPLCIO[275], Y125);
-                        SetLabelColor(communication.ReadPLCIO[276], Y126);
-                        SetLabelColor(communication.ReadPLCIO[277], Y127);
+                        //SetLabelColor(communication.ReadPLCIO[262], Y112);
+                        //SetLabelColor(communication.ReadPLCIO[263], Y113);
+                        //SetLabelColor(communication.ReadPLCIO[264], Y114);
+                        //SetLabelColor(communication.ReadPLCIO[265], Y115);
+                        //SetLabelColor(communication.ReadPLCIO[266], Y116);
+                        //SetLabelColor(communication.ReadPLCIO[267], Y117);
+                        //SetLabelColor(communication.ReadPLCIO[268], Y118);
+                        //SetLabelColor(communication.ReadPLCIO[269], Y119);
+                        //SetLabelColor(communication.ReadPLCIO[270], Y120);
+                        //SetLabelColor(communication.ReadPLCIO[271], Y121);
+                        //SetLabelColor(communication.ReadPLCIO[272], Y122);
+                        //SetLabelColor(communication.ReadPLCIO[273], Y123);
+                        //SetLabelColor(communication.ReadPLCIO[274], Y124);
+                        //SetLabelColor(communication.ReadPLCIO[275], Y125);
+                        //SetLabelColor(communication.ReadPLCIO[276], Y126);
+                        //SetLabelColor(communication.ReadPLCIO[277], Y127);
 
                         //参数设置
                         SetTextBoxText(txt上料X轴定位速度, communication.ReadPLCPmt[0]);
@@ -554,7 +554,7 @@ namespace FT
                         SetTextBoxText(txt黑体轴定位速度, communication.ReadPLCPmt[9]);
 
                         SetTextBoxText(txt上料X轴手动速度, communication.ReadPLCPmt[15]);
-                        SetTextBoxText(txt上料Y轴手动速度, communication.ReadPLCPmt[16]);
+                        //SetTextBoxText(txt上料Y轴手动速度, communication.ReadPLCPmt[16]);
                         SetTextBoxText(txt升降轴手动速度, communication.ReadPLCPmt[17]);
                         SetTextBoxText(txt平移轴手动速度, communication.ReadPLCPmt[18]);
                         SetTextBoxText(txt中空轴手动速度, communication.ReadPLCPmt[19]);
@@ -563,12 +563,11 @@ namespace FT
                         SetTextBoxText(txt搬运Z轴手动速度, communication.ReadPLCPmt[22]);
                         SetTextBoxText(txtSocket轴手动速度, communication.ReadPLCPmt[23]);
                         SetTextBoxText(txt黑体轴手动速度, communication.ReadPLCPmt[24]);
-
-                        communication.WriteData();
+                        #endregion
                     }
-                    catch (Exception e)
+                    catch (Exception)
                     {
-                        logfile.Writelog("数据更新循环：" + e.Message);
+                        //logfile.Writelog("数据更新循环：" + e.Message);
                     }
                 }
             });
@@ -588,13 +587,13 @@ namespace FT
                             if (communication.ReadPLCAlarm[i])
                             {
                                 MessageBox.Show(alarmInformation[i.ToString()], "报警信息");
-                                logfile.Writelog(alarmInformation[i.ToString()]);
+                                logfile.Writelog(alarmInformation[i.ToString()], "报警记录");
                             }
                         }
                     }
                     catch (Exception e)
                     {
-                        logfile.Writelog("报警监测循环：" + e.Message);
+                        logfile.Writelog("报警监测循环：" + e.Message, "报警记录");
                     }
                 }
             });
