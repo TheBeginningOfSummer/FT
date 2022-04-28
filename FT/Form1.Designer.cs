@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.TC_Main = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.ManualBtn = new System.Windows.Forms.Button();
             this.InitialBtn = new System.Windows.Forms.Button();
@@ -1351,7 +1351,6 @@
             this.LB_InquireCondition = new System.Windows.Forms.Label();
             this.BTN_SensorInquire = new System.Windows.Forms.Button();
             this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.groupBox62 = new System.Windows.Forms.GroupBox();
             this.txt黑体轴手动速度 = new System.Windows.Forms.TextBox();
@@ -1443,7 +1442,7 @@
             this.label469 = new System.Windows.Forms.Label();
             this.label464 = new System.Windows.Forms.Label();
             this.label463 = new System.Windows.Forms.Label();
-            this.tabControl1.SuspendLayout();
+            this.TC_Main.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox20.SuspendLayout();
@@ -1521,31 +1520,31 @@
             this.groupBox63.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // TC_Main
             // 
-            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.TC_Main.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControl1.Appearance = System.Windows.Forms.TabAppearance.Buttons;
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage7);
-            this.tabControl1.Controls.Add(this.tabPage9);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Controls.Add(this.tabPage8);
-            this.tabControl1.Controls.Add(this.tabPage6);
-            this.tabControl1.Controls.Add(this.tabPage5);
-            this.tabControl1.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.ItemSize = new System.Drawing.Size(120, 40);
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
-            this.tabControl1.Multiline = true;
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1264, 737);
-            this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.tabControl1.TabIndex = 0;
+            this.TC_Main.Appearance = System.Windows.Forms.TabAppearance.Buttons;
+            this.TC_Main.Controls.Add(this.tabPage1);
+            this.TC_Main.Controls.Add(this.tabPage2);
+            this.TC_Main.Controls.Add(this.tabPage7);
+            this.TC_Main.Controls.Add(this.tabPage9);
+            this.TC_Main.Controls.Add(this.tabPage3);
+            this.TC_Main.Controls.Add(this.tabPage4);
+            this.TC_Main.Controls.Add(this.tabPage8);
+            this.TC_Main.Controls.Add(this.tabPage6);
+            this.TC_Main.Controls.Add(this.tabPage5);
+            this.TC_Main.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TC_Main.ItemSize = new System.Drawing.Size(120, 40);
+            this.TC_Main.Location = new System.Drawing.Point(0, 0);
+            this.TC_Main.Margin = new System.Windows.Forms.Padding(2);
+            this.TC_Main.Multiline = true;
+            this.TC_Main.Name = "TC_Main";
+            this.TC_Main.SelectedIndex = 0;
+            this.TC_Main.Size = new System.Drawing.Size(1264, 737);
+            this.TC_Main.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.TC_Main.TabIndex = 0;
             // 
             // tabPage1
             // 
@@ -17257,7 +17256,6 @@
             this.tabPage6.Controls.Add(this.LB_InquireCondition);
             this.tabPage6.Controls.Add(this.BTN_SensorInquire);
             this.tabPage6.Controls.Add(this.dataGridView);
-            this.tabPage6.Controls.Add(this.textBox1);
             this.tabPage6.Location = new System.Drawing.Point(4, 44);
             this.tabPage6.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage6.Name = "tabPage6";
@@ -17371,15 +17369,6 @@
             this.dataGridView.RowTemplate.Height = 23;
             this.dataGridView.Size = new System.Drawing.Size(1056, 683);
             this.dataGridView.TabIndex = 2;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(1068, 662);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(76, 24);
-            this.textBox1.TabIndex = 1;
             // 
             // tabPage5
             // 
@@ -18359,12 +18348,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 734);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.TC_Main);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FT";
-            this.tabControl1.ResumeLayout(false);
+            this.TC_Main.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.groupBox20.ResumeLayout(false);
@@ -18507,14 +18496,13 @@
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl TC_Main;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.TabPage tabPage6;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button StopBtn;
         private System.Windows.Forms.Button StartBtn;
         private System.Windows.Forms.Button AutoBtn;
