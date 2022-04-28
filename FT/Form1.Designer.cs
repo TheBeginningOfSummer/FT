@@ -1522,9 +1522,6 @@
             // 
             // TC_Main
             // 
-            this.TC_Main.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.TC_Main.Appearance = System.Windows.Forms.TabAppearance.Buttons;
             this.TC_Main.Controls.Add(this.tabPage1);
             this.TC_Main.Controls.Add(this.tabPage2);
@@ -1535,6 +1532,7 @@
             this.TC_Main.Controls.Add(this.tabPage8);
             this.TC_Main.Controls.Add(this.tabPage6);
             this.TC_Main.Controls.Add(this.tabPage5);
+            this.TC_Main.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TC_Main.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TC_Main.ItemSize = new System.Drawing.Size(120, 40);
             this.TC_Main.Location = new System.Drawing.Point(0, 0);
@@ -1542,7 +1540,7 @@
             this.TC_Main.Multiline = true;
             this.TC_Main.Name = "TC_Main";
             this.TC_Main.SelectedIndex = 0;
-            this.TC_Main.Size = new System.Drawing.Size(1280, 737);
+            this.TC_Main.Size = new System.Drawing.Size(1264, 734);
             this.TC_Main.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.TC_Main.TabIndex = 0;
             // 
@@ -1557,7 +1555,7 @@
             this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage1.Size = new System.Drawing.Size(1272, 689);
+            this.tabPage1.Size = new System.Drawing.Size(1256, 686);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "自动操作";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -1566,7 +1564,7 @@
             // 
             this.ManualBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.ManualBtn.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.ManualBtn.Location = new System.Drawing.Point(345, 575);
+            this.ManualBtn.Location = new System.Drawing.Point(337, 572);
             this.ManualBtn.Margin = new System.Windows.Forms.Padding(2);
             this.ManualBtn.Name = "ManualBtn";
             this.ManualBtn.Size = new System.Drawing.Size(104, 47);
@@ -1578,7 +1576,7 @@
             // 
             this.InitialBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.InitialBtn.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.InitialBtn.Location = new System.Drawing.Point(1025, 575);
+            this.InitialBtn.Location = new System.Drawing.Point(1017, 572);
             this.InitialBtn.Margin = new System.Windows.Forms.Padding(2);
             this.InitialBtn.Name = "InitialBtn";
             this.InitialBtn.Size = new System.Drawing.Size(104, 47);
@@ -1590,7 +1588,7 @@
             // 
             this.StopBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.StopBtn.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.StopBtn.Location = new System.Drawing.Point(861, 575);
+            this.StopBtn.Location = new System.Drawing.Point(853, 572);
             this.StopBtn.Margin = new System.Windows.Forms.Padding(2);
             this.StopBtn.Name = "StopBtn";
             this.StopBtn.Size = new System.Drawing.Size(104, 47);
@@ -1602,7 +1600,7 @@
             // 
             this.StartBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.StartBtn.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.StartBtn.Location = new System.Drawing.Point(683, 575);
+            this.StartBtn.Location = new System.Drawing.Point(675, 572);
             this.StartBtn.Margin = new System.Windows.Forms.Padding(2);
             this.StartBtn.Name = "StartBtn";
             this.StartBtn.Size = new System.Drawing.Size(104, 47);
@@ -1614,7 +1612,7 @@
             // 
             this.AutoBtn.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.AutoBtn.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.AutoBtn.Location = new System.Drawing.Point(516, 575);
+            this.AutoBtn.Location = new System.Drawing.Point(508, 572);
             this.AutoBtn.Margin = new System.Windows.Forms.Padding(2);
             this.AutoBtn.Name = "AutoBtn";
             this.AutoBtn.Size = new System.Drawing.Size(104, 47);
@@ -1634,7 +1632,7 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage2.Size = new System.Drawing.Size(1272, 689);
+            this.tabPage2.Size = new System.Drawing.Size(1256, 686);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "手动气缸";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -2881,7 +2879,7 @@
             this.tabPage7.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage7.Size = new System.Drawing.Size(1272, 689);
+            this.tabPage7.Size = new System.Drawing.Size(1256, 686);
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "手动电机1";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -5040,7 +5038,7 @@
             this.tabPage9.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage9.Name = "tabPage9";
             this.tabPage9.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage9.Size = new System.Drawing.Size(1272, 689);
+            this.tabPage9.Size = new System.Drawing.Size(1256, 686);
             this.tabPage9.TabIndex = 8;
             this.tabPage9.Text = "手动电机2";
             this.tabPage9.UseVisualStyleBackColor = true;
@@ -6798,7 +6796,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 44);
             this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1272, 689);
+            this.tabPage3.Size = new System.Drawing.Size(1256, 686);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Mapping信息";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -6807,7 +6805,7 @@
             // 
             this.CB_TypeOfTray.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.CB_TypeOfTray.FormattingEnabled = true;
-            this.CB_TypeOfTray.Location = new System.Drawing.Point(102, 661);
+            this.CB_TypeOfTray.Location = new System.Drawing.Point(102, 658);
             this.CB_TypeOfTray.Name = "CB_TypeOfTray";
             this.CB_TypeOfTray.Size = new System.Drawing.Size(121, 24);
             this.CB_TypeOfTray.TabIndex = 5;
@@ -6817,7 +6815,7 @@
             // 
             this.LB_TypeOfTray.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.LB_TypeOfTray.AutoSize = true;
-            this.LB_TypeOfTray.Location = new System.Drawing.Point(8, 664);
+            this.LB_TypeOfTray.Location = new System.Drawing.Point(8, 661);
             this.LB_TypeOfTray.Name = "LB_TypeOfTray";
             this.LB_TypeOfTray.Size = new System.Drawing.Size(88, 17);
             this.LB_TypeOfTray.TabIndex = 4;
@@ -6826,7 +6824,7 @@
             // BTN_Mapping
             // 
             this.BTN_Mapping.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.BTN_Mapping.Location = new System.Drawing.Point(252, 660);
+            this.BTN_Mapping.Location = new System.Drawing.Point(252, 657);
             this.BTN_Mapping.Name = "BTN_Mapping";
             this.BTN_Mapping.Size = new System.Drawing.Size(100, 25);
             this.BTN_Mapping.TabIndex = 2;
@@ -6836,9 +6834,6 @@
             // 
             // GB_Trays
             // 
-            this.GB_Trays.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.GB_Trays.Controls.Add(this.PN_Trays);
             this.GB_Trays.Location = new System.Drawing.Point(3, 3);
             this.GB_Trays.Name = "GB_Trays";
@@ -7010,7 +7005,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 44);
             this.tabPage4.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1272, 689);
+            this.tabPage4.Size = new System.Drawing.Size(1256, 686);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "I/O信息";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -13854,7 +13849,7 @@
             this.tabPage8.Location = new System.Drawing.Point(4, 44);
             this.tabPage8.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Size = new System.Drawing.Size(1272, 689);
+            this.tabPage8.Size = new System.Drawing.Size(1256, 686);
             this.tabPage8.TabIndex = 7;
             this.tabPage8.Text = "示教";
             this.tabPage8.UseVisualStyleBackColor = true;
@@ -17259,7 +17254,7 @@
             this.tabPage6.Location = new System.Drawing.Point(4, 44);
             this.tabPage6.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(1272, 689);
+            this.tabPage6.Size = new System.Drawing.Size(1256, 686);
             this.tabPage6.TabIndex = 5;
             this.tabPage6.Text = "信息追溯";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -17268,7 +17263,7 @@
             // 
             this.CB_SensorType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.CB_SensorType.FormattingEnabled = true;
-            this.CB_SensorType.Location = new System.Drawing.Point(1127, 60);
+            this.CB_SensorType.Location = new System.Drawing.Point(1111, 60);
             this.CB_SensorType.Name = "CB_SensorType";
             this.CB_SensorType.Size = new System.Drawing.Size(121, 24);
             this.CB_SensorType.TabIndex = 14;
@@ -17277,7 +17272,7 @@
             // 
             this.LB_SensorType.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.LB_SensorType.AutoSize = true;
-            this.LB_SensorType.Location = new System.Drawing.Point(1065, 63);
+            this.LB_SensorType.Location = new System.Drawing.Point(1049, 63);
             this.LB_SensorType.Name = "LB_SensorType";
             this.LB_SensorType.Size = new System.Drawing.Size(56, 17);
             this.LB_SensorType.TabIndex = 13;
@@ -17287,7 +17282,7 @@
             // 
             this.LB_InquireTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.LB_InquireTime.AutoSize = true;
-            this.LB_InquireTime.Location = new System.Drawing.Point(1065, 98);
+            this.LB_InquireTime.Location = new System.Drawing.Point(1049, 98);
             this.LB_InquireTime.Name = "LB_InquireTime";
             this.LB_InquireTime.Size = new System.Drawing.Size(104, 17);
             this.LB_InquireTime.TabIndex = 12;
@@ -17298,7 +17293,7 @@
             this.DTP_MaxTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.DTP_MaxTime.CustomFormat = "yyyy-MM-dd HH:mm:ss";
             this.DTP_MaxTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DTP_MaxTime.Location = new System.Drawing.Point(1068, 148);
+            this.DTP_MaxTime.Location = new System.Drawing.Point(1052, 148);
             this.DTP_MaxTime.Name = "DTP_MaxTime";
             this.DTP_MaxTime.ShowUpDown = true;
             this.DTP_MaxTime.Size = new System.Drawing.Size(160, 24);
@@ -17309,7 +17304,7 @@
             this.DTP_MinTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.DTP_MinTime.CustomFormat = "yyyy-MM-dd HH:mm:ss";
             this.DTP_MinTime.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.DTP_MinTime.Location = new System.Drawing.Point(1068, 118);
+            this.DTP_MinTime.Location = new System.Drawing.Point(1052, 118);
             this.DTP_MinTime.Name = "DTP_MinTime";
             this.DTP_MinTime.ShowUpDown = true;
             this.DTP_MinTime.Size = new System.Drawing.Size(160, 24);
@@ -17319,7 +17314,7 @@
             // TB_SensorCode
             // 
             this.TB_SensorCode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TB_SensorCode.Location = new System.Drawing.Point(1127, 33);
+            this.TB_SensorCode.Location = new System.Drawing.Point(1111, 33);
             this.TB_SensorCode.Name = "TB_SensorCode";
             this.TB_SensorCode.Size = new System.Drawing.Size(100, 24);
             this.TB_SensorCode.TabIndex = 9;
@@ -17328,7 +17323,7 @@
             // 
             this.LB_SensorCode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.LB_SensorCode.AutoSize = true;
-            this.LB_SensorCode.Location = new System.Drawing.Point(1065, 36);
+            this.LB_SensorCode.Location = new System.Drawing.Point(1049, 36);
             this.LB_SensorCode.Name = "LB_SensorCode";
             this.LB_SensorCode.Size = new System.Drawing.Size(56, 17);
             this.LB_SensorCode.TabIndex = 8;
@@ -17339,7 +17334,7 @@
             this.LB_InquireCondition.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.LB_InquireCondition.AutoSize = true;
             this.LB_InquireCondition.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LB_InquireCondition.Location = new System.Drawing.Point(1065, 3);
+            this.LB_InquireCondition.Location = new System.Drawing.Point(1049, 3);
             this.LB_InquireCondition.Name = "LB_InquireCondition";
             this.LB_InquireCondition.Size = new System.Drawing.Size(93, 17);
             this.LB_InquireCondition.TabIndex = 7;
@@ -17348,7 +17343,7 @@
             // BTN_SensorInquire
             // 
             this.BTN_SensorInquire.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BTN_SensorInquire.Location = new System.Drawing.Point(1068, 195);
+            this.BTN_SensorInquire.Location = new System.Drawing.Point(1052, 195);
             this.BTN_SensorInquire.Name = "BTN_SensorInquire";
             this.BTN_SensorInquire.Size = new System.Drawing.Size(75, 23);
             this.BTN_SensorInquire.TabIndex = 6;
@@ -17368,7 +17363,7 @@
             this.dataGridView.ReadOnly = true;
             this.dataGridView.RowHeadersWidth = 51;
             this.dataGridView.RowTemplate.Height = 23;
-            this.dataGridView.Size = new System.Drawing.Size(1056, 683);
+            this.dataGridView.Size = new System.Drawing.Size(1040, 680);
             this.dataGridView.TabIndex = 2;
             // 
             // tabPage5
@@ -17380,7 +17375,7 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 44);
             this.tabPage5.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(1272, 689);
+            this.tabPage5.Size = new System.Drawing.Size(1256, 686);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "参数设置";
             this.tabPage5.UseVisualStyleBackColor = true;
