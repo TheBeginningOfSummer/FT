@@ -12,7 +12,7 @@ namespace FT
 
         public void Writelog(string strlog)
         {
-            string strFilePath = AppDomain.CurrentDomain.BaseDirectory + "\\log";
+            string strFilePath = AppDomain.CurrentDomain.BaseDirectory + "log";
             string strFileName = DateTime.Now.ToString("yyyyMMdd") + ".log";
             strFileName = strFilePath + "\\" + strFileName;
             if (!Directory.Exists(strFilePath))

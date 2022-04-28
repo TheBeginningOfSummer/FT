@@ -323,7 +323,7 @@ namespace FT
             try
             {
                 #region 读IO信息
-                ReadBoolVariables(ReadPLCIO, "PlcOutIO", 0, 258);
+                ReadBoolVariables(ReadPLCIO, "PlcOutIO", 0, 300);
                 #endregion
 
                 #region 读位置信息

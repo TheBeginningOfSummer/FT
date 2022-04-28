@@ -12,12 +12,12 @@ namespace FT
     public partial class Form1 : Form
     {
         Communication communication = Communication.singleton;
+        //日志文件
+        LogFile logfile = new LogFile();
+        //报警信息
+        Dictionary<string, string> alarmInformation;
         //托盘数据
         TrayManager trayManager;
-        //报警信息
-        Dictionary<int, string> alarmInformation = new Dictionary<int, string>();
-
-        LogFile logfile;
 
         public Form1()
         {
@@ -43,6 +43,9 @@ namespace FT
                 {
                     CB_TypeOfTray.Items.Add(trayType.Key);
                 }
+                //报警信息读取
+                alarmInformation = JsonManager.ReadJsonString<Dictionary<string, string>>(Environment.CurrentDirectory + "\\Configuration\\Alarm.json");
+                
             }
             catch (Exception e)
             {
@@ -109,10 +112,35 @@ namespace FT
 
                         communication.WriteData();
                     }
-                    catch (Exception)
+                    catch (Exception e)
                     {
+                        logfile.Writelog("数据更新循环：" + e.Message);
+                    }
+                }
+            });
+        }
 
-                        throw;
+        public void AlarmCheck()
+        {
+            Task.Run(() =>
+            {
+                while (true)
+                {
+                    try
+                    {
+                        Thread.Sleep(300);
+                        for (int i = 0; i < communication.ReadPLCAlarm.Length; i++)
+                        {
+                            if (communication.ReadPLCAlarm[i])
+                            {
+                                MessageBox.Show(alarmInformation[i.ToString()], "报警信息");
+                                logfile.Writelog(alarmInformation[i.ToString()]);
+                            }
+                        }
+                    }
+                    catch (Exception e)
+                    {
+                        logfile.Writelog("报警监测循环：" + e.Message);
                     }
                 }
             });
@@ -124,32 +152,6 @@ namespace FT
             {
                 if (e.TabPageIndex == 20) e.Cancel = true;
             }
-
-        }
-
-        private void ManualBtn_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        public void logStart_MouseUp(object sender, MouseEventArgs e)
-        {
-            //textBox1.Text = "0";
-            X00.BackColor = Color.White;
-        }
-
-        public void logStart_MouseDown(object sender, MouseEventArgs e)
-        {
-            textBox1.Text = "1";
-            logfile = new LogFile();
-            
-            logfile.Writelog("1");
-            logfile.Writelog("2");
-            logfile.Writelog("3");
-            logfile.Writelog("4");
-
-            X00.BackColor = Color.Lime;
-            
         }
 
         public void SetLabelColor(bool plcIO, Label indicator)

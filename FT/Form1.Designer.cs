@@ -1355,71 +1355,96 @@
             this.dataGridView = new System.Windows.Forms.DataGridView();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.groupBox62 = new System.Windows.Forms.GroupBox();
+            this.txt黑体轴手动速度 = new System.Windows.Forms.TextBox();
+            this.txt黑体轴手动速度设置 = new System.Windows.Forms.TextBox();
+            this.txtSocket轴手动速度 = new System.Windows.Forms.TextBox();
+            this.txt搬运Z轴手动速度 = new System.Windows.Forms.TextBox();
+            this.txt搬运Y轴手动速度 = new System.Windows.Forms.TextBox();
+            this.txtSocket轴手动速度设置 = new System.Windows.Forms.TextBox();
+            this.txt搬运X轴手动速度 = new System.Windows.Forms.TextBox();
+            this.label504 = new System.Windows.Forms.Label();
+            this.label505 = new System.Windows.Forms.Label();
+            this.txt搬运Z轴手动速度设置 = new System.Windows.Forms.TextBox();
+            this.label506 = new System.Windows.Forms.Label();
+            this.label507 = new System.Windows.Forms.Label();
+            this.label508 = new System.Windows.Forms.Label();
+            this.txt搬运Y轴手动速度设置 = new System.Windows.Forms.TextBox();
+            this.label509 = new System.Windows.Forms.Label();
+            this.txt中空轴手动速度 = new System.Windows.Forms.TextBox();
+            this.txt平移轴手动速度 = new System.Windows.Forms.TextBox();
+            this.txt搬运X轴手动速度设置 = new System.Windows.Forms.TextBox();
+            this.txt升降轴手动速度 = new System.Windows.Forms.TextBox();
+            this.txt上料Y轴定位手动 = new System.Windows.Forms.TextBox();
+            this.txt上料X轴手动速度 = new System.Windows.Forms.TextBox();
+            this.txt中空轴手动速度设置 = new System.Windows.Forms.TextBox();
+            this.label510 = new System.Windows.Forms.Label();
+            this.label511 = new System.Windows.Forms.Label();
+            this.label512 = new System.Windows.Forms.Label();
+            this.txt平移轴手动速度设置 = new System.Windows.Forms.TextBox();
+            this.label513 = new System.Windows.Forms.Label();
+            this.label514 = new System.Windows.Forms.Label();
+            this.label515 = new System.Windows.Forms.Label();
+            this.txt升降轴手动速度设置 = new System.Windows.Forms.TextBox();
+            this.label516 = new System.Windows.Forms.Label();
+            this.label517 = new System.Windows.Forms.Label();
+            this.label518 = new System.Windows.Forms.Label();
+            this.txt上料Y轴定位手动设置 = new System.Windows.Forms.TextBox();
+            this.label519 = new System.Windows.Forms.Label();
+            this.label520 = new System.Windows.Forms.Label();
+            this.label521 = new System.Windows.Forms.Label();
+            this.txt上料X轴手动速度设置 = new System.Windows.Forms.TextBox();
+            this.label522 = new System.Windows.Forms.Label();
+            this.label523 = new System.Windows.Forms.Label();
+            this.label524 = new System.Windows.Forms.Label();
+            this.label525 = new System.Windows.Forms.Label();
+            this.btn写入速度 = new System.Windows.Forms.Button();
             this.groupBox65 = new System.Windows.Forms.GroupBox();
             this.label487 = new System.Windows.Forms.Label();
             this.btn门开关功能开关 = new System.Windows.Forms.Button();
-            this.groupBox64 = new System.Windows.Forms.GroupBox();
-            this.label477 = new System.Windows.Forms.Label();
-            this.txt黑体轴手动速度设置 = new System.Windows.Forms.TextBox();
-            this.btn黑体轴手动速度设置 = new System.Windows.Forms.Button();
-            this.label478 = new System.Windows.Forms.Label();
-            this.txtSocket轴手动速度设置 = new System.Windows.Forms.TextBox();
-            this.btnSocket轴手动速度设置 = new System.Windows.Forms.Button();
-            this.label479 = new System.Windows.Forms.Label();
-            this.txt搬运Z轴手动速度设置 = new System.Windows.Forms.TextBox();
-            this.btn搬运Z轴手动速度设置 = new System.Windows.Forms.Button();
-            this.label480 = new System.Windows.Forms.Label();
-            this.txt搬运Y轴手动速度设置 = new System.Windows.Forms.TextBox();
-            this.btn搬运Y轴手动速度设置 = new System.Windows.Forms.Button();
-            this.label481 = new System.Windows.Forms.Label();
-            this.txt搬运X轴手动速度设置 = new System.Windows.Forms.TextBox();
-            this.btn搬运X轴手动速度设置 = new System.Windows.Forms.Button();
-            this.label482 = new System.Windows.Forms.Label();
-            this.txt中空轴手动速度设置 = new System.Windows.Forms.TextBox();
-            this.btn中空轴手动速度设置 = new System.Windows.Forms.Button();
-            this.label483 = new System.Windows.Forms.Label();
-            this.txt平移轴手动速度设置 = new System.Windows.Forms.TextBox();
-            this.btn平移轴手动速度设置 = new System.Windows.Forms.Button();
-            this.label484 = new System.Windows.Forms.Label();
-            this.txt升降轴手动速度设置 = new System.Windows.Forms.TextBox();
-            this.btn升降轴手动速度设置 = new System.Windows.Forms.Button();
-            this.label485 = new System.Windows.Forms.Label();
-            this.txt上料Y轴定位手动设置 = new System.Windows.Forms.TextBox();
-            this.btn上料Y轴定位手动设置 = new System.Windows.Forms.Button();
-            this.label486 = new System.Windows.Forms.Label();
-            this.txt上料X轴手动速度设置 = new System.Windows.Forms.TextBox();
-            this.btn上料X轴手动速度设置 = new System.Windows.Forms.Button();
             this.groupBox63 = new System.Windows.Forms.GroupBox();
+            this.txt黑体轴定位速度 = new System.Windows.Forms.TextBox();
+            this.txtSocket轴定位速度 = new System.Windows.Forms.TextBox();
+            this.txt搬运Z轴定位速度 = new System.Windows.Forms.TextBox();
+            this.txt搬运Y轴定位速度 = new System.Windows.Forms.TextBox();
+            this.txt搬运X轴定位速度 = new System.Windows.Forms.TextBox();
+            this.label503 = new System.Windows.Forms.Label();
+            this.label502 = new System.Windows.Forms.Label();
+            this.label501 = new System.Windows.Forms.Label();
+            this.label500 = new System.Windows.Forms.Label();
+            this.label499 = new System.Windows.Forms.Label();
+            this.label498 = new System.Windows.Forms.Label();
+            this.txt中空轴定位速度 = new System.Windows.Forms.TextBox();
+            this.txt平移轴定位速度 = new System.Windows.Forms.TextBox();
+            this.txt中空轴定位速度设置 = new System.Windows.Forms.TextBox();
+            this.txt上料X轴定位速度设置 = new System.Windows.Forms.TextBox();
+            this.txt升降轴定位速度 = new System.Windows.Forms.TextBox();
+            this.txt上料Y轴定位速度设置 = new System.Windows.Forms.TextBox();
+            this.txt上料Y轴定位速度 = new System.Windows.Forms.TextBox();
+            this.txt升降轴定位速度设置 = new System.Windows.Forms.TextBox();
+            this.txt上料X轴定位速度 = new System.Windows.Forms.TextBox();
+            this.txt平移轴定位速度设置 = new System.Windows.Forms.TextBox();
+            this.label497 = new System.Windows.Forms.Label();
+            this.label496 = new System.Windows.Forms.Label();
+            this.label495 = new System.Windows.Forms.Label();
+            this.label494 = new System.Windows.Forms.Label();
+            this.label493 = new System.Windows.Forms.Label();
+            this.label492 = new System.Windows.Forms.Label();
             this.label475 = new System.Windows.Forms.Label();
             this.txt黑体轴定位速度设置 = new System.Windows.Forms.TextBox();
-            this.btn黑体轴定位速度设置 = new System.Windows.Forms.Button();
             this.label476 = new System.Windows.Forms.Label();
             this.txtSocket轴定位速度设置 = new System.Windows.Forms.TextBox();
-            this.btnSocket轴定位速度设置 = new System.Windows.Forms.Button();
             this.label473 = new System.Windows.Forms.Label();
             this.txt搬运Z轴定位速度设置 = new System.Windows.Forms.TextBox();
-            this.btn搬运Z轴定位速度设置 = new System.Windows.Forms.Button();
             this.label474 = new System.Windows.Forms.Label();
             this.txt搬运Y轴定位速度设置 = new System.Windows.Forms.TextBox();
-            this.btn搬运Y轴定位速度设置 = new System.Windows.Forms.Button();
             this.label470 = new System.Windows.Forms.Label();
             this.txt搬运X轴定位速度设置 = new System.Windows.Forms.TextBox();
-            this.btn搬运X轴定位速度设置 = new System.Windows.Forms.Button();
             this.label471 = new System.Windows.Forms.Label();
-            this.txt中空轴定位速度设置 = new System.Windows.Forms.TextBox();
-            this.btn中空轴定位速度设置 = new System.Windows.Forms.Button();
             this.label472 = new System.Windows.Forms.Label();
-            this.txt平移轴定位速度设置 = new System.Windows.Forms.TextBox();
-            this.btn平移轴定位速度设置 = new System.Windows.Forms.Button();
             this.label469 = new System.Windows.Forms.Label();
-            this.txt升降轴定位速度设置 = new System.Windows.Forms.TextBox();
-            this.btn升降轴定位速度设置 = new System.Windows.Forms.Button();
             this.label464 = new System.Windows.Forms.Label();
-            this.txt上料Y轴定位速度设置 = new System.Windows.Forms.TextBox();
-            this.btn上料Y轴定位速度设置 = new System.Windows.Forms.Button();
             this.label463 = new System.Windows.Forms.Label();
-            this.txt上料X轴定位速度设置 = new System.Windows.Forms.TextBox();
-            this.btn上料X轴定位速度设置 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -1493,8 +1518,8 @@
             this.tabPage6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.tabPage5.SuspendLayout();
+            this.groupBox62.SuspendLayout();
             this.groupBox65.SuspendLayout();
-            this.groupBox64.SuspendLayout();
             this.groupBox63.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -1551,7 +1576,6 @@
             this.ManualBtn.TabIndex = 5;
             this.ManualBtn.Text = "手动模式";
             this.ManualBtn.UseVisualStyleBackColor = true;
-            this.ManualBtn.Click += new System.EventHandler(this.ManualBtn_Click);
             // 
             // InitialBtn
             // 
@@ -17384,8 +17408,9 @@
             // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.groupBox62);
+            this.tabPage5.Controls.Add(this.btn写入速度);
             this.tabPage5.Controls.Add(this.groupBox65);
-            this.tabPage5.Controls.Add(this.groupBox64);
             this.tabPage5.Controls.Add(this.groupBox63);
             this.tabPage5.Location = new System.Drawing.Point(4, 44);
             this.tabPage5.Margin = new System.Windows.Forms.Padding(2);
@@ -17395,17 +17420,484 @@
             this.tabPage5.Text = "参数设置";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
+            // groupBox62
+            // 
+            this.groupBox62.Controls.Add(this.txt黑体轴手动速度);
+            this.groupBox62.Controls.Add(this.txt黑体轴手动速度设置);
+            this.groupBox62.Controls.Add(this.txtSocket轴手动速度);
+            this.groupBox62.Controls.Add(this.txt搬运Z轴手动速度);
+            this.groupBox62.Controls.Add(this.txt搬运Y轴手动速度);
+            this.groupBox62.Controls.Add(this.txtSocket轴手动速度设置);
+            this.groupBox62.Controls.Add(this.txt搬运X轴手动速度);
+            this.groupBox62.Controls.Add(this.label504);
+            this.groupBox62.Controls.Add(this.label505);
+            this.groupBox62.Controls.Add(this.txt搬运Z轴手动速度设置);
+            this.groupBox62.Controls.Add(this.label506);
+            this.groupBox62.Controls.Add(this.label507);
+            this.groupBox62.Controls.Add(this.label508);
+            this.groupBox62.Controls.Add(this.txt搬运Y轴手动速度设置);
+            this.groupBox62.Controls.Add(this.label509);
+            this.groupBox62.Controls.Add(this.txt中空轴手动速度);
+            this.groupBox62.Controls.Add(this.txt平移轴手动速度);
+            this.groupBox62.Controls.Add(this.txt搬运X轴手动速度设置);
+            this.groupBox62.Controls.Add(this.txt升降轴手动速度);
+            this.groupBox62.Controls.Add(this.txt上料Y轴定位手动);
+            this.groupBox62.Controls.Add(this.txt上料X轴手动速度);
+            this.groupBox62.Controls.Add(this.txt中空轴手动速度设置);
+            this.groupBox62.Controls.Add(this.label510);
+            this.groupBox62.Controls.Add(this.label511);
+            this.groupBox62.Controls.Add(this.label512);
+            this.groupBox62.Controls.Add(this.txt平移轴手动速度设置);
+            this.groupBox62.Controls.Add(this.label513);
+            this.groupBox62.Controls.Add(this.label514);
+            this.groupBox62.Controls.Add(this.label515);
+            this.groupBox62.Controls.Add(this.txt升降轴手动速度设置);
+            this.groupBox62.Controls.Add(this.label516);
+            this.groupBox62.Controls.Add(this.label517);
+            this.groupBox62.Controls.Add(this.label518);
+            this.groupBox62.Controls.Add(this.txt上料Y轴定位手动设置);
+            this.groupBox62.Controls.Add(this.label519);
+            this.groupBox62.Controls.Add(this.label520);
+            this.groupBox62.Controls.Add(this.label521);
+            this.groupBox62.Controls.Add(this.txt上料X轴手动速度设置);
+            this.groupBox62.Controls.Add(this.label522);
+            this.groupBox62.Controls.Add(this.label523);
+            this.groupBox62.Controls.Add(this.label524);
+            this.groupBox62.Controls.Add(this.label525);
+            this.groupBox62.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox62.Location = new System.Drawing.Point(245, 2);
+            this.groupBox62.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox62.Name = "groupBox62";
+            this.groupBox62.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox62.Size = new System.Drawing.Size(226, 411);
+            this.groupBox62.TabIndex = 129;
+            this.groupBox62.TabStop = false;
+            this.groupBox62.Text = "手动速度设置";
+            // 
+            // txt黑体轴手动速度
+            // 
+            this.txt黑体轴手动速度.Location = new System.Drawing.Point(120, 296);
+            this.txt黑体轴手动速度.Margin = new System.Windows.Forms.Padding(2);
+            this.txt黑体轴手动速度.Name = "txt黑体轴手动速度";
+            this.txt黑体轴手动速度.Size = new System.Drawing.Size(49, 21);
+            this.txt黑体轴手动速度.TabIndex = 124;
+            // 
+            // txt黑体轴手动速度设置
+            // 
+            this.txt黑体轴手动速度设置.Location = new System.Drawing.Point(68, 296);
+            this.txt黑体轴手动速度设置.Margin = new System.Windows.Forms.Padding(2);
+            this.txt黑体轴手动速度设置.Name = "txt黑体轴手动速度设置";
+            this.txt黑体轴手动速度设置.Size = new System.Drawing.Size(49, 21);
+            this.txt黑体轴手动速度设置.TabIndex = 99;
+            // 
+            // txtSocket轴手动速度
+            // 
+            this.txtSocket轴手动速度.Location = new System.Drawing.Point(120, 267);
+            this.txtSocket轴手动速度.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSocket轴手动速度.Name = "txtSocket轴手动速度";
+            this.txtSocket轴手动速度.Size = new System.Drawing.Size(49, 21);
+            this.txtSocket轴手动速度.TabIndex = 123;
+            // 
+            // txt搬运Z轴手动速度
+            // 
+            this.txt搬运Z轴手动速度.Location = new System.Drawing.Point(120, 238);
+            this.txt搬运Z轴手动速度.Margin = new System.Windows.Forms.Padding(2);
+            this.txt搬运Z轴手动速度.Name = "txt搬运Z轴手动速度";
+            this.txt搬运Z轴手动速度.Size = new System.Drawing.Size(49, 21);
+            this.txt搬运Z轴手动速度.TabIndex = 122;
+            // 
+            // txt搬运Y轴手动速度
+            // 
+            this.txt搬运Y轴手动速度.Location = new System.Drawing.Point(120, 210);
+            this.txt搬运Y轴手动速度.Margin = new System.Windows.Forms.Padding(2);
+            this.txt搬运Y轴手动速度.Name = "txt搬运Y轴手动速度";
+            this.txt搬运Y轴手动速度.Size = new System.Drawing.Size(49, 21);
+            this.txt搬运Y轴手动速度.TabIndex = 121;
+            // 
+            // txtSocket轴手动速度设置
+            // 
+            this.txtSocket轴手动速度设置.Location = new System.Drawing.Point(68, 267);
+            this.txtSocket轴手动速度设置.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSocket轴手动速度设置.Name = "txtSocket轴手动速度设置";
+            this.txtSocket轴手动速度设置.Size = new System.Drawing.Size(49, 21);
+            this.txtSocket轴手动速度设置.TabIndex = 96;
+            // 
+            // txt搬运X轴手动速度
+            // 
+            this.txt搬运X轴手动速度.Location = new System.Drawing.Point(120, 181);
+            this.txt搬运X轴手动速度.Margin = new System.Windows.Forms.Padding(2);
+            this.txt搬运X轴手动速度.Name = "txt搬运X轴手动速度";
+            this.txt搬运X轴手动速度.Size = new System.Drawing.Size(49, 21);
+            this.txt搬运X轴手动速度.TabIndex = 120;
+            // 
+            // label504
+            // 
+            this.label504.AutoSize = true;
+            this.label504.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label504.Location = new System.Drawing.Point(7, 300);
+            this.label504.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label504.Name = "label504";
+            this.label504.Size = new System.Drawing.Size(31, 15);
+            this.label504.TabIndex = 119;
+            this.label504.Text = "黑体";
+            // 
+            // label505
+            // 
+            this.label505.AutoSize = true;
+            this.label505.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label505.Location = new System.Drawing.Point(6, 270);
+            this.label505.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label505.Name = "label505";
+            this.label505.Size = new System.Drawing.Size(39, 15);
+            this.label505.TabIndex = 118;
+            this.label505.Text = "Socket";
+            // 
+            // txt搬运Z轴手动速度设置
+            // 
+            this.txt搬运Z轴手动速度设置.Location = new System.Drawing.Point(68, 238);
+            this.txt搬运Z轴手动速度设置.Margin = new System.Windows.Forms.Padding(2);
+            this.txt搬运Z轴手动速度设置.Name = "txt搬运Z轴手动速度设置";
+            this.txt搬运Z轴手动速度设置.Size = new System.Drawing.Size(49, 21);
+            this.txt搬运Z轴手动速度设置.TabIndex = 93;
+            // 
+            // label506
+            // 
+            this.label506.AutoSize = true;
+            this.label506.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label506.Location = new System.Drawing.Point(6, 241);
+            this.label506.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label506.Name = "label506";
+            this.label506.Size = new System.Drawing.Size(51, 15);
+            this.label506.TabIndex = 117;
+            this.label506.Text = "搬运Z轴";
+            // 
+            // label507
+            // 
+            this.label507.AutoSize = true;
+            this.label507.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label507.Location = new System.Drawing.Point(7, 212);
+            this.label507.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label507.Name = "label507";
+            this.label507.Size = new System.Drawing.Size(51, 15);
+            this.label507.TabIndex = 116;
+            this.label507.Text = "搬运Y轴";
+            // 
+            // label508
+            // 
+            this.label508.AutoSize = true;
+            this.label508.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label508.Location = new System.Drawing.Point(77, 22);
+            this.label508.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label508.Name = "label508";
+            this.label508.Size = new System.Drawing.Size(31, 15);
+            this.label508.TabIndex = 115;
+            this.label508.Text = "修改";
+            // 
+            // txt搬运Y轴手动速度设置
+            // 
+            this.txt搬运Y轴手动速度设置.Location = new System.Drawing.Point(68, 210);
+            this.txt搬运Y轴手动速度设置.Margin = new System.Windows.Forms.Padding(2);
+            this.txt搬运Y轴手动速度设置.Name = "txt搬运Y轴手动速度设置";
+            this.txt搬运Y轴手动速度设置.Size = new System.Drawing.Size(49, 21);
+            this.txt搬运Y轴手动速度设置.TabIndex = 90;
+            // 
+            // label509
+            // 
+            this.label509.AutoSize = true;
+            this.label509.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label509.Location = new System.Drawing.Point(130, 22);
+            this.label509.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label509.Name = "label509";
+            this.label509.Size = new System.Drawing.Size(31, 15);
+            this.label509.TabIndex = 114;
+            this.label509.Text = "当前";
+            // 
+            // txt中空轴手动速度
+            // 
+            this.txt中空轴手动速度.Location = new System.Drawing.Point(120, 153);
+            this.txt中空轴手动速度.Margin = new System.Windows.Forms.Padding(2);
+            this.txt中空轴手动速度.Name = "txt中空轴手动速度";
+            this.txt中空轴手动速度.Size = new System.Drawing.Size(49, 21);
+            this.txt中空轴手动速度.TabIndex = 113;
+            // 
+            // txt平移轴手动速度
+            // 
+            this.txt平移轴手动速度.Location = new System.Drawing.Point(120, 124);
+            this.txt平移轴手动速度.Margin = new System.Windows.Forms.Padding(2);
+            this.txt平移轴手动速度.Name = "txt平移轴手动速度";
+            this.txt平移轴手动速度.Size = new System.Drawing.Size(49, 21);
+            this.txt平移轴手动速度.TabIndex = 112;
+            // 
+            // txt搬运X轴手动速度设置
+            // 
+            this.txt搬运X轴手动速度设置.Location = new System.Drawing.Point(68, 181);
+            this.txt搬运X轴手动速度设置.Margin = new System.Windows.Forms.Padding(2);
+            this.txt搬运X轴手动速度设置.Name = "txt搬运X轴手动速度设置";
+            this.txt搬运X轴手动速度设置.Size = new System.Drawing.Size(49, 21);
+            this.txt搬运X轴手动速度设置.TabIndex = 87;
+            // 
+            // txt升降轴手动速度
+            // 
+            this.txt升降轴手动速度.Location = new System.Drawing.Point(120, 96);
+            this.txt升降轴手动速度.Margin = new System.Windows.Forms.Padding(2);
+            this.txt升降轴手动速度.Name = "txt升降轴手动速度";
+            this.txt升降轴手动速度.Size = new System.Drawing.Size(49, 21);
+            this.txt升降轴手动速度.TabIndex = 111;
+            // 
+            // txt上料Y轴定位手动
+            // 
+            this.txt上料Y轴定位手动.Location = new System.Drawing.Point(120, 68);
+            this.txt上料Y轴定位手动.Margin = new System.Windows.Forms.Padding(2);
+            this.txt上料Y轴定位手动.Name = "txt上料Y轴定位手动";
+            this.txt上料Y轴定位手动.Size = new System.Drawing.Size(49, 21);
+            this.txt上料Y轴定位手动.TabIndex = 110;
+            // 
+            // txt上料X轴手动速度
+            // 
+            this.txt上料X轴手动速度.Location = new System.Drawing.Point(120, 38);
+            this.txt上料X轴手动速度.Margin = new System.Windows.Forms.Padding(2);
+            this.txt上料X轴手动速度.Name = "txt上料X轴手动速度";
+            this.txt上料X轴手动速度.Size = new System.Drawing.Size(49, 21);
+            this.txt上料X轴手动速度.TabIndex = 109;
+            // 
+            // txt中空轴手动速度设置
+            // 
+            this.txt中空轴手动速度设置.Location = new System.Drawing.Point(68, 153);
+            this.txt中空轴手动速度设置.Margin = new System.Windows.Forms.Padding(2);
+            this.txt中空轴手动速度设置.Name = "txt中空轴手动速度设置";
+            this.txt中空轴手动速度设置.Size = new System.Drawing.Size(49, 21);
+            this.txt中空轴手动速度设置.TabIndex = 84;
+            // 
+            // label510
+            // 
+            this.label510.AutoSize = true;
+            this.label510.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label510.Location = new System.Drawing.Point(6, 185);
+            this.label510.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label510.Name = "label510";
+            this.label510.Size = new System.Drawing.Size(52, 15);
+            this.label510.TabIndex = 108;
+            this.label510.Text = "搬运X轴";
+            // 
+            // label511
+            // 
+            this.label511.AutoSize = true;
+            this.label511.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label511.Location = new System.Drawing.Point(6, 156);
+            this.label511.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label511.Name = "label511";
+            this.label511.Size = new System.Drawing.Size(55, 15);
+            this.label511.TabIndex = 107;
+            this.label511.Text = "中空旋转";
+            // 
+            // label512
+            // 
+            this.label512.AutoSize = true;
+            this.label512.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label512.Location = new System.Drawing.Point(6, 126);
+            this.label512.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label512.Name = "label512";
+            this.label512.Size = new System.Drawing.Size(55, 15);
+            this.label512.TabIndex = 106;
+            this.label512.Text = "搬运平移";
+            // 
+            // txt平移轴手动速度设置
+            // 
+            this.txt平移轴手动速度设置.Location = new System.Drawing.Point(68, 124);
+            this.txt平移轴手动速度设置.Margin = new System.Windows.Forms.Padding(2);
+            this.txt平移轴手动速度设置.Name = "txt平移轴手动速度设置";
+            this.txt平移轴手动速度设置.Size = new System.Drawing.Size(49, 21);
+            this.txt平移轴手动速度设置.TabIndex = 81;
+            // 
+            // label513
+            // 
+            this.label513.AutoSize = true;
+            this.label513.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label513.Location = new System.Drawing.Point(6, 100);
+            this.label513.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label513.Name = "label513";
+            this.label513.Size = new System.Drawing.Size(43, 15);
+            this.label513.TabIndex = 105;
+            this.label513.Text = "升降盘";
+            // 
+            // label514
+            // 
+            this.label514.AutoSize = true;
+            this.label514.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label514.Location = new System.Drawing.Point(6, 70);
+            this.label514.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label514.Name = "label514";
+            this.label514.Size = new System.Drawing.Size(51, 15);
+            this.label514.TabIndex = 104;
+            this.label514.Text = "上料Y轴";
+            // 
+            // label515
+            // 
+            this.label515.AutoSize = true;
+            this.label515.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label515.Location = new System.Drawing.Point(6, 42);
+            this.label515.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label515.Name = "label515";
+            this.label515.Size = new System.Drawing.Size(52, 15);
+            this.label515.TabIndex = 103;
+            this.label515.Text = "上料X轴";
+            // 
+            // txt升降轴手动速度设置
+            // 
+            this.txt升降轴手动速度设置.Location = new System.Drawing.Point(68, 95);
+            this.txt升降轴手动速度设置.Margin = new System.Windows.Forms.Padding(2);
+            this.txt升降轴手动速度设置.Name = "txt升降轴手动速度设置";
+            this.txt升降轴手动速度设置.Size = new System.Drawing.Size(49, 21);
+            this.txt升降轴手动速度设置.TabIndex = 78;
+            // 
+            // label516
+            // 
+            this.label516.AutoSize = true;
+            this.label516.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label516.Location = new System.Drawing.Point(172, 301);
+            this.label516.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label516.Name = "label516";
+            this.label516.Size = new System.Drawing.Size(33, 15);
+            this.label516.TabIndex = 98;
+            this.label516.Text = "mm/s";
+            // 
+            // label517
+            // 
+            this.label517.AutoSize = true;
+            this.label517.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label517.Location = new System.Drawing.Point(172, 272);
+            this.label517.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label517.Name = "label517";
+            this.label517.Size = new System.Drawing.Size(33, 15);
+            this.label517.TabIndex = 95;
+            this.label517.Text = "mm/s";
+            // 
+            // label518
+            // 
+            this.label518.AutoSize = true;
+            this.label518.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label518.Location = new System.Drawing.Point(172, 243);
+            this.label518.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label518.Name = "label518";
+            this.label518.Size = new System.Drawing.Size(33, 15);
+            this.label518.TabIndex = 92;
+            this.label518.Text = "mm/s";
+            // 
+            // txt上料Y轴定位手动设置
+            // 
+            this.txt上料Y轴定位手动设置.Location = new System.Drawing.Point(68, 66);
+            this.txt上料Y轴定位手动设置.Margin = new System.Windows.Forms.Padding(2);
+            this.txt上料Y轴定位手动设置.Name = "txt上料Y轴定位手动设置";
+            this.txt上料Y轴定位手动设置.Size = new System.Drawing.Size(49, 21);
+            this.txt上料Y轴定位手动设置.TabIndex = 75;
+            // 
+            // label519
+            // 
+            this.label519.AutoSize = true;
+            this.label519.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label519.Location = new System.Drawing.Point(172, 214);
+            this.label519.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label519.Name = "label519";
+            this.label519.Size = new System.Drawing.Size(33, 15);
+            this.label519.TabIndex = 89;
+            this.label519.Text = "mm/s";
+            // 
+            // label520
+            // 
+            this.label520.AutoSize = true;
+            this.label520.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label520.Location = new System.Drawing.Point(172, 186);
+            this.label520.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label520.Name = "label520";
+            this.label520.Size = new System.Drawing.Size(33, 15);
+            this.label520.TabIndex = 86;
+            this.label520.Text = "mm/s";
+            // 
+            // label521
+            // 
+            this.label521.AutoSize = true;
+            this.label521.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label521.Location = new System.Drawing.Point(172, 160);
+            this.label521.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label521.Name = "label521";
+            this.label521.Size = new System.Drawing.Size(33, 15);
+            this.label521.TabIndex = 83;
+            this.label521.Text = "mm/s";
+            // 
+            // txt上料X轴手动速度设置
+            // 
+            this.txt上料X轴手动速度设置.Location = new System.Drawing.Point(68, 38);
+            this.txt上料X轴手动速度设置.Margin = new System.Windows.Forms.Padding(2);
+            this.txt上料X轴手动速度设置.Name = "txt上料X轴手动速度设置";
+            this.txt上料X轴手动速度设置.Size = new System.Drawing.Size(49, 21);
+            this.txt上料X轴手动速度设置.TabIndex = 72;
+            // 
+            // label522
+            // 
+            this.label522.AutoSize = true;
+            this.label522.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label522.Location = new System.Drawing.Point(172, 131);
+            this.label522.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label522.Name = "label522";
+            this.label522.Size = new System.Drawing.Size(33, 15);
+            this.label522.TabIndex = 80;
+            this.label522.Text = "mm/s";
+            // 
+            // label523
+            // 
+            this.label523.AutoSize = true;
+            this.label523.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label523.Location = new System.Drawing.Point(172, 102);
+            this.label523.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label523.Name = "label523";
+            this.label523.Size = new System.Drawing.Size(33, 15);
+            this.label523.TabIndex = 77;
+            this.label523.Text = "mm/s";
+            // 
+            // label524
+            // 
+            this.label524.AutoSize = true;
+            this.label524.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label524.Location = new System.Drawing.Point(172, 73);
+            this.label524.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label524.Name = "label524";
+            this.label524.Size = new System.Drawing.Size(33, 15);
+            this.label524.TabIndex = 74;
+            this.label524.Text = "mm/s";
+            // 
+            // label525
+            // 
+            this.label525.AutoSize = true;
+            this.label525.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label525.Location = new System.Drawing.Point(172, 46);
+            this.label525.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label525.Name = "label525";
+            this.label525.Size = new System.Drawing.Size(33, 15);
+            this.label525.TabIndex = 71;
+            this.label525.Text = "mm/s";
+            // 
+            // btn写入速度
+            // 
+            this.btn写入速度.BackColor = System.Drawing.SystemColors.Control;
+            this.btn写入速度.Location = new System.Drawing.Point(7, 426);
+            this.btn写入速度.Margin = new System.Windows.Forms.Padding(2);
+            this.btn写入速度.Name = "btn写入速度";
+            this.btn写入速度.Size = new System.Drawing.Size(94, 43);
+            this.btn写入速度.TabIndex = 126;
+            this.btn写入速度.Text = "写入速度";
+            this.btn写入速度.UseVisualStyleBackColor = true;
+            // 
             // groupBox65
             // 
             this.groupBox65.Controls.Add(this.label487);
             this.groupBox65.Controls.Add(this.btn门开关功能开关);
             this.groupBox65.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox65.Location = new System.Drawing.Point(6, 235);
+            this.groupBox65.Location = new System.Drawing.Point(482, 2);
             this.groupBox65.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox65.Name = "groupBox65";
             this.groupBox65.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox65.Size = new System.Drawing.Size(375, 183);
-            this.groupBox65.TabIndex = 104;
+            this.groupBox65.Size = new System.Drawing.Size(226, 411);
+            this.groupBox65.TabIndex = 128;
             this.groupBox65.TabStop = false;
             this.groupBox65.Text = "功能设置";
             // 
@@ -17413,7 +17905,7 @@
             // 
             this.label487.AutoSize = true;
             this.label487.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label487.Location = new System.Drawing.Point(19, 34);
+            this.label487.Location = new System.Drawing.Point(19, 46);
             this.label487.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label487.Name = "label487";
             this.label487.Size = new System.Drawing.Size(67, 15);
@@ -17423,7 +17915,7 @@
             // btn门开关功能开关
             // 
             this.btn门开关功能开关.BackColor = System.Drawing.SystemColors.Control;
-            this.btn门开关功能开关.Location = new System.Drawing.Point(90, 29);
+            this.btn门开关功能开关.Location = new System.Drawing.Point(90, 41);
             this.btn门开关功能开关.Margin = new System.Windows.Forms.Padding(2);
             this.btn门开关功能开关.Name = "btn门开关功能开关";
             this.btn门开关功能开关.Size = new System.Drawing.Size(78, 24);
@@ -17431,395 +17923,317 @@
             this.btn门开关功能开关.Text = "打开";
             this.btn门开关功能开关.UseVisualStyleBackColor = true;
             // 
-            // groupBox64
-            // 
-            this.groupBox64.Controls.Add(this.label477);
-            this.groupBox64.Controls.Add(this.txt黑体轴手动速度设置);
-            this.groupBox64.Controls.Add(this.btn黑体轴手动速度设置);
-            this.groupBox64.Controls.Add(this.label478);
-            this.groupBox64.Controls.Add(this.txtSocket轴手动速度设置);
-            this.groupBox64.Controls.Add(this.btnSocket轴手动速度设置);
-            this.groupBox64.Controls.Add(this.label479);
-            this.groupBox64.Controls.Add(this.txt搬运Z轴手动速度设置);
-            this.groupBox64.Controls.Add(this.btn搬运Z轴手动速度设置);
-            this.groupBox64.Controls.Add(this.label480);
-            this.groupBox64.Controls.Add(this.txt搬运Y轴手动速度设置);
-            this.groupBox64.Controls.Add(this.btn搬运Y轴手动速度设置);
-            this.groupBox64.Controls.Add(this.label481);
-            this.groupBox64.Controls.Add(this.txt搬运X轴手动速度设置);
-            this.groupBox64.Controls.Add(this.btn搬运X轴手动速度设置);
-            this.groupBox64.Controls.Add(this.label482);
-            this.groupBox64.Controls.Add(this.txt中空轴手动速度设置);
-            this.groupBox64.Controls.Add(this.btn中空轴手动速度设置);
-            this.groupBox64.Controls.Add(this.label483);
-            this.groupBox64.Controls.Add(this.txt平移轴手动速度设置);
-            this.groupBox64.Controls.Add(this.btn平移轴手动速度设置);
-            this.groupBox64.Controls.Add(this.label484);
-            this.groupBox64.Controls.Add(this.txt升降轴手动速度设置);
-            this.groupBox64.Controls.Add(this.btn升降轴手动速度设置);
-            this.groupBox64.Controls.Add(this.label485);
-            this.groupBox64.Controls.Add(this.txt上料Y轴定位手动设置);
-            this.groupBox64.Controls.Add(this.btn上料Y轴定位手动设置);
-            this.groupBox64.Controls.Add(this.label486);
-            this.groupBox64.Controls.Add(this.txt上料X轴手动速度设置);
-            this.groupBox64.Controls.Add(this.btn上料X轴手动速度设置);
-            this.groupBox64.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox64.Location = new System.Drawing.Point(398, 10);
-            this.groupBox64.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox64.Name = "groupBox64";
-            this.groupBox64.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox64.Size = new System.Drawing.Size(375, 194);
-            this.groupBox64.TabIndex = 103;
-            this.groupBox64.TabStop = false;
-            this.groupBox64.Text = "手动速度设置";
-            // 
-            // label477
-            // 
-            this.label477.AutoSize = true;
-            this.label477.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label477.Location = new System.Drawing.Point(332, 153);
-            this.label477.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label477.Name = "label477";
-            this.label477.Size = new System.Drawing.Size(33, 15);
-            this.label477.TabIndex = 98;
-            this.label477.Text = "mm/s";
-            // 
-            // txt黑体轴手动速度设置
-            // 
-            this.txt黑体轴手动速度设置.Location = new System.Drawing.Point(280, 146);
-            this.txt黑体轴手动速度设置.Margin = new System.Windows.Forms.Padding(2);
-            this.txt黑体轴手动速度设置.Name = "txt黑体轴手动速度设置";
-            this.txt黑体轴手动速度设置.Size = new System.Drawing.Size(49, 21);
-            this.txt黑体轴手动速度设置.TabIndex = 99;
-            // 
-            // btn黑体轴手动速度设置
-            // 
-            this.btn黑体轴手动速度设置.BackColor = System.Drawing.SystemColors.Control;
-            this.btn黑体轴手动速度设置.Location = new System.Drawing.Point(197, 143);
-            this.btn黑体轴手动速度设置.Margin = new System.Windows.Forms.Padding(2);
-            this.btn黑体轴手动速度设置.Name = "btn黑体轴手动速度设置";
-            this.btn黑体轴手动速度设置.Size = new System.Drawing.Size(78, 24);
-            this.btn黑体轴手动速度设置.TabIndex = 97;
-            this.btn黑体轴手动速度设置.Text = "黑体";
-            this.btn黑体轴手动速度设置.UseVisualStyleBackColor = true;
-            // 
-            // label478
-            // 
-            this.label478.AutoSize = true;
-            this.label478.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label478.Location = new System.Drawing.Point(332, 124);
-            this.label478.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label478.Name = "label478";
-            this.label478.Size = new System.Drawing.Size(33, 15);
-            this.label478.TabIndex = 95;
-            this.label478.Text = "mm/s";
-            // 
-            // txtSocket轴手动速度设置
-            // 
-            this.txtSocket轴手动速度设置.Location = new System.Drawing.Point(280, 117);
-            this.txtSocket轴手动速度设置.Margin = new System.Windows.Forms.Padding(2);
-            this.txtSocket轴手动速度设置.Name = "txtSocket轴手动速度设置";
-            this.txtSocket轴手动速度设置.Size = new System.Drawing.Size(49, 21);
-            this.txtSocket轴手动速度设置.TabIndex = 96;
-            // 
-            // btnSocket轴手动速度设置
-            // 
-            this.btnSocket轴手动速度设置.BackColor = System.Drawing.SystemColors.Control;
-            this.btnSocket轴手动速度设置.Location = new System.Drawing.Point(197, 114);
-            this.btnSocket轴手动速度设置.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSocket轴手动速度设置.Name = "btnSocket轴手动速度设置";
-            this.btnSocket轴手动速度设置.Size = new System.Drawing.Size(78, 24);
-            this.btnSocket轴手动速度设置.TabIndex = 94;
-            this.btnSocket轴手动速度设置.Text = "Socket";
-            this.btnSocket轴手动速度设置.UseVisualStyleBackColor = true;
-            // 
-            // label479
-            // 
-            this.label479.AutoSize = true;
-            this.label479.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label479.Location = new System.Drawing.Point(332, 95);
-            this.label479.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label479.Name = "label479";
-            this.label479.Size = new System.Drawing.Size(33, 15);
-            this.label479.TabIndex = 92;
-            this.label479.Text = "mm/s";
-            // 
-            // txt搬运Z轴手动速度设置
-            // 
-            this.txt搬运Z轴手动速度设置.Location = new System.Drawing.Point(280, 88);
-            this.txt搬运Z轴手动速度设置.Margin = new System.Windows.Forms.Padding(2);
-            this.txt搬运Z轴手动速度设置.Name = "txt搬运Z轴手动速度设置";
-            this.txt搬运Z轴手动速度设置.Size = new System.Drawing.Size(49, 21);
-            this.txt搬运Z轴手动速度设置.TabIndex = 93;
-            // 
-            // btn搬运Z轴手动速度设置
-            // 
-            this.btn搬运Z轴手动速度设置.BackColor = System.Drawing.SystemColors.Control;
-            this.btn搬运Z轴手动速度设置.Location = new System.Drawing.Point(197, 86);
-            this.btn搬运Z轴手动速度设置.Margin = new System.Windows.Forms.Padding(2);
-            this.btn搬运Z轴手动速度设置.Name = "btn搬运Z轴手动速度设置";
-            this.btn搬运Z轴手动速度设置.Size = new System.Drawing.Size(78, 24);
-            this.btn搬运Z轴手动速度设置.TabIndex = 91;
-            this.btn搬运Z轴手动速度设置.Text = "搬运Z轴";
-            this.btn搬运Z轴手动速度设置.UseVisualStyleBackColor = true;
-            // 
-            // label480
-            // 
-            this.label480.AutoSize = true;
-            this.label480.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label480.Location = new System.Drawing.Point(332, 66);
-            this.label480.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label480.Name = "label480";
-            this.label480.Size = new System.Drawing.Size(33, 15);
-            this.label480.TabIndex = 89;
-            this.label480.Text = "mm/s";
-            // 
-            // txt搬运Y轴手动速度设置
-            // 
-            this.txt搬运Y轴手动速度设置.Location = new System.Drawing.Point(280, 59);
-            this.txt搬运Y轴手动速度设置.Margin = new System.Windows.Forms.Padding(2);
-            this.txt搬运Y轴手动速度设置.Name = "txt搬运Y轴手动速度设置";
-            this.txt搬运Y轴手动速度设置.Size = new System.Drawing.Size(49, 21);
-            this.txt搬运Y轴手动速度设置.TabIndex = 90;
-            // 
-            // btn搬运Y轴手动速度设置
-            // 
-            this.btn搬运Y轴手动速度设置.BackColor = System.Drawing.SystemColors.Control;
-            this.btn搬运Y轴手动速度设置.Location = new System.Drawing.Point(197, 57);
-            this.btn搬运Y轴手动速度设置.Margin = new System.Windows.Forms.Padding(2);
-            this.btn搬运Y轴手动速度设置.Name = "btn搬运Y轴手动速度设置";
-            this.btn搬运Y轴手动速度设置.Size = new System.Drawing.Size(78, 24);
-            this.btn搬运Y轴手动速度设置.TabIndex = 88;
-            this.btn搬运Y轴手动速度设置.Text = "搬运Y轴";
-            this.btn搬运Y轴手动速度设置.UseVisualStyleBackColor = true;
-            // 
-            // label481
-            // 
-            this.label481.AutoSize = true;
-            this.label481.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label481.Location = new System.Drawing.Point(332, 38);
-            this.label481.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label481.Name = "label481";
-            this.label481.Size = new System.Drawing.Size(33, 15);
-            this.label481.TabIndex = 86;
-            this.label481.Text = "mm/s";
-            // 
-            // txt搬运X轴手动速度设置
-            // 
-            this.txt搬运X轴手动速度设置.Location = new System.Drawing.Point(280, 30);
-            this.txt搬运X轴手动速度设置.Margin = new System.Windows.Forms.Padding(2);
-            this.txt搬运X轴手动速度设置.Name = "txt搬运X轴手动速度设置";
-            this.txt搬运X轴手动速度设置.Size = new System.Drawing.Size(49, 21);
-            this.txt搬运X轴手动速度设置.TabIndex = 87;
-            // 
-            // btn搬运X轴手动速度设置
-            // 
-            this.btn搬运X轴手动速度设置.BackColor = System.Drawing.SystemColors.Control;
-            this.btn搬运X轴手动速度设置.Location = new System.Drawing.Point(197, 28);
-            this.btn搬运X轴手动速度设置.Margin = new System.Windows.Forms.Padding(2);
-            this.btn搬运X轴手动速度设置.Name = "btn搬运X轴手动速度设置";
-            this.btn搬运X轴手动速度设置.Size = new System.Drawing.Size(78, 24);
-            this.btn搬运X轴手动速度设置.TabIndex = 85;
-            this.btn搬运X轴手动速度设置.Text = "搬运X轴";
-            this.btn搬运X轴手动速度设置.UseVisualStyleBackColor = true;
-            // 
-            // label482
-            // 
-            this.label482.AutoSize = true;
-            this.label482.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label482.Location = new System.Drawing.Point(152, 153);
-            this.label482.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label482.Name = "label482";
-            this.label482.Size = new System.Drawing.Size(33, 15);
-            this.label482.TabIndex = 83;
-            this.label482.Text = "mm/s";
-            // 
-            // txt中空轴手动速度设置
-            // 
-            this.txt中空轴手动速度设置.Location = new System.Drawing.Point(100, 146);
-            this.txt中空轴手动速度设置.Margin = new System.Windows.Forms.Padding(2);
-            this.txt中空轴手动速度设置.Name = "txt中空轴手动速度设置";
-            this.txt中空轴手动速度设置.Size = new System.Drawing.Size(49, 21);
-            this.txt中空轴手动速度设置.TabIndex = 84;
-            // 
-            // btn中空轴手动速度设置
-            // 
-            this.btn中空轴手动速度设置.BackColor = System.Drawing.SystemColors.Control;
-            this.btn中空轴手动速度设置.Location = new System.Drawing.Point(17, 143);
-            this.btn中空轴手动速度设置.Margin = new System.Windows.Forms.Padding(2);
-            this.btn中空轴手动速度设置.Name = "btn中空轴手动速度设置";
-            this.btn中空轴手动速度设置.Size = new System.Drawing.Size(78, 24);
-            this.btn中空轴手动速度设置.TabIndex = 82;
-            this.btn中空轴手动速度设置.Text = "中空旋转";
-            this.btn中空轴手动速度设置.UseVisualStyleBackColor = true;
-            // 
-            // label483
-            // 
-            this.label483.AutoSize = true;
-            this.label483.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label483.Location = new System.Drawing.Point(152, 124);
-            this.label483.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label483.Name = "label483";
-            this.label483.Size = new System.Drawing.Size(33, 15);
-            this.label483.TabIndex = 80;
-            this.label483.Text = "mm/s";
-            // 
-            // txt平移轴手动速度设置
-            // 
-            this.txt平移轴手动速度设置.Location = new System.Drawing.Point(100, 117);
-            this.txt平移轴手动速度设置.Margin = new System.Windows.Forms.Padding(2);
-            this.txt平移轴手动速度设置.Name = "txt平移轴手动速度设置";
-            this.txt平移轴手动速度设置.Size = new System.Drawing.Size(49, 21);
-            this.txt平移轴手动速度设置.TabIndex = 81;
-            // 
-            // btn平移轴手动速度设置
-            // 
-            this.btn平移轴手动速度设置.BackColor = System.Drawing.SystemColors.Control;
-            this.btn平移轴手动速度设置.Location = new System.Drawing.Point(17, 114);
-            this.btn平移轴手动速度设置.Margin = new System.Windows.Forms.Padding(2);
-            this.btn平移轴手动速度设置.Name = "btn平移轴手动速度设置";
-            this.btn平移轴手动速度设置.Size = new System.Drawing.Size(78, 24);
-            this.btn平移轴手动速度设置.TabIndex = 79;
-            this.btn平移轴手动速度设置.Text = "搬运平移";
-            this.btn平移轴手动速度设置.UseVisualStyleBackColor = true;
-            // 
-            // label484
-            // 
-            this.label484.AutoSize = true;
-            this.label484.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label484.Location = new System.Drawing.Point(152, 95);
-            this.label484.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label484.Name = "label484";
-            this.label484.Size = new System.Drawing.Size(33, 15);
-            this.label484.TabIndex = 77;
-            this.label484.Text = "mm/s";
-            // 
-            // txt升降轴手动速度设置
-            // 
-            this.txt升降轴手动速度设置.Location = new System.Drawing.Point(100, 88);
-            this.txt升降轴手动速度设置.Margin = new System.Windows.Forms.Padding(2);
-            this.txt升降轴手动速度设置.Name = "txt升降轴手动速度设置";
-            this.txt升降轴手动速度设置.Size = new System.Drawing.Size(49, 21);
-            this.txt升降轴手动速度设置.TabIndex = 78;
-            // 
-            // btn升降轴手动速度设置
-            // 
-            this.btn升降轴手动速度设置.BackColor = System.Drawing.SystemColors.Control;
-            this.btn升降轴手动速度设置.Location = new System.Drawing.Point(17, 86);
-            this.btn升降轴手动速度设置.Margin = new System.Windows.Forms.Padding(2);
-            this.btn升降轴手动速度设置.Name = "btn升降轴手动速度设置";
-            this.btn升降轴手动速度设置.Size = new System.Drawing.Size(78, 24);
-            this.btn升降轴手动速度设置.TabIndex = 76;
-            this.btn升降轴手动速度设置.Text = "升降盘";
-            this.btn升降轴手动速度设置.UseVisualStyleBackColor = true;
-            // 
-            // label485
-            // 
-            this.label485.AutoSize = true;
-            this.label485.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label485.Location = new System.Drawing.Point(152, 66);
-            this.label485.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label485.Name = "label485";
-            this.label485.Size = new System.Drawing.Size(33, 15);
-            this.label485.TabIndex = 74;
-            this.label485.Text = "mm/s";
-            // 
-            // txt上料Y轴定位手动设置
-            // 
-            this.txt上料Y轴定位手动设置.Location = new System.Drawing.Point(100, 59);
-            this.txt上料Y轴定位手动设置.Margin = new System.Windows.Forms.Padding(2);
-            this.txt上料Y轴定位手动设置.Name = "txt上料Y轴定位手动设置";
-            this.txt上料Y轴定位手动设置.Size = new System.Drawing.Size(49, 21);
-            this.txt上料Y轴定位手动设置.TabIndex = 75;
-            // 
-            // btn上料Y轴定位手动设置
-            // 
-            this.btn上料Y轴定位手动设置.BackColor = System.Drawing.SystemColors.Control;
-            this.btn上料Y轴定位手动设置.Location = new System.Drawing.Point(17, 57);
-            this.btn上料Y轴定位手动设置.Margin = new System.Windows.Forms.Padding(2);
-            this.btn上料Y轴定位手动设置.Name = "btn上料Y轴定位手动设置";
-            this.btn上料Y轴定位手动设置.Size = new System.Drawing.Size(78, 24);
-            this.btn上料Y轴定位手动设置.TabIndex = 73;
-            this.btn上料Y轴定位手动设置.Text = "上料Y轴";
-            this.btn上料Y轴定位手动设置.UseVisualStyleBackColor = true;
-            // 
-            // label486
-            // 
-            this.label486.AutoSize = true;
-            this.label486.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label486.Location = new System.Drawing.Point(152, 38);
-            this.label486.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label486.Name = "label486";
-            this.label486.Size = new System.Drawing.Size(33, 15);
-            this.label486.TabIndex = 71;
-            this.label486.Text = "mm/s";
-            // 
-            // txt上料X轴手动速度设置
-            // 
-            this.txt上料X轴手动速度设置.Location = new System.Drawing.Point(100, 30);
-            this.txt上料X轴手动速度设置.Margin = new System.Windows.Forms.Padding(2);
-            this.txt上料X轴手动速度设置.Name = "txt上料X轴手动速度设置";
-            this.txt上料X轴手动速度设置.Size = new System.Drawing.Size(49, 21);
-            this.txt上料X轴手动速度设置.TabIndex = 72;
-            // 
-            // btn上料X轴手动速度设置
-            // 
-            this.btn上料X轴手动速度设置.BackColor = System.Drawing.SystemColors.Control;
-            this.btn上料X轴手动速度设置.Location = new System.Drawing.Point(17, 28);
-            this.btn上料X轴手动速度设置.Margin = new System.Windows.Forms.Padding(2);
-            this.btn上料X轴手动速度设置.Name = "btn上料X轴手动速度设置";
-            this.btn上料X轴手动速度设置.Size = new System.Drawing.Size(78, 24);
-            this.btn上料X轴手动速度设置.TabIndex = 70;
-            this.btn上料X轴手动速度设置.Text = "上料X轴";
-            this.btn上料X轴手动速度设置.UseVisualStyleBackColor = true;
-            // 
             // groupBox63
             // 
+            this.groupBox63.Controls.Add(this.txt黑体轴定位速度);
+            this.groupBox63.Controls.Add(this.txtSocket轴定位速度);
+            this.groupBox63.Controls.Add(this.txt搬运Z轴定位速度);
+            this.groupBox63.Controls.Add(this.txt搬运Y轴定位速度);
+            this.groupBox63.Controls.Add(this.txt搬运X轴定位速度);
+            this.groupBox63.Controls.Add(this.label503);
+            this.groupBox63.Controls.Add(this.label502);
+            this.groupBox63.Controls.Add(this.label501);
+            this.groupBox63.Controls.Add(this.label500);
+            this.groupBox63.Controls.Add(this.label499);
+            this.groupBox63.Controls.Add(this.label498);
+            this.groupBox63.Controls.Add(this.txt中空轴定位速度);
+            this.groupBox63.Controls.Add(this.txt平移轴定位速度);
+            this.groupBox63.Controls.Add(this.txt中空轴定位速度设置);
+            this.groupBox63.Controls.Add(this.txt上料X轴定位速度设置);
+            this.groupBox63.Controls.Add(this.txt升降轴定位速度);
+            this.groupBox63.Controls.Add(this.txt上料Y轴定位速度设置);
+            this.groupBox63.Controls.Add(this.txt上料Y轴定位速度);
+            this.groupBox63.Controls.Add(this.txt升降轴定位速度设置);
+            this.groupBox63.Controls.Add(this.txt上料X轴定位速度);
+            this.groupBox63.Controls.Add(this.txt平移轴定位速度设置);
+            this.groupBox63.Controls.Add(this.label497);
+            this.groupBox63.Controls.Add(this.label496);
+            this.groupBox63.Controls.Add(this.label495);
+            this.groupBox63.Controls.Add(this.label494);
+            this.groupBox63.Controls.Add(this.label493);
+            this.groupBox63.Controls.Add(this.label492);
             this.groupBox63.Controls.Add(this.label475);
             this.groupBox63.Controls.Add(this.txt黑体轴定位速度设置);
-            this.groupBox63.Controls.Add(this.btn黑体轴定位速度设置);
             this.groupBox63.Controls.Add(this.label476);
             this.groupBox63.Controls.Add(this.txtSocket轴定位速度设置);
-            this.groupBox63.Controls.Add(this.btnSocket轴定位速度设置);
             this.groupBox63.Controls.Add(this.label473);
             this.groupBox63.Controls.Add(this.txt搬运Z轴定位速度设置);
-            this.groupBox63.Controls.Add(this.btn搬运Z轴定位速度设置);
             this.groupBox63.Controls.Add(this.label474);
             this.groupBox63.Controls.Add(this.txt搬运Y轴定位速度设置);
-            this.groupBox63.Controls.Add(this.btn搬运Y轴定位速度设置);
             this.groupBox63.Controls.Add(this.label470);
             this.groupBox63.Controls.Add(this.txt搬运X轴定位速度设置);
-            this.groupBox63.Controls.Add(this.btn搬运X轴定位速度设置);
             this.groupBox63.Controls.Add(this.label471);
-            this.groupBox63.Controls.Add(this.txt中空轴定位速度设置);
-            this.groupBox63.Controls.Add(this.btn中空轴定位速度设置);
             this.groupBox63.Controls.Add(this.label472);
-            this.groupBox63.Controls.Add(this.txt平移轴定位速度设置);
-            this.groupBox63.Controls.Add(this.btn平移轴定位速度设置);
             this.groupBox63.Controls.Add(this.label469);
-            this.groupBox63.Controls.Add(this.txt升降轴定位速度设置);
-            this.groupBox63.Controls.Add(this.btn升降轴定位速度设置);
             this.groupBox63.Controls.Add(this.label464);
-            this.groupBox63.Controls.Add(this.txt上料Y轴定位速度设置);
-            this.groupBox63.Controls.Add(this.btn上料Y轴定位速度设置);
             this.groupBox63.Controls.Add(this.label463);
-            this.groupBox63.Controls.Add(this.txt上料X轴定位速度设置);
-            this.groupBox63.Controls.Add(this.btn上料X轴定位速度设置);
             this.groupBox63.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox63.Location = new System.Drawing.Point(6, 10);
+            this.groupBox63.Location = new System.Drawing.Point(7, 2);
             this.groupBox63.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox63.Name = "groupBox63";
             this.groupBox63.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox63.Size = new System.Drawing.Size(375, 194);
-            this.groupBox63.TabIndex = 102;
+            this.groupBox63.Size = new System.Drawing.Size(226, 411);
+            this.groupBox63.TabIndex = 127;
             this.groupBox63.TabStop = false;
             this.groupBox63.Text = "定位速度设置";
+            // 
+            // txt黑体轴定位速度
+            // 
+            this.txt黑体轴定位速度.Location = new System.Drawing.Point(120, 296);
+            this.txt黑体轴定位速度.Margin = new System.Windows.Forms.Padding(2);
+            this.txt黑体轴定位速度.Name = "txt黑体轴定位速度";
+            this.txt黑体轴定位速度.Size = new System.Drawing.Size(49, 21);
+            this.txt黑体轴定位速度.TabIndex = 124;
+            // 
+            // txtSocket轴定位速度
+            // 
+            this.txtSocket轴定位速度.Location = new System.Drawing.Point(120, 267);
+            this.txtSocket轴定位速度.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSocket轴定位速度.Name = "txtSocket轴定位速度";
+            this.txtSocket轴定位速度.Size = new System.Drawing.Size(49, 21);
+            this.txtSocket轴定位速度.TabIndex = 123;
+            // 
+            // txt搬运Z轴定位速度
+            // 
+            this.txt搬运Z轴定位速度.Location = new System.Drawing.Point(120, 238);
+            this.txt搬运Z轴定位速度.Margin = new System.Windows.Forms.Padding(2);
+            this.txt搬运Z轴定位速度.Name = "txt搬运Z轴定位速度";
+            this.txt搬运Z轴定位速度.Size = new System.Drawing.Size(49, 21);
+            this.txt搬运Z轴定位速度.TabIndex = 122;
+            // 
+            // txt搬运Y轴定位速度
+            // 
+            this.txt搬运Y轴定位速度.Location = new System.Drawing.Point(120, 210);
+            this.txt搬运Y轴定位速度.Margin = new System.Windows.Forms.Padding(2);
+            this.txt搬运Y轴定位速度.Name = "txt搬运Y轴定位速度";
+            this.txt搬运Y轴定位速度.Size = new System.Drawing.Size(49, 21);
+            this.txt搬运Y轴定位速度.TabIndex = 121;
+            // 
+            // txt搬运X轴定位速度
+            // 
+            this.txt搬运X轴定位速度.Location = new System.Drawing.Point(120, 181);
+            this.txt搬运X轴定位速度.Margin = new System.Windows.Forms.Padding(2);
+            this.txt搬运X轴定位速度.Name = "txt搬运X轴定位速度";
+            this.txt搬运X轴定位速度.Size = new System.Drawing.Size(49, 21);
+            this.txt搬运X轴定位速度.TabIndex = 120;
+            // 
+            // label503
+            // 
+            this.label503.AutoSize = true;
+            this.label503.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label503.Location = new System.Drawing.Point(7, 300);
+            this.label503.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label503.Name = "label503";
+            this.label503.Size = new System.Drawing.Size(31, 15);
+            this.label503.TabIndex = 119;
+            this.label503.Text = "黑体";
+            // 
+            // label502
+            // 
+            this.label502.AutoSize = true;
+            this.label502.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label502.Location = new System.Drawing.Point(6, 270);
+            this.label502.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label502.Name = "label502";
+            this.label502.Size = new System.Drawing.Size(39, 15);
+            this.label502.TabIndex = 118;
+            this.label502.Text = "Socket";
+            // 
+            // label501
+            // 
+            this.label501.AutoSize = true;
+            this.label501.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label501.Location = new System.Drawing.Point(6, 241);
+            this.label501.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label501.Name = "label501";
+            this.label501.Size = new System.Drawing.Size(51, 15);
+            this.label501.TabIndex = 117;
+            this.label501.Text = "搬运Z轴";
+            // 
+            // label500
+            // 
+            this.label500.AutoSize = true;
+            this.label500.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label500.Location = new System.Drawing.Point(7, 212);
+            this.label500.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label500.Name = "label500";
+            this.label500.Size = new System.Drawing.Size(51, 15);
+            this.label500.TabIndex = 116;
+            this.label500.Text = "搬运Y轴";
+            // 
+            // label499
+            // 
+            this.label499.AutoSize = true;
+            this.label499.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label499.Location = new System.Drawing.Point(77, 22);
+            this.label499.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label499.Name = "label499";
+            this.label499.Size = new System.Drawing.Size(31, 15);
+            this.label499.TabIndex = 115;
+            this.label499.Text = "修改";
+            // 
+            // label498
+            // 
+            this.label498.AutoSize = true;
+            this.label498.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label498.Location = new System.Drawing.Point(130, 22);
+            this.label498.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label498.Name = "label498";
+            this.label498.Size = new System.Drawing.Size(31, 15);
+            this.label498.TabIndex = 114;
+            this.label498.Text = "当前";
+            // 
+            // txt中空轴定位速度
+            // 
+            this.txt中空轴定位速度.Location = new System.Drawing.Point(120, 153);
+            this.txt中空轴定位速度.Margin = new System.Windows.Forms.Padding(2);
+            this.txt中空轴定位速度.Name = "txt中空轴定位速度";
+            this.txt中空轴定位速度.Size = new System.Drawing.Size(49, 21);
+            this.txt中空轴定位速度.TabIndex = 113;
+            // 
+            // txt平移轴定位速度
+            // 
+            this.txt平移轴定位速度.Location = new System.Drawing.Point(120, 124);
+            this.txt平移轴定位速度.Margin = new System.Windows.Forms.Padding(2);
+            this.txt平移轴定位速度.Name = "txt平移轴定位速度";
+            this.txt平移轴定位速度.Size = new System.Drawing.Size(49, 21);
+            this.txt平移轴定位速度.TabIndex = 112;
+            // 
+            // txt中空轴定位速度设置
+            // 
+            this.txt中空轴定位速度设置.Location = new System.Drawing.Point(68, 153);
+            this.txt中空轴定位速度设置.Margin = new System.Windows.Forms.Padding(2);
+            this.txt中空轴定位速度设置.Name = "txt中空轴定位速度设置";
+            this.txt中空轴定位速度设置.Size = new System.Drawing.Size(49, 21);
+            this.txt中空轴定位速度设置.TabIndex = 84;
+            // 
+            // txt上料X轴定位速度设置
+            // 
+            this.txt上料X轴定位速度设置.Location = new System.Drawing.Point(68, 38);
+            this.txt上料X轴定位速度设置.Margin = new System.Windows.Forms.Padding(2);
+            this.txt上料X轴定位速度设置.Name = "txt上料X轴定位速度设置";
+            this.txt上料X轴定位速度设置.Size = new System.Drawing.Size(49, 21);
+            this.txt上料X轴定位速度设置.TabIndex = 72;
+            // 
+            // txt升降轴定位速度
+            // 
+            this.txt升降轴定位速度.Location = new System.Drawing.Point(120, 96);
+            this.txt升降轴定位速度.Margin = new System.Windows.Forms.Padding(2);
+            this.txt升降轴定位速度.Name = "txt升降轴定位速度";
+            this.txt升降轴定位速度.Size = new System.Drawing.Size(49, 21);
+            this.txt升降轴定位速度.TabIndex = 111;
+            // 
+            // txt上料Y轴定位速度设置
+            // 
+            this.txt上料Y轴定位速度设置.Location = new System.Drawing.Point(68, 66);
+            this.txt上料Y轴定位速度设置.Margin = new System.Windows.Forms.Padding(2);
+            this.txt上料Y轴定位速度设置.Name = "txt上料Y轴定位速度设置";
+            this.txt上料Y轴定位速度设置.Size = new System.Drawing.Size(49, 21);
+            this.txt上料Y轴定位速度设置.TabIndex = 75;
+            // 
+            // txt上料Y轴定位速度
+            // 
+            this.txt上料Y轴定位速度.Location = new System.Drawing.Point(120, 68);
+            this.txt上料Y轴定位速度.Margin = new System.Windows.Forms.Padding(2);
+            this.txt上料Y轴定位速度.Name = "txt上料Y轴定位速度";
+            this.txt上料Y轴定位速度.Size = new System.Drawing.Size(49, 21);
+            this.txt上料Y轴定位速度.TabIndex = 110;
+            // 
+            // txt升降轴定位速度设置
+            // 
+            this.txt升降轴定位速度设置.Location = new System.Drawing.Point(68, 95);
+            this.txt升降轴定位速度设置.Margin = new System.Windows.Forms.Padding(2);
+            this.txt升降轴定位速度设置.Name = "txt升降轴定位速度设置";
+            this.txt升降轴定位速度设置.Size = new System.Drawing.Size(49, 21);
+            this.txt升降轴定位速度设置.TabIndex = 78;
+            // 
+            // txt上料X轴定位速度
+            // 
+            this.txt上料X轴定位速度.Location = new System.Drawing.Point(120, 38);
+            this.txt上料X轴定位速度.Margin = new System.Windows.Forms.Padding(2);
+            this.txt上料X轴定位速度.Name = "txt上料X轴定位速度";
+            this.txt上料X轴定位速度.Size = new System.Drawing.Size(49, 21);
+            this.txt上料X轴定位速度.TabIndex = 109;
+            // 
+            // txt平移轴定位速度设置
+            // 
+            this.txt平移轴定位速度设置.Location = new System.Drawing.Point(68, 124);
+            this.txt平移轴定位速度设置.Margin = new System.Windows.Forms.Padding(2);
+            this.txt平移轴定位速度设置.Name = "txt平移轴定位速度设置";
+            this.txt平移轴定位速度设置.Size = new System.Drawing.Size(49, 21);
+            this.txt平移轴定位速度设置.TabIndex = 81;
+            // 
+            // label497
+            // 
+            this.label497.AutoSize = true;
+            this.label497.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label497.Location = new System.Drawing.Point(6, 185);
+            this.label497.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label497.Name = "label497";
+            this.label497.Size = new System.Drawing.Size(52, 15);
+            this.label497.TabIndex = 108;
+            this.label497.Text = "搬运X轴";
+            // 
+            // label496
+            // 
+            this.label496.AutoSize = true;
+            this.label496.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label496.Location = new System.Drawing.Point(6, 156);
+            this.label496.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label496.Name = "label496";
+            this.label496.Size = new System.Drawing.Size(55, 15);
+            this.label496.TabIndex = 107;
+            this.label496.Text = "中空旋转";
+            // 
+            // label495
+            // 
+            this.label495.AutoSize = true;
+            this.label495.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label495.Location = new System.Drawing.Point(6, 126);
+            this.label495.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label495.Name = "label495";
+            this.label495.Size = new System.Drawing.Size(55, 15);
+            this.label495.TabIndex = 106;
+            this.label495.Text = "搬运平移";
+            // 
+            // label494
+            // 
+            this.label494.AutoSize = true;
+            this.label494.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label494.Location = new System.Drawing.Point(6, 100);
+            this.label494.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label494.Name = "label494";
+            this.label494.Size = new System.Drawing.Size(43, 15);
+            this.label494.TabIndex = 105;
+            this.label494.Text = "升降盘";
+            // 
+            // label493
+            // 
+            this.label493.AutoSize = true;
+            this.label493.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label493.Location = new System.Drawing.Point(6, 70);
+            this.label493.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label493.Name = "label493";
+            this.label493.Size = new System.Drawing.Size(51, 15);
+            this.label493.TabIndex = 104;
+            this.label493.Text = "上料Y轴";
+            // 
+            // label492
+            // 
+            this.label492.AutoSize = true;
+            this.label492.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label492.Location = new System.Drawing.Point(6, 42);
+            this.label492.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label492.Name = "label492";
+            this.label492.Size = new System.Drawing.Size(52, 15);
+            this.label492.TabIndex = 103;
+            this.label492.Text = "上料X轴";
             // 
             // label475
             // 
             this.label475.AutoSize = true;
             this.label475.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label475.Location = new System.Drawing.Point(332, 153);
+            this.label475.Location = new System.Drawing.Point(172, 301);
             this.label475.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label475.Name = "label475";
             this.label475.Size = new System.Drawing.Size(33, 15);
@@ -17828,28 +18242,17 @@
             // 
             // txt黑体轴定位速度设置
             // 
-            this.txt黑体轴定位速度设置.Location = new System.Drawing.Point(280, 146);
+            this.txt黑体轴定位速度设置.Location = new System.Drawing.Point(68, 296);
             this.txt黑体轴定位速度设置.Margin = new System.Windows.Forms.Padding(2);
             this.txt黑体轴定位速度设置.Name = "txt黑体轴定位速度设置";
             this.txt黑体轴定位速度设置.Size = new System.Drawing.Size(49, 21);
             this.txt黑体轴定位速度设置.TabIndex = 99;
             // 
-            // btn黑体轴定位速度设置
-            // 
-            this.btn黑体轴定位速度设置.BackColor = System.Drawing.SystemColors.Control;
-            this.btn黑体轴定位速度设置.Location = new System.Drawing.Point(197, 143);
-            this.btn黑体轴定位速度设置.Margin = new System.Windows.Forms.Padding(2);
-            this.btn黑体轴定位速度设置.Name = "btn黑体轴定位速度设置";
-            this.btn黑体轴定位速度设置.Size = new System.Drawing.Size(78, 24);
-            this.btn黑体轴定位速度设置.TabIndex = 97;
-            this.btn黑体轴定位速度设置.Text = "黑体";
-            this.btn黑体轴定位速度设置.UseVisualStyleBackColor = true;
-            // 
             // label476
             // 
             this.label476.AutoSize = true;
             this.label476.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label476.Location = new System.Drawing.Point(332, 124);
+            this.label476.Location = new System.Drawing.Point(172, 272);
             this.label476.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label476.Name = "label476";
             this.label476.Size = new System.Drawing.Size(33, 15);
@@ -17858,28 +18261,17 @@
             // 
             // txtSocket轴定位速度设置
             // 
-            this.txtSocket轴定位速度设置.Location = new System.Drawing.Point(280, 117);
+            this.txtSocket轴定位速度设置.Location = new System.Drawing.Point(68, 267);
             this.txtSocket轴定位速度设置.Margin = new System.Windows.Forms.Padding(2);
             this.txtSocket轴定位速度设置.Name = "txtSocket轴定位速度设置";
             this.txtSocket轴定位速度设置.Size = new System.Drawing.Size(49, 21);
             this.txtSocket轴定位速度设置.TabIndex = 96;
             // 
-            // btnSocket轴定位速度设置
-            // 
-            this.btnSocket轴定位速度设置.BackColor = System.Drawing.SystemColors.Control;
-            this.btnSocket轴定位速度设置.Location = new System.Drawing.Point(197, 114);
-            this.btnSocket轴定位速度设置.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSocket轴定位速度设置.Name = "btnSocket轴定位速度设置";
-            this.btnSocket轴定位速度设置.Size = new System.Drawing.Size(78, 24);
-            this.btnSocket轴定位速度设置.TabIndex = 94;
-            this.btnSocket轴定位速度设置.Text = "Socket";
-            this.btnSocket轴定位速度设置.UseVisualStyleBackColor = true;
-            // 
             // label473
             // 
             this.label473.AutoSize = true;
             this.label473.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label473.Location = new System.Drawing.Point(332, 95);
+            this.label473.Location = new System.Drawing.Point(172, 243);
             this.label473.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label473.Name = "label473";
             this.label473.Size = new System.Drawing.Size(33, 15);
@@ -17888,28 +18280,17 @@
             // 
             // txt搬运Z轴定位速度设置
             // 
-            this.txt搬运Z轴定位速度设置.Location = new System.Drawing.Point(280, 88);
+            this.txt搬运Z轴定位速度设置.Location = new System.Drawing.Point(68, 238);
             this.txt搬运Z轴定位速度设置.Margin = new System.Windows.Forms.Padding(2);
             this.txt搬运Z轴定位速度设置.Name = "txt搬运Z轴定位速度设置";
             this.txt搬运Z轴定位速度设置.Size = new System.Drawing.Size(49, 21);
             this.txt搬运Z轴定位速度设置.TabIndex = 93;
             // 
-            // btn搬运Z轴定位速度设置
-            // 
-            this.btn搬运Z轴定位速度设置.BackColor = System.Drawing.SystemColors.Control;
-            this.btn搬运Z轴定位速度设置.Location = new System.Drawing.Point(197, 86);
-            this.btn搬运Z轴定位速度设置.Margin = new System.Windows.Forms.Padding(2);
-            this.btn搬运Z轴定位速度设置.Name = "btn搬运Z轴定位速度设置";
-            this.btn搬运Z轴定位速度设置.Size = new System.Drawing.Size(78, 24);
-            this.btn搬运Z轴定位速度设置.TabIndex = 91;
-            this.btn搬运Z轴定位速度设置.Text = "搬运Z轴";
-            this.btn搬运Z轴定位速度设置.UseVisualStyleBackColor = true;
-            // 
             // label474
             // 
             this.label474.AutoSize = true;
             this.label474.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label474.Location = new System.Drawing.Point(332, 66);
+            this.label474.Location = new System.Drawing.Point(172, 214);
             this.label474.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label474.Name = "label474";
             this.label474.Size = new System.Drawing.Size(33, 15);
@@ -17918,28 +18299,17 @@
             // 
             // txt搬运Y轴定位速度设置
             // 
-            this.txt搬运Y轴定位速度设置.Location = new System.Drawing.Point(280, 59);
+            this.txt搬运Y轴定位速度设置.Location = new System.Drawing.Point(68, 210);
             this.txt搬运Y轴定位速度设置.Margin = new System.Windows.Forms.Padding(2);
             this.txt搬运Y轴定位速度设置.Name = "txt搬运Y轴定位速度设置";
             this.txt搬运Y轴定位速度设置.Size = new System.Drawing.Size(49, 21);
             this.txt搬运Y轴定位速度设置.TabIndex = 90;
             // 
-            // btn搬运Y轴定位速度设置
-            // 
-            this.btn搬运Y轴定位速度设置.BackColor = System.Drawing.SystemColors.Control;
-            this.btn搬运Y轴定位速度设置.Location = new System.Drawing.Point(197, 57);
-            this.btn搬运Y轴定位速度设置.Margin = new System.Windows.Forms.Padding(2);
-            this.btn搬运Y轴定位速度设置.Name = "btn搬运Y轴定位速度设置";
-            this.btn搬运Y轴定位速度设置.Size = new System.Drawing.Size(78, 24);
-            this.btn搬运Y轴定位速度设置.TabIndex = 88;
-            this.btn搬运Y轴定位速度设置.Text = "搬运Y轴";
-            this.btn搬运Y轴定位速度设置.UseVisualStyleBackColor = true;
-            // 
             // label470
             // 
             this.label470.AutoSize = true;
             this.label470.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label470.Location = new System.Drawing.Point(332, 38);
+            this.label470.Location = new System.Drawing.Point(172, 186);
             this.label470.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label470.Name = "label470";
             this.label470.Size = new System.Drawing.Size(33, 15);
@@ -17948,172 +18318,66 @@
             // 
             // txt搬运X轴定位速度设置
             // 
-            this.txt搬运X轴定位速度设置.Location = new System.Drawing.Point(280, 30);
+            this.txt搬运X轴定位速度设置.Location = new System.Drawing.Point(68, 181);
             this.txt搬运X轴定位速度设置.Margin = new System.Windows.Forms.Padding(2);
             this.txt搬运X轴定位速度设置.Name = "txt搬运X轴定位速度设置";
             this.txt搬运X轴定位速度设置.Size = new System.Drawing.Size(49, 21);
             this.txt搬运X轴定位速度设置.TabIndex = 87;
             // 
-            // btn搬运X轴定位速度设置
-            // 
-            this.btn搬运X轴定位速度设置.BackColor = System.Drawing.SystemColors.Control;
-            this.btn搬运X轴定位速度设置.Location = new System.Drawing.Point(197, 28);
-            this.btn搬运X轴定位速度设置.Margin = new System.Windows.Forms.Padding(2);
-            this.btn搬运X轴定位速度设置.Name = "btn搬运X轴定位速度设置";
-            this.btn搬运X轴定位速度设置.Size = new System.Drawing.Size(78, 24);
-            this.btn搬运X轴定位速度设置.TabIndex = 85;
-            this.btn搬运X轴定位速度设置.Text = "搬运X轴";
-            this.btn搬运X轴定位速度设置.UseVisualStyleBackColor = true;
-            // 
             // label471
             // 
             this.label471.AutoSize = true;
             this.label471.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label471.Location = new System.Drawing.Point(152, 153);
+            this.label471.Location = new System.Drawing.Point(172, 160);
             this.label471.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label471.Name = "label471";
             this.label471.Size = new System.Drawing.Size(33, 15);
             this.label471.TabIndex = 83;
             this.label471.Text = "mm/s";
             // 
-            // txt中空轴定位速度设置
-            // 
-            this.txt中空轴定位速度设置.Location = new System.Drawing.Point(100, 146);
-            this.txt中空轴定位速度设置.Margin = new System.Windows.Forms.Padding(2);
-            this.txt中空轴定位速度设置.Name = "txt中空轴定位速度设置";
-            this.txt中空轴定位速度设置.Size = new System.Drawing.Size(49, 21);
-            this.txt中空轴定位速度设置.TabIndex = 84;
-            // 
-            // btn中空轴定位速度设置
-            // 
-            this.btn中空轴定位速度设置.BackColor = System.Drawing.SystemColors.Control;
-            this.btn中空轴定位速度设置.Location = new System.Drawing.Point(17, 143);
-            this.btn中空轴定位速度设置.Margin = new System.Windows.Forms.Padding(2);
-            this.btn中空轴定位速度设置.Name = "btn中空轴定位速度设置";
-            this.btn中空轴定位速度设置.Size = new System.Drawing.Size(78, 24);
-            this.btn中空轴定位速度设置.TabIndex = 82;
-            this.btn中空轴定位速度设置.Text = "中空旋转";
-            this.btn中空轴定位速度设置.UseVisualStyleBackColor = true;
-            // 
             // label472
             // 
             this.label472.AutoSize = true;
             this.label472.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label472.Location = new System.Drawing.Point(152, 124);
+            this.label472.Location = new System.Drawing.Point(172, 131);
             this.label472.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label472.Name = "label472";
             this.label472.Size = new System.Drawing.Size(33, 15);
             this.label472.TabIndex = 80;
             this.label472.Text = "mm/s";
             // 
-            // txt平移轴定位速度设置
-            // 
-            this.txt平移轴定位速度设置.Location = new System.Drawing.Point(100, 117);
-            this.txt平移轴定位速度设置.Margin = new System.Windows.Forms.Padding(2);
-            this.txt平移轴定位速度设置.Name = "txt平移轴定位速度设置";
-            this.txt平移轴定位速度设置.Size = new System.Drawing.Size(49, 21);
-            this.txt平移轴定位速度设置.TabIndex = 81;
-            // 
-            // btn平移轴定位速度设置
-            // 
-            this.btn平移轴定位速度设置.BackColor = System.Drawing.SystemColors.Control;
-            this.btn平移轴定位速度设置.Location = new System.Drawing.Point(17, 114);
-            this.btn平移轴定位速度设置.Margin = new System.Windows.Forms.Padding(2);
-            this.btn平移轴定位速度设置.Name = "btn平移轴定位速度设置";
-            this.btn平移轴定位速度设置.Size = new System.Drawing.Size(78, 24);
-            this.btn平移轴定位速度设置.TabIndex = 79;
-            this.btn平移轴定位速度设置.Text = "搬运平移";
-            this.btn平移轴定位速度设置.UseVisualStyleBackColor = true;
-            // 
             // label469
             // 
             this.label469.AutoSize = true;
             this.label469.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label469.Location = new System.Drawing.Point(152, 95);
+            this.label469.Location = new System.Drawing.Point(172, 102);
             this.label469.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label469.Name = "label469";
             this.label469.Size = new System.Drawing.Size(33, 15);
             this.label469.TabIndex = 77;
             this.label469.Text = "mm/s";
             // 
-            // txt升降轴定位速度设置
-            // 
-            this.txt升降轴定位速度设置.Location = new System.Drawing.Point(100, 88);
-            this.txt升降轴定位速度设置.Margin = new System.Windows.Forms.Padding(2);
-            this.txt升降轴定位速度设置.Name = "txt升降轴定位速度设置";
-            this.txt升降轴定位速度设置.Size = new System.Drawing.Size(49, 21);
-            this.txt升降轴定位速度设置.TabIndex = 78;
-            // 
-            // btn升降轴定位速度设置
-            // 
-            this.btn升降轴定位速度设置.BackColor = System.Drawing.SystemColors.Control;
-            this.btn升降轴定位速度设置.Location = new System.Drawing.Point(17, 86);
-            this.btn升降轴定位速度设置.Margin = new System.Windows.Forms.Padding(2);
-            this.btn升降轴定位速度设置.Name = "btn升降轴定位速度设置";
-            this.btn升降轴定位速度设置.Size = new System.Drawing.Size(78, 24);
-            this.btn升降轴定位速度设置.TabIndex = 76;
-            this.btn升降轴定位速度设置.Text = "升降盘";
-            this.btn升降轴定位速度设置.UseVisualStyleBackColor = true;
-            // 
             // label464
             // 
             this.label464.AutoSize = true;
             this.label464.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label464.Location = new System.Drawing.Point(152, 66);
+            this.label464.Location = new System.Drawing.Point(172, 73);
             this.label464.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label464.Name = "label464";
             this.label464.Size = new System.Drawing.Size(33, 15);
             this.label464.TabIndex = 74;
             this.label464.Text = "mm/s";
             // 
-            // txt上料Y轴定位速度设置
-            // 
-            this.txt上料Y轴定位速度设置.Location = new System.Drawing.Point(100, 59);
-            this.txt上料Y轴定位速度设置.Margin = new System.Windows.Forms.Padding(2);
-            this.txt上料Y轴定位速度设置.Name = "txt上料Y轴定位速度设置";
-            this.txt上料Y轴定位速度设置.Size = new System.Drawing.Size(49, 21);
-            this.txt上料Y轴定位速度设置.TabIndex = 75;
-            // 
-            // btn上料Y轴定位速度设置
-            // 
-            this.btn上料Y轴定位速度设置.BackColor = System.Drawing.SystemColors.Control;
-            this.btn上料Y轴定位速度设置.Location = new System.Drawing.Point(17, 57);
-            this.btn上料Y轴定位速度设置.Margin = new System.Windows.Forms.Padding(2);
-            this.btn上料Y轴定位速度设置.Name = "btn上料Y轴定位速度设置";
-            this.btn上料Y轴定位速度设置.Size = new System.Drawing.Size(78, 24);
-            this.btn上料Y轴定位速度设置.TabIndex = 73;
-            this.btn上料Y轴定位速度设置.Text = "上料Y轴";
-            this.btn上料Y轴定位速度设置.UseVisualStyleBackColor = true;
-            // 
             // label463
             // 
             this.label463.AutoSize = true;
             this.label463.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label463.Location = new System.Drawing.Point(152, 38);
+            this.label463.Location = new System.Drawing.Point(172, 46);
             this.label463.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label463.Name = "label463";
             this.label463.Size = new System.Drawing.Size(33, 15);
             this.label463.TabIndex = 71;
             this.label463.Text = "mm/s";
-            // 
-            // txt上料X轴定位速度设置
-            // 
-            this.txt上料X轴定位速度设置.Location = new System.Drawing.Point(100, 30);
-            this.txt上料X轴定位速度设置.Margin = new System.Windows.Forms.Padding(2);
-            this.txt上料X轴定位速度设置.Name = "txt上料X轴定位速度设置";
-            this.txt上料X轴定位速度设置.Size = new System.Drawing.Size(49, 21);
-            this.txt上料X轴定位速度设置.TabIndex = 72;
-            // 
-            // btn上料X轴定位速度设置
-            // 
-            this.btn上料X轴定位速度设置.BackColor = System.Drawing.SystemColors.Control;
-            this.btn上料X轴定位速度设置.Location = new System.Drawing.Point(17, 28);
-            this.btn上料X轴定位速度设置.Margin = new System.Windows.Forms.Padding(2);
-            this.btn上料X轴定位速度设置.Name = "btn上料X轴定位速度设置";
-            this.btn上料X轴定位速度设置.Size = new System.Drawing.Size(78, 24);
-            this.btn上料X轴定位速度设置.TabIndex = 70;
-            this.btn上料X轴定位速度设置.Text = "上料X轴";
-            this.btn上料X轴定位速度设置.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -18256,10 +18520,10 @@
             this.tabPage6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.tabPage5.ResumeLayout(false);
+            this.groupBox62.ResumeLayout(false);
+            this.groupBox62.PerformLayout();
             this.groupBox65.ResumeLayout(false);
             this.groupBox65.PerformLayout();
-            this.groupBox64.ResumeLayout(false);
-            this.groupBox64.PerformLayout();
             this.groupBox63.ResumeLayout(false);
             this.groupBox63.PerformLayout();
             this.ResumeLayout(false);
@@ -19563,71 +19827,6 @@
         private System.Windows.Forms.ComboBox CB_TypeOfTray;
         private System.Windows.Forms.Label LB_TypeOfTray;
         private System.Windows.Forms.Button BTN_MappingTest2;
-        private System.Windows.Forms.GroupBox groupBox65;
-        private System.Windows.Forms.Label label487;
-        private System.Windows.Forms.Button btn门开关功能开关;
-        private System.Windows.Forms.GroupBox groupBox64;
-        private System.Windows.Forms.Label label477;
-        private System.Windows.Forms.TextBox txt黑体轴手动速度设置;
-        private System.Windows.Forms.Button btn黑体轴手动速度设置;
-        private System.Windows.Forms.Label label478;
-        private System.Windows.Forms.TextBox txtSocket轴手动速度设置;
-        private System.Windows.Forms.Button btnSocket轴手动速度设置;
-        private System.Windows.Forms.Label label479;
-        private System.Windows.Forms.TextBox txt搬运Z轴手动速度设置;
-        private System.Windows.Forms.Button btn搬运Z轴手动速度设置;
-        private System.Windows.Forms.Label label480;
-        private System.Windows.Forms.TextBox txt搬运Y轴手动速度设置;
-        private System.Windows.Forms.Button btn搬运Y轴手动速度设置;
-        private System.Windows.Forms.Label label481;
-        private System.Windows.Forms.TextBox txt搬运X轴手动速度设置;
-        private System.Windows.Forms.Button btn搬运X轴手动速度设置;
-        private System.Windows.Forms.Label label482;
-        private System.Windows.Forms.TextBox txt中空轴手动速度设置;
-        private System.Windows.Forms.Button btn中空轴手动速度设置;
-        private System.Windows.Forms.Label label483;
-        private System.Windows.Forms.TextBox txt平移轴手动速度设置;
-        private System.Windows.Forms.Button btn平移轴手动速度设置;
-        private System.Windows.Forms.Label label484;
-        private System.Windows.Forms.TextBox txt升降轴手动速度设置;
-        private System.Windows.Forms.Button btn升降轴手动速度设置;
-        private System.Windows.Forms.Label label485;
-        private System.Windows.Forms.TextBox txt上料Y轴定位手动设置;
-        private System.Windows.Forms.Button btn上料Y轴定位手动设置;
-        private System.Windows.Forms.Label label486;
-        private System.Windows.Forms.TextBox txt上料X轴手动速度设置;
-        private System.Windows.Forms.Button btn上料X轴手动速度设置;
-        private System.Windows.Forms.GroupBox groupBox63;
-        private System.Windows.Forms.Label label475;
-        private System.Windows.Forms.TextBox txt黑体轴定位速度设置;
-        private System.Windows.Forms.Button btn黑体轴定位速度设置;
-        private System.Windows.Forms.Label label476;
-        private System.Windows.Forms.TextBox txtSocket轴定位速度设置;
-        private System.Windows.Forms.Button btnSocket轴定位速度设置;
-        private System.Windows.Forms.Label label473;
-        private System.Windows.Forms.TextBox txt搬运Z轴定位速度设置;
-        private System.Windows.Forms.Button btn搬运Z轴定位速度设置;
-        private System.Windows.Forms.Label label474;
-        private System.Windows.Forms.TextBox txt搬运Y轴定位速度设置;
-        private System.Windows.Forms.Button btn搬运Y轴定位速度设置;
-        private System.Windows.Forms.Label label470;
-        private System.Windows.Forms.TextBox txt搬运X轴定位速度设置;
-        private System.Windows.Forms.Button btn搬运X轴定位速度设置;
-        private System.Windows.Forms.Label label471;
-        private System.Windows.Forms.TextBox txt中空轴定位速度设置;
-        private System.Windows.Forms.Button btn中空轴定位速度设置;
-        private System.Windows.Forms.Label label472;
-        private System.Windows.Forms.TextBox txt平移轴定位速度设置;
-        private System.Windows.Forms.Button btn平移轴定位速度设置;
-        private System.Windows.Forms.Label label469;
-        private System.Windows.Forms.TextBox txt升降轴定位速度设置;
-        private System.Windows.Forms.Button btn升降轴定位速度设置;
-        private System.Windows.Forms.Label label464;
-        private System.Windows.Forms.TextBox txt上料Y轴定位速度设置;
-        private System.Windows.Forms.Button btn上料Y轴定位速度设置;
-        private System.Windows.Forms.Label label463;
-        private System.Windows.Forms.TextBox txt上料X轴定位速度设置;
-        private System.Windows.Forms.Button btn上料X轴定位速度设置;
         private System.Windows.Forms.Label label468;
         private System.Windows.Forms.TextBox txtBYZ示教视觉位置3;
         private System.Windows.Forms.Button btnBYZ示教视觉位置3;
@@ -19660,6 +19859,96 @@
         private System.Windows.Forms.Label label488;
         private System.Windows.Forms.TextBox txtX示教视觉实盘第一列;
         private System.Windows.Forms.Button btnX示教视觉实盘第一列;
+        private System.Windows.Forms.GroupBox groupBox62;
+        private System.Windows.Forms.TextBox txt黑体轴手动速度;
+        private System.Windows.Forms.TextBox txt黑体轴手动速度设置;
+        private System.Windows.Forms.TextBox txtSocket轴手动速度;
+        private System.Windows.Forms.TextBox txt搬运Z轴手动速度;
+        private System.Windows.Forms.TextBox txt搬运Y轴手动速度;
+        private System.Windows.Forms.TextBox txtSocket轴手动速度设置;
+        private System.Windows.Forms.TextBox txt搬运X轴手动速度;
+        private System.Windows.Forms.Label label504;
+        private System.Windows.Forms.Label label505;
+        private System.Windows.Forms.TextBox txt搬运Z轴手动速度设置;
+        private System.Windows.Forms.Label label506;
+        private System.Windows.Forms.Label label507;
+        private System.Windows.Forms.Label label508;
+        private System.Windows.Forms.TextBox txt搬运Y轴手动速度设置;
+        private System.Windows.Forms.Label label509;
+        private System.Windows.Forms.TextBox txt中空轴手动速度;
+        private System.Windows.Forms.TextBox txt平移轴手动速度;
+        private System.Windows.Forms.TextBox txt搬运X轴手动速度设置;
+        private System.Windows.Forms.TextBox txt升降轴手动速度;
+        private System.Windows.Forms.TextBox txt上料Y轴定位手动;
+        private System.Windows.Forms.TextBox txt上料X轴手动速度;
+        private System.Windows.Forms.TextBox txt中空轴手动速度设置;
+        private System.Windows.Forms.Label label510;
+        private System.Windows.Forms.Label label511;
+        private System.Windows.Forms.Label label512;
+        private System.Windows.Forms.TextBox txt平移轴手动速度设置;
+        private System.Windows.Forms.Label label513;
+        private System.Windows.Forms.Label label514;
+        private System.Windows.Forms.Label label515;
+        private System.Windows.Forms.TextBox txt升降轴手动速度设置;
+        private System.Windows.Forms.Label label516;
+        private System.Windows.Forms.Label label517;
+        private System.Windows.Forms.Label label518;
+        private System.Windows.Forms.TextBox txt上料Y轴定位手动设置;
+        private System.Windows.Forms.Label label519;
+        private System.Windows.Forms.Label label520;
+        private System.Windows.Forms.Label label521;
+        private System.Windows.Forms.TextBox txt上料X轴手动速度设置;
+        private System.Windows.Forms.Label label522;
+        private System.Windows.Forms.Label label523;
+        private System.Windows.Forms.Label label524;
+        private System.Windows.Forms.Label label525;
+        private System.Windows.Forms.Button btn写入速度;
+        private System.Windows.Forms.GroupBox groupBox65;
+        private System.Windows.Forms.Label label487;
+        private System.Windows.Forms.Button btn门开关功能开关;
+        private System.Windows.Forms.GroupBox groupBox63;
+        private System.Windows.Forms.TextBox txt黑体轴定位速度;
+        private System.Windows.Forms.TextBox txtSocket轴定位速度;
+        private System.Windows.Forms.TextBox txt搬运Z轴定位速度;
+        private System.Windows.Forms.TextBox txt搬运Y轴定位速度;
+        private System.Windows.Forms.TextBox txt搬运X轴定位速度;
+        private System.Windows.Forms.Label label503;
+        private System.Windows.Forms.Label label502;
+        private System.Windows.Forms.Label label501;
+        private System.Windows.Forms.Label label500;
+        private System.Windows.Forms.Label label499;
+        private System.Windows.Forms.Label label498;
+        private System.Windows.Forms.TextBox txt中空轴定位速度;
+        private System.Windows.Forms.TextBox txt平移轴定位速度;
+        private System.Windows.Forms.TextBox txt中空轴定位速度设置;
+        private System.Windows.Forms.TextBox txt上料X轴定位速度设置;
+        private System.Windows.Forms.TextBox txt升降轴定位速度;
+        private System.Windows.Forms.TextBox txt上料Y轴定位速度设置;
+        private System.Windows.Forms.TextBox txt上料Y轴定位速度;
+        private System.Windows.Forms.TextBox txt升降轴定位速度设置;
+        private System.Windows.Forms.TextBox txt上料X轴定位速度;
+        private System.Windows.Forms.TextBox txt平移轴定位速度设置;
+        private System.Windows.Forms.Label label497;
+        private System.Windows.Forms.Label label496;
+        private System.Windows.Forms.Label label495;
+        private System.Windows.Forms.Label label494;
+        private System.Windows.Forms.Label label493;
+        private System.Windows.Forms.Label label492;
+        private System.Windows.Forms.Label label475;
+        private System.Windows.Forms.TextBox txt黑体轴定位速度设置;
+        private System.Windows.Forms.Label label476;
+        private System.Windows.Forms.TextBox txtSocket轴定位速度设置;
+        private System.Windows.Forms.Label label473;
+        private System.Windows.Forms.TextBox txt搬运Z轴定位速度设置;
+        private System.Windows.Forms.Label label474;
+        private System.Windows.Forms.TextBox txt搬运Y轴定位速度设置;
+        private System.Windows.Forms.Label label470;
+        private System.Windows.Forms.TextBox txt搬运X轴定位速度设置;
+        private System.Windows.Forms.Label label471;
+        private System.Windows.Forms.Label label472;
+        private System.Windows.Forms.Label label469;
+        private System.Windows.Forms.Label label464;
+        private System.Windows.Forms.Label label463;
     }
 }
 
