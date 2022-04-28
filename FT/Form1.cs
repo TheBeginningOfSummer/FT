@@ -225,8 +225,8 @@ namespace FT
                         SetTextBoxText(txt实盘示教当前位置, communication.ReadLocation[2]);
                         SetTextBoxText(txtNG盘示教当前位置, communication.ReadLocation[3]);
                         SetTextBoxText(txt倒实盘示教当前位置, communication.ReadLocation[4]);
-                        SetTextBoxText(txt平移示教当前位置, communication.ReadLocation[5]);
-                        //SetTextBoxText(txtX示教当前位置, communication.ReadLocation[6]);
+                        //SetTextBoxText(txt平移示教当前位置, communication.ReadLocation[5]);
+                        SetTextBoxText(txtX示教当前位置, communication.ReadLocation[6]);
                         SetTextBoxText(txtBYX示教当前位置, communication.ReadLocation[7]);
                         SetTextBoxText(txtBYY示教当前位置, communication.ReadLocation[8]);
                         SetTextBoxText(txtBYZ示教当前位置, communication.ReadLocation[9]);
