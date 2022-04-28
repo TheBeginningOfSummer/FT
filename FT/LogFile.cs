@@ -7,7 +7,7 @@ using System.IO;
 
 namespace FT
 {
-    class LogFile
+    public class LogFile
     {
 
         public void Writelog(string strlog)

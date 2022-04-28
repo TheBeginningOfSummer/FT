@@ -12,7 +12,7 @@ namespace FT
     public partial class Form1 : Form
     {
         Communication communication = Communication.singleton;
-        //日志文件
+        //日志文件记录
         LogFile logfile = new LogFile();
         //报警信息
         Dictionary<string, string> alarmInformation;
@@ -188,24 +188,13 @@ namespace FT
         #region Mapping图操作
         private void BTN_Mapping_Click(object sender, EventArgs e)
         {
-            //按照类型初始化托盘
-            trayManager.InitializeTrays(CB_TypeOfTray.Text);
-            foreach (var tray in trayManager.Trays)
-            {
-                tray.UpdateTrayLabel(PN_Trays);
-            }
-        }
-        
-        private void BTN_MappingTest_Click(object sender, EventArgs e)
-        {
             PN_Trays.Controls.Clear();
         }
-
-        private void BTN_MappingTest2_Click(object sender, EventArgs e)
+        
+        private void CB_TypeOfTray_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //JsonManager.SaveJsonString(Environment.CurrentDirectory + "\\Configuration.json", "123", "321");
+            communication.WriteProductionData[0] = trayManager.TrayType[CB_TypeOfTray.Text].Index;
         }
-
         #endregion
 
         #region 示教操作
@@ -220,6 +209,12 @@ namespace FT
         }
 
 
+
+
+
         #endregion
+
+
+       
     }
 }

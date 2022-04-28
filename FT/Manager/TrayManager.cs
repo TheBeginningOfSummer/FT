@@ -15,6 +15,8 @@ namespace FT
         //上料盘数据
         public List<Tray> Trays = new List<Tray>();
 
+        LogFile logfile = new LogFile();
+
         public TrayManager()
         {
             try
@@ -24,9 +26,9 @@ namespace FT
                 //读取Mapping图布局配置文件
                 MappingLayout = JsonManager.ReadJsonString<List<Position>>(Environment.CurrentDirectory + "\\Configuration\\MappingLayout.json");
             }
-            catch (Exception)
+            catch (Exception e)
             {
-
+                logfile.Writelog("读取托盘配置数据：" + e.Message);
             }
         }
 

@@ -469,10 +469,8 @@
             this.btnSk1停止 = new System.Windows.Forms.Button();
             this.btnSk1回原点 = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.BTN_MappingTest2 = new System.Windows.Forms.Button();
             this.CB_TypeOfTray = new System.Windows.Forms.ComboBox();
             this.LB_TypeOfTray = new System.Windows.Forms.Label();
-            this.BTN_MappingTest = new System.Windows.Forms.Button();
             this.BTN_Mapping = new System.Windows.Forms.Button();
             this.GB_Trays = new System.Windows.Forms.GroupBox();
             this.PN_Trays = new System.Windows.Forms.Panel();
@@ -6794,10 +6792,8 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.BTN_MappingTest2);
             this.tabPage3.Controls.Add(this.CB_TypeOfTray);
             this.tabPage3.Controls.Add(this.LB_TypeOfTray);
-            this.tabPage3.Controls.Add(this.BTN_MappingTest);
             this.tabPage3.Controls.Add(this.BTN_Mapping);
             this.tabPage3.Controls.Add(this.GB_Trays);
             this.tabPage3.Location = new System.Drawing.Point(4, 44);
@@ -6808,17 +6804,6 @@
             this.tabPage3.Text = "Mapping信息";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // BTN_MappingTest2
-            // 
-            this.BTN_MappingTest2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.BTN_MappingTest2.Location = new System.Drawing.Point(439, 661);
-            this.BTN_MappingTest2.Name = "BTN_MappingTest2";
-            this.BTN_MappingTest2.Size = new System.Drawing.Size(75, 23);
-            this.BTN_MappingTest2.TabIndex = 6;
-            this.BTN_MappingTest2.Text = "button2";
-            this.BTN_MappingTest2.UseVisualStyleBackColor = true;
-            this.BTN_MappingTest2.Click += new System.EventHandler(this.BTN_MappingTest2_Click);
-            // 
             // CB_TypeOfTray
             // 
             this.CB_TypeOfTray.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -6827,6 +6812,7 @@
             this.CB_TypeOfTray.Name = "CB_TypeOfTray";
             this.CB_TypeOfTray.Size = new System.Drawing.Size(121, 24);
             this.CB_TypeOfTray.TabIndex = 5;
+            this.CB_TypeOfTray.SelectedIndexChanged += new System.EventHandler(this.CB_TypeOfTray_SelectedIndexChanged);
             // 
             // LB_TypeOfTray
             // 
@@ -6837,17 +6823,6 @@
             this.LB_TypeOfTray.Size = new System.Drawing.Size(88, 17);
             this.LB_TypeOfTray.TabIndex = 4;
             this.LB_TypeOfTray.Text = "托盘种类：";
-            // 
-            // BTN_MappingTest
-            // 
-            this.BTN_MappingTest.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.BTN_MappingTest.Location = new System.Drawing.Point(358, 661);
-            this.BTN_MappingTest.Name = "BTN_MappingTest";
-            this.BTN_MappingTest.Size = new System.Drawing.Size(75, 23);
-            this.BTN_MappingTest.TabIndex = 3;
-            this.BTN_MappingTest.Text = "button1";
-            this.BTN_MappingTest.UseVisualStyleBackColor = true;
-            this.BTN_MappingTest.Click += new System.EventHandler(this.BTN_MappingTest_Click);
             // 
             // BTN_Mapping
             // 
@@ -19823,10 +19798,8 @@
         private System.Windows.Forms.GroupBox GB_Trays;
         private System.Windows.Forms.Button BTN_Mapping;
         private System.Windows.Forms.Panel PN_Trays;
-        private System.Windows.Forms.Button BTN_MappingTest;
         private System.Windows.Forms.ComboBox CB_TypeOfTray;
         private System.Windows.Forms.Label LB_TypeOfTray;
-        private System.Windows.Forms.Button BTN_MappingTest2;
         private System.Windows.Forms.Label label468;
         private System.Windows.Forms.TextBox txtBYZ示教视觉位置3;
         private System.Windows.Forms.Button btnBYZ示教视觉位置3;
