@@ -1034,6 +1034,18 @@
             this.label20 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.groupBox64 = new System.Windows.Forms.GroupBox();
+            this.label480 = new System.Windows.Forms.Label();
+            this.txt平移示教中转位置 = new System.Windows.Forms.TextBox();
+            this.btn平移示教中转位置 = new System.Windows.Forms.Button();
+            this.label481 = new System.Windows.Forms.Label();
+            this.txt平移示教下料位置 = new System.Windows.Forms.TextBox();
+            this.btn平移示教下料位置 = new System.Windows.Forms.Button();
+            this.label482 = new System.Windows.Forms.Label();
+            this.txt平移示教上料位置 = new System.Windows.Forms.TextBox();
+            this.btn平移示教上料位置 = new System.Windows.Forms.Button();
+            this.txt平移示教当前位置 = new System.Windows.Forms.TextBox();
+            this.label483 = new System.Windows.Forms.Label();
             this.groupBox50 = new System.Windows.Forms.GroupBox();
             this.label399 = new System.Windows.Forms.Label();
             this.txt倒NG盘示教初始位置 = new System.Windows.Forms.TextBox();
@@ -1151,6 +1163,196 @@
             this.txtX示教当前位置 = new System.Windows.Forms.TextBox();
             this.btnX示教吸1实盘第一列 = new System.Windows.Forms.Button();
             this.label370 = new System.Windows.Forms.Label();
+            this.tabPage10 = new System.Windows.Forms.TabPage();
+            this.groupBox61 = new System.Windows.Forms.GroupBox();
+            this.label460 = new System.Windows.Forms.Label();
+            this.txtBk4示教35位置 = new System.Windows.Forms.TextBox();
+            this.btnBk4示教35位置 = new System.Windows.Forms.Button();
+            this.label461 = new System.Windows.Forms.Label();
+            this.txtBk4示教20位置 = new System.Windows.Forms.TextBox();
+            this.btnBk4示教20位置 = new System.Windows.Forms.Button();
+            this.txtBk4示教当前位置 = new System.Windows.Forms.TextBox();
+            this.label462 = new System.Windows.Forms.Label();
+            this.groupBox60 = new System.Windows.Forms.GroupBox();
+            this.label457 = new System.Windows.Forms.Label();
+            this.txtBk3示教35位置 = new System.Windows.Forms.TextBox();
+            this.btnBk3示教35位置 = new System.Windows.Forms.Button();
+            this.label458 = new System.Windows.Forms.Label();
+            this.txtBk3示教20位置 = new System.Windows.Forms.TextBox();
+            this.btnBk3示教20位置 = new System.Windows.Forms.Button();
+            this.txtBk3示教当前位置 = new System.Windows.Forms.TextBox();
+            this.label459 = new System.Windows.Forms.Label();
+            this.groupBox59 = new System.Windows.Forms.GroupBox();
+            this.label451 = new System.Windows.Forms.Label();
+            this.txtBk2示教35位置 = new System.Windows.Forms.TextBox();
+            this.btnBk2示教35位置 = new System.Windows.Forms.Button();
+            this.label452 = new System.Windows.Forms.Label();
+            this.txtBk2示教20位置 = new System.Windows.Forms.TextBox();
+            this.btnBk2示教20位置 = new System.Windows.Forms.Button();
+            this.txtBk2示教当前位置 = new System.Windows.Forms.TextBox();
+            this.label453 = new System.Windows.Forms.Label();
+            this.groupBox58 = new System.Windows.Forms.GroupBox();
+            this.label454 = new System.Windows.Forms.Label();
+            this.txtBk1示教35位置 = new System.Windows.Forms.TextBox();
+            this.btnBk1示教35位置 = new System.Windows.Forms.Button();
+            this.label455 = new System.Windows.Forms.Label();
+            this.txtBk1示教20位置 = new System.Windows.Forms.TextBox();
+            this.btnBk1示教20位置 = new System.Windows.Forms.Button();
+            this.txtBk1示教当前位置 = new System.Windows.Forms.TextBox();
+            this.label456 = new System.Windows.Forms.Label();
+            this.groupBox56 = new System.Windows.Forms.GroupBox();
+            this.label445 = new System.Windows.Forms.Label();
+            this.txtSk4示教测试3位置 = new System.Windows.Forms.TextBox();
+            this.btnSk4示教测试3位置 = new System.Windows.Forms.Button();
+            this.label446 = new System.Windows.Forms.Label();
+            this.txtSk4示教测试2位置 = new System.Windows.Forms.TextBox();
+            this.btnSk4示教测试2位置 = new System.Windows.Forms.Button();
+            this.label447 = new System.Windows.Forms.Label();
+            this.txtSk4示教测试1位置 = new System.Windows.Forms.TextBox();
+            this.btnSk4示教测试1位置 = new System.Windows.Forms.Button();
+            this.label448 = new System.Windows.Forms.Label();
+            this.txtSk4示教翻转位置 = new System.Windows.Forms.TextBox();
+            this.btnSk4示教翻转位置 = new System.Windows.Forms.Button();
+            this.label449 = new System.Windows.Forms.Label();
+            this.txtSk4示教黑体位置 = new System.Windows.Forms.TextBox();
+            this.btnSk4示教黑体位置 = new System.Windows.Forms.Button();
+            this.txtSk4示教当前位置 = new System.Windows.Forms.TextBox();
+            this.label450 = new System.Windows.Forms.Label();
+            this.groupBox55 = new System.Windows.Forms.GroupBox();
+            this.label439 = new System.Windows.Forms.Label();
+            this.txtSk3示教测试3位置 = new System.Windows.Forms.TextBox();
+            this.btnSk3示教测试3位置 = new System.Windows.Forms.Button();
+            this.label440 = new System.Windows.Forms.Label();
+            this.txtSk3示教测试2位置 = new System.Windows.Forms.TextBox();
+            this.btnSk3示教测试2位置 = new System.Windows.Forms.Button();
+            this.label441 = new System.Windows.Forms.Label();
+            this.txtSk3示教测试1位置 = new System.Windows.Forms.TextBox();
+            this.btnSk3示教测试1位置 = new System.Windows.Forms.Button();
+            this.label442 = new System.Windows.Forms.Label();
+            this.txtSk3示教翻转位置 = new System.Windows.Forms.TextBox();
+            this.btnSk3示教翻转位置 = new System.Windows.Forms.Button();
+            this.label443 = new System.Windows.Forms.Label();
+            this.txtSk3示教黑体位置 = new System.Windows.Forms.TextBox();
+            this.btnSk3示教黑体位置 = new System.Windows.Forms.Button();
+            this.txtSk3示教当前位置 = new System.Windows.Forms.TextBox();
+            this.label444 = new System.Windows.Forms.Label();
+            this.groupBox53 = new System.Windows.Forms.GroupBox();
+            this.label433 = new System.Windows.Forms.Label();
+            this.txtSk2示教测试3位置 = new System.Windows.Forms.TextBox();
+            this.btnSk2示教测试3位置 = new System.Windows.Forms.Button();
+            this.label434 = new System.Windows.Forms.Label();
+            this.txtSk2示教测试2位置 = new System.Windows.Forms.TextBox();
+            this.btnSk2示教测试2位置 = new System.Windows.Forms.Button();
+            this.label435 = new System.Windows.Forms.Label();
+            this.txtSk2示教测试1位置 = new System.Windows.Forms.TextBox();
+            this.btnSk2示教测试1位置 = new System.Windows.Forms.Button();
+            this.label436 = new System.Windows.Forms.Label();
+            this.txtSk2示教翻转位置 = new System.Windows.Forms.TextBox();
+            this.btnSk2示教翻转位置 = new System.Windows.Forms.Button();
+            this.label437 = new System.Windows.Forms.Label();
+            this.txtSk2示教黑体位置 = new System.Windows.Forms.TextBox();
+            this.btnSk2示教黑体位置 = new System.Windows.Forms.Button();
+            this.txtSk2示教当前位置 = new System.Windows.Forms.TextBox();
+            this.label438 = new System.Windows.Forms.Label();
+            this.groupBox57 = new System.Windows.Forms.GroupBox();
+            this.label410 = new System.Windows.Forms.Label();
+            this.txtSk1示教测试3位置 = new System.Windows.Forms.TextBox();
+            this.btnSk1示教测试3位置 = new System.Windows.Forms.Button();
+            this.label411 = new System.Windows.Forms.Label();
+            this.txtSk1示教测试2位置 = new System.Windows.Forms.TextBox();
+            this.btnSk1示教测试2位置 = new System.Windows.Forms.Button();
+            this.label429 = new System.Windows.Forms.Label();
+            this.txtSk1示教测试1位置 = new System.Windows.Forms.TextBox();
+            this.btnSk1示教测试1位置 = new System.Windows.Forms.Button();
+            this.label430 = new System.Windows.Forms.Label();
+            this.txtSk1示教翻转位置 = new System.Windows.Forms.TextBox();
+            this.btnSk1示教翻转位置 = new System.Windows.Forms.Button();
+            this.label431 = new System.Windows.Forms.Label();
+            this.txtSk1示教黑体位置 = new System.Windows.Forms.TextBox();
+            this.btnSk1示教黑体位置 = new System.Windows.Forms.Button();
+            this.txtSk1示教当前位置 = new System.Windows.Forms.TextBox();
+            this.label432 = new System.Windows.Forms.Label();
+            this.groupBox54 = new System.Windows.Forms.GroupBox();
+            this.label468 = new System.Windows.Forms.Label();
+            this.txtBYZ示教视觉位置3 = new System.Windows.Forms.TextBox();
+            this.btnBYZ示教视觉位置3 = new System.Windows.Forms.Button();
+            this.label417 = new System.Windows.Forms.Label();
+            this.txtBYZ下料视觉位置 = new System.Windows.Forms.TextBox();
+            this.btnBYZ下料视觉位置 = new System.Windows.Forms.Button();
+            this.label418 = new System.Windows.Forms.Label();
+            this.txtBYZ示教视觉位置2 = new System.Windows.Forms.TextBox();
+            this.btnBYZ示教视觉位置2 = new System.Windows.Forms.Button();
+            this.label419 = new System.Windows.Forms.Label();
+            this.txtBYZ示教视觉位置1 = new System.Windows.Forms.TextBox();
+            this.btnBYZ示教视觉位置1 = new System.Windows.Forms.Button();
+            this.label426 = new System.Windows.Forms.Label();
+            this.txtBYZ示教上升位置 = new System.Windows.Forms.TextBox();
+            this.btnBYZ示教上升位置 = new System.Windows.Forms.Button();
+            this.label427 = new System.Windows.Forms.Label();
+            this.txtBYZ示教上料位置 = new System.Windows.Forms.TextBox();
+            this.btnBYZ示教上料位置 = new System.Windows.Forms.Button();
+            this.txtBYZ示教当前位置 = new System.Windows.Forms.TextBox();
+            this.label428 = new System.Windows.Forms.Label();
+            this.groupBox52 = new System.Windows.Forms.GroupBox();
+            this.label466 = new System.Windows.Forms.Label();
+            this.txtBYY示教视觉4位置 = new System.Windows.Forms.TextBox();
+            this.btnBYY示教视觉4位置 = new System.Windows.Forms.Button();
+            this.label467 = new System.Windows.Forms.Label();
+            this.txtBYY示教视觉3位置 = new System.Windows.Forms.TextBox();
+            this.btnBYY示教视觉3位置 = new System.Windows.Forms.Button();
+            this.label420 = new System.Windows.Forms.Label();
+            this.txtBYY示教第二行 = new System.Windows.Forms.TextBox();
+            this.btnBYY示教第二行 = new System.Windows.Forms.Button();
+            this.label421 = new System.Windows.Forms.Label();
+            this.txtBYY示教第一行 = new System.Windows.Forms.TextBox();
+            this.btnBYY示教第一行 = new System.Windows.Forms.Button();
+            this.label422 = new System.Windows.Forms.Label();
+            this.txtBYY示教视觉2位置 = new System.Windows.Forms.TextBox();
+            this.btnBYY示教视觉2位置 = new System.Windows.Forms.Button();
+            this.label423 = new System.Windows.Forms.Label();
+            this.txtBYY示教视觉1位置 = new System.Windows.Forms.TextBox();
+            this.btnBYY示教视觉1位置 = new System.Windows.Forms.Button();
+            this.label424 = new System.Windows.Forms.Label();
+            this.txtBYY示教上料位置 = new System.Windows.Forms.TextBox();
+            this.btnBYY示教上料位置 = new System.Windows.Forms.Button();
+            this.txtBYY示教当前位置 = new System.Windows.Forms.TextBox();
+            this.label425 = new System.Windows.Forms.Label();
+            this.groupBox51 = new System.Windows.Forms.GroupBox();
+            this.label465 = new System.Windows.Forms.Label();
+            this.txtBYX示教视觉2位置 = new System.Windows.Forms.TextBox();
+            this.btnBYX示教视觉2位置 = new System.Windows.Forms.Button();
+            this.label412 = new System.Windows.Forms.Label();
+            this.txtBYX示教第八列 = new System.Windows.Forms.TextBox();
+            this.btnBYX示教第八列 = new System.Windows.Forms.Button();
+            this.label413 = new System.Windows.Forms.Label();
+            this.txtBYX示教第七列 = new System.Windows.Forms.TextBox();
+            this.btnBYX示教第七列 = new System.Windows.Forms.Button();
+            this.label414 = new System.Windows.Forms.Label();
+            this.txtBYX示教第六列 = new System.Windows.Forms.TextBox();
+            this.btnBYX示教第六列 = new System.Windows.Forms.Button();
+            this.label415 = new System.Windows.Forms.Label();
+            this.txtBYX示教第五列 = new System.Windows.Forms.TextBox();
+            this.btnBYX示教第五列 = new System.Windows.Forms.Button();
+            this.label401 = new System.Windows.Forms.Label();
+            this.txtBYX示教第四列 = new System.Windows.Forms.TextBox();
+            this.btnBYX示教第四列 = new System.Windows.Forms.Button();
+            this.label402 = new System.Windows.Forms.Label();
+            this.txtBYX示教第三列 = new System.Windows.Forms.TextBox();
+            this.btnBYX示教第三列 = new System.Windows.Forms.Button();
+            this.label403 = new System.Windows.Forms.Label();
+            this.txtBYX示教第二列 = new System.Windows.Forms.TextBox();
+            this.btnBYX示教第二列 = new System.Windows.Forms.Button();
+            this.label404 = new System.Windows.Forms.Label();
+            this.txtBYX示教第一列 = new System.Windows.Forms.TextBox();
+            this.btnBYX示教第一列 = new System.Windows.Forms.Button();
+            this.label408 = new System.Windows.Forms.Label();
+            this.txtBYX示教视觉1位置 = new System.Windows.Forms.TextBox();
+            this.btnBYX示教视觉1位置 = new System.Windows.Forms.Button();
+            this.label409 = new System.Windows.Forms.Label();
+            this.txtBYX示教上料位置 = new System.Windows.Forms.TextBox();
+            this.btnBYX示教上料位置 = new System.Windows.Forms.Button();
+            this.txtBYX示教当前位置 = new System.Windows.Forms.TextBox();
+            this.label416 = new System.Windows.Forms.Label();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.CB_SensorType = new System.Windows.Forms.ComboBox();
             this.LB_SensorType = new System.Windows.Forms.Label();
@@ -1253,208 +1455,6 @@
             this.label469 = new System.Windows.Forms.Label();
             this.label464 = new System.Windows.Forms.Label();
             this.label463 = new System.Windows.Forms.Label();
-            this.tabPage10 = new System.Windows.Forms.TabPage();
-            this.groupBox54 = new System.Windows.Forms.GroupBox();
-            this.label468 = new System.Windows.Forms.Label();
-            this.txtBYZ示教视觉位置3 = new System.Windows.Forms.TextBox();
-            this.btnBYZ示教视觉位置3 = new System.Windows.Forms.Button();
-            this.label417 = new System.Windows.Forms.Label();
-            this.txtBYZ下料视觉位置 = new System.Windows.Forms.TextBox();
-            this.btnBYZ下料视觉位置 = new System.Windows.Forms.Button();
-            this.label418 = new System.Windows.Forms.Label();
-            this.txtBYZ示教视觉位置2 = new System.Windows.Forms.TextBox();
-            this.btnBYZ示教视觉位置2 = new System.Windows.Forms.Button();
-            this.label419 = new System.Windows.Forms.Label();
-            this.txtBYZ示教视觉位置1 = new System.Windows.Forms.TextBox();
-            this.btnBYZ示教视觉位置1 = new System.Windows.Forms.Button();
-            this.label426 = new System.Windows.Forms.Label();
-            this.txtBYZ示教上升位置 = new System.Windows.Forms.TextBox();
-            this.btnBYZ示教上升位置 = new System.Windows.Forms.Button();
-            this.label427 = new System.Windows.Forms.Label();
-            this.txtBYZ示教上料位置 = new System.Windows.Forms.TextBox();
-            this.btnBYZ示教上料位置 = new System.Windows.Forms.Button();
-            this.txtBYZ示教当前位置 = new System.Windows.Forms.TextBox();
-            this.label428 = new System.Windows.Forms.Label();
-            this.groupBox52 = new System.Windows.Forms.GroupBox();
-            this.label466 = new System.Windows.Forms.Label();
-            this.txtBYY示教视觉4位置 = new System.Windows.Forms.TextBox();
-            this.btnBYY示教视觉4位置 = new System.Windows.Forms.Button();
-            this.label467 = new System.Windows.Forms.Label();
-            this.txtBYY示教视觉3位置 = new System.Windows.Forms.TextBox();
-            this.btnBYY示教视觉3位置 = new System.Windows.Forms.Button();
-            this.label420 = new System.Windows.Forms.Label();
-            this.txtBYY示教第二行 = new System.Windows.Forms.TextBox();
-            this.btnBYY示教第二行 = new System.Windows.Forms.Button();
-            this.label421 = new System.Windows.Forms.Label();
-            this.txtBYY示教第一行 = new System.Windows.Forms.TextBox();
-            this.btnBYY示教第一行 = new System.Windows.Forms.Button();
-            this.label422 = new System.Windows.Forms.Label();
-            this.txtBYY示教视觉2位置 = new System.Windows.Forms.TextBox();
-            this.btnBYY示教视觉2位置 = new System.Windows.Forms.Button();
-            this.label423 = new System.Windows.Forms.Label();
-            this.txtBYY示教视觉1位置 = new System.Windows.Forms.TextBox();
-            this.btnBYY示教视觉1位置 = new System.Windows.Forms.Button();
-            this.label424 = new System.Windows.Forms.Label();
-            this.txtBYY示教上料位置 = new System.Windows.Forms.TextBox();
-            this.btnBYY示教上料位置 = new System.Windows.Forms.Button();
-            this.txtBYY示教当前位置 = new System.Windows.Forms.TextBox();
-            this.label425 = new System.Windows.Forms.Label();
-            this.groupBox51 = new System.Windows.Forms.GroupBox();
-            this.label465 = new System.Windows.Forms.Label();
-            this.txtBYX示教视觉2位置 = new System.Windows.Forms.TextBox();
-            this.btnBYX示教视觉2位置 = new System.Windows.Forms.Button();
-            this.label412 = new System.Windows.Forms.Label();
-            this.txtBYX示教第八列 = new System.Windows.Forms.TextBox();
-            this.btnBYX示教第八列 = new System.Windows.Forms.Button();
-            this.label413 = new System.Windows.Forms.Label();
-            this.txtBYX示教第七列 = new System.Windows.Forms.TextBox();
-            this.btnBYX示教第七列 = new System.Windows.Forms.Button();
-            this.label414 = new System.Windows.Forms.Label();
-            this.txtBYX示教第六列 = new System.Windows.Forms.TextBox();
-            this.btnBYX示教第六列 = new System.Windows.Forms.Button();
-            this.label415 = new System.Windows.Forms.Label();
-            this.txtBYX示教第五列 = new System.Windows.Forms.TextBox();
-            this.btnBYX示教第五列 = new System.Windows.Forms.Button();
-            this.label401 = new System.Windows.Forms.Label();
-            this.txtBYX示教第四列 = new System.Windows.Forms.TextBox();
-            this.btnBYX示教第四列 = new System.Windows.Forms.Button();
-            this.label402 = new System.Windows.Forms.Label();
-            this.txtBYX示教第三列 = new System.Windows.Forms.TextBox();
-            this.btnBYX示教第三列 = new System.Windows.Forms.Button();
-            this.label403 = new System.Windows.Forms.Label();
-            this.txtBYX示教第二列 = new System.Windows.Forms.TextBox();
-            this.btnBYX示教第二列 = new System.Windows.Forms.Button();
-            this.label404 = new System.Windows.Forms.Label();
-            this.txtBYX示教第一列 = new System.Windows.Forms.TextBox();
-            this.btnBYX示教第一列 = new System.Windows.Forms.Button();
-            this.label408 = new System.Windows.Forms.Label();
-            this.txtBYX示教视觉1位置 = new System.Windows.Forms.TextBox();
-            this.btnBYX示教视觉1位置 = new System.Windows.Forms.Button();
-            this.label409 = new System.Windows.Forms.Label();
-            this.txtBYX示教上料位置 = new System.Windows.Forms.TextBox();
-            this.btnBYX示教上料位置 = new System.Windows.Forms.Button();
-            this.txtBYX示教当前位置 = new System.Windows.Forms.TextBox();
-            this.label416 = new System.Windows.Forms.Label();
-            this.groupBox56 = new System.Windows.Forms.GroupBox();
-            this.label445 = new System.Windows.Forms.Label();
-            this.txtSk4示教测试3位置 = new System.Windows.Forms.TextBox();
-            this.btnSk4示教测试3位置 = new System.Windows.Forms.Button();
-            this.label446 = new System.Windows.Forms.Label();
-            this.txtSk4示教测试2位置 = new System.Windows.Forms.TextBox();
-            this.btnSk4示教测试2位置 = new System.Windows.Forms.Button();
-            this.label447 = new System.Windows.Forms.Label();
-            this.txtSk4示教测试1位置 = new System.Windows.Forms.TextBox();
-            this.btnSk4示教测试1位置 = new System.Windows.Forms.Button();
-            this.label448 = new System.Windows.Forms.Label();
-            this.txtSk4示教翻转位置 = new System.Windows.Forms.TextBox();
-            this.btnSk4示教翻转位置 = new System.Windows.Forms.Button();
-            this.label449 = new System.Windows.Forms.Label();
-            this.txtSk4示教黑体位置 = new System.Windows.Forms.TextBox();
-            this.btnSk4示教黑体位置 = new System.Windows.Forms.Button();
-            this.txtSk4示教当前位置 = new System.Windows.Forms.TextBox();
-            this.label450 = new System.Windows.Forms.Label();
-            this.groupBox55 = new System.Windows.Forms.GroupBox();
-            this.label439 = new System.Windows.Forms.Label();
-            this.txtSk3示教测试3位置 = new System.Windows.Forms.TextBox();
-            this.btnSk3示教测试3位置 = new System.Windows.Forms.Button();
-            this.label440 = new System.Windows.Forms.Label();
-            this.txtSk3示教测试2位置 = new System.Windows.Forms.TextBox();
-            this.btnSk3示教测试2位置 = new System.Windows.Forms.Button();
-            this.label441 = new System.Windows.Forms.Label();
-            this.txtSk3示教测试1位置 = new System.Windows.Forms.TextBox();
-            this.btnSk3示教测试1位置 = new System.Windows.Forms.Button();
-            this.label442 = new System.Windows.Forms.Label();
-            this.txtSk3示教翻转位置 = new System.Windows.Forms.TextBox();
-            this.btnSk3示教翻转位置 = new System.Windows.Forms.Button();
-            this.label443 = new System.Windows.Forms.Label();
-            this.txtSk3示教黑体位置 = new System.Windows.Forms.TextBox();
-            this.btnSk3示教黑体位置 = new System.Windows.Forms.Button();
-            this.txtSk3示教当前位置 = new System.Windows.Forms.TextBox();
-            this.label444 = new System.Windows.Forms.Label();
-            this.groupBox53 = new System.Windows.Forms.GroupBox();
-            this.label433 = new System.Windows.Forms.Label();
-            this.txtSk2示教测试3位置 = new System.Windows.Forms.TextBox();
-            this.btnSk2示教测试3位置 = new System.Windows.Forms.Button();
-            this.label434 = new System.Windows.Forms.Label();
-            this.txtSk2示教测试2位置 = new System.Windows.Forms.TextBox();
-            this.btnSk2示教测试2位置 = new System.Windows.Forms.Button();
-            this.label435 = new System.Windows.Forms.Label();
-            this.txtSk2示教测试1位置 = new System.Windows.Forms.TextBox();
-            this.btnSk2示教测试1位置 = new System.Windows.Forms.Button();
-            this.label436 = new System.Windows.Forms.Label();
-            this.txtSk2示教翻转位置 = new System.Windows.Forms.TextBox();
-            this.btnSk2示教翻转位置 = new System.Windows.Forms.Button();
-            this.label437 = new System.Windows.Forms.Label();
-            this.txtSk2示教黑体位置 = new System.Windows.Forms.TextBox();
-            this.btnSk2示教黑体位置 = new System.Windows.Forms.Button();
-            this.txtSk2示教当前位置 = new System.Windows.Forms.TextBox();
-            this.label438 = new System.Windows.Forms.Label();
-            this.groupBox57 = new System.Windows.Forms.GroupBox();
-            this.label410 = new System.Windows.Forms.Label();
-            this.txtSk1示教测试3位置 = new System.Windows.Forms.TextBox();
-            this.btnSk1示教测试3位置 = new System.Windows.Forms.Button();
-            this.label411 = new System.Windows.Forms.Label();
-            this.txtSk1示教测试2位置 = new System.Windows.Forms.TextBox();
-            this.btnSk1示教测试2位置 = new System.Windows.Forms.Button();
-            this.label429 = new System.Windows.Forms.Label();
-            this.txtSk1示教测试1位置 = new System.Windows.Forms.TextBox();
-            this.btnSk1示教测试1位置 = new System.Windows.Forms.Button();
-            this.label430 = new System.Windows.Forms.Label();
-            this.txtSk1示教翻转位置 = new System.Windows.Forms.TextBox();
-            this.btnSk1示教翻转位置 = new System.Windows.Forms.Button();
-            this.label431 = new System.Windows.Forms.Label();
-            this.txtSk1示教黑体位置 = new System.Windows.Forms.TextBox();
-            this.btnSk1示教黑体位置 = new System.Windows.Forms.Button();
-            this.txtSk1示教当前位置 = new System.Windows.Forms.TextBox();
-            this.label432 = new System.Windows.Forms.Label();
-            this.groupBox61 = new System.Windows.Forms.GroupBox();
-            this.label460 = new System.Windows.Forms.Label();
-            this.txtBk4示教35位置 = new System.Windows.Forms.TextBox();
-            this.btnBk4示教35位置 = new System.Windows.Forms.Button();
-            this.label461 = new System.Windows.Forms.Label();
-            this.txtBk4示教20位置 = new System.Windows.Forms.TextBox();
-            this.btnBk4示教20位置 = new System.Windows.Forms.Button();
-            this.txtBk4示教当前位置 = new System.Windows.Forms.TextBox();
-            this.label462 = new System.Windows.Forms.Label();
-            this.groupBox60 = new System.Windows.Forms.GroupBox();
-            this.label457 = new System.Windows.Forms.Label();
-            this.txtBk3示教35位置 = new System.Windows.Forms.TextBox();
-            this.btnBk3示教35位置 = new System.Windows.Forms.Button();
-            this.label458 = new System.Windows.Forms.Label();
-            this.txtBk3示教20位置 = new System.Windows.Forms.TextBox();
-            this.btnBk3示教20位置 = new System.Windows.Forms.Button();
-            this.txtBk3示教当前位置 = new System.Windows.Forms.TextBox();
-            this.label459 = new System.Windows.Forms.Label();
-            this.groupBox59 = new System.Windows.Forms.GroupBox();
-            this.label451 = new System.Windows.Forms.Label();
-            this.txtBk2示教35位置 = new System.Windows.Forms.TextBox();
-            this.btnBk2示教35位置 = new System.Windows.Forms.Button();
-            this.label452 = new System.Windows.Forms.Label();
-            this.txtBk2示教20位置 = new System.Windows.Forms.TextBox();
-            this.btnBk2示教20位置 = new System.Windows.Forms.Button();
-            this.txtBk2示教当前位置 = new System.Windows.Forms.TextBox();
-            this.label453 = new System.Windows.Forms.Label();
-            this.groupBox58 = new System.Windows.Forms.GroupBox();
-            this.label454 = new System.Windows.Forms.Label();
-            this.txtBk1示教35位置 = new System.Windows.Forms.TextBox();
-            this.btnBk1示教35位置 = new System.Windows.Forms.Button();
-            this.label455 = new System.Windows.Forms.Label();
-            this.txtBk1示教20位置 = new System.Windows.Forms.TextBox();
-            this.btnBk1示教20位置 = new System.Windows.Forms.Button();
-            this.txtBk1示教当前位置 = new System.Windows.Forms.TextBox();
-            this.label456 = new System.Windows.Forms.Label();
-            this.groupBox64 = new System.Windows.Forms.GroupBox();
-            this.label480 = new System.Windows.Forms.Label();
-            this.txt平移示教中转位置 = new System.Windows.Forms.TextBox();
-            this.btn平移示教中转位置 = new System.Windows.Forms.Button();
-            this.label481 = new System.Windows.Forms.Label();
-            this.txt平移示教下料位置 = new System.Windows.Forms.TextBox();
-            this.btn平移示教下料位置 = new System.Windows.Forms.Button();
-            this.label482 = new System.Windows.Forms.Label();
-            this.txt平移示教上料位置 = new System.Windows.Forms.TextBox();
-            this.btn平移示教上料位置 = new System.Windows.Forms.Button();
-            this.txt平移示教当前位置 = new System.Windows.Forms.TextBox();
-            this.label483 = new System.Windows.Forms.Label();
             this.TC_Main.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -1508,31 +1508,31 @@
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tabPage8.SuspendLayout();
+            this.groupBox64.SuspendLayout();
             this.groupBox50.SuspendLayout();
             this.groupBox49.SuspendLayout();
             this.groupBox48.SuspendLayout();
             this.groupBox47.SuspendLayout();
             this.groupBox46.SuspendLayout();
             this.groupBox45.SuspendLayout();
+            this.tabPage10.SuspendLayout();
+            this.groupBox61.SuspendLayout();
+            this.groupBox60.SuspendLayout();
+            this.groupBox59.SuspendLayout();
+            this.groupBox58.SuspendLayout();
+            this.groupBox56.SuspendLayout();
+            this.groupBox55.SuspendLayout();
+            this.groupBox53.SuspendLayout();
+            this.groupBox57.SuspendLayout();
+            this.groupBox54.SuspendLayout();
+            this.groupBox52.SuspendLayout();
+            this.groupBox51.SuspendLayout();
             this.tabPage6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.tabPage5.SuspendLayout();
             this.groupBox62.SuspendLayout();
             this.groupBox65.SuspendLayout();
             this.groupBox63.SuspendLayout();
-            this.tabPage10.SuspendLayout();
-            this.groupBox54.SuspendLayout();
-            this.groupBox52.SuspendLayout();
-            this.groupBox51.SuspendLayout();
-            this.groupBox56.SuspendLayout();
-            this.groupBox55.SuspendLayout();
-            this.groupBox53.SuspendLayout();
-            this.groupBox57.SuspendLayout();
-            this.groupBox61.SuspendLayout();
-            this.groupBox60.SuspendLayout();
-            this.groupBox59.SuspendLayout();
-            this.groupBox58.SuspendLayout();
-            this.groupBox64.SuspendLayout();
             this.SuspendLayout();
             // 
             // TC_Main
@@ -13863,6 +13863,145 @@
             this.tabPage8.Text = "示教1";
             this.tabPage8.UseVisualStyleBackColor = true;
             // 
+            // groupBox64
+            // 
+            this.groupBox64.Controls.Add(this.label480);
+            this.groupBox64.Controls.Add(this.txt平移示教中转位置);
+            this.groupBox64.Controls.Add(this.btn平移示教中转位置);
+            this.groupBox64.Controls.Add(this.label481);
+            this.groupBox64.Controls.Add(this.txt平移示教下料位置);
+            this.groupBox64.Controls.Add(this.btn平移示教下料位置);
+            this.groupBox64.Controls.Add(this.label482);
+            this.groupBox64.Controls.Add(this.txt平移示教上料位置);
+            this.groupBox64.Controls.Add(this.btn平移示教上料位置);
+            this.groupBox64.Controls.Add(this.txt平移示教当前位置);
+            this.groupBox64.Controls.Add(this.label483);
+            this.groupBox64.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox64.Location = new System.Drawing.Point(804, 20);
+            this.groupBox64.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox64.Name = "groupBox64";
+            this.groupBox64.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox64.Size = new System.Drawing.Size(180, 297);
+            this.groupBox64.TabIndex = 101;
+            this.groupBox64.TabStop = false;
+            this.groupBox64.Text = "搬运平移";
+            // 
+            // label480
+            // 
+            this.label480.AutoSize = true;
+            this.label480.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label480.Location = new System.Drawing.Point(140, 114);
+            this.label480.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label480.Name = "label480";
+            this.label480.Size = new System.Drawing.Size(25, 15);
+            this.label480.TabIndex = 74;
+            this.label480.Text = "mm";
+            // 
+            // txt平移示教中转位置
+            // 
+            this.txt平移示教中转位置.Location = new System.Drawing.Point(87, 104);
+            this.txt平移示教中转位置.Margin = new System.Windows.Forms.Padding(2);
+            this.txt平移示教中转位置.Name = "txt平移示教中转位置";
+            this.txt平移示教中转位置.Size = new System.Drawing.Size(49, 21);
+            this.txt平移示教中转位置.TabIndex = 75;
+            // 
+            // btn平移示教中转位置
+            // 
+            this.btn平移示教中转位置.BackColor = System.Drawing.SystemColors.Control;
+            this.btn平移示教中转位置.Location = new System.Drawing.Point(4, 104);
+            this.btn平移示教中转位置.Margin = new System.Windows.Forms.Padding(2);
+            this.btn平移示教中转位置.Name = "btn平移示教中转位置";
+            this.btn平移示教中转位置.Size = new System.Drawing.Size(78, 24);
+            this.btn平移示教中转位置.TabIndex = 73;
+            this.btn平移示教中转位置.Text = "中转位置";
+            this.btn平移示教中转位置.UseVisualStyleBackColor = true;
+            this.btn平移示教中转位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn平移示教中转位置_MouseDown);
+            this.btn平移示教中转位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn平移示教中转位置_MouseUp);
+            // 
+            // label481
+            // 
+            this.label481.AutoSize = true;
+            this.label481.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label481.Location = new System.Drawing.Point(140, 85);
+            this.label481.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label481.Name = "label481";
+            this.label481.Size = new System.Drawing.Size(25, 15);
+            this.label481.TabIndex = 71;
+            this.label481.Text = "mm";
+            // 
+            // txt平移示教下料位置
+            // 
+            this.txt平移示教下料位置.Location = new System.Drawing.Point(87, 75);
+            this.txt平移示教下料位置.Margin = new System.Windows.Forms.Padding(2);
+            this.txt平移示教下料位置.Name = "txt平移示教下料位置";
+            this.txt平移示教下料位置.Size = new System.Drawing.Size(49, 21);
+            this.txt平移示教下料位置.TabIndex = 72;
+            // 
+            // btn平移示教下料位置
+            // 
+            this.btn平移示教下料位置.BackColor = System.Drawing.SystemColors.Control;
+            this.btn平移示教下料位置.Location = new System.Drawing.Point(4, 75);
+            this.btn平移示教下料位置.Margin = new System.Windows.Forms.Padding(2);
+            this.btn平移示教下料位置.Name = "btn平移示教下料位置";
+            this.btn平移示教下料位置.Size = new System.Drawing.Size(78, 24);
+            this.btn平移示教下料位置.TabIndex = 70;
+            this.btn平移示教下料位置.Text = "下料位置";
+            this.btn平移示教下料位置.UseVisualStyleBackColor = true;
+            this.btn平移示教下料位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn平移示教下料位置_MouseDown);
+            this.btn平移示教下料位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn平移示教下料位置_MouseUp);
+            // 
+            // label482
+            // 
+            this.label482.AutoSize = true;
+            this.label482.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label482.Location = new System.Drawing.Point(140, 56);
+            this.label482.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label482.Name = "label482";
+            this.label482.Size = new System.Drawing.Size(25, 15);
+            this.label482.TabIndex = 68;
+            this.label482.Text = "mm";
+            // 
+            // txt平移示教上料位置
+            // 
+            this.txt平移示教上料位置.Location = new System.Drawing.Point(87, 46);
+            this.txt平移示教上料位置.Margin = new System.Windows.Forms.Padding(2);
+            this.txt平移示教上料位置.Name = "txt平移示教上料位置";
+            this.txt平移示教上料位置.Size = new System.Drawing.Size(49, 21);
+            this.txt平移示教上料位置.TabIndex = 69;
+            // 
+            // btn平移示教上料位置
+            // 
+            this.btn平移示教上料位置.BackColor = System.Drawing.SystemColors.Control;
+            this.btn平移示教上料位置.Location = new System.Drawing.Point(4, 46);
+            this.btn平移示教上料位置.Margin = new System.Windows.Forms.Padding(2);
+            this.btn平移示教上料位置.Name = "btn平移示教上料位置";
+            this.btn平移示教上料位置.Size = new System.Drawing.Size(78, 24);
+            this.btn平移示教上料位置.TabIndex = 67;
+            this.btn平移示教上料位置.Text = "上料位置";
+            this.btn平移示教上料位置.UseVisualStyleBackColor = true;
+            this.btn平移示教上料位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn平移示教上料位置_MouseDown);
+            this.btn平移示教上料位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn平移示教上料位置_MouseUp);
+            // 
+            // txt平移示教当前位置
+            // 
+            this.txt平移示教当前位置.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt平移示教当前位置.Location = new System.Drawing.Point(59, 21);
+            this.txt平移示教当前位置.Margin = new System.Windows.Forms.Padding(2);
+            this.txt平移示教当前位置.Name = "txt平移示教当前位置";
+            this.txt平移示教当前位置.Size = new System.Drawing.Size(67, 14);
+            this.txt平移示教当前位置.TabIndex = 49;
+            // 
+            // label483
+            // 
+            this.label483.AutoSize = true;
+            this.label483.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label483.Location = new System.Drawing.Point(4, 23);
+            this.label483.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label483.Name = "label483";
+            this.label483.Size = new System.Drawing.Size(55, 15);
+            this.label483.TabIndex = 48;
+            this.label483.Text = "当前位置";
+            // 
             // groupBox50
             // 
             this.groupBox50.Controls.Add(this.label399);
@@ -13918,6 +14057,8 @@
             this.btn倒NG盘示教初始位置.TabIndex = 44;
             this.btn倒NG盘示教初始位置.Text = "初始位置";
             this.btn倒NG盘示教初始位置.UseVisualStyleBackColor = true;
+            this.btn倒NG盘示教初始位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn倒NG盘示教初始位置_MouseDown);
+            this.btn倒NG盘示教初始位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn倒NG盘示教初始位置_MouseUp);
             // 
             // label400
             // 
@@ -13985,6 +14126,8 @@
             this.btn倒实盘示教初始位置.TabIndex = 44;
             this.btn倒实盘示教初始位置.Text = "初始位置";
             this.btn倒实盘示教初始位置.UseVisualStyleBackColor = true;
+            this.btn倒实盘示教初始位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn倒实盘示教初始位置_MouseDown);
+            this.btn倒实盘示教初始位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn倒实盘示教初始位置_MouseUp);
             // 
             // label398
             // 
@@ -14052,6 +14195,8 @@
             this.btnNG盘示教初始位置.TabIndex = 44;
             this.btnNG盘示教初始位置.Text = "初始位置";
             this.btnNG盘示教初始位置.UseVisualStyleBackColor = true;
+            this.btnNG盘示教初始位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnNG盘示教初始位置_MouseDown);
+            this.btnNG盘示教初始位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnNG盘示教初始位置_MouseUp);
             // 
             // label397
             // 
@@ -14113,6 +14258,8 @@
             this.btn实盘示教扫码位置.TabIndex = 52;
             this.btn实盘示教扫码位置.Text = "扫码位置";
             this.btn实盘示教扫码位置.UseVisualStyleBackColor = true;
+            this.btn实盘示教扫码位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn实盘示教扫码位置_MouseDown);
+            this.btn实盘示教扫码位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn实盘示教扫码位置_MouseUp);
             // 
             // label406
             // 
@@ -14152,6 +14299,8 @@
             this.btn实盘示教初始位置.TabIndex = 44;
             this.btn实盘示教初始位置.Text = "初始位置";
             this.btn实盘示教初始位置.UseVisualStyleBackColor = true;
+            this.btn实盘示教初始位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn实盘示教初始位置_MouseDown);
+            this.btn实盘示教初始位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn实盘示教初始位置_MouseUp);
             // 
             // label407
             // 
@@ -14279,6 +14428,8 @@
             this.btnY示教扫码位置.TabIndex = 82;
             this.btnY示教扫码位置.Text = "扫码位置";
             this.btnY示教扫码位置.UseVisualStyleBackColor = true;
+            this.btnY示教扫码位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnY示教扫码位置_MouseDown);
+            this.btnY示教扫码位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnY示教扫码位置_MouseUp);
             // 
             // label491
             // 
@@ -14339,6 +14490,8 @@
             this.btnY示教夹爪位置.TabIndex = 79;
             this.btnY示教夹爪位置.Text = "夹爪位置";
             this.btnY示教夹爪位置.UseVisualStyleBackColor = true;
+            this.btnY示教夹爪位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnY示教夹爪位置_MouseDown);
+            this.btnY示教夹爪位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnY示教夹爪位置_MouseUp);
             // 
             // label384
             // 
@@ -14369,6 +14522,8 @@
             this.btnY示教倒NG盘位置.TabIndex = 76;
             this.btnY示教倒NG盘位置.Text = "倒NG盘位置";
             this.btnY示教倒NG盘位置.UseVisualStyleBackColor = true;
+            this.btnY示教倒NG盘位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnY示教倒NG盘位置_MouseDown);
+            this.btnY示教倒NG盘位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnY示教倒NG盘位置_MouseUp);
             // 
             // label385
             // 
@@ -14399,6 +14554,8 @@
             this.btnY示教NG盘位置.TabIndex = 73;
             this.btnY示教NG盘位置.Text = "NG盘位置";
             this.btnY示教NG盘位置.UseVisualStyleBackColor = true;
+            this.btnY示教NG盘位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnY示教NG盘位置_MouseDown);
+            this.btnY示教NG盘位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnY示教NG盘位置_MouseUp);
             // 
             // label386
             // 
@@ -14429,6 +14586,8 @@
             this.btnY示教倒实盘位置.TabIndex = 70;
             this.btnY示教倒实盘位置.Text = "倒实盘位置";
             this.btnY示教倒实盘位置.UseVisualStyleBackColor = true;
+            this.btnY示教倒实盘位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnY示教倒实盘位置_MouseDown);
+            this.btnY示教倒实盘位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnY示教倒实盘位置_MouseUp);
             // 
             // label387
             // 
@@ -14459,6 +14618,8 @@
             this.btnY示教实盘位置.TabIndex = 67;
             this.btnY示教实盘位置.Text = "实盘位置";
             this.btnY示教实盘位置.UseVisualStyleBackColor = true;
+            this.btnY示教实盘位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnY示教实盘位置_MouseDown);
+            this.btnY示教实盘位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnY示教实盘位置_MouseUp);
             // 
             // label388
             // 
@@ -14489,6 +14650,8 @@
             this.btnY示教吸2NG盘第一行.TabIndex = 64;
             this.btnY示教吸2NG盘第一行.Text = "吸2NG盘第一行";
             this.btnY示教吸2NG盘第一行.UseVisualStyleBackColor = true;
+            this.btnY示教吸2NG盘第一行.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnY示教吸2NG盘第一行_MouseDown);
+            this.btnY示教吸2NG盘第一行.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnY示教吸2NG盘第一行_MouseUp);
             // 
             // label389
             // 
@@ -14519,6 +14682,8 @@
             this.btnY示教吸1NG盘第一行.TabIndex = 61;
             this.btnY示教吸1NG盘第一行.Text = "吸1NG盘第一行";
             this.btnY示教吸1NG盘第一行.UseVisualStyleBackColor = true;
+            this.btnY示教吸1NG盘第一行.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnY示教吸1NG盘第一行_MouseDown);
+            this.btnY示教吸1NG盘第一行.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnY示教吸1NG盘第一行_MouseUp);
             // 
             // label390
             // 
@@ -14549,6 +14714,8 @@
             this.btnY示教吸2倒实盘第一行.TabIndex = 58;
             this.btnY示教吸2倒实盘第一行.Text = "吸2倒实盘第一行";
             this.btnY示教吸2倒实盘第一行.UseVisualStyleBackColor = true;
+            this.btnY示教吸2倒实盘第一行.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnY示教吸2倒实盘第一行_MouseDown);
+            this.btnY示教吸2倒实盘第一行.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnY示教吸2倒实盘第一行_MouseUp);
             // 
             // label391
             // 
@@ -14579,6 +14746,8 @@
             this.btnY示教吸1倒实盘第一行.TabIndex = 55;
             this.btnY示教吸1倒实盘第一行.Text = "吸1倒实盘第一行";
             this.btnY示教吸1倒实盘第一行.UseVisualStyleBackColor = true;
+            this.btnY示教吸1倒实盘第一行.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnY示教吸1倒实盘第一行_MouseDown);
+            this.btnY示教吸1倒实盘第一行.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnY示教吸1倒实盘第一行_MouseUp);
             // 
             // label392
             // 
@@ -14609,6 +14778,8 @@
             this.btnY示教吸2实盘第一行.TabIndex = 52;
             this.btnY示教吸2实盘第一行.Text = "吸2实盘第一行";
             this.btnY示教吸2实盘第一行.UseVisualStyleBackColor = true;
+            this.btnY示教吸2实盘第一行.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnY示教吸2实盘第一行_MouseDown);
+            this.btnY示教吸2实盘第一行.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnY示教吸2实盘第一行_MouseUp);
             // 
             // label393
             // 
@@ -14648,6 +14819,8 @@
             this.btnY示教吸1实盘第一行.TabIndex = 44;
             this.btnY示教吸1实盘第一行.Text = "吸1实盘第一行";
             this.btnY示教吸1实盘第一行.UseVisualStyleBackColor = true;
+            this.btnY示教吸1实盘第一行.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnY示教吸1实盘第一行_MouseDown);
+            this.btnY示教吸1实盘第一行.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnY示教吸1实盘第一行_MouseUp);
             // 
             // label394
             // 
@@ -14805,6 +14978,8 @@
             this.btnX示教扫码位置.TabIndex = 82;
             this.btnX示教扫码位置.Text = "扫码位置";
             this.btnX示教扫码位置.UseVisualStyleBackColor = true;
+            this.btnX示教扫码位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnX示教扫码位置_MouseDown);
+            this.btnX示教扫码位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnX示教扫码位置_MouseUp);
             // 
             // label380
             // 
@@ -14835,6 +15010,8 @@
             this.btnX示教夹爪位置.TabIndex = 79;
             this.btnX示教夹爪位置.Text = "夹爪位置";
             this.btnX示教夹爪位置.UseVisualStyleBackColor = true;
+            this.btnX示教夹爪位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnX示教夹爪位置_MouseDown);
+            this.btnX示教夹爪位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnX示教夹爪位置_MouseUp);
             // 
             // label379
             // 
@@ -14865,6 +15042,8 @@
             this.btnX示教倒NG盘位置.TabIndex = 76;
             this.btnX示教倒NG盘位置.Text = "倒NG盘位置";
             this.btnX示教倒NG盘位置.UseVisualStyleBackColor = true;
+            this.btnX示教倒NG盘位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnX示教倒NG盘位置_MouseDown);
+            this.btnX示教倒NG盘位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnX示教倒NG盘位置_MouseUp);
             // 
             // label378
             // 
@@ -14895,6 +15074,8 @@
             this.btnX示教NG盘位置.TabIndex = 73;
             this.btnX示教NG盘位置.Text = "NG盘位置";
             this.btnX示教NG盘位置.UseVisualStyleBackColor = true;
+            this.btnX示教NG盘位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnX示教NG盘位置_MouseDown);
+            this.btnX示教NG盘位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnX示教NG盘位置_MouseUp);
             // 
             // label377
             // 
@@ -14925,6 +15106,8 @@
             this.btnX示教倒实盘位置.TabIndex = 70;
             this.btnX示教倒实盘位置.Text = "倒实盘位置";
             this.btnX示教倒实盘位置.UseVisualStyleBackColor = true;
+            this.btnX示教倒实盘位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnX示教倒实盘位置_MouseDown);
+            this.btnX示教倒实盘位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnX示教倒实盘位置_MouseUp);
             // 
             // label376
             // 
@@ -14955,6 +15138,8 @@
             this.btnX示教实盘位置.TabIndex = 67;
             this.btnX示教实盘位置.Text = "实盘位置";
             this.btnX示教实盘位置.UseVisualStyleBackColor = true;
+            this.btnX示教实盘位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnX示教实盘位置_MouseDown);
+            this.btnX示教实盘位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnX示教实盘位置_MouseUp);
             // 
             // label374
             // 
@@ -14985,6 +15170,8 @@
             this.btnX示教吸2NG盘第一列.TabIndex = 64;
             this.btnX示教吸2NG盘第一列.Text = "吸2NG盘第一列";
             this.btnX示教吸2NG盘第一列.UseVisualStyleBackColor = true;
+            this.btnX示教吸2NG盘第一列.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnX示教吸2NG盘第一列_MouseDown);
+            this.btnX示教吸2NG盘第一列.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnX示教吸2NG盘第一列_MouseUp);
             // 
             // label375
             // 
@@ -15015,6 +15202,8 @@
             this.btnX示教吸1NG盘第一列.TabIndex = 61;
             this.btnX示教吸1NG盘第一列.Text = "吸1NG盘第一列";
             this.btnX示教吸1NG盘第一列.UseVisualStyleBackColor = true;
+            this.btnX示教吸1NG盘第一列.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnX示教吸1NG盘第一列_MouseDown);
+            this.btnX示教吸1NG盘第一列.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnX示教吸1NG盘第一列_MouseUp);
             // 
             // label372
             // 
@@ -15045,6 +15234,8 @@
             this.btnX示教吸2倒实盘第一列.TabIndex = 58;
             this.btnX示教吸2倒实盘第一列.Text = "吸2倒实盘第一列";
             this.btnX示教吸2倒实盘第一列.UseVisualStyleBackColor = true;
+            this.btnX示教吸2倒实盘第一列.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnX示教吸2倒实盘第一列_MouseDown);
+            this.btnX示教吸2倒实盘第一列.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnX示教吸2倒实盘第一列_MouseUp);
             // 
             // label373
             // 
@@ -15075,6 +15266,8 @@
             this.btnX示教吸1倒实盘第一列.TabIndex = 55;
             this.btnX示教吸1倒实盘第一列.Text = "吸1倒实盘第一列";
             this.btnX示教吸1倒实盘第一列.UseVisualStyleBackColor = true;
+            this.btnX示教吸1倒实盘第一列.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnX示教吸1倒实盘第一列_MouseDown);
+            this.btnX示教吸1倒实盘第一列.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnX示教吸1倒实盘第一列_MouseUp);
             // 
             // label371
             // 
@@ -15105,6 +15298,8 @@
             this.btnX示教吸2实盘第一列.TabIndex = 52;
             this.btnX示教吸2实盘第一列.Text = "吸2实盘第一列";
             this.btnX示教吸2实盘第一列.UseVisualStyleBackColor = true;
+            this.btnX示教吸2实盘第一列.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnX示教吸2实盘第一列_MouseDown);
+            this.btnX示教吸2实盘第一列.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnX示教吸2实盘第一列_MouseUp);
             // 
             // label369
             // 
@@ -15157,6 +15352,2117 @@
             this.label370.Size = new System.Drawing.Size(55, 15);
             this.label370.TabIndex = 48;
             this.label370.Text = "当前位置";
+            // 
+            // tabPage10
+            // 
+            this.tabPage10.Controls.Add(this.groupBox61);
+            this.tabPage10.Controls.Add(this.groupBox60);
+            this.tabPage10.Controls.Add(this.groupBox59);
+            this.tabPage10.Controls.Add(this.groupBox58);
+            this.tabPage10.Controls.Add(this.groupBox56);
+            this.tabPage10.Controls.Add(this.groupBox55);
+            this.tabPage10.Controls.Add(this.groupBox53);
+            this.tabPage10.Controls.Add(this.groupBox57);
+            this.tabPage10.Controls.Add(this.groupBox54);
+            this.tabPage10.Controls.Add(this.groupBox52);
+            this.tabPage10.Controls.Add(this.groupBox51);
+            this.tabPage10.Location = new System.Drawing.Point(4, 44);
+            this.tabPage10.Name = "tabPage10";
+            this.tabPage10.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage10.Size = new System.Drawing.Size(1256, 686);
+            this.tabPage10.TabIndex = 9;
+            this.tabPage10.Text = "示教2";
+            this.tabPage10.UseVisualStyleBackColor = true;
+            // 
+            // groupBox61
+            // 
+            this.groupBox61.Controls.Add(this.label460);
+            this.groupBox61.Controls.Add(this.txtBk4示教35位置);
+            this.groupBox61.Controls.Add(this.btnBk4示教35位置);
+            this.groupBox61.Controls.Add(this.label461);
+            this.groupBox61.Controls.Add(this.txtBk4示教20位置);
+            this.groupBox61.Controls.Add(this.btnBk4示教20位置);
+            this.groupBox61.Controls.Add(this.txtBk4示教当前位置);
+            this.groupBox61.Controls.Add(this.label462);
+            this.groupBox61.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox61.Location = new System.Drawing.Point(994, 238);
+            this.groupBox61.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox61.Name = "groupBox61";
+            this.groupBox61.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox61.Size = new System.Drawing.Size(180, 107);
+            this.groupBox61.TabIndex = 107;
+            this.groupBox61.TabStop = false;
+            this.groupBox61.Text = "黑体4位置";
+            // 
+            // label460
+            // 
+            this.label460.AutoSize = true;
+            this.label460.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label460.Location = new System.Drawing.Point(140, 85);
+            this.label460.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label460.Name = "label460";
+            this.label460.Size = new System.Drawing.Size(25, 15);
+            this.label460.TabIndex = 71;
+            this.label460.Text = "mm";
+            // 
+            // txtBk4示教35位置
+            // 
+            this.txtBk4示教35位置.Location = new System.Drawing.Point(87, 75);
+            this.txtBk4示教35位置.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBk4示教35位置.Name = "txtBk4示教35位置";
+            this.txtBk4示教35位置.Size = new System.Drawing.Size(49, 21);
+            this.txtBk4示教35位置.TabIndex = 72;
+            // 
+            // btnBk4示教35位置
+            // 
+            this.btnBk4示教35位置.BackColor = System.Drawing.SystemColors.Control;
+            this.btnBk4示教35位置.Location = new System.Drawing.Point(4, 75);
+            this.btnBk4示教35位置.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBk4示教35位置.Name = "btnBk4示教35位置";
+            this.btnBk4示教35位置.Size = new System.Drawing.Size(78, 24);
+            this.btnBk4示教35位置.TabIndex = 70;
+            this.btnBk4示教35位置.Text = "35°位置";
+            this.btnBk4示教35位置.UseVisualStyleBackColor = true;
+            // 
+            // label461
+            // 
+            this.label461.AutoSize = true;
+            this.label461.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label461.Location = new System.Drawing.Point(140, 56);
+            this.label461.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label461.Name = "label461";
+            this.label461.Size = new System.Drawing.Size(25, 15);
+            this.label461.TabIndex = 68;
+            this.label461.Text = "mm";
+            // 
+            // txtBk4示教20位置
+            // 
+            this.txtBk4示教20位置.Location = new System.Drawing.Point(87, 46);
+            this.txtBk4示教20位置.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBk4示教20位置.Name = "txtBk4示教20位置";
+            this.txtBk4示教20位置.Size = new System.Drawing.Size(49, 21);
+            this.txtBk4示教20位置.TabIndex = 69;
+            // 
+            // btnBk4示教20位置
+            // 
+            this.btnBk4示教20位置.BackColor = System.Drawing.SystemColors.Control;
+            this.btnBk4示教20位置.Location = new System.Drawing.Point(4, 46);
+            this.btnBk4示教20位置.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBk4示教20位置.Name = "btnBk4示教20位置";
+            this.btnBk4示教20位置.Size = new System.Drawing.Size(78, 24);
+            this.btnBk4示教20位置.TabIndex = 67;
+            this.btnBk4示教20位置.Text = "20°位置";
+            this.btnBk4示教20位置.UseVisualStyleBackColor = true;
+            // 
+            // txtBk4示教当前位置
+            // 
+            this.txtBk4示教当前位置.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBk4示教当前位置.Location = new System.Drawing.Point(59, 21);
+            this.txtBk4示教当前位置.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBk4示教当前位置.Name = "txtBk4示教当前位置";
+            this.txtBk4示教当前位置.Size = new System.Drawing.Size(67, 14);
+            this.txtBk4示教当前位置.TabIndex = 49;
+            // 
+            // label462
+            // 
+            this.label462.AutoSize = true;
+            this.label462.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label462.Location = new System.Drawing.Point(4, 23);
+            this.label462.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label462.Name = "label462";
+            this.label462.Size = new System.Drawing.Size(55, 15);
+            this.label462.TabIndex = 48;
+            this.label462.Text = "当前位置";
+            // 
+            // groupBox60
+            // 
+            this.groupBox60.Controls.Add(this.label457);
+            this.groupBox60.Controls.Add(this.txtBk3示教35位置);
+            this.groupBox60.Controls.Add(this.btnBk3示教35位置);
+            this.groupBox60.Controls.Add(this.label458);
+            this.groupBox60.Controls.Add(this.txtBk3示教20位置);
+            this.groupBox60.Controls.Add(this.btnBk3示教20位置);
+            this.groupBox60.Controls.Add(this.txtBk3示教当前位置);
+            this.groupBox60.Controls.Add(this.label459);
+            this.groupBox60.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox60.Location = new System.Drawing.Point(810, 238);
+            this.groupBox60.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox60.Name = "groupBox60";
+            this.groupBox60.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox60.Size = new System.Drawing.Size(180, 107);
+            this.groupBox60.TabIndex = 108;
+            this.groupBox60.TabStop = false;
+            this.groupBox60.Text = "黑体3位置";
+            // 
+            // label457
+            // 
+            this.label457.AutoSize = true;
+            this.label457.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label457.Location = new System.Drawing.Point(140, 85);
+            this.label457.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label457.Name = "label457";
+            this.label457.Size = new System.Drawing.Size(25, 15);
+            this.label457.TabIndex = 71;
+            this.label457.Text = "mm";
+            // 
+            // txtBk3示教35位置
+            // 
+            this.txtBk3示教35位置.Location = new System.Drawing.Point(87, 75);
+            this.txtBk3示教35位置.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBk3示教35位置.Name = "txtBk3示教35位置";
+            this.txtBk3示教35位置.Size = new System.Drawing.Size(49, 21);
+            this.txtBk3示教35位置.TabIndex = 72;
+            // 
+            // btnBk3示教35位置
+            // 
+            this.btnBk3示教35位置.BackColor = System.Drawing.SystemColors.Control;
+            this.btnBk3示教35位置.Location = new System.Drawing.Point(4, 75);
+            this.btnBk3示教35位置.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBk3示教35位置.Name = "btnBk3示教35位置";
+            this.btnBk3示教35位置.Size = new System.Drawing.Size(78, 24);
+            this.btnBk3示教35位置.TabIndex = 70;
+            this.btnBk3示教35位置.Text = "35°位置";
+            this.btnBk3示教35位置.UseVisualStyleBackColor = true;
+            // 
+            // label458
+            // 
+            this.label458.AutoSize = true;
+            this.label458.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label458.Location = new System.Drawing.Point(140, 56);
+            this.label458.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label458.Name = "label458";
+            this.label458.Size = new System.Drawing.Size(25, 15);
+            this.label458.TabIndex = 68;
+            this.label458.Text = "mm";
+            // 
+            // txtBk3示教20位置
+            // 
+            this.txtBk3示教20位置.Location = new System.Drawing.Point(87, 46);
+            this.txtBk3示教20位置.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBk3示教20位置.Name = "txtBk3示教20位置";
+            this.txtBk3示教20位置.Size = new System.Drawing.Size(49, 21);
+            this.txtBk3示教20位置.TabIndex = 69;
+            // 
+            // btnBk3示教20位置
+            // 
+            this.btnBk3示教20位置.BackColor = System.Drawing.SystemColors.Control;
+            this.btnBk3示教20位置.Location = new System.Drawing.Point(4, 46);
+            this.btnBk3示教20位置.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBk3示教20位置.Name = "btnBk3示教20位置";
+            this.btnBk3示教20位置.Size = new System.Drawing.Size(78, 24);
+            this.btnBk3示教20位置.TabIndex = 67;
+            this.btnBk3示教20位置.Text = "20°位置";
+            this.btnBk3示教20位置.UseVisualStyleBackColor = true;
+            // 
+            // txtBk3示教当前位置
+            // 
+            this.txtBk3示教当前位置.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBk3示教当前位置.Location = new System.Drawing.Point(59, 21);
+            this.txtBk3示教当前位置.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBk3示教当前位置.Name = "txtBk3示教当前位置";
+            this.txtBk3示教当前位置.Size = new System.Drawing.Size(67, 14);
+            this.txtBk3示教当前位置.TabIndex = 49;
+            // 
+            // label459
+            // 
+            this.label459.AutoSize = true;
+            this.label459.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label459.Location = new System.Drawing.Point(4, 23);
+            this.label459.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label459.Name = "label459";
+            this.label459.Size = new System.Drawing.Size(55, 15);
+            this.label459.TabIndex = 48;
+            this.label459.Text = "当前位置";
+            // 
+            // groupBox59
+            // 
+            this.groupBox59.Controls.Add(this.label451);
+            this.groupBox59.Controls.Add(this.txtBk2示教35位置);
+            this.groupBox59.Controls.Add(this.btnBk2示教35位置);
+            this.groupBox59.Controls.Add(this.label452);
+            this.groupBox59.Controls.Add(this.txtBk2示教20位置);
+            this.groupBox59.Controls.Add(this.btnBk2示教20位置);
+            this.groupBox59.Controls.Add(this.txtBk2示教当前位置);
+            this.groupBox59.Controls.Add(this.label453);
+            this.groupBox59.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox59.Location = new System.Drawing.Point(626, 238);
+            this.groupBox59.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox59.Name = "groupBox59";
+            this.groupBox59.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox59.Size = new System.Drawing.Size(180, 107);
+            this.groupBox59.TabIndex = 109;
+            this.groupBox59.TabStop = false;
+            this.groupBox59.Text = "黑体2位置";
+            // 
+            // label451
+            // 
+            this.label451.AutoSize = true;
+            this.label451.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label451.Location = new System.Drawing.Point(140, 85);
+            this.label451.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label451.Name = "label451";
+            this.label451.Size = new System.Drawing.Size(25, 15);
+            this.label451.TabIndex = 71;
+            this.label451.Text = "mm";
+            // 
+            // txtBk2示教35位置
+            // 
+            this.txtBk2示教35位置.Location = new System.Drawing.Point(87, 75);
+            this.txtBk2示教35位置.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBk2示教35位置.Name = "txtBk2示教35位置";
+            this.txtBk2示教35位置.Size = new System.Drawing.Size(49, 21);
+            this.txtBk2示教35位置.TabIndex = 72;
+            // 
+            // btnBk2示教35位置
+            // 
+            this.btnBk2示教35位置.BackColor = System.Drawing.SystemColors.Control;
+            this.btnBk2示教35位置.Location = new System.Drawing.Point(4, 75);
+            this.btnBk2示教35位置.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBk2示教35位置.Name = "btnBk2示教35位置";
+            this.btnBk2示教35位置.Size = new System.Drawing.Size(78, 24);
+            this.btnBk2示教35位置.TabIndex = 70;
+            this.btnBk2示教35位置.Text = "35°位置";
+            this.btnBk2示教35位置.UseVisualStyleBackColor = true;
+            // 
+            // label452
+            // 
+            this.label452.AutoSize = true;
+            this.label452.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label452.Location = new System.Drawing.Point(140, 56);
+            this.label452.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label452.Name = "label452";
+            this.label452.Size = new System.Drawing.Size(25, 15);
+            this.label452.TabIndex = 68;
+            this.label452.Text = "mm";
+            // 
+            // txtBk2示教20位置
+            // 
+            this.txtBk2示教20位置.Location = new System.Drawing.Point(87, 46);
+            this.txtBk2示教20位置.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBk2示教20位置.Name = "txtBk2示教20位置";
+            this.txtBk2示教20位置.Size = new System.Drawing.Size(49, 21);
+            this.txtBk2示教20位置.TabIndex = 69;
+            // 
+            // btnBk2示教20位置
+            // 
+            this.btnBk2示教20位置.BackColor = System.Drawing.SystemColors.Control;
+            this.btnBk2示教20位置.Location = new System.Drawing.Point(4, 46);
+            this.btnBk2示教20位置.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBk2示教20位置.Name = "btnBk2示教20位置";
+            this.btnBk2示教20位置.Size = new System.Drawing.Size(78, 24);
+            this.btnBk2示教20位置.TabIndex = 67;
+            this.btnBk2示教20位置.Text = "20°位置";
+            this.btnBk2示教20位置.UseVisualStyleBackColor = true;
+            // 
+            // txtBk2示教当前位置
+            // 
+            this.txtBk2示教当前位置.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBk2示教当前位置.Location = new System.Drawing.Point(59, 21);
+            this.txtBk2示教当前位置.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBk2示教当前位置.Name = "txtBk2示教当前位置";
+            this.txtBk2示教当前位置.Size = new System.Drawing.Size(67, 14);
+            this.txtBk2示教当前位置.TabIndex = 49;
+            // 
+            // label453
+            // 
+            this.label453.AutoSize = true;
+            this.label453.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label453.Location = new System.Drawing.Point(4, 23);
+            this.label453.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label453.Name = "label453";
+            this.label453.Size = new System.Drawing.Size(55, 15);
+            this.label453.TabIndex = 48;
+            this.label453.Text = "当前位置";
+            // 
+            // groupBox58
+            // 
+            this.groupBox58.Controls.Add(this.label454);
+            this.groupBox58.Controls.Add(this.txtBk1示教35位置);
+            this.groupBox58.Controls.Add(this.btnBk1示教35位置);
+            this.groupBox58.Controls.Add(this.label455);
+            this.groupBox58.Controls.Add(this.txtBk1示教20位置);
+            this.groupBox58.Controls.Add(this.btnBk1示教20位置);
+            this.groupBox58.Controls.Add(this.txtBk1示教当前位置);
+            this.groupBox58.Controls.Add(this.label456);
+            this.groupBox58.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox58.Location = new System.Drawing.Point(442, 238);
+            this.groupBox58.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox58.Name = "groupBox58";
+            this.groupBox58.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox58.Size = new System.Drawing.Size(180, 107);
+            this.groupBox58.TabIndex = 106;
+            this.groupBox58.TabStop = false;
+            this.groupBox58.Text = "黑体1位置";
+            // 
+            // label454
+            // 
+            this.label454.AutoSize = true;
+            this.label454.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label454.Location = new System.Drawing.Point(140, 85);
+            this.label454.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label454.Name = "label454";
+            this.label454.Size = new System.Drawing.Size(25, 15);
+            this.label454.TabIndex = 71;
+            this.label454.Text = "mm";
+            // 
+            // txtBk1示教35位置
+            // 
+            this.txtBk1示教35位置.Location = new System.Drawing.Point(87, 75);
+            this.txtBk1示教35位置.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBk1示教35位置.Name = "txtBk1示教35位置";
+            this.txtBk1示教35位置.Size = new System.Drawing.Size(49, 21);
+            this.txtBk1示教35位置.TabIndex = 72;
+            // 
+            // btnBk1示教35位置
+            // 
+            this.btnBk1示教35位置.BackColor = System.Drawing.SystemColors.Control;
+            this.btnBk1示教35位置.Location = new System.Drawing.Point(4, 75);
+            this.btnBk1示教35位置.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBk1示教35位置.Name = "btnBk1示教35位置";
+            this.btnBk1示教35位置.Size = new System.Drawing.Size(78, 24);
+            this.btnBk1示教35位置.TabIndex = 70;
+            this.btnBk1示教35位置.Text = "35°位置";
+            this.btnBk1示教35位置.UseVisualStyleBackColor = true;
+            // 
+            // label455
+            // 
+            this.label455.AutoSize = true;
+            this.label455.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label455.Location = new System.Drawing.Point(140, 56);
+            this.label455.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label455.Name = "label455";
+            this.label455.Size = new System.Drawing.Size(25, 15);
+            this.label455.TabIndex = 68;
+            this.label455.Text = "mm";
+            // 
+            // txtBk1示教20位置
+            // 
+            this.txtBk1示教20位置.Location = new System.Drawing.Point(87, 46);
+            this.txtBk1示教20位置.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBk1示教20位置.Name = "txtBk1示教20位置";
+            this.txtBk1示教20位置.Size = new System.Drawing.Size(49, 21);
+            this.txtBk1示教20位置.TabIndex = 69;
+            // 
+            // btnBk1示教20位置
+            // 
+            this.btnBk1示教20位置.BackColor = System.Drawing.SystemColors.Control;
+            this.btnBk1示教20位置.Location = new System.Drawing.Point(4, 46);
+            this.btnBk1示教20位置.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBk1示教20位置.Name = "btnBk1示教20位置";
+            this.btnBk1示教20位置.Size = new System.Drawing.Size(78, 24);
+            this.btnBk1示教20位置.TabIndex = 67;
+            this.btnBk1示教20位置.Text = "20°位置";
+            this.btnBk1示教20位置.UseVisualStyleBackColor = true;
+            // 
+            // txtBk1示教当前位置
+            // 
+            this.txtBk1示教当前位置.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBk1示教当前位置.Location = new System.Drawing.Point(59, 21);
+            this.txtBk1示教当前位置.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBk1示教当前位置.Name = "txtBk1示教当前位置";
+            this.txtBk1示教当前位置.Size = new System.Drawing.Size(67, 14);
+            this.txtBk1示教当前位置.TabIndex = 49;
+            // 
+            // label456
+            // 
+            this.label456.AutoSize = true;
+            this.label456.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label456.Location = new System.Drawing.Point(4, 23);
+            this.label456.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label456.Name = "label456";
+            this.label456.Size = new System.Drawing.Size(55, 15);
+            this.label456.TabIndex = 48;
+            this.label456.Text = "当前位置";
+            // 
+            // groupBox56
+            // 
+            this.groupBox56.Controls.Add(this.label445);
+            this.groupBox56.Controls.Add(this.txtSk4示教测试3位置);
+            this.groupBox56.Controls.Add(this.btnSk4示教测试3位置);
+            this.groupBox56.Controls.Add(this.label446);
+            this.groupBox56.Controls.Add(this.txtSk4示教测试2位置);
+            this.groupBox56.Controls.Add(this.btnSk4示教测试2位置);
+            this.groupBox56.Controls.Add(this.label447);
+            this.groupBox56.Controls.Add(this.txtSk4示教测试1位置);
+            this.groupBox56.Controls.Add(this.btnSk4示教测试1位置);
+            this.groupBox56.Controls.Add(this.label448);
+            this.groupBox56.Controls.Add(this.txtSk4示教翻转位置);
+            this.groupBox56.Controls.Add(this.btnSk4示教翻转位置);
+            this.groupBox56.Controls.Add(this.label449);
+            this.groupBox56.Controls.Add(this.txtSk4示教黑体位置);
+            this.groupBox56.Controls.Add(this.btnSk4示教黑体位置);
+            this.groupBox56.Controls.Add(this.txtSk4示教当前位置);
+            this.groupBox56.Controls.Add(this.label450);
+            this.groupBox56.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox56.Location = new System.Drawing.Point(994, 19);
+            this.groupBox56.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox56.Name = "groupBox56";
+            this.groupBox56.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox56.Size = new System.Drawing.Size(180, 215);
+            this.groupBox56.TabIndex = 103;
+            this.groupBox56.TabStop = false;
+            this.groupBox56.Text = "Socket4位置";
+            // 
+            // label445
+            // 
+            this.label445.AutoSize = true;
+            this.label445.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label445.Location = new System.Drawing.Point(140, 171);
+            this.label445.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label445.Name = "label445";
+            this.label445.Size = new System.Drawing.Size(25, 15);
+            this.label445.TabIndex = 80;
+            this.label445.Text = "mm";
+            // 
+            // txtSk4示教测试3位置
+            // 
+            this.txtSk4示教测试3位置.Location = new System.Drawing.Point(87, 162);
+            this.txtSk4示教测试3位置.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSk4示教测试3位置.Name = "txtSk4示教测试3位置";
+            this.txtSk4示教测试3位置.Size = new System.Drawing.Size(49, 21);
+            this.txtSk4示教测试3位置.TabIndex = 81;
+            // 
+            // btnSk4示教测试3位置
+            // 
+            this.btnSk4示教测试3位置.BackColor = System.Drawing.SystemColors.Control;
+            this.btnSk4示教测试3位置.Location = new System.Drawing.Point(4, 162);
+            this.btnSk4示教测试3位置.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSk4示教测试3位置.Name = "btnSk4示教测试3位置";
+            this.btnSk4示教测试3位置.Size = new System.Drawing.Size(78, 24);
+            this.btnSk4示教测试3位置.TabIndex = 79;
+            this.btnSk4示教测试3位置.Text = "测试3位置";
+            this.btnSk4示教测试3位置.UseVisualStyleBackColor = true;
+            // 
+            // label446
+            // 
+            this.label446.AutoSize = true;
+            this.label446.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label446.Location = new System.Drawing.Point(140, 142);
+            this.label446.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label446.Name = "label446";
+            this.label446.Size = new System.Drawing.Size(25, 15);
+            this.label446.TabIndex = 77;
+            this.label446.Text = "mm";
+            // 
+            // txtSk4示教测试2位置
+            // 
+            this.txtSk4示教测试2位置.Location = new System.Drawing.Point(87, 133);
+            this.txtSk4示教测试2位置.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSk4示教测试2位置.Name = "txtSk4示教测试2位置";
+            this.txtSk4示教测试2位置.Size = new System.Drawing.Size(49, 21);
+            this.txtSk4示教测试2位置.TabIndex = 78;
+            // 
+            // btnSk4示教测试2位置
+            // 
+            this.btnSk4示教测试2位置.BackColor = System.Drawing.SystemColors.Control;
+            this.btnSk4示教测试2位置.Location = new System.Drawing.Point(4, 133);
+            this.btnSk4示教测试2位置.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSk4示教测试2位置.Name = "btnSk4示教测试2位置";
+            this.btnSk4示教测试2位置.Size = new System.Drawing.Size(78, 24);
+            this.btnSk4示教测试2位置.TabIndex = 76;
+            this.btnSk4示教测试2位置.Text = "测试2位置";
+            this.btnSk4示教测试2位置.UseVisualStyleBackColor = true;
+            // 
+            // label447
+            // 
+            this.label447.AutoSize = true;
+            this.label447.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label447.Location = new System.Drawing.Point(140, 114);
+            this.label447.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label447.Name = "label447";
+            this.label447.Size = new System.Drawing.Size(25, 15);
+            this.label447.TabIndex = 74;
+            this.label447.Text = "mm";
+            // 
+            // txtSk4示教测试1位置
+            // 
+            this.txtSk4示教测试1位置.Location = new System.Drawing.Point(87, 104);
+            this.txtSk4示教测试1位置.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSk4示教测试1位置.Name = "txtSk4示教测试1位置";
+            this.txtSk4示教测试1位置.Size = new System.Drawing.Size(49, 21);
+            this.txtSk4示教测试1位置.TabIndex = 75;
+            // 
+            // btnSk4示教测试1位置
+            // 
+            this.btnSk4示教测试1位置.BackColor = System.Drawing.SystemColors.Control;
+            this.btnSk4示教测试1位置.Location = new System.Drawing.Point(4, 104);
+            this.btnSk4示教测试1位置.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSk4示教测试1位置.Name = "btnSk4示教测试1位置";
+            this.btnSk4示教测试1位置.Size = new System.Drawing.Size(78, 24);
+            this.btnSk4示教测试1位置.TabIndex = 73;
+            this.btnSk4示教测试1位置.Text = "测试1位置";
+            this.btnSk4示教测试1位置.UseVisualStyleBackColor = true;
+            // 
+            // label448
+            // 
+            this.label448.AutoSize = true;
+            this.label448.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label448.Location = new System.Drawing.Point(140, 85);
+            this.label448.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label448.Name = "label448";
+            this.label448.Size = new System.Drawing.Size(25, 15);
+            this.label448.TabIndex = 71;
+            this.label448.Text = "mm";
+            // 
+            // txtSk4示教翻转位置
+            // 
+            this.txtSk4示教翻转位置.Location = new System.Drawing.Point(87, 75);
+            this.txtSk4示教翻转位置.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSk4示教翻转位置.Name = "txtSk4示教翻转位置";
+            this.txtSk4示教翻转位置.Size = new System.Drawing.Size(49, 21);
+            this.txtSk4示教翻转位置.TabIndex = 72;
+            // 
+            // btnSk4示教翻转位置
+            // 
+            this.btnSk4示教翻转位置.BackColor = System.Drawing.SystemColors.Control;
+            this.btnSk4示教翻转位置.Location = new System.Drawing.Point(4, 75);
+            this.btnSk4示教翻转位置.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSk4示教翻转位置.Name = "btnSk4示教翻转位置";
+            this.btnSk4示教翻转位置.Size = new System.Drawing.Size(78, 24);
+            this.btnSk4示教翻转位置.TabIndex = 70;
+            this.btnSk4示教翻转位置.Text = "翻转位置";
+            this.btnSk4示教翻转位置.UseVisualStyleBackColor = true;
+            // 
+            // label449
+            // 
+            this.label449.AutoSize = true;
+            this.label449.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label449.Location = new System.Drawing.Point(140, 56);
+            this.label449.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label449.Name = "label449";
+            this.label449.Size = new System.Drawing.Size(25, 15);
+            this.label449.TabIndex = 68;
+            this.label449.Text = "mm";
+            // 
+            // txtSk4示教黑体位置
+            // 
+            this.txtSk4示教黑体位置.Location = new System.Drawing.Point(87, 46);
+            this.txtSk4示教黑体位置.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSk4示教黑体位置.Name = "txtSk4示教黑体位置";
+            this.txtSk4示教黑体位置.Size = new System.Drawing.Size(49, 21);
+            this.txtSk4示教黑体位置.TabIndex = 69;
+            // 
+            // btnSk4示教黑体位置
+            // 
+            this.btnSk4示教黑体位置.BackColor = System.Drawing.SystemColors.Control;
+            this.btnSk4示教黑体位置.Location = new System.Drawing.Point(4, 46);
+            this.btnSk4示教黑体位置.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSk4示教黑体位置.Name = "btnSk4示教黑体位置";
+            this.btnSk4示教黑体位置.Size = new System.Drawing.Size(78, 24);
+            this.btnSk4示教黑体位置.TabIndex = 67;
+            this.btnSk4示教黑体位置.Text = "黑体位置";
+            this.btnSk4示教黑体位置.UseVisualStyleBackColor = true;
+            // 
+            // txtSk4示教当前位置
+            // 
+            this.txtSk4示教当前位置.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSk4示教当前位置.Location = new System.Drawing.Point(59, 21);
+            this.txtSk4示教当前位置.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSk4示教当前位置.Name = "txtSk4示教当前位置";
+            this.txtSk4示教当前位置.Size = new System.Drawing.Size(67, 14);
+            this.txtSk4示教当前位置.TabIndex = 49;
+            // 
+            // label450
+            // 
+            this.label450.AutoSize = true;
+            this.label450.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label450.Location = new System.Drawing.Point(4, 23);
+            this.label450.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label450.Name = "label450";
+            this.label450.Size = new System.Drawing.Size(55, 15);
+            this.label450.TabIndex = 48;
+            this.label450.Text = "当前位置";
+            // 
+            // groupBox55
+            // 
+            this.groupBox55.Controls.Add(this.label439);
+            this.groupBox55.Controls.Add(this.txtSk3示教测试3位置);
+            this.groupBox55.Controls.Add(this.btnSk3示教测试3位置);
+            this.groupBox55.Controls.Add(this.label440);
+            this.groupBox55.Controls.Add(this.txtSk3示教测试2位置);
+            this.groupBox55.Controls.Add(this.btnSk3示教测试2位置);
+            this.groupBox55.Controls.Add(this.label441);
+            this.groupBox55.Controls.Add(this.txtSk3示教测试1位置);
+            this.groupBox55.Controls.Add(this.btnSk3示教测试1位置);
+            this.groupBox55.Controls.Add(this.label442);
+            this.groupBox55.Controls.Add(this.txtSk3示教翻转位置);
+            this.groupBox55.Controls.Add(this.btnSk3示教翻转位置);
+            this.groupBox55.Controls.Add(this.label443);
+            this.groupBox55.Controls.Add(this.txtSk3示教黑体位置);
+            this.groupBox55.Controls.Add(this.btnSk3示教黑体位置);
+            this.groupBox55.Controls.Add(this.txtSk3示教当前位置);
+            this.groupBox55.Controls.Add(this.label444);
+            this.groupBox55.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox55.Location = new System.Drawing.Point(810, 19);
+            this.groupBox55.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox55.Name = "groupBox55";
+            this.groupBox55.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox55.Size = new System.Drawing.Size(180, 215);
+            this.groupBox55.TabIndex = 104;
+            this.groupBox55.TabStop = false;
+            this.groupBox55.Text = "Socket3位置";
+            // 
+            // label439
+            // 
+            this.label439.AutoSize = true;
+            this.label439.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label439.Location = new System.Drawing.Point(140, 171);
+            this.label439.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label439.Name = "label439";
+            this.label439.Size = new System.Drawing.Size(25, 15);
+            this.label439.TabIndex = 80;
+            this.label439.Text = "mm";
+            // 
+            // txtSk3示教测试3位置
+            // 
+            this.txtSk3示教测试3位置.Location = new System.Drawing.Point(87, 162);
+            this.txtSk3示教测试3位置.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSk3示教测试3位置.Name = "txtSk3示教测试3位置";
+            this.txtSk3示教测试3位置.Size = new System.Drawing.Size(49, 21);
+            this.txtSk3示教测试3位置.TabIndex = 81;
+            // 
+            // btnSk3示教测试3位置
+            // 
+            this.btnSk3示教测试3位置.BackColor = System.Drawing.SystemColors.Control;
+            this.btnSk3示教测试3位置.Location = new System.Drawing.Point(4, 162);
+            this.btnSk3示教测试3位置.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSk3示教测试3位置.Name = "btnSk3示教测试3位置";
+            this.btnSk3示教测试3位置.Size = new System.Drawing.Size(78, 24);
+            this.btnSk3示教测试3位置.TabIndex = 79;
+            this.btnSk3示教测试3位置.Text = "测试3位置";
+            this.btnSk3示教测试3位置.UseVisualStyleBackColor = true;
+            // 
+            // label440
+            // 
+            this.label440.AutoSize = true;
+            this.label440.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label440.Location = new System.Drawing.Point(140, 142);
+            this.label440.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label440.Name = "label440";
+            this.label440.Size = new System.Drawing.Size(25, 15);
+            this.label440.TabIndex = 77;
+            this.label440.Text = "mm";
+            // 
+            // txtSk3示教测试2位置
+            // 
+            this.txtSk3示教测试2位置.Location = new System.Drawing.Point(87, 133);
+            this.txtSk3示教测试2位置.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSk3示教测试2位置.Name = "txtSk3示教测试2位置";
+            this.txtSk3示教测试2位置.Size = new System.Drawing.Size(49, 21);
+            this.txtSk3示教测试2位置.TabIndex = 78;
+            // 
+            // btnSk3示教测试2位置
+            // 
+            this.btnSk3示教测试2位置.BackColor = System.Drawing.SystemColors.Control;
+            this.btnSk3示教测试2位置.Location = new System.Drawing.Point(4, 133);
+            this.btnSk3示教测试2位置.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSk3示教测试2位置.Name = "btnSk3示教测试2位置";
+            this.btnSk3示教测试2位置.Size = new System.Drawing.Size(78, 24);
+            this.btnSk3示教测试2位置.TabIndex = 76;
+            this.btnSk3示教测试2位置.Text = "测试2位置";
+            this.btnSk3示教测试2位置.UseVisualStyleBackColor = true;
+            // 
+            // label441
+            // 
+            this.label441.AutoSize = true;
+            this.label441.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label441.Location = new System.Drawing.Point(140, 114);
+            this.label441.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label441.Name = "label441";
+            this.label441.Size = new System.Drawing.Size(25, 15);
+            this.label441.TabIndex = 74;
+            this.label441.Text = "mm";
+            // 
+            // txtSk3示教测试1位置
+            // 
+            this.txtSk3示教测试1位置.Location = new System.Drawing.Point(87, 104);
+            this.txtSk3示教测试1位置.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSk3示教测试1位置.Name = "txtSk3示教测试1位置";
+            this.txtSk3示教测试1位置.Size = new System.Drawing.Size(49, 21);
+            this.txtSk3示教测试1位置.TabIndex = 75;
+            // 
+            // btnSk3示教测试1位置
+            // 
+            this.btnSk3示教测试1位置.BackColor = System.Drawing.SystemColors.Control;
+            this.btnSk3示教测试1位置.Location = new System.Drawing.Point(4, 104);
+            this.btnSk3示教测试1位置.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSk3示教测试1位置.Name = "btnSk3示教测试1位置";
+            this.btnSk3示教测试1位置.Size = new System.Drawing.Size(78, 24);
+            this.btnSk3示教测试1位置.TabIndex = 73;
+            this.btnSk3示教测试1位置.Text = "测试1位置";
+            this.btnSk3示教测试1位置.UseVisualStyleBackColor = true;
+            // 
+            // label442
+            // 
+            this.label442.AutoSize = true;
+            this.label442.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label442.Location = new System.Drawing.Point(140, 85);
+            this.label442.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label442.Name = "label442";
+            this.label442.Size = new System.Drawing.Size(25, 15);
+            this.label442.TabIndex = 71;
+            this.label442.Text = "mm";
+            // 
+            // txtSk3示教翻转位置
+            // 
+            this.txtSk3示教翻转位置.Location = new System.Drawing.Point(87, 75);
+            this.txtSk3示教翻转位置.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSk3示教翻转位置.Name = "txtSk3示教翻转位置";
+            this.txtSk3示教翻转位置.Size = new System.Drawing.Size(49, 21);
+            this.txtSk3示教翻转位置.TabIndex = 72;
+            // 
+            // btnSk3示教翻转位置
+            // 
+            this.btnSk3示教翻转位置.BackColor = System.Drawing.SystemColors.Control;
+            this.btnSk3示教翻转位置.Location = new System.Drawing.Point(4, 75);
+            this.btnSk3示教翻转位置.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSk3示教翻转位置.Name = "btnSk3示教翻转位置";
+            this.btnSk3示教翻转位置.Size = new System.Drawing.Size(78, 24);
+            this.btnSk3示教翻转位置.TabIndex = 70;
+            this.btnSk3示教翻转位置.Text = "翻转位置";
+            this.btnSk3示教翻转位置.UseVisualStyleBackColor = true;
+            // 
+            // label443
+            // 
+            this.label443.AutoSize = true;
+            this.label443.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label443.Location = new System.Drawing.Point(140, 56);
+            this.label443.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label443.Name = "label443";
+            this.label443.Size = new System.Drawing.Size(25, 15);
+            this.label443.TabIndex = 68;
+            this.label443.Text = "mm";
+            // 
+            // txtSk3示教黑体位置
+            // 
+            this.txtSk3示教黑体位置.Location = new System.Drawing.Point(87, 46);
+            this.txtSk3示教黑体位置.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSk3示教黑体位置.Name = "txtSk3示教黑体位置";
+            this.txtSk3示教黑体位置.Size = new System.Drawing.Size(49, 21);
+            this.txtSk3示教黑体位置.TabIndex = 69;
+            // 
+            // btnSk3示教黑体位置
+            // 
+            this.btnSk3示教黑体位置.BackColor = System.Drawing.SystemColors.Control;
+            this.btnSk3示教黑体位置.Location = new System.Drawing.Point(4, 46);
+            this.btnSk3示教黑体位置.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSk3示教黑体位置.Name = "btnSk3示教黑体位置";
+            this.btnSk3示教黑体位置.Size = new System.Drawing.Size(78, 24);
+            this.btnSk3示教黑体位置.TabIndex = 67;
+            this.btnSk3示教黑体位置.Text = "黑体位置";
+            this.btnSk3示教黑体位置.UseVisualStyleBackColor = true;
+            // 
+            // txtSk3示教当前位置
+            // 
+            this.txtSk3示教当前位置.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSk3示教当前位置.Location = new System.Drawing.Point(59, 21);
+            this.txtSk3示教当前位置.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSk3示教当前位置.Name = "txtSk3示教当前位置";
+            this.txtSk3示教当前位置.Size = new System.Drawing.Size(67, 14);
+            this.txtSk3示教当前位置.TabIndex = 49;
+            // 
+            // label444
+            // 
+            this.label444.AutoSize = true;
+            this.label444.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label444.Location = new System.Drawing.Point(4, 23);
+            this.label444.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label444.Name = "label444";
+            this.label444.Size = new System.Drawing.Size(55, 15);
+            this.label444.TabIndex = 48;
+            this.label444.Text = "当前位置";
+            // 
+            // groupBox53
+            // 
+            this.groupBox53.Controls.Add(this.label433);
+            this.groupBox53.Controls.Add(this.txtSk2示教测试3位置);
+            this.groupBox53.Controls.Add(this.btnSk2示教测试3位置);
+            this.groupBox53.Controls.Add(this.label434);
+            this.groupBox53.Controls.Add(this.txtSk2示教测试2位置);
+            this.groupBox53.Controls.Add(this.btnSk2示教测试2位置);
+            this.groupBox53.Controls.Add(this.label435);
+            this.groupBox53.Controls.Add(this.txtSk2示教测试1位置);
+            this.groupBox53.Controls.Add(this.btnSk2示教测试1位置);
+            this.groupBox53.Controls.Add(this.label436);
+            this.groupBox53.Controls.Add(this.txtSk2示教翻转位置);
+            this.groupBox53.Controls.Add(this.btnSk2示教翻转位置);
+            this.groupBox53.Controls.Add(this.label437);
+            this.groupBox53.Controls.Add(this.txtSk2示教黑体位置);
+            this.groupBox53.Controls.Add(this.btnSk2示教黑体位置);
+            this.groupBox53.Controls.Add(this.txtSk2示教当前位置);
+            this.groupBox53.Controls.Add(this.label438);
+            this.groupBox53.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox53.Location = new System.Drawing.Point(626, 19);
+            this.groupBox53.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox53.Name = "groupBox53";
+            this.groupBox53.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox53.Size = new System.Drawing.Size(180, 215);
+            this.groupBox53.TabIndex = 105;
+            this.groupBox53.TabStop = false;
+            this.groupBox53.Text = "Socket2位置";
+            // 
+            // label433
+            // 
+            this.label433.AutoSize = true;
+            this.label433.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label433.Location = new System.Drawing.Point(140, 171);
+            this.label433.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label433.Name = "label433";
+            this.label433.Size = new System.Drawing.Size(25, 15);
+            this.label433.TabIndex = 80;
+            this.label433.Text = "mm";
+            // 
+            // txtSk2示教测试3位置
+            // 
+            this.txtSk2示教测试3位置.Location = new System.Drawing.Point(87, 162);
+            this.txtSk2示教测试3位置.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSk2示教测试3位置.Name = "txtSk2示教测试3位置";
+            this.txtSk2示教测试3位置.Size = new System.Drawing.Size(49, 21);
+            this.txtSk2示教测试3位置.TabIndex = 81;
+            // 
+            // btnSk2示教测试3位置
+            // 
+            this.btnSk2示教测试3位置.BackColor = System.Drawing.SystemColors.Control;
+            this.btnSk2示教测试3位置.Location = new System.Drawing.Point(4, 162);
+            this.btnSk2示教测试3位置.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSk2示教测试3位置.Name = "btnSk2示教测试3位置";
+            this.btnSk2示教测试3位置.Size = new System.Drawing.Size(78, 24);
+            this.btnSk2示教测试3位置.TabIndex = 79;
+            this.btnSk2示教测试3位置.Text = "测试3位置";
+            this.btnSk2示教测试3位置.UseVisualStyleBackColor = true;
+            // 
+            // label434
+            // 
+            this.label434.AutoSize = true;
+            this.label434.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label434.Location = new System.Drawing.Point(140, 142);
+            this.label434.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label434.Name = "label434";
+            this.label434.Size = new System.Drawing.Size(25, 15);
+            this.label434.TabIndex = 77;
+            this.label434.Text = "mm";
+            // 
+            // txtSk2示教测试2位置
+            // 
+            this.txtSk2示教测试2位置.Location = new System.Drawing.Point(87, 133);
+            this.txtSk2示教测试2位置.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSk2示教测试2位置.Name = "txtSk2示教测试2位置";
+            this.txtSk2示教测试2位置.Size = new System.Drawing.Size(49, 21);
+            this.txtSk2示教测试2位置.TabIndex = 78;
+            // 
+            // btnSk2示教测试2位置
+            // 
+            this.btnSk2示教测试2位置.BackColor = System.Drawing.SystemColors.Control;
+            this.btnSk2示教测试2位置.Location = new System.Drawing.Point(4, 133);
+            this.btnSk2示教测试2位置.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSk2示教测试2位置.Name = "btnSk2示教测试2位置";
+            this.btnSk2示教测试2位置.Size = new System.Drawing.Size(78, 24);
+            this.btnSk2示教测试2位置.TabIndex = 76;
+            this.btnSk2示教测试2位置.Text = "测试2位置";
+            this.btnSk2示教测试2位置.UseVisualStyleBackColor = true;
+            // 
+            // label435
+            // 
+            this.label435.AutoSize = true;
+            this.label435.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label435.Location = new System.Drawing.Point(140, 114);
+            this.label435.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label435.Name = "label435";
+            this.label435.Size = new System.Drawing.Size(25, 15);
+            this.label435.TabIndex = 74;
+            this.label435.Text = "mm";
+            // 
+            // txtSk2示教测试1位置
+            // 
+            this.txtSk2示教测试1位置.Location = new System.Drawing.Point(87, 104);
+            this.txtSk2示教测试1位置.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSk2示教测试1位置.Name = "txtSk2示教测试1位置";
+            this.txtSk2示教测试1位置.Size = new System.Drawing.Size(49, 21);
+            this.txtSk2示教测试1位置.TabIndex = 75;
+            // 
+            // btnSk2示教测试1位置
+            // 
+            this.btnSk2示教测试1位置.BackColor = System.Drawing.SystemColors.Control;
+            this.btnSk2示教测试1位置.Location = new System.Drawing.Point(4, 104);
+            this.btnSk2示教测试1位置.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSk2示教测试1位置.Name = "btnSk2示教测试1位置";
+            this.btnSk2示教测试1位置.Size = new System.Drawing.Size(78, 24);
+            this.btnSk2示教测试1位置.TabIndex = 73;
+            this.btnSk2示教测试1位置.Text = "测试1位置";
+            this.btnSk2示教测试1位置.UseVisualStyleBackColor = true;
+            // 
+            // label436
+            // 
+            this.label436.AutoSize = true;
+            this.label436.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label436.Location = new System.Drawing.Point(140, 85);
+            this.label436.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label436.Name = "label436";
+            this.label436.Size = new System.Drawing.Size(25, 15);
+            this.label436.TabIndex = 71;
+            this.label436.Text = "mm";
+            // 
+            // txtSk2示教翻转位置
+            // 
+            this.txtSk2示教翻转位置.Location = new System.Drawing.Point(87, 75);
+            this.txtSk2示教翻转位置.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSk2示教翻转位置.Name = "txtSk2示教翻转位置";
+            this.txtSk2示教翻转位置.Size = new System.Drawing.Size(49, 21);
+            this.txtSk2示教翻转位置.TabIndex = 72;
+            // 
+            // btnSk2示教翻转位置
+            // 
+            this.btnSk2示教翻转位置.BackColor = System.Drawing.SystemColors.Control;
+            this.btnSk2示教翻转位置.Location = new System.Drawing.Point(4, 75);
+            this.btnSk2示教翻转位置.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSk2示教翻转位置.Name = "btnSk2示教翻转位置";
+            this.btnSk2示教翻转位置.Size = new System.Drawing.Size(78, 24);
+            this.btnSk2示教翻转位置.TabIndex = 70;
+            this.btnSk2示教翻转位置.Text = "翻转位置";
+            this.btnSk2示教翻转位置.UseVisualStyleBackColor = true;
+            // 
+            // label437
+            // 
+            this.label437.AutoSize = true;
+            this.label437.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label437.Location = new System.Drawing.Point(140, 56);
+            this.label437.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label437.Name = "label437";
+            this.label437.Size = new System.Drawing.Size(25, 15);
+            this.label437.TabIndex = 68;
+            this.label437.Text = "mm";
+            // 
+            // txtSk2示教黑体位置
+            // 
+            this.txtSk2示教黑体位置.Location = new System.Drawing.Point(87, 46);
+            this.txtSk2示教黑体位置.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSk2示教黑体位置.Name = "txtSk2示教黑体位置";
+            this.txtSk2示教黑体位置.Size = new System.Drawing.Size(49, 21);
+            this.txtSk2示教黑体位置.TabIndex = 69;
+            // 
+            // btnSk2示教黑体位置
+            // 
+            this.btnSk2示教黑体位置.BackColor = System.Drawing.SystemColors.Control;
+            this.btnSk2示教黑体位置.Location = new System.Drawing.Point(4, 46);
+            this.btnSk2示教黑体位置.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSk2示教黑体位置.Name = "btnSk2示教黑体位置";
+            this.btnSk2示教黑体位置.Size = new System.Drawing.Size(78, 24);
+            this.btnSk2示教黑体位置.TabIndex = 67;
+            this.btnSk2示教黑体位置.Text = "黑体位置";
+            this.btnSk2示教黑体位置.UseVisualStyleBackColor = true;
+            // 
+            // txtSk2示教当前位置
+            // 
+            this.txtSk2示教当前位置.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSk2示教当前位置.Location = new System.Drawing.Point(59, 21);
+            this.txtSk2示教当前位置.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSk2示教当前位置.Name = "txtSk2示教当前位置";
+            this.txtSk2示教当前位置.Size = new System.Drawing.Size(67, 14);
+            this.txtSk2示教当前位置.TabIndex = 49;
+            // 
+            // label438
+            // 
+            this.label438.AutoSize = true;
+            this.label438.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label438.Location = new System.Drawing.Point(4, 23);
+            this.label438.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label438.Name = "label438";
+            this.label438.Size = new System.Drawing.Size(55, 15);
+            this.label438.TabIndex = 48;
+            this.label438.Text = "当前位置";
+            // 
+            // groupBox57
+            // 
+            this.groupBox57.Controls.Add(this.label410);
+            this.groupBox57.Controls.Add(this.txtSk1示教测试3位置);
+            this.groupBox57.Controls.Add(this.btnSk1示教测试3位置);
+            this.groupBox57.Controls.Add(this.label411);
+            this.groupBox57.Controls.Add(this.txtSk1示教测试2位置);
+            this.groupBox57.Controls.Add(this.btnSk1示教测试2位置);
+            this.groupBox57.Controls.Add(this.label429);
+            this.groupBox57.Controls.Add(this.txtSk1示教测试1位置);
+            this.groupBox57.Controls.Add(this.btnSk1示教测试1位置);
+            this.groupBox57.Controls.Add(this.label430);
+            this.groupBox57.Controls.Add(this.txtSk1示教翻转位置);
+            this.groupBox57.Controls.Add(this.btnSk1示教翻转位置);
+            this.groupBox57.Controls.Add(this.label431);
+            this.groupBox57.Controls.Add(this.txtSk1示教黑体位置);
+            this.groupBox57.Controls.Add(this.btnSk1示教黑体位置);
+            this.groupBox57.Controls.Add(this.txtSk1示教当前位置);
+            this.groupBox57.Controls.Add(this.label432);
+            this.groupBox57.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox57.Location = new System.Drawing.Point(442, 19);
+            this.groupBox57.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox57.Name = "groupBox57";
+            this.groupBox57.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox57.Size = new System.Drawing.Size(180, 215);
+            this.groupBox57.TabIndex = 102;
+            this.groupBox57.TabStop = false;
+            this.groupBox57.Text = "Socket1位置";
+            // 
+            // label410
+            // 
+            this.label410.AutoSize = true;
+            this.label410.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label410.Location = new System.Drawing.Point(140, 171);
+            this.label410.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label410.Name = "label410";
+            this.label410.Size = new System.Drawing.Size(25, 15);
+            this.label410.TabIndex = 80;
+            this.label410.Text = "mm";
+            // 
+            // txtSk1示教测试3位置
+            // 
+            this.txtSk1示教测试3位置.Location = new System.Drawing.Point(87, 162);
+            this.txtSk1示教测试3位置.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSk1示教测试3位置.Name = "txtSk1示教测试3位置";
+            this.txtSk1示教测试3位置.Size = new System.Drawing.Size(49, 21);
+            this.txtSk1示教测试3位置.TabIndex = 81;
+            // 
+            // btnSk1示教测试3位置
+            // 
+            this.btnSk1示教测试3位置.BackColor = System.Drawing.SystemColors.Control;
+            this.btnSk1示教测试3位置.Location = new System.Drawing.Point(4, 162);
+            this.btnSk1示教测试3位置.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSk1示教测试3位置.Name = "btnSk1示教测试3位置";
+            this.btnSk1示教测试3位置.Size = new System.Drawing.Size(78, 24);
+            this.btnSk1示教测试3位置.TabIndex = 79;
+            this.btnSk1示教测试3位置.Text = "测试3位置";
+            this.btnSk1示教测试3位置.UseVisualStyleBackColor = true;
+            // 
+            // label411
+            // 
+            this.label411.AutoSize = true;
+            this.label411.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label411.Location = new System.Drawing.Point(140, 142);
+            this.label411.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label411.Name = "label411";
+            this.label411.Size = new System.Drawing.Size(25, 15);
+            this.label411.TabIndex = 77;
+            this.label411.Text = "mm";
+            // 
+            // txtSk1示教测试2位置
+            // 
+            this.txtSk1示教测试2位置.Location = new System.Drawing.Point(87, 133);
+            this.txtSk1示教测试2位置.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSk1示教测试2位置.Name = "txtSk1示教测试2位置";
+            this.txtSk1示教测试2位置.Size = new System.Drawing.Size(49, 21);
+            this.txtSk1示教测试2位置.TabIndex = 78;
+            // 
+            // btnSk1示教测试2位置
+            // 
+            this.btnSk1示教测试2位置.BackColor = System.Drawing.SystemColors.Control;
+            this.btnSk1示教测试2位置.Location = new System.Drawing.Point(4, 133);
+            this.btnSk1示教测试2位置.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSk1示教测试2位置.Name = "btnSk1示教测试2位置";
+            this.btnSk1示教测试2位置.Size = new System.Drawing.Size(78, 24);
+            this.btnSk1示教测试2位置.TabIndex = 76;
+            this.btnSk1示教测试2位置.Text = "测试2位置";
+            this.btnSk1示教测试2位置.UseVisualStyleBackColor = true;
+            // 
+            // label429
+            // 
+            this.label429.AutoSize = true;
+            this.label429.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label429.Location = new System.Drawing.Point(140, 114);
+            this.label429.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label429.Name = "label429";
+            this.label429.Size = new System.Drawing.Size(25, 15);
+            this.label429.TabIndex = 74;
+            this.label429.Text = "mm";
+            // 
+            // txtSk1示教测试1位置
+            // 
+            this.txtSk1示教测试1位置.Location = new System.Drawing.Point(87, 104);
+            this.txtSk1示教测试1位置.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSk1示教测试1位置.Name = "txtSk1示教测试1位置";
+            this.txtSk1示教测试1位置.Size = new System.Drawing.Size(49, 21);
+            this.txtSk1示教测试1位置.TabIndex = 75;
+            // 
+            // btnSk1示教测试1位置
+            // 
+            this.btnSk1示教测试1位置.BackColor = System.Drawing.SystemColors.Control;
+            this.btnSk1示教测试1位置.Location = new System.Drawing.Point(4, 104);
+            this.btnSk1示教测试1位置.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSk1示教测试1位置.Name = "btnSk1示教测试1位置";
+            this.btnSk1示教测试1位置.Size = new System.Drawing.Size(78, 24);
+            this.btnSk1示教测试1位置.TabIndex = 73;
+            this.btnSk1示教测试1位置.Text = "测试1位置";
+            this.btnSk1示教测试1位置.UseVisualStyleBackColor = true;
+            // 
+            // label430
+            // 
+            this.label430.AutoSize = true;
+            this.label430.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label430.Location = new System.Drawing.Point(140, 85);
+            this.label430.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label430.Name = "label430";
+            this.label430.Size = new System.Drawing.Size(25, 15);
+            this.label430.TabIndex = 71;
+            this.label430.Text = "mm";
+            // 
+            // txtSk1示教翻转位置
+            // 
+            this.txtSk1示教翻转位置.Location = new System.Drawing.Point(87, 75);
+            this.txtSk1示教翻转位置.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSk1示教翻转位置.Name = "txtSk1示教翻转位置";
+            this.txtSk1示教翻转位置.Size = new System.Drawing.Size(49, 21);
+            this.txtSk1示教翻转位置.TabIndex = 72;
+            // 
+            // btnSk1示教翻转位置
+            // 
+            this.btnSk1示教翻转位置.BackColor = System.Drawing.SystemColors.Control;
+            this.btnSk1示教翻转位置.Location = new System.Drawing.Point(4, 75);
+            this.btnSk1示教翻转位置.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSk1示教翻转位置.Name = "btnSk1示教翻转位置";
+            this.btnSk1示教翻转位置.Size = new System.Drawing.Size(78, 24);
+            this.btnSk1示教翻转位置.TabIndex = 70;
+            this.btnSk1示教翻转位置.Text = "翻转位置";
+            this.btnSk1示教翻转位置.UseVisualStyleBackColor = true;
+            // 
+            // label431
+            // 
+            this.label431.AutoSize = true;
+            this.label431.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label431.Location = new System.Drawing.Point(140, 56);
+            this.label431.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label431.Name = "label431";
+            this.label431.Size = new System.Drawing.Size(25, 15);
+            this.label431.TabIndex = 68;
+            this.label431.Text = "mm";
+            // 
+            // txtSk1示教黑体位置
+            // 
+            this.txtSk1示教黑体位置.Location = new System.Drawing.Point(87, 46);
+            this.txtSk1示教黑体位置.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSk1示教黑体位置.Name = "txtSk1示教黑体位置";
+            this.txtSk1示教黑体位置.Size = new System.Drawing.Size(49, 21);
+            this.txtSk1示教黑体位置.TabIndex = 69;
+            // 
+            // btnSk1示教黑体位置
+            // 
+            this.btnSk1示教黑体位置.BackColor = System.Drawing.SystemColors.Control;
+            this.btnSk1示教黑体位置.Location = new System.Drawing.Point(4, 46);
+            this.btnSk1示教黑体位置.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSk1示教黑体位置.Name = "btnSk1示教黑体位置";
+            this.btnSk1示教黑体位置.Size = new System.Drawing.Size(78, 24);
+            this.btnSk1示教黑体位置.TabIndex = 67;
+            this.btnSk1示教黑体位置.Text = "黑体位置";
+            this.btnSk1示教黑体位置.UseVisualStyleBackColor = true;
+            // 
+            // txtSk1示教当前位置
+            // 
+            this.txtSk1示教当前位置.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSk1示教当前位置.Location = new System.Drawing.Point(59, 21);
+            this.txtSk1示教当前位置.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSk1示教当前位置.Name = "txtSk1示教当前位置";
+            this.txtSk1示教当前位置.Size = new System.Drawing.Size(67, 14);
+            this.txtSk1示教当前位置.TabIndex = 49;
+            // 
+            // label432
+            // 
+            this.label432.AutoSize = true;
+            this.label432.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label432.Location = new System.Drawing.Point(4, 23);
+            this.label432.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label432.Name = "label432";
+            this.label432.Size = new System.Drawing.Size(55, 15);
+            this.label432.TabIndex = 48;
+            this.label432.Text = "当前位置";
+            // 
+            // groupBox54
+            // 
+            this.groupBox54.Controls.Add(this.label468);
+            this.groupBox54.Controls.Add(this.txtBYZ示教视觉位置3);
+            this.groupBox54.Controls.Add(this.btnBYZ示教视觉位置3);
+            this.groupBox54.Controls.Add(this.label417);
+            this.groupBox54.Controls.Add(this.txtBYZ下料视觉位置);
+            this.groupBox54.Controls.Add(this.btnBYZ下料视觉位置);
+            this.groupBox54.Controls.Add(this.label418);
+            this.groupBox54.Controls.Add(this.txtBYZ示教视觉位置2);
+            this.groupBox54.Controls.Add(this.btnBYZ示教视觉位置2);
+            this.groupBox54.Controls.Add(this.label419);
+            this.groupBox54.Controls.Add(this.txtBYZ示教视觉位置1);
+            this.groupBox54.Controls.Add(this.btnBYZ示教视觉位置1);
+            this.groupBox54.Controls.Add(this.label426);
+            this.groupBox54.Controls.Add(this.txtBYZ示教上升位置);
+            this.groupBox54.Controls.Add(this.btnBYZ示教上升位置);
+            this.groupBox54.Controls.Add(this.label427);
+            this.groupBox54.Controls.Add(this.txtBYZ示教上料位置);
+            this.groupBox54.Controls.Add(this.btnBYZ示教上料位置);
+            this.groupBox54.Controls.Add(this.txtBYZ示教当前位置);
+            this.groupBox54.Controls.Add(this.label428);
+            this.groupBox54.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox54.Location = new System.Drawing.Point(205, 273);
+            this.groupBox54.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox54.Name = "groupBox54";
+            this.groupBox54.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox54.Size = new System.Drawing.Size(180, 250);
+            this.groupBox54.TabIndex = 101;
+            this.groupBox54.TabStop = false;
+            this.groupBox54.Text = "搬运Z轴";
+            // 
+            // label468
+            // 
+            this.label468.AutoSize = true;
+            this.label468.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label468.Location = new System.Drawing.Point(140, 169);
+            this.label468.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label468.Name = "label468";
+            this.label468.Size = new System.Drawing.Size(25, 15);
+            this.label468.TabIndex = 83;
+            this.label468.Text = "mm";
+            // 
+            // txtBYZ示教视觉位置3
+            // 
+            this.txtBYZ示教视觉位置3.Location = new System.Drawing.Point(87, 159);
+            this.txtBYZ示教视觉位置3.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBYZ示教视觉位置3.Name = "txtBYZ示教视觉位置3";
+            this.txtBYZ示教视觉位置3.Size = new System.Drawing.Size(49, 21);
+            this.txtBYZ示教视觉位置3.TabIndex = 84;
+            // 
+            // btnBYZ示教视觉位置3
+            // 
+            this.btnBYZ示教视觉位置3.BackColor = System.Drawing.SystemColors.Control;
+            this.btnBYZ示教视觉位置3.Location = new System.Drawing.Point(4, 159);
+            this.btnBYZ示教视觉位置3.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBYZ示教视觉位置3.Name = "btnBYZ示教视觉位置3";
+            this.btnBYZ示教视觉位置3.Size = new System.Drawing.Size(78, 24);
+            this.btnBYZ示教视觉位置3.TabIndex = 82;
+            this.btnBYZ示教视觉位置3.Text = "视觉位置3";
+            this.btnBYZ示教视觉位置3.UseVisualStyleBackColor = true;
+            // 
+            // label417
+            // 
+            this.label417.AutoSize = true;
+            this.label417.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label417.Location = new System.Drawing.Point(140, 195);
+            this.label417.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label417.Name = "label417";
+            this.label417.Size = new System.Drawing.Size(25, 15);
+            this.label417.TabIndex = 80;
+            this.label417.Text = "mm";
+            // 
+            // txtBYZ下料视觉位置
+            // 
+            this.txtBYZ下料视觉位置.Location = new System.Drawing.Point(87, 186);
+            this.txtBYZ下料视觉位置.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBYZ下料视觉位置.Name = "txtBYZ下料视觉位置";
+            this.txtBYZ下料视觉位置.Size = new System.Drawing.Size(49, 21);
+            this.txtBYZ下料视觉位置.TabIndex = 81;
+            // 
+            // btnBYZ下料视觉位置
+            // 
+            this.btnBYZ下料视觉位置.BackColor = System.Drawing.SystemColors.Control;
+            this.btnBYZ下料视觉位置.Location = new System.Drawing.Point(4, 186);
+            this.btnBYZ下料视觉位置.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBYZ下料视觉位置.Name = "btnBYZ下料视觉位置";
+            this.btnBYZ下料视觉位置.Size = new System.Drawing.Size(78, 24);
+            this.btnBYZ下料视觉位置.TabIndex = 79;
+            this.btnBYZ下料视觉位置.Text = "下料位置";
+            this.btnBYZ下料视觉位置.UseVisualStyleBackColor = true;
+            // 
+            // label418
+            // 
+            this.label418.AutoSize = true;
+            this.label418.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label418.Location = new System.Drawing.Point(140, 142);
+            this.label418.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label418.Name = "label418";
+            this.label418.Size = new System.Drawing.Size(25, 15);
+            this.label418.TabIndex = 77;
+            this.label418.Text = "mm";
+            // 
+            // txtBYZ示教视觉位置2
+            // 
+            this.txtBYZ示教视觉位置2.Location = new System.Drawing.Point(87, 133);
+            this.txtBYZ示教视觉位置2.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBYZ示教视觉位置2.Name = "txtBYZ示教视觉位置2";
+            this.txtBYZ示教视觉位置2.Size = new System.Drawing.Size(49, 21);
+            this.txtBYZ示教视觉位置2.TabIndex = 78;
+            // 
+            // btnBYZ示教视觉位置2
+            // 
+            this.btnBYZ示教视觉位置2.BackColor = System.Drawing.SystemColors.Control;
+            this.btnBYZ示教视觉位置2.Location = new System.Drawing.Point(4, 133);
+            this.btnBYZ示教视觉位置2.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBYZ示教视觉位置2.Name = "btnBYZ示教视觉位置2";
+            this.btnBYZ示教视觉位置2.Size = new System.Drawing.Size(78, 24);
+            this.btnBYZ示教视觉位置2.TabIndex = 76;
+            this.btnBYZ示教视觉位置2.Text = "视觉位置2";
+            this.btnBYZ示教视觉位置2.UseVisualStyleBackColor = true;
+            // 
+            // label419
+            // 
+            this.label419.AutoSize = true;
+            this.label419.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label419.Location = new System.Drawing.Point(140, 114);
+            this.label419.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label419.Name = "label419";
+            this.label419.Size = new System.Drawing.Size(25, 15);
+            this.label419.TabIndex = 74;
+            this.label419.Text = "mm";
+            // 
+            // txtBYZ示教视觉位置1
+            // 
+            this.txtBYZ示教视觉位置1.Location = new System.Drawing.Point(87, 104);
+            this.txtBYZ示教视觉位置1.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBYZ示教视觉位置1.Name = "txtBYZ示教视觉位置1";
+            this.txtBYZ示教视觉位置1.Size = new System.Drawing.Size(49, 21);
+            this.txtBYZ示教视觉位置1.TabIndex = 75;
+            // 
+            // btnBYZ示教视觉位置1
+            // 
+            this.btnBYZ示教视觉位置1.BackColor = System.Drawing.SystemColors.Control;
+            this.btnBYZ示教视觉位置1.Location = new System.Drawing.Point(4, 104);
+            this.btnBYZ示教视觉位置1.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBYZ示教视觉位置1.Name = "btnBYZ示教视觉位置1";
+            this.btnBYZ示教视觉位置1.Size = new System.Drawing.Size(78, 24);
+            this.btnBYZ示教视觉位置1.TabIndex = 73;
+            this.btnBYZ示教视觉位置1.Text = "视觉位置1";
+            this.btnBYZ示教视觉位置1.UseVisualStyleBackColor = true;
+            // 
+            // label426
+            // 
+            this.label426.AutoSize = true;
+            this.label426.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label426.Location = new System.Drawing.Point(140, 85);
+            this.label426.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label426.Name = "label426";
+            this.label426.Size = new System.Drawing.Size(25, 15);
+            this.label426.TabIndex = 71;
+            this.label426.Text = "mm";
+            // 
+            // txtBYZ示教上升位置
+            // 
+            this.txtBYZ示教上升位置.Location = new System.Drawing.Point(87, 75);
+            this.txtBYZ示教上升位置.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBYZ示教上升位置.Name = "txtBYZ示教上升位置";
+            this.txtBYZ示教上升位置.Size = new System.Drawing.Size(49, 21);
+            this.txtBYZ示教上升位置.TabIndex = 72;
+            // 
+            // btnBYZ示教上升位置
+            // 
+            this.btnBYZ示教上升位置.BackColor = System.Drawing.SystemColors.Control;
+            this.btnBYZ示教上升位置.Location = new System.Drawing.Point(4, 75);
+            this.btnBYZ示教上升位置.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBYZ示教上升位置.Name = "btnBYZ示教上升位置";
+            this.btnBYZ示教上升位置.Size = new System.Drawing.Size(78, 24);
+            this.btnBYZ示教上升位置.TabIndex = 70;
+            this.btnBYZ示教上升位置.Text = "上升位置";
+            this.btnBYZ示教上升位置.UseVisualStyleBackColor = true;
+            // 
+            // label427
+            // 
+            this.label427.AutoSize = true;
+            this.label427.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label427.Location = new System.Drawing.Point(140, 56);
+            this.label427.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label427.Name = "label427";
+            this.label427.Size = new System.Drawing.Size(25, 15);
+            this.label427.TabIndex = 68;
+            this.label427.Text = "mm";
+            // 
+            // txtBYZ示教上料位置
+            // 
+            this.txtBYZ示教上料位置.Location = new System.Drawing.Point(87, 46);
+            this.txtBYZ示教上料位置.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBYZ示教上料位置.Name = "txtBYZ示教上料位置";
+            this.txtBYZ示教上料位置.Size = new System.Drawing.Size(49, 21);
+            this.txtBYZ示教上料位置.TabIndex = 69;
+            // 
+            // btnBYZ示教上料位置
+            // 
+            this.btnBYZ示教上料位置.BackColor = System.Drawing.SystemColors.Control;
+            this.btnBYZ示教上料位置.Location = new System.Drawing.Point(4, 46);
+            this.btnBYZ示教上料位置.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBYZ示教上料位置.Name = "btnBYZ示教上料位置";
+            this.btnBYZ示教上料位置.Size = new System.Drawing.Size(78, 24);
+            this.btnBYZ示教上料位置.TabIndex = 67;
+            this.btnBYZ示教上料位置.Text = "上料位置";
+            this.btnBYZ示教上料位置.UseVisualStyleBackColor = true;
+            // 
+            // txtBYZ示教当前位置
+            // 
+            this.txtBYZ示教当前位置.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBYZ示教当前位置.Location = new System.Drawing.Point(59, 21);
+            this.txtBYZ示教当前位置.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBYZ示教当前位置.Name = "txtBYZ示教当前位置";
+            this.txtBYZ示教当前位置.Size = new System.Drawing.Size(67, 14);
+            this.txtBYZ示教当前位置.TabIndex = 49;
+            // 
+            // label428
+            // 
+            this.label428.AutoSize = true;
+            this.label428.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label428.Location = new System.Drawing.Point(4, 23);
+            this.label428.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label428.Name = "label428";
+            this.label428.Size = new System.Drawing.Size(55, 15);
+            this.label428.TabIndex = 48;
+            this.label428.Text = "当前位置";
+            // 
+            // groupBox52
+            // 
+            this.groupBox52.Controls.Add(this.label466);
+            this.groupBox52.Controls.Add(this.txtBYY示教视觉4位置);
+            this.groupBox52.Controls.Add(this.btnBYY示教视觉4位置);
+            this.groupBox52.Controls.Add(this.label467);
+            this.groupBox52.Controls.Add(this.txtBYY示教视觉3位置);
+            this.groupBox52.Controls.Add(this.btnBYY示教视觉3位置);
+            this.groupBox52.Controls.Add(this.label420);
+            this.groupBox52.Controls.Add(this.txtBYY示教第二行);
+            this.groupBox52.Controls.Add(this.btnBYY示教第二行);
+            this.groupBox52.Controls.Add(this.label421);
+            this.groupBox52.Controls.Add(this.txtBYY示教第一行);
+            this.groupBox52.Controls.Add(this.btnBYY示教第一行);
+            this.groupBox52.Controls.Add(this.label422);
+            this.groupBox52.Controls.Add(this.txtBYY示教视觉2位置);
+            this.groupBox52.Controls.Add(this.btnBYY示教视觉2位置);
+            this.groupBox52.Controls.Add(this.label423);
+            this.groupBox52.Controls.Add(this.txtBYY示教视觉1位置);
+            this.groupBox52.Controls.Add(this.btnBYY示教视觉1位置);
+            this.groupBox52.Controls.Add(this.label424);
+            this.groupBox52.Controls.Add(this.txtBYY示教上料位置);
+            this.groupBox52.Controls.Add(this.btnBYY示教上料位置);
+            this.groupBox52.Controls.Add(this.txtBYY示教当前位置);
+            this.groupBox52.Controls.Add(this.label425);
+            this.groupBox52.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox52.Location = new System.Drawing.Point(21, 273);
+            this.groupBox52.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox52.Name = "groupBox52";
+            this.groupBox52.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox52.Size = new System.Drawing.Size(180, 250);
+            this.groupBox52.TabIndex = 100;
+            this.groupBox52.TabStop = false;
+            this.groupBox52.Text = "搬运Y轴";
+            // 
+            // label466
+            // 
+            this.label466.AutoSize = true;
+            this.label466.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label466.Location = new System.Drawing.Point(140, 170);
+            this.label466.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label466.Name = "label466";
+            this.label466.Size = new System.Drawing.Size(25, 15);
+            this.label466.TabIndex = 86;
+            this.label466.Text = "mm";
+            // 
+            // txtBYY示教视觉4位置
+            // 
+            this.txtBYY示教视觉4位置.Location = new System.Drawing.Point(87, 160);
+            this.txtBYY示教视觉4位置.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBYY示教视觉4位置.Name = "txtBYY示教视觉4位置";
+            this.txtBYY示教视觉4位置.Size = new System.Drawing.Size(49, 21);
+            this.txtBYY示教视觉4位置.TabIndex = 87;
+            // 
+            // btnBYY示教视觉4位置
+            // 
+            this.btnBYY示教视觉4位置.BackColor = System.Drawing.SystemColors.Control;
+            this.btnBYY示教视觉4位置.Location = new System.Drawing.Point(4, 160);
+            this.btnBYY示教视觉4位置.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBYY示教视觉4位置.Name = "btnBYY示教视觉4位置";
+            this.btnBYY示教视觉4位置.Size = new System.Drawing.Size(78, 24);
+            this.btnBYY示教视觉4位置.TabIndex = 85;
+            this.btnBYY示教视觉4位置.Text = "视觉位置4";
+            this.btnBYY示教视觉4位置.UseVisualStyleBackColor = true;
+            // 
+            // label467
+            // 
+            this.label467.AutoSize = true;
+            this.label467.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label467.Location = new System.Drawing.Point(140, 141);
+            this.label467.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label467.Name = "label467";
+            this.label467.Size = new System.Drawing.Size(25, 15);
+            this.label467.TabIndex = 83;
+            this.label467.Text = "mm";
+            // 
+            // txtBYY示教视觉3位置
+            // 
+            this.txtBYY示教视觉3位置.Location = new System.Drawing.Point(87, 131);
+            this.txtBYY示教视觉3位置.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBYY示教视觉3位置.Name = "txtBYY示教视觉3位置";
+            this.txtBYY示教视觉3位置.Size = new System.Drawing.Size(49, 21);
+            this.txtBYY示教视觉3位置.TabIndex = 84;
+            // 
+            // btnBYY示教视觉3位置
+            // 
+            this.btnBYY示教视觉3位置.BackColor = System.Drawing.SystemColors.Control;
+            this.btnBYY示教视觉3位置.Location = new System.Drawing.Point(4, 131);
+            this.btnBYY示教视觉3位置.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBYY示教视觉3位置.Name = "btnBYY示教视觉3位置";
+            this.btnBYY示教视觉3位置.Size = new System.Drawing.Size(78, 24);
+            this.btnBYY示教视觉3位置.TabIndex = 82;
+            this.btnBYY示教视觉3位置.Text = "视觉位置3";
+            this.btnBYY示教视觉3位置.UseVisualStyleBackColor = true;
+            // 
+            // label420
+            // 
+            this.label420.AutoSize = true;
+            this.label420.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label420.Location = new System.Drawing.Point(140, 226);
+            this.label420.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label420.Name = "label420";
+            this.label420.Size = new System.Drawing.Size(25, 15);
+            this.label420.TabIndex = 80;
+            this.label420.Text = "mm";
+            // 
+            // txtBYY示教第二行
+            // 
+            this.txtBYY示教第二行.Location = new System.Drawing.Point(87, 217);
+            this.txtBYY示教第二行.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBYY示教第二行.Name = "txtBYY示教第二行";
+            this.txtBYY示教第二行.Size = new System.Drawing.Size(49, 21);
+            this.txtBYY示教第二行.TabIndex = 81;
+            // 
+            // btnBYY示教第二行
+            // 
+            this.btnBYY示教第二行.BackColor = System.Drawing.SystemColors.Control;
+            this.btnBYY示教第二行.Location = new System.Drawing.Point(4, 217);
+            this.btnBYY示教第二行.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBYY示教第二行.Name = "btnBYY示教第二行";
+            this.btnBYY示教第二行.Size = new System.Drawing.Size(78, 24);
+            this.btnBYY示教第二行.TabIndex = 79;
+            this.btnBYY示教第二行.Text = "第二行";
+            this.btnBYY示教第二行.UseVisualStyleBackColor = true;
+            // 
+            // label421
+            // 
+            this.label421.AutoSize = true;
+            this.label421.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label421.Location = new System.Drawing.Point(140, 198);
+            this.label421.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label421.Name = "label421";
+            this.label421.Size = new System.Drawing.Size(25, 15);
+            this.label421.TabIndex = 77;
+            this.label421.Text = "mm";
+            // 
+            // txtBYY示教第一行
+            // 
+            this.txtBYY示教第一行.Location = new System.Drawing.Point(87, 188);
+            this.txtBYY示教第一行.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBYY示教第一行.Name = "txtBYY示教第一行";
+            this.txtBYY示教第一行.Size = new System.Drawing.Size(49, 21);
+            this.txtBYY示教第一行.TabIndex = 78;
+            // 
+            // btnBYY示教第一行
+            // 
+            this.btnBYY示教第一行.BackColor = System.Drawing.SystemColors.Control;
+            this.btnBYY示教第一行.Location = new System.Drawing.Point(4, 188);
+            this.btnBYY示教第一行.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBYY示教第一行.Name = "btnBYY示教第一行";
+            this.btnBYY示教第一行.Size = new System.Drawing.Size(78, 24);
+            this.btnBYY示教第一行.TabIndex = 76;
+            this.btnBYY示教第一行.Text = "第一行";
+            this.btnBYY示教第一行.UseVisualStyleBackColor = true;
+            // 
+            // label422
+            // 
+            this.label422.AutoSize = true;
+            this.label422.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label422.Location = new System.Drawing.Point(140, 114);
+            this.label422.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label422.Name = "label422";
+            this.label422.Size = new System.Drawing.Size(25, 15);
+            this.label422.TabIndex = 74;
+            this.label422.Text = "mm";
+            // 
+            // txtBYY示教视觉2位置
+            // 
+            this.txtBYY示教视觉2位置.Location = new System.Drawing.Point(87, 104);
+            this.txtBYY示教视觉2位置.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBYY示教视觉2位置.Name = "txtBYY示教视觉2位置";
+            this.txtBYY示教视觉2位置.Size = new System.Drawing.Size(49, 21);
+            this.txtBYY示教视觉2位置.TabIndex = 75;
+            // 
+            // btnBYY示教视觉2位置
+            // 
+            this.btnBYY示教视觉2位置.BackColor = System.Drawing.SystemColors.Control;
+            this.btnBYY示教视觉2位置.Location = new System.Drawing.Point(4, 104);
+            this.btnBYY示教视觉2位置.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBYY示教视觉2位置.Name = "btnBYY示教视觉2位置";
+            this.btnBYY示教视觉2位置.Size = new System.Drawing.Size(78, 24);
+            this.btnBYY示教视觉2位置.TabIndex = 73;
+            this.btnBYY示教视觉2位置.Text = "视觉位置2";
+            this.btnBYY示教视觉2位置.UseVisualStyleBackColor = true;
+            // 
+            // label423
+            // 
+            this.label423.AutoSize = true;
+            this.label423.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label423.Location = new System.Drawing.Point(140, 85);
+            this.label423.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label423.Name = "label423";
+            this.label423.Size = new System.Drawing.Size(25, 15);
+            this.label423.TabIndex = 71;
+            this.label423.Text = "mm";
+            // 
+            // txtBYY示教视觉1位置
+            // 
+            this.txtBYY示教视觉1位置.Location = new System.Drawing.Point(87, 75);
+            this.txtBYY示教视觉1位置.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBYY示教视觉1位置.Name = "txtBYY示教视觉1位置";
+            this.txtBYY示教视觉1位置.Size = new System.Drawing.Size(49, 21);
+            this.txtBYY示教视觉1位置.TabIndex = 72;
+            // 
+            // btnBYY示教视觉1位置
+            // 
+            this.btnBYY示教视觉1位置.BackColor = System.Drawing.SystemColors.Control;
+            this.btnBYY示教视觉1位置.Location = new System.Drawing.Point(4, 75);
+            this.btnBYY示教视觉1位置.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBYY示教视觉1位置.Name = "btnBYY示教视觉1位置";
+            this.btnBYY示教视觉1位置.Size = new System.Drawing.Size(78, 24);
+            this.btnBYY示教视觉1位置.TabIndex = 70;
+            this.btnBYY示教视觉1位置.Text = "视觉位置1";
+            this.btnBYY示教视觉1位置.UseVisualStyleBackColor = true;
+            // 
+            // label424
+            // 
+            this.label424.AutoSize = true;
+            this.label424.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label424.Location = new System.Drawing.Point(140, 56);
+            this.label424.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label424.Name = "label424";
+            this.label424.Size = new System.Drawing.Size(25, 15);
+            this.label424.TabIndex = 68;
+            this.label424.Text = "mm";
+            // 
+            // txtBYY示教上料位置
+            // 
+            this.txtBYY示教上料位置.Location = new System.Drawing.Point(87, 46);
+            this.txtBYY示教上料位置.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBYY示教上料位置.Name = "txtBYY示教上料位置";
+            this.txtBYY示教上料位置.Size = new System.Drawing.Size(49, 21);
+            this.txtBYY示教上料位置.TabIndex = 69;
+            // 
+            // btnBYY示教上料位置
+            // 
+            this.btnBYY示教上料位置.BackColor = System.Drawing.SystemColors.Control;
+            this.btnBYY示教上料位置.Location = new System.Drawing.Point(4, 46);
+            this.btnBYY示教上料位置.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBYY示教上料位置.Name = "btnBYY示教上料位置";
+            this.btnBYY示教上料位置.Size = new System.Drawing.Size(78, 24);
+            this.btnBYY示教上料位置.TabIndex = 67;
+            this.btnBYY示教上料位置.Text = "上料位置";
+            this.btnBYY示教上料位置.UseVisualStyleBackColor = true;
+            // 
+            // txtBYY示教当前位置
+            // 
+            this.txtBYY示教当前位置.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBYY示教当前位置.Location = new System.Drawing.Point(59, 21);
+            this.txtBYY示教当前位置.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBYY示教当前位置.Name = "txtBYY示教当前位置";
+            this.txtBYY示教当前位置.Size = new System.Drawing.Size(67, 14);
+            this.txtBYY示教当前位置.TabIndex = 49;
+            // 
+            // label425
+            // 
+            this.label425.AutoSize = true;
+            this.label425.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label425.Location = new System.Drawing.Point(4, 23);
+            this.label425.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label425.Name = "label425";
+            this.label425.Size = new System.Drawing.Size(55, 15);
+            this.label425.TabIndex = 48;
+            this.label425.Text = "当前位置";
+            // 
+            // groupBox51
+            // 
+            this.groupBox51.Controls.Add(this.label465);
+            this.groupBox51.Controls.Add(this.txtBYX示教视觉2位置);
+            this.groupBox51.Controls.Add(this.btnBYX示教视觉2位置);
+            this.groupBox51.Controls.Add(this.label412);
+            this.groupBox51.Controls.Add(this.txtBYX示教第八列);
+            this.groupBox51.Controls.Add(this.btnBYX示教第八列);
+            this.groupBox51.Controls.Add(this.label413);
+            this.groupBox51.Controls.Add(this.txtBYX示教第七列);
+            this.groupBox51.Controls.Add(this.btnBYX示教第七列);
+            this.groupBox51.Controls.Add(this.label414);
+            this.groupBox51.Controls.Add(this.txtBYX示教第六列);
+            this.groupBox51.Controls.Add(this.btnBYX示教第六列);
+            this.groupBox51.Controls.Add(this.label415);
+            this.groupBox51.Controls.Add(this.txtBYX示教第五列);
+            this.groupBox51.Controls.Add(this.btnBYX示教第五列);
+            this.groupBox51.Controls.Add(this.label401);
+            this.groupBox51.Controls.Add(this.txtBYX示教第四列);
+            this.groupBox51.Controls.Add(this.btnBYX示教第四列);
+            this.groupBox51.Controls.Add(this.label402);
+            this.groupBox51.Controls.Add(this.txtBYX示教第三列);
+            this.groupBox51.Controls.Add(this.btnBYX示教第三列);
+            this.groupBox51.Controls.Add(this.label403);
+            this.groupBox51.Controls.Add(this.txtBYX示教第二列);
+            this.groupBox51.Controls.Add(this.btnBYX示教第二列);
+            this.groupBox51.Controls.Add(this.label404);
+            this.groupBox51.Controls.Add(this.txtBYX示教第一列);
+            this.groupBox51.Controls.Add(this.btnBYX示教第一列);
+            this.groupBox51.Controls.Add(this.label408);
+            this.groupBox51.Controls.Add(this.txtBYX示教视觉1位置);
+            this.groupBox51.Controls.Add(this.btnBYX示教视觉1位置);
+            this.groupBox51.Controls.Add(this.label409);
+            this.groupBox51.Controls.Add(this.txtBYX示教上料位置);
+            this.groupBox51.Controls.Add(this.btnBYX示教上料位置);
+            this.groupBox51.Controls.Add(this.txtBYX示教当前位置);
+            this.groupBox51.Controls.Add(this.label416);
+            this.groupBox51.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox51.Location = new System.Drawing.Point(21, 19);
+            this.groupBox51.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox51.Name = "groupBox51";
+            this.groupBox51.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox51.Size = new System.Drawing.Size(364, 250);
+            this.groupBox51.TabIndex = 99;
+            this.groupBox51.TabStop = false;
+            this.groupBox51.Text = "搬运X轴";
+            // 
+            // label465
+            // 
+            this.label465.AutoSize = true;
+            this.label465.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label465.Location = new System.Drawing.Point(140, 113);
+            this.label465.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label465.Name = "label465";
+            this.label465.Size = new System.Drawing.Size(25, 15);
+            this.label465.TabIndex = 98;
+            this.label465.Text = "mm";
+            // 
+            // txtBYX示教视觉2位置
+            // 
+            this.txtBYX示教视觉2位置.Location = new System.Drawing.Point(87, 103);
+            this.txtBYX示教视觉2位置.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBYX示教视觉2位置.Name = "txtBYX示教视觉2位置";
+            this.txtBYX示教视觉2位置.Size = new System.Drawing.Size(49, 21);
+            this.txtBYX示教视觉2位置.TabIndex = 99;
+            // 
+            // btnBYX示教视觉2位置
+            // 
+            this.btnBYX示教视觉2位置.BackColor = System.Drawing.SystemColors.Control;
+            this.btnBYX示教视觉2位置.Location = new System.Drawing.Point(4, 103);
+            this.btnBYX示教视觉2位置.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBYX示教视觉2位置.Name = "btnBYX示教视觉2位置";
+            this.btnBYX示教视觉2位置.Size = new System.Drawing.Size(78, 24);
+            this.btnBYX示教视觉2位置.TabIndex = 97;
+            this.btnBYX示教视觉2位置.Text = "视觉位置2";
+            this.btnBYX示教视觉2位置.UseVisualStyleBackColor = true;
+            // 
+            // label412
+            // 
+            this.label412.AutoSize = true;
+            this.label412.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label412.Location = new System.Drawing.Point(321, 167);
+            this.label412.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label412.Name = "label412";
+            this.label412.Size = new System.Drawing.Size(25, 15);
+            this.label412.TabIndex = 95;
+            this.label412.Text = "mm";
+            // 
+            // txtBYX示教第八列
+            // 
+            this.txtBYX示教第八列.Location = new System.Drawing.Point(267, 157);
+            this.txtBYX示教第八列.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBYX示教第八列.Name = "txtBYX示教第八列";
+            this.txtBYX示教第八列.Size = new System.Drawing.Size(49, 21);
+            this.txtBYX示教第八列.TabIndex = 96;
+            // 
+            // btnBYX示教第八列
+            // 
+            this.btnBYX示教第八列.BackColor = System.Drawing.SystemColors.Control;
+            this.btnBYX示教第八列.Location = new System.Drawing.Point(184, 157);
+            this.btnBYX示教第八列.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBYX示教第八列.Name = "btnBYX示教第八列";
+            this.btnBYX示教第八列.Size = new System.Drawing.Size(78, 24);
+            this.btnBYX示教第八列.TabIndex = 94;
+            this.btnBYX示教第八列.Text = "第八列";
+            this.btnBYX示教第八列.UseVisualStyleBackColor = true;
+            // 
+            // label413
+            // 
+            this.label413.AutoSize = true;
+            this.label413.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label413.Location = new System.Drawing.Point(321, 138);
+            this.label413.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label413.Name = "label413";
+            this.label413.Size = new System.Drawing.Size(25, 15);
+            this.label413.TabIndex = 92;
+            this.label413.Text = "mm";
+            // 
+            // txtBYX示教第七列
+            // 
+            this.txtBYX示教第七列.Location = new System.Drawing.Point(267, 128);
+            this.txtBYX示教第七列.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBYX示教第七列.Name = "txtBYX示教第七列";
+            this.txtBYX示教第七列.Size = new System.Drawing.Size(49, 21);
+            this.txtBYX示教第七列.TabIndex = 93;
+            // 
+            // btnBYX示教第七列
+            // 
+            this.btnBYX示教第七列.BackColor = System.Drawing.SystemColors.Control;
+            this.btnBYX示教第七列.Location = new System.Drawing.Point(184, 128);
+            this.btnBYX示教第七列.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBYX示教第七列.Name = "btnBYX示教第七列";
+            this.btnBYX示教第七列.Size = new System.Drawing.Size(78, 24);
+            this.btnBYX示教第七列.TabIndex = 91;
+            this.btnBYX示教第七列.Text = "第七列";
+            this.btnBYX示教第七列.UseVisualStyleBackColor = true;
+            // 
+            // label414
+            // 
+            this.label414.AutoSize = true;
+            this.label414.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label414.Location = new System.Drawing.Point(321, 109);
+            this.label414.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label414.Name = "label414";
+            this.label414.Size = new System.Drawing.Size(25, 15);
+            this.label414.TabIndex = 89;
+            this.label414.Text = "mm";
+            // 
+            // txtBYX示教第六列
+            // 
+            this.txtBYX示教第六列.Location = new System.Drawing.Point(267, 100);
+            this.txtBYX示教第六列.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBYX示教第六列.Name = "txtBYX示教第六列";
+            this.txtBYX示教第六列.Size = new System.Drawing.Size(49, 21);
+            this.txtBYX示教第六列.TabIndex = 90;
+            // 
+            // btnBYX示教第六列
+            // 
+            this.btnBYX示教第六列.BackColor = System.Drawing.SystemColors.Control;
+            this.btnBYX示教第六列.Location = new System.Drawing.Point(184, 100);
+            this.btnBYX示教第六列.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBYX示教第六列.Name = "btnBYX示教第六列";
+            this.btnBYX示教第六列.Size = new System.Drawing.Size(78, 24);
+            this.btnBYX示教第六列.TabIndex = 88;
+            this.btnBYX示教第六列.Text = "第六列";
+            this.btnBYX示教第六列.UseVisualStyleBackColor = true;
+            // 
+            // label415
+            // 
+            this.label415.AutoSize = true;
+            this.label415.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label415.Location = new System.Drawing.Point(321, 80);
+            this.label415.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label415.Name = "label415";
+            this.label415.Size = new System.Drawing.Size(25, 15);
+            this.label415.TabIndex = 86;
+            this.label415.Text = "mm";
+            // 
+            // txtBYX示教第五列
+            // 
+            this.txtBYX示教第五列.Location = new System.Drawing.Point(267, 71);
+            this.txtBYX示教第五列.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBYX示教第五列.Name = "txtBYX示教第五列";
+            this.txtBYX示教第五列.Size = new System.Drawing.Size(49, 21);
+            this.txtBYX示教第五列.TabIndex = 87;
+            // 
+            // btnBYX示教第五列
+            // 
+            this.btnBYX示教第五列.BackColor = System.Drawing.SystemColors.Control;
+            this.btnBYX示教第五列.Location = new System.Drawing.Point(184, 71);
+            this.btnBYX示教第五列.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBYX示教第五列.Name = "btnBYX示教第五列";
+            this.btnBYX示教第五列.Size = new System.Drawing.Size(78, 24);
+            this.btnBYX示教第五列.TabIndex = 85;
+            this.btnBYX示教第五列.Text = "第五列";
+            this.btnBYX示教第五列.UseVisualStyleBackColor = true;
+            // 
+            // label401
+            // 
+            this.label401.AutoSize = true;
+            this.label401.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label401.Location = new System.Drawing.Point(321, 54);
+            this.label401.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label401.Name = "label401";
+            this.label401.Size = new System.Drawing.Size(25, 15);
+            this.label401.TabIndex = 83;
+            this.label401.Text = "mm";
+            // 
+            // txtBYX示教第四列
+            // 
+            this.txtBYX示教第四列.Location = new System.Drawing.Point(267, 44);
+            this.txtBYX示教第四列.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBYX示教第四列.Name = "txtBYX示教第四列";
+            this.txtBYX示教第四列.Size = new System.Drawing.Size(49, 21);
+            this.txtBYX示教第四列.TabIndex = 84;
+            // 
+            // btnBYX示教第四列
+            // 
+            this.btnBYX示教第四列.BackColor = System.Drawing.SystemColors.Control;
+            this.btnBYX示教第四列.Location = new System.Drawing.Point(184, 44);
+            this.btnBYX示教第四列.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBYX示教第四列.Name = "btnBYX示教第四列";
+            this.btnBYX示教第四列.Size = new System.Drawing.Size(78, 24);
+            this.btnBYX示教第四列.TabIndex = 82;
+            this.btnBYX示教第四列.Text = "第四列";
+            this.btnBYX示教第四列.UseVisualStyleBackColor = true;
+            // 
+            // label402
+            // 
+            this.label402.AutoSize = true;
+            this.label402.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label402.Location = new System.Drawing.Point(140, 200);
+            this.label402.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label402.Name = "label402";
+            this.label402.Size = new System.Drawing.Size(25, 15);
+            this.label402.TabIndex = 80;
+            this.label402.Text = "mm";
+            // 
+            // txtBYX示教第三列
+            // 
+            this.txtBYX示教第三列.Location = new System.Drawing.Point(87, 190);
+            this.txtBYX示教第三列.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBYX示教第三列.Name = "txtBYX示教第三列";
+            this.txtBYX示教第三列.Size = new System.Drawing.Size(49, 21);
+            this.txtBYX示教第三列.TabIndex = 81;
+            // 
+            // btnBYX示教第三列
+            // 
+            this.btnBYX示教第三列.BackColor = System.Drawing.SystemColors.Control;
+            this.btnBYX示教第三列.Location = new System.Drawing.Point(4, 190);
+            this.btnBYX示教第三列.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBYX示教第三列.Name = "btnBYX示教第三列";
+            this.btnBYX示教第三列.Size = new System.Drawing.Size(78, 24);
+            this.btnBYX示教第三列.TabIndex = 79;
+            this.btnBYX示教第三列.Text = "第三列";
+            this.btnBYX示教第三列.UseVisualStyleBackColor = true;
+            // 
+            // label403
+            // 
+            this.label403.AutoSize = true;
+            this.label403.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label403.Location = new System.Drawing.Point(140, 171);
+            this.label403.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label403.Name = "label403";
+            this.label403.Size = new System.Drawing.Size(25, 15);
+            this.label403.TabIndex = 77;
+            this.label403.Text = "mm";
+            // 
+            // txtBYX示教第二列
+            // 
+            this.txtBYX示教第二列.Location = new System.Drawing.Point(87, 162);
+            this.txtBYX示教第二列.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBYX示教第二列.Name = "txtBYX示教第二列";
+            this.txtBYX示教第二列.Size = new System.Drawing.Size(49, 21);
+            this.txtBYX示教第二列.TabIndex = 78;
+            // 
+            // btnBYX示教第二列
+            // 
+            this.btnBYX示教第二列.BackColor = System.Drawing.SystemColors.Control;
+            this.btnBYX示教第二列.Location = new System.Drawing.Point(4, 162);
+            this.btnBYX示教第二列.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBYX示教第二列.Name = "btnBYX示教第二列";
+            this.btnBYX示教第二列.Size = new System.Drawing.Size(78, 24);
+            this.btnBYX示教第二列.TabIndex = 76;
+            this.btnBYX示教第二列.Text = "第二列";
+            this.btnBYX示教第二列.UseVisualStyleBackColor = true;
+            // 
+            // label404
+            // 
+            this.label404.AutoSize = true;
+            this.label404.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label404.Location = new System.Drawing.Point(140, 142);
+            this.label404.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label404.Name = "label404";
+            this.label404.Size = new System.Drawing.Size(25, 15);
+            this.label404.TabIndex = 74;
+            this.label404.Text = "mm";
+            // 
+            // txtBYX示教第一列
+            // 
+            this.txtBYX示教第一列.Location = new System.Drawing.Point(87, 133);
+            this.txtBYX示教第一列.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBYX示教第一列.Name = "txtBYX示教第一列";
+            this.txtBYX示教第一列.Size = new System.Drawing.Size(49, 21);
+            this.txtBYX示教第一列.TabIndex = 75;
+            // 
+            // btnBYX示教第一列
+            // 
+            this.btnBYX示教第一列.BackColor = System.Drawing.SystemColors.Control;
+            this.btnBYX示教第一列.Location = new System.Drawing.Point(4, 133);
+            this.btnBYX示教第一列.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBYX示教第一列.Name = "btnBYX示教第一列";
+            this.btnBYX示教第一列.Size = new System.Drawing.Size(78, 24);
+            this.btnBYX示教第一列.TabIndex = 73;
+            this.btnBYX示教第一列.Text = "第一列";
+            this.btnBYX示教第一列.UseVisualStyleBackColor = true;
+            // 
+            // label408
+            // 
+            this.label408.AutoSize = true;
+            this.label408.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label408.Location = new System.Drawing.Point(140, 85);
+            this.label408.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label408.Name = "label408";
+            this.label408.Size = new System.Drawing.Size(25, 15);
+            this.label408.TabIndex = 71;
+            this.label408.Text = "mm";
+            // 
+            // txtBYX示教视觉1位置
+            // 
+            this.txtBYX示教视觉1位置.Location = new System.Drawing.Point(87, 75);
+            this.txtBYX示教视觉1位置.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBYX示教视觉1位置.Name = "txtBYX示教视觉1位置";
+            this.txtBYX示教视觉1位置.Size = new System.Drawing.Size(49, 21);
+            this.txtBYX示教视觉1位置.TabIndex = 72;
+            // 
+            // btnBYX示教视觉1位置
+            // 
+            this.btnBYX示教视觉1位置.BackColor = System.Drawing.SystemColors.Control;
+            this.btnBYX示教视觉1位置.Location = new System.Drawing.Point(4, 75);
+            this.btnBYX示教视觉1位置.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBYX示教视觉1位置.Name = "btnBYX示教视觉1位置";
+            this.btnBYX示教视觉1位置.Size = new System.Drawing.Size(78, 24);
+            this.btnBYX示教视觉1位置.TabIndex = 70;
+            this.btnBYX示教视觉1位置.Text = "视觉位置1";
+            this.btnBYX示教视觉1位置.UseVisualStyleBackColor = true;
+            // 
+            // label409
+            // 
+            this.label409.AutoSize = true;
+            this.label409.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label409.Location = new System.Drawing.Point(140, 56);
+            this.label409.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label409.Name = "label409";
+            this.label409.Size = new System.Drawing.Size(25, 15);
+            this.label409.TabIndex = 68;
+            this.label409.Text = "mm";
+            // 
+            // txtBYX示教上料位置
+            // 
+            this.txtBYX示教上料位置.Location = new System.Drawing.Point(87, 46);
+            this.txtBYX示教上料位置.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBYX示教上料位置.Name = "txtBYX示教上料位置";
+            this.txtBYX示教上料位置.Size = new System.Drawing.Size(49, 21);
+            this.txtBYX示教上料位置.TabIndex = 69;
+            // 
+            // btnBYX示教上料位置
+            // 
+            this.btnBYX示教上料位置.BackColor = System.Drawing.SystemColors.Control;
+            this.btnBYX示教上料位置.Location = new System.Drawing.Point(4, 46);
+            this.btnBYX示教上料位置.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBYX示教上料位置.Name = "btnBYX示教上料位置";
+            this.btnBYX示教上料位置.Size = new System.Drawing.Size(78, 24);
+            this.btnBYX示教上料位置.TabIndex = 67;
+            this.btnBYX示教上料位置.Text = "上料位置";
+            this.btnBYX示教上料位置.UseVisualStyleBackColor = true;
+            // 
+            // txtBYX示教当前位置
+            // 
+            this.txtBYX示教当前位置.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBYX示教当前位置.Location = new System.Drawing.Point(59, 21);
+            this.txtBYX示教当前位置.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBYX示教当前位置.Name = "txtBYX示教当前位置";
+            this.txtBYX示教当前位置.Size = new System.Drawing.Size(67, 14);
+            this.txtBYX示教当前位置.TabIndex = 49;
+            // 
+            // label416
+            // 
+            this.label416.AutoSize = true;
+            this.label416.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label416.Location = new System.Drawing.Point(4, 23);
+            this.label416.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label416.Name = "label416";
+            this.label416.Size = new System.Drawing.Size(55, 15);
+            this.label416.TabIndex = 48;
+            this.label416.Text = "当前位置";
             // 
             // tabPage6
             // 
@@ -16258,2250 +18564,6 @@
             this.label463.TabIndex = 71;
             this.label463.Text = "mm/s";
             // 
-            // tabPage10
-            // 
-            this.tabPage10.Controls.Add(this.groupBox61);
-            this.tabPage10.Controls.Add(this.groupBox60);
-            this.tabPage10.Controls.Add(this.groupBox59);
-            this.tabPage10.Controls.Add(this.groupBox58);
-            this.tabPage10.Controls.Add(this.groupBox56);
-            this.tabPage10.Controls.Add(this.groupBox55);
-            this.tabPage10.Controls.Add(this.groupBox53);
-            this.tabPage10.Controls.Add(this.groupBox57);
-            this.tabPage10.Controls.Add(this.groupBox54);
-            this.tabPage10.Controls.Add(this.groupBox52);
-            this.tabPage10.Controls.Add(this.groupBox51);
-            this.tabPage10.Location = new System.Drawing.Point(4, 44);
-            this.tabPage10.Name = "tabPage10";
-            this.tabPage10.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage10.Size = new System.Drawing.Size(1256, 686);
-            this.tabPage10.TabIndex = 9;
-            this.tabPage10.Text = "示教2";
-            this.tabPage10.UseVisualStyleBackColor = true;
-            // 
-            // groupBox54
-            // 
-            this.groupBox54.Controls.Add(this.label468);
-            this.groupBox54.Controls.Add(this.txtBYZ示教视觉位置3);
-            this.groupBox54.Controls.Add(this.btnBYZ示教视觉位置3);
-            this.groupBox54.Controls.Add(this.label417);
-            this.groupBox54.Controls.Add(this.txtBYZ下料视觉位置);
-            this.groupBox54.Controls.Add(this.btnBYZ下料视觉位置);
-            this.groupBox54.Controls.Add(this.label418);
-            this.groupBox54.Controls.Add(this.txtBYZ示教视觉位置2);
-            this.groupBox54.Controls.Add(this.btnBYZ示教视觉位置2);
-            this.groupBox54.Controls.Add(this.label419);
-            this.groupBox54.Controls.Add(this.txtBYZ示教视觉位置1);
-            this.groupBox54.Controls.Add(this.btnBYZ示教视觉位置1);
-            this.groupBox54.Controls.Add(this.label426);
-            this.groupBox54.Controls.Add(this.txtBYZ示教上升位置);
-            this.groupBox54.Controls.Add(this.btnBYZ示教上升位置);
-            this.groupBox54.Controls.Add(this.label427);
-            this.groupBox54.Controls.Add(this.txtBYZ示教上料位置);
-            this.groupBox54.Controls.Add(this.btnBYZ示教上料位置);
-            this.groupBox54.Controls.Add(this.txtBYZ示教当前位置);
-            this.groupBox54.Controls.Add(this.label428);
-            this.groupBox54.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox54.Location = new System.Drawing.Point(205, 273);
-            this.groupBox54.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox54.Name = "groupBox54";
-            this.groupBox54.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox54.Size = new System.Drawing.Size(180, 250);
-            this.groupBox54.TabIndex = 101;
-            this.groupBox54.TabStop = false;
-            this.groupBox54.Text = "搬运Z轴";
-            // 
-            // label468
-            // 
-            this.label468.AutoSize = true;
-            this.label468.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label468.Location = new System.Drawing.Point(140, 169);
-            this.label468.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label468.Name = "label468";
-            this.label468.Size = new System.Drawing.Size(25, 15);
-            this.label468.TabIndex = 83;
-            this.label468.Text = "mm";
-            // 
-            // txtBYZ示教视觉位置3
-            // 
-            this.txtBYZ示教视觉位置3.Location = new System.Drawing.Point(87, 159);
-            this.txtBYZ示教视觉位置3.Margin = new System.Windows.Forms.Padding(2);
-            this.txtBYZ示教视觉位置3.Name = "txtBYZ示教视觉位置3";
-            this.txtBYZ示教视觉位置3.Size = new System.Drawing.Size(49, 21);
-            this.txtBYZ示教视觉位置3.TabIndex = 84;
-            // 
-            // btnBYZ示教视觉位置3
-            // 
-            this.btnBYZ示教视觉位置3.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBYZ示教视觉位置3.Location = new System.Drawing.Point(4, 159);
-            this.btnBYZ示教视觉位置3.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBYZ示教视觉位置3.Name = "btnBYZ示教视觉位置3";
-            this.btnBYZ示教视觉位置3.Size = new System.Drawing.Size(78, 24);
-            this.btnBYZ示教视觉位置3.TabIndex = 82;
-            this.btnBYZ示教视觉位置3.Text = "视觉位置3";
-            this.btnBYZ示教视觉位置3.UseVisualStyleBackColor = true;
-            // 
-            // label417
-            // 
-            this.label417.AutoSize = true;
-            this.label417.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label417.Location = new System.Drawing.Point(140, 195);
-            this.label417.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label417.Name = "label417";
-            this.label417.Size = new System.Drawing.Size(25, 15);
-            this.label417.TabIndex = 80;
-            this.label417.Text = "mm";
-            // 
-            // txtBYZ下料视觉位置
-            // 
-            this.txtBYZ下料视觉位置.Location = new System.Drawing.Point(87, 186);
-            this.txtBYZ下料视觉位置.Margin = new System.Windows.Forms.Padding(2);
-            this.txtBYZ下料视觉位置.Name = "txtBYZ下料视觉位置";
-            this.txtBYZ下料视觉位置.Size = new System.Drawing.Size(49, 21);
-            this.txtBYZ下料视觉位置.TabIndex = 81;
-            // 
-            // btnBYZ下料视觉位置
-            // 
-            this.btnBYZ下料视觉位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBYZ下料视觉位置.Location = new System.Drawing.Point(4, 186);
-            this.btnBYZ下料视觉位置.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBYZ下料视觉位置.Name = "btnBYZ下料视觉位置";
-            this.btnBYZ下料视觉位置.Size = new System.Drawing.Size(78, 24);
-            this.btnBYZ下料视觉位置.TabIndex = 79;
-            this.btnBYZ下料视觉位置.Text = "下料位置";
-            this.btnBYZ下料视觉位置.UseVisualStyleBackColor = true;
-            // 
-            // label418
-            // 
-            this.label418.AutoSize = true;
-            this.label418.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label418.Location = new System.Drawing.Point(140, 142);
-            this.label418.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label418.Name = "label418";
-            this.label418.Size = new System.Drawing.Size(25, 15);
-            this.label418.TabIndex = 77;
-            this.label418.Text = "mm";
-            // 
-            // txtBYZ示教视觉位置2
-            // 
-            this.txtBYZ示教视觉位置2.Location = new System.Drawing.Point(87, 133);
-            this.txtBYZ示教视觉位置2.Margin = new System.Windows.Forms.Padding(2);
-            this.txtBYZ示教视觉位置2.Name = "txtBYZ示教视觉位置2";
-            this.txtBYZ示教视觉位置2.Size = new System.Drawing.Size(49, 21);
-            this.txtBYZ示教视觉位置2.TabIndex = 78;
-            // 
-            // btnBYZ示教视觉位置2
-            // 
-            this.btnBYZ示教视觉位置2.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBYZ示教视觉位置2.Location = new System.Drawing.Point(4, 133);
-            this.btnBYZ示教视觉位置2.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBYZ示教视觉位置2.Name = "btnBYZ示教视觉位置2";
-            this.btnBYZ示教视觉位置2.Size = new System.Drawing.Size(78, 24);
-            this.btnBYZ示教视觉位置2.TabIndex = 76;
-            this.btnBYZ示教视觉位置2.Text = "视觉位置2";
-            this.btnBYZ示教视觉位置2.UseVisualStyleBackColor = true;
-            // 
-            // label419
-            // 
-            this.label419.AutoSize = true;
-            this.label419.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label419.Location = new System.Drawing.Point(140, 114);
-            this.label419.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label419.Name = "label419";
-            this.label419.Size = new System.Drawing.Size(25, 15);
-            this.label419.TabIndex = 74;
-            this.label419.Text = "mm";
-            // 
-            // txtBYZ示教视觉位置1
-            // 
-            this.txtBYZ示教视觉位置1.Location = new System.Drawing.Point(87, 104);
-            this.txtBYZ示教视觉位置1.Margin = new System.Windows.Forms.Padding(2);
-            this.txtBYZ示教视觉位置1.Name = "txtBYZ示教视觉位置1";
-            this.txtBYZ示教视觉位置1.Size = new System.Drawing.Size(49, 21);
-            this.txtBYZ示教视觉位置1.TabIndex = 75;
-            // 
-            // btnBYZ示教视觉位置1
-            // 
-            this.btnBYZ示教视觉位置1.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBYZ示教视觉位置1.Location = new System.Drawing.Point(4, 104);
-            this.btnBYZ示教视觉位置1.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBYZ示教视觉位置1.Name = "btnBYZ示教视觉位置1";
-            this.btnBYZ示教视觉位置1.Size = new System.Drawing.Size(78, 24);
-            this.btnBYZ示教视觉位置1.TabIndex = 73;
-            this.btnBYZ示教视觉位置1.Text = "视觉位置1";
-            this.btnBYZ示教视觉位置1.UseVisualStyleBackColor = true;
-            // 
-            // label426
-            // 
-            this.label426.AutoSize = true;
-            this.label426.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label426.Location = new System.Drawing.Point(140, 85);
-            this.label426.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label426.Name = "label426";
-            this.label426.Size = new System.Drawing.Size(25, 15);
-            this.label426.TabIndex = 71;
-            this.label426.Text = "mm";
-            // 
-            // txtBYZ示教上升位置
-            // 
-            this.txtBYZ示教上升位置.Location = new System.Drawing.Point(87, 75);
-            this.txtBYZ示教上升位置.Margin = new System.Windows.Forms.Padding(2);
-            this.txtBYZ示教上升位置.Name = "txtBYZ示教上升位置";
-            this.txtBYZ示教上升位置.Size = new System.Drawing.Size(49, 21);
-            this.txtBYZ示教上升位置.TabIndex = 72;
-            // 
-            // btnBYZ示教上升位置
-            // 
-            this.btnBYZ示教上升位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBYZ示教上升位置.Location = new System.Drawing.Point(4, 75);
-            this.btnBYZ示教上升位置.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBYZ示教上升位置.Name = "btnBYZ示教上升位置";
-            this.btnBYZ示教上升位置.Size = new System.Drawing.Size(78, 24);
-            this.btnBYZ示教上升位置.TabIndex = 70;
-            this.btnBYZ示教上升位置.Text = "上升位置";
-            this.btnBYZ示教上升位置.UseVisualStyleBackColor = true;
-            // 
-            // label427
-            // 
-            this.label427.AutoSize = true;
-            this.label427.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label427.Location = new System.Drawing.Point(140, 56);
-            this.label427.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label427.Name = "label427";
-            this.label427.Size = new System.Drawing.Size(25, 15);
-            this.label427.TabIndex = 68;
-            this.label427.Text = "mm";
-            // 
-            // txtBYZ示教上料位置
-            // 
-            this.txtBYZ示教上料位置.Location = new System.Drawing.Point(87, 46);
-            this.txtBYZ示教上料位置.Margin = new System.Windows.Forms.Padding(2);
-            this.txtBYZ示教上料位置.Name = "txtBYZ示教上料位置";
-            this.txtBYZ示教上料位置.Size = new System.Drawing.Size(49, 21);
-            this.txtBYZ示教上料位置.TabIndex = 69;
-            // 
-            // btnBYZ示教上料位置
-            // 
-            this.btnBYZ示教上料位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBYZ示教上料位置.Location = new System.Drawing.Point(4, 46);
-            this.btnBYZ示教上料位置.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBYZ示教上料位置.Name = "btnBYZ示教上料位置";
-            this.btnBYZ示教上料位置.Size = new System.Drawing.Size(78, 24);
-            this.btnBYZ示教上料位置.TabIndex = 67;
-            this.btnBYZ示教上料位置.Text = "上料位置";
-            this.btnBYZ示教上料位置.UseVisualStyleBackColor = true;
-            // 
-            // txtBYZ示教当前位置
-            // 
-            this.txtBYZ示教当前位置.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBYZ示教当前位置.Location = new System.Drawing.Point(59, 21);
-            this.txtBYZ示教当前位置.Margin = new System.Windows.Forms.Padding(2);
-            this.txtBYZ示教当前位置.Name = "txtBYZ示教当前位置";
-            this.txtBYZ示教当前位置.Size = new System.Drawing.Size(67, 14);
-            this.txtBYZ示教当前位置.TabIndex = 49;
-            // 
-            // label428
-            // 
-            this.label428.AutoSize = true;
-            this.label428.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label428.Location = new System.Drawing.Point(4, 23);
-            this.label428.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label428.Name = "label428";
-            this.label428.Size = new System.Drawing.Size(55, 15);
-            this.label428.TabIndex = 48;
-            this.label428.Text = "当前位置";
-            // 
-            // groupBox52
-            // 
-            this.groupBox52.Controls.Add(this.label466);
-            this.groupBox52.Controls.Add(this.txtBYY示教视觉4位置);
-            this.groupBox52.Controls.Add(this.btnBYY示教视觉4位置);
-            this.groupBox52.Controls.Add(this.label467);
-            this.groupBox52.Controls.Add(this.txtBYY示教视觉3位置);
-            this.groupBox52.Controls.Add(this.btnBYY示教视觉3位置);
-            this.groupBox52.Controls.Add(this.label420);
-            this.groupBox52.Controls.Add(this.txtBYY示教第二行);
-            this.groupBox52.Controls.Add(this.btnBYY示教第二行);
-            this.groupBox52.Controls.Add(this.label421);
-            this.groupBox52.Controls.Add(this.txtBYY示教第一行);
-            this.groupBox52.Controls.Add(this.btnBYY示教第一行);
-            this.groupBox52.Controls.Add(this.label422);
-            this.groupBox52.Controls.Add(this.txtBYY示教视觉2位置);
-            this.groupBox52.Controls.Add(this.btnBYY示教视觉2位置);
-            this.groupBox52.Controls.Add(this.label423);
-            this.groupBox52.Controls.Add(this.txtBYY示教视觉1位置);
-            this.groupBox52.Controls.Add(this.btnBYY示教视觉1位置);
-            this.groupBox52.Controls.Add(this.label424);
-            this.groupBox52.Controls.Add(this.txtBYY示教上料位置);
-            this.groupBox52.Controls.Add(this.btnBYY示教上料位置);
-            this.groupBox52.Controls.Add(this.txtBYY示教当前位置);
-            this.groupBox52.Controls.Add(this.label425);
-            this.groupBox52.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox52.Location = new System.Drawing.Point(21, 273);
-            this.groupBox52.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox52.Name = "groupBox52";
-            this.groupBox52.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox52.Size = new System.Drawing.Size(180, 250);
-            this.groupBox52.TabIndex = 100;
-            this.groupBox52.TabStop = false;
-            this.groupBox52.Text = "搬运Y轴";
-            // 
-            // label466
-            // 
-            this.label466.AutoSize = true;
-            this.label466.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label466.Location = new System.Drawing.Point(140, 170);
-            this.label466.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label466.Name = "label466";
-            this.label466.Size = new System.Drawing.Size(25, 15);
-            this.label466.TabIndex = 86;
-            this.label466.Text = "mm";
-            // 
-            // txtBYY示教视觉4位置
-            // 
-            this.txtBYY示教视觉4位置.Location = new System.Drawing.Point(87, 160);
-            this.txtBYY示教视觉4位置.Margin = new System.Windows.Forms.Padding(2);
-            this.txtBYY示教视觉4位置.Name = "txtBYY示教视觉4位置";
-            this.txtBYY示教视觉4位置.Size = new System.Drawing.Size(49, 21);
-            this.txtBYY示教视觉4位置.TabIndex = 87;
-            // 
-            // btnBYY示教视觉4位置
-            // 
-            this.btnBYY示教视觉4位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBYY示教视觉4位置.Location = new System.Drawing.Point(4, 160);
-            this.btnBYY示教视觉4位置.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBYY示教视觉4位置.Name = "btnBYY示教视觉4位置";
-            this.btnBYY示教视觉4位置.Size = new System.Drawing.Size(78, 24);
-            this.btnBYY示教视觉4位置.TabIndex = 85;
-            this.btnBYY示教视觉4位置.Text = "视觉位置4";
-            this.btnBYY示教视觉4位置.UseVisualStyleBackColor = true;
-            // 
-            // label467
-            // 
-            this.label467.AutoSize = true;
-            this.label467.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label467.Location = new System.Drawing.Point(140, 141);
-            this.label467.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label467.Name = "label467";
-            this.label467.Size = new System.Drawing.Size(25, 15);
-            this.label467.TabIndex = 83;
-            this.label467.Text = "mm";
-            // 
-            // txtBYY示教视觉3位置
-            // 
-            this.txtBYY示教视觉3位置.Location = new System.Drawing.Point(87, 131);
-            this.txtBYY示教视觉3位置.Margin = new System.Windows.Forms.Padding(2);
-            this.txtBYY示教视觉3位置.Name = "txtBYY示教视觉3位置";
-            this.txtBYY示教视觉3位置.Size = new System.Drawing.Size(49, 21);
-            this.txtBYY示教视觉3位置.TabIndex = 84;
-            // 
-            // btnBYY示教视觉3位置
-            // 
-            this.btnBYY示教视觉3位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBYY示教视觉3位置.Location = new System.Drawing.Point(4, 131);
-            this.btnBYY示教视觉3位置.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBYY示教视觉3位置.Name = "btnBYY示教视觉3位置";
-            this.btnBYY示教视觉3位置.Size = new System.Drawing.Size(78, 24);
-            this.btnBYY示教视觉3位置.TabIndex = 82;
-            this.btnBYY示教视觉3位置.Text = "视觉位置3";
-            this.btnBYY示教视觉3位置.UseVisualStyleBackColor = true;
-            // 
-            // label420
-            // 
-            this.label420.AutoSize = true;
-            this.label420.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label420.Location = new System.Drawing.Point(140, 226);
-            this.label420.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label420.Name = "label420";
-            this.label420.Size = new System.Drawing.Size(25, 15);
-            this.label420.TabIndex = 80;
-            this.label420.Text = "mm";
-            // 
-            // txtBYY示教第二行
-            // 
-            this.txtBYY示教第二行.Location = new System.Drawing.Point(87, 217);
-            this.txtBYY示教第二行.Margin = new System.Windows.Forms.Padding(2);
-            this.txtBYY示教第二行.Name = "txtBYY示教第二行";
-            this.txtBYY示教第二行.Size = new System.Drawing.Size(49, 21);
-            this.txtBYY示教第二行.TabIndex = 81;
-            // 
-            // btnBYY示教第二行
-            // 
-            this.btnBYY示教第二行.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBYY示教第二行.Location = new System.Drawing.Point(4, 217);
-            this.btnBYY示教第二行.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBYY示教第二行.Name = "btnBYY示教第二行";
-            this.btnBYY示教第二行.Size = new System.Drawing.Size(78, 24);
-            this.btnBYY示教第二行.TabIndex = 79;
-            this.btnBYY示教第二行.Text = "第二行";
-            this.btnBYY示教第二行.UseVisualStyleBackColor = true;
-            // 
-            // label421
-            // 
-            this.label421.AutoSize = true;
-            this.label421.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label421.Location = new System.Drawing.Point(140, 198);
-            this.label421.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label421.Name = "label421";
-            this.label421.Size = new System.Drawing.Size(25, 15);
-            this.label421.TabIndex = 77;
-            this.label421.Text = "mm";
-            // 
-            // txtBYY示教第一行
-            // 
-            this.txtBYY示教第一行.Location = new System.Drawing.Point(87, 188);
-            this.txtBYY示教第一行.Margin = new System.Windows.Forms.Padding(2);
-            this.txtBYY示教第一行.Name = "txtBYY示教第一行";
-            this.txtBYY示教第一行.Size = new System.Drawing.Size(49, 21);
-            this.txtBYY示教第一行.TabIndex = 78;
-            // 
-            // btnBYY示教第一行
-            // 
-            this.btnBYY示教第一行.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBYY示教第一行.Location = new System.Drawing.Point(4, 188);
-            this.btnBYY示教第一行.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBYY示教第一行.Name = "btnBYY示教第一行";
-            this.btnBYY示教第一行.Size = new System.Drawing.Size(78, 24);
-            this.btnBYY示教第一行.TabIndex = 76;
-            this.btnBYY示教第一行.Text = "第一行";
-            this.btnBYY示教第一行.UseVisualStyleBackColor = true;
-            // 
-            // label422
-            // 
-            this.label422.AutoSize = true;
-            this.label422.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label422.Location = new System.Drawing.Point(140, 114);
-            this.label422.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label422.Name = "label422";
-            this.label422.Size = new System.Drawing.Size(25, 15);
-            this.label422.TabIndex = 74;
-            this.label422.Text = "mm";
-            // 
-            // txtBYY示教视觉2位置
-            // 
-            this.txtBYY示教视觉2位置.Location = new System.Drawing.Point(87, 104);
-            this.txtBYY示教视觉2位置.Margin = new System.Windows.Forms.Padding(2);
-            this.txtBYY示教视觉2位置.Name = "txtBYY示教视觉2位置";
-            this.txtBYY示教视觉2位置.Size = new System.Drawing.Size(49, 21);
-            this.txtBYY示教视觉2位置.TabIndex = 75;
-            // 
-            // btnBYY示教视觉2位置
-            // 
-            this.btnBYY示教视觉2位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBYY示教视觉2位置.Location = new System.Drawing.Point(4, 104);
-            this.btnBYY示教视觉2位置.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBYY示教视觉2位置.Name = "btnBYY示教视觉2位置";
-            this.btnBYY示教视觉2位置.Size = new System.Drawing.Size(78, 24);
-            this.btnBYY示教视觉2位置.TabIndex = 73;
-            this.btnBYY示教视觉2位置.Text = "视觉位置2";
-            this.btnBYY示教视觉2位置.UseVisualStyleBackColor = true;
-            // 
-            // label423
-            // 
-            this.label423.AutoSize = true;
-            this.label423.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label423.Location = new System.Drawing.Point(140, 85);
-            this.label423.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label423.Name = "label423";
-            this.label423.Size = new System.Drawing.Size(25, 15);
-            this.label423.TabIndex = 71;
-            this.label423.Text = "mm";
-            // 
-            // txtBYY示教视觉1位置
-            // 
-            this.txtBYY示教视觉1位置.Location = new System.Drawing.Point(87, 75);
-            this.txtBYY示教视觉1位置.Margin = new System.Windows.Forms.Padding(2);
-            this.txtBYY示教视觉1位置.Name = "txtBYY示教视觉1位置";
-            this.txtBYY示教视觉1位置.Size = new System.Drawing.Size(49, 21);
-            this.txtBYY示教视觉1位置.TabIndex = 72;
-            // 
-            // btnBYY示教视觉1位置
-            // 
-            this.btnBYY示教视觉1位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBYY示教视觉1位置.Location = new System.Drawing.Point(4, 75);
-            this.btnBYY示教视觉1位置.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBYY示教视觉1位置.Name = "btnBYY示教视觉1位置";
-            this.btnBYY示教视觉1位置.Size = new System.Drawing.Size(78, 24);
-            this.btnBYY示教视觉1位置.TabIndex = 70;
-            this.btnBYY示教视觉1位置.Text = "视觉位置1";
-            this.btnBYY示教视觉1位置.UseVisualStyleBackColor = true;
-            // 
-            // label424
-            // 
-            this.label424.AutoSize = true;
-            this.label424.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label424.Location = new System.Drawing.Point(140, 56);
-            this.label424.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label424.Name = "label424";
-            this.label424.Size = new System.Drawing.Size(25, 15);
-            this.label424.TabIndex = 68;
-            this.label424.Text = "mm";
-            // 
-            // txtBYY示教上料位置
-            // 
-            this.txtBYY示教上料位置.Location = new System.Drawing.Point(87, 46);
-            this.txtBYY示教上料位置.Margin = new System.Windows.Forms.Padding(2);
-            this.txtBYY示教上料位置.Name = "txtBYY示教上料位置";
-            this.txtBYY示教上料位置.Size = new System.Drawing.Size(49, 21);
-            this.txtBYY示教上料位置.TabIndex = 69;
-            // 
-            // btnBYY示教上料位置
-            // 
-            this.btnBYY示教上料位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBYY示教上料位置.Location = new System.Drawing.Point(4, 46);
-            this.btnBYY示教上料位置.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBYY示教上料位置.Name = "btnBYY示教上料位置";
-            this.btnBYY示教上料位置.Size = new System.Drawing.Size(78, 24);
-            this.btnBYY示教上料位置.TabIndex = 67;
-            this.btnBYY示教上料位置.Text = "上料位置";
-            this.btnBYY示教上料位置.UseVisualStyleBackColor = true;
-            // 
-            // txtBYY示教当前位置
-            // 
-            this.txtBYY示教当前位置.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBYY示教当前位置.Location = new System.Drawing.Point(59, 21);
-            this.txtBYY示教当前位置.Margin = new System.Windows.Forms.Padding(2);
-            this.txtBYY示教当前位置.Name = "txtBYY示教当前位置";
-            this.txtBYY示教当前位置.Size = new System.Drawing.Size(67, 14);
-            this.txtBYY示教当前位置.TabIndex = 49;
-            // 
-            // label425
-            // 
-            this.label425.AutoSize = true;
-            this.label425.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label425.Location = new System.Drawing.Point(4, 23);
-            this.label425.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label425.Name = "label425";
-            this.label425.Size = new System.Drawing.Size(55, 15);
-            this.label425.TabIndex = 48;
-            this.label425.Text = "当前位置";
-            // 
-            // groupBox51
-            // 
-            this.groupBox51.Controls.Add(this.label465);
-            this.groupBox51.Controls.Add(this.txtBYX示教视觉2位置);
-            this.groupBox51.Controls.Add(this.btnBYX示教视觉2位置);
-            this.groupBox51.Controls.Add(this.label412);
-            this.groupBox51.Controls.Add(this.txtBYX示教第八列);
-            this.groupBox51.Controls.Add(this.btnBYX示教第八列);
-            this.groupBox51.Controls.Add(this.label413);
-            this.groupBox51.Controls.Add(this.txtBYX示教第七列);
-            this.groupBox51.Controls.Add(this.btnBYX示教第七列);
-            this.groupBox51.Controls.Add(this.label414);
-            this.groupBox51.Controls.Add(this.txtBYX示教第六列);
-            this.groupBox51.Controls.Add(this.btnBYX示教第六列);
-            this.groupBox51.Controls.Add(this.label415);
-            this.groupBox51.Controls.Add(this.txtBYX示教第五列);
-            this.groupBox51.Controls.Add(this.btnBYX示教第五列);
-            this.groupBox51.Controls.Add(this.label401);
-            this.groupBox51.Controls.Add(this.txtBYX示教第四列);
-            this.groupBox51.Controls.Add(this.btnBYX示教第四列);
-            this.groupBox51.Controls.Add(this.label402);
-            this.groupBox51.Controls.Add(this.txtBYX示教第三列);
-            this.groupBox51.Controls.Add(this.btnBYX示教第三列);
-            this.groupBox51.Controls.Add(this.label403);
-            this.groupBox51.Controls.Add(this.txtBYX示教第二列);
-            this.groupBox51.Controls.Add(this.btnBYX示教第二列);
-            this.groupBox51.Controls.Add(this.label404);
-            this.groupBox51.Controls.Add(this.txtBYX示教第一列);
-            this.groupBox51.Controls.Add(this.btnBYX示教第一列);
-            this.groupBox51.Controls.Add(this.label408);
-            this.groupBox51.Controls.Add(this.txtBYX示教视觉1位置);
-            this.groupBox51.Controls.Add(this.btnBYX示教视觉1位置);
-            this.groupBox51.Controls.Add(this.label409);
-            this.groupBox51.Controls.Add(this.txtBYX示教上料位置);
-            this.groupBox51.Controls.Add(this.btnBYX示教上料位置);
-            this.groupBox51.Controls.Add(this.txtBYX示教当前位置);
-            this.groupBox51.Controls.Add(this.label416);
-            this.groupBox51.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox51.Location = new System.Drawing.Point(21, 19);
-            this.groupBox51.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox51.Name = "groupBox51";
-            this.groupBox51.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox51.Size = new System.Drawing.Size(364, 250);
-            this.groupBox51.TabIndex = 99;
-            this.groupBox51.TabStop = false;
-            this.groupBox51.Text = "搬运X轴";
-            // 
-            // label465
-            // 
-            this.label465.AutoSize = true;
-            this.label465.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label465.Location = new System.Drawing.Point(140, 113);
-            this.label465.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label465.Name = "label465";
-            this.label465.Size = new System.Drawing.Size(25, 15);
-            this.label465.TabIndex = 98;
-            this.label465.Text = "mm";
-            // 
-            // txtBYX示教视觉2位置
-            // 
-            this.txtBYX示教视觉2位置.Location = new System.Drawing.Point(87, 103);
-            this.txtBYX示教视觉2位置.Margin = new System.Windows.Forms.Padding(2);
-            this.txtBYX示教视觉2位置.Name = "txtBYX示教视觉2位置";
-            this.txtBYX示教视觉2位置.Size = new System.Drawing.Size(49, 21);
-            this.txtBYX示教视觉2位置.TabIndex = 99;
-            // 
-            // btnBYX示教视觉2位置
-            // 
-            this.btnBYX示教视觉2位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBYX示教视觉2位置.Location = new System.Drawing.Point(4, 103);
-            this.btnBYX示教视觉2位置.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBYX示教视觉2位置.Name = "btnBYX示教视觉2位置";
-            this.btnBYX示教视觉2位置.Size = new System.Drawing.Size(78, 24);
-            this.btnBYX示教视觉2位置.TabIndex = 97;
-            this.btnBYX示教视觉2位置.Text = "视觉位置2";
-            this.btnBYX示教视觉2位置.UseVisualStyleBackColor = true;
-            // 
-            // label412
-            // 
-            this.label412.AutoSize = true;
-            this.label412.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label412.Location = new System.Drawing.Point(321, 167);
-            this.label412.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label412.Name = "label412";
-            this.label412.Size = new System.Drawing.Size(25, 15);
-            this.label412.TabIndex = 95;
-            this.label412.Text = "mm";
-            // 
-            // txtBYX示教第八列
-            // 
-            this.txtBYX示教第八列.Location = new System.Drawing.Point(267, 157);
-            this.txtBYX示教第八列.Margin = new System.Windows.Forms.Padding(2);
-            this.txtBYX示教第八列.Name = "txtBYX示教第八列";
-            this.txtBYX示教第八列.Size = new System.Drawing.Size(49, 21);
-            this.txtBYX示教第八列.TabIndex = 96;
-            // 
-            // btnBYX示教第八列
-            // 
-            this.btnBYX示教第八列.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBYX示教第八列.Location = new System.Drawing.Point(184, 157);
-            this.btnBYX示教第八列.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBYX示教第八列.Name = "btnBYX示教第八列";
-            this.btnBYX示教第八列.Size = new System.Drawing.Size(78, 24);
-            this.btnBYX示教第八列.TabIndex = 94;
-            this.btnBYX示教第八列.Text = "第八列";
-            this.btnBYX示教第八列.UseVisualStyleBackColor = true;
-            // 
-            // label413
-            // 
-            this.label413.AutoSize = true;
-            this.label413.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label413.Location = new System.Drawing.Point(321, 138);
-            this.label413.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label413.Name = "label413";
-            this.label413.Size = new System.Drawing.Size(25, 15);
-            this.label413.TabIndex = 92;
-            this.label413.Text = "mm";
-            // 
-            // txtBYX示教第七列
-            // 
-            this.txtBYX示教第七列.Location = new System.Drawing.Point(267, 128);
-            this.txtBYX示教第七列.Margin = new System.Windows.Forms.Padding(2);
-            this.txtBYX示教第七列.Name = "txtBYX示教第七列";
-            this.txtBYX示教第七列.Size = new System.Drawing.Size(49, 21);
-            this.txtBYX示教第七列.TabIndex = 93;
-            // 
-            // btnBYX示教第七列
-            // 
-            this.btnBYX示教第七列.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBYX示教第七列.Location = new System.Drawing.Point(184, 128);
-            this.btnBYX示教第七列.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBYX示教第七列.Name = "btnBYX示教第七列";
-            this.btnBYX示教第七列.Size = new System.Drawing.Size(78, 24);
-            this.btnBYX示教第七列.TabIndex = 91;
-            this.btnBYX示教第七列.Text = "第七列";
-            this.btnBYX示教第七列.UseVisualStyleBackColor = true;
-            // 
-            // label414
-            // 
-            this.label414.AutoSize = true;
-            this.label414.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label414.Location = new System.Drawing.Point(321, 109);
-            this.label414.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label414.Name = "label414";
-            this.label414.Size = new System.Drawing.Size(25, 15);
-            this.label414.TabIndex = 89;
-            this.label414.Text = "mm";
-            // 
-            // txtBYX示教第六列
-            // 
-            this.txtBYX示教第六列.Location = new System.Drawing.Point(267, 100);
-            this.txtBYX示教第六列.Margin = new System.Windows.Forms.Padding(2);
-            this.txtBYX示教第六列.Name = "txtBYX示教第六列";
-            this.txtBYX示教第六列.Size = new System.Drawing.Size(49, 21);
-            this.txtBYX示教第六列.TabIndex = 90;
-            // 
-            // btnBYX示教第六列
-            // 
-            this.btnBYX示教第六列.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBYX示教第六列.Location = new System.Drawing.Point(184, 100);
-            this.btnBYX示教第六列.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBYX示教第六列.Name = "btnBYX示教第六列";
-            this.btnBYX示教第六列.Size = new System.Drawing.Size(78, 24);
-            this.btnBYX示教第六列.TabIndex = 88;
-            this.btnBYX示教第六列.Text = "第六列";
-            this.btnBYX示教第六列.UseVisualStyleBackColor = true;
-            // 
-            // label415
-            // 
-            this.label415.AutoSize = true;
-            this.label415.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label415.Location = new System.Drawing.Point(321, 80);
-            this.label415.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label415.Name = "label415";
-            this.label415.Size = new System.Drawing.Size(25, 15);
-            this.label415.TabIndex = 86;
-            this.label415.Text = "mm";
-            // 
-            // txtBYX示教第五列
-            // 
-            this.txtBYX示教第五列.Location = new System.Drawing.Point(267, 71);
-            this.txtBYX示教第五列.Margin = new System.Windows.Forms.Padding(2);
-            this.txtBYX示教第五列.Name = "txtBYX示教第五列";
-            this.txtBYX示教第五列.Size = new System.Drawing.Size(49, 21);
-            this.txtBYX示教第五列.TabIndex = 87;
-            // 
-            // btnBYX示教第五列
-            // 
-            this.btnBYX示教第五列.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBYX示教第五列.Location = new System.Drawing.Point(184, 71);
-            this.btnBYX示教第五列.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBYX示教第五列.Name = "btnBYX示教第五列";
-            this.btnBYX示教第五列.Size = new System.Drawing.Size(78, 24);
-            this.btnBYX示教第五列.TabIndex = 85;
-            this.btnBYX示教第五列.Text = "第五列";
-            this.btnBYX示教第五列.UseVisualStyleBackColor = true;
-            // 
-            // label401
-            // 
-            this.label401.AutoSize = true;
-            this.label401.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label401.Location = new System.Drawing.Point(321, 54);
-            this.label401.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label401.Name = "label401";
-            this.label401.Size = new System.Drawing.Size(25, 15);
-            this.label401.TabIndex = 83;
-            this.label401.Text = "mm";
-            // 
-            // txtBYX示教第四列
-            // 
-            this.txtBYX示教第四列.Location = new System.Drawing.Point(267, 44);
-            this.txtBYX示教第四列.Margin = new System.Windows.Forms.Padding(2);
-            this.txtBYX示教第四列.Name = "txtBYX示教第四列";
-            this.txtBYX示教第四列.Size = new System.Drawing.Size(49, 21);
-            this.txtBYX示教第四列.TabIndex = 84;
-            // 
-            // btnBYX示教第四列
-            // 
-            this.btnBYX示教第四列.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBYX示教第四列.Location = new System.Drawing.Point(184, 44);
-            this.btnBYX示教第四列.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBYX示教第四列.Name = "btnBYX示教第四列";
-            this.btnBYX示教第四列.Size = new System.Drawing.Size(78, 24);
-            this.btnBYX示教第四列.TabIndex = 82;
-            this.btnBYX示教第四列.Text = "第四列";
-            this.btnBYX示教第四列.UseVisualStyleBackColor = true;
-            // 
-            // label402
-            // 
-            this.label402.AutoSize = true;
-            this.label402.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label402.Location = new System.Drawing.Point(140, 200);
-            this.label402.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label402.Name = "label402";
-            this.label402.Size = new System.Drawing.Size(25, 15);
-            this.label402.TabIndex = 80;
-            this.label402.Text = "mm";
-            // 
-            // txtBYX示教第三列
-            // 
-            this.txtBYX示教第三列.Location = new System.Drawing.Point(87, 190);
-            this.txtBYX示教第三列.Margin = new System.Windows.Forms.Padding(2);
-            this.txtBYX示教第三列.Name = "txtBYX示教第三列";
-            this.txtBYX示教第三列.Size = new System.Drawing.Size(49, 21);
-            this.txtBYX示教第三列.TabIndex = 81;
-            // 
-            // btnBYX示教第三列
-            // 
-            this.btnBYX示教第三列.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBYX示教第三列.Location = new System.Drawing.Point(4, 190);
-            this.btnBYX示教第三列.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBYX示教第三列.Name = "btnBYX示教第三列";
-            this.btnBYX示教第三列.Size = new System.Drawing.Size(78, 24);
-            this.btnBYX示教第三列.TabIndex = 79;
-            this.btnBYX示教第三列.Text = "第三列";
-            this.btnBYX示教第三列.UseVisualStyleBackColor = true;
-            // 
-            // label403
-            // 
-            this.label403.AutoSize = true;
-            this.label403.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label403.Location = new System.Drawing.Point(140, 171);
-            this.label403.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label403.Name = "label403";
-            this.label403.Size = new System.Drawing.Size(25, 15);
-            this.label403.TabIndex = 77;
-            this.label403.Text = "mm";
-            // 
-            // txtBYX示教第二列
-            // 
-            this.txtBYX示教第二列.Location = new System.Drawing.Point(87, 162);
-            this.txtBYX示教第二列.Margin = new System.Windows.Forms.Padding(2);
-            this.txtBYX示教第二列.Name = "txtBYX示教第二列";
-            this.txtBYX示教第二列.Size = new System.Drawing.Size(49, 21);
-            this.txtBYX示教第二列.TabIndex = 78;
-            // 
-            // btnBYX示教第二列
-            // 
-            this.btnBYX示教第二列.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBYX示教第二列.Location = new System.Drawing.Point(4, 162);
-            this.btnBYX示教第二列.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBYX示教第二列.Name = "btnBYX示教第二列";
-            this.btnBYX示教第二列.Size = new System.Drawing.Size(78, 24);
-            this.btnBYX示教第二列.TabIndex = 76;
-            this.btnBYX示教第二列.Text = "第二列";
-            this.btnBYX示教第二列.UseVisualStyleBackColor = true;
-            // 
-            // label404
-            // 
-            this.label404.AutoSize = true;
-            this.label404.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label404.Location = new System.Drawing.Point(140, 142);
-            this.label404.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label404.Name = "label404";
-            this.label404.Size = new System.Drawing.Size(25, 15);
-            this.label404.TabIndex = 74;
-            this.label404.Text = "mm";
-            // 
-            // txtBYX示教第一列
-            // 
-            this.txtBYX示教第一列.Location = new System.Drawing.Point(87, 133);
-            this.txtBYX示教第一列.Margin = new System.Windows.Forms.Padding(2);
-            this.txtBYX示教第一列.Name = "txtBYX示教第一列";
-            this.txtBYX示教第一列.Size = new System.Drawing.Size(49, 21);
-            this.txtBYX示教第一列.TabIndex = 75;
-            // 
-            // btnBYX示教第一列
-            // 
-            this.btnBYX示教第一列.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBYX示教第一列.Location = new System.Drawing.Point(4, 133);
-            this.btnBYX示教第一列.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBYX示教第一列.Name = "btnBYX示教第一列";
-            this.btnBYX示教第一列.Size = new System.Drawing.Size(78, 24);
-            this.btnBYX示教第一列.TabIndex = 73;
-            this.btnBYX示教第一列.Text = "第一列";
-            this.btnBYX示教第一列.UseVisualStyleBackColor = true;
-            // 
-            // label408
-            // 
-            this.label408.AutoSize = true;
-            this.label408.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label408.Location = new System.Drawing.Point(140, 85);
-            this.label408.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label408.Name = "label408";
-            this.label408.Size = new System.Drawing.Size(25, 15);
-            this.label408.TabIndex = 71;
-            this.label408.Text = "mm";
-            // 
-            // txtBYX示教视觉1位置
-            // 
-            this.txtBYX示教视觉1位置.Location = new System.Drawing.Point(87, 75);
-            this.txtBYX示教视觉1位置.Margin = new System.Windows.Forms.Padding(2);
-            this.txtBYX示教视觉1位置.Name = "txtBYX示教视觉1位置";
-            this.txtBYX示教视觉1位置.Size = new System.Drawing.Size(49, 21);
-            this.txtBYX示教视觉1位置.TabIndex = 72;
-            // 
-            // btnBYX示教视觉1位置
-            // 
-            this.btnBYX示教视觉1位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBYX示教视觉1位置.Location = new System.Drawing.Point(4, 75);
-            this.btnBYX示教视觉1位置.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBYX示教视觉1位置.Name = "btnBYX示教视觉1位置";
-            this.btnBYX示教视觉1位置.Size = new System.Drawing.Size(78, 24);
-            this.btnBYX示教视觉1位置.TabIndex = 70;
-            this.btnBYX示教视觉1位置.Text = "视觉位置1";
-            this.btnBYX示教视觉1位置.UseVisualStyleBackColor = true;
-            // 
-            // label409
-            // 
-            this.label409.AutoSize = true;
-            this.label409.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label409.Location = new System.Drawing.Point(140, 56);
-            this.label409.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label409.Name = "label409";
-            this.label409.Size = new System.Drawing.Size(25, 15);
-            this.label409.TabIndex = 68;
-            this.label409.Text = "mm";
-            // 
-            // txtBYX示教上料位置
-            // 
-            this.txtBYX示教上料位置.Location = new System.Drawing.Point(87, 46);
-            this.txtBYX示教上料位置.Margin = new System.Windows.Forms.Padding(2);
-            this.txtBYX示教上料位置.Name = "txtBYX示教上料位置";
-            this.txtBYX示教上料位置.Size = new System.Drawing.Size(49, 21);
-            this.txtBYX示教上料位置.TabIndex = 69;
-            // 
-            // btnBYX示教上料位置
-            // 
-            this.btnBYX示教上料位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBYX示教上料位置.Location = new System.Drawing.Point(4, 46);
-            this.btnBYX示教上料位置.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBYX示教上料位置.Name = "btnBYX示教上料位置";
-            this.btnBYX示教上料位置.Size = new System.Drawing.Size(78, 24);
-            this.btnBYX示教上料位置.TabIndex = 67;
-            this.btnBYX示教上料位置.Text = "上料位置";
-            this.btnBYX示教上料位置.UseVisualStyleBackColor = true;
-            // 
-            // txtBYX示教当前位置
-            // 
-            this.txtBYX示教当前位置.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBYX示教当前位置.Location = new System.Drawing.Point(59, 21);
-            this.txtBYX示教当前位置.Margin = new System.Windows.Forms.Padding(2);
-            this.txtBYX示教当前位置.Name = "txtBYX示教当前位置";
-            this.txtBYX示教当前位置.Size = new System.Drawing.Size(67, 14);
-            this.txtBYX示教当前位置.TabIndex = 49;
-            // 
-            // label416
-            // 
-            this.label416.AutoSize = true;
-            this.label416.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label416.Location = new System.Drawing.Point(4, 23);
-            this.label416.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label416.Name = "label416";
-            this.label416.Size = new System.Drawing.Size(55, 15);
-            this.label416.TabIndex = 48;
-            this.label416.Text = "当前位置";
-            // 
-            // groupBox56
-            // 
-            this.groupBox56.Controls.Add(this.label445);
-            this.groupBox56.Controls.Add(this.txtSk4示教测试3位置);
-            this.groupBox56.Controls.Add(this.btnSk4示教测试3位置);
-            this.groupBox56.Controls.Add(this.label446);
-            this.groupBox56.Controls.Add(this.txtSk4示教测试2位置);
-            this.groupBox56.Controls.Add(this.btnSk4示教测试2位置);
-            this.groupBox56.Controls.Add(this.label447);
-            this.groupBox56.Controls.Add(this.txtSk4示教测试1位置);
-            this.groupBox56.Controls.Add(this.btnSk4示教测试1位置);
-            this.groupBox56.Controls.Add(this.label448);
-            this.groupBox56.Controls.Add(this.txtSk4示教翻转位置);
-            this.groupBox56.Controls.Add(this.btnSk4示教翻转位置);
-            this.groupBox56.Controls.Add(this.label449);
-            this.groupBox56.Controls.Add(this.txtSk4示教黑体位置);
-            this.groupBox56.Controls.Add(this.btnSk4示教黑体位置);
-            this.groupBox56.Controls.Add(this.txtSk4示教当前位置);
-            this.groupBox56.Controls.Add(this.label450);
-            this.groupBox56.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox56.Location = new System.Drawing.Point(994, 19);
-            this.groupBox56.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox56.Name = "groupBox56";
-            this.groupBox56.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox56.Size = new System.Drawing.Size(180, 215);
-            this.groupBox56.TabIndex = 103;
-            this.groupBox56.TabStop = false;
-            this.groupBox56.Text = "Socket4位置";
-            // 
-            // label445
-            // 
-            this.label445.AutoSize = true;
-            this.label445.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label445.Location = new System.Drawing.Point(140, 171);
-            this.label445.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label445.Name = "label445";
-            this.label445.Size = new System.Drawing.Size(25, 15);
-            this.label445.TabIndex = 80;
-            this.label445.Text = "mm";
-            // 
-            // txtSk4示教测试3位置
-            // 
-            this.txtSk4示教测试3位置.Location = new System.Drawing.Point(87, 162);
-            this.txtSk4示教测试3位置.Margin = new System.Windows.Forms.Padding(2);
-            this.txtSk4示教测试3位置.Name = "txtSk4示教测试3位置";
-            this.txtSk4示教测试3位置.Size = new System.Drawing.Size(49, 21);
-            this.txtSk4示教测试3位置.TabIndex = 81;
-            // 
-            // btnSk4示教测试3位置
-            // 
-            this.btnSk4示教测试3位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btnSk4示教测试3位置.Location = new System.Drawing.Point(4, 162);
-            this.btnSk4示教测试3位置.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSk4示教测试3位置.Name = "btnSk4示教测试3位置";
-            this.btnSk4示教测试3位置.Size = new System.Drawing.Size(78, 24);
-            this.btnSk4示教测试3位置.TabIndex = 79;
-            this.btnSk4示教测试3位置.Text = "测试3位置";
-            this.btnSk4示教测试3位置.UseVisualStyleBackColor = true;
-            // 
-            // label446
-            // 
-            this.label446.AutoSize = true;
-            this.label446.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label446.Location = new System.Drawing.Point(140, 142);
-            this.label446.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label446.Name = "label446";
-            this.label446.Size = new System.Drawing.Size(25, 15);
-            this.label446.TabIndex = 77;
-            this.label446.Text = "mm";
-            // 
-            // txtSk4示教测试2位置
-            // 
-            this.txtSk4示教测试2位置.Location = new System.Drawing.Point(87, 133);
-            this.txtSk4示教测试2位置.Margin = new System.Windows.Forms.Padding(2);
-            this.txtSk4示教测试2位置.Name = "txtSk4示教测试2位置";
-            this.txtSk4示教测试2位置.Size = new System.Drawing.Size(49, 21);
-            this.txtSk4示教测试2位置.TabIndex = 78;
-            // 
-            // btnSk4示教测试2位置
-            // 
-            this.btnSk4示教测试2位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btnSk4示教测试2位置.Location = new System.Drawing.Point(4, 133);
-            this.btnSk4示教测试2位置.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSk4示教测试2位置.Name = "btnSk4示教测试2位置";
-            this.btnSk4示教测试2位置.Size = new System.Drawing.Size(78, 24);
-            this.btnSk4示教测试2位置.TabIndex = 76;
-            this.btnSk4示教测试2位置.Text = "测试2位置";
-            this.btnSk4示教测试2位置.UseVisualStyleBackColor = true;
-            // 
-            // label447
-            // 
-            this.label447.AutoSize = true;
-            this.label447.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label447.Location = new System.Drawing.Point(140, 114);
-            this.label447.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label447.Name = "label447";
-            this.label447.Size = new System.Drawing.Size(25, 15);
-            this.label447.TabIndex = 74;
-            this.label447.Text = "mm";
-            // 
-            // txtSk4示教测试1位置
-            // 
-            this.txtSk4示教测试1位置.Location = new System.Drawing.Point(87, 104);
-            this.txtSk4示教测试1位置.Margin = new System.Windows.Forms.Padding(2);
-            this.txtSk4示教测试1位置.Name = "txtSk4示教测试1位置";
-            this.txtSk4示教测试1位置.Size = new System.Drawing.Size(49, 21);
-            this.txtSk4示教测试1位置.TabIndex = 75;
-            // 
-            // btnSk4示教测试1位置
-            // 
-            this.btnSk4示教测试1位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btnSk4示教测试1位置.Location = new System.Drawing.Point(4, 104);
-            this.btnSk4示教测试1位置.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSk4示教测试1位置.Name = "btnSk4示教测试1位置";
-            this.btnSk4示教测试1位置.Size = new System.Drawing.Size(78, 24);
-            this.btnSk4示教测试1位置.TabIndex = 73;
-            this.btnSk4示教测试1位置.Text = "测试1位置";
-            this.btnSk4示教测试1位置.UseVisualStyleBackColor = true;
-            // 
-            // label448
-            // 
-            this.label448.AutoSize = true;
-            this.label448.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label448.Location = new System.Drawing.Point(140, 85);
-            this.label448.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label448.Name = "label448";
-            this.label448.Size = new System.Drawing.Size(25, 15);
-            this.label448.TabIndex = 71;
-            this.label448.Text = "mm";
-            // 
-            // txtSk4示教翻转位置
-            // 
-            this.txtSk4示教翻转位置.Location = new System.Drawing.Point(87, 75);
-            this.txtSk4示教翻转位置.Margin = new System.Windows.Forms.Padding(2);
-            this.txtSk4示教翻转位置.Name = "txtSk4示教翻转位置";
-            this.txtSk4示教翻转位置.Size = new System.Drawing.Size(49, 21);
-            this.txtSk4示教翻转位置.TabIndex = 72;
-            // 
-            // btnSk4示教翻转位置
-            // 
-            this.btnSk4示教翻转位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btnSk4示教翻转位置.Location = new System.Drawing.Point(4, 75);
-            this.btnSk4示教翻转位置.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSk4示教翻转位置.Name = "btnSk4示教翻转位置";
-            this.btnSk4示教翻转位置.Size = new System.Drawing.Size(78, 24);
-            this.btnSk4示教翻转位置.TabIndex = 70;
-            this.btnSk4示教翻转位置.Text = "翻转位置";
-            this.btnSk4示教翻转位置.UseVisualStyleBackColor = true;
-            // 
-            // label449
-            // 
-            this.label449.AutoSize = true;
-            this.label449.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label449.Location = new System.Drawing.Point(140, 56);
-            this.label449.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label449.Name = "label449";
-            this.label449.Size = new System.Drawing.Size(25, 15);
-            this.label449.TabIndex = 68;
-            this.label449.Text = "mm";
-            // 
-            // txtSk4示教黑体位置
-            // 
-            this.txtSk4示教黑体位置.Location = new System.Drawing.Point(87, 46);
-            this.txtSk4示教黑体位置.Margin = new System.Windows.Forms.Padding(2);
-            this.txtSk4示教黑体位置.Name = "txtSk4示教黑体位置";
-            this.txtSk4示教黑体位置.Size = new System.Drawing.Size(49, 21);
-            this.txtSk4示教黑体位置.TabIndex = 69;
-            // 
-            // btnSk4示教黑体位置
-            // 
-            this.btnSk4示教黑体位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btnSk4示教黑体位置.Location = new System.Drawing.Point(4, 46);
-            this.btnSk4示教黑体位置.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSk4示教黑体位置.Name = "btnSk4示教黑体位置";
-            this.btnSk4示教黑体位置.Size = new System.Drawing.Size(78, 24);
-            this.btnSk4示教黑体位置.TabIndex = 67;
-            this.btnSk4示教黑体位置.Text = "黑体位置";
-            this.btnSk4示教黑体位置.UseVisualStyleBackColor = true;
-            // 
-            // txtSk4示教当前位置
-            // 
-            this.txtSk4示教当前位置.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSk4示教当前位置.Location = new System.Drawing.Point(59, 21);
-            this.txtSk4示教当前位置.Margin = new System.Windows.Forms.Padding(2);
-            this.txtSk4示教当前位置.Name = "txtSk4示教当前位置";
-            this.txtSk4示教当前位置.Size = new System.Drawing.Size(67, 14);
-            this.txtSk4示教当前位置.TabIndex = 49;
-            // 
-            // label450
-            // 
-            this.label450.AutoSize = true;
-            this.label450.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label450.Location = new System.Drawing.Point(4, 23);
-            this.label450.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label450.Name = "label450";
-            this.label450.Size = new System.Drawing.Size(55, 15);
-            this.label450.TabIndex = 48;
-            this.label450.Text = "当前位置";
-            // 
-            // groupBox55
-            // 
-            this.groupBox55.Controls.Add(this.label439);
-            this.groupBox55.Controls.Add(this.txtSk3示教测试3位置);
-            this.groupBox55.Controls.Add(this.btnSk3示教测试3位置);
-            this.groupBox55.Controls.Add(this.label440);
-            this.groupBox55.Controls.Add(this.txtSk3示教测试2位置);
-            this.groupBox55.Controls.Add(this.btnSk3示教测试2位置);
-            this.groupBox55.Controls.Add(this.label441);
-            this.groupBox55.Controls.Add(this.txtSk3示教测试1位置);
-            this.groupBox55.Controls.Add(this.btnSk3示教测试1位置);
-            this.groupBox55.Controls.Add(this.label442);
-            this.groupBox55.Controls.Add(this.txtSk3示教翻转位置);
-            this.groupBox55.Controls.Add(this.btnSk3示教翻转位置);
-            this.groupBox55.Controls.Add(this.label443);
-            this.groupBox55.Controls.Add(this.txtSk3示教黑体位置);
-            this.groupBox55.Controls.Add(this.btnSk3示教黑体位置);
-            this.groupBox55.Controls.Add(this.txtSk3示教当前位置);
-            this.groupBox55.Controls.Add(this.label444);
-            this.groupBox55.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox55.Location = new System.Drawing.Point(810, 19);
-            this.groupBox55.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox55.Name = "groupBox55";
-            this.groupBox55.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox55.Size = new System.Drawing.Size(180, 215);
-            this.groupBox55.TabIndex = 104;
-            this.groupBox55.TabStop = false;
-            this.groupBox55.Text = "Socket3位置";
-            // 
-            // label439
-            // 
-            this.label439.AutoSize = true;
-            this.label439.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label439.Location = new System.Drawing.Point(140, 171);
-            this.label439.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label439.Name = "label439";
-            this.label439.Size = new System.Drawing.Size(25, 15);
-            this.label439.TabIndex = 80;
-            this.label439.Text = "mm";
-            // 
-            // txtSk3示教测试3位置
-            // 
-            this.txtSk3示教测试3位置.Location = new System.Drawing.Point(87, 162);
-            this.txtSk3示教测试3位置.Margin = new System.Windows.Forms.Padding(2);
-            this.txtSk3示教测试3位置.Name = "txtSk3示教测试3位置";
-            this.txtSk3示教测试3位置.Size = new System.Drawing.Size(49, 21);
-            this.txtSk3示教测试3位置.TabIndex = 81;
-            // 
-            // btnSk3示教测试3位置
-            // 
-            this.btnSk3示教测试3位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btnSk3示教测试3位置.Location = new System.Drawing.Point(4, 162);
-            this.btnSk3示教测试3位置.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSk3示教测试3位置.Name = "btnSk3示教测试3位置";
-            this.btnSk3示教测试3位置.Size = new System.Drawing.Size(78, 24);
-            this.btnSk3示教测试3位置.TabIndex = 79;
-            this.btnSk3示教测试3位置.Text = "测试3位置";
-            this.btnSk3示教测试3位置.UseVisualStyleBackColor = true;
-            // 
-            // label440
-            // 
-            this.label440.AutoSize = true;
-            this.label440.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label440.Location = new System.Drawing.Point(140, 142);
-            this.label440.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label440.Name = "label440";
-            this.label440.Size = new System.Drawing.Size(25, 15);
-            this.label440.TabIndex = 77;
-            this.label440.Text = "mm";
-            // 
-            // txtSk3示教测试2位置
-            // 
-            this.txtSk3示教测试2位置.Location = new System.Drawing.Point(87, 133);
-            this.txtSk3示教测试2位置.Margin = new System.Windows.Forms.Padding(2);
-            this.txtSk3示教测试2位置.Name = "txtSk3示教测试2位置";
-            this.txtSk3示教测试2位置.Size = new System.Drawing.Size(49, 21);
-            this.txtSk3示教测试2位置.TabIndex = 78;
-            // 
-            // btnSk3示教测试2位置
-            // 
-            this.btnSk3示教测试2位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btnSk3示教测试2位置.Location = new System.Drawing.Point(4, 133);
-            this.btnSk3示教测试2位置.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSk3示教测试2位置.Name = "btnSk3示教测试2位置";
-            this.btnSk3示教测试2位置.Size = new System.Drawing.Size(78, 24);
-            this.btnSk3示教测试2位置.TabIndex = 76;
-            this.btnSk3示教测试2位置.Text = "测试2位置";
-            this.btnSk3示教测试2位置.UseVisualStyleBackColor = true;
-            // 
-            // label441
-            // 
-            this.label441.AutoSize = true;
-            this.label441.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label441.Location = new System.Drawing.Point(140, 114);
-            this.label441.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label441.Name = "label441";
-            this.label441.Size = new System.Drawing.Size(25, 15);
-            this.label441.TabIndex = 74;
-            this.label441.Text = "mm";
-            // 
-            // txtSk3示教测试1位置
-            // 
-            this.txtSk3示教测试1位置.Location = new System.Drawing.Point(87, 104);
-            this.txtSk3示教测试1位置.Margin = new System.Windows.Forms.Padding(2);
-            this.txtSk3示教测试1位置.Name = "txtSk3示教测试1位置";
-            this.txtSk3示教测试1位置.Size = new System.Drawing.Size(49, 21);
-            this.txtSk3示教测试1位置.TabIndex = 75;
-            // 
-            // btnSk3示教测试1位置
-            // 
-            this.btnSk3示教测试1位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btnSk3示教测试1位置.Location = new System.Drawing.Point(4, 104);
-            this.btnSk3示教测试1位置.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSk3示教测试1位置.Name = "btnSk3示教测试1位置";
-            this.btnSk3示教测试1位置.Size = new System.Drawing.Size(78, 24);
-            this.btnSk3示教测试1位置.TabIndex = 73;
-            this.btnSk3示教测试1位置.Text = "测试1位置";
-            this.btnSk3示教测试1位置.UseVisualStyleBackColor = true;
-            // 
-            // label442
-            // 
-            this.label442.AutoSize = true;
-            this.label442.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label442.Location = new System.Drawing.Point(140, 85);
-            this.label442.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label442.Name = "label442";
-            this.label442.Size = new System.Drawing.Size(25, 15);
-            this.label442.TabIndex = 71;
-            this.label442.Text = "mm";
-            // 
-            // txtSk3示教翻转位置
-            // 
-            this.txtSk3示教翻转位置.Location = new System.Drawing.Point(87, 75);
-            this.txtSk3示教翻转位置.Margin = new System.Windows.Forms.Padding(2);
-            this.txtSk3示教翻转位置.Name = "txtSk3示教翻转位置";
-            this.txtSk3示教翻转位置.Size = new System.Drawing.Size(49, 21);
-            this.txtSk3示教翻转位置.TabIndex = 72;
-            // 
-            // btnSk3示教翻转位置
-            // 
-            this.btnSk3示教翻转位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btnSk3示教翻转位置.Location = new System.Drawing.Point(4, 75);
-            this.btnSk3示教翻转位置.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSk3示教翻转位置.Name = "btnSk3示教翻转位置";
-            this.btnSk3示教翻转位置.Size = new System.Drawing.Size(78, 24);
-            this.btnSk3示教翻转位置.TabIndex = 70;
-            this.btnSk3示教翻转位置.Text = "翻转位置";
-            this.btnSk3示教翻转位置.UseVisualStyleBackColor = true;
-            // 
-            // label443
-            // 
-            this.label443.AutoSize = true;
-            this.label443.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label443.Location = new System.Drawing.Point(140, 56);
-            this.label443.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label443.Name = "label443";
-            this.label443.Size = new System.Drawing.Size(25, 15);
-            this.label443.TabIndex = 68;
-            this.label443.Text = "mm";
-            // 
-            // txtSk3示教黑体位置
-            // 
-            this.txtSk3示教黑体位置.Location = new System.Drawing.Point(87, 46);
-            this.txtSk3示教黑体位置.Margin = new System.Windows.Forms.Padding(2);
-            this.txtSk3示教黑体位置.Name = "txtSk3示教黑体位置";
-            this.txtSk3示教黑体位置.Size = new System.Drawing.Size(49, 21);
-            this.txtSk3示教黑体位置.TabIndex = 69;
-            // 
-            // btnSk3示教黑体位置
-            // 
-            this.btnSk3示教黑体位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btnSk3示教黑体位置.Location = new System.Drawing.Point(4, 46);
-            this.btnSk3示教黑体位置.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSk3示教黑体位置.Name = "btnSk3示教黑体位置";
-            this.btnSk3示教黑体位置.Size = new System.Drawing.Size(78, 24);
-            this.btnSk3示教黑体位置.TabIndex = 67;
-            this.btnSk3示教黑体位置.Text = "黑体位置";
-            this.btnSk3示教黑体位置.UseVisualStyleBackColor = true;
-            // 
-            // txtSk3示教当前位置
-            // 
-            this.txtSk3示教当前位置.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSk3示教当前位置.Location = new System.Drawing.Point(59, 21);
-            this.txtSk3示教当前位置.Margin = new System.Windows.Forms.Padding(2);
-            this.txtSk3示教当前位置.Name = "txtSk3示教当前位置";
-            this.txtSk3示教当前位置.Size = new System.Drawing.Size(67, 14);
-            this.txtSk3示教当前位置.TabIndex = 49;
-            // 
-            // label444
-            // 
-            this.label444.AutoSize = true;
-            this.label444.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label444.Location = new System.Drawing.Point(4, 23);
-            this.label444.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label444.Name = "label444";
-            this.label444.Size = new System.Drawing.Size(55, 15);
-            this.label444.TabIndex = 48;
-            this.label444.Text = "当前位置";
-            // 
-            // groupBox53
-            // 
-            this.groupBox53.Controls.Add(this.label433);
-            this.groupBox53.Controls.Add(this.txtSk2示教测试3位置);
-            this.groupBox53.Controls.Add(this.btnSk2示教测试3位置);
-            this.groupBox53.Controls.Add(this.label434);
-            this.groupBox53.Controls.Add(this.txtSk2示教测试2位置);
-            this.groupBox53.Controls.Add(this.btnSk2示教测试2位置);
-            this.groupBox53.Controls.Add(this.label435);
-            this.groupBox53.Controls.Add(this.txtSk2示教测试1位置);
-            this.groupBox53.Controls.Add(this.btnSk2示教测试1位置);
-            this.groupBox53.Controls.Add(this.label436);
-            this.groupBox53.Controls.Add(this.txtSk2示教翻转位置);
-            this.groupBox53.Controls.Add(this.btnSk2示教翻转位置);
-            this.groupBox53.Controls.Add(this.label437);
-            this.groupBox53.Controls.Add(this.txtSk2示教黑体位置);
-            this.groupBox53.Controls.Add(this.btnSk2示教黑体位置);
-            this.groupBox53.Controls.Add(this.txtSk2示教当前位置);
-            this.groupBox53.Controls.Add(this.label438);
-            this.groupBox53.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox53.Location = new System.Drawing.Point(626, 19);
-            this.groupBox53.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox53.Name = "groupBox53";
-            this.groupBox53.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox53.Size = new System.Drawing.Size(180, 215);
-            this.groupBox53.TabIndex = 105;
-            this.groupBox53.TabStop = false;
-            this.groupBox53.Text = "Socket2位置";
-            // 
-            // label433
-            // 
-            this.label433.AutoSize = true;
-            this.label433.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label433.Location = new System.Drawing.Point(140, 171);
-            this.label433.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label433.Name = "label433";
-            this.label433.Size = new System.Drawing.Size(25, 15);
-            this.label433.TabIndex = 80;
-            this.label433.Text = "mm";
-            // 
-            // txtSk2示教测试3位置
-            // 
-            this.txtSk2示教测试3位置.Location = new System.Drawing.Point(87, 162);
-            this.txtSk2示教测试3位置.Margin = new System.Windows.Forms.Padding(2);
-            this.txtSk2示教测试3位置.Name = "txtSk2示教测试3位置";
-            this.txtSk2示教测试3位置.Size = new System.Drawing.Size(49, 21);
-            this.txtSk2示教测试3位置.TabIndex = 81;
-            // 
-            // btnSk2示教测试3位置
-            // 
-            this.btnSk2示教测试3位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btnSk2示教测试3位置.Location = new System.Drawing.Point(4, 162);
-            this.btnSk2示教测试3位置.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSk2示教测试3位置.Name = "btnSk2示教测试3位置";
-            this.btnSk2示教测试3位置.Size = new System.Drawing.Size(78, 24);
-            this.btnSk2示教测试3位置.TabIndex = 79;
-            this.btnSk2示教测试3位置.Text = "测试3位置";
-            this.btnSk2示教测试3位置.UseVisualStyleBackColor = true;
-            // 
-            // label434
-            // 
-            this.label434.AutoSize = true;
-            this.label434.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label434.Location = new System.Drawing.Point(140, 142);
-            this.label434.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label434.Name = "label434";
-            this.label434.Size = new System.Drawing.Size(25, 15);
-            this.label434.TabIndex = 77;
-            this.label434.Text = "mm";
-            // 
-            // txtSk2示教测试2位置
-            // 
-            this.txtSk2示教测试2位置.Location = new System.Drawing.Point(87, 133);
-            this.txtSk2示教测试2位置.Margin = new System.Windows.Forms.Padding(2);
-            this.txtSk2示教测试2位置.Name = "txtSk2示教测试2位置";
-            this.txtSk2示教测试2位置.Size = new System.Drawing.Size(49, 21);
-            this.txtSk2示教测试2位置.TabIndex = 78;
-            // 
-            // btnSk2示教测试2位置
-            // 
-            this.btnSk2示教测试2位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btnSk2示教测试2位置.Location = new System.Drawing.Point(4, 133);
-            this.btnSk2示教测试2位置.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSk2示教测试2位置.Name = "btnSk2示教测试2位置";
-            this.btnSk2示教测试2位置.Size = new System.Drawing.Size(78, 24);
-            this.btnSk2示教测试2位置.TabIndex = 76;
-            this.btnSk2示教测试2位置.Text = "测试2位置";
-            this.btnSk2示教测试2位置.UseVisualStyleBackColor = true;
-            // 
-            // label435
-            // 
-            this.label435.AutoSize = true;
-            this.label435.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label435.Location = new System.Drawing.Point(140, 114);
-            this.label435.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label435.Name = "label435";
-            this.label435.Size = new System.Drawing.Size(25, 15);
-            this.label435.TabIndex = 74;
-            this.label435.Text = "mm";
-            // 
-            // txtSk2示教测试1位置
-            // 
-            this.txtSk2示教测试1位置.Location = new System.Drawing.Point(87, 104);
-            this.txtSk2示教测试1位置.Margin = new System.Windows.Forms.Padding(2);
-            this.txtSk2示教测试1位置.Name = "txtSk2示教测试1位置";
-            this.txtSk2示教测试1位置.Size = new System.Drawing.Size(49, 21);
-            this.txtSk2示教测试1位置.TabIndex = 75;
-            // 
-            // btnSk2示教测试1位置
-            // 
-            this.btnSk2示教测试1位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btnSk2示教测试1位置.Location = new System.Drawing.Point(4, 104);
-            this.btnSk2示教测试1位置.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSk2示教测试1位置.Name = "btnSk2示教测试1位置";
-            this.btnSk2示教测试1位置.Size = new System.Drawing.Size(78, 24);
-            this.btnSk2示教测试1位置.TabIndex = 73;
-            this.btnSk2示教测试1位置.Text = "测试1位置";
-            this.btnSk2示教测试1位置.UseVisualStyleBackColor = true;
-            // 
-            // label436
-            // 
-            this.label436.AutoSize = true;
-            this.label436.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label436.Location = new System.Drawing.Point(140, 85);
-            this.label436.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label436.Name = "label436";
-            this.label436.Size = new System.Drawing.Size(25, 15);
-            this.label436.TabIndex = 71;
-            this.label436.Text = "mm";
-            // 
-            // txtSk2示教翻转位置
-            // 
-            this.txtSk2示教翻转位置.Location = new System.Drawing.Point(87, 75);
-            this.txtSk2示教翻转位置.Margin = new System.Windows.Forms.Padding(2);
-            this.txtSk2示教翻转位置.Name = "txtSk2示教翻转位置";
-            this.txtSk2示教翻转位置.Size = new System.Drawing.Size(49, 21);
-            this.txtSk2示教翻转位置.TabIndex = 72;
-            // 
-            // btnSk2示教翻转位置
-            // 
-            this.btnSk2示教翻转位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btnSk2示教翻转位置.Location = new System.Drawing.Point(4, 75);
-            this.btnSk2示教翻转位置.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSk2示教翻转位置.Name = "btnSk2示教翻转位置";
-            this.btnSk2示教翻转位置.Size = new System.Drawing.Size(78, 24);
-            this.btnSk2示教翻转位置.TabIndex = 70;
-            this.btnSk2示教翻转位置.Text = "翻转位置";
-            this.btnSk2示教翻转位置.UseVisualStyleBackColor = true;
-            // 
-            // label437
-            // 
-            this.label437.AutoSize = true;
-            this.label437.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label437.Location = new System.Drawing.Point(140, 56);
-            this.label437.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label437.Name = "label437";
-            this.label437.Size = new System.Drawing.Size(25, 15);
-            this.label437.TabIndex = 68;
-            this.label437.Text = "mm";
-            // 
-            // txtSk2示教黑体位置
-            // 
-            this.txtSk2示教黑体位置.Location = new System.Drawing.Point(87, 46);
-            this.txtSk2示教黑体位置.Margin = new System.Windows.Forms.Padding(2);
-            this.txtSk2示教黑体位置.Name = "txtSk2示教黑体位置";
-            this.txtSk2示教黑体位置.Size = new System.Drawing.Size(49, 21);
-            this.txtSk2示教黑体位置.TabIndex = 69;
-            // 
-            // btnSk2示教黑体位置
-            // 
-            this.btnSk2示教黑体位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btnSk2示教黑体位置.Location = new System.Drawing.Point(4, 46);
-            this.btnSk2示教黑体位置.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSk2示教黑体位置.Name = "btnSk2示教黑体位置";
-            this.btnSk2示教黑体位置.Size = new System.Drawing.Size(78, 24);
-            this.btnSk2示教黑体位置.TabIndex = 67;
-            this.btnSk2示教黑体位置.Text = "黑体位置";
-            this.btnSk2示教黑体位置.UseVisualStyleBackColor = true;
-            // 
-            // txtSk2示教当前位置
-            // 
-            this.txtSk2示教当前位置.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSk2示教当前位置.Location = new System.Drawing.Point(59, 21);
-            this.txtSk2示教当前位置.Margin = new System.Windows.Forms.Padding(2);
-            this.txtSk2示教当前位置.Name = "txtSk2示教当前位置";
-            this.txtSk2示教当前位置.Size = new System.Drawing.Size(67, 14);
-            this.txtSk2示教当前位置.TabIndex = 49;
-            // 
-            // label438
-            // 
-            this.label438.AutoSize = true;
-            this.label438.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label438.Location = new System.Drawing.Point(4, 23);
-            this.label438.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label438.Name = "label438";
-            this.label438.Size = new System.Drawing.Size(55, 15);
-            this.label438.TabIndex = 48;
-            this.label438.Text = "当前位置";
-            // 
-            // groupBox57
-            // 
-            this.groupBox57.Controls.Add(this.label410);
-            this.groupBox57.Controls.Add(this.txtSk1示教测试3位置);
-            this.groupBox57.Controls.Add(this.btnSk1示教测试3位置);
-            this.groupBox57.Controls.Add(this.label411);
-            this.groupBox57.Controls.Add(this.txtSk1示教测试2位置);
-            this.groupBox57.Controls.Add(this.btnSk1示教测试2位置);
-            this.groupBox57.Controls.Add(this.label429);
-            this.groupBox57.Controls.Add(this.txtSk1示教测试1位置);
-            this.groupBox57.Controls.Add(this.btnSk1示教测试1位置);
-            this.groupBox57.Controls.Add(this.label430);
-            this.groupBox57.Controls.Add(this.txtSk1示教翻转位置);
-            this.groupBox57.Controls.Add(this.btnSk1示教翻转位置);
-            this.groupBox57.Controls.Add(this.label431);
-            this.groupBox57.Controls.Add(this.txtSk1示教黑体位置);
-            this.groupBox57.Controls.Add(this.btnSk1示教黑体位置);
-            this.groupBox57.Controls.Add(this.txtSk1示教当前位置);
-            this.groupBox57.Controls.Add(this.label432);
-            this.groupBox57.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox57.Location = new System.Drawing.Point(442, 19);
-            this.groupBox57.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox57.Name = "groupBox57";
-            this.groupBox57.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox57.Size = new System.Drawing.Size(180, 215);
-            this.groupBox57.TabIndex = 102;
-            this.groupBox57.TabStop = false;
-            this.groupBox57.Text = "Socket1位置";
-            // 
-            // label410
-            // 
-            this.label410.AutoSize = true;
-            this.label410.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label410.Location = new System.Drawing.Point(140, 171);
-            this.label410.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label410.Name = "label410";
-            this.label410.Size = new System.Drawing.Size(25, 15);
-            this.label410.TabIndex = 80;
-            this.label410.Text = "mm";
-            // 
-            // txtSk1示教测试3位置
-            // 
-            this.txtSk1示教测试3位置.Location = new System.Drawing.Point(87, 162);
-            this.txtSk1示教测试3位置.Margin = new System.Windows.Forms.Padding(2);
-            this.txtSk1示教测试3位置.Name = "txtSk1示教测试3位置";
-            this.txtSk1示教测试3位置.Size = new System.Drawing.Size(49, 21);
-            this.txtSk1示教测试3位置.TabIndex = 81;
-            // 
-            // btnSk1示教测试3位置
-            // 
-            this.btnSk1示教测试3位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btnSk1示教测试3位置.Location = new System.Drawing.Point(4, 162);
-            this.btnSk1示教测试3位置.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSk1示教测试3位置.Name = "btnSk1示教测试3位置";
-            this.btnSk1示教测试3位置.Size = new System.Drawing.Size(78, 24);
-            this.btnSk1示教测试3位置.TabIndex = 79;
-            this.btnSk1示教测试3位置.Text = "测试3位置";
-            this.btnSk1示教测试3位置.UseVisualStyleBackColor = true;
-            // 
-            // label411
-            // 
-            this.label411.AutoSize = true;
-            this.label411.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label411.Location = new System.Drawing.Point(140, 142);
-            this.label411.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label411.Name = "label411";
-            this.label411.Size = new System.Drawing.Size(25, 15);
-            this.label411.TabIndex = 77;
-            this.label411.Text = "mm";
-            // 
-            // txtSk1示教测试2位置
-            // 
-            this.txtSk1示教测试2位置.Location = new System.Drawing.Point(87, 133);
-            this.txtSk1示教测试2位置.Margin = new System.Windows.Forms.Padding(2);
-            this.txtSk1示教测试2位置.Name = "txtSk1示教测试2位置";
-            this.txtSk1示教测试2位置.Size = new System.Drawing.Size(49, 21);
-            this.txtSk1示教测试2位置.TabIndex = 78;
-            // 
-            // btnSk1示教测试2位置
-            // 
-            this.btnSk1示教测试2位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btnSk1示教测试2位置.Location = new System.Drawing.Point(4, 133);
-            this.btnSk1示教测试2位置.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSk1示教测试2位置.Name = "btnSk1示教测试2位置";
-            this.btnSk1示教测试2位置.Size = new System.Drawing.Size(78, 24);
-            this.btnSk1示教测试2位置.TabIndex = 76;
-            this.btnSk1示教测试2位置.Text = "测试2位置";
-            this.btnSk1示教测试2位置.UseVisualStyleBackColor = true;
-            // 
-            // label429
-            // 
-            this.label429.AutoSize = true;
-            this.label429.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label429.Location = new System.Drawing.Point(140, 114);
-            this.label429.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label429.Name = "label429";
-            this.label429.Size = new System.Drawing.Size(25, 15);
-            this.label429.TabIndex = 74;
-            this.label429.Text = "mm";
-            // 
-            // txtSk1示教测试1位置
-            // 
-            this.txtSk1示教测试1位置.Location = new System.Drawing.Point(87, 104);
-            this.txtSk1示教测试1位置.Margin = new System.Windows.Forms.Padding(2);
-            this.txtSk1示教测试1位置.Name = "txtSk1示教测试1位置";
-            this.txtSk1示教测试1位置.Size = new System.Drawing.Size(49, 21);
-            this.txtSk1示教测试1位置.TabIndex = 75;
-            // 
-            // btnSk1示教测试1位置
-            // 
-            this.btnSk1示教测试1位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btnSk1示教测试1位置.Location = new System.Drawing.Point(4, 104);
-            this.btnSk1示教测试1位置.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSk1示教测试1位置.Name = "btnSk1示教测试1位置";
-            this.btnSk1示教测试1位置.Size = new System.Drawing.Size(78, 24);
-            this.btnSk1示教测试1位置.TabIndex = 73;
-            this.btnSk1示教测试1位置.Text = "测试1位置";
-            this.btnSk1示教测试1位置.UseVisualStyleBackColor = true;
-            // 
-            // label430
-            // 
-            this.label430.AutoSize = true;
-            this.label430.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label430.Location = new System.Drawing.Point(140, 85);
-            this.label430.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label430.Name = "label430";
-            this.label430.Size = new System.Drawing.Size(25, 15);
-            this.label430.TabIndex = 71;
-            this.label430.Text = "mm";
-            // 
-            // txtSk1示教翻转位置
-            // 
-            this.txtSk1示教翻转位置.Location = new System.Drawing.Point(87, 75);
-            this.txtSk1示教翻转位置.Margin = new System.Windows.Forms.Padding(2);
-            this.txtSk1示教翻转位置.Name = "txtSk1示教翻转位置";
-            this.txtSk1示教翻转位置.Size = new System.Drawing.Size(49, 21);
-            this.txtSk1示教翻转位置.TabIndex = 72;
-            // 
-            // btnSk1示教翻转位置
-            // 
-            this.btnSk1示教翻转位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btnSk1示教翻转位置.Location = new System.Drawing.Point(4, 75);
-            this.btnSk1示教翻转位置.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSk1示教翻转位置.Name = "btnSk1示教翻转位置";
-            this.btnSk1示教翻转位置.Size = new System.Drawing.Size(78, 24);
-            this.btnSk1示教翻转位置.TabIndex = 70;
-            this.btnSk1示教翻转位置.Text = "翻转位置";
-            this.btnSk1示教翻转位置.UseVisualStyleBackColor = true;
-            // 
-            // label431
-            // 
-            this.label431.AutoSize = true;
-            this.label431.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label431.Location = new System.Drawing.Point(140, 56);
-            this.label431.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label431.Name = "label431";
-            this.label431.Size = new System.Drawing.Size(25, 15);
-            this.label431.TabIndex = 68;
-            this.label431.Text = "mm";
-            // 
-            // txtSk1示教黑体位置
-            // 
-            this.txtSk1示教黑体位置.Location = new System.Drawing.Point(87, 46);
-            this.txtSk1示教黑体位置.Margin = new System.Windows.Forms.Padding(2);
-            this.txtSk1示教黑体位置.Name = "txtSk1示教黑体位置";
-            this.txtSk1示教黑体位置.Size = new System.Drawing.Size(49, 21);
-            this.txtSk1示教黑体位置.TabIndex = 69;
-            // 
-            // btnSk1示教黑体位置
-            // 
-            this.btnSk1示教黑体位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btnSk1示教黑体位置.Location = new System.Drawing.Point(4, 46);
-            this.btnSk1示教黑体位置.Margin = new System.Windows.Forms.Padding(2);
-            this.btnSk1示教黑体位置.Name = "btnSk1示教黑体位置";
-            this.btnSk1示教黑体位置.Size = new System.Drawing.Size(78, 24);
-            this.btnSk1示教黑体位置.TabIndex = 67;
-            this.btnSk1示教黑体位置.Text = "黑体位置";
-            this.btnSk1示教黑体位置.UseVisualStyleBackColor = true;
-            // 
-            // txtSk1示教当前位置
-            // 
-            this.txtSk1示教当前位置.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSk1示教当前位置.Location = new System.Drawing.Point(59, 21);
-            this.txtSk1示教当前位置.Margin = new System.Windows.Forms.Padding(2);
-            this.txtSk1示教当前位置.Name = "txtSk1示教当前位置";
-            this.txtSk1示教当前位置.Size = new System.Drawing.Size(67, 14);
-            this.txtSk1示教当前位置.TabIndex = 49;
-            // 
-            // label432
-            // 
-            this.label432.AutoSize = true;
-            this.label432.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label432.Location = new System.Drawing.Point(4, 23);
-            this.label432.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label432.Name = "label432";
-            this.label432.Size = new System.Drawing.Size(55, 15);
-            this.label432.TabIndex = 48;
-            this.label432.Text = "当前位置";
-            // 
-            // groupBox61
-            // 
-            this.groupBox61.Controls.Add(this.label460);
-            this.groupBox61.Controls.Add(this.txtBk4示教35位置);
-            this.groupBox61.Controls.Add(this.btnBk4示教35位置);
-            this.groupBox61.Controls.Add(this.label461);
-            this.groupBox61.Controls.Add(this.txtBk4示教20位置);
-            this.groupBox61.Controls.Add(this.btnBk4示教20位置);
-            this.groupBox61.Controls.Add(this.txtBk4示教当前位置);
-            this.groupBox61.Controls.Add(this.label462);
-            this.groupBox61.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox61.Location = new System.Drawing.Point(994, 238);
-            this.groupBox61.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox61.Name = "groupBox61";
-            this.groupBox61.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox61.Size = new System.Drawing.Size(180, 107);
-            this.groupBox61.TabIndex = 107;
-            this.groupBox61.TabStop = false;
-            this.groupBox61.Text = "黑体4位置";
-            // 
-            // label460
-            // 
-            this.label460.AutoSize = true;
-            this.label460.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label460.Location = new System.Drawing.Point(140, 85);
-            this.label460.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label460.Name = "label460";
-            this.label460.Size = new System.Drawing.Size(25, 15);
-            this.label460.TabIndex = 71;
-            this.label460.Text = "mm";
-            // 
-            // txtBk4示教35位置
-            // 
-            this.txtBk4示教35位置.Location = new System.Drawing.Point(87, 75);
-            this.txtBk4示教35位置.Margin = new System.Windows.Forms.Padding(2);
-            this.txtBk4示教35位置.Name = "txtBk4示教35位置";
-            this.txtBk4示教35位置.Size = new System.Drawing.Size(49, 21);
-            this.txtBk4示教35位置.TabIndex = 72;
-            // 
-            // btnBk4示教35位置
-            // 
-            this.btnBk4示教35位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBk4示教35位置.Location = new System.Drawing.Point(4, 75);
-            this.btnBk4示教35位置.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBk4示教35位置.Name = "btnBk4示教35位置";
-            this.btnBk4示教35位置.Size = new System.Drawing.Size(78, 24);
-            this.btnBk4示教35位置.TabIndex = 70;
-            this.btnBk4示教35位置.Text = "35°位置";
-            this.btnBk4示教35位置.UseVisualStyleBackColor = true;
-            // 
-            // label461
-            // 
-            this.label461.AutoSize = true;
-            this.label461.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label461.Location = new System.Drawing.Point(140, 56);
-            this.label461.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label461.Name = "label461";
-            this.label461.Size = new System.Drawing.Size(25, 15);
-            this.label461.TabIndex = 68;
-            this.label461.Text = "mm";
-            // 
-            // txtBk4示教20位置
-            // 
-            this.txtBk4示教20位置.Location = new System.Drawing.Point(87, 46);
-            this.txtBk4示教20位置.Margin = new System.Windows.Forms.Padding(2);
-            this.txtBk4示教20位置.Name = "txtBk4示教20位置";
-            this.txtBk4示教20位置.Size = new System.Drawing.Size(49, 21);
-            this.txtBk4示教20位置.TabIndex = 69;
-            // 
-            // btnBk4示教20位置
-            // 
-            this.btnBk4示教20位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBk4示教20位置.Location = new System.Drawing.Point(4, 46);
-            this.btnBk4示教20位置.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBk4示教20位置.Name = "btnBk4示教20位置";
-            this.btnBk4示教20位置.Size = new System.Drawing.Size(78, 24);
-            this.btnBk4示教20位置.TabIndex = 67;
-            this.btnBk4示教20位置.Text = "20°位置";
-            this.btnBk4示教20位置.UseVisualStyleBackColor = true;
-            // 
-            // txtBk4示教当前位置
-            // 
-            this.txtBk4示教当前位置.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBk4示教当前位置.Location = new System.Drawing.Point(59, 21);
-            this.txtBk4示教当前位置.Margin = new System.Windows.Forms.Padding(2);
-            this.txtBk4示教当前位置.Name = "txtBk4示教当前位置";
-            this.txtBk4示教当前位置.Size = new System.Drawing.Size(67, 14);
-            this.txtBk4示教当前位置.TabIndex = 49;
-            // 
-            // label462
-            // 
-            this.label462.AutoSize = true;
-            this.label462.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label462.Location = new System.Drawing.Point(4, 23);
-            this.label462.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label462.Name = "label462";
-            this.label462.Size = new System.Drawing.Size(55, 15);
-            this.label462.TabIndex = 48;
-            this.label462.Text = "当前位置";
-            // 
-            // groupBox60
-            // 
-            this.groupBox60.Controls.Add(this.label457);
-            this.groupBox60.Controls.Add(this.txtBk3示教35位置);
-            this.groupBox60.Controls.Add(this.btnBk3示教35位置);
-            this.groupBox60.Controls.Add(this.label458);
-            this.groupBox60.Controls.Add(this.txtBk3示教20位置);
-            this.groupBox60.Controls.Add(this.btnBk3示教20位置);
-            this.groupBox60.Controls.Add(this.txtBk3示教当前位置);
-            this.groupBox60.Controls.Add(this.label459);
-            this.groupBox60.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox60.Location = new System.Drawing.Point(810, 238);
-            this.groupBox60.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox60.Name = "groupBox60";
-            this.groupBox60.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox60.Size = new System.Drawing.Size(180, 107);
-            this.groupBox60.TabIndex = 108;
-            this.groupBox60.TabStop = false;
-            this.groupBox60.Text = "黑体3位置";
-            // 
-            // label457
-            // 
-            this.label457.AutoSize = true;
-            this.label457.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label457.Location = new System.Drawing.Point(140, 85);
-            this.label457.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label457.Name = "label457";
-            this.label457.Size = new System.Drawing.Size(25, 15);
-            this.label457.TabIndex = 71;
-            this.label457.Text = "mm";
-            // 
-            // txtBk3示教35位置
-            // 
-            this.txtBk3示教35位置.Location = new System.Drawing.Point(87, 75);
-            this.txtBk3示教35位置.Margin = new System.Windows.Forms.Padding(2);
-            this.txtBk3示教35位置.Name = "txtBk3示教35位置";
-            this.txtBk3示教35位置.Size = new System.Drawing.Size(49, 21);
-            this.txtBk3示教35位置.TabIndex = 72;
-            // 
-            // btnBk3示教35位置
-            // 
-            this.btnBk3示教35位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBk3示教35位置.Location = new System.Drawing.Point(4, 75);
-            this.btnBk3示教35位置.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBk3示教35位置.Name = "btnBk3示教35位置";
-            this.btnBk3示教35位置.Size = new System.Drawing.Size(78, 24);
-            this.btnBk3示教35位置.TabIndex = 70;
-            this.btnBk3示教35位置.Text = "35°位置";
-            this.btnBk3示教35位置.UseVisualStyleBackColor = true;
-            // 
-            // label458
-            // 
-            this.label458.AutoSize = true;
-            this.label458.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label458.Location = new System.Drawing.Point(140, 56);
-            this.label458.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label458.Name = "label458";
-            this.label458.Size = new System.Drawing.Size(25, 15);
-            this.label458.TabIndex = 68;
-            this.label458.Text = "mm";
-            // 
-            // txtBk3示教20位置
-            // 
-            this.txtBk3示教20位置.Location = new System.Drawing.Point(87, 46);
-            this.txtBk3示教20位置.Margin = new System.Windows.Forms.Padding(2);
-            this.txtBk3示教20位置.Name = "txtBk3示教20位置";
-            this.txtBk3示教20位置.Size = new System.Drawing.Size(49, 21);
-            this.txtBk3示教20位置.TabIndex = 69;
-            // 
-            // btnBk3示教20位置
-            // 
-            this.btnBk3示教20位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBk3示教20位置.Location = new System.Drawing.Point(4, 46);
-            this.btnBk3示教20位置.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBk3示教20位置.Name = "btnBk3示教20位置";
-            this.btnBk3示教20位置.Size = new System.Drawing.Size(78, 24);
-            this.btnBk3示教20位置.TabIndex = 67;
-            this.btnBk3示教20位置.Text = "20°位置";
-            this.btnBk3示教20位置.UseVisualStyleBackColor = true;
-            // 
-            // txtBk3示教当前位置
-            // 
-            this.txtBk3示教当前位置.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBk3示教当前位置.Location = new System.Drawing.Point(59, 21);
-            this.txtBk3示教当前位置.Margin = new System.Windows.Forms.Padding(2);
-            this.txtBk3示教当前位置.Name = "txtBk3示教当前位置";
-            this.txtBk3示教当前位置.Size = new System.Drawing.Size(67, 14);
-            this.txtBk3示教当前位置.TabIndex = 49;
-            // 
-            // label459
-            // 
-            this.label459.AutoSize = true;
-            this.label459.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label459.Location = new System.Drawing.Point(4, 23);
-            this.label459.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label459.Name = "label459";
-            this.label459.Size = new System.Drawing.Size(55, 15);
-            this.label459.TabIndex = 48;
-            this.label459.Text = "当前位置";
-            // 
-            // groupBox59
-            // 
-            this.groupBox59.Controls.Add(this.label451);
-            this.groupBox59.Controls.Add(this.txtBk2示教35位置);
-            this.groupBox59.Controls.Add(this.btnBk2示教35位置);
-            this.groupBox59.Controls.Add(this.label452);
-            this.groupBox59.Controls.Add(this.txtBk2示教20位置);
-            this.groupBox59.Controls.Add(this.btnBk2示教20位置);
-            this.groupBox59.Controls.Add(this.txtBk2示教当前位置);
-            this.groupBox59.Controls.Add(this.label453);
-            this.groupBox59.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox59.Location = new System.Drawing.Point(626, 238);
-            this.groupBox59.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox59.Name = "groupBox59";
-            this.groupBox59.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox59.Size = new System.Drawing.Size(180, 107);
-            this.groupBox59.TabIndex = 109;
-            this.groupBox59.TabStop = false;
-            this.groupBox59.Text = "黑体2位置";
-            // 
-            // label451
-            // 
-            this.label451.AutoSize = true;
-            this.label451.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label451.Location = new System.Drawing.Point(140, 85);
-            this.label451.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label451.Name = "label451";
-            this.label451.Size = new System.Drawing.Size(25, 15);
-            this.label451.TabIndex = 71;
-            this.label451.Text = "mm";
-            // 
-            // txtBk2示教35位置
-            // 
-            this.txtBk2示教35位置.Location = new System.Drawing.Point(87, 75);
-            this.txtBk2示教35位置.Margin = new System.Windows.Forms.Padding(2);
-            this.txtBk2示教35位置.Name = "txtBk2示教35位置";
-            this.txtBk2示教35位置.Size = new System.Drawing.Size(49, 21);
-            this.txtBk2示教35位置.TabIndex = 72;
-            // 
-            // btnBk2示教35位置
-            // 
-            this.btnBk2示教35位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBk2示教35位置.Location = new System.Drawing.Point(4, 75);
-            this.btnBk2示教35位置.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBk2示教35位置.Name = "btnBk2示教35位置";
-            this.btnBk2示教35位置.Size = new System.Drawing.Size(78, 24);
-            this.btnBk2示教35位置.TabIndex = 70;
-            this.btnBk2示教35位置.Text = "35°位置";
-            this.btnBk2示教35位置.UseVisualStyleBackColor = true;
-            // 
-            // label452
-            // 
-            this.label452.AutoSize = true;
-            this.label452.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label452.Location = new System.Drawing.Point(140, 56);
-            this.label452.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label452.Name = "label452";
-            this.label452.Size = new System.Drawing.Size(25, 15);
-            this.label452.TabIndex = 68;
-            this.label452.Text = "mm";
-            // 
-            // txtBk2示教20位置
-            // 
-            this.txtBk2示教20位置.Location = new System.Drawing.Point(87, 46);
-            this.txtBk2示教20位置.Margin = new System.Windows.Forms.Padding(2);
-            this.txtBk2示教20位置.Name = "txtBk2示教20位置";
-            this.txtBk2示教20位置.Size = new System.Drawing.Size(49, 21);
-            this.txtBk2示教20位置.TabIndex = 69;
-            // 
-            // btnBk2示教20位置
-            // 
-            this.btnBk2示教20位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBk2示教20位置.Location = new System.Drawing.Point(4, 46);
-            this.btnBk2示教20位置.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBk2示教20位置.Name = "btnBk2示教20位置";
-            this.btnBk2示教20位置.Size = new System.Drawing.Size(78, 24);
-            this.btnBk2示教20位置.TabIndex = 67;
-            this.btnBk2示教20位置.Text = "20°位置";
-            this.btnBk2示教20位置.UseVisualStyleBackColor = true;
-            // 
-            // txtBk2示教当前位置
-            // 
-            this.txtBk2示教当前位置.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBk2示教当前位置.Location = new System.Drawing.Point(59, 21);
-            this.txtBk2示教当前位置.Margin = new System.Windows.Forms.Padding(2);
-            this.txtBk2示教当前位置.Name = "txtBk2示教当前位置";
-            this.txtBk2示教当前位置.Size = new System.Drawing.Size(67, 14);
-            this.txtBk2示教当前位置.TabIndex = 49;
-            // 
-            // label453
-            // 
-            this.label453.AutoSize = true;
-            this.label453.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label453.Location = new System.Drawing.Point(4, 23);
-            this.label453.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label453.Name = "label453";
-            this.label453.Size = new System.Drawing.Size(55, 15);
-            this.label453.TabIndex = 48;
-            this.label453.Text = "当前位置";
-            // 
-            // groupBox58
-            // 
-            this.groupBox58.Controls.Add(this.label454);
-            this.groupBox58.Controls.Add(this.txtBk1示教35位置);
-            this.groupBox58.Controls.Add(this.btnBk1示教35位置);
-            this.groupBox58.Controls.Add(this.label455);
-            this.groupBox58.Controls.Add(this.txtBk1示教20位置);
-            this.groupBox58.Controls.Add(this.btnBk1示教20位置);
-            this.groupBox58.Controls.Add(this.txtBk1示教当前位置);
-            this.groupBox58.Controls.Add(this.label456);
-            this.groupBox58.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox58.Location = new System.Drawing.Point(442, 238);
-            this.groupBox58.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox58.Name = "groupBox58";
-            this.groupBox58.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox58.Size = new System.Drawing.Size(180, 107);
-            this.groupBox58.TabIndex = 106;
-            this.groupBox58.TabStop = false;
-            this.groupBox58.Text = "黑体1位置";
-            // 
-            // label454
-            // 
-            this.label454.AutoSize = true;
-            this.label454.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label454.Location = new System.Drawing.Point(140, 85);
-            this.label454.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label454.Name = "label454";
-            this.label454.Size = new System.Drawing.Size(25, 15);
-            this.label454.TabIndex = 71;
-            this.label454.Text = "mm";
-            // 
-            // txtBk1示教35位置
-            // 
-            this.txtBk1示教35位置.Location = new System.Drawing.Point(87, 75);
-            this.txtBk1示教35位置.Margin = new System.Windows.Forms.Padding(2);
-            this.txtBk1示教35位置.Name = "txtBk1示教35位置";
-            this.txtBk1示教35位置.Size = new System.Drawing.Size(49, 21);
-            this.txtBk1示教35位置.TabIndex = 72;
-            // 
-            // btnBk1示教35位置
-            // 
-            this.btnBk1示教35位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBk1示教35位置.Location = new System.Drawing.Point(4, 75);
-            this.btnBk1示教35位置.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBk1示教35位置.Name = "btnBk1示教35位置";
-            this.btnBk1示教35位置.Size = new System.Drawing.Size(78, 24);
-            this.btnBk1示教35位置.TabIndex = 70;
-            this.btnBk1示教35位置.Text = "35°位置";
-            this.btnBk1示教35位置.UseVisualStyleBackColor = true;
-            // 
-            // label455
-            // 
-            this.label455.AutoSize = true;
-            this.label455.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label455.Location = new System.Drawing.Point(140, 56);
-            this.label455.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label455.Name = "label455";
-            this.label455.Size = new System.Drawing.Size(25, 15);
-            this.label455.TabIndex = 68;
-            this.label455.Text = "mm";
-            // 
-            // txtBk1示教20位置
-            // 
-            this.txtBk1示教20位置.Location = new System.Drawing.Point(87, 46);
-            this.txtBk1示教20位置.Margin = new System.Windows.Forms.Padding(2);
-            this.txtBk1示教20位置.Name = "txtBk1示教20位置";
-            this.txtBk1示教20位置.Size = new System.Drawing.Size(49, 21);
-            this.txtBk1示教20位置.TabIndex = 69;
-            // 
-            // btnBk1示教20位置
-            // 
-            this.btnBk1示教20位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBk1示教20位置.Location = new System.Drawing.Point(4, 46);
-            this.btnBk1示教20位置.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBk1示教20位置.Name = "btnBk1示教20位置";
-            this.btnBk1示教20位置.Size = new System.Drawing.Size(78, 24);
-            this.btnBk1示教20位置.TabIndex = 67;
-            this.btnBk1示教20位置.Text = "20°位置";
-            this.btnBk1示教20位置.UseVisualStyleBackColor = true;
-            // 
-            // txtBk1示教当前位置
-            // 
-            this.txtBk1示教当前位置.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBk1示教当前位置.Location = new System.Drawing.Point(59, 21);
-            this.txtBk1示教当前位置.Margin = new System.Windows.Forms.Padding(2);
-            this.txtBk1示教当前位置.Name = "txtBk1示教当前位置";
-            this.txtBk1示教当前位置.Size = new System.Drawing.Size(67, 14);
-            this.txtBk1示教当前位置.TabIndex = 49;
-            // 
-            // label456
-            // 
-            this.label456.AutoSize = true;
-            this.label456.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label456.Location = new System.Drawing.Point(4, 23);
-            this.label456.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label456.Name = "label456";
-            this.label456.Size = new System.Drawing.Size(55, 15);
-            this.label456.TabIndex = 48;
-            this.label456.Text = "当前位置";
-            // 
-            // groupBox64
-            // 
-            this.groupBox64.Controls.Add(this.label480);
-            this.groupBox64.Controls.Add(this.txt平移示教中转位置);
-            this.groupBox64.Controls.Add(this.btn平移示教中转位置);
-            this.groupBox64.Controls.Add(this.label481);
-            this.groupBox64.Controls.Add(this.txt平移示教下料位置);
-            this.groupBox64.Controls.Add(this.btn平移示教下料位置);
-            this.groupBox64.Controls.Add(this.label482);
-            this.groupBox64.Controls.Add(this.txt平移示教上料位置);
-            this.groupBox64.Controls.Add(this.btn平移示教上料位置);
-            this.groupBox64.Controls.Add(this.txt平移示教当前位置);
-            this.groupBox64.Controls.Add(this.label483);
-            this.groupBox64.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox64.Location = new System.Drawing.Point(804, 20);
-            this.groupBox64.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox64.Name = "groupBox64";
-            this.groupBox64.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox64.Size = new System.Drawing.Size(180, 297);
-            this.groupBox64.TabIndex = 101;
-            this.groupBox64.TabStop = false;
-            this.groupBox64.Text = "搬运平移";
-            // 
-            // label480
-            // 
-            this.label480.AutoSize = true;
-            this.label480.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label480.Location = new System.Drawing.Point(140, 114);
-            this.label480.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label480.Name = "label480";
-            this.label480.Size = new System.Drawing.Size(25, 15);
-            this.label480.TabIndex = 74;
-            this.label480.Text = "mm";
-            // 
-            // txt平移示教中转位置
-            // 
-            this.txt平移示教中转位置.Location = new System.Drawing.Point(87, 104);
-            this.txt平移示教中转位置.Margin = new System.Windows.Forms.Padding(2);
-            this.txt平移示教中转位置.Name = "txt平移示教中转位置";
-            this.txt平移示教中转位置.Size = new System.Drawing.Size(49, 21);
-            this.txt平移示教中转位置.TabIndex = 75;
-            // 
-            // btn平移示教中转位置
-            // 
-            this.btn平移示教中转位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btn平移示教中转位置.Location = new System.Drawing.Point(4, 104);
-            this.btn平移示教中转位置.Margin = new System.Windows.Forms.Padding(2);
-            this.btn平移示教中转位置.Name = "btn平移示教中转位置";
-            this.btn平移示教中转位置.Size = new System.Drawing.Size(78, 24);
-            this.btn平移示教中转位置.TabIndex = 73;
-            this.btn平移示教中转位置.Text = "中转位置";
-            this.btn平移示教中转位置.UseVisualStyleBackColor = true;
-            // 
-            // label481
-            // 
-            this.label481.AutoSize = true;
-            this.label481.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label481.Location = new System.Drawing.Point(140, 85);
-            this.label481.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label481.Name = "label481";
-            this.label481.Size = new System.Drawing.Size(25, 15);
-            this.label481.TabIndex = 71;
-            this.label481.Text = "mm";
-            // 
-            // txt平移示教下料位置
-            // 
-            this.txt平移示教下料位置.Location = new System.Drawing.Point(87, 75);
-            this.txt平移示教下料位置.Margin = new System.Windows.Forms.Padding(2);
-            this.txt平移示教下料位置.Name = "txt平移示教下料位置";
-            this.txt平移示教下料位置.Size = new System.Drawing.Size(49, 21);
-            this.txt平移示教下料位置.TabIndex = 72;
-            // 
-            // btn平移示教下料位置
-            // 
-            this.btn平移示教下料位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btn平移示教下料位置.Location = new System.Drawing.Point(4, 75);
-            this.btn平移示教下料位置.Margin = new System.Windows.Forms.Padding(2);
-            this.btn平移示教下料位置.Name = "btn平移示教下料位置";
-            this.btn平移示教下料位置.Size = new System.Drawing.Size(78, 24);
-            this.btn平移示教下料位置.TabIndex = 70;
-            this.btn平移示教下料位置.Text = "下料位置";
-            this.btn平移示教下料位置.UseVisualStyleBackColor = true;
-            // 
-            // label482
-            // 
-            this.label482.AutoSize = true;
-            this.label482.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label482.Location = new System.Drawing.Point(140, 56);
-            this.label482.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label482.Name = "label482";
-            this.label482.Size = new System.Drawing.Size(25, 15);
-            this.label482.TabIndex = 68;
-            this.label482.Text = "mm";
-            // 
-            // txt平移示教上料位置
-            // 
-            this.txt平移示教上料位置.Location = new System.Drawing.Point(87, 46);
-            this.txt平移示教上料位置.Margin = new System.Windows.Forms.Padding(2);
-            this.txt平移示教上料位置.Name = "txt平移示教上料位置";
-            this.txt平移示教上料位置.Size = new System.Drawing.Size(49, 21);
-            this.txt平移示教上料位置.TabIndex = 69;
-            // 
-            // btn平移示教上料位置
-            // 
-            this.btn平移示教上料位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btn平移示教上料位置.Location = new System.Drawing.Point(4, 46);
-            this.btn平移示教上料位置.Margin = new System.Windows.Forms.Padding(2);
-            this.btn平移示教上料位置.Name = "btn平移示教上料位置";
-            this.btn平移示教上料位置.Size = new System.Drawing.Size(78, 24);
-            this.btn平移示教上料位置.TabIndex = 67;
-            this.btn平移示教上料位置.Text = "上料位置";
-            this.btn平移示教上料位置.UseVisualStyleBackColor = true;
-            // 
-            // txt平移示教当前位置
-            // 
-            this.txt平移示教当前位置.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt平移示教当前位置.Location = new System.Drawing.Point(59, 21);
-            this.txt平移示教当前位置.Margin = new System.Windows.Forms.Padding(2);
-            this.txt平移示教当前位置.Name = "txt平移示教当前位置";
-            this.txt平移示教当前位置.Size = new System.Drawing.Size(67, 14);
-            this.txt平移示教当前位置.TabIndex = 49;
-            // 
-            // label483
-            // 
-            this.label483.AutoSize = true;
-            this.label483.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label483.Location = new System.Drawing.Point(4, 23);
-            this.label483.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label483.Name = "label483";
-            this.label483.Size = new System.Drawing.Size(55, 15);
-            this.label483.TabIndex = 48;
-            this.label483.Text = "当前位置";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -18605,6 +18667,8 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.tabPage8.ResumeLayout(false);
+            this.groupBox64.ResumeLayout(false);
+            this.groupBox64.PerformLayout();
             this.groupBox50.ResumeLayout(false);
             this.groupBox50.PerformLayout();
             this.groupBox49.ResumeLayout(false);
@@ -18617,6 +18681,29 @@
             this.groupBox46.PerformLayout();
             this.groupBox45.ResumeLayout(false);
             this.groupBox45.PerformLayout();
+            this.tabPage10.ResumeLayout(false);
+            this.groupBox61.ResumeLayout(false);
+            this.groupBox61.PerformLayout();
+            this.groupBox60.ResumeLayout(false);
+            this.groupBox60.PerformLayout();
+            this.groupBox59.ResumeLayout(false);
+            this.groupBox59.PerformLayout();
+            this.groupBox58.ResumeLayout(false);
+            this.groupBox58.PerformLayout();
+            this.groupBox56.ResumeLayout(false);
+            this.groupBox56.PerformLayout();
+            this.groupBox55.ResumeLayout(false);
+            this.groupBox55.PerformLayout();
+            this.groupBox53.ResumeLayout(false);
+            this.groupBox53.PerformLayout();
+            this.groupBox57.ResumeLayout(false);
+            this.groupBox57.PerformLayout();
+            this.groupBox54.ResumeLayout(false);
+            this.groupBox54.PerformLayout();
+            this.groupBox52.ResumeLayout(false);
+            this.groupBox52.PerformLayout();
+            this.groupBox51.ResumeLayout(false);
+            this.groupBox51.PerformLayout();
             this.tabPage6.ResumeLayout(false);
             this.tabPage6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
@@ -18627,31 +18714,6 @@
             this.groupBox65.PerformLayout();
             this.groupBox63.ResumeLayout(false);
             this.groupBox63.PerformLayout();
-            this.tabPage10.ResumeLayout(false);
-            this.groupBox54.ResumeLayout(false);
-            this.groupBox54.PerformLayout();
-            this.groupBox52.ResumeLayout(false);
-            this.groupBox52.PerformLayout();
-            this.groupBox51.ResumeLayout(false);
-            this.groupBox51.PerformLayout();
-            this.groupBox56.ResumeLayout(false);
-            this.groupBox56.PerformLayout();
-            this.groupBox55.ResumeLayout(false);
-            this.groupBox55.PerformLayout();
-            this.groupBox53.ResumeLayout(false);
-            this.groupBox53.PerformLayout();
-            this.groupBox57.ResumeLayout(false);
-            this.groupBox57.PerformLayout();
-            this.groupBox61.ResumeLayout(false);
-            this.groupBox61.PerformLayout();
-            this.groupBox60.ResumeLayout(false);
-            this.groupBox60.PerformLayout();
-            this.groupBox59.ResumeLayout(false);
-            this.groupBox59.PerformLayout();
-            this.groupBox58.ResumeLayout(false);
-            this.groupBox58.PerformLayout();
-            this.groupBox64.ResumeLayout(false);
-            this.groupBox64.PerformLayout();
             this.ResumeLayout(false);
 
         }

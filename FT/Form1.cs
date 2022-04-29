@@ -25,6 +25,7 @@ namespace FT
             TC_Main.Selecting += new TabControlCancelEventHandler(TC_Main_Selecting);
             try
             {
+                #region 数据查询
                 //数据库初始化
                 SensorDataManager.InitializeDatabase();
                 //设置查询探测器类型
@@ -35,7 +36,9 @@ namespace FT
                 //设置查询时间上下限
                 DTP_MinTime.Value = Convert.ToDateTime(DateTime.Now.AddDays(-7));
                 DTP_MaxTime.Value = Convert.ToDateTime(DateTime.Now.AddDays(1));
+                #endregion
 
+                #region 托盘数据
                 //托盘数据
                 trayManager = new TrayManager();
                 //托盘类型设置
@@ -43,6 +46,8 @@ namespace FT
                 {
                     CB_TypeOfTray.Items.Add(trayType.Key);
                 }
+                #endregion
+
                 //报警信息读取
                 alarmInformation = JsonManager.ReadJsonString<Dictionary<string, string>>(Environment.CurrentDirectory + "\\Configuration\\", "Alarm");
                 
@@ -658,14 +663,316 @@ namespace FT
         {
             communication.WritePLCIO[30] = false;
         }
-
-
-
-
-
         #endregion
 
+        private void btnY示教吸1实盘第一行_MouseDown(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[31] = true;
+        }
 
-       
+        private void btnY示教吸1实盘第一行_MouseUp(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[31] = false;
+        }
+
+        private void btnX示教吸2实盘第一列_MouseDown(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[32] = true;
+        }
+
+        private void btnX示教吸2实盘第一列_MouseUp(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[32] = false;
+        }
+
+        private void btnY示教吸2实盘第一行_MouseDown(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[33] = true;
+        }
+
+        private void btnY示教吸2实盘第一行_MouseUp(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[33] = false;
+        }
+
+        private void btnX示教实盘位置_MouseDown(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[34] = true;
+        }
+
+        private void btnX示教实盘位置_MouseUp(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[34] = false;
+        }
+
+        private void btnX示教倒实盘位置_MouseDown(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[35] = true;
+        }
+
+        private void btnX示教倒实盘位置_MouseUp(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[35] = false;
+        }
+
+        private void btnX示教NG盘位置_MouseDown(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[36] = true;
+        }
+
+        private void btnX示教NG盘位置_MouseUp(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[36] = false;
+        }
+
+        private void btnX示教倒NG盘位置_MouseDown(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[37] = true;
+        }
+
+        private void btnX示教倒NG盘位置_MouseUp(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[37] = false;
+        }
+
+        private void btnX示教夹爪位置_MouseDown(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[38] = true;
+        }
+
+        private void btnX示教夹爪位置_MouseUp(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[38] = false;
+        }
+
+        private void btnX示教扫码位置_MouseDown(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[39] = true;
+        }
+
+        private void btnX示教扫码位置_MouseUp(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[39] = false;
+        }
+
+        private void btnX示教吸1NG盘第一列_MouseDown(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[40] = true;
+        }
+
+        private void btnX示教吸1NG盘第一列_MouseUp(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[40] = false;
+        }
+
+        private void btnY示教吸1NG盘第一行_MouseDown(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[41] = true;
+        }
+
+        private void btnY示教吸1NG盘第一行_MouseUp(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[41] = false;
+        }
+
+        private void btnX示教吸2NG盘第一列_MouseDown(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[42] = true;
+        }
+
+        private void btnX示教吸2NG盘第一列_MouseUp(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[42] = false;
+        }
+
+        private void btnY示教吸2NG盘第一行_MouseDown(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[43] = true;
+        }
+
+        private void btnY示教吸2NG盘第一行_MouseUp(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[43] = false;
+        }
+
+        private void btnY示教实盘位置_MouseDown(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[45] = true;
+        }
+
+        private void btnY示教实盘位置_MouseUp(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[45] = false;
+        }
+
+        private void btnY示教倒实盘位置_MouseDown(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[46] = true;
+        }
+
+        private void btnY示教倒实盘位置_MouseUp(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[46] = false;
+        }
+
+        private void btnY示教NG盘位置_MouseDown(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[47] = true;
+        }
+
+        private void btnY示教NG盘位置_MouseUp(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[47] = false;
+        }
+
+        private void btnY示教倒NG盘位置_MouseDown(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[48] = true;
+        }
+
+        private void btnY示教倒NG盘位置_MouseUp(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[48] = false;
+        }
+
+        private void btnY示教夹爪位置_MouseDown(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[49] = true;
+        }
+
+        private void btnY示教夹爪位置_MouseUp(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[49] = false;
+        }
+
+        private void btnY示教扫码位置_MouseDown(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[50] = true;
+        }
+
+        private void btnY示教扫码位置_MouseUp(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[50] = false;
+        }
+
+        private void btnX示教吸1倒实盘第一列_MouseDown(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[51] = true;
+        }
+
+        private void btnX示教吸1倒实盘第一列_MouseUp(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[51] = false;
+        }
+
+        private void btnY示教吸1倒实盘第一行_MouseDown(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[52] = true;
+        }
+
+        private void btnY示教吸1倒实盘第一行_MouseUp(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[52] = false;
+        }
+
+        private void btnX示教吸2倒实盘第一列_MouseDown(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[53] = true;
+        }
+
+        private void btnX示教吸2倒实盘第一列_MouseUp(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[53] = false;
+        }
+
+        private void btnY示教吸2倒实盘第一行_MouseDown(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[54] = true;
+        }
+
+        private void btnY示教吸2倒实盘第一行_MouseUp(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[54] = false;
+        }
+
+        private void btn实盘示教初始位置_MouseDown(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[56] = true;
+        }
+
+        private void btn实盘示教初始位置_MouseUp(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[56] = false;
+        }
+
+        private void btn实盘示教扫码位置_MouseDown(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[57] = true;
+        }
+
+        private void btn实盘示教扫码位置_MouseUp(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[57] = false;
+        }
+
+        private void btnNG盘示教初始位置_MouseDown(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[61] = true;
+        }
+
+        private void btnNG盘示教初始位置_MouseUp(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[61] = false;
+        }
+
+        private void btn倒实盘示教初始位置_MouseDown(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[62] = true;
+        }
+
+        private void btn倒实盘示教初始位置_MouseUp(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[62] = false;
+        }
+
+        private void btn倒NG盘示教初始位置_MouseDown(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[63] = true;
+        }
+
+        private void btn倒NG盘示教初始位置_MouseUp(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[63] = false;
+        }
+
+        private void btn平移示教上料位置_MouseDown(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[71] = true;
+        }
+
+        private void btn平移示教上料位置_MouseUp(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[71] = false;
+        }
+
+        private void btn平移示教下料位置_MouseDown(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[72] = true;
+        }
+
+        private void btn平移示教下料位置_MouseUp(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[72] = false;
+        }
+
+        private void btn平移示教中转位置_MouseDown(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[73] = true;
+        }
+
+        private void btn平移示教中转位置_MouseUp(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[73] = false;
+        }
     }
 }
