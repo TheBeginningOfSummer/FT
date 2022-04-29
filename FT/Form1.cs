@@ -158,9 +158,9 @@ namespace FT
 
                         SetTextBoxText(txt倒NG盘示教初始位置, communication.ReadLocation[73]);
 
-                        //SetTextBoxText(txt平移上料位置, communication.ReadLocation[77]);
-                        //SetTextBoxText(txtX平移下料位置, communication.ReadLocation[78]);
-                        //SetTextBoxText(txtX平移翻转位置, communication.ReadLocation[79]);
+                        SetTextBoxText(txt平移示教上料位置, communication.ReadLocation[77]);
+                        SetTextBoxText(txt平移示教下料位置, communication.ReadLocation[78]);
+                        SetTextBoxText(txt平移示教中转位置, communication.ReadLocation[79]);
 
                         SetTextBoxText(txtBYX示教上料位置, communication.ReadLocation[83]);
                         SetTextBoxText(txtBYX示教视觉1位置, communication.ReadLocation[84]);
@@ -174,13 +174,14 @@ namespace FT
                         SetTextBoxText(txtBYX示教第八列, communication.ReadLocation[92]);
                         SetTextBoxText(txtBYX示教视觉2位置, communication.ReadLocation[93]);
 
-                        SetTextBoxText(txtBYY示教上料位置, communication.ReadLocation[97]);
+                        SetTextBoxText(txtBYY示教上料12位置, communication.ReadLocation[97]);
                         SetTextBoxText(txtBYY示教视觉1位置, communication.ReadLocation[98]);
                         SetTextBoxText(txtBYY示教视觉2位置, communication.ReadLocation[99]);
                         SetTextBoxText(txtBYY示教第一行, communication.ReadLocation[100]);
                         SetTextBoxText(txtBYY示教第二行, communication.ReadLocation[101]);
                         SetTextBoxText(txtBYY示教视觉3位置, communication.ReadLocation[102]);
                         SetTextBoxText(txtBYY示教视觉4位置, communication.ReadLocation[103]);
+                        SetTextBoxText(txtBYY示教上料34位置, communication.ReadLocation[104]);
 
                         SetTextBoxText(txtBYZ示教上料位置, communication.ReadLocation[107]);
                         SetTextBoxText(txtBYZ示教上升位置, communication.ReadLocation[108]);
@@ -231,7 +232,7 @@ namespace FT
                         SetTextBoxText(txt实盘示教当前位置, communication.ReadLocation[2]);
                         SetTextBoxText(txtNG盘示教当前位置, communication.ReadLocation[3]);
                         SetTextBoxText(txt倒实盘示教当前位置, communication.ReadLocation[4]);
-                        //SetTextBoxText(txt平移示教当前位置, communication.ReadLocation[5]);
+                        SetTextBoxText(txt平移示教当前位置, communication.ReadLocation[5]);
                         SetTextBoxText(txtX示教当前位置, communication.ReadLocation[6]);
                         SetTextBoxText(txtBYX示教当前位置, communication.ReadLocation[7]);
                         SetTextBoxText(txtBYY示教当前位置, communication.ReadLocation[8]);
@@ -244,8 +245,7 @@ namespace FT
                         SetTextBoxText(txtBk2示教当前位置, communication.ReadLocation[15]);
                         SetTextBoxText(txtBk3示教当前位置, communication.ReadLocation[16]);
                         SetTextBoxText(txtBk4示教当前位置, communication.ReadLocation[17]);
-                        //SetTextBoxText(txtX中空1当前位置, communication.ReadLocation[18]);
-                        //SetTextBoxText(txtX中空2当前位置, communication.ReadLocation[19]);
+                        
 
                         SetTextBoxText(txtX当前位置, communication.ReadLocation[0]);
                         SetTextBoxText(txtY当前位置, communication.ReadLocation[1]);
@@ -560,7 +560,7 @@ namespace FT
                         SetTextBoxText(txt黑体轴定位速度, communication.ReadPLCPmt[9]);
 
                         SetTextBoxText(txt上料X轴手动速度, communication.ReadPLCPmt[15]);
-                        //SetTextBoxText(txt上料Y轴手动速度, communication.ReadPLCPmt[16]);
+                        SetTextBoxText(txt上料Y轴手动速度, communication.ReadPLCPmt[16]);
                         SetTextBoxText(txt升降轴手动速度, communication.ReadPLCPmt[17]);
                         SetTextBoxText(txt平移轴手动速度, communication.ReadPLCPmt[18]);
                         SetTextBoxText(txt中空轴手动速度, communication.ReadPLCPmt[19]);
@@ -653,7 +653,7 @@ namespace FT
         }
         #endregion
 
-        #region 示教操作
+        #region 示教1操作
         private void btnX示教吸1实盘第一列_MouseDown(object sender, MouseEventArgs e)
         {
             communication.WritePLCIO[30] = true;
@@ -663,7 +663,6 @@ namespace FT
         {
             communication.WritePLCIO[30] = false;
         }
-        #endregion
 
         private void btnY示教吸1实盘第一行_MouseDown(object sender, MouseEventArgs e)
         {
@@ -974,5 +973,162 @@ namespace FT
         {
             communication.WritePLCIO[73] = false;
         }
+        #endregion
+
+        private void btnBYX示教上料位置_MouseDown(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[76] = true;
+        }
+
+        private void btnBYX示教上料位置_MouseUp(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[76] = false;
+        }
+
+        private void btnBYX示教视觉1位置_MouseDown(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[77] = true;
+        }
+
+        private void btnBYX示教视觉1位置_MouseUp(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[77] = false;
+        }
+
+        private void btnBYX示教视觉2位置_MouseDown(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[78] = true;
+        }
+
+        private void btnBYX示教视觉2位置_MouseUp(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[78] = false;
+        }
+
+        private void btnBYX示教第一列_MouseDown(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[79] = true;
+        }
+
+        private void btnBYX示教第一列_MouseUp(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[79] = false;
+        }
+
+        private void btnBYX示教第二列_MouseDown(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[80] = true;
+        }
+
+        private void btnBYX示教第二列_MouseUp(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[80] = false;
+        }
+
+        private void btnBYX示教第三列_MouseDown(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[81] = true;
+        }
+
+        private void btnBYX示教第三列_MouseUp(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[81] = false;
+        }
+
+        private void btnBYX示教第四列_MouseDown(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[82] = true;
+        }
+
+        private void btnBYX示教第四列_MouseUp(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[82] = false;
+        }
+
+        private void btnBYX示教第五列_MouseDown(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[83] = true;
+        }
+
+        private void btnBYX示教第五列_MouseUp(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[83] = false;
+        }
+
+        private void btnBYX示教第六列_MouseDown(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[84] = true;
+        }
+
+        private void btnBYX示教第六列_MouseUp(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[84] = false;
+        }
+
+        private void btnBYX示教第七列_MouseDown(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[85] = true;
+        }
+
+        private void btnBYX示教第七列_MouseUp(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[85] = false;
+        }
+
+        private void btnBYX示教第八列_MouseDown(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[86] = true;
+        }
+
+        private void btnBYX示教第八列_MouseUp(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[86] = false;
+        }
+
+        private void btnBYY示教上料12位置_MouseDown(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[100] = true;
+        }
+
+        private void btnBYY示教上料12位置_MouseUp(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[100] = false;
+        }
+
+        private void btnBYY示教上料34位置_MouseDown(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[108] = true;
+        }
+
+        private void btnBYY示教上料34位置_MouseUp(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[108] = false;
+        }
+
+        private void btnBYY示教视觉1位置_MouseDown(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[101] = true;
+        }
+
+        private void btnBYY示教视觉1位置_MouseUp(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[101] = false;
+        }
+
+        private void btnBYY示教视觉2位置_MouseDown(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[102] = true;
+        }
+
+        private void btnBYY示教视觉2位置_MouseUp(object sender, MouseEventArgs e)
+        {
+            communication.WritePLCIO[102] = false;
+        }
+
+
+
+
+
+
     }
 }
