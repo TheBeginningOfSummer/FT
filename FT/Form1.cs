@@ -45,6 +45,7 @@ namespace FT
                 }
                 //报警信息读取
                 alarmInformation = JsonManager.ReadJsonString<Dictionary<string, string>>(Environment.CurrentDirectory + "\\Configuration\\", "Alarm");
+                
             }
             catch (Exception e)
             {
