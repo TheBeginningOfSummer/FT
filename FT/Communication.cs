@@ -76,6 +76,8 @@ namespace FT
             WriteProductionData = new int[50];
             WriteFlagBits = new bool[50];
             WritePLCPmt = new double[50];
+
+            ReadTestInformation[20] = "1";
         }
 
         public void RefreshData()
@@ -158,7 +160,7 @@ namespace FT
             try
             {
                 #region 写入IO信息
-                WriteVariables(WritePLCIO, "PlcInIO", 0, 600);
+                WriteVariables(WritePLCIO, "PlcInIO", 0, 700);
                 #endregion
 
                 #region 写入托盘产品信息
