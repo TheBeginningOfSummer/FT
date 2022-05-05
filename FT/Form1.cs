@@ -19,10 +19,15 @@ namespace FT
         //托盘数据
         TrayManager trayManager;
 
-        public Form1()
+        Form2 form;
+
+        public Form1(Form2 form2)
         {
             InitializeComponent();
-            TC_Main.Selecting += new TabControlCancelEventHandler(TC_Main_Selecting);
+            //TC_Main.Selecting += new TabControlCancelEventHandler(TC_Main_Selecting);
+
+            form = form2;
+
             try
             {
                 #region 数据查询
@@ -63,6 +68,7 @@ namespace FT
         {
             if (true)//禁用某个Tab
             {
+                
                 if (e.TabPageIndex == 20) e.Cancel = true;
             }
         }
@@ -4767,6 +4773,12 @@ namespace FT
         {
             communication.WritePLCIO[6] = false;
         }
+
         #endregion
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            form.Close();
+        }
     }
 }
