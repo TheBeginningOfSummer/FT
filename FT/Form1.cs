@@ -24,7 +24,6 @@ namespace FT
         public Form1(Form2 form2)
         {
             InitializeComponent();
-            //TC_Main.Selecting += new TabControlCancelEventHandler(TC_Main_Selecting);
 
             form = form2;
 
@@ -61,15 +60,6 @@ namespace FT
             catch (Exception e)
             {
                 MessageBox.Show(e.Message, "程序初始化");
-            }
-        }
-
-        void TC_Main_Selecting(object sender, TabControlCancelEventArgs e)
-        {
-            if (true)//禁用某个Tab
-            {
-                
-                if (e.TabPageIndex == 20) e.Cancel = true;
             }
         }
 
@@ -4779,6 +4769,28 @@ namespace FT
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
             form.Close();
+        }
+
+        private void BTN_Modify_Click(object sender, EventArgs e)
+        {
+            if (form.CB_UserName.Text == "操作员")
+            {
+                MessageBox.Show("未授权用户组", "修改密码");
+                return;
+            }
+            if (TB_Password.Text == "" || TB_NewPassword.Text == "")
+            {
+                MessageBox.Show("请输入密码", "修改密码");
+                return;
+            }
+            if (TB_Password.Text != TB_NewPassword.Text)
+            {
+                MessageBox.Show("两次输入不一样", "修改密码");
+                return;
+            }
+            JsonManager.SaveJsonString(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\FTData", "engineerData",
+                new UserData() { UserType = 1, UserName = "工程师", Password = TB_Password.Text });
+            MessageBox.Show("修改成功", "修改密码");
         }
     }
 }

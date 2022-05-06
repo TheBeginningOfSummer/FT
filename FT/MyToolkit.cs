@@ -83,7 +83,7 @@ namespace MyToolkit
             {
                 Directory.CreateDirectory(path);
             }
-            path = path + fileName + ".json";
+            path = path + "\\" + fileName + ".json";
 
             string jsonString = JsonMapper.ToJson(data);
             byte[] jsonBytes = Encoding.UTF8.GetBytes(jsonString);
@@ -101,7 +101,7 @@ namespace MyToolkit
                 {
                     Directory.CreateDirectory(path);
                 }
-                path = path + fileName + ".json";
+                path = path + "\\" + fileName + ".json";
 
                 FileStream file = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
                 StreamReader stream = new StreamReader(file);

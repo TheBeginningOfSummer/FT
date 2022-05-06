@@ -1408,6 +1408,12 @@
             this.label469 = new System.Windows.Forms.Label();
             this.label464 = new System.Windows.Forms.Label();
             this.label463 = new System.Windows.Forms.Label();
+            this.GB_Modify = new System.Windows.Forms.GroupBox();
+            this.LB_Password = new System.Windows.Forms.Label();
+            this.LB_NewPassword = new System.Windows.Forms.Label();
+            this.TB_Password = new System.Windows.Forms.TextBox();
+            this.TB_NewPassword = new System.Windows.Forms.TextBox();
+            this.BTN_Modify = new System.Windows.Forms.Button();
             this.TC_Main.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -1489,6 +1495,7 @@
             this.groupBox62.SuspendLayout();
             this.groupBox65.SuspendLayout();
             this.groupBox63.SuspendLayout();
+            this.GB_Modify.SuspendLayout();
             this.SuspendLayout();
             // 
             // TC_Main
@@ -1518,6 +1525,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.GB_Modify);
             this.tabPage1.Controls.Add(this.btn报警复位);
             this.tabPage1.Controls.Add(this.btn蜂鸣停止);
             this.tabPage1.Controls.Add(this.CB_TypeOfTray);
@@ -1568,18 +1576,16 @@
             // 
             // CB_TypeOfTray
             // 
-            this.CB_TypeOfTray.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.CB_TypeOfTray.FormattingEnabled = true;
-            this.CB_TypeOfTray.Location = new System.Drawing.Point(99, 15);
+            this.CB_TypeOfTray.Location = new System.Drawing.Point(445, 87);
             this.CB_TypeOfTray.Name = "CB_TypeOfTray";
             this.CB_TypeOfTray.Size = new System.Drawing.Size(121, 24);
             this.CB_TypeOfTray.TabIndex = 7;
             // 
             // LB_TypeOfTray
             // 
-            this.LB_TypeOfTray.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.LB_TypeOfTray.AutoSize = true;
-            this.LB_TypeOfTray.Location = new System.Drawing.Point(8, 18);
+            this.LB_TypeOfTray.Location = new System.Drawing.Point(354, 90);
             this.LB_TypeOfTray.Name = "LB_TypeOfTray";
             this.LB_TypeOfTray.Size = new System.Drawing.Size(88, 17);
             this.LB_TypeOfTray.TabIndex = 6;
@@ -1667,7 +1673,7 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage2.Size = new System.Drawing.Size(1276, 734);
+            this.tabPage2.Size = new System.Drawing.Size(1256, 734);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "手动气缸";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -3050,7 +3056,7 @@
             this.tabPage7.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage7.Size = new System.Drawing.Size(1276, 734);
+            this.tabPage7.Size = new System.Drawing.Size(1256, 734);
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "手动电机1";
             this.tabPage7.UseVisualStyleBackColor = true;
@@ -5169,7 +5175,7 @@
             this.tabPage9.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage9.Name = "tabPage9";
             this.tabPage9.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage9.Size = new System.Drawing.Size(1276, 734);
+            this.tabPage9.Size = new System.Drawing.Size(1256, 734);
             this.tabPage9.TabIndex = 8;
             this.tabPage9.Text = "手动电机2";
             this.tabPage9.UseVisualStyleBackColor = true;
@@ -13829,7 +13835,7 @@
             this.tabPage8.Location = new System.Drawing.Point(4, 44);
             this.tabPage8.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Size = new System.Drawing.Size(1276, 734);
+            this.tabPage8.Size = new System.Drawing.Size(1256, 734);
             this.tabPage8.TabIndex = 7;
             this.tabPage8.Text = "示教1";
             this.tabPage8.UseVisualStyleBackColor = true;
@@ -15348,7 +15354,7 @@
             this.tabPage10.Location = new System.Drawing.Point(4, 44);
             this.tabPage10.Name = "tabPage10";
             this.tabPage10.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage10.Size = new System.Drawing.Size(1276, 734);
+            this.tabPage10.Size = new System.Drawing.Size(1256, 734);
             this.tabPage10.TabIndex = 9;
             this.tabPage10.Text = "示教2";
             this.tabPage10.UseVisualStyleBackColor = true;
@@ -17701,7 +17707,7 @@
             this.PN_Data.Controls.Add(this.dataGridView);
             this.PN_Data.Location = new System.Drawing.Point(3, 3);
             this.PN_Data.Name = "PN_Data";
-            this.PN_Data.Size = new System.Drawing.Size(1024, 728);
+            this.PN_Data.Size = new System.Drawing.Size(1039, 728);
             this.PN_Data.TabIndex = 16;
             // 
             // dataGridView
@@ -17714,7 +17720,7 @@
             this.dataGridView.ReadOnly = true;
             this.dataGridView.RowHeadersWidth = 51;
             this.dataGridView.RowTemplate.Height = 23;
-            this.dataGridView.Size = new System.Drawing.Size(1024, 728);
+            this.dataGridView.Size = new System.Drawing.Size(1039, 728);
             this.dataGridView.TabIndex = 2;
             // 
             // tabPage5
@@ -18713,6 +18719,64 @@
             this.label463.TabIndex = 71;
             this.label463.Text = "mm/s";
             // 
+            // GB_Modify
+            // 
+            this.GB_Modify.Controls.Add(this.BTN_Modify);
+            this.GB_Modify.Controls.Add(this.TB_NewPassword);
+            this.GB_Modify.Controls.Add(this.TB_Password);
+            this.GB_Modify.Controls.Add(this.LB_NewPassword);
+            this.GB_Modify.Controls.Add(this.LB_Password);
+            this.GB_Modify.Location = new System.Drawing.Point(8, 5);
+            this.GB_Modify.Name = "GB_Modify";
+            this.GB_Modify.Size = new System.Drawing.Size(218, 167);
+            this.GB_Modify.TabIndex = 10;
+            this.GB_Modify.TabStop = false;
+            this.GB_Modify.Text = "修改密码";
+            // 
+            // LB_Password
+            // 
+            this.LB_Password.AutoSize = true;
+            this.LB_Password.Location = new System.Drawing.Point(28, 39);
+            this.LB_Password.Name = "LB_Password";
+            this.LB_Password.Size = new System.Drawing.Size(56, 17);
+            this.LB_Password.TabIndex = 0;
+            this.LB_Password.Text = "新密码";
+            // 
+            // LB_NewPassword
+            // 
+            this.LB_NewPassword.AutoSize = true;
+            this.LB_NewPassword.Location = new System.Drawing.Point(12, 88);
+            this.LB_NewPassword.Name = "LB_NewPassword";
+            this.LB_NewPassword.Size = new System.Drawing.Size(72, 17);
+            this.LB_NewPassword.TabIndex = 1;
+            this.LB_NewPassword.Text = "确认密码";
+            // 
+            // TB_Password
+            // 
+            this.TB_Password.Location = new System.Drawing.Point(90, 36);
+            this.TB_Password.Name = "TB_Password";
+            this.TB_Password.PasswordChar = '*';
+            this.TB_Password.Size = new System.Drawing.Size(100, 24);
+            this.TB_Password.TabIndex = 2;
+            // 
+            // TB_NewPassword
+            // 
+            this.TB_NewPassword.Location = new System.Drawing.Point(90, 85);
+            this.TB_NewPassword.Name = "TB_NewPassword";
+            this.TB_NewPassword.PasswordChar = '*';
+            this.TB_NewPassword.Size = new System.Drawing.Size(100, 24);
+            this.TB_NewPassword.TabIndex = 3;
+            // 
+            // BTN_Modify
+            // 
+            this.BTN_Modify.Location = new System.Drawing.Point(115, 126);
+            this.BTN_Modify.Name = "BTN_Modify";
+            this.BTN_Modify.Size = new System.Drawing.Size(75, 23);
+            this.BTN_Modify.TabIndex = 4;
+            this.BTN_Modify.Text = "修改";
+            this.BTN_Modify.UseVisualStyleBackColor = true;
+            this.BTN_Modify.Click += new System.EventHandler(this.BTN_Modify_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -18867,6 +18931,8 @@
             this.groupBox65.PerformLayout();
             this.groupBox63.ResumeLayout(false);
             this.groupBox63.PerformLayout();
+            this.GB_Modify.ResumeLayout(false);
+            this.GB_Modify.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -20253,6 +20319,12 @@
         private System.Windows.Forms.Button btnY扫码位置;
         private System.Windows.Forms.Button btnY夹爪位置;
         private System.Windows.Forms.Button btnX扫码位置;
+        private System.Windows.Forms.GroupBox GB_Modify;
+        private System.Windows.Forms.Button BTN_Modify;
+        private System.Windows.Forms.TextBox TB_NewPassword;
+        private System.Windows.Forms.TextBox TB_Password;
+        private System.Windows.Forms.Label LB_NewPassword;
+        private System.Windows.Forms.Label LB_Password;
     }
 }
 
