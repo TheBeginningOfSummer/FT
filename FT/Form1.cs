@@ -36,7 +36,7 @@ namespace FT
                 CB_SensorType.Items.Add("");
                 CB_SensorType.Items.Add("金属");
                 CB_SensorType.Items.Add("陶瓷");
-                CB_SensorType.Items.Add("晶圆");
+                CB_SensorType.Items.Add("晶元");
                 //设置查询时间上下限
                 DTP_MinTime.Value = Convert.ToDateTime(DateTime.Now.AddDays(-7));
                 DTP_MaxTime.Value = Convert.ToDateTime(DateTime.Now.AddDays(1));
@@ -56,6 +56,7 @@ namespace FT
                 alarmInformation = JsonManager.ReadJsonString<Dictionary<string, string>>(Environment.CurrentDirectory + "\\Configuration\\", "Alarm");
 
                 DataUpdate();
+                AlarmCheck();
             }
             catch (Exception e)
             {
