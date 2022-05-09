@@ -30,6 +30,13 @@
         {
             this.TC_Main = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.LB_Connection = new System.Windows.Forms.Label();
+            this.GB_Modify = new System.Windows.Forms.GroupBox();
+            this.BTN_Modify = new System.Windows.Forms.Button();
+            this.TB_NewPassword = new System.Windows.Forms.TextBox();
+            this.TB_Password = new System.Windows.Forms.TextBox();
+            this.LB_NewPassword = new System.Windows.Forms.Label();
+            this.LB_Password = new System.Windows.Forms.Label();
             this.btn报警复位 = new System.Windows.Forms.Button();
             this.btn蜂鸣停止 = new System.Windows.Forms.Button();
             this.CB_TypeOfTray = new System.Windows.Forms.ComboBox();
@@ -1408,14 +1415,12 @@
             this.label469 = new System.Windows.Forms.Label();
             this.label464 = new System.Windows.Forms.Label();
             this.label463 = new System.Windows.Forms.Label();
-            this.GB_Modify = new System.Windows.Forms.GroupBox();
-            this.LB_Password = new System.Windows.Forms.Label();
-            this.LB_NewPassword = new System.Windows.Forms.Label();
-            this.TB_Password = new System.Windows.Forms.TextBox();
-            this.TB_NewPassword = new System.Windows.Forms.TextBox();
-            this.BTN_Modify = new System.Windows.Forms.Button();
+            this.LB_ConnectionStatus = new System.Windows.Forms.Label();
+            this.CB_TypeOfProduction = new System.Windows.Forms.ComboBox();
+            this.LB_TypeOfProduction = new System.Windows.Forms.Label();
             this.TC_Main.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.GB_Modify.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox20.SuspendLayout();
             this.groupBox19.SuspendLayout();
@@ -1495,7 +1500,6 @@
             this.groupBox62.SuspendLayout();
             this.groupBox65.SuspendLayout();
             this.groupBox63.SuspendLayout();
-            this.GB_Modify.SuspendLayout();
             this.SuspendLayout();
             // 
             // TC_Main
@@ -1525,6 +1529,10 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.LB_TypeOfProduction);
+            this.tabPage1.Controls.Add(this.CB_TypeOfProduction);
+            this.tabPage1.Controls.Add(this.LB_ConnectionStatus);
+            this.tabPage1.Controls.Add(this.LB_Connection);
             this.tabPage1.Controls.Add(this.GB_Modify);
             this.tabPage1.Controls.Add(this.btn报警复位);
             this.tabPage1.Controls.Add(this.btn蜂鸣停止);
@@ -1544,6 +1552,74 @@
             this.tabPage1.Text = "自动操作";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // LB_Connection
+            // 
+            this.LB_Connection.AutoSize = true;
+            this.LB_Connection.BackColor = System.Drawing.Color.White;
+            this.LB_Connection.Location = new System.Drawing.Point(442, 41);
+            this.LB_Connection.Name = "LB_Connection";
+            this.LB_Connection.Size = new System.Drawing.Size(32, 17);
+            this.LB_Connection.TabIndex = 11;
+            this.LB_Connection.Text = "      ";
+            // 
+            // GB_Modify
+            // 
+            this.GB_Modify.Controls.Add(this.BTN_Modify);
+            this.GB_Modify.Controls.Add(this.TB_NewPassword);
+            this.GB_Modify.Controls.Add(this.TB_Password);
+            this.GB_Modify.Controls.Add(this.LB_NewPassword);
+            this.GB_Modify.Controls.Add(this.LB_Password);
+            this.GB_Modify.Location = new System.Drawing.Point(8, 5);
+            this.GB_Modify.Name = "GB_Modify";
+            this.GB_Modify.Size = new System.Drawing.Size(218, 167);
+            this.GB_Modify.TabIndex = 10;
+            this.GB_Modify.TabStop = false;
+            this.GB_Modify.Text = "修改密码";
+            // 
+            // BTN_Modify
+            // 
+            this.BTN_Modify.Location = new System.Drawing.Point(115, 126);
+            this.BTN_Modify.Name = "BTN_Modify";
+            this.BTN_Modify.Size = new System.Drawing.Size(75, 23);
+            this.BTN_Modify.TabIndex = 4;
+            this.BTN_Modify.Text = "修改";
+            this.BTN_Modify.UseVisualStyleBackColor = true;
+            this.BTN_Modify.Click += new System.EventHandler(this.BTN_Modify_Click);
+            // 
+            // TB_NewPassword
+            // 
+            this.TB_NewPassword.Location = new System.Drawing.Point(90, 85);
+            this.TB_NewPassword.Name = "TB_NewPassword";
+            this.TB_NewPassword.PasswordChar = '*';
+            this.TB_NewPassword.Size = new System.Drawing.Size(100, 24);
+            this.TB_NewPassword.TabIndex = 3;
+            // 
+            // TB_Password
+            // 
+            this.TB_Password.Location = new System.Drawing.Point(90, 36);
+            this.TB_Password.Name = "TB_Password";
+            this.TB_Password.PasswordChar = '*';
+            this.TB_Password.Size = new System.Drawing.Size(100, 24);
+            this.TB_Password.TabIndex = 2;
+            // 
+            // LB_NewPassword
+            // 
+            this.LB_NewPassword.AutoSize = true;
+            this.LB_NewPassword.Location = new System.Drawing.Point(12, 88);
+            this.LB_NewPassword.Name = "LB_NewPassword";
+            this.LB_NewPassword.Size = new System.Drawing.Size(72, 17);
+            this.LB_NewPassword.TabIndex = 1;
+            this.LB_NewPassword.Text = "确认密码";
+            // 
+            // LB_Password
+            // 
+            this.LB_Password.AutoSize = true;
+            this.LB_Password.Location = new System.Drawing.Point(28, 39);
+            this.LB_Password.Name = "LB_Password";
+            this.LB_Password.Size = new System.Drawing.Size(56, 17);
+            this.LB_Password.TabIndex = 0;
+            this.LB_Password.Text = "新密码";
+            // 
             // btn报警复位
             // 
             this.btn报警复位.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
@@ -1556,8 +1632,7 @@
             this.btn报警复位.TabIndex = 9;
             this.btn报警复位.Text = "报警复位";
             this.btn报警复位.UseVisualStyleBackColor = false;
-            this.btn报警复位.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn报警复位_MouseDown);
-            this.btn报警复位.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn报警复位_MouseUp);
+            this.btn报警复位.Click += new System.EventHandler(this.btn报警复位_Click);
             // 
             // btn蜂鸣停止
             // 
@@ -1571,6 +1646,7 @@
             this.btn蜂鸣停止.TabIndex = 8;
             this.btn蜂鸣停止.Text = "蜂鸣停止";
             this.btn蜂鸣停止.UseVisualStyleBackColor = false;
+            this.btn蜂鸣停止.Click += new System.EventHandler(this.btn蜂鸣停止_Click);
             this.btn蜂鸣停止.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn蜂鸣停止_MouseDown);
             this.btn蜂鸣停止.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn蜂鸣停止_MouseUp);
             // 
@@ -1581,6 +1657,7 @@
             this.CB_TypeOfTray.Name = "CB_TypeOfTray";
             this.CB_TypeOfTray.Size = new System.Drawing.Size(121, 24);
             this.CB_TypeOfTray.TabIndex = 7;
+            this.CB_TypeOfTray.SelectedIndexChanged += new System.EventHandler(this.CB_TypeOfTray_SelectedIndexChanged);
             // 
             // LB_TypeOfTray
             // 
@@ -18719,63 +18796,32 @@
             this.label463.TabIndex = 71;
             this.label463.Text = "mm/s";
             // 
-            // GB_Modify
+            // LB_ConnectionStatus
             // 
-            this.GB_Modify.Controls.Add(this.BTN_Modify);
-            this.GB_Modify.Controls.Add(this.TB_NewPassword);
-            this.GB_Modify.Controls.Add(this.TB_Password);
-            this.GB_Modify.Controls.Add(this.LB_NewPassword);
-            this.GB_Modify.Controls.Add(this.LB_Password);
-            this.GB_Modify.Location = new System.Drawing.Point(8, 5);
-            this.GB_Modify.Name = "GB_Modify";
-            this.GB_Modify.Size = new System.Drawing.Size(218, 167);
-            this.GB_Modify.TabIndex = 10;
-            this.GB_Modify.TabStop = false;
-            this.GB_Modify.Text = "修改密码";
+            this.LB_ConnectionStatus.AutoSize = true;
+            this.LB_ConnectionStatus.Location = new System.Drawing.Point(353, 41);
+            this.LB_ConnectionStatus.Name = "LB_ConnectionStatus";
+            this.LB_ConnectionStatus.Size = new System.Drawing.Size(88, 17);
+            this.LB_ConnectionStatus.TabIndex = 12;
+            this.LB_ConnectionStatus.Text = "连接状态：";
             // 
-            // LB_Password
+            // CB_TypeOfProduction
             // 
-            this.LB_Password.AutoSize = true;
-            this.LB_Password.Location = new System.Drawing.Point(28, 39);
-            this.LB_Password.Name = "LB_Password";
-            this.LB_Password.Size = new System.Drawing.Size(56, 17);
-            this.LB_Password.TabIndex = 0;
-            this.LB_Password.Text = "新密码";
+            this.CB_TypeOfProduction.FormattingEnabled = true;
+            this.CB_TypeOfProduction.Location = new System.Drawing.Point(445, 130);
+            this.CB_TypeOfProduction.Name = "CB_TypeOfProduction";
+            this.CB_TypeOfProduction.Size = new System.Drawing.Size(121, 24);
+            this.CB_TypeOfProduction.TabIndex = 13;
+            this.CB_TypeOfProduction.SelectedIndexChanged += new System.EventHandler(this.CB_TypeOfProduction_SelectedIndexChanged);
             // 
-            // LB_NewPassword
+            // LB_TypeOfProduction
             // 
-            this.LB_NewPassword.AutoSize = true;
-            this.LB_NewPassword.Location = new System.Drawing.Point(12, 88);
-            this.LB_NewPassword.Name = "LB_NewPassword";
-            this.LB_NewPassword.Size = new System.Drawing.Size(72, 17);
-            this.LB_NewPassword.TabIndex = 1;
-            this.LB_NewPassword.Text = "确认密码";
-            // 
-            // TB_Password
-            // 
-            this.TB_Password.Location = new System.Drawing.Point(90, 36);
-            this.TB_Password.Name = "TB_Password";
-            this.TB_Password.PasswordChar = '*';
-            this.TB_Password.Size = new System.Drawing.Size(100, 24);
-            this.TB_Password.TabIndex = 2;
-            // 
-            // TB_NewPassword
-            // 
-            this.TB_NewPassword.Location = new System.Drawing.Point(90, 85);
-            this.TB_NewPassword.Name = "TB_NewPassword";
-            this.TB_NewPassword.PasswordChar = '*';
-            this.TB_NewPassword.Size = new System.Drawing.Size(100, 24);
-            this.TB_NewPassword.TabIndex = 3;
-            // 
-            // BTN_Modify
-            // 
-            this.BTN_Modify.Location = new System.Drawing.Point(115, 126);
-            this.BTN_Modify.Name = "BTN_Modify";
-            this.BTN_Modify.Size = new System.Drawing.Size(75, 23);
-            this.BTN_Modify.TabIndex = 4;
-            this.BTN_Modify.Text = "修改";
-            this.BTN_Modify.UseVisualStyleBackColor = true;
-            this.BTN_Modify.Click += new System.EventHandler(this.BTN_Modify_Click);
+            this.LB_TypeOfProduction.AutoSize = true;
+            this.LB_TypeOfProduction.Location = new System.Drawing.Point(354, 133);
+            this.LB_TypeOfProduction.Name = "LB_TypeOfProduction";
+            this.LB_TypeOfProduction.Size = new System.Drawing.Size(88, 17);
+            this.LB_TypeOfProduction.TabIndex = 14;
+            this.LB_TypeOfProduction.Text = "产品种类：";
             // 
             // Form1
             // 
@@ -18791,6 +18837,8 @@
             this.TC_Main.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.GB_Modify.ResumeLayout(false);
+            this.GB_Modify.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.groupBox20.ResumeLayout(false);
             this.groupBox19.ResumeLayout(false);
@@ -18931,8 +18979,6 @@
             this.groupBox65.PerformLayout();
             this.groupBox63.ResumeLayout(false);
             this.groupBox63.PerformLayout();
-            this.GB_Modify.ResumeLayout(false);
-            this.GB_Modify.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -20325,6 +20371,10 @@
         private System.Windows.Forms.TextBox TB_Password;
         private System.Windows.Forms.Label LB_NewPassword;
         private System.Windows.Forms.Label LB_Password;
+        private System.Windows.Forms.Label LB_Connection;
+        private System.Windows.Forms.Label LB_ConnectionStatus;
+        private System.Windows.Forms.ComboBox CB_TypeOfProduction;
+        private System.Windows.Forms.Label LB_TypeOfProduction;
     }
 }
 

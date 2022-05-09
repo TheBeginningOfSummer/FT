@@ -80,8 +80,8 @@ namespace FT.Data
             TrayNumber = trayNumber;
             PosInTray = posInTray;
             Appearance = appearance;
-            StartTime = startTime;
-            EndTime = endTime;
+            StartTime = DateConverter(startTime);
+            EndTime = DateConverter(endTime);
             //Date = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
         }
 
@@ -104,7 +104,13 @@ namespace FT.Data
             //EndTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
         }
 
-        
+        private string DateConverter(string date)
+        {
+            if (date.Length == 14)
+                return (date.Substring(0, 4) + "-" + date.Substring(4, 2) + "-" + date.Substring(6, 2) + " " + date.Substring(8, 2) + ":" + date.Substring(10, 2) + ":" + date.Substring(12, 2));
+            else
+                return ("error");
+        }
     }
 
     public class Tray

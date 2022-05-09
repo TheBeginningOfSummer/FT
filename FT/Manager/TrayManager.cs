@@ -62,6 +62,7 @@ namespace FT
         /// <param name="sensorData">收到的探测器数据</param>
         public void SetSensorDataInTray(SensorData sensorData)
         {
+            if (TrayIndex <= 0) return;
             SensorData sensor = Trays[TrayIndex].Sensors[sensorData.PosInTray];
             sensor.SensorCode = sensorData.SensorCode;
             sensor.SensorType = sensorData.SensorType;
