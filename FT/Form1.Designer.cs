@@ -30,6 +30,9 @@
         {
             this.TC_Main = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.LB_TypeOfProduction = new System.Windows.Forms.Label();
+            this.CB_TypeOfProduction = new System.Windows.Forms.ComboBox();
+            this.LB_ConnectionStatus = new System.Windows.Forms.Label();
             this.LB_Connection = new System.Windows.Forms.Label();
             this.GB_Modify = new System.Windows.Forms.GroupBox();
             this.BTN_Modify = new System.Windows.Forms.Button();
@@ -429,7 +432,6 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.GB_Trays = new System.Windows.Forms.GroupBox();
             this.PN_Trays = new System.Windows.Forms.Panel();
-            this.BTN_Mapping = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.label266 = new System.Windows.Forms.Label();
             this.label267 = new System.Windows.Forms.Label();
@@ -1415,9 +1417,12 @@
             this.label469 = new System.Windows.Forms.Label();
             this.label464 = new System.Windows.Forms.Label();
             this.label463 = new System.Windows.Forms.Label();
-            this.LB_ConnectionStatus = new System.Windows.Forms.Label();
-            this.CB_TypeOfProduction = new System.Windows.Forms.ComboBox();
-            this.LB_TypeOfProduction = new System.Windows.Forms.Label();
+            this.GB_Coonnection = new System.Windows.Forms.GroupBox();
+            this.BTN_打开端口 = new System.Windows.Forms.Button();
+            this.BTN_关闭端口 = new System.Windows.Forms.Button();
+            this.BTN_Mapping = new System.Windows.Forms.Button();
+            this.BTN_SwitchUser = new System.Windows.Forms.Button();
+            this.BTN_Output = new System.Windows.Forms.Button();
             this.TC_Main.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.GB_Modify.SuspendLayout();
@@ -1456,7 +1461,6 @@
             this.groupBox33.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.GB_Trays.SuspendLayout();
-            this.PN_Trays.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.groupBox14.SuspendLayout();
             this.groupBox13.SuspendLayout();
@@ -1500,6 +1504,7 @@
             this.groupBox62.SuspendLayout();
             this.groupBox65.SuspendLayout();
             this.groupBox63.SuspendLayout();
+            this.GB_Coonnection.SuspendLayout();
             this.SuspendLayout();
             // 
             // TC_Main
@@ -1529,10 +1534,11 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.BTN_SwitchUser);
+            this.tabPage1.Controls.Add(this.BTN_Mapping);
+            this.tabPage1.Controls.Add(this.GB_Coonnection);
             this.tabPage1.Controls.Add(this.LB_TypeOfProduction);
             this.tabPage1.Controls.Add(this.CB_TypeOfProduction);
-            this.tabPage1.Controls.Add(this.LB_ConnectionStatus);
-            this.tabPage1.Controls.Add(this.LB_Connection);
             this.tabPage1.Controls.Add(this.GB_Modify);
             this.tabPage1.Controls.Add(this.btn报警复位);
             this.tabPage1.Controls.Add(this.btn蜂鸣停止);
@@ -1552,11 +1558,38 @@
             this.tabPage1.Text = "自动操作";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // LB_TypeOfProduction
+            // 
+            this.LB_TypeOfProduction.AutoSize = true;
+            this.LB_TypeOfProduction.Location = new System.Drawing.Point(538, 98);
+            this.LB_TypeOfProduction.Name = "LB_TypeOfProduction";
+            this.LB_TypeOfProduction.Size = new System.Drawing.Size(88, 17);
+            this.LB_TypeOfProduction.TabIndex = 14;
+            this.LB_TypeOfProduction.Text = "产品种类：";
+            // 
+            // CB_TypeOfProduction
+            // 
+            this.CB_TypeOfProduction.FormattingEnabled = true;
+            this.CB_TypeOfProduction.Location = new System.Drawing.Point(629, 95);
+            this.CB_TypeOfProduction.Name = "CB_TypeOfProduction";
+            this.CB_TypeOfProduction.Size = new System.Drawing.Size(121, 24);
+            this.CB_TypeOfProduction.TabIndex = 13;
+            this.CB_TypeOfProduction.SelectedIndexChanged += new System.EventHandler(this.CB_TypeOfProduction_SelectedIndexChanged);
+            // 
+            // LB_ConnectionStatus
+            // 
+            this.LB_ConnectionStatus.AutoSize = true;
+            this.LB_ConnectionStatus.Location = new System.Drawing.Point(15, 32);
+            this.LB_ConnectionStatus.Name = "LB_ConnectionStatus";
+            this.LB_ConnectionStatus.Size = new System.Drawing.Size(88, 17);
+            this.LB_ConnectionStatus.TabIndex = 12;
+            this.LB_ConnectionStatus.Text = "连接状态：";
+            // 
             // LB_Connection
             // 
             this.LB_Connection.AutoSize = true;
             this.LB_Connection.BackColor = System.Drawing.Color.White;
-            this.LB_Connection.Location = new System.Drawing.Point(442, 41);
+            this.LB_Connection.Location = new System.Drawing.Point(104, 32);
             this.LB_Connection.Name = "LB_Connection";
             this.LB_Connection.Size = new System.Drawing.Size(32, 17);
             this.LB_Connection.TabIndex = 11;
@@ -1647,13 +1680,11 @@
             this.btn蜂鸣停止.Text = "蜂鸣停止";
             this.btn蜂鸣停止.UseVisualStyleBackColor = false;
             this.btn蜂鸣停止.Click += new System.EventHandler(this.btn蜂鸣停止_Click);
-            this.btn蜂鸣停止.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn蜂鸣停止_MouseDown);
-            this.btn蜂鸣停止.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn蜂鸣停止_MouseUp);
             // 
             // CB_TypeOfTray
             // 
             this.CB_TypeOfTray.FormattingEnabled = true;
-            this.CB_TypeOfTray.Location = new System.Drawing.Point(445, 87);
+            this.CB_TypeOfTray.Location = new System.Drawing.Point(629, 52);
             this.CB_TypeOfTray.Name = "CB_TypeOfTray";
             this.CB_TypeOfTray.Size = new System.Drawing.Size(121, 24);
             this.CB_TypeOfTray.TabIndex = 7;
@@ -1662,7 +1693,7 @@
             // LB_TypeOfTray
             // 
             this.LB_TypeOfTray.AutoSize = true;
-            this.LB_TypeOfTray.Location = new System.Drawing.Point(354, 90);
+            this.LB_TypeOfTray.Location = new System.Drawing.Point(538, 55);
             this.LB_TypeOfTray.Name = "LB_TypeOfTray";
             this.LB_TypeOfTray.Size = new System.Drawing.Size(88, 17);
             this.LB_TypeOfTray.TabIndex = 6;
@@ -1679,8 +1710,7 @@
             this.btn手动模式.TabIndex = 5;
             this.btn手动模式.Text = "手动模式";
             this.btn手动模式.UseVisualStyleBackColor = true;
-            this.btn手动模式.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn手动模式_MouseDown);
-            this.btn手动模式.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn手动模式_MouseUp);
+            this.btn手动模式.Click += new System.EventHandler(this.btn手动模式_Click);
             // 
             // btn初始化
             // 
@@ -1693,8 +1723,7 @@
             this.btn初始化.TabIndex = 4;
             this.btn初始化.Text = "初始化";
             this.btn初始化.UseVisualStyleBackColor = true;
-            this.btn初始化.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn初始化_MouseDown);
-            this.btn初始化.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn初始化_MouseUp);
+            this.btn初始化.Click += new System.EventHandler(this.btn初始化_Click);
             // 
             // btn自动停止
             // 
@@ -1707,8 +1736,7 @@
             this.btn自动停止.TabIndex = 3;
             this.btn自动停止.Text = "自动停止";
             this.btn自动停止.UseVisualStyleBackColor = true;
-            this.btn自动停止.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn自动停止_MouseDown);
-            this.btn自动停止.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn自动停止_MouseUp);
+            this.btn自动停止.Click += new System.EventHandler(this.btn自动停止_Click);
             // 
             // btn自动运行
             // 
@@ -1721,8 +1749,7 @@
             this.btn自动运行.TabIndex = 2;
             this.btn自动运行.Text = "自动运行";
             this.btn自动运行.UseVisualStyleBackColor = true;
-            this.btn自动运行.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn自动运行_MouseDown);
-            this.btn自动运行.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn自动运行_MouseUp);
+            this.btn自动运行.Click += new System.EventHandler(this.btn自动运行_Click);
             // 
             // btn自动模式
             // 
@@ -1735,8 +1762,7 @@
             this.btn自动模式.TabIndex = 1;
             this.btn自动模式.Text = "自动模式";
             this.btn自动模式.UseVisualStyleBackColor = true;
-            this.btn自动模式.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn自动模式_MouseDown);
-            this.btn自动模式.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn自动模式_MouseUp);
+            this.btn自动模式.Click += new System.EventHandler(this.btn自动模式_Click);
             // 
             // tabPage2
             // 
@@ -6906,23 +6932,11 @@
             // 
             this.PN_Trays.AutoScroll = true;
             this.PN_Trays.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.PN_Trays.Controls.Add(this.BTN_Mapping);
             this.PN_Trays.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PN_Trays.Location = new System.Drawing.Point(3, 20);
             this.PN_Trays.Name = "PN_Trays";
             this.PN_Trays.Size = new System.Drawing.Size(1250, 711);
             this.PN_Trays.TabIndex = 0;
-            // 
-            // BTN_Mapping
-            // 
-            this.BTN_Mapping.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.BTN_Mapping.Location = new System.Drawing.Point(5, 681);
-            this.BTN_Mapping.Name = "BTN_Mapping";
-            this.BTN_Mapping.Size = new System.Drawing.Size(100, 25);
-            this.BTN_Mapping.TabIndex = 2;
-            this.BTN_Mapping.Text = "Mapping测试";
-            this.BTN_Mapping.UseVisualStyleBackColor = true;
-            this.BTN_Mapping.Click += new System.EventHandler(this.BTN_Mapping_Click);
             // 
             // tabPage4
             // 
@@ -17679,6 +17693,7 @@
             // 
             // InquireCondition
             // 
+            this.InquireCondition.Controls.Add(this.BTN_Output);
             this.InquireCondition.Controls.Add(this.LB_SensorCode);
             this.InquireCondition.Controls.Add(this.CB_SensorType);
             this.InquireCondition.Controls.Add(this.BTN_SensorInquire);
@@ -17692,7 +17707,7 @@
             this.InquireCondition.Size = new System.Drawing.Size(200, 196);
             this.InquireCondition.TabIndex = 15;
             this.InquireCondition.TabStop = false;
-            this.InquireCondition.Text = "查询条件";
+            this.InquireCondition.Text = "查询";
             // 
             // LB_SensorCode
             // 
@@ -18796,32 +18811,69 @@
             this.label463.TabIndex = 71;
             this.label463.Text = "mm/s";
             // 
-            // LB_ConnectionStatus
+            // GB_Coonnection
             // 
-            this.LB_ConnectionStatus.AutoSize = true;
-            this.LB_ConnectionStatus.Location = new System.Drawing.Point(353, 41);
-            this.LB_ConnectionStatus.Name = "LB_ConnectionStatus";
-            this.LB_ConnectionStatus.Size = new System.Drawing.Size(88, 17);
-            this.LB_ConnectionStatus.TabIndex = 12;
-            this.LB_ConnectionStatus.Text = "连接状态：";
+            this.GB_Coonnection.Controls.Add(this.BTN_关闭端口);
+            this.GB_Coonnection.Controls.Add(this.BTN_打开端口);
+            this.GB_Coonnection.Controls.Add(this.LB_ConnectionStatus);
+            this.GB_Coonnection.Controls.Add(this.LB_Connection);
+            this.GB_Coonnection.Location = new System.Drawing.Point(273, 23);
+            this.GB_Coonnection.Name = "GB_Coonnection";
+            this.GB_Coonnection.Size = new System.Drawing.Size(218, 131);
+            this.GB_Coonnection.TabIndex = 15;
+            this.GB_Coonnection.TabStop = false;
+            this.GB_Coonnection.Text = "连接";
             // 
-            // CB_TypeOfProduction
+            // BTN_打开端口
             // 
-            this.CB_TypeOfProduction.FormattingEnabled = true;
-            this.CB_TypeOfProduction.Location = new System.Drawing.Point(445, 130);
-            this.CB_TypeOfProduction.Name = "CB_TypeOfProduction";
-            this.CB_TypeOfProduction.Size = new System.Drawing.Size(121, 24);
-            this.CB_TypeOfProduction.TabIndex = 13;
-            this.CB_TypeOfProduction.SelectedIndexChanged += new System.EventHandler(this.CB_TypeOfProduction_SelectedIndexChanged);
+            this.BTN_打开端口.Location = new System.Drawing.Point(18, 79);
+            this.BTN_打开端口.Name = "BTN_打开端口";
+            this.BTN_打开端口.Size = new System.Drawing.Size(75, 23);
+            this.BTN_打开端口.TabIndex = 13;
+            this.BTN_打开端口.Text = "打开端口";
+            this.BTN_打开端口.UseVisualStyleBackColor = true;
+            this.BTN_打开端口.Click += new System.EventHandler(this.BTN_打开端口_Click);
             // 
-            // LB_TypeOfProduction
+            // BTN_关闭端口
             // 
-            this.LB_TypeOfProduction.AutoSize = true;
-            this.LB_TypeOfProduction.Location = new System.Drawing.Point(354, 133);
-            this.LB_TypeOfProduction.Name = "LB_TypeOfProduction";
-            this.LB_TypeOfProduction.Size = new System.Drawing.Size(88, 17);
-            this.LB_TypeOfProduction.TabIndex = 14;
-            this.LB_TypeOfProduction.Text = "产品种类：";
+            this.BTN_关闭端口.Location = new System.Drawing.Point(121, 79);
+            this.BTN_关闭端口.Name = "BTN_关闭端口";
+            this.BTN_关闭端口.Size = new System.Drawing.Size(75, 23);
+            this.BTN_关闭端口.TabIndex = 14;
+            this.BTN_关闭端口.Text = "关闭端口";
+            this.BTN_关闭端口.UseVisualStyleBackColor = true;
+            this.BTN_关闭端口.Click += new System.EventHandler(this.BTN_关闭端口_Click);
+            // 
+            // BTN_Mapping
+            // 
+            this.BTN_Mapping.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.BTN_Mapping.Location = new System.Drawing.Point(93, 300);
+            this.BTN_Mapping.Name = "BTN_Mapping";
+            this.BTN_Mapping.Size = new System.Drawing.Size(100, 25);
+            this.BTN_Mapping.TabIndex = 16;
+            this.BTN_Mapping.Text = "Mapping测试";
+            this.BTN_Mapping.UseVisualStyleBackColor = true;
+            this.BTN_Mapping.Click += new System.EventHandler(this.BTN_Mapping_Click);
+            // 
+            // BTN_SwitchUser
+            // 
+            this.BTN_SwitchUser.Location = new System.Drawing.Point(346, 301);
+            this.BTN_SwitchUser.Name = "BTN_SwitchUser";
+            this.BTN_SwitchUser.Size = new System.Drawing.Size(98, 24);
+            this.BTN_SwitchUser.TabIndex = 17;
+            this.BTN_SwitchUser.Text = "切换用户";
+            this.BTN_SwitchUser.UseVisualStyleBackColor = true;
+            this.BTN_SwitchUser.Click += new System.EventHandler(this.BTN_SwitchUser_Click);
+            // 
+            // BTN_Output
+            // 
+            this.BTN_Output.Location = new System.Drawing.Point(93, 162);
+            this.BTN_Output.Name = "BTN_Output";
+            this.BTN_Output.Size = new System.Drawing.Size(75, 23);
+            this.BTN_Output.TabIndex = 17;
+            this.BTN_Output.Text = "导出";
+            this.BTN_Output.UseVisualStyleBackColor = true;
+            this.BTN_Output.Click += new System.EventHandler(this.BTN_Output_Click);
             // 
             // Form1
             // 
@@ -18898,7 +18950,6 @@
             this.groupBox33.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.GB_Trays.ResumeLayout(false);
-            this.PN_Trays.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             this.groupBox14.ResumeLayout(false);
@@ -18979,6 +19030,8 @@
             this.groupBox65.PerformLayout();
             this.groupBox63.ResumeLayout(false);
             this.groupBox63.PerformLayout();
+            this.GB_Coonnection.ResumeLayout(false);
+            this.GB_Coonnection.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -20036,7 +20089,6 @@
         private System.Windows.Forms.ComboBox CB_SensorType;
         private System.Windows.Forms.Label LB_SensorType;
         private System.Windows.Forms.GroupBox GB_Trays;
-        private System.Windows.Forms.Button BTN_Mapping;
         private System.Windows.Forms.Panel PN_Trays;
         private System.Windows.Forms.Button btnBYX视觉位置2;
         private System.Windows.Forms.Button btnBYZ视觉位置3;
@@ -20375,6 +20427,12 @@
         private System.Windows.Forms.Label LB_ConnectionStatus;
         private System.Windows.Forms.ComboBox CB_TypeOfProduction;
         private System.Windows.Forms.Label LB_TypeOfProduction;
+        private System.Windows.Forms.GroupBox GB_Coonnection;
+        private System.Windows.Forms.Button BTN_关闭端口;
+        private System.Windows.Forms.Button BTN_打开端口;
+        private System.Windows.Forms.Button BTN_Mapping;
+        private System.Windows.Forms.Button BTN_SwitchUser;
+        private System.Windows.Forms.Button BTN_Output;
     }
 }
 

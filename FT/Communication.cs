@@ -61,7 +61,7 @@ namespace FT
         public double[] WritePLCPmt { get; set; }
         #endregion
 
-        private Communication() 
+        private Communication()
         {
             compolet = CompoletSingleton.GetCompolet();
 

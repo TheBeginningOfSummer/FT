@@ -2,6 +2,7 @@
 using MyToolkit;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace FT
 {
@@ -53,7 +54,7 @@ namespace FT
         /// <param name="trayNumber">托盘编号</param>
         public void SetTrayNumber(string trayNumber)
         {
-            Trays[TrayIndex].TrayNumber = trayNumber;
+            Trays[TrayIndex - 1].TrayNumber = trayNumber;
         }
 
         /// <summary>
@@ -63,7 +64,8 @@ namespace FT
         public void SetSensorDataInTray(SensorData sensorData)
         {
             if (TrayIndex <= 0) return;
-            SensorData sensor = Trays[TrayIndex].Sensors[sensorData.PosInTray];
+            SensorData sensor = Trays[TrayIndex - 1].Sensors[sensorData.PosInTray];
+            //SensorData sensor1 = Trays.Where((tray) => tray.TrayNumber == sensorData.TrayNumber).FirstOrDefault().Sensors[sensorData.PosInTray];
             sensor.SensorCode = sensorData.SensorCode;
             sensor.SensorType = sensorData.SensorType;
             sensor.TestStation = sensorData.TestStation;

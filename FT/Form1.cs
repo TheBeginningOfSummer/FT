@@ -3,6 +3,7 @@ using MyToolkit;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -34,8 +35,7 @@ namespace FT
             }
             catch (Exception ex)
             {
-                //this.Error = ex.ToString();
-                throw ex;
+                MessageBox.Show(ex.Message, "打开端口");
             }
 
             try
@@ -47,7 +47,7 @@ namespace FT
                 CB_SensorType.Items.Add("");
                 CB_SensorType.Items.Add("金属");
                 CB_SensorType.Items.Add("陶瓷");
-                CB_SensorType.Items.Add("晶元");
+                CB_SensorType.Items.Add("晶圆");
                 //设置查询时间上下限
                 DTP_MinTime.Value = Convert.ToDateTime(DateTime.Now.AddDays(-7));
                 DTP_MaxTime.Value = Convert.ToDateTime(DateTime.Now.AddDays(1));
@@ -83,7 +83,7 @@ namespace FT
                 {
                     try
                     {
-                        Thread.Sleep(1);
+                        Thread.Sleep(10);
                         communication.RefreshData();
 
                         if (communication.ReadTestInformation[20] != "" && communication.ReadTestInformation[20] != null)
@@ -98,6 +98,7 @@ namespace FT
                         //托盘数据初始化
                         if (communication.ReadFlagBits[2])
                         {
+                            PN_Trays.Controls.Clear();
                             trayManager.InitializeTrays(CB_TypeOfTray.Text);
                             foreach (var tray in trayManager.Trays)
                             {
@@ -118,7 +119,8 @@ namespace FT
                         //产品测试完成
                         if (communication.ReadFlagBits[1])
                         {
-                            SensorData sensor = new SensorData(communication.ReadTestInformation[0],
+                            SensorData sensor = new SensorData(
+                                communication.ReadTestInformation[0],
                                 communication.ReadTestInformation[1],
                                 communication.ReadTestInformation[2],
                                 int.Parse(communication.ReadTestInformation[3]),
@@ -591,10 +593,9 @@ namespace FT
                         SetTextBoxText(txt黑体轴手动速度, communication.ReadPLCPmt[24]);
                         #endregion
                     }
-                    catch (Exception e)
+                    catch (Exception)
                     {
-                        string fff = e.Message;
-                        //logfile.Writelog("数据更新循环：" + e.Message);
+                        //Invoke(new Action(() => { MessageBox.Show(e.Message, "信息更新"); }));
                     }
                 }
             });
@@ -645,6 +646,69 @@ namespace FT
             textBox.Invoke(new Action(() => textBox.Text = variable.ToString()));
         }
 
+        public void DataToExcel(DataGridView m_DataView)
+        {
+            SaveFileDialog kk = new SaveFileDialog();
+            kk.Title = "保存EXECL文件";
+            kk.Filter = "EXECL文件(*.xls) |*.xls |所有文件(*.*) |*.*";
+            kk.FilterIndex = 1;
+            kk.FileName = DateTime.Now.ToString("D");
+            if (kk.ShowDialog() == DialogResult.OK)
+            {
+                string FileName = kk.FileName;
+                if (File.Exists(FileName))
+                    File.Delete(FileName);
+                FileStream objFileStream;
+                StreamWriter objStreamWriter;
+                string strLine = "";
+                objFileStream = new FileStream(FileName, FileMode.OpenOrCreate, FileAccess.Write);
+                objStreamWriter = new StreamWriter(objFileStream, System.Text.Encoding.Unicode);
+                for (int i = 0; i < m_DataView.Columns.Count; i++)
+                {
+                    if (m_DataView.Columns[i].Visible == true)
+                    {
+                        strLine = strLine + m_DataView.Columns[i].HeaderText.ToString() + Convert.ToChar(9);
+                    }
+                }
+                objStreamWriter.WriteLine(strLine);
+                strLine = "";
+
+                for (int i = 0; i < m_DataView.Rows.Count; i++)
+                {
+                    if (m_DataView.Columns[0].Visible == true)
+                    {
+                        if (m_DataView.Rows[i].Cells[0].Value == null)
+                            strLine = strLine + " " + Convert.ToChar(9);
+                        else
+                            strLine = strLine + m_DataView.Rows[i].Cells[0].Value.ToString() + Convert.ToChar(9);
+                    }
+                    for (int j = 1; j < m_DataView.Columns.Count; j++)
+                    {
+                        if (m_DataView.Columns[j].Visible == true)
+                        {
+                            if (m_DataView.Rows[i].Cells[j].Value == null)
+                                strLine = strLine + " " + Convert.ToChar(9);
+                            else
+                            {
+                                string rowstr = "";
+                                rowstr = m_DataView.Rows[i].Cells[j].Value.ToString();
+                                if (rowstr.IndexOf("\r\n") > 0)
+                                    rowstr = rowstr.Replace("\r\n", " ");
+                                if (rowstr.IndexOf("\t") > 0)
+                                    rowstr = rowstr.Replace("\t", " ");
+                                strLine = strLine + rowstr + Convert.ToChar(9);
+                            }
+                        }
+                    }
+                    objStreamWriter.WriteLine(strLine);
+                    strLine = "";
+                }
+                objStreamWriter.Close();
+                objFileStream.Close();
+                MessageBox.Show(this, "保存EXCEL成功", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
         #region 数据库操作
         private void BTN_SensorInquire_Click(object sender, EventArgs e)
         {
@@ -657,17 +721,22 @@ namespace FT
                 MessageBox.Show(ex.Message, "查询数据");
             }
         }
+
+        private void BTN_Output_Click(object sender, EventArgs e)
+        {
+            DataToExcel(dataGridView);
+        }
         #endregion
 
         #region Mapping图操作
         private void BTN_Mapping_Click(object sender, EventArgs e)
         {
+            PN_Trays.Controls.Clear();
             trayManager.InitializeTrays(CB_TypeOfTray.Text);
             foreach (var tray in trayManager.Trays)
             {
                 tray.UpdateTrayLabel(PN_Trays);
             }
-            //PN_Trays.Controls.Clear();
         }
         
         private void CB_TypeOfTray_SelectedIndexChanged(object sender, EventArgs e)
@@ -679,3687 +748,3684 @@ namespace FT
         #region 示教1操作
         private void btnX示教吸1实盘第一列_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[30] = true;
+            communication.WriteVariable(true, "PlcInIO[30]");
         }
 
         private void btnX示教吸1实盘第一列_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[30] = false;
+            communication.WriteVariable(false, "PlcInIO[30]");
         }
-               
+
         private void btnX示教吸2实盘第一列_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[32] = true;
+            communication.WriteVariable(true, "PlcInIO[32]");
         }
 
         private void btnX示教吸2实盘第一列_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[32] = false;
+            communication.WriteVariable(false, "PlcInIO[32]");
         }
-               
+
         private void btnX示教实盘位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[34] = true;
+            communication.WriteVariable(true, "PlcInIO[34]");
         }
 
         private void btnX示教实盘位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[34] = false;
+            communication.WriteVariable(false, "PlcInIO[34]");
         }
 
         private void btnX示教倒实盘位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[35] = true;
+            communication.WriteVariable(true, "PlcInIO[35]");
         }
 
         private void btnX示教倒实盘位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[35] = false;
+            communication.WriteVariable(false, "PlcInIO[35]");
         }
 
         private void btnX示教NG盘位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[36] = true;
+            communication.WriteVariable(true, "PlcInIO[36]");
         }
 
         private void btnX示教NG盘位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[36] = false;
+            communication.WriteVariable(false, "PlcInIO[36]");
         }
 
         private void btnX示教倒NG盘位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[37] = true;
+            communication.WriteVariable(true, "PlcInIO[37]");
         }
 
         private void btnX示教倒NG盘位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[37] = false;
+            communication.WriteVariable(false, "PlcInIO[37]");
         }
 
         private void btnX示教夹爪位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[38] = true;
+            communication.WriteVariable(true, "PlcInIO[38]");
         }
 
         private void btnX示教夹爪位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[38] = false;
+            communication.WriteVariable(false, "PlcInIO[38]");
         }
 
         private void btnX示教扫码位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[39] = true;
+            communication.WriteVariable(true, "PlcInIO[39]");
         }
 
         private void btnX示教扫码位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[39] = false;
+            communication.WriteVariable(false, "PlcInIO[39]");
         }
 
         private void btnX示教吸1NG盘第一列_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[40] = true;
+            communication.WriteVariable(true, "PlcInIO[40]");
         }
 
         private void btnX示教吸1NG盘第一列_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[40] = false;
+            communication.WriteVariable(false, "PlcInIO[40]");
         }
 
         private void btnX示教吸2NG盘第一列_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[42] = true;
+            communication.WriteVariable(true, "PlcInIO[42]");
         }
 
         private void btnX示教吸2NG盘第一列_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[42] = false;
+            communication.WriteVariable(false, "PlcInIO[42]");
         }
 
         private void btnX示教吸1倒实盘第一列_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[51] = true;
+            communication.WriteVariable(true, "PlcInIO[51]");
         }
 
         private void btnX示教吸1倒实盘第一列_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[51] = false;
+            communication.WriteVariable(false, "PlcInIO[51]");
         }
 
         private void btnX示教吸2倒实盘第一列_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[53] = true;
+            communication.WriteVariable(true, "PlcInIO[53]");
         }
 
         private void btnX示教吸2倒实盘第一列_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[53] = false;
+            communication.WriteVariable(false, "PlcInIO[53]");
         }
 
         private void btnX示教视觉实盘第一列_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[190] = true;
+            communication.WriteVariable(true, "PlcInIO[190]");
         }
 
         private void btnX示教视觉实盘第一列_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[190] = false;
+            communication.WriteVariable(false, "PlcInIO[190]");
         }
 
         private void btnX示教视觉倒实盘第一列_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[192] = true;
+            communication.WriteVariable(true, "PlcInIO[192]");
         }
 
         private void btnX示教视觉倒实盘第一列_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[192] = false;
+            communication.WriteVariable(false, "PlcInIO[192]");
         }
 
         private void btnY示教吸1实盘第一行_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[31] = true;
+            communication.WriteVariable(true, "PlcInIO[31]");
         }
 
         private void btnY示教吸1实盘第一行_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[31] = false;
+            communication.WriteVariable(false, "PlcInIO[31]");
         }
 
         private void btnY示教吸1NG盘第一行_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[41] = true;
+            communication.WriteVariable(true, "PlcInIO[41]");
         }
 
         private void btnY示教吸1NG盘第一行_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[41] = false;
+            communication.WriteVariable(false, "PlcInIO[41]");
         }
 
         private void btnY示教吸2实盘第一行_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[33] = true;
+            communication.WriteVariable(true, "PlcInIO[33]");
         }
 
         private void btnY示教吸2实盘第一行_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[33] = false;
+            communication.WriteVariable(false, "PlcInIO[33]");
         }
-                
+
         private void btnY示教吸2NG盘第一行_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[43] = true;
+            communication.WriteVariable(true, "PlcInIO[43]");
         }
 
         private void btnY示教吸2NG盘第一行_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[43] = false;
+            communication.WriteVariable(false, "PlcInIO[43]");
         }
 
         private void btnY示教实盘位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[45] = true;
+            communication.WriteVariable(true, "PlcInIO[45]");
         }
 
         private void btnY示教实盘位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[45] = false;
+            communication.WriteVariable(false, "PlcInIO[45]");
         }
 
         private void btnY示教倒实盘位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[46] = true;
+            communication.WriteVariable(true, "PlcInIO[46]");
         }
 
         private void btnY示教倒实盘位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[46] = false;
+            communication.WriteVariable(false, "PlcInIO[46]");
         }
 
         private void btnY示教NG盘位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[47] = true;
+            communication.WriteVariable(true, "PlcInIO[47]");
         }
 
         private void btnY示教NG盘位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[47] = false;
+            communication.WriteVariable(false, "PlcInIO[47]");
         }
 
         private void btnY示教倒NG盘位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[48] = true;
+            communication.WriteVariable(true, "PlcInIO[48]");
         }
 
         private void btnY示教倒NG盘位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[48] = false;
+            communication.WriteVariable(false, "PlcInIO[48]");
         }
 
         private void btnY示教夹爪位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[49] = true;
+            communication.WriteVariable(true, "PlcInIO[49]");
         }
 
         private void btnY示教夹爪位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[49] = false;
+            communication.WriteVariable(false, "PlcInIO[49]");
         }
 
         private void btnY示教扫码位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[50] = true;
+            communication.WriteVariable(true, "PlcInIO[50]");
         }
 
         private void btnY示教扫码位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[50] = false;
+            communication.WriteVariable(false, "PlcInIO[50]");
         }
 
-        
         private void btnY示教吸1倒实盘第一行_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[52] = true;
+            communication.WriteVariable(true, "PlcInIO[52]");
         }
 
         private void btnY示教吸1倒实盘第一行_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[52] = false;
+            communication.WriteVariable(false, "PlcInIO[52]");
         }
 
-        
         private void btnY示教吸2倒实盘第一行_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[54] = true;
+            communication.WriteVariable(true, "PlcInIO[54]");
         }
 
         private void btnY示教吸2倒实盘第一行_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[54] = false;
+            communication.WriteVariable(false, "PlcInIO[54]");
         }
 
         private void btnY示教视觉实盘第一列_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[191] = true;
+            communication.WriteVariable(true, "PlcInIO[191]");
         }
 
         private void btnY示教视觉实盘第一列_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[191] = false;
+            communication.WriteVariable(false, "PlcInIO[191]");
         }
 
         private void btnY示教视觉倒实盘第一列_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[193] = true;
+            communication.WriteVariable(true, "PlcInIO[193]");
         }
 
         private void btnY示教视觉倒实盘第一列_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[193] = false;
+            communication.WriteVariable(false, "PlcInIO[193]");
         }
 
         private void btn实盘示教初始位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[56] = true;
+            communication.WriteVariable(true, "PlcInIO[56]");
         }
 
         private void btn实盘示教初始位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[56] = false;
+            communication.WriteVariable(false, "PlcInIO[56]");
         }
 
         private void btn实盘示教扫码位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[57] = true;
+            communication.WriteVariable(true, "PlcInIO[57]");
         }
 
         private void btn实盘示教扫码位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[57] = false;
+            communication.WriteVariable(false, "PlcInIO[57]");
         }
 
         private void btnNG盘示教初始位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[61] = true;
+            communication.WriteVariable(true, "PlcInIO[61]");
         }
 
         private void btnNG盘示教初始位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[61] = false;
+            communication.WriteVariable(false, "PlcInIO[61]");
         }
 
         private void btn倒实盘示教初始位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[62] = true;
+            communication.WriteVariable(true, "PlcInIO[62]");
         }
 
         private void btn倒实盘示教初始位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[62] = false;
+            communication.WriteVariable(false, "PlcInIO[62]");
         }
 
         private void btn倒NG盘示教初始位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[63] = true;
+            communication.WriteVariable(true, "PlcInIO[63]");
         }
 
         private void btn倒NG盘示教初始位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[63] = false;
+            communication.WriteVariable(false, "PlcInIO[63]");
         }
 
         private void btn平移示教上料位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[71] = true;
+            communication.WriteVariable(true, "PlcInIO[71]");
         }
 
         private void btn平移示教上料位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[71] = false;
+            communication.WriteVariable(false, "PlcInIO[71]");
         }
 
         private void btn平移示教下料位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[72] = true;
+            communication.WriteVariable(true, "PlcInIO[72]");
         }
 
         private void btn平移示教下料位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[72] = false;
+            communication.WriteVariable(false, "PlcInIO[72]");
         }
 
         private void btn平移示教中转位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[73] = true;
+            communication.WriteVariable(true, "PlcInIO[73]");
         }
 
         private void btn平移示教中转位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[73] = false;
+            communication.WriteVariable(false, "PlcInIO[73]");
         }
         #endregion
 
         #region 示教2操作
         private void btnBYX示教上料位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[76] = true;
+            communication.WriteVariable(true, "PlcInIO[76]");
         }
 
         private void btnBYX示教上料位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[76] = false;
+            communication.WriteVariable(false, "PlcInIO[76]");
         }
 
         private void btnBYX示教视觉1位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[77] = true;
+            communication.WriteVariable(true, "PlcInIO[77]");
         }
 
         private void btnBYX示教视觉1位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[77] = false;
+            communication.WriteVariable(false, "PlcInIO[77]");
         }
 
         private void btnBYX示教视觉2位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[78] = true;
+            communication.WriteVariable(true, "PlcInIO[78]");
         }
 
         private void btnBYX示教视觉2位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[78] = false;
+            communication.WriteVariable(false, "PlcInIO[78]");
         }
 
         private void btnBYX示教第一列_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[79] = true;
+            communication.WriteVariable(true, "PlcInIO[79]");
         }
 
         private void btnBYX示教第一列_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[79] = false;
+            communication.WriteVariable(false, "PlcInIO[79]");
         }
 
         private void btnBYX示教第二列_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[80] = true;
+            communication.WriteVariable(true, "PlcInIO[80]");
         }
 
         private void btnBYX示教第二列_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[80] = false;
+            communication.WriteVariable(false, "PlcInIO[80]");
         }
 
         private void btnBYX示教第三列_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[81] = true;
+            communication.WriteVariable(true, "PlcInIO[81]");
         }
 
         private void btnBYX示教第三列_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[81] = false;
+            communication.WriteVariable(false, "PlcInIO[81]");
         }
 
         private void btnBYX示教第四列_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[82] = true;
+            communication.WriteVariable(true, "PlcInIO[82]");
         }
 
         private void btnBYX示教第四列_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[82] = false;
+            communication.WriteVariable(false, "PlcInIO[82]");
         }
 
         private void btnBYX示教第五列_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[83] = true;
+            communication.WriteVariable(true, "PlcInIO[83]");
         }
 
         private void btnBYX示教第五列_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[83] = false;
+            communication.WriteVariable(false, "PlcInIO[83]");
         }
 
         private void btnBYX示教第六列_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[84] = true;
+            communication.WriteVariable(true, "PlcInIO[84]");
         }
 
         private void btnBYX示教第六列_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[84] = false;
+            communication.WriteVariable(false, "PlcInIO[84]");
         }
 
         private void btnBYX示教第七列_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[85] = true;
+            communication.WriteVariable(true, "PlcInIO[85]");
         }
 
         private void btnBYX示教第七列_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[85] = false;
+            communication.WriteVariable(false, "PlcInIO[85]");
         }
 
         private void btnBYX示教第八列_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[86] = true;
+            communication.WriteVariable(true, "PlcInIO[86]");
         }
 
         private void btnBYX示教第八列_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[86] = false;
+            communication.WriteVariable(false, "PlcInIO[86]");
         }
 
         private void btnBYY示教上料12位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[100] = true;
+            communication.WriteVariable(true, "PlcInIO[100]");
         }
 
         private void btnBYY示教上料12位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[100] = false;
+            communication.WriteVariable(false, "PlcInIO[100]");
         }
 
         private void btnBYY示教上料34位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[108] = true;
+            communication.WriteVariable(true, "PlcInIO[108]");
         }
 
         private void btnBYY示教上料34位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[108] = false;
+            communication.WriteVariable(false, "PlcInIO[108]");
         }
 
         private void btnBYY示教视觉1位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[101] = true;
+            communication.WriteVariable(true, "PlcInIO[101]");
         }
 
         private void btnBYY示教视觉1位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[101] = false;
+            communication.WriteVariable(false, "PlcInIO[101]");
         }
 
         private void btnBYY示教视觉2位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[102] = true;
+            communication.WriteVariable(true, "PlcInIO[102]");
         }
 
         private void btnBYY示教视觉2位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[102] = false;
+            communication.WriteVariable(false, "PlcInIO[102]");
         }
 
         private void btnBYY示教视觉3位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[106] = true;
+            communication.WriteVariable(true, "PlcInIO[106]");
         }
 
         private void btnBYY示教视觉3位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[106] = false;
+            communication.WriteVariable(false, "PlcInIO[106]");
         }
 
         private void btnBYY示教视觉4位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[107] = true;
+            communication.WriteVariable(true, "PlcInIO[107]");
         }
 
         private void btnBYY示教视觉4位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[107] = false;
+            communication.WriteVariable(false, "PlcInIO[107]");
         }
 
         private void btnBYY示教第一行_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[103] = true;
+            communication.WriteVariable(true, "PlcInIO[103]");
         }
 
         private void btnBYY示教第一行_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[103] = false;
+            communication.WriteVariable(false, "PlcInIO[103]");
         }
 
         private void btnBYY示教第二行_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[104] = true;
+            communication.WriteVariable(true, "PlcInIO[104]");
         }
 
         private void btnBYY示教第二行_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[104] = false;
+            communication.WriteVariable(false, "PlcInIO[104]");
         }
 
         private void btnBYZ示教上料位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[111] = true;
+            communication.WriteVariable(true, "PlcInIO[111]");
         }
 
         private void btnBYZ示教上料位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[111] = false;
+            communication.WriteVariable(false, "PlcInIO[111]");
         }
 
         private void btnBYZ示教上升位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[110] = true;
+            communication.WriteVariable(true, "PlcInIO[110]");
         }
 
         private void btnBYZ示教上升位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[110] = false;
+            communication.WriteVariable(false, "PlcInIO[110]");
         }
 
         private void btnBYZ示教视觉位置1_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[112] = true;
+            communication.WriteVariable(true, "PlcInIO[112]");
         }
 
         private void btnBYZ示教视觉位置1_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[112] = false;
+            communication.WriteVariable(false, "PlcInIO[112]");
         }
 
         private void btnBYZ示教视觉位置2_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[113] = true;
+            communication.WriteVariable(true, "PlcInIO[113]");
         }
 
         private void btnBYZ示教视觉位置2_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[113] = false;
+            communication.WriteVariable(false, "PlcInIO[113]");
         }
 
         private void btnBYZ示教视觉位置3_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[115] = true;
+            communication.WriteVariable(true, "PlcInIO[115]");
         }
 
         private void btnBYZ示教视觉位置3_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[115] = false;
+            communication.WriteVariable(false, "PlcInIO[115]");
         }
 
         private void btnBYZ下料视觉位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[114] = true;
+            communication.WriteVariable(true, "PlcInIO[114]");
         }
 
         private void btnBYZ下料视觉位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[114] = false;
+            communication.WriteVariable(false, "PlcInIO[114]");
         }
 
         private void btnSk1示教黑体位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[121] = true;
+            communication.WriteVariable(true, "PlcInIO[121]");
         }
 
         private void btnSk1示教黑体位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[121] = false;
+            communication.WriteVariable(false, "PlcInIO[121]");
         }
 
         private void btnSk1示教翻转位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[122] = true;
+            communication.WriteVariable(true, "PlcInIO[122]");
         }
 
         private void btnSk1示教翻转位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[122] = false;
+            communication.WriteVariable(false, "PlcInIO[122]");
         }
 
         private void btnSk1示教测试1位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[123] = true;
+            communication.WriteVariable(true, "PlcInIO[123]");
         }
 
         private void btnSk1示教测试1位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[123] = false;
+            communication.WriteVariable(false, "PlcInIO[123]");
         }
 
         private void btnSk1示教测试2位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[124] = true;
+            communication.WriteVariable(true, "PlcInIO[124]");
         }
 
         private void btnSk1示教测试2位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[124] = false;
+            communication.WriteVariable(false, "PlcInIO[124]");
         }
 
         private void btnSk1示教测试3位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[125] = true;
+            communication.WriteVariable(true, "PlcInIO[125]");
         }
 
         private void btnSk1示教测试3位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[125] = false;
+            communication.WriteVariable(false, "PlcInIO[125]");
         }
 
         private void btnSk2示教黑体位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[131] = true;
+            communication.WriteVariable(true, "PlcInIO[131]");
         }
 
         private void btnSk2示教黑体位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[131] = false;
+            communication.WriteVariable(false, "PlcInIO[131]");
         }
 
         private void btnSk2示教翻转位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[132] = true;
+            communication.WriteVariable(true, "PlcInIO[132]");
         }
 
         private void btnSk2示教翻转位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[132] = false;
+            communication.WriteVariable(false, "PlcInIO[132]");
         }
 
         private void btnSk2示教测试1位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[133] = true;
+            communication.WriteVariable(true, "PlcInIO[133]");
         }
 
         private void btnSk2示教测试1位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[133] = false;
+            communication.WriteVariable(false, "PlcInIO[133]");
         }
 
         private void btnSk2示教测试2位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[134] = true;
+            communication.WriteVariable(true, "PlcInIO[134]");
         }
 
         private void btnSk2示教测试2位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[134] = false;
+            communication.WriteVariable(false, "PlcInIO[134]");
         }
 
         private void btnSk2示教测试3位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[135] = true;
+            communication.WriteVariable(true, "PlcInIO[135]");
         }
 
         private void btnSk2示教测试3位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[135] = false;
+            communication.WriteVariable(false, "PlcInIO[135]");
         }
 
         private void btnSk3示教黑体位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[141] = true;
+            communication.WriteVariable(true, "PlcInIO[141]");
         }
 
         private void btnSk3示教黑体位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[141] = false;
+            communication.WriteVariable(false, "PlcInIO[141]");
         }
 
         private void btnSk3示教翻转位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[142] = true;
+            communication.WriteVariable(true, "PlcInIO[142]");
         }
 
         private void btnSk3示教翻转位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[142] = false;
+            communication.WriteVariable(false, "PlcInIO[142]");
         }
 
         private void btnSk3示教测试1位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[143] = true;
+            communication.WriteVariable(true, "PlcInIO[143]");
         }
 
         private void btnSk3示教测试1位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[143] = false;
+            communication.WriteVariable(false, "PlcInIO[143]");
         }
 
         private void btnSk3示教测试2位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[144] = true;
+            communication.WriteVariable(true, "PlcInIO[144]");
         }
 
         private void btnSk3示教测试2位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[144] = false;
+            communication.WriteVariable(false, "PlcInIO[144]");
         }
 
         private void btnSk3示教测试3位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[145] = true;
+            communication.WriteVariable(true, "PlcInIO[145]");
         }
 
         private void btnSk3示教测试3位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[145] = false;
+            communication.WriteVariable(false, "PlcInIO[145]");
         }
 
         private void btnSk4示教黑体位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[151] = true;
+            communication.WriteVariable(true, "PlcInIO[151]");
         }
 
         private void btnSk4示教黑体位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[151] = false;
+            communication.WriteVariable(false, "PlcInIO[151]");
         }
 
         private void btnSk4示教翻转位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[152] = true;
+            communication.WriteVariable(true, "PlcInIO[152]");
         }
 
         private void btnSk4示教翻转位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[152] = false;
+            communication.WriteVariable(false, "PlcInIO[152]");
         }
 
         private void btnSk4示教测试1位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[153] = true;
+            communication.WriteVariable(true, "PlcInIO[153]");
         }
 
         private void btnSk4示教测试1位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[153] = false;
+            communication.WriteVariable(false, "PlcInIO[153]");
         }
 
         private void btnSk4示教测试2位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[154] = true;
+            communication.WriteVariable(true, "PlcInIO[154]");
         }
 
         private void btnSk4示教测试2位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[154] = false;
+            communication.WriteVariable(false, "PlcInIO[154]");
         }
 
         private void btnSk4示教测试3位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[155] = true;
+            communication.WriteVariable(true, "PlcInIO[155]");
         }
 
         private void btnSk4示教测试3位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[155] = false;
+            communication.WriteVariable(false, "PlcInIO[155]");
         }
 
         private void btnBk1示教20位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[161] = true;
+            communication.WriteVariable(true, "PlcInIO[161]");
         }
 
         private void btnBk1示教20位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[161] = false;
+            communication.WriteVariable(false, "PlcInIO[161]");
         }
 
         private void btnBk1示教35位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[162] = true;
+            communication.WriteVariable(true, "PlcInIO[162]");
         }
 
         private void btnBk1示教35位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[162] = false;
+            communication.WriteVariable(false, "PlcInIO[162]");
         }
 
         private void btnBk2示教20位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[166] = true;
+            communication.WriteVariable(true, "PlcInIO[166]");
         }
 
         private void btnBk2示教20位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[166] = false;
+            communication.WriteVariable(false, "PlcInIO[166]");
         }
 
         private void btnBk2示教35位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[167] = true;
+            communication.WriteVariable(true, "PlcInIO[167]");
         }
 
         private void btnBk2示教35位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[167] = true;
+            communication.WriteVariable(false, "PlcInIO[167]");
         }
 
         private void btnBk3示教20位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[171] = true;
+            communication.WriteVariable(true, "PlcInIO[171]");
         }
 
         private void btnBk3示教20位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[171] = false;
+            communication.WriteVariable(false, "PlcInIO[171]");
         }
 
         private void btnBk3示教35位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[172] = true;
+            communication.WriteVariable(true, "PlcInIO[172]");
         }
 
         private void btnBk3示教35位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[172] = false;
+            communication.WriteVariable(false, "PlcInIO[172]");
         }
 
         private void btnBk4示教20位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[176] = true;
+            communication.WriteVariable(true, "PlcInIO[176]");
         }
 
         private void btnBk4示教20位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[176] = false;
+            communication.WriteVariable(false, "PlcInIO[176]");
         }
 
         private void btnBk4示教35位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[177] = true;
+            communication.WriteVariable(true, "PlcInIO[177]");
         }
 
         private void btnBk4示教35位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[177] = false;
+            communication.WriteVariable(false, "PlcInIO[177]");
         }
         #endregion
 
         #region 气缸操作
         private void btn上料机械手上升_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[490] = true;
+            communication.WriteVariable(true, "PlcInIO[490]");
         }
 
         private void btn上料机械手上升_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[490] = false;
+            communication.WriteVariable(false, "PlcInIO[490]");
         }
 
         private void btn上料机械手下降_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[491] = true;
+            communication.WriteVariable(true, "PlcInIO[491]");
         }
 
         private void btn上料机械手下降_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[491] = false;
+            communication.WriteVariable(false, "PlcInIO[491]");
         }
 
         private void btn上料机械手伸出_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[492] = true;
+            communication.WriteVariable(true, "PlcInIO[492]");
         }
 
         private void btn上料机械手伸出_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[492] = false;
+            communication.WriteVariable(false, "PlcInIO[492]");
         }
 
         private void btn上料机械手缩回_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[493] = true;
+            communication.WriteVariable(true, "PlcInIO[493]");
         }
 
         private void btn上料机械手缩回_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[493] = false;
+            communication.WriteVariable(false, "PlcInIO[493]");
         }
 
         private void btn实盘防卡盘伸出_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[494] = true;
+            communication.WriteVariable(true, "PlcInIO[494]");
         }
 
         private void btn实盘防卡盘伸出_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[494] = false;
+            communication.WriteVariable(false, "PlcInIO[494]");
         }
 
         private void btn实盘防卡盘缩回_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[495] = true;
+            communication.WriteVariable(true, "PlcInIO[495]");
         }
 
         private void btn实盘防卡盘缩回_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[495] = false;
+            communication.WriteVariable(false, "PlcInIO[495]");
         }
 
         private void btnNG盘防卡盘伸出_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[496] = true;
+            communication.WriteVariable(true, "PlcInIO[496]");
         }
 
         private void btnNG盘防卡盘伸出_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[496] = false;
+            communication.WriteVariable(false, "PlcInIO[496]");
         }
 
         private void btnNG盘防卡盘缩回_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[497] = true;
+            communication.WriteVariable(true, "PlcInIO[497]");
         }
 
         private void btnNG盘防卡盘缩回_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[497] = false;
+            communication.WriteVariable(false, "PlcInIO[497]");
         }
 
         private void btn上料吸嘴1上升_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[498] = true;
+            communication.WriteVariable(true, "PlcInIO[498]");
         }
 
         private void btn上料吸嘴1上升_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[498] = false;
+            communication.WriteVariable(false, "PlcInIO[498]");
         }
 
         private void btn上料吸嘴1下降_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[499] = true;
+            communication.WriteVariable(true, "PlcInIO[499]");
         }
 
         private void btn上料吸嘴1下降_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[499] = false;
+            communication.WriteVariable(false, "PlcInIO[499]");
         }
 
         private void btn上料吸嘴2上升_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[502] = true;
+            communication.WriteVariable(true, "PlcInIO[502]");
         }
 
         private void btn上料吸嘴2上升_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[502] = false;
+            communication.WriteVariable(false, "PlcInIO[502]");
         }
 
         private void btn上料吸嘴2下降_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[503] = true;
+            communication.WriteVariable(true, "PlcInIO[503]");
         }
 
         private void btn上料吸嘴2下降_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[503] = false;
+            communication.WriteVariable(false, "PlcInIO[503]");
         }
 
         private void btn平移吸嘴12上升_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[506] = true;
+            communication.WriteVariable(true, "PlcInIO[506]");
         }
 
         private void btn平移吸嘴12上升_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[506] = false;
+            communication.WriteVariable(false, "PlcInIO[506]");
         }
 
         private void btn平移吸嘴12下降_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[507] = true;
+            communication.WriteVariable(true, "PlcInIO[507]");
         }
 
         private void btn平移吸嘴12下降_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[507] = false;
+            communication.WriteVariable(false, "PlcInIO[507]");
         }
 
         private void btn平移吸嘴34上升_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[508] = true;
+            communication.WriteVariable(true, "PlcInIO[508]");
         }
 
         private void btn平移吸嘴34上升_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[508] = false;
+            communication.WriteVariable(false, "PlcInIO[508]");
         }
 
         private void btn平移吸嘴34下降_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[509] = true;
+            communication.WriteVariable(true, "PlcInIO[509]");
         }
 
         private void btn平移吸嘴34下降_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[509] = false;
+            communication.WriteVariable(false, "PlcInIO[509]");
         }
 
         private void btn翻转气缸0_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[518] = true;
+            communication.WriteVariable(true, "PlcInIO[518]");
         }
 
         private void btn翻转气缸0_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[518] = false;
+            communication.WriteVariable(false, "PlcInIO[518]");
         }
 
         private void btn翻转气缸180_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[519] = true;
+            communication.WriteVariable(true, "PlcInIO[519]");
         }
 
         private void btn翻转气缸180_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[519] = false;
+            communication.WriteVariable(false, "PlcInIO[519]");
         }
 
         private void btn夹爪1回原点_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[520] = true;
+            communication.WriteVariable(true, "PlcInIO[520]");
         }
 
         private void btn夹爪1回原点_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[520] = false;
+            communication.WriteVariable(false, "PlcInIO[520]");
         }
 
         private void btn夹爪1张开_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[521] = true;
+            communication.WriteVariable(true, "PlcInIO[521]");
         }
 
         private void btn夹爪1张开_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[521] = false;
+            communication.WriteVariable(false, "PlcInIO[521]");
         }
 
         private void btn夹爪1闭合1_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[522] = true;
+            communication.WriteVariable(true, "PlcInIO[522]");
         }
 
         private void btn夹爪1闭合1_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[522] = false;
+            communication.WriteVariable(false, "PlcInIO[522]");
         }
 
         private void btn夹爪1复位_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[525] = true;
+            communication.WriteVariable(true, "PlcInIO[525]");
         }
 
         private void btn夹爪1复位_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[525] = false;
+            communication.WriteVariable(false, "PlcInIO[525]");
         }
 
         private void btn夹爪2回原点_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[526] = true;
+            communication.WriteVariable(true, "PlcInIO[526]");
         }
 
         private void btn夹爪2回原点_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[526] = false;
+            communication.WriteVariable(false, "PlcInIO[526]");
         }
 
         private void btn夹爪2张开_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[527] = true;
+            communication.WriteVariable(true, "PlcInIO[527]");
         }
 
         private void btn夹爪2张开_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[527] = false;
+            communication.WriteVariable(false, "PlcInIO[527]");
         }
 
         private void btn夹爪2闭合1_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[528] = true;
+            communication.WriteVariable(true, "PlcInIO[528]");
         }
 
         private void btn夹爪2闭合1_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[528] = false;
+            communication.WriteVariable(false, "PlcInIO[528]");
         }
 
         private void btn夹爪2复位_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[531] = true;
+            communication.WriteVariable(true, "PlcInIO[531]");
         }
 
         private void btn夹爪2复位_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[531] = false;
+            communication.WriteVariable(false, "PlcInIO[531]");
         }
 
         private void btn除尘器1吹扫_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[532] = true;
+            communication.WriteVariable(true, "PlcInIO[532]");
         }
 
         private void btn除尘器1吹扫_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[532] = false;
+            communication.WriteVariable(false, "PlcInIO[532]");
         }
 
         private void btn除尘器1复位_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[533] = true;
+            communication.WriteVariable(true, "PlcInIO[533]");
         }
 
         private void btn除尘器1复位_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[533] = false;
+            communication.WriteVariable(false, "PlcInIO[533]");
         }
 
         private void btn除尘器2吹扫_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[534] = true;
+            communication.WriteVariable(true, "PlcInIO[534]");
         }
 
         private void btn除尘器2吹扫_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[534] = false;
+            communication.WriteVariable(false, "PlcInIO[534]");
         }
 
         private void btn除尘器2复位_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[525] = true;
+            communication.WriteVariable(true, "PlcInIO[525]");
         }
 
         private void btn除尘器2复位_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[525] = false;
+            communication.WriteVariable(false, "PlcInIO[525]");
         }
 
         private void btn上料吸嘴1真空_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[500] = true;
+            communication.WriteVariable(true, "PlcInIO[500]");
         }
 
         private void btn上料吸嘴1真空_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[500] = false;
+            communication.WriteVariable(false, "PlcInIO[500]");
         }
 
         private void btn上料吸嘴1破坏_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[501] = true;
+            communication.WriteVariable(true, "PlcInIO[501]");
         }
 
         private void btn上料吸嘴1破坏_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[501] = false;
+            communication.WriteVariable(false, "PlcInIO[501]");
         }
 
         private void btn上料吸嘴2真空_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[504] = true;
+            communication.WriteVariable(true, "PlcInIO[504]");
         }
 
         private void btn上料吸嘴2真空_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[504] = false;
+            communication.WriteVariable(false, "PlcInIO[504]");
         }
 
         private void btn上料吸嘴2破坏_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[505] = true;
+            communication.WriteVariable(true, "PlcInIO[505]");
         }
 
         private void btn上料吸嘴2破坏_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[505] = false;
+            communication.WriteVariable(false, "PlcInIO[505]");
         }
 
         private void btn平移吸嘴1真空_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[510] = true;
+            communication.WriteVariable(true, "PlcInIO[510]");
         }
 
         private void btn平移吸嘴1真空_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[510] = false;
+            communication.WriteVariable(false, "PlcInIO[510]");
         }
 
         private void btn平移吸嘴1破坏_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[511] = true;
+            communication.WriteVariable(true, "PlcInIO[511]");
         }
 
         private void btn平移吸嘴1破坏_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[511] = false;
+            communication.WriteVariable(false, "PlcInIO[511]");
         }
 
         private void btn平移吸嘴2真空_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[512] = true;
+            communication.WriteVariable(true, "PlcInIO[512]");
         }
 
         private void btn平移吸嘴2真空_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[512] = false;
+            communication.WriteVariable(false, "PlcInIO[512]");
         }
 
         private void btn平移吸嘴2破坏_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[513] = true;
+            communication.WriteVariable(true, "PlcInIO[513]");
         }
 
         private void btn平移吸嘴2破坏_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[513] = false;
+            communication.WriteVariable(false, "PlcInIO[513]");
         }
 
         private void btn平移吸嘴3真空_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[514] = true;
+            communication.WriteVariable(true, "PlcInIO[514]");
         }
 
         private void btn平移吸嘴3真空_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[514] = false;
+            communication.WriteVariable(false, "PlcInIO[514]");
         }
 
         private void btn平移吸嘴3破坏_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[515] = true;
+            communication.WriteVariable(true, "PlcInIO[515]");
         }
 
         private void btn平移吸嘴3破坏_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[515] = false;
+            communication.WriteVariable(false, "PlcInIO[515]");
         }
 
         private void btn平移吸嘴4真空_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[516] = true;
+            communication.WriteVariable(true, "PlcInIO[516]");
         }
 
         private void btn平移吸嘴4真空_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[516] = false;
+            communication.WriteVariable(false, "PlcInIO[516]");
         }
 
         private void btn平移吸嘴4破坏_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[517] = true;
+            communication.WriteVariable(true, "PlcInIO[518]");
         }
 
         private void btn平移吸嘴4破坏_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[518] = false;
+            communication.WriteVariable(false, "PlcInIO[518]");
         }
 
         private void btn旋转夹爪1上升_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[536] = true;
+            communication.WriteVariable(true, "PlcInIO[536]");
         }
 
         private void btn旋转夹爪1上升_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[536] = false;
+            communication.WriteVariable(false, "PlcInIO[536]");
         }
 
         private void btn旋转夹爪1下降_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[537] = true;
+            communication.WriteVariable(true, "PlcInIO[537]");
         }
 
         private void btn旋转夹爪1下降_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[537] = false;
+            communication.WriteVariable(false, "PlcInIO[537]");
         }
 
         private void btn旋转夹爪2上升_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[538] = true;
+            communication.WriteVariable(true, "PlcInIO[538]");
         }
 
         private void btn旋转夹爪2上升_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[538] = false;
+            communication.WriteVariable(false, "PlcInIO[538]");
         }
 
         private void btn旋转夹爪2下降_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[539] = true;
+            communication.WriteVariable(true, "PlcInIO[539]");
         }
 
         private void btn旋转夹爪2下降_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[539] = false;
+            communication.WriteVariable(false, "PlcInIO[539]");
         }
 
         private void btn旋转夹爪3上升_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[540] = true;
+            communication.WriteVariable(true, "PlcInIO[540]");
         }
 
         private void btn旋转夹爪3上升_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[540] = false;
+            communication.WriteVariable(false, "PlcInIO[540]");
         }
 
         private void btn旋转夹爪3下降_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[541] = true;
+            communication.WriteVariable(true, "PlcInIO[541]");
         }
 
         private void btn旋转夹爪3下降_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[541] = false;
+            communication.WriteVariable(false, "PlcInIO[541]");
         }
 
         private void btn旋转夹爪4上升_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[542] = true;
+            communication.WriteVariable(true, "PlcInIO[542]");
         }
 
         private void btn旋转夹爪4上升_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[542] = false;
+            communication.WriteVariable(false, "PlcInIO[542]");
         }
 
         private void btn旋转夹爪4下降_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[543] = true;
+            communication.WriteVariable(true, "PlcInIO[543]");
         }
 
         private void btn旋转夹爪4下降_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[543] = false;
+            communication.WriteVariable(false, "PlcInIO[543]");
         }
 
         private void btn工位1光阑伸出_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[544] = true;
+            communication.WriteVariable(true, "PlcInIO[544]");
         }
 
         private void btn工位1光阑伸出_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[544] = false;
+            communication.WriteVariable(false, "PlcInIO[544]");
         }
 
         private void btn工位1光阑缩回_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[545] = true;
+            communication.WriteVariable(true, "PlcInIO[545]");
         }
 
         private void btn工位1光阑缩回_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[545] = false;
+            communication.WriteVariable(false, "PlcInIO[545]");
         }
 
         private void btn工位1光阑上升_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[546] = true;
+            communication.WriteVariable(true, "PlcInIO[546]");
         }
 
         private void btn工位1光阑上升_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[546] = false;
+            communication.WriteVariable(false, "PlcInIO[546]");
         }
 
         private void btn工位1光阑下降_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[547] = true;
+            communication.WriteVariable(true, "PlcInIO[547]");
         }
 
         private void btn工位1光阑下降_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[547] = false;
+            communication.WriteVariable(false, "PlcInIO[547]");
         }
 
         private void btn工位1辐射板伸出_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[548] = true;
+            communication.WriteVariable(true, "PlcInIO[548]");
         }
 
         private void btn工位1辐射板伸出_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[548] = false;
+            communication.WriteVariable(false, "PlcInIO[548]");
         }
 
         private void btn工位1辐射板缩回_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[549] = true;
+            communication.WriteVariable(true, "PlcInIO[549]");
         }
 
         private void btn工位1辐射板缩回_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[549] = false;
+            communication.WriteVariable(false, "PlcInIO[549]");
         }
 
         private void btn工位1翻转0_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[550] = true;
+            communication.WriteVariable(true, "PlcInIO[550]");
         }
 
         private void btn工位1翻转0_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[550] = false;
+            communication.WriteVariable(false, "PlcInIO[550]");
         }
 
         private void btn工位1翻转90_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[551] = true;
+            communication.WriteVariable(true, "PlcInIO[551]");
         }
 
         private void btn工位1翻转90_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[551] = false;
+            communication.WriteVariable(false, "PlcInIO[551]");
         }
 
         private void btn工位2光阑伸出_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[552] = true;
+            communication.WriteVariable(true, "PlcInIO[552]");
         }
 
         private void btn工位2光阑伸出_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[552] = false;
+            communication.WriteVariable(false, "PlcInIO[552]");
         }
 
         private void btn工位2光阑缩回_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[553] = true;
+            communication.WriteVariable(true, "PlcInIO[553]");
         }
 
         private void btn工位2光阑缩回_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[553] = false;
+            communication.WriteVariable(false, "PlcInIO[553]");
         }
 
         private void btn工位2光阑上升_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[554] = true;
+            communication.WriteVariable(true, "PlcInIO[554]");
         }
 
         private void btn工位2光阑上升_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[554] = false;
+            communication.WriteVariable(false, "PlcInIO[554]");
         }
 
         private void btn工位2光阑下降_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[555] = true;
+            communication.WriteVariable(true, "PlcInIO[555]");
         }
 
         private void btn工位2光阑下降_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[555] = false;
+            communication.WriteVariable(false, "PlcInIO[555]");
         }
 
         private void btn工位2辐射板伸出_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[556] = true;
+            communication.WriteVariable(true, "PlcInIO[556]");
         }
 
         private void btn工位2辐射板伸出_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[556] = false;
+            communication.WriteVariable(false, "PlcInIO[556]");
         }
 
         private void btn工位2辐射板缩回_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[557] = true;
+            communication.WriteVariable(true, "PlcInIO[557]");
         }
 
         private void btn工位2辐射板缩回_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[557] = false;
+            communication.WriteVariable(false, "PlcInIO[557]");
         }
 
         private void btn工位2翻转0_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[558] = true;
+            communication.WriteVariable(true, "PlcInIO[558]");
         }
 
         private void btn工位2翻转0_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[558] = false;
+            communication.WriteVariable(false, "PlcInIO[558]");
         }
 
         private void brn工位2翻转90_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[559] = true;
+            communication.WriteVariable(true, "PlcInIO[559]");
         }
 
         private void brn工位2翻转90_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[559] = false;
+            communication.WriteVariable(false, "PlcInIO[559]");
         }
-                
+
         private void btn工位3光阑伸出_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[560] = true;
+            communication.WriteVariable(true, "PlcInIO[560]");
         }
 
         private void btn工位3光阑伸出_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[560] = false;
+            communication.WriteVariable(false, "PlcInIO[560]");
         }
 
         private void btn工位3光阑缩回_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[561] = true;
+            communication.WriteVariable(true, "PlcInIO[561]");
         }
 
         private void btn工位3光阑缩回_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[561] = false;
+            communication.WriteVariable(false, "PlcInIO[561]");
         }
 
         private void btn工位3光阑上升_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[562] = true;
+            communication.WriteVariable(true, "PlcInIO[562]");
         }
 
         private void btn工位3光阑上升_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[562] = false;
+            communication.WriteVariable(false, "PlcInIO[562]");
         }
 
         private void btn工位3光阑下降_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[563] = true;
+            communication.WriteVariable(true, "PlcInIO[563]");
         }
 
         private void btn工位3光阑下降_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[563] = false;
+            communication.WriteVariable(false, "PlcInIO[563]");
         }
 
         private void btn工位3辐射板伸出_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[564] = true;
+            communication.WriteVariable(true, "PlcInIO[564]");
         }
 
         private void btn工位3辐射板伸出_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[564] = false;
+            communication.WriteVariable(false, "PlcInIO[564]");
         }
 
         private void btn工位3辐射板缩回_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[565] = true;
+            communication.WriteVariable(true, "PlcInIO[565]");
         }
 
         private void btn工位3辐射板缩回_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[565] = false;
+            communication.WriteVariable(false, "PlcInIO[565]");
         }
 
         private void btn工位3翻转0_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[566] = true;
+            communication.WriteVariable(true, "PlcInIO[566]");
         }
 
         private void btn工位3翻转0_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[566] = false;
+            communication.WriteVariable(false, "PlcInIO[566]");
         }
 
         private void btn工位3翻转90_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[567] = true;
+            communication.WriteVariable(true, "PlcInIO[567]");
         }
 
         private void btn工位3翻转90_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[567] = false;
+            communication.WriteVariable(false, "PlcInIO[567]");
         }
 
         private void btn工位4光阑伸出_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[568] = true;
+            communication.WriteVariable(true, "PlcInIO[568]");
         }
 
         private void btn工位4光阑伸出_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[568] = false;
+            communication.WriteVariable(false, "PlcInIO[568]");
         }
 
         private void btn工位4光阑缩回_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[569] = true;
+            communication.WriteVariable(true, "PlcInIO[569]");
         }
 
         private void btn工位4光阑缩回_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[569] = false;
+            communication.WriteVariable(false, "PlcInIO[569]");
         }
 
         private void btn工位4光阑上升_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[570] = true;
+            communication.WriteVariable(true, "PlcInIO[570]");
         }
 
         private void btn工位4光阑上升_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[570] = false;
+            communication.WriteVariable(false, "PlcInIO[570]");
         }
 
         private void btn工位4光阑下降_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[571] = true;
+            communication.WriteVariable(true, "PlcInIO[571]");
         }
 
         private void btn工位4光阑下降_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[571] = false;
+            communication.WriteVariable(false, "PlcInIO[571]");
         }
 
         private void btn工位4辐射板伸出_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[572] = true;
+            communication.WriteVariable(true, "PlcInIO[572]");
         }
 
         private void btn工位4辐射板伸出_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[572] = false;
+            communication.WriteVariable(false, "PlcInIO[572]");
         }
 
         private void btn工位4辐射板缩回_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[573] = true;
+            communication.WriteVariable(true, "PlcInIO[573]");
         }
 
         private void btn工位4辐射板缩回_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[573] = false;
+            communication.WriteVariable(false, "PlcInIO[573]");
         }
 
         private void btn工位4翻转0_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[574] = true;
+            communication.WriteVariable(true, "PlcInIO[574]");
         }
 
         private void btn工位4翻转0_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[575] = false;
+            communication.WriteVariable(false, "PlcInIO[574]");
         }
 
         private void btn工位4翻转90_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[575] = true;
+            communication.WriteVariable(true, "PlcInIO[575]");
         }
 
         private void btn工位4翻转90_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[575] = false;
+            communication.WriteVariable(false, "PlcInIO[575]");
         }
 
         private void btn工位1风扇上电_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[576] = true;
+            communication.WriteVariable(true, "PlcInIO[576]");
         }
 
         private void btn工位1风扇上电_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[576] = false;
+            communication.WriteVariable(false, "PlcInIO[576]");
         }
 
         private void btn工位2风扇上电_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[577] = true;
+            communication.WriteVariable(true, "PlcInIO[577]");
         }
 
         private void btn工位2风扇上电_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[577] = false;
+            communication.WriteVariable(false, "PlcInIO[577]");
         }
 
         private void btn工位3风扇上电_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[578] = true;
+            communication.WriteVariable(true, "PlcInIO[578]");
         }
 
         private void btn工位3风扇上电_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[578] = false;
+            communication.WriteVariable(false, "PlcInIO[578]");
         }
 
         private void btn工位4风扇上电_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[579] = true;
+            communication.WriteVariable(true, "PlcInIO[579]");
         }
 
         private void btn工位4风扇上电_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[579] = false;
+            communication.WriteVariable(false, "PlcInIO[579]");
         }
 
         private void btnEFU上电_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[580] = true;
+            communication.WriteVariable(true, "PlcInIO[580]");
         }
 
         private void btnEFU上电_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[580] = false;
+            communication.WriteVariable(false, "PlcInIO[580]");
         }
 
         private void btn工位1风扇断电_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[581] = true;
+            communication.WriteVariable(true, "PlcInIO[581]");
         }
 
         private void btn工位1风扇断电_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[581] = false;
+            communication.WriteVariable(false, "PlcInIO[581]");
         }
 
         private void btn工位2风扇断电_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[582] = true;
+            communication.WriteVariable(true, "PlcInIO[582]");
         }
 
         private void btn工位2风扇断电_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[582] = false;
+            communication.WriteVariable(false, "PlcInIO[582]");
         }
 
         private void btn工位3风扇断电_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[583] = true;
+            communication.WriteVariable(true, "PlcInIO[583]");
         }
 
         private void btn工位3风扇断电_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[583] = false;
+            communication.WriteVariable(false, "PlcInIO[583]");
         }
 
         private void btn工位4风扇断电_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[584] = true;
+            communication.WriteVariable(true, "PlcInIO[584]");
         }
 
         private void btn工位4风扇断电_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[584] = false;
+            communication.WriteVariable(false, "PlcInIO[584]");
         }
 
         private void btnEFU断电_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[585] = true;
+            communication.WriteVariable(true, "PlcInIO[585]");
         }
 
         private void btnEFU断电_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[585] = false;
+            communication.WriteVariable(false, "PlcInIO[585]");
         }
         #endregion
 
         #region 手动定位1
         private void btnX指定位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[212] = true;
+            communication.WriteVariable(true, "PlcInIO[212]");
         }
-        
+
         private void btnX指定位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[212] = false;
+            communication.WriteVariable(false, "PlcInIO[212]");
         }
 
         private void btnX吸1实盘_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[200] = true;
+            communication.WriteVariable(true, "PlcInIO[200]");
         }
 
         private void btnX吸1实盘_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[200] = false;
+            communication.WriteVariable(false, "PlcInIO[200]");
         }
 
         private void btnX吸2实盘_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[201] = true;
+            communication.WriteVariable(true, "PlcInIO[201]");
         }
 
         private void btnX吸2实盘_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[201] = false;
+            communication.WriteVariable(false, "PlcInIO[201]");
         }
 
         private void btnX吸1倒实盘_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[202] = true;
+            communication.WriteVariable(true, "PlcInIO[202]");
         }
 
         private void btnX吸1倒实盘_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[202] = false;
+            communication.WriteVariable(false, "PlcInIO[202]");
         }
 
         private void btnX吸2倒实盘_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[203] = true;
+            communication.WriteVariable(true, "PlcInIO[203]");
         }
 
         private void btnX吸2倒实盘_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[203] = false;
+            communication.WriteVariable(false, "PlcInIO[203]");
         }
 
         private void btnX吸1NG盘_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[204] = true;
+            communication.WriteVariable(true, "PlcInIO[204]");
         }
 
         private void btnX吸1NG盘_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[204] = false;
+            communication.WriteVariable(false, "PlcInIO[204]");
         }
 
         private void btnX吸2NG盘_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[205] = true;
+            communication.WriteVariable(true, "PlcInIO[205]");
         }
 
         private void btnX吸2NG盘_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[205] = false;
+            communication.WriteVariable(false, "PlcInIO[205]");
         }
 
         private void btnX实盘位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[206] = true;
+            communication.WriteVariable(true, "PlcInIO[206]");
         }
 
         private void btnX实盘位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[206] = false;
+            communication.WriteVariable(false, "PlcInIO[206]");
         }
 
         private void btnX倒实盘位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[207] = true;
+            communication.WriteVariable(true, "PlcInIO[207]");
         }
 
         private void btnX倒实盘位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[207] = false;
+            communication.WriteVariable(false, "PlcInIO[207]");
         }
 
         private void btnXNG盘位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[208] = true;
+            communication.WriteVariable(true, "PlcInIO[208]");
         }
 
         private void btnXNG盘位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[208] = false;
+            communication.WriteVariable(false, "PlcInIO[208]");
         }
 
         private void btnX倒NG盘位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[209] = true;
+            communication.WriteVariable(true, "PlcInIO[209]");
         }
 
         private void btnX倒NG盘位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[209] = false;
+            communication.WriteVariable(false, "PlcInIO[209]");
         }
 
         private void btnX夹爪位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[210] = true;
+            communication.WriteVariable(true, "PlcInIO[210]");
         }
 
         private void btnX夹爪位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[210] = false;
+            communication.WriteVariable(false, "PlcInIO[210]");
         }
 
         private void btnX扫码位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[211] = true;
+            communication.WriteVariable(true, "PlcInIO[211]");
         }
 
         private void btnX扫码位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[211] = false;
+            communication.WriteVariable(false, "PlcInIO[211]");
         }
 
         private void btnX视觉实盘位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[213] = true;
+            communication.WriteVariable(true, "PlcInIO[213]");
         }
 
         private void btnX视觉实盘位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[213] = false;
+            communication.WriteVariable(false, "PlcInIO[213]");
         }
 
         private void btnX视觉倒实盘位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[214] = true;
+            communication.WriteVariable(true, "PlcInIO[214]");
         }
 
         private void btnX视觉倒实盘位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[214] = false;
+            communication.WriteVariable(false, "PlcInIO[214]");
         }
 
         private void btnY吸1实盘_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[220] = true;
+            communication.WriteVariable(true, "PlcInIO[220]");
         }
 
         private void btnY吸1实盘_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[220] = false;
+            communication.WriteVariable(false, "PlcInIO[220]");
         }
 
         private void btnY吸2实盘_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[221] = true;
+            communication.WriteVariable(true, "PlcInIO[221]");
         }
 
         private void btnY吸2实盘_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[221] = false;
+            communication.WriteVariable(false, "PlcInIO[221]");
         }
 
         private void btnY吸1倒实盘_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[222] = true;
+            communication.WriteVariable(true, "PlcInIO[222]");
         }
 
         private void btnY吸1倒实盘_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[222] = false;
+            communication.WriteVariable(false, "PlcInIO[222]");
         }
 
         private void btnY吸2倒实盘_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[223] = true;
+            communication.WriteVariable(true, "PlcInIO[223]");
         }
 
         private void btnY吸2倒实盘_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[223] = false;
+            communication.WriteVariable(false, "PlcInIO[223]");
         }
 
         private void btnY吸1NG盘_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[224] = true;
+            communication.WriteVariable(true, "PlcInIO[224]");
         }
 
         private void btnY吸1NG盘_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[224] = false;
+            communication.WriteVariable(false, "PlcInIO[224]");
         }
 
         private void btnY吸2NG盘_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[225] = true;
+            communication.WriteVariable(true, "PlcInIO[225]");
         }
 
         private void btnY吸2NG盘_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[225] = false;
+            communication.WriteVariable(false, "PlcInIO[225]");
         }
 
         private void btnY实盘位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[226] = true;
+            communication.WriteVariable(true, "PlcInIO[226]");
         }
 
         private void btnY实盘位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[226] = false;
+            communication.WriteVariable(false, "PlcInIO[226]");
         }
 
         private void btnY倒实盘位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[227] = true;
+            communication.WriteVariable(true, "PlcInIO[227]");
         }
 
         private void btnY倒实盘位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[227] = false;
+            communication.WriteVariable(false, "PlcInIO[227]");
         }
 
         private void btnYNG盘位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[228] = true;
+            communication.WriteVariable(true, "PlcInIO[228]");
         }
 
         private void btnYNG盘位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[228] = false;
+            communication.WriteVariable(false, "PlcInIO[228]");
         }
 
         private void btnY倒NG盘位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[229] = true;
+            communication.WriteVariable(true, "PlcInIO[229]");
         }
 
         private void btnY倒NG盘位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[229] = false;
+            communication.WriteVariable(false, "PlcInIO[229]");
         }
-                
+
         private void btnY夹爪位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[230] = true;
+            communication.WriteVariable(true, "PlcInIO[230]");
         }
 
         private void btnY夹爪位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[230] = false;
+            communication.WriteVariable(false, "PlcInIO[230]");
         }
 
         private void btnY扫码位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[231] = true;
+            communication.WriteVariable(true, "PlcInIO[231]");
         }
 
         private void btnY扫码位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[231] = false;
+            communication.WriteVariable(false, "PlcInIO[231]");
         }
 
         private void btnY指定位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[232] = true;
+            communication.WriteVariable(true, "PlcInIO[232]");
         }
 
         private void btnY指定位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[232] = false;
+            communication.WriteVariable(false, "PlcInIO[232]");
         }
 
         private void btnY视觉实盘位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[233] = true;
+            communication.WriteVariable(true, "PlcInIO[233]");
         }
 
         private void btnY视觉实盘位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[233] = false;
+            communication.WriteVariable(false, "PlcInIO[233]");
         }
 
         private void btnY视觉倒实盘位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[234] = true;
+            communication.WriteVariable(true, "PlcInIO[234]");
         }
 
         private void btnY视觉倒实盘位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[234] = false;
+            communication.WriteVariable(false, "PlcInIO[234]");
         }
 
         private void btn实盘初始位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[240] = true;
+            communication.WriteVariable(true, "PlcInIO[240]");
         }
 
         private void btn实盘初始位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[240] = false;
+            communication.WriteVariable(false, "PlcInIO[240]");
         }
 
         private void btn实盘扫码位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[241] = true;
+            communication.WriteVariable(true, "PlcInIO[241]");
         }
 
         private void btn实盘扫码位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[241] = false;
+            communication.WriteVariable(false, "PlcInIO[241]");
         }
 
         private void btnNG盘初始位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[242] = true;
+            communication.WriteVariable(true, "PlcInIO[242]");
         }
 
         private void btnNG盘初始位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[242] = false;
+            communication.WriteVariable(false, "PlcInIO[242]");
         }
 
         private void btn倒实盘初始位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[243] = true;
+            communication.WriteVariable(true, "PlcInIO[243]");
         }
 
         private void btn倒实盘初始位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[243] = false;
+            communication.WriteVariable(false, "PlcInIO[243]");
         }
 
         private void btn倒NG盘初始位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[244] = true;
+            communication.WriteVariable(true, "PlcInIO[244]");
         }
 
         private void btn倒NG盘初始位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[244] = false;
+            communication.WriteVariable(false, "PlcInIO[244]");
         }
 
         private void btnBY平移上料位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[250] = true;
+            communication.WriteVariable(true, "PlcInIO[250]");
         }
 
         private void btnBY平移上料位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[250] = false;
+            communication.WriteVariable(false, "PlcInIO[250]");
         }
 
         private void btnBY平移下料位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[251] = true;
+            communication.WriteVariable(true, "PlcInIO[251]");
         }
 
         private void btnBY平移下料位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[251] = false;
+            communication.WriteVariable(false, "PlcInIO[251]");
         }
 
         private void btnBY平移中转位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[252] = true;
+            communication.WriteVariable(true, "PlcInIO[252]");
         }
 
         private void btnBY平移中转位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[252] = false;
+            communication.WriteVariable(false, "PlcInIO[252]");
         }
 
         private void btn旋转一90位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[351] = true;
+            communication.WriteVariable(true, "PlcInIO[351]");
         }
 
         private void btn旋转一90位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[351] = false;
+            communication.WriteVariable(false, "PlcInIO[351]");
         }
 
         private void btn旋转一180位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[352] = true;
+            communication.WriteVariable(true, "PlcInIO[352]");
         }
 
         private void btn旋转一180位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[352] = false;
+            communication.WriteVariable(false, "PlcInIO[352]");
         }
 
         private void btn旋转二90位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[355] = true;
+            communication.WriteVariable(true, "PlcInIO[355]");
         }
 
         private void btn旋转二90位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[355] = false;
+            communication.WriteVariable(false, "PlcInIO[355]");
         }
 
         private void btn旋转二180位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[356] = true;
+            communication.WriteVariable(true, "PlcInIO[356]");
         }
 
         private void btn旋转二180位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[356] = false;
+            communication.WriteVariable(false, "PlcInIO[356]");
         }
 
         private void btnBYX上料位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[260] = true;
+            communication.WriteVariable(true, "PlcInIO[260]");
         }
 
         private void btnBYX上料位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[260] = false;
+            communication.WriteVariable(false, "PlcInIO[260]");
         }
 
         private void btnBYX视觉位置1_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[261] = true;
+            communication.WriteVariable(true, "PlcInIO[261]");
         }
 
         private void btnBYX视觉位置1_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[261] = false;
+            communication.WriteVariable(false, "PlcInIO[261]");
         }
 
         private void btnBYX第一列_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[262] = true;
+            communication.WriteVariable(true, "PlcInIO[262]");
         }
 
         private void btnBYX第一列_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[262] = false;
+            communication.WriteVariable(false, "PlcInIO[262]");
         }
 
         private void btnBYX第二列_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[263] = true;
+            communication.WriteVariable(true, "PlcInIO[263]");
         }
 
         private void btnBYX第二列_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[263] = false;
+            communication.WriteVariable(false, "PlcInIO[263]");
         }
 
         private void btnBYX第三列_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[264] = true;
+            communication.WriteVariable(true, "PlcInIO[264]");
         }
 
         private void btnBYX第三列_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[264] = false;
+            communication.WriteVariable(false, "PlcInIO[264]");
         }
 
         private void btnBYX第四列_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[265] = true;
+            communication.WriteVariable(true, "PlcInIO[265]");
         }
 
         private void btnBYX第四列_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[265] = false;
+            communication.WriteVariable(false, "PlcInIO[265]");
         }
 
         private void btnBYX第五列_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[266] = true;
+            communication.WriteVariable(true, "PlcInIO[266]");
         }
 
         private void btnBYX第五列_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[266] = false;
+            communication.WriteVariable(false, "PlcInIO[266]");
         }
 
         private void btnBYX第六列_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[267] = true;
+            communication.WriteVariable(true, "PlcInIO[267]");
         }
 
         private void btnBYX第六列_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[267] = false;
+            communication.WriteVariable(false, "PlcInIO[267]");
         }
 
         private void btnBYX第七列_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[268] = true;
+            communication.WriteVariable(true, "PlcInIO[268]");
         }
 
         private void btnBYX第七列_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[268] = false;
+            communication.WriteVariable(false, "PlcInIO[268]");
         }
 
         private void btnBYX第八列_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[269] = true;
+            communication.WriteVariable(true, "PlcInIO[269]");
         }
 
         private void btnBYX第八列_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[269] = false;
+            communication.WriteVariable(false, "PlcInIO[269]");
         }
 
         private void btnBYX视觉位置2_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[270] = true;
+            communication.WriteVariable(true, "PlcInIO[270]");
         }
 
         private void btnBYX视觉位置2_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[270] = false;
+            communication.WriteVariable(false, "PlcInIO[270]");
         }
 
         private void btnBYY上料12位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[275] = true;
+            communication.WriteVariable(true, "PlcInIO[275]");
         }
 
         private void btnBYY上料12位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[275] = true;
+            communication.WriteVariable(false, "PlcInIO[275]");
         }
 
         private void btnBYY视觉位置1_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[276] = true;
+            communication.WriteVariable(true, "PlcInIO[276]");
         }
 
         private void btnBYY视觉位置1_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[276] = false;
+            communication.WriteVariable(false, "PlcInIO[276]");
         }
 
         private void btnBYY视觉位置2_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[277] = true;
+            communication.WriteVariable(true, "PlcInIO[277]");
         }
 
         private void btnBYY视觉位置2_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[277] = false;
+            communication.WriteVariable(false, "PlcInIO[277]");
         }
 
         private void btnBYY第一行_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[278] = true;
+            communication.WriteVariable(true, "PlcInIO[278]");
         }
 
         private void btnBYY第一行_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[278] = false;
+            communication.WriteVariable(false, "PlcInIO[278]");
         }
 
         private void btnBYY第二行_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[279] = true;
+            communication.WriteVariable(true, "PlcInIO[279]");
         }
 
         private void btnBYY第二行_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[279] = false;
+            communication.WriteVariable(false, "PlcInIO[279]");
         }
 
         private void btnBYY视觉位置3_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[280] = true;
+            communication.WriteVariable(true, "PlcInIO[280]");
         }
 
         private void btnBYY视觉位置3_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[280] = false;
+            communication.WriteVariable(false, "PlcInIO[280]");
         }
 
         private void btnBYY视觉位置4_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[281] = true;
+            communication.WriteVariable(true, "PlcInIO[281]");
         }
 
         private void btnBYY视觉位置4_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[281] = false;
+            communication.WriteVariable(false, "PlcInIO[281]");
         }
 
         private void btnBYY上料34位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[282] = true;
+            communication.WriteVariable(true, "PlcInIO[282]");
         }
 
         private void btnBYY上料34位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[282] = false;
+            communication.WriteVariable(false, "PlcInIO[282]");
         }
 
         private void btnBYZ上料位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[285] = true;
+            communication.WriteVariable(true, "PlcInIO[285]");
         }
 
         private void btnBYZ上料位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[285] = false;
+            communication.WriteVariable(false, "PlcInIO[285]");
         }
 
         private void btnBYZ上升位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[286] = true;
+            communication.WriteVariable(true, "PlcInIO[286]");
         }
 
         private void btnBYZ上升位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[286] = false;
+            communication.WriteVariable(false, "PlcInIO[286]");
         }
 
         private void btnBYZ视觉位置1_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[287] = true;
+            communication.WriteVariable(true, "PlcInIO[287]");
         }
 
         private void btnBYZ视觉位置1_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[287] = false;
+            communication.WriteVariable(false, "PlcInIO[287]");
         }
 
         private void btnBYZ视觉位置2_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[288] = true;
+            communication.WriteVariable(true, "PlcInIO[288]");
         }
 
         private void btnBYZ视觉位置2_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[288] = false;
+            communication.WriteVariable(false, "PlcInIO[288]");
         }
 
         private void btnBYZ下料位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[289] = true;
+            communication.WriteVariable(true, "PlcInIO[289]");
         }
 
         private void btnBYZ下料位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[289] = false;
+            communication.WriteVariable(false, "PlcInIO[289]");
         }
 
         private void btnBYZ视觉位置3_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[290] = true;
+            communication.WriteVariable(true, "PlcInIO[290]");
         }
 
         private void btnBYZ视觉位置3_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[290] = false;
+            communication.WriteVariable(false, "PlcInIO[290]");
         }
         #endregion
 
         #region 手动定位2
         private void btnSk1黑体位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[295] = true;
+            communication.WriteVariable(true, "PlcInIO[295]");
         }
 
         private void btnSk1黑体位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[295] = false;
+            communication.WriteVariable(false, "PlcInIO[295]");
         }
 
         private void btnSk1翻转位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[296] = true;
+            communication.WriteVariable(true, "PlcInIO[296]");
         }
 
         private void btnSk1翻转位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[296] = false;
+            communication.WriteVariable(false, "PlcInIO[296]");
         }
 
         private void btnSk1测试1位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[297] = true;
+            communication.WriteVariable(true, "PlcInIO[297]");
         }
 
         private void btnSk1测试1位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[297] = false;
+            communication.WriteVariable(false, "PlcInIO[297]");
         }
 
         private void btnSk1测试2位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[298] = true;
+            communication.WriteVariable(true, "PlcInIO[298]");
         }
 
         private void btnSk1测试2位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[298] = false;
+            communication.WriteVariable(false, "PlcInIO[298]");
         }
 
         private void btnSk1测试3位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[299] = true;
+            communication.WriteVariable(true, "PlcInIO[299]");
         }
 
         private void btnSk1测试3位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[298] = false;
+            communication.WriteVariable(false, "PlcInIO[299]");
         }
 
         private void btnSk2黑体位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[305] = true;
+            communication.WriteVariable(true, "PlcInIO[305]");
         }
 
         private void btnSk2黑体位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[305] = false;
+            communication.WriteVariable(false, "PlcInIO[305]");
         }
 
         private void btnSk2翻转位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[306] = true;
+            communication.WriteVariable(true, "PlcInIO[306]");
         }
 
         private void btnSk2翻转位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[306] = false;
+            communication.WriteVariable(false, "PlcInIO[306]");
         }
 
         private void btnSk2测试1位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[307] = true;
+            communication.WriteVariable(true, "PlcInIO[307]");
         }
 
         private void btnSk2测试1位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[307] = false;
+            communication.WriteVariable(false, "PlcInIO[307]");
         }
 
         private void btnSk2测试2位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[308] = true;
+            communication.WriteVariable(true, "PlcInIO[308]");
         }
 
         private void btnSk2测试2位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[308] = false;
+            communication.WriteVariable(false, "PlcInIO[308]");
         }
 
         private void btnSk2测试3位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[309] = true;
+            communication.WriteVariable(true, "PlcInIO[309]");
         }
 
         private void btnSk2测试3位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[309] = false;
+            communication.WriteVariable(false, "PlcInIO[309]");
         }
 
         private void btnSk3黑体位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[315] = true;
+            communication.WriteVariable(true, "PlcInIO[315]");
         }
 
         private void btnSk3黑体位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[315] = false;
+            communication.WriteVariable(false, "PlcInIO[315]");
         }
 
         private void btnSk3翻转位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[316] = true;
+            communication.WriteVariable(true, "PlcInIO[316]");
         }
 
         private void btnSk3翻转位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[316] = false;
+            communication.WriteVariable(false, "PlcInIO[316]");
         }
 
         private void btnSk3测试1位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[317] = true;
+            communication.WriteVariable(true, "PlcInIO[317]");
         }
 
         private void btnSk3测试1位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[317] = false;
+            communication.WriteVariable(false, "PlcInIO[317]");
         }
 
         private void btnSk3测试2位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[318] = true;
+            communication.WriteVariable(true, "PlcInIO[318]");
         }
 
         private void btnSk3测试2位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[318] = false;
+            communication.WriteVariable(false, "PlcInIO[318]");
         }
 
         private void btnSk3测试3位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[319] = true;
+            communication.WriteVariable(true, "PlcInIO[319]");
         }
 
         private void btnSk3测试3位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[319] = false;
+            communication.WriteVariable(false, "PlcInIO[319]");
         }
 
         private void btnSk4黑体位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[325] = true;
+            communication.WriteVariable(true, "PlcInIO[325]");
         }
 
         private void btnSk4黑体位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[325] = false;
+            communication.WriteVariable(false, "PlcInIO[325]");
         }
 
         private void btnSk4翻转位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[326] = true;
+            communication.WriteVariable(true, "PlcInIO[326]");
         }
 
         private void btnSk4翻转位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[326] = false;
+            communication.WriteVariable(false, "PlcInIO[326]");
         }
 
         private void btnSk4测试1位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[327] = true;
+            communication.WriteVariable(true, "PlcInIO[327]");
         }
 
         private void btnSk4测试1位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[327] = false;
+            communication.WriteVariable(false, "PlcInIO[327]");
         }
 
         private void btnSk4测试2位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[328] = true;
+            communication.WriteVariable(true, "PlcInIO[328]");
         }
 
         private void btnSk4测试2位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[328] = false;
+            communication.WriteVariable(false, "PlcInIO[328]");
         }
 
         private void btnSk4测试3位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[329] = true;
+            communication.WriteVariable(true, "PlcInIO[329]");
         }
 
         private void btnSk4测试3位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[329] = false;
+            communication.WriteVariable(false, "PlcInIO[329]");
         }
 
         private void btnBkyi20位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[335] = true;
+            communication.WriteVariable(true, "PlcInIO[335]");
         }
 
         private void btnBkyi20位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[335] = false;
+            communication.WriteVariable(false, "PlcInIO[335]");
         }
 
         private void btnBker20位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[339] = true;
+            communication.WriteVariable(true, "PlcInIO[339]");
         }
 
         private void btnBker20位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[339] = false;
+            communication.WriteVariable(false, "PlcInIO[339]");
         }
 
         private void btnBker35位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[340] = true;
+            communication.WriteVariable(true, "PlcInIO[340]");
         }
 
         private void btnBker35位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[340] = false;
+            communication.WriteVariable(false, "PlcInIO[340]");
         }
 
         private void btnBksan20位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[343] = true;
+            communication.WriteVariable(true, "PlcInIO[343]");
         }
 
         private void btnBksan20位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[343] = false;
+            communication.WriteVariable(false, "PlcInIO[343]");
         }
 
         private void btnBksan35位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[344] = true;
+            communication.WriteVariable(true, "PlcInIO[344]");
         }
 
         private void btnBksan35位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[344] = false;
+            communication.WriteVariable(false, "PlcInIO[344]");
         }
 
         private void btnBksi20位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[347] = true;
+            communication.WriteVariable(true, "PlcInIO[347]");
         }
 
         private void btnBksi20位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[347] = false;
+            communication.WriteVariable(false, "PlcInIO[347]");
         }
 
         private void btnBksi35位置_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[348] = true;
+            communication.WriteVariable(true, "PlcInIO[348]");
         }
 
         private void btnBksi35位置_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[348] = false;
+            communication.WriteVariable(false, "PlcInIO[348]");
         }
 
         private void btnJD1加紧_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[600] = true;
+            communication.WriteVariable(true, "PlcInIO[600]");
         }
 
         private void btnJD1加紧_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[600] = false;
+            communication.WriteVariable(false, "PlcInIO[600]");
         }
 
         private void btnJD1打开_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[601] = true;
+            communication.WriteVariable(true, "PlcInIO[601]");
         }
 
         private void btnJD1打开_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[601] = false;
+            communication.WriteVariable(false, "PlcInIO[601]");
         }
 
         private void btnJD2加紧_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[602] = true;
+            communication.WriteVariable(true, "PlcInIO[602]");
         }
 
         private void btnJD2加紧_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[602] = false;
+            communication.WriteVariable(false, "PlcInIO[602]");
         }
 
         private void btnJD2打开_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[603] = true;
+            communication.WriteVariable(true, "PlcInIO[603]");
         }
 
         private void btnJD2打开_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[603] = false;
+            communication.WriteVariable(false, "PlcInIO[603]");
         }
 
         private void btnJD3加紧_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[604] = true;
+            communication.WriteVariable(true, "PlcInIO[604]");
         }
 
         private void btnJD3加紧_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[604] = false;
+            communication.WriteVariable(false, "PlcInIO[604]");
         }
 
         private void btnJD3打开_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[605] = true;
+            communication.WriteVariable(true, "PlcInIO[605]");
         }
 
         private void btnJD3打开_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[605] = false;
+            communication.WriteVariable(false, "PlcInIO[605]");
         }
 
         private void btnJD4加紧_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[606] = true;
+            communication.WriteVariable(true, "PlcInIO[606]");
         }
 
         private void btnJD4加紧_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[606] = false;
+            communication.WriteVariable(false, "PlcInIO[606]");
         }
 
         private void btnJD4打开_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[607] = true;
+            communication.WriteVariable(true, "PlcInIO[607]");
         }
 
         private void btnJD4打开_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[607] = false;
+            communication.WriteVariable(false, "PlcInIO[607]");
         }
         #endregion
 
         #region 回原点
         private void btnX回原点_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[7] = true;
+            communication.WriteVariable(true, "PlcInIO[7]");
         }
 
         private void btnX回原点_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[7] = false;
+            communication.WriteVariable(false, "PlcInIO[7]");
         }
 
         private void btnY回原点_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[8] = true;
+            communication.WriteVariable(true, "PlcInIO[8]");
         }
 
         private void btnY回原点_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[8] = false;
+            communication.WriteVariable(false, "PlcInIO[8]");
         }
 
         private void btn实盘回原点_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[9] = true;
+            communication.WriteVariable(true, "PlcInIO[9]");
         }
 
         private void btn实盘回原点_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[9] = false;
+            communication.WriteVariable(false, "PlcInIO[9]");
         }
 
         private void btnNG盘回原点_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[10] = true;
+            communication.WriteVariable(true, "PlcInIO[10]");
         }
 
         private void btnNG盘回原点_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[10] = false;
+            communication.WriteVariable(false, "PlcInIO[10]");
         }
 
         private void btn倒实盘回原点_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[11] = true;
+            communication.WriteVariable(true, "PlcInIO[11]");
         }
 
         private void btn倒实盘回原点_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[11] = false;
+            communication.WriteVariable(false, "PlcInIO[11]");
         }
 
         private void btn倒NG盘回原点_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[12] = true;
+            communication.WriteVariable(true, "PlcInIO[12]");
         }
 
         private void btn倒NG盘回原点_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[12] = false;
+            communication.WriteVariable(false, "PlcInIO[12]");
         }
 
         private void btnBY平移回原点_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[13] = true;
+            communication.WriteVariable(true, "PlcInIO[13]");
         }
 
         private void btnBY平移回原点_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[13] = false;
+            communication.WriteVariable(false, "PlcInIO[13]");
         }
 
         private void btnBYX回原点_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[14] = true;
-
+            communication.WriteVariable(true, "PlcInIO[14]");
         }
 
         private void btnBYX回原点_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[14] = false;
+            communication.WriteVariable(false, "PlcInIO[14]");
         }
 
         private void btnBYY回原点_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[15] = true;
+            communication.WriteVariable(true, "PlcInIO[15]");
         }
 
         private void btnBYY回原点_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[15] = false;
+            communication.WriteVariable(false, "PlcInIO[15]");
         }
 
         private void btnBYZ回原点_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[16] = true;
+            communication.WriteVariable(true, "PlcInIO[16]");
         }
 
         private void btnBYZ回原点_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[16] = false;
+            communication.WriteVariable(false, "PlcInIO[16]");
         }
 
         private void btnSk1回原点_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[17] = true;
+            communication.WriteVariable(true, "PlcInIO[17]");
         }
 
         private void btnSk1回原点_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[17] = false;
+            communication.WriteVariable(false, "PlcInIO[17]");
         }
 
         private void btnSk2回原点_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[18] = true;
+            communication.WriteVariable(true, "PlcInIO[18]");
         }
 
         private void btnSk2回原点_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[18] = false;
+            communication.WriteVariable(false, "PlcInIO[18]");
         }
 
         private void btnSk3回原点_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[19] = true;
+            communication.WriteVariable(true, "PlcInIO[19]");
         }
 
         private void btnSk3回原点_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[19] = false;
+            communication.WriteVariable(false, "PlcInIO[19]");
         }
 
         private void btnSk4回原点_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[20] = true;
+            communication.WriteVariable(true, "PlcInIO[20]");
         }
 
         private void btnSk4回原点_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[20] = false;
+            communication.WriteVariable(false, "PlcInIO[20]");
         }
 
         private void btnBk1回原点_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[21] = true;
+            communication.WriteVariable(true, "PlcInIO[21]");
         }
 
         private void btnBk1回原点_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[21] = false;
+            communication.WriteVariable(false, "PlcInIO[21]");
         }
 
         private void btnBk2回原点_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[22] = true;
+            communication.WriteVariable(true, "PlcInIO[22]");
         }
 
         private void btnBk2回原点_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[22] = false;
+            communication.WriteVariable(false, "PlcInIO[22]");
         }
 
         private void btnBk3回原点_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[23] = true;
+            communication.WriteVariable(true, "PlcInIO[23]");
         }
 
         private void btnBk3回原点_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[23] = false;
+            communication.WriteVariable(false, "PlcInIO[23]");
         }
 
         private void btnBk4回原点_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[24] = true;
+            communication.WriteVariable(true, "PlcInIO[24]");
         }
 
         private void btnBk4回原点_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[24] = false;
+            communication.WriteVariable(false, "PlcInIO[24]");
         }
 
         private void 旋转一回原点_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[25] = true;
+            communication.WriteVariable(true, "PlcInIO[25]");
         }
 
         private void 旋转一回原点_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[25] = false;
+            communication.WriteVariable(false, "PlcInIO[25]");
         }
 
         private void 旋转二回原点_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[26] = true;
+            communication.WriteVariable(true, "PlcInIO[26]");
         }
 
         private void 旋转二回原点_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[26] = false;
+            communication.WriteVariable(false, "PlcInIO[26]");
         }
 
         private void btnJD1回原点_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[608] = true;
+            communication.WriteVariable(true, "PlcInIO[608]");
         }
 
         private void btnJD1回原点_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[608] = false;
+            communication.WriteVariable(false, "PlcInIO[608]");
         }
 
         private void btnJD2回原点_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[609] = true;
+            communication.WriteVariable(true, "PlcInIO[609]");
         }
 
         private void btnJD2回原点_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[609] = false;
+            communication.WriteVariable(false, "PlcInIO[609]");
         }
 
         private void btnJD3回原点_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[610] = true;
+            communication.WriteVariable(true, "PlcInIO[610]");
         }
 
         private void btnJD3回原点_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[610] = false;
+            communication.WriteVariable(false, "PlcInIO[610]");
         }
 
         private void btnJD4回原点_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[611] = true;
+            communication.WriteVariable(true, "PlcInIO[611]");
         }
 
         private void btnJD4回原点_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[611] = false;
+            communication.WriteVariable(false, "PlcInIO[611]");
         }
         #endregion
 
         #region 手动移动
         private void btnX停止_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[360] = true;
+            communication.WriteVariable(true, "PlcInIO[360]");
         }
 
         private void btnX停止_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[360] = false;
+            communication.WriteVariable(false, "PlcInIO[360]");
         }
 
         private void btnX左行_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[362] = true;
+            communication.WriteVariable(true, "PlcInIO[362]");
         }
 
         private void btnX左行_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[362] = false;
+            communication.WriteVariable(false, "PlcInIO[362]");
         }
 
         private void btnX右行_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[361] = true;
+            communication.WriteVariable(true, "PlcInIO[361]");
         }
 
         private void btnX右行_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[361] = false;
+            communication.WriteVariable(false, "PlcInIO[361]");
         }
 
         private void btnY停止_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[365] = true;
+            communication.WriteVariable(true, "PlcInIO[365]");
         }
 
         private void btnY停止_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[365] = false;
+            communication.WriteVariable(false, "PlcInIO[365]");
         }
 
         private void btnY前行_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[366] = true;
+            communication.WriteVariable(true, "PlcInIO[366]");
         }
 
         private void btnY前行_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[366] = false;
+            communication.WriteVariable(false, "PlcInIO[366]");
         }
 
         private void btnY后行_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[367] = true;
+            communication.WriteVariable(true, "PlcInIO[367]");
         }
 
         private void btnY后行_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[367] = false;
+            communication.WriteVariable(false, "PlcInIO[367]");
         }
 
         private void btn实盘停止_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[370] = true;
+            communication.WriteVariable(true, "PlcInIO[370]");
         }
 
         private void btn实盘停止_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[370] = false;
+            communication.WriteVariable(false, "PlcInIO[370]");
         }
 
         private void btn实盘上行_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[371] = true;
+            communication.WriteVariable(true, "PlcInIO[371]");
         }
 
         private void btn实盘上行_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[371] = false;
+            communication.WriteVariable(false, "PlcInIO[371]");
         }
 
         private void btn实盘下行_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[372] = true;
+            communication.WriteVariable(true, "PlcInIO[372]");
         }
 
         private void btn实盘下行_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[372] = false;
+            communication.WriteVariable(false, "PlcInIO[372]");
         }
 
         private void btnNG盘停止_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[375] = true;
+            communication.WriteVariable(true, "PlcInIO[375]");
         }
 
         private void btnNG盘停止_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[375] = false;
+            communication.WriteVariable(false, "PlcInIO[375]");
         }
 
         private void btnNG盘上行_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[376] = true;
+            communication.WriteVariable(true, "PlcInIO[376]");
         }
 
         private void btnNG盘上行_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[376] = false;
+            communication.WriteVariable(false, "PlcInIO[376]");
         }
 
         private void btnNG盘下行_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[377] = true;
+            communication.WriteVariable(true, "PlcInIO[377]");
         }
 
         private void btnNG盘下行_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[377] = false;
+            communication.WriteVariable(false, "PlcInIO[377]");
         }
 
         private void btn倒实盘停止_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[380] = true;
+            communication.WriteVariable(true, "PlcInIO[380]");
         }
 
         private void btn倒实盘停止_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[380] = false;
+            communication.WriteVariable(false, "PlcInIO[380]");
         }
 
         private void btn倒实盘上行_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[381] = true;
+            communication.WriteVariable(true, "PlcInIO[381]");
         }
 
         private void btn倒实盘上行_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[381] = false;
+            communication.WriteVariable(false, "PlcInIO[381]");
         }
 
         private void btn倒实盘下行_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[382] = true;
+            communication.WriteVariable(true, "PlcInIO[382]");
         }
 
         private void btn倒实盘下行_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[382] = false;
+            communication.WriteVariable(false, "PlcInIO[382]");
         }
 
         private void btn倒NG盘停止_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[385] = true;
+            communication.WriteVariable(true, "PlcInIO[385]");
         }
 
         private void btn倒NG盘停止_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[385] = false;
+            communication.WriteVariable(false, "PlcInIO[385]");
         }
 
         private void btn倒NG盘上行_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[386] = true;
+            communication.WriteVariable(true, "PlcInIO[386]");
         }
 
         private void btn倒NG盘上行_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[386] = false;
+            communication.WriteVariable(false, "PlcInIO[386]");
         }
 
         private void btn倒NG盘下行_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[387] = true;
+            communication.WriteVariable(true, "PlcInIO[387]");
         }
 
         private void btn倒NG盘下行_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[387] = false;
+            communication.WriteVariable(false, "PlcInIO[387]");
         }
 
         private void btnBY平移停止_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[390] = true;
+            communication.WriteVariable(true, "PlcInIO[390]");
         }
 
         private void btnBY平移停止_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[390] = false;
+            communication.WriteVariable(false, "PlcInIO[390]");
         }
 
         private void btnBY平移右行_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[391] = true;
+            communication.WriteVariable(true, "PlcInIO[391]");
         }
 
         private void btnBY平移右行_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[391] = false;
+            communication.WriteVariable(false, "PlcInIO[391]");
         }
 
         private void btnBY平移左行_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[392] = true;
+            communication.WriteVariable(true, "PlcInIO[392]");
         }
 
         private void btnBY平移左行_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[392] = false;
+            communication.WriteVariable(false, "PlcInIO[392]");
         }
 
         private void btnBYX停止_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[395] = true;
+            communication.WriteVariable(true, "PlcInIO[395]");
         }
 
         private void btnBYX停止_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[395] = false;
+            communication.WriteVariable(false, "PlcInIO[395]");
         }
 
         private void btnBYX右行_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[396] = true;
+            communication.WriteVariable(true, "PlcInIO[396]");
         }
 
         private void btnBYX右行_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[396] = false;
+            communication.WriteVariable(false, "PlcInIO[396]");
         }
 
         private void btnBYX左行_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[397] = true;
+            communication.WriteVariable(true, "PlcInIO[397]");
         }
 
         private void btnBYX左行_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[397] = false;
+            communication.WriteVariable(false, "PlcInIO[397]");
         }
 
         private void btnBYY停止_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[400] = true;
+            communication.WriteVariable(true, "PlcInIO[400]");
         }
 
         private void btnBYY停止_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[400] = false;
+            communication.WriteVariable(false, "PlcInIO[400]");
         }
 
         private void btnBYY前行_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[401] = true;
+            communication.WriteVariable(true, "PlcInIO[401]");
         }
 
         private void btnBYY前行_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[401] = false;
+            communication.WriteVariable(false, "PlcInIO[401]");
         }
 
         private void btnBYY后行_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[402] = true;
+            communication.WriteVariable(true, "PlcInIO[402]");
         }
 
         private void btnBYY后行_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[402] = false;
+            communication.WriteVariable(false, "PlcInIO[402]");
         }
 
         private void btnBYZ停止_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[405] = true;
+            communication.WriteVariable(true, "PlcInIO[405]");
         }
 
         private void btnBYZ停止_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[405] = false;
+            communication.WriteVariable(false, "PlcInIO[405]");
         }
 
         private void btnBYZ下行_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[406] = true;
+            communication.WriteVariable(true, "PlcInIO[406]");
         }
 
         private void btnBYZ下行_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[406] = false;
+            communication.WriteVariable(false, "PlcInIO[406]");
         }
 
         private void btnBYZ上行_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[407] = true;
+            communication.WriteVariable(true, "PlcInIO[407]");
         }
 
         private void btnBYZ上行_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[407] = false;
+            communication.WriteVariable(false, "PlcInIO[407]");
         }
 
         private void btn旋转1停止_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[450] = true;
+            communication.WriteVariable(true, "PlcInIO[450]");
         }
 
         private void btn旋转1停止_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[450] = false;
+            communication.WriteVariable(false, "PlcInIO[450]");
         }
 
         private void btn旋转1右行_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[451] = true;
+            communication.WriteVariable(true, "PlcInIO[451]");
         }
 
         private void btn旋转1右行_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[451] = false;
+            communication.WriteVariable(false, "PlcInIO[451]");
         }
 
         private void btn旋转1左行_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[452] = true;
+            communication.WriteVariable(true, "PlcInIO[452]");
         }
 
         private void btn旋转1左行_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[452] = false;
+            communication.WriteVariable(false, "PlcInIO[452]");
         }
 
         private void btn旋转2停止_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[455] = true;
+            communication.WriteVariable(true, "PlcInIO[455]");
         }
 
         private void btn旋转2停止_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[455] = false;
+            communication.WriteVariable(false, "PlcInIO[455]");
         }
 
         private void btn旋转2右行_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[456] = true;
+            communication.WriteVariable(true, "PlcInIO[456]");
         }
 
         private void btn旋转2右行_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[456] = false;
+            communication.WriteVariable(false, "PlcInIO[456]");
         }
 
         private void btn旋转2左行_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[457] = true;
+            communication.WriteVariable(true, "PlcInIO[457]");
         }
 
         private void btn旋转2左行_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[457] = false;
+            communication.WriteVariable(false, "PlcInIO[457]");
         }
 
         private void btnSk1停止_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[410] = true;
+            communication.WriteVariable(true, "PlcInIO[410]");
         }
 
         private void btnSk1停止_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[410] = false;
+            communication.WriteVariable(false, "PlcInIO[410]");
         }
 
         private void btnSk1前行_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[411] = true;
+            communication.WriteVariable(true, "PlcInIO[411]");
         }
 
         private void btnSk1前行_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[411] = false;
+            communication.WriteVariable(false, "PlcInIO[411]");
         }
 
         private void btnSk1后行_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[412] = true;
+            communication.WriteVariable(true, "PlcInIO[412]");
         }
 
         private void btnSk1后行_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[412] = false;
+            communication.WriteVariable(false, "PlcInIO[412]");
         }
 
         private void btnSk2停止_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[415] = true;
+            communication.WriteVariable(true, "PlcInIO[415]");
         }
 
         private void btnSk2停止_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[415] = false;
+            communication.WriteVariable(false, "PlcInIO[415]");
         }
 
         private void btnSk2前行_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[416] = true;
+            communication.WriteVariable(true, "PlcInIO[416]");
         }
 
         private void btnSk2前行_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[416] = false;
+            communication.WriteVariable(false, "PlcInIO[416]");
         }
 
         private void btnSk2后行_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[417] = true;
+            communication.WriteVariable(true, "PlcInIO[417]");
         }
 
         private void btnSk2后行_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[417] = false;
+            communication.WriteVariable(false, "PlcInIO[417]");
         }
 
         private void btnSk3停止_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[420] = true;
+            communication.WriteVariable(true, "PlcInIO[420]");
         }
 
         private void btnSk3停止_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[420] = false;
+            communication.WriteVariable(false, "PlcInIO[420]");
         }
 
         private void btnSk3前行_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[421] = true;
+            communication.WriteVariable(true, "PlcInIO[421]");
         }
 
         private void btnSk3前行_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[421] = false;
+            communication.WriteVariable(false, "PlcInIO[421]");
         }
 
         private void btnSk3后行_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[422] = true;
+            communication.WriteVariable(true, "PlcInIO[422]");
         }
 
         private void btnSk3后行_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[422] = false;
+            communication.WriteVariable(false, "PlcInIO[422]");
         }
 
         private void btnSk4停止_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[425] = true;
+            communication.WriteVariable(true, "PlcInIO[425]");
         }
 
         private void btnSk4停止_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[425] = false;
+            communication.WriteVariable(false, "PlcInIO[422]");
         }
 
         private void btnSk4前行_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[426] = true;
+            communication.WriteVariable(true, "PlcInIO[426]");
         }
 
         private void btnSk4前行_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[426] = false;
+            communication.WriteVariable(false, "PlcInIO[426]");
         }
 
         private void btnSk4后行_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[427] = true;
+            communication.WriteVariable(true, "PlcInIO[427]");
         }
 
         private void btnSk4后行_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[427] = false;
+            communication.WriteVariable(false, "PlcInIO[427]");
         }
 
         private void btnBk1停止_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[430] = true;
+            communication.WriteVariable(true, "PlcInIO[430]");
         }
 
         private void btnBk1停止_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[430] = false;
+            communication.WriteVariable(false, "PlcInIO[430]");
         }
 
         private void btnBk1下行_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[431] = true;
+            communication.WriteVariable(true, "PlcInIO[431]");
         }
 
         private void btnBk1下行_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[431] = false;
+            communication.WriteVariable(false, "PlcInIO[431]");
         }
 
         private void btnBk1上行_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[432] = true;
+            communication.WriteVariable(true, "PlcInIO[432]");
         }
 
         private void btnBk1上行_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[432] = false;
+            communication.WriteVariable(false, "PlcInIO[432]");
         }
 
         private void btnBk2停止_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[435] = true;
+            communication.WriteVariable(true, "PlcInIO[435]");
         }
 
         private void btnBk2停止_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[435] = false;
+            communication.WriteVariable(false, "PlcInIO[435]");
         }
 
         private void btnBk2下行_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[436] = true;
+            communication.WriteVariable(true, "PlcInIO[436]");
         }
 
         private void btnBk2下行_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[436] = false;
+            communication.WriteVariable(false, "PlcInIO[436]");
         }
 
         private void btnBk2上行_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[437] = true;
+            communication.WriteVariable(true, "PlcInIO[437]");
         }
 
         private void btnBk2上行_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[437] = false;
+            communication.WriteVariable(false, "PlcInIO[437]");
         }
 
         private void btnBk3停止_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[440] = true;
+            communication.WriteVariable(true, "PlcInIO[440]");
         }
 
         private void btnBk3停止_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[440] = false;
+            communication.WriteVariable(false, "PlcInIO[440]");
         }
 
         private void btnBk3下行_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[441] = true;
+            communication.WriteVariable(true, "PlcInIO[441]");
         }
 
         private void btnBk3下行_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[441] = false;
+            communication.WriteVariable(false, "PlcInIO[441]");
         }
 
         private void btnBk3上行_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[442] = true;
+            communication.WriteVariable(true, "PlcInIO[442]");
         }
 
         private void btnBk3上行_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[442] = false;
+            communication.WriteVariable(false, "PlcInIO[442]");
         }
 
         private void btnBk4停止_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[445] = true;
+            communication.WriteVariable(true, "PlcInIO[445]");
         }
 
         private void btnBk4停止_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[445] = false;
+            communication.WriteVariable(false, "PlcInIO[445]");
         }
 
         private void btnBk4下行_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[446] = true;
+            communication.WriteVariable(true, "PlcInIO[446]");
         }
 
         private void btnBk4下行_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[446] = false;
+            communication.WriteVariable(false, "PlcInIO[446]");
         }
 
         private void btnBk4上行_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[447] = true;
+            communication.WriteVariable(true, "PlcInIO[447]");
         }
 
         private void btnBk4上行_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[447] = false;
+            communication.WriteVariable(false, "PlcInIO[447]");
         }
         #endregion
 
@@ -4482,7 +4548,7 @@ namespace FT
 
             communication.WriteVariables(communication.WritePLCPmt, "PLCInPmt", 0, 24);
         }
-       
+
         //只能输入数字
         private void txt上料X轴定位速度设置_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -4708,86 +4774,47 @@ namespace FT
         #region 功能设置
         private void btn门开关功能开关_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[460] = true;
+            communication.WriteVariable(true, "PlcInIO[460]");
         }
 
         private void btn门开关功能开关_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WritePLCIO[460] = false;
+            communication.WriteVariable(false, "PlcInIO[460]");
         }
-
 
         #endregion
 
         #region 自动界面
-
-        private void btn蜂鸣停止_MouseDown(object sender, MouseEventArgs e)
+        private void BTN_SwitchUser_Click(object sender, EventArgs e)
         {
-            communication.WritePLCIO[1] = true;
+            form.Show();
+            this.Hide();
         }
 
-        private void btn蜂鸣停止_MouseUp(object sender, MouseEventArgs e)
+        private void BTN_打开端口_Click(object sender, EventArgs e)
         {
-            communication.WritePLCIO[1] = false;
+            //打开通信端口
+            try
+            {
+                communication.compolet.Open();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "打开端口");
+            }
         }
 
-        private void btn手动模式_MouseDown(object sender, MouseEventArgs e)
+        private void BTN_关闭端口_Click(object sender, EventArgs e)
         {
-            communication.WritePLCIO[2] = true;
-        }
-
-        private void btn手动模式_MouseUp(object sender, MouseEventArgs e)
-        {
-            communication.WritePLCIO[2] = false;
-        }
-
-        private void btn自动模式_MouseDown(object sender, MouseEventArgs e)
-        {
-            communication.WritePLCIO[3] = true;
-        }
-
-        private void btn自动模式_MouseUp(object sender, MouseEventArgs e)
-        {
-            communication.WritePLCIO[3] = false;
-        }
-
-        private void btn自动运行_MouseDown(object sender, MouseEventArgs e)
-        {
-            communication.WritePLCIO[4] = true;
-        }
-
-        private void btn自动运行_MouseUp(object sender, MouseEventArgs e)
-        {
-            communication.WritePLCIO[4] = false;
-        }
-
-        private void btn自动停止_MouseDown(object sender, MouseEventArgs e)
-        {
-            communication.WritePLCIO[5] = true;
-        }
-
-        private void btn自动停止_MouseUp(object sender, MouseEventArgs e)
-        {
-            communication.WritePLCIO[5] = false;
-        }
-
-        private void btn初始化_MouseDown(object sender, MouseEventArgs e)
-        {
-            communication.WritePLCIO[6] = true;
-        }
-
-        private void btn初始化_MouseUp(object sender, MouseEventArgs e)
-        {
-            communication.WritePLCIO[6] = false;
-        }
-
-        #endregion
-
-        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            //关闭通信端口
-            communication.compolet.Close();
-            form.Close();
+            try
+            {
+                //关闭通信端口
+                communication.compolet.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "关闭端口");
+            }
         }
 
         private void BTN_Modify_Click(object sender, EventArgs e)
@@ -4819,12 +4846,47 @@ namespace FT
 
         private void btn蜂鸣停止_Click(object sender, EventArgs e)
         {
-
+            communication.WriteVariable(true, "PlcInIO[1]");
         }
+
+        private void btn手动模式_Click(object sender, EventArgs e)
+        {
+            communication.WriteVariable(true, "PlcInIO[2]");
+        }
+
+        private void btn自动模式_Click(object sender, EventArgs e)
+        {
+            communication.WriteVariable(true, "PlcInIO[3]");
+        }
+
+        private void btn自动运行_Click(object sender, EventArgs e)
+        {
+            communication.WriteVariable(true, "PlcInIO[4]");
+        }
+
+        private void btn自动停止_Click(object sender, EventArgs e)
+        {
+            communication.WriteVariable(true, "PlcInIO[5]");
+        }
+
+        private void btn初始化_Click(object sender, EventArgs e)
+        {
+            communication.WriteVariable(true, "PlcInIO[6]");
+        }
+        #endregion
 
         private void CB_TypeOfProduction_SelectedIndexChanged(object sender, EventArgs e)
         {
             communication.WriteVariable(1, "PlcInID[1]");
         }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            //关闭通信端口
+            communication.compolet.Close();
+            form.Close();
+        }
+
+        
     }
 }
