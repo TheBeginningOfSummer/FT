@@ -43,18 +43,18 @@ namespace FT
         #endregion
 
         #region 写入PLC的数据
-        /// <summary>
-        /// 写PLCIO
-        /// </summary>
-        public bool[] WritePLCIO { get; set; }
-        /// <summary>
-        /// 写托盘与产品信息
-        /// </summary>
-        public int[] WriteProductionData { get; set; }
-        /// <summary>
-        /// 写标志位数组
-        /// </summary>
-        public bool[] WriteFlagBits { get; set; }
+        ///// <summary>
+        ///// 写PLCIO
+        ///// </summary>
+        //public bool[] WritePLCIO { get; set; }
+        ///// <summary>
+        ///// 写托盘与产品信息
+        ///// </summary>
+        //public int[] WriteProductionData { get; set; }
+        ///// <summary>
+        ///// 写标志位数组
+        ///// </summary>
+        //public bool[] WriteFlagBits { get; set; }
         /// <summary>
         /// 写运动参数
         /// </summary>
@@ -72,11 +72,10 @@ namespace FT
             ReadPLCAlarm = new bool[200];
             ReadPLCPmt = new double[50];
 
-            WritePLCIO = new bool[800];
-            WriteProductionData = new int[50];
-            WriteFlagBits = new bool[50];
+            //WritePLCIO = new bool[800];
+            //WriteProductionData = new int[50];
+            //WriteFlagBits = new bool[50];
             WritePLCPmt = new double[50];
-
         }
 
         public void RefreshData()

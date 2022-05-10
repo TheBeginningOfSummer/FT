@@ -30,10 +30,15 @@
         {
             this.TC_Main = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.LB_TypeOfProduction = new System.Windows.Forms.Label();
-            this.CB_TypeOfProduction = new System.Windows.Forms.ComboBox();
+            this.BTN_SwitchUser = new System.Windows.Forms.Button();
+            this.BTN_Mapping = new System.Windows.Forms.Button();
+            this.GB_Coonnection = new System.Windows.Forms.GroupBox();
+            this.BTN_关闭端口 = new System.Windows.Forms.Button();
+            this.BTN_打开端口 = new System.Windows.Forms.Button();
             this.LB_ConnectionStatus = new System.Windows.Forms.Label();
             this.LB_Connection = new System.Windows.Forms.Label();
+            this.LB_TypeOfProduction = new System.Windows.Forms.Label();
+            this.CB_TypeOfProduction = new System.Windows.Forms.ComboBox();
             this.GB_Modify = new System.Windows.Forms.GroupBox();
             this.BTN_Modify = new System.Windows.Forms.Button();
             this.TB_NewPassword = new System.Windows.Forms.TextBox();
@@ -431,6 +436,9 @@
             this.btnSk1回原点 = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.GB_Trays = new System.Windows.Forms.GroupBox();
+            this.label307 = new System.Windows.Forms.Label();
+            this.label305 = new System.Windows.Forms.Label();
+            this.label286 = new System.Windows.Forms.Label();
             this.PN_Trays = new System.Windows.Forms.Panel();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.label266 = new System.Windows.Forms.Label();
@@ -1316,6 +1324,7 @@
             this.label416 = new System.Windows.Forms.Label();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.InquireCondition = new System.Windows.Forms.GroupBox();
+            this.BTN_Output = new System.Windows.Forms.Button();
             this.LB_SensorCode = new System.Windows.Forms.Label();
             this.CB_SensorType = new System.Windows.Forms.ComboBox();
             this.BTN_SensorInquire = new System.Windows.Forms.Button();
@@ -1417,14 +1426,9 @@
             this.label469 = new System.Windows.Forms.Label();
             this.label464 = new System.Windows.Forms.Label();
             this.label463 = new System.Windows.Forms.Label();
-            this.GB_Coonnection = new System.Windows.Forms.GroupBox();
-            this.BTN_打开端口 = new System.Windows.Forms.Button();
-            this.BTN_关闭端口 = new System.Windows.Forms.Button();
-            this.BTN_Mapping = new System.Windows.Forms.Button();
-            this.BTN_SwitchUser = new System.Windows.Forms.Button();
-            this.BTN_Output = new System.Windows.Forms.Button();
             this.TC_Main.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.GB_Coonnection.SuspendLayout();
             this.GB_Modify.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox20.SuspendLayout();
@@ -1504,7 +1508,6 @@
             this.groupBox62.SuspendLayout();
             this.groupBox65.SuspendLayout();
             this.groupBox63.SuspendLayout();
-            this.GB_Coonnection.SuspendLayout();
             this.SuspendLayout();
             // 
             // TC_Main
@@ -1534,7 +1537,6 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.BTN_SwitchUser);
             this.tabPage1.Controls.Add(this.BTN_Mapping);
             this.tabPage1.Controls.Add(this.GB_Coonnection);
             this.tabPage1.Controls.Add(this.LB_TypeOfProduction);
@@ -1558,23 +1560,59 @@
             this.tabPage1.Text = "自动操作";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // LB_TypeOfProduction
+            // BTN_SwitchUser
             // 
-            this.LB_TypeOfProduction.AutoSize = true;
-            this.LB_TypeOfProduction.Location = new System.Drawing.Point(538, 98);
-            this.LB_TypeOfProduction.Name = "LB_TypeOfProduction";
-            this.LB_TypeOfProduction.Size = new System.Drawing.Size(88, 17);
-            this.LB_TypeOfProduction.TabIndex = 14;
-            this.LB_TypeOfProduction.Text = "产品种类：";
+            this.BTN_SwitchUser.Location = new System.Drawing.Point(11, 126);
+            this.BTN_SwitchUser.Name = "BTN_SwitchUser";
+            this.BTN_SwitchUser.Size = new System.Drawing.Size(80, 23);
+            this.BTN_SwitchUser.TabIndex = 17;
+            this.BTN_SwitchUser.Text = "切换用户";
+            this.BTN_SwitchUser.UseVisualStyleBackColor = true;
+            this.BTN_SwitchUser.Click += new System.EventHandler(this.BTN_SwitchUser_Click);
             // 
-            // CB_TypeOfProduction
+            // BTN_Mapping
             // 
-            this.CB_TypeOfProduction.FormattingEnabled = true;
-            this.CB_TypeOfProduction.Location = new System.Drawing.Point(629, 95);
-            this.CB_TypeOfProduction.Name = "CB_TypeOfProduction";
-            this.CB_TypeOfProduction.Size = new System.Drawing.Size(121, 24);
-            this.CB_TypeOfProduction.TabIndex = 13;
-            this.CB_TypeOfProduction.SelectedIndexChanged += new System.EventHandler(this.CB_TypeOfProduction_SelectedIndexChanged);
+            this.BTN_Mapping.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.BTN_Mapping.Location = new System.Drawing.Point(93, 300);
+            this.BTN_Mapping.Name = "BTN_Mapping";
+            this.BTN_Mapping.Size = new System.Drawing.Size(100, 25);
+            this.BTN_Mapping.TabIndex = 16;
+            this.BTN_Mapping.Text = "Mapping测试";
+            this.BTN_Mapping.UseVisualStyleBackColor = true;
+            this.BTN_Mapping.Click += new System.EventHandler(this.BTN_Mapping_Click);
+            // 
+            // GB_Coonnection
+            // 
+            this.GB_Coonnection.Controls.Add(this.BTN_关闭端口);
+            this.GB_Coonnection.Controls.Add(this.BTN_打开端口);
+            this.GB_Coonnection.Controls.Add(this.LB_ConnectionStatus);
+            this.GB_Coonnection.Controls.Add(this.LB_Connection);
+            this.GB_Coonnection.Location = new System.Drawing.Point(273, 23);
+            this.GB_Coonnection.Name = "GB_Coonnection";
+            this.GB_Coonnection.Size = new System.Drawing.Size(218, 131);
+            this.GB_Coonnection.TabIndex = 15;
+            this.GB_Coonnection.TabStop = false;
+            this.GB_Coonnection.Text = "连接";
+            // 
+            // BTN_关闭端口
+            // 
+            this.BTN_关闭端口.Location = new System.Drawing.Point(121, 75);
+            this.BTN_关闭端口.Name = "BTN_关闭端口";
+            this.BTN_关闭端口.Size = new System.Drawing.Size(85, 23);
+            this.BTN_关闭端口.TabIndex = 14;
+            this.BTN_关闭端口.Text = "关闭端口";
+            this.BTN_关闭端口.UseVisualStyleBackColor = true;
+            this.BTN_关闭端口.Click += new System.EventHandler(this.BTN_关闭端口_Click);
+            // 
+            // BTN_打开端口
+            // 
+            this.BTN_打开端口.Location = new System.Drawing.Point(18, 75);
+            this.BTN_打开端口.Name = "BTN_打开端口";
+            this.BTN_打开端口.Size = new System.Drawing.Size(85, 23);
+            this.BTN_打开端口.TabIndex = 13;
+            this.BTN_打开端口.Text = "打开端口";
+            this.BTN_打开端口.UseVisualStyleBackColor = true;
+            this.BTN_打开端口.Click += new System.EventHandler(this.BTN_打开端口_Click);
             // 
             // LB_ConnectionStatus
             // 
@@ -1595,8 +1633,34 @@
             this.LB_Connection.TabIndex = 11;
             this.LB_Connection.Text = "      ";
             // 
+            // LB_TypeOfProduction
+            // 
+            this.LB_TypeOfProduction.AutoSize = true;
+            this.LB_TypeOfProduction.Location = new System.Drawing.Point(538, 98);
+            this.LB_TypeOfProduction.Name = "LB_TypeOfProduction";
+            this.LB_TypeOfProduction.Size = new System.Drawing.Size(88, 17);
+            this.LB_TypeOfProduction.TabIndex = 14;
+            this.LB_TypeOfProduction.Text = "产品种类：";
+            // 
+            // CB_TypeOfProduction
+            // 
+            this.CB_TypeOfProduction.FormattingEnabled = true;
+            this.CB_TypeOfProduction.Items.AddRange(new object[] {
+            "产品1",
+            "产品2",
+            "产品3",
+            "产品4",
+            "产品5",
+            "产品6"});
+            this.CB_TypeOfProduction.Location = new System.Drawing.Point(629, 95);
+            this.CB_TypeOfProduction.Name = "CB_TypeOfProduction";
+            this.CB_TypeOfProduction.Size = new System.Drawing.Size(121, 24);
+            this.CB_TypeOfProduction.TabIndex = 13;
+            this.CB_TypeOfProduction.SelectedIndexChanged += new System.EventHandler(this.CB_TypeOfProduction_SelectedIndexChanged);
+            // 
             // GB_Modify
             // 
+            this.GB_Modify.Controls.Add(this.BTN_SwitchUser);
             this.GB_Modify.Controls.Add(this.BTN_Modify);
             this.GB_Modify.Controls.Add(this.TB_NewPassword);
             this.GB_Modify.Controls.Add(this.TB_Password);
@@ -6919,6 +6983,9 @@
             // GB_Trays
             // 
             this.GB_Trays.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.GB_Trays.Controls.Add(this.label307);
+            this.GB_Trays.Controls.Add(this.label305);
+            this.GB_Trays.Controls.Add(this.label286);
             this.GB_Trays.Controls.Add(this.PN_Trays);
             this.GB_Trays.Dock = System.Windows.Forms.DockStyle.Fill;
             this.GB_Trays.Location = new System.Drawing.Point(0, 0);
@@ -6928,14 +6995,46 @@
             this.GB_Trays.TabStop = false;
             this.GB_Trays.Text = "上料盘";
             // 
+            // label307
+            // 
+            this.label307.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label307.BackColor = System.Drawing.Color.OrangeRed;
+            this.label307.Location = new System.Drawing.Point(102, 714);
+            this.label307.Name = "label307";
+            this.label307.Size = new System.Drawing.Size(40, 17);
+            this.label307.TabIndex = 3;
+            this.label307.Text = "NG";
+            // 
+            // label305
+            // 
+            this.label305.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label305.BackColor = System.Drawing.Color.Lime;
+            this.label305.Location = new System.Drawing.Point(54, 714);
+            this.label305.Name = "label305";
+            this.label305.Size = new System.Drawing.Size(40, 17);
+            this.label305.TabIndex = 2;
+            this.label305.Text = "OK";
+            // 
+            // label286
+            // 
+            this.label286.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label286.BackColor = System.Drawing.Color.DarkGray;
+            this.label286.Location = new System.Drawing.Point(8, 714);
+            this.label286.Name = "label286";
+            this.label286.Size = new System.Drawing.Size(40, 17);
+            this.label286.TabIndex = 1;
+            this.label286.Text = "未测";
+            // 
             // PN_Trays
             // 
+            this.PN_Trays.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.PN_Trays.AutoScroll = true;
             this.PN_Trays.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.PN_Trays.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PN_Trays.Location = new System.Drawing.Point(3, 20);
             this.PN_Trays.Name = "PN_Trays";
-            this.PN_Trays.Size = new System.Drawing.Size(1250, 711);
+            this.PN_Trays.Size = new System.Drawing.Size(1250, 680);
             this.PN_Trays.TabIndex = 0;
             // 
             // tabPage4
@@ -17693,6 +17792,7 @@
             // 
             // InquireCondition
             // 
+            this.InquireCondition.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.InquireCondition.Controls.Add(this.BTN_Output);
             this.InquireCondition.Controls.Add(this.LB_SensorCode);
             this.InquireCondition.Controls.Add(this.CB_SensorType);
@@ -17708,6 +17808,16 @@
             this.InquireCondition.TabIndex = 15;
             this.InquireCondition.TabStop = false;
             this.InquireCondition.Text = "查询";
+            // 
+            // BTN_Output
+            // 
+            this.BTN_Output.Location = new System.Drawing.Point(93, 162);
+            this.BTN_Output.Name = "BTN_Output";
+            this.BTN_Output.Size = new System.Drawing.Size(75, 23);
+            this.BTN_Output.TabIndex = 17;
+            this.BTN_Output.Text = "导出";
+            this.BTN_Output.UseVisualStyleBackColor = true;
+            this.BTN_Output.Click += new System.EventHandler(this.BTN_Output_Click);
             // 
             // LB_SensorCode
             // 
@@ -17898,6 +18008,7 @@
             this.txt黑体轴手动速度设置.Name = "txt黑体轴手动速度设置";
             this.txt黑体轴手动速度设置.Size = new System.Drawing.Size(49, 21);
             this.txt黑体轴手动速度设置.TabIndex = 99;
+            this.txt黑体轴手动速度设置.TextChanged += new System.EventHandler(this.SpeedSet_TextChanged);
             this.txt黑体轴手动速度设置.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt黑体轴手动速度设置_KeyPress);
             // 
             // txtSocket轴手动速度
@@ -17931,6 +18042,7 @@
             this.txtSocket轴手动速度设置.Name = "txtSocket轴手动速度设置";
             this.txtSocket轴手动速度设置.Size = new System.Drawing.Size(49, 21);
             this.txtSocket轴手动速度设置.TabIndex = 96;
+            this.txtSocket轴手动速度设置.TextChanged += new System.EventHandler(this.SpeedSet_TextChanged);
             this.txtSocket轴手动速度设置.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSocket轴手动速度设置_KeyPress);
             // 
             // txt搬运X轴手动速度
@@ -17970,6 +18082,7 @@
             this.txt搬运Z轴手动速度设置.Name = "txt搬运Z轴手动速度设置";
             this.txt搬运Z轴手动速度设置.Size = new System.Drawing.Size(49, 21);
             this.txt搬运Z轴手动速度设置.TabIndex = 93;
+            this.txt搬运Z轴手动速度设置.TextChanged += new System.EventHandler(this.SpeedSet_TextChanged);
             this.txt搬运Z轴手动速度设置.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt搬运Z轴手动速度设置_KeyPress);
             // 
             // label506
@@ -18012,6 +18125,7 @@
             this.txt搬运Y轴手动速度设置.Name = "txt搬运Y轴手动速度设置";
             this.txt搬运Y轴手动速度设置.Size = new System.Drawing.Size(49, 21);
             this.txt搬运Y轴手动速度设置.TabIndex = 90;
+            this.txt搬运Y轴手动速度设置.TextChanged += new System.EventHandler(this.SpeedSet_TextChanged);
             this.txt搬运Y轴手动速度设置.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt搬运Y轴手动速度设置_KeyPress);
             // 
             // label509
@@ -18048,6 +18162,7 @@
             this.txt搬运X轴手动速度设置.Name = "txt搬运X轴手动速度设置";
             this.txt搬运X轴手动速度设置.Size = new System.Drawing.Size(49, 21);
             this.txt搬运X轴手动速度设置.TabIndex = 87;
+            this.txt搬运X轴手动速度设置.TextChanged += new System.EventHandler(this.SpeedSet_TextChanged);
             this.txt搬运X轴手动速度设置.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt搬运X轴手动速度设置_KeyPress);
             // 
             // txt升降轴手动速度
@@ -18081,6 +18196,7 @@
             this.txt中空轴手动速度设置.Name = "txt中空轴手动速度设置";
             this.txt中空轴手动速度设置.Size = new System.Drawing.Size(49, 21);
             this.txt中空轴手动速度设置.TabIndex = 84;
+            this.txt中空轴手动速度设置.TextChanged += new System.EventHandler(this.SpeedSet_TextChanged);
             this.txt中空轴手动速度设置.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt中空轴手动速度设置_KeyPress);
             // 
             // label510
@@ -18123,6 +18239,7 @@
             this.txt平移轴手动速度设置.Name = "txt平移轴手动速度设置";
             this.txt平移轴手动速度设置.Size = new System.Drawing.Size(49, 21);
             this.txt平移轴手动速度设置.TabIndex = 81;
+            this.txt平移轴手动速度设置.TextChanged += new System.EventHandler(this.SpeedSet_TextChanged);
             this.txt平移轴手动速度设置.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt平移轴手动速度设置_KeyPress);
             // 
             // label513
@@ -18165,6 +18282,7 @@
             this.txt升降轴手动速度设置.Name = "txt升降轴手动速度设置";
             this.txt升降轴手动速度设置.Size = new System.Drawing.Size(49, 21);
             this.txt升降轴手动速度设置.TabIndex = 78;
+            this.txt升降轴手动速度设置.TextChanged += new System.EventHandler(this.SpeedSet_TextChanged);
             this.txt升降轴手动速度设置.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt升降轴手动速度设置_KeyPress);
             // 
             // label516
@@ -18207,6 +18325,7 @@
             this.txt上料Y轴手动速度设置.Name = "txt上料Y轴手动速度设置";
             this.txt上料Y轴手动速度设置.Size = new System.Drawing.Size(49, 21);
             this.txt上料Y轴手动速度设置.TabIndex = 75;
+            this.txt上料Y轴手动速度设置.TextChanged += new System.EventHandler(this.SpeedSet_TextChanged);
             this.txt上料Y轴手动速度设置.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt上料Y轴手动速度设置_KeyPress);
             // 
             // label519
@@ -18246,9 +18365,11 @@
             // 
             this.txt上料X轴手动速度设置.Location = new System.Drawing.Point(68, 38);
             this.txt上料X轴手动速度设置.Margin = new System.Windows.Forms.Padding(2);
+            this.txt上料X轴手动速度设置.MaxLength = 3;
             this.txt上料X轴手动速度设置.Name = "txt上料X轴手动速度设置";
             this.txt上料X轴手动速度设置.Size = new System.Drawing.Size(49, 21);
             this.txt上料X轴手动速度设置.TabIndex = 72;
+            this.txt上料X轴手动速度设置.TextChanged += new System.EventHandler(this.SpeedSet_TextChanged);
             this.txt上料X轴手动速度设置.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt上料X轴手动速度设置_KeyPress);
             // 
             // label522
@@ -18528,15 +18649,18 @@
             this.txt中空轴定位速度设置.Name = "txt中空轴定位速度设置";
             this.txt中空轴定位速度设置.Size = new System.Drawing.Size(49, 21);
             this.txt中空轴定位速度设置.TabIndex = 84;
+            this.txt中空轴定位速度设置.TextChanged += new System.EventHandler(this.SpeedSet_TextChanged);
             this.txt中空轴定位速度设置.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt中空轴定位速度设置_KeyPress);
             // 
             // txt上料X轴定位速度设置
             // 
             this.txt上料X轴定位速度设置.Location = new System.Drawing.Point(68, 38);
             this.txt上料X轴定位速度设置.Margin = new System.Windows.Forms.Padding(2);
+            this.txt上料X轴定位速度设置.MaxLength = 3;
             this.txt上料X轴定位速度设置.Name = "txt上料X轴定位速度设置";
             this.txt上料X轴定位速度设置.Size = new System.Drawing.Size(49, 21);
             this.txt上料X轴定位速度设置.TabIndex = 72;
+            this.txt上料X轴定位速度设置.TextChanged += new System.EventHandler(this.SpeedSet_TextChanged);
             this.txt上料X轴定位速度设置.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt上料X轴定位速度设置_KeyPress);
             // 
             // txt升降轴定位速度
@@ -18554,6 +18678,7 @@
             this.txt上料Y轴定位速度设置.Name = "txt上料Y轴定位速度设置";
             this.txt上料Y轴定位速度设置.Size = new System.Drawing.Size(49, 21);
             this.txt上料Y轴定位速度设置.TabIndex = 75;
+            this.txt上料Y轴定位速度设置.TextChanged += new System.EventHandler(this.SpeedSet_TextChanged);
             this.txt上料Y轴定位速度设置.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt上料Y轴定位速度设置_KeyPress);
             // 
             // txt上料Y轴定位速度
@@ -18571,6 +18696,7 @@
             this.txt升降轴定位速度设置.Name = "txt升降轴定位速度设置";
             this.txt升降轴定位速度设置.Size = new System.Drawing.Size(49, 21);
             this.txt升降轴定位速度设置.TabIndex = 78;
+            this.txt升降轴定位速度设置.TextChanged += new System.EventHandler(this.SpeedSet_TextChanged);
             this.txt升降轴定位速度设置.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt升降轴定位速度设置_KeyPress);
             // 
             // txt上料X轴定位速度
@@ -18588,6 +18714,7 @@
             this.txt平移轴定位速度设置.Name = "txt平移轴定位速度设置";
             this.txt平移轴定位速度设置.Size = new System.Drawing.Size(49, 21);
             this.txt平移轴定位速度设置.TabIndex = 81;
+            this.txt平移轴定位速度设置.TextChanged += new System.EventHandler(this.SpeedSet_TextChanged);
             this.txt平移轴定位速度设置.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt平移轴定位速度设置_KeyPress);
             // 
             // label497
@@ -18674,6 +18801,7 @@
             this.txt黑体轴定位速度设置.Name = "txt黑体轴定位速度设置";
             this.txt黑体轴定位速度设置.Size = new System.Drawing.Size(49, 21);
             this.txt黑体轴定位速度设置.TabIndex = 99;
+            this.txt黑体轴定位速度设置.TextChanged += new System.EventHandler(this.SpeedSet_TextChanged);
             this.txt黑体轴定位速度设置.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt黑体轴定位速度设置_KeyPress);
             // 
             // label476
@@ -18694,6 +18822,7 @@
             this.txtSocket轴定位速度设置.Name = "txtSocket轴定位速度设置";
             this.txtSocket轴定位速度设置.Size = new System.Drawing.Size(49, 21);
             this.txtSocket轴定位速度设置.TabIndex = 96;
+            this.txtSocket轴定位速度设置.TextChanged += new System.EventHandler(this.SpeedSet_TextChanged);
             this.txtSocket轴定位速度设置.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSocket轴定位速度设置_KeyPress);
             // 
             // label473
@@ -18714,6 +18843,7 @@
             this.txt搬运Z轴定位速度设置.Name = "txt搬运Z轴定位速度设置";
             this.txt搬运Z轴定位速度设置.Size = new System.Drawing.Size(49, 21);
             this.txt搬运Z轴定位速度设置.TabIndex = 93;
+            this.txt搬运Z轴定位速度设置.TextChanged += new System.EventHandler(this.SpeedSet_TextChanged);
             this.txt搬运Z轴定位速度设置.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt搬运Z轴定位速度设置_KeyPress);
             // 
             // label474
@@ -18734,6 +18864,7 @@
             this.txt搬运Y轴定位速度设置.Name = "txt搬运Y轴定位速度设置";
             this.txt搬运Y轴定位速度设置.Size = new System.Drawing.Size(49, 21);
             this.txt搬运Y轴定位速度设置.TabIndex = 90;
+            this.txt搬运Y轴定位速度设置.TextChanged += new System.EventHandler(this.SpeedSet_TextChanged);
             this.txt搬运Y轴定位速度设置.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt搬运Y轴定位速度设置_KeyPress);
             // 
             // label470
@@ -18754,6 +18885,7 @@
             this.txt搬运X轴定位速度设置.Name = "txt搬运X轴定位速度设置";
             this.txt搬运X轴定位速度设置.Size = new System.Drawing.Size(49, 21);
             this.txt搬运X轴定位速度设置.TabIndex = 87;
+            this.txt搬运X轴定位速度设置.TextChanged += new System.EventHandler(this.SpeedSet_TextChanged);
             this.txt搬运X轴定位速度设置.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt搬运X轴定位速度设置_KeyPress);
             // 
             // label471
@@ -18811,70 +18943,6 @@
             this.label463.TabIndex = 71;
             this.label463.Text = "mm/s";
             // 
-            // GB_Coonnection
-            // 
-            this.GB_Coonnection.Controls.Add(this.BTN_关闭端口);
-            this.GB_Coonnection.Controls.Add(this.BTN_打开端口);
-            this.GB_Coonnection.Controls.Add(this.LB_ConnectionStatus);
-            this.GB_Coonnection.Controls.Add(this.LB_Connection);
-            this.GB_Coonnection.Location = new System.Drawing.Point(273, 23);
-            this.GB_Coonnection.Name = "GB_Coonnection";
-            this.GB_Coonnection.Size = new System.Drawing.Size(218, 131);
-            this.GB_Coonnection.TabIndex = 15;
-            this.GB_Coonnection.TabStop = false;
-            this.GB_Coonnection.Text = "连接";
-            // 
-            // BTN_打开端口
-            // 
-            this.BTN_打开端口.Location = new System.Drawing.Point(18, 79);
-            this.BTN_打开端口.Name = "BTN_打开端口";
-            this.BTN_打开端口.Size = new System.Drawing.Size(75, 23);
-            this.BTN_打开端口.TabIndex = 13;
-            this.BTN_打开端口.Text = "打开端口";
-            this.BTN_打开端口.UseVisualStyleBackColor = true;
-            this.BTN_打开端口.Click += new System.EventHandler(this.BTN_打开端口_Click);
-            // 
-            // BTN_关闭端口
-            // 
-            this.BTN_关闭端口.Location = new System.Drawing.Point(121, 79);
-            this.BTN_关闭端口.Name = "BTN_关闭端口";
-            this.BTN_关闭端口.Size = new System.Drawing.Size(75, 23);
-            this.BTN_关闭端口.TabIndex = 14;
-            this.BTN_关闭端口.Text = "关闭端口";
-            this.BTN_关闭端口.UseVisualStyleBackColor = true;
-            this.BTN_关闭端口.Click += new System.EventHandler(this.BTN_关闭端口_Click);
-            // 
-            // BTN_Mapping
-            // 
-            this.BTN_Mapping.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.BTN_Mapping.Location = new System.Drawing.Point(93, 300);
-            this.BTN_Mapping.Name = "BTN_Mapping";
-            this.BTN_Mapping.Size = new System.Drawing.Size(100, 25);
-            this.BTN_Mapping.TabIndex = 16;
-            this.BTN_Mapping.Text = "Mapping测试";
-            this.BTN_Mapping.UseVisualStyleBackColor = true;
-            this.BTN_Mapping.Click += new System.EventHandler(this.BTN_Mapping_Click);
-            // 
-            // BTN_SwitchUser
-            // 
-            this.BTN_SwitchUser.Location = new System.Drawing.Point(346, 301);
-            this.BTN_SwitchUser.Name = "BTN_SwitchUser";
-            this.BTN_SwitchUser.Size = new System.Drawing.Size(98, 24);
-            this.BTN_SwitchUser.TabIndex = 17;
-            this.BTN_SwitchUser.Text = "切换用户";
-            this.BTN_SwitchUser.UseVisualStyleBackColor = true;
-            this.BTN_SwitchUser.Click += new System.EventHandler(this.BTN_SwitchUser_Click);
-            // 
-            // BTN_Output
-            // 
-            this.BTN_Output.Location = new System.Drawing.Point(93, 162);
-            this.BTN_Output.Name = "BTN_Output";
-            this.BTN_Output.Size = new System.Drawing.Size(75, 23);
-            this.BTN_Output.TabIndex = 17;
-            this.BTN_Output.Text = "导出";
-            this.BTN_Output.UseVisualStyleBackColor = true;
-            this.BTN_Output.Click += new System.EventHandler(this.BTN_Output_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -18889,6 +18957,8 @@
             this.TC_Main.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            this.GB_Coonnection.ResumeLayout(false);
+            this.GB_Coonnection.PerformLayout();
             this.GB_Modify.ResumeLayout(false);
             this.GB_Modify.PerformLayout();
             this.tabPage2.ResumeLayout(false);
@@ -19030,8 +19100,6 @@
             this.groupBox65.PerformLayout();
             this.groupBox63.ResumeLayout(false);
             this.groupBox63.PerformLayout();
-            this.GB_Coonnection.ResumeLayout(false);
-            this.GB_Coonnection.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -20433,6 +20501,9 @@
         private System.Windows.Forms.Button BTN_Mapping;
         private System.Windows.Forms.Button BTN_SwitchUser;
         private System.Windows.Forms.Button BTN_Output;
+        private System.Windows.Forms.Label label286;
+        private System.Windows.Forms.Label label307;
+        private System.Windows.Forms.Label label305;
     }
 }
 

@@ -20,6 +20,8 @@ namespace FT
         //托盘数据
         TrayManager trayManager;
 
+        string trayType;
+
         Form2 form;
 
         public Form1(Form2 form2)
@@ -61,6 +63,7 @@ namespace FT
                 {
                     CB_TypeOfTray.Items.Add(trayType.Key);
                 }
+                trayType = CB_TypeOfTray.Text;
                 #endregion
 
                 //报警信息读取
@@ -98,22 +101,23 @@ namespace FT
                         //托盘数据初始化
                         if (communication.ReadFlagBits[2])
                         {
-                            PN_Trays.Controls.Clear();
-                            trayManager.InitializeTrays(CB_TypeOfTray.Text);
-                            foreach (var tray in trayManager.Trays)
+                            if (trayType != "" && trayType != " ")
                             {
-                                tray.UpdateTrayLabel(PN_Trays);
+                                PN_Trays.Invoke(new Action(() => PN_Trays.Controls.Clear()));
+                                trayManager.InitializeTrays(trayType);
+                                foreach (var tray in trayManager.Trays)
+                                {
+                                    tray.UpdateTrayLabel(PN_Trays);
+                                }
+                                //托盘初始化完成,PLC检测到此值为true后，将PLC标志位[2]置为false
+                                communication.WriteVariable(true, "PC标志位[2]");
                             }
-                            //托盘初始化完成,PLC检测到此值为true后，将PLC标志位[2]置为false
-                            //communication.WriteFlagBits[2] = true;
-                            communication.WriteVariable(true, "PC标志位[2]");
                         }
                         //托盘扫码完成
                         if (communication.ReadFlagBits[0])
                         {
                             trayManager.SetTrayNumber(communication.ReadTestInformation[4]);
                             //托盘扫码完成,PLC检测到此值为true后，将PLC标志位[0]置为false
-                            //communication.WriteFlagBits[0] = true;
                             communication.WriteVariable(true, "PC标志位[0]");
                         }
                         //产品测试完成
@@ -743,6 +747,7 @@ namespace FT
         
         private void CB_TypeOfTray_SelectedIndexChanged(object sender, EventArgs e)
         {
+            trayType = CB_TypeOfTray.Text;
             communication.WriteVariable(trayManager.TrayType[CB_TypeOfTray.Text].Index, "PlcInID[0]");
         }
         #endregion
@@ -4771,6 +4776,17 @@ namespace FT
                 }
             }
         }
+
+        private void SpeedSet_TextChanged(object sender, EventArgs e)
+        {
+            TextBox textBox = (TextBox)sender;
+            if (textBox.Text != "")
+                if (double.Parse(textBox.Text) > 200)
+                {
+                    textBox.Text = "200";
+                    MessageBox.Show("输入1-200的值", "提示");
+                }
+        }
         #endregion
 
         #region 功能设置
@@ -4799,6 +4815,7 @@ namespace FT
             try
             {
                 communication.compolet.Open();
+                MessageBox.Show("打开了端口", "打开端口");
             }
             catch (Exception ex)
             {
@@ -4812,6 +4829,7 @@ namespace FT
             {
                 //关闭通信端口
                 communication.compolet.Close();
+                MessageBox.Show("关闭了端口", "打开端口");
             }
             catch (Exception ex)
             {
