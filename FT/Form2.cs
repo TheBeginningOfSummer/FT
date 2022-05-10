@@ -54,6 +54,7 @@ namespace FT
                 if (form1 == null)
                 {
                     form1 = new Form1(this); form1.Show();
+                    form1.TC_Main.Selecting += new TabControlCancelEventHandler(TC_Main_Selecting);
                     this.Hide();
                 }
                 else
@@ -64,7 +65,7 @@ namespace FT
             }
             else
             {
-                MessageBox.Show("密码错误", "登录");
+                MessageBox.Show("密码错误", "登录", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 

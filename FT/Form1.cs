@@ -35,7 +35,7 @@ namespace FT
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "打开端口");
+                MessageBox.Show(ex.Message, "打开端口", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             try
@@ -71,7 +71,7 @@ namespace FT
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message, "程序初始化");
+                MessageBox.Show(e.Message, "程序初始化", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -615,7 +615,7 @@ namespace FT
                         {
                             if (communication.ReadPLCAlarm[i])
                             {
-                                MessageBox.Show(alarmInformation[i.ToString()], "报警信息");
+                                MessageBox.Show(alarmInformation[i.ToString()], "报警信息", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                 logfile.Writelog(alarmInformation[i.ToString()], "报警记录");
                             }
                         }
@@ -648,11 +648,13 @@ namespace FT
 
         public void DataToExcel(DataGridView m_DataView)
         {
-            SaveFileDialog kk = new SaveFileDialog();
-            kk.Title = "保存EXECL文件";
-            kk.Filter = "EXECL文件(*.xls) |*.xls |所有文件(*.*) |*.*";
-            kk.FilterIndex = 1;
-            kk.FileName = DateTime.Now.ToString("D");
+            SaveFileDialog kk = new SaveFileDialog
+            {
+                Title = "保存EXECL文件",
+                Filter = "EXECL文件(*.xls) |*.xls |所有文件(*.*) |*.*",
+                FilterIndex = 1,
+                FileName = DateTime.Now.ToString("D")
+            };
             if (kk.ShowDialog() == DialogResult.OK)
             {
                 string FileName = kk.FileName;
