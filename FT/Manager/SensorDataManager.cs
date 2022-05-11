@@ -35,7 +35,7 @@ namespace FT
             return " and " + tableHeader + " = '" + codition + "'";
         }
         //向数据库添加数据
-        public static bool AddSensor(SensorData sensor)
+        public static bool AddSensor(Sensor sensor)
         {
             string sql = "insert into Sensors(编码,类型,测试工位,测试结果,托盘编号,位置,外观,开始时间,完成时间) " +
                 "values(@编码,@类型,@测试工位,@测试结果,@托盘编号,@位置,@外观,@开始时间,@完成时间)";

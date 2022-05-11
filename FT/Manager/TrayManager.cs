@@ -22,6 +22,7 @@ namespace FT
         {
             try
             {
+                if (Trays == null) Trays = new List<Tray>();
                 //读取托盘种类配置文件
                 TrayType = JsonManager.ReadJsonString<Dictionary<string, TypeOfTray>>(Environment.CurrentDirectory + "\\Configuration\\", "TypeOfTray");
                 //读取Mapping图布局配置文件
@@ -61,10 +62,10 @@ namespace FT
         /// 设置托盘指定位置内探测器的数据
         /// </summary>
         /// <param name="sensorData">收到的探测器数据</param>
-        public void SetSensorDataInTray(SensorData sensorData)
+        public void SetSensorDataInTray(Sensor sensorData)
         {
             if (TrayIndex <= 0) return;
-            SensorData sensor = Trays[TrayIndex - 1].Sensors[sensorData.PosInTray];
+            Sensor sensor = Trays[TrayIndex - 1].Sensors[sensorData.PosInTray.ToString()];
             //SensorData sensor1 = Trays.Where((tray) => tray.TrayNumber == sensorData.TrayNumber).FirstOrDefault().Sensors[sensorData.PosInTray];
             sensor.SensorCode = sensorData.SensorCode;
             sensor.SensorType = sensorData.SensorType;
@@ -74,6 +75,46 @@ namespace FT
             sensor.Appearance = sensorData.Appearance;
             sensor.StartTime = sensorData.StartTime;
             sensor.EndTime = sensorData.EndTime;
+        }
+
+        /// <summary>
+        /// 保存托盘数据
+        /// </summary>
+        public void SaveTraysData()
+        {
+            List<TrayData> traysData = new List<TrayData>();
+            for (int i = 0; i < Trays.Count; i++)
+            {
+                traysData.Add(new TrayData(Trays[i]));
+            }
+            JsonManager.SaveJsonString(Environment.CurrentDirectory + "\\Cache", "TraysData", traysData);
+        }
+
+        /// <summary>
+        /// 加载托盘数据
+        /// </summary>
+        /// <param name="trayType">托盘类型</param>
+        public void LoadTraysData(string trayType)
+        {
+            Trays.Clear();
+            List<TrayData> trays = JsonManager.ReadJsonString<List<TrayData>>(Environment.CurrentDirectory + "\\Cache", "TraysData");
+            if (trays != null)
+            {
+                foreach (TrayData trayData in trays)
+                {
+                    Trays.Add(new Tray(trayData));
+                }
+            }
+            else
+            {
+                if (trayType != "")
+                {
+                    for (int i = 0; i < MappingLayout.Count; i++)
+                    {
+                        Trays.Add(new Tray(TrayType[trayType].Length, TrayType[trayType].Width, MappingLayout[i], i.ToString()));
+                    }
+                }
+            }
         }
     }
 }

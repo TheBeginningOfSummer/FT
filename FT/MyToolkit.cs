@@ -113,9 +113,8 @@ namespace MyToolkit
             }
             catch (Exception)
             {
-
+                return default(T);
             }
-            return default(T);
         }
 
         public static JsonData ReadSimpleJsonString(string path)

@@ -17,6 +17,7 @@ namespace FT
         LogFile logfile = new LogFile();
         //报警信息
         Dictionary<string, string> alarmInformation;
+        List<string> waring = new List<string>();
         //托盘数据
         TrayManager trayManager;
 
@@ -64,6 +65,14 @@ namespace FT
                     CB_TypeOfTray.Items.Add(trayType.Key);
                 }
                 trayType = CB_TypeOfTray.Text;
+
+                PN_Trays.Controls.Clear();
+                trayManager.LoadTraysData(trayType);
+                //trayManager.InitializeTrays("托盘1");
+                foreach (var tray in trayManager.Trays)
+                {
+                    tray.UpdateTrayLabel(PN_Trays);
+                }
                 #endregion
 
                 //报警信息读取
@@ -123,7 +132,7 @@ namespace FT
                         //产品测试完成
                         if (communication.ReadFlagBits[1])
                         {
-                            SensorData sensor = new SensorData(
+                            Sensor sensor = new Sensor(
                                 communication.ReadTestInformation[0],
                                 communication.ReadTestInformation[1],
                                 communication.ReadTestInformation[2],
@@ -135,6 +144,8 @@ namespace FT
                                 communication.ReadTestInformation[8]);
                             //Mapping图更新
                             trayManager.SetSensorDataInTray(sensor);
+                            //数据存储
+                            trayManager.SaveTraysData();
                             //数据库数据存储
                             SensorDataManager.AddSensor(sensor);
                             //产品信息录入完成。PLC检测到此值为true后，将PLC标志位[1]置为false
@@ -619,8 +630,23 @@ namespace FT
                         {
                             if (communication.ReadPLCAlarm[i])
                             {
-                                MessageBox.Show(alarmInformation[i.ToString()], "报警信息", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                logfile.Writelog(alarmInformation[i.ToString()], "报警记录");
+                                //MessageBox.Show(alarmInformation[i.ToString()], "报警信息", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                if (!waring.Contains(alarmInformation[i.ToString()]))
+                                {
+                                    TB_Waring.Invoke(new Action(() =>
+                                    {
+                                        TB_Waring.Clear();
+                                    }));
+                                    waring.Add(alarmInformation[i.ToString()]);
+                                    foreach (var item in waring)
+                                    {
+                                        TB_Waring.Invoke(new Action(() =>
+                                        {
+                                            TB_Waring.AppendText(item + Environment.NewLine);
+                                        }));
+                                    }
+                                    logfile.Writelog(alarmInformation[i.ToString()], "报警记录");
+                                }
                             }
                         }
                     }
@@ -737,12 +763,12 @@ namespace FT
         #region Mapping图操作
         private void BTN_Mapping_Click(object sender, EventArgs e)
         {
-            PN_Trays.Controls.Clear();
-            trayManager.InitializeTrays(CB_TypeOfTray.Text);
-            foreach (var tray in trayManager.Trays)
-            {
-                tray.UpdateTrayLabel(PN_Trays);
-            }
+            //PN_Trays.Controls.Clear();
+            //trayManager.InitializeTrays(CB_TypeOfTray.Text);
+            //foreach (var tray in trayManager.Trays)
+            //{
+            //    tray.UpdateTrayLabel(PN_Trays);
+            //}
         }
         
         private void CB_TypeOfTray_SelectedIndexChanged(object sender, EventArgs e)
@@ -4861,6 +4887,8 @@ namespace FT
 
         private void btn报警复位_Click(object sender, EventArgs e)
         {
+            waring.Clear();
+            TB_Waring.Clear();
             communication.WriteVariable(true, "PlcInIO[0]");
         }
 
@@ -4889,9 +4917,14 @@ namespace FT
             communication.WriteVariable(true, "PlcInIO[5]");
         }
 
-        private void btn初始化_Click(object sender, EventArgs e)
+        private void btn初始化_MouseDown(object sender, MouseEventArgs e)
         {
             communication.WriteVariable(true, "PlcInIO[6]");
+        }
+
+        private void btn初始化_MouseUp(object sender, MouseEventArgs e)
+        {
+            communication.WriteVariable(false, "PlcInIO[6]");
         }
         #endregion
 

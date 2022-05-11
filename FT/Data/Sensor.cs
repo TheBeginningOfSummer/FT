@@ -12,8 +12,76 @@ namespace FT.Data
     public class SensorData
     {
         //探测器编码
+        public virtual string SensorCode { get; set; }
+        //探测器类型
+        public string SensorType { get; set; }
+        //测试工位
+        public string TestStation { get; set; }
+        //测试结果
+        public virtual int SensorQuality { get; set; }
+        //所在托盘编号
+        public string TrayNumber { get; set; }
+        //所在托盘中的位置
+        public int PosInTray { get; set; }
+        //外观
+        public string Appearance { get; set; }
+        //开始测试时间
+        public string StartTime { get; set; }
+        //测试完成时间
+        public string EndTime { get; set; }
+
+        public SensorData(string sensorCode, string sensorType = "", string testStation = "", int sensorQuality = -1, string trayNumber = "", int posInTray = -1, string appearance = "", string startTime = "", string endTime = "")
+        {
+            SensorCode = sensorCode;
+            SensorType = sensorType;
+            TestStation = testStation;
+            SensorQuality = sensorQuality;
+            TrayNumber = trayNumber;
+            PosInTray = posInTray;
+            Appearance = appearance;
+            StartTime = DateConverter(startTime);
+            EndTime = DateConverter(endTime);
+        }
+
+        public SensorData(Sensor sensor)
+        {
+            SensorCode = sensor.SensorCode;
+            SensorType = sensor.SensorCode;
+            TestStation = sensor.SensorCode;
+            SensorQuality = sensor.SensorQuality;
+            TrayNumber = sensor.TrayNumber;
+            PosInTray = sensor.PosInTray;
+            Appearance = sensor.Appearance;
+            StartTime = sensor.StartTime;
+            EndTime = sensor.EndTime;
+        }
+
+        public SensorData()
+        {
+
+        }
+
+        public void SetTestData(string testStation, int quality)
+        {
+            TestStation = testStation;
+            SensorQuality = quality;
+            //EndTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+        }
+
+        public string DateConverter(string date)
+        {
+            if (date.Length == 14)
+                return (date.Substring(0, 4) + "-" + date.Substring(4, 2) + "-" + date.Substring(6, 2) + " " + date.Substring(8, 2) + ":" + date.Substring(10, 2) + ":" + date.Substring(12, 2));
+            else
+                return (DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+        }
+    }
+
+    public class Sensor : SensorData
+    {
+        //探测器编码
         private string sensorCode;
-        public string SensorCode
+        public override string SensorCode
         {
             get { return sensorCode; }
             set
@@ -25,13 +93,9 @@ namespace FT.Data
                     WinformTool.InvokeOnThread(SensorStatusLabel, new Action(() => { SensorStatusLabel.BackColor = Color.Gray; }));
             }
         }
-        //探测器类型
-        public string SensorType { get; set; }
-        //测试工位
-        public string TestStation { get; set; }
         //测试结果
         private int sensorQuality;
-        public int SensorQuality
+        public override int SensorQuality
         {
             get { return sensorQuality; }
             set
@@ -54,20 +118,10 @@ namespace FT.Data
                 }
             }
         }
-        //所在托盘编号
-        public string TrayNumber { get; set; }
-        //所在托盘中的位置
-        public int PosInTray { get; set; }
-        //外观
-        public string Appearance { get; set; }
-        //开始测试时间
-        public string StartTime { get; set; }
-        //测试完成时间
-        public string EndTime { get; set; }
         //状态显示控件
         public Label SensorStatusLabel;
 
-        public SensorData(string sensorCode, string sensorType = "", string testStation = "", int sensorQuality = -1, string trayNumber = "", int posInTray = -1, string appearance = "", string startTime = "", string endTime = "")
+        public Sensor(string sensorCode, string sensorType = "", string testStation = "", int sensorQuality = -1, string trayNumber = "", int posInTray = -1, string appearance = "", string startTime = "", string endTime = "")
         {
             SensorStatusLabel = new Label
             {
@@ -89,9 +143,26 @@ namespace FT.Data
             //Date = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
         }
 
-        public SensorData()
+        public Sensor(SensorData sensorData)
         {
+            SensorStatusLabel = new Label
+            {
+                Name = sensorCode,
+                Width = 24,
+                Height = 24,
+                Text = PosInTray.ToString()
+            };
 
+            SensorCode = sensorData.SensorCode;
+            SensorType = sensorData.SensorType;
+            TestStation = sensorData.TestStation;
+            SensorQuality = sensorData.SensorQuality;
+            TrayNumber = sensorData.TrayNumber;
+            PosInTray = sensorData.PosInTray;
+            Appearance = sensorData.Appearance;
+            StartTime = sensorData.StartTime;
+            EndTime = sensorData.EndTime;
+            SensorStatusLabel.Text = PosInTray.ToString();
         }
 
         public void SetTrayData(string trayNumber, int posInTray)
@@ -100,20 +171,43 @@ namespace FT.Data
             PosInTray = posInTray;
             SensorStatusLabel.Text = PosInTray.ToString();
         }
+    }
 
-        public void SetTestData(string testStation, int quality)
+    public class TrayData
+    {
+        //托盘编号
+        public virtual string TrayNumber { get; set; }
+        //托盘长方向孔位
+        public int TrayLength { get; set; }
+        //托盘宽方向孔位
+        public int TrayWidth { get; set; }
+        //托盘中探测器的数据
+        public virtual Dictionary<string, SensorData> Sensors { get; set; }
+
+        public int X;
+
+        public int Y;
+
+        public TrayData(Tray tray)
         {
-            TestStation = testStation;
-            SensorQuality = quality;
-            //EndTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+            TrayNumber = tray.TrayNumber;
+            TrayLength = tray.TrayLength;
+            TrayWidth = tray.TrayWidth;
+
+            Sensors = new Dictionary<string, SensorData>();
+            foreach (var item in tray.Sensors)
+            {
+                SensorData sensorData = new SensorData(item.Value);
+                Sensors.Add(sensorData.PosInTray.ToString(), sensorData);
+            }
+
+            X = tray.PosOnPanel.X;
+            Y = tray.PosOnPanel.Y;
         }
 
-        private string DateConverter(string date)
+        public TrayData()
         {
-            if (date.Length == 14)
-                return (date.Substring(0, 4) + "-" + date.Substring(4, 2) + "-" + date.Substring(6, 2) + " " + date.Substring(8, 2) + ":" + date.Substring(10, 2) + ":" + date.Substring(12, 2));
-            else
-                return (DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"));
+
         }
     }
 
@@ -142,11 +236,11 @@ namespace FT.Data
         //托盘宽方向孔位
         public int TrayWidth { get; set; }
         //托盘中探测器的数据
-        public Dictionary<int, SensorData> Sensors { get; set; }
-        //显示托盘号的控件
-        public Label TrayLabel;
+        public Dictionary<string, Sensor> Sensors { get; set; }
         //控件位置
         public Position PosOnPanel;
+        //显示托盘号的控件
+        public Label TrayLabel;
 
         public Tray(int length, int width, Position posOnPanel, string trayNumber = "")
         {
@@ -156,20 +250,41 @@ namespace FT.Data
             //TrayLabel.BackColor = Color.LightSkyBlue;
             TrayLabel.Text = trayNumber;
 
+            TrayNumber = trayNumber;
             TrayLength = length;
             TrayWidth = width;
             PosOnPanel = posOnPanel;
-            TrayNumber = trayNumber;
 
-
-            Sensors = new Dictionary<int, SensorData>();
+            Sensors = new Dictionary<string, Sensor>();
             for (int i = 0; i < length * width; i++)
             {
-                SensorData sensor = new SensorData("noData");
+                Sensor sensor = new Sensor("noData");
                 sensor.SetTrayData(trayNumber, i + 1);
-                Sensors.Add(sensor.PosInTray, sensor);
+                Sensors.Add(sensor.PosInTray.ToString(), sensor);
             }
         }
+
+        public Tray(TrayData trayData)
+        {
+            TrayLabel = new Label();
+            TrayLabel.Name = trayData.TrayNumber.ToString();
+            TrayLabel.ForeColor = Color.Black;
+            //TrayLabel.BackColor = Color.LightSkyBlue;
+            TrayLabel.Text = trayData.TrayNumber;
+
+            TrayNumber = trayData.TrayNumber;
+            TrayLength = trayData.TrayLength;
+            TrayWidth = trayData.TrayWidth;
+            PosOnPanel = new Position(trayData.X, trayData.Y);
+
+            Sensors = new Dictionary<string, Sensor>();
+            foreach (var item in trayData.Sensors)
+            {
+                Sensor sensor = new Sensor(item.Value);
+                Sensors.Add(sensor.PosInTray.ToString(), sensor);
+            }
+        }
+
         /// <summary>
         /// 标签阵列
         /// </summary>
@@ -191,9 +306,9 @@ namespace FT.Data
             {
                 //Sensors[i + 1].SensorStatusLabel.Text = Sensors[i + 1].PosInTray.ToString();
                 //设置位置
-                WinformTool.InvokeOnThread(Sensors[i + 1].SensorStatusLabel, new Action(() => { Sensors[i + 1].SensorStatusLabel.Location = location[i]; }));
+                WinformTool.InvokeOnThread(Sensors[(i + 1).ToString()].SensorStatusLabel, new Action(() => { Sensors[(i + 1).ToString()].SensorStatusLabel.Location = location[i]; }));
                 //显示控件
-                WinformTool.InvokeOnThread(canvasControl, new Action(() => { canvasControl.Controls.Add(Sensors[i + 1].SensorStatusLabel); }));
+                WinformTool.InvokeOnThread(canvasControl, new Action(() => { canvasControl.Controls.Add(Sensors[(i + 1).ToString()].SensorStatusLabel); }));
             }
         }
 
@@ -211,8 +326,8 @@ namespace FT.Data
             for (int i = 0; i < Sensors.Count; i++)
             {
                 //Sensors[i + 1].SensorStatusLabel.Text = Sensors[i + 1].PosInTray.ToString();
-                WinformTool.InvokeOnThread(Sensors[i + 1].SensorStatusLabel, new Action(() => { Sensors[i + 1].SensorStatusLabel.Location = location[i]; }));
-                WinformTool.InvokeOnThread(canvasControl, new Action(() => { canvasControl.Controls.Add(Sensors[i + 1].SensorStatusLabel); }));
+                WinformTool.InvokeOnThread(Sensors[(i + 1).ToString()].SensorStatusLabel, new Action(() => { Sensors[(i + 1).ToString()].SensorStatusLabel.Location = location[i]; }));
+                WinformTool.InvokeOnThread(canvasControl, new Action(() => { canvasControl.Controls.Add(Sensors[(i + 1).ToString()].SensorStatusLabel); }));
             }
         }
     }

@@ -30,7 +30,6 @@
         {
             this.TC_Main = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.BTN_SwitchUser = new System.Windows.Forms.Button();
             this.BTN_Mapping = new System.Windows.Forms.Button();
             this.GB_Coonnection = new System.Windows.Forms.GroupBox();
             this.BTN_关闭端口 = new System.Windows.Forms.Button();
@@ -40,6 +39,7 @@
             this.LB_TypeOfProduction = new System.Windows.Forms.Label();
             this.CB_TypeOfProduction = new System.Windows.Forms.ComboBox();
             this.GB_Modify = new System.Windows.Forms.GroupBox();
+            this.BTN_SwitchUser = new System.Windows.Forms.Button();
             this.BTN_Modify = new System.Windows.Forms.Button();
             this.TB_NewPassword = new System.Windows.Forms.TextBox();
             this.TB_Password = new System.Windows.Forms.TextBox();
@@ -1426,6 +1426,7 @@
             this.label469 = new System.Windows.Forms.Label();
             this.label464 = new System.Windows.Forms.Label();
             this.label463 = new System.Windows.Forms.Label();
+            this.TB_Waring = new System.Windows.Forms.TextBox();
             this.TC_Main.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.GB_Coonnection.SuspendLayout();
@@ -1537,6 +1538,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.TB_Waring);
             this.tabPage1.Controls.Add(this.BTN_Mapping);
             this.tabPage1.Controls.Add(this.GB_Coonnection);
             this.tabPage1.Controls.Add(this.LB_TypeOfProduction);
@@ -1559,16 +1561,6 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "自动操作";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // BTN_SwitchUser
-            // 
-            this.BTN_SwitchUser.Location = new System.Drawing.Point(11, 126);
-            this.BTN_SwitchUser.Name = "BTN_SwitchUser";
-            this.BTN_SwitchUser.Size = new System.Drawing.Size(80, 23);
-            this.BTN_SwitchUser.TabIndex = 17;
-            this.BTN_SwitchUser.Text = "切换用户";
-            this.BTN_SwitchUser.UseVisualStyleBackColor = true;
-            this.BTN_SwitchUser.Click += new System.EventHandler(this.BTN_SwitchUser_Click);
             // 
             // BTN_Mapping
             // 
@@ -1672,6 +1664,16 @@
             this.GB_Modify.TabIndex = 10;
             this.GB_Modify.TabStop = false;
             this.GB_Modify.Text = "修改密码";
+            // 
+            // BTN_SwitchUser
+            // 
+            this.BTN_SwitchUser.Location = new System.Drawing.Point(11, 126);
+            this.BTN_SwitchUser.Name = "BTN_SwitchUser";
+            this.BTN_SwitchUser.Size = new System.Drawing.Size(80, 23);
+            this.BTN_SwitchUser.TabIndex = 17;
+            this.BTN_SwitchUser.Text = "切换用户";
+            this.BTN_SwitchUser.UseVisualStyleBackColor = true;
+            this.BTN_SwitchUser.Click += new System.EventHandler(this.BTN_SwitchUser_Click);
             // 
             // BTN_Modify
             // 
@@ -1787,7 +1789,8 @@
             this.btn初始化.TabIndex = 4;
             this.btn初始化.Text = "初始化";
             this.btn初始化.UseVisualStyleBackColor = true;
-            this.btn初始化.Click += new System.EventHandler(this.btn初始化_Click);
+            this.btn初始化.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn初始化_MouseDown);
+            this.btn初始化.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn初始化_MouseUp);
             // 
             // btn自动停止
             // 
@@ -18943,6 +18946,15 @@
             this.label463.TabIndex = 71;
             this.label463.Text = "mm/s";
             // 
+            // TB_Waring
+            // 
+            this.TB_Waring.Location = new System.Drawing.Point(941, 23);
+            this.TB_Waring.Multiline = true;
+            this.TB_Waring.Name = "TB_Waring";
+            this.TB_Waring.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.TB_Waring.Size = new System.Drawing.Size(307, 216);
+            this.TB_Waring.TabIndex = 17;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -20504,6 +20516,7 @@
         private System.Windows.Forms.Label label286;
         private System.Windows.Forms.Label label307;
         private System.Windows.Forms.Label label305;
+        private System.Windows.Forms.TextBox TB_Waring;
     }
 }
 
