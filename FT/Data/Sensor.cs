@@ -229,7 +229,7 @@ namespace FT.Data
                 {
                     TrayLabel.Text = trayNumber;
                 }
-                UpdateSensorsTrayNumber(trayNumber);
+                if (Sensors != null) UpdateSensorsTrayNumber(trayNumber);
             }
         }
         //托盘长方向孔位
@@ -251,11 +251,6 @@ namespace FT.Data
             //TrayLabel.BackColor = Color.LightSkyBlue;
             TrayLabel.Text = trayNumber;
 
-            TrayNumber = trayNumber;
-            TrayLength = length;
-            TrayWidth = width;
-            PosOnPanel = posOnPanel;
-
             Sensors = new Dictionary<string, Sensor>();
             for (int i = 0; i < length * width; i++)
             {
@@ -263,6 +258,11 @@ namespace FT.Data
                 sensor.SetTrayData(trayNumber, i + 1);
                 Sensors.Add(sensor.PosInTray.ToString(), sensor);
             }
+
+            TrayNumber = trayNumber;
+            TrayLength = length;
+            TrayWidth = width;
+            PosOnPanel = posOnPanel;
         }
 
         public Tray(TrayData trayData)
@@ -273,17 +273,17 @@ namespace FT.Data
             //TrayLabel.BackColor = Color.LightSkyBlue;
             TrayLabel.Text = trayData.TrayNumber;
 
-            TrayNumber = trayData.TrayNumber;
-            TrayLength = trayData.TrayLength;
-            TrayWidth = trayData.TrayWidth;
-            PosOnPanel = new Position(trayData.X, trayData.Y);
-
             Sensors = new Dictionary<string, Sensor>();
             foreach (var item in trayData.Sensors)
             {
                 Sensor sensor = new Sensor(item.Value);
                 Sensors.Add(sensor.PosInTray.ToString(), sensor);
             }
+
+            TrayNumber = trayData.TrayNumber;
+            TrayLength = trayData.TrayLength;
+            TrayWidth = trayData.TrayWidth;
+            PosOnPanel = new Position(trayData.X, trayData.Y);
         }
 
         /// <summary>
