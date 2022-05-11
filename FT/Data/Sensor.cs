@@ -46,8 +46,8 @@ namespace FT.Data
         public SensorData(Sensor sensor)
         {
             SensorCode = sensor.SensorCode;
-            SensorType = sensor.SensorCode;
-            TestStation = sensor.SensorCode;
+            SensorType = sensor.SensorType;
+            TestStation = sensor.TestStation;
             SensorQuality = sensor.SensorQuality;
             TrayNumber = sensor.TrayNumber;
             PosInTray = sensor.PosInTray;
