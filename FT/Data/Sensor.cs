@@ -229,6 +229,7 @@ namespace FT.Data
                 {
                     TrayLabel.Text = trayNumber;
                 }
+                UpdateSensorsTrayNumber(trayNumber);
             }
         }
         //托盘长方向孔位
@@ -328,6 +329,14 @@ namespace FT.Data
                 //Sensors[i + 1].SensorStatusLabel.Text = Sensors[i + 1].PosInTray.ToString();
                 WinformTool.InvokeOnThread(Sensors[(i + 1).ToString()].SensorStatusLabel, new Action(() => { Sensors[(i + 1).ToString()].SensorStatusLabel.Location = location[i]; }));
                 WinformTool.InvokeOnThread(canvasControl, new Action(() => { canvasControl.Controls.Add(Sensors[(i + 1).ToString()].SensorStatusLabel); }));
+            }
+        }
+
+        public void UpdateSensorsTrayNumber(string trayNumber)
+        {
+            foreach (var sensor in Sensors)
+            {
+                sensor.Value.TrayNumber = trayNumber;
             }
         }
     }
