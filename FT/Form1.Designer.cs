@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.TC_Main = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.BTN_Mapping = new System.Windows.Forms.Button();
+            this.TB_Warning = new System.Windows.Forms.TextBox();
             this.GB_Coonnection = new System.Windows.Forms.GroupBox();
             this.BTN_关闭端口 = new System.Windows.Forms.Button();
             this.BTN_打开端口 = new System.Windows.Forms.Button();
@@ -1426,7 +1427,7 @@
             this.label469 = new System.Windows.Forms.Label();
             this.label464 = new System.Windows.Forms.Label();
             this.label463 = new System.Windows.Forms.Label();
-            this.TB_Waring = new System.Windows.Forms.TextBox();
+            this.GB_Warning = new System.Windows.Forms.GroupBox();
             this.TC_Main.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.GB_Coonnection.SuspendLayout();
@@ -1509,6 +1510,7 @@
             this.groupBox62.SuspendLayout();
             this.groupBox65.SuspendLayout();
             this.groupBox63.SuspendLayout();
+            this.GB_Warning.SuspendLayout();
             this.SuspendLayout();
             // 
             // TC_Main
@@ -1538,8 +1540,7 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.TB_Waring);
-            this.tabPage1.Controls.Add(this.BTN_Mapping);
+            this.tabPage1.Controls.Add(this.GB_Warning);
             this.tabPage1.Controls.Add(this.GB_Coonnection);
             this.tabPage1.Controls.Add(this.LB_TypeOfProduction);
             this.tabPage1.Controls.Add(this.CB_TypeOfProduction);
@@ -1562,16 +1563,15 @@
             this.tabPage1.Text = "自动操作";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // BTN_Mapping
+            // TB_Warning
             // 
-            this.BTN_Mapping.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.BTN_Mapping.Location = new System.Drawing.Point(93, 300);
-            this.BTN_Mapping.Name = "BTN_Mapping";
-            this.BTN_Mapping.Size = new System.Drawing.Size(100, 25);
-            this.BTN_Mapping.TabIndex = 16;
-            this.BTN_Mapping.Text = "Mapping测试";
-            this.BTN_Mapping.UseVisualStyleBackColor = true;
-            this.BTN_Mapping.Click += new System.EventHandler(this.BTN_Mapping_Click);
+            this.TB_Warning.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TB_Warning.Location = new System.Drawing.Point(3, 20);
+            this.TB_Warning.Multiline = true;
+            this.TB_Warning.Name = "TB_Warning";
+            this.TB_Warning.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.TB_Warning.Size = new System.Drawing.Size(306, 283);
+            this.TB_Warning.TabIndex = 17;
             // 
             // GB_Coonnection
             // 
@@ -18946,14 +18946,15 @@
             this.label463.TabIndex = 71;
             this.label463.Text = "mm/s";
             // 
-            // TB_Waring
+            // GB_Warning
             // 
-            this.TB_Waring.Location = new System.Drawing.Point(941, 23);
-            this.TB_Waring.Multiline = true;
-            this.TB_Waring.Name = "TB_Waring";
-            this.TB_Waring.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.TB_Waring.Size = new System.Drawing.Size(307, 216);
-            this.TB_Waring.TabIndex = 17;
+            this.GB_Warning.Controls.Add(this.TB_Warning);
+            this.GB_Warning.Location = new System.Drawing.Point(936, 5);
+            this.GB_Warning.Name = "GB_Warning";
+            this.GB_Warning.Size = new System.Drawing.Size(312, 306);
+            this.GB_Warning.TabIndex = 18;
+            this.GB_Warning.TabStop = false;
+            this.GB_Warning.Text = "报警信息";
             // 
             // Form1
             // 
@@ -18961,6 +18962,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1264, 782);
             this.Controls.Add(this.TC_Main);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -19112,6 +19114,8 @@
             this.groupBox65.PerformLayout();
             this.groupBox63.ResumeLayout(false);
             this.groupBox63.PerformLayout();
+            this.GB_Warning.ResumeLayout(false);
+            this.GB_Warning.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -20510,13 +20514,13 @@
         private System.Windows.Forms.GroupBox GB_Coonnection;
         private System.Windows.Forms.Button BTN_关闭端口;
         private System.Windows.Forms.Button BTN_打开端口;
-        private System.Windows.Forms.Button BTN_Mapping;
         private System.Windows.Forms.Button BTN_SwitchUser;
         private System.Windows.Forms.Button BTN_Output;
         private System.Windows.Forms.Label label286;
         private System.Windows.Forms.Label label307;
         private System.Windows.Forms.Label label305;
-        private System.Windows.Forms.TextBox TB_Waring;
+        private System.Windows.Forms.TextBox TB_Warning;
+        private System.Windows.Forms.GroupBox GB_Warning;
     }
 }
 

@@ -30,6 +30,18 @@ namespace FT.Data
         //测试完成时间
         public string EndTime { get; set; }
 
+        /// <summary>
+        /// 此处初始化Sensor的属性值
+        /// </summary>
+        /// <param name="sensorCode">传感器编码</param>
+        /// <param name="sensorType">传感器类型</param>
+        /// <param name="testStation">测试工位</param>
+        /// <param name="sensorQuality">测试结果</param>
+        /// <param name="trayNumber">托盘编号</param>
+        /// <param name="posInTray">在托盘中的位置</param>
+        /// <param name="appearance">外观</param>
+        /// <param name="startTime">开始时间</param>
+        /// <param name="endTime">结束时间</param>
         public SensorData(string sensorCode, string sensorType = "", string testStation = "", int sensorQuality = -1, string trayNumber = "", int posInTray = -1, string appearance = "", string startTime = "", string endTime = "")
         {
             SensorCode = sensorCode;
@@ -42,7 +54,10 @@ namespace FT.Data
             StartTime = DateConverter(startTime);
             EndTime = DateConverter(endTime);
         }
-
+        /// <summary>
+        /// 此处初始化用来存储的Sensor数据
+        /// </summary>
+        /// <param name="sensor">要存储的Sensor数据</param>
         public SensorData(Sensor sensor)
         {
             SensorCode = sensor.SensorCode;
@@ -121,6 +136,18 @@ namespace FT.Data
         //状态显示控件
         public Label SensorStatusLabel;
 
+        /// <summary>
+        /// 此处初始化Sensor的属性值
+        /// </summary>
+        /// <param name="sensorCode">传感器编码</param>
+        /// <param name="sensorType">传感器类型</param>
+        /// <param name="testStation">测试工位</param>
+        /// <param name="sensorQuality">测试结果</param>
+        /// <param name="trayNumber">托盘编号</param>
+        /// <param name="posInTray">在托盘中的位置</param>
+        /// <param name="appearance">外观</param>
+        /// <param name="startTime">开始时间</param>
+        /// <param name="endTime">结束时间</param>
         public Sensor(string sensorCode, string sensorType = "", string testStation = "", int sensorQuality = -1, string trayNumber = "", int posInTray = -1, string appearance = "", string startTime = "", string endTime = "")
         {
             SensorStatusLabel = new Label
@@ -142,7 +169,10 @@ namespace FT.Data
             EndTime = DateConverter(endTime);
             //Date = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
         }
-
+        /// <summary>
+        /// 此处初始化从文件加载的Sensor数据
+        /// </summary>
+        /// <param name="sensorData">从文件中读取到的数据</param>
         public Sensor(SensorData sensorData)
         {
             SensorStatusLabel = new Label
@@ -190,16 +220,16 @@ namespace FT.Data
 
         public TrayData(Tray tray)
         {
-            TrayNumber = tray.TrayNumber;
-            TrayLength = tray.TrayLength;
-            TrayWidth = tray.TrayWidth;
-
             Sensors = new Dictionary<string, SensorData>();
             foreach (var item in tray.Sensors)
             {
                 SensorData sensorData = new SensorData(item.Value);
                 Sensors.Add(sensorData.PosInTray.ToString(), sensorData);
             }
+
+            TrayNumber = tray.TrayNumber;
+            TrayLength = tray.TrayLength;
+            TrayWidth = tray.TrayWidth;
 
             X = tray.PosOnPanel.X;
             Y = tray.PosOnPanel.Y;

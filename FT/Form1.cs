@@ -17,7 +17,7 @@ namespace FT
         LogFile logfile = new LogFile();
         //报警信息
         Dictionary<string, string> alarmInformation;
-        List<string> waring = new List<string>();
+        List<string> warning = new List<string>();
         //托盘数据
         TrayManager trayManager;
 
@@ -112,6 +112,7 @@ namespace FT
                         {
                             if (trayType != "" && trayType != " ")
                             {
+                                //初始化
                                 PN_Trays.Invoke(new Action(() => PN_Trays.Controls.Clear()));
                                 trayManager.InitializeTrays(trayType);
                                 foreach (var tray in trayManager.Trays)
@@ -631,18 +632,18 @@ namespace FT
                             if (communication.ReadPLCAlarm[i])
                             {
                                 //MessageBox.Show(alarmInformation[i.ToString()], "报警信息", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                if (!waring.Contains(alarmInformation[i.ToString()]))
+                                if (!warning.Contains(alarmInformation[i.ToString()]))
                                 {
-                                    TB_Waring.Invoke(new Action(() =>
+                                    TB_Warning.Invoke(new Action(() =>
                                     {
-                                        TB_Waring.Clear();
+                                        TB_Warning.Clear();
                                     }));
-                                    waring.Add(alarmInformation[i.ToString()]);
-                                    foreach (var item in waring)
+                                    warning.Add(alarmInformation[i.ToString()]);
+                                    foreach (var item in warning)
                                     {
-                                        TB_Waring.Invoke(new Action(() =>
+                                        TB_Warning.Invoke(new Action(() =>
                                         {
-                                            TB_Waring.AppendText(item + Environment.NewLine);
+                                            TB_Warning.AppendText(item + Environment.NewLine);
                                         }));
                                     }
                                     logfile.Writelog(alarmInformation[i.ToString()], "报警记录");
@@ -761,16 +762,6 @@ namespace FT
         #endregion
 
         #region Mapping图操作
-        private void BTN_Mapping_Click(object sender, EventArgs e)
-        {
-            //PN_Trays.Controls.Clear();
-            //trayManager.InitializeTrays(CB_TypeOfTray.Text);
-            //foreach (var tray in trayManager.Trays)
-            //{
-            //    tray.UpdateTrayLabel(PN_Trays);
-            //}
-        }
-        
         private void CB_TypeOfTray_SelectedIndexChanged(object sender, EventArgs e)
         {
             trayType = CB_TypeOfTray.Text;
@@ -4887,8 +4878,8 @@ namespace FT
 
         private void btn报警复位_Click(object sender, EventArgs e)
         {
-            waring.Clear();
-            TB_Waring.Clear();
+            warning.Clear();
+            TB_Warning.Clear();
             communication.WriteVariable(true, "PlcInIO[0]");
         }
 
