@@ -20,7 +20,7 @@ namespace FT
             CB_UserName.Items.Add("工程师");
             CB_UserName.Items.Add("管理员");
             Users.Add("操作员", new UserData() { UserType = 2, UserName = "操作员", Password = "" });
-            Users.Add("管理员", new UserData() { UserType = 0, UserName = "管理员", Password = "Admin2345" });
+            Users.Add("管理员", new UserData() { UserType = 0, UserName = "管理员", Password = "" });
             UserData engineer = JsonManager.ReadJsonString<UserData>(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\FTData", "engineerData");
             if (engineer == null)
             {

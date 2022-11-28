@@ -130,6 +130,10 @@ namespace FT.Data
                     {
                         WinformTool.InvokeOnThread(SensorStatusLabel, new Action(() => { SensorStatusLabel.BackColor = Color.OrangeRed; }));
                     }
+                    else if (sensorQuality == 3)
+                    {
+                        WinformTool.InvokeOnThread(SensorStatusLabel, new Action(() => { SensorStatusLabel.BackColor = Color.Yellow; }));
+                    }
                 }
             }
         }
