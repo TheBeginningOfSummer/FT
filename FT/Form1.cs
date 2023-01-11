@@ -1,6 +1,7 @@
 ﻿using FT.Data;
 using MyToolkit;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
@@ -79,7 +80,6 @@ namespace FT
                 alarmInformation = JsonManager.ReadJsonString<Dictionary<string, string>>(Environment.CurrentDirectory + "\\Configuration\\", "Alarm");
 
                 DataUpdate();
-                CriticalDataUpdate();
                 AlarmCheck();
             }
             catch (Exception e)
@@ -100,6 +100,71 @@ namespace FT
                         logfile.Writelog("更新数据触发", "更新数据");
                         communication.RefreshData();
                         logfile.Writelog("更新数据结束", "更新数据");
+                        
+                        #region 数据处理
+                        if (communication.ReadTestInformation[20] != "" && communication.ReadTestInformation[20] != null)
+                        {
+                            //当前托盘索引更新
+                            trayManager.TrayIndex = int.Parse(communication.ReadTestInformation[20]);
+                        }
+                        else
+                        {
+                            trayManager.TrayIndex = 0;
+                        }
+                        //托盘数据初始化
+                        if (communication.ReadFlagBits[2])
+                        {
+                            if (trayType != "" && trayType != " ")
+                            {
+                                //初始化
+                                PN_Trays.Invoke(new Action(() => PN_Trays.Controls.Clear()));
+                                trayManager.InitializeTrays(trayType);
+                                foreach (var tray in trayManager.Trays)
+                                {
+                                    tray.UpdateTrayLabel(PN_Trays);
+                                }
+                                //托盘初始化完成,PLC检测到此值为true后，将PLC标志位[2]置为false
+                                communication.WriteVariable(true, "PC标志位[2]");
+                            }
+                        }
+                        //托盘扫码完成
+                        if (communication.ReadFlagBits[0])
+                        {
+                            trayManager.SetTrayNumber(communication.ReadTestInformation[4]);
+                            //托盘扫码完成,PLC检测到此值为true后，将PLC标志位[0]置为false
+                            communication.WriteVariable(true, "PC标志位[0]");
+                        }
+                        //产品测试完成
+                        if (communication.ReadFlagBits[1])
+                        {
+                            logfile.Writelog("PLC标志位触发", "PLC标志位记录");
+                            Sensor sensor = new Sensor(
+                                communication.ReadTestInformation[0],
+                                communication.ReadTestInformation[1],
+                                communication.ReadTestInformation[2],
+                                int.Parse(communication.ReadTestInformation[3]),
+                                communication.ReadTestInformation[4],
+                                int.Parse(communication.ReadTestInformation[5]),
+                                communication.ReadTestInformation[6],
+                                communication.ReadTestInformation[7],
+                                communication.ReadTestInformation[8]);
+                            logfile.Writelog("数据采集结束", "PLC标志位记录");
+                            //Mapping图更新
+                            trayManager.SetSensorDataInTray(sensor);
+                            logfile.Writelog("Mapping图更新完成", "PLC标志位记录");
+                            //数据存储
+                            trayManager.SaveTraysData();
+                            logfile.Writelog("Json存储完成", "PLC标志位记录");
+                            //数据库数据存储
+                            SensorDataManager.AddSensor(sensor);
+                            logfile.Writelog("数据库数据存储", "PLC标志位记录");
+                            //产品信息录入完成。PLC检测到此值为true后，将PLC标志位[1]置为false
+                            //communication.WriteFlagBits[1] = true;
+                            communication.WriteVariable(false, "PLC标志位[1]");
+                            communication.WriteVariable(true, "PC标志位[1]");
+                            logfile.Writelog("PLC标志位结束", "PLC标志位记录");
+                        }
+                        #endregion
 
                         #region 更新数据
                         //示教界面数据更新
@@ -610,88 +675,6 @@ namespace FT
             });
         }
 
-        public void CriticalDataUpdate()
-        {
-            Task.Run(() =>
-            {
-                while (true)
-                {
-                    try
-                    {
-                        Thread.Sleep(20);
-                        communication.RefreshCriticalData();
-
-                        if (communication.ReadTestInformation[20] != "" && communication.ReadTestInformation[20] != null)
-                        {
-                            //当前托盘索引更新
-                            trayManager.TrayIndex = int.Parse(communication.ReadTestInformation[20]);
-                        }
-                        else
-                        {
-                            trayManager.TrayIndex = 0;
-                        }
-                        //托盘数据初始化
-                        if (communication.ReadFlagBits[2])
-                        {
-                            if (trayType != "" && trayType != " ")
-                            {
-                                //初始化
-                                PN_Trays.Invoke(new Action(() => PN_Trays.Controls.Clear()));
-                                trayManager.InitializeTrays(trayType);
-                                foreach (var tray in trayManager.Trays)
-                                {
-                                    tray.UpdateTrayLabel(PN_Trays);
-                                }
-                                //托盘初始化完成,PLC检测到此值为true后，将PLC标志位[2]置为false
-                                communication.WriteVariable(true, "PC标志位[2]");
-                            }
-                        }
-                        //托盘扫码完成
-                        if (communication.ReadFlagBits[0])
-                        {
-                            trayManager.SetTrayNumber(communication.ReadTestInformation[4]);
-                            //托盘扫码完成,PLC检测到此值为true后，将PLC标志位[0]置为false
-                            communication.WriteVariable(true, "PC标志位[0]");
-                        }
-                        //产品测试完成
-                        if (communication.ReadFlagBits[1])
-                        {
-                            logfile.Writelog("PLC标志位触发", "PLC标志位记录");
-                            Sensor sensor = new Sensor(
-                                communication.ReadTestInformation[0],
-                                communication.ReadTestInformation[1],
-                                communication.ReadTestInformation[2],
-                                int.Parse(communication.ReadTestInformation[3]),
-                                communication.ReadTestInformation[4],
-                                int.Parse(communication.ReadTestInformation[5]),
-                                communication.ReadTestInformation[6],
-                                communication.ReadTestInformation[7],
-                                communication.ReadTestInformation[8]);
-                            logfile.Writelog("数据采集结束", "PLC标志位记录");
-                            //Mapping图更新
-                            trayManager.SetSensorDataInTray(sensor);
-                            logfile.Writelog("Mapping图更新完成", "PLC标志位记录");
-                            //数据存储
-                            trayManager.SaveTraysData();
-                            logfile.Writelog("Json存储完成", "PLC标志位记录");
-                            //数据库数据存储
-                            SensorDataManager.AddSensor(sensor);
-                            logfile.Writelog("数据库数据存储", "PLC标志位记录");
-                            //产品信息录入完成。PLC检测到此值为true后，将PLC标志位[1]置为false
-                            //communication.WriteFlagBits[1] = true;
-                            communication.WriteVariable(false, "PLC标志位[1]");
-                            communication.WriteVariable(true, "PC标志位[1]");
-                            logfile.Writelog("PLC标志位结束", "PLC标志位记录");
-                        }
-                    }
-                    catch (Exception e)
-                    {
-                        logfile.Writelog(e.Message, "更新关键数据");
-                    }
-                }
-            });
-        }
-
         #region 报警跳出与记录
         public void AlarmCheck()
         {
@@ -707,13 +690,14 @@ namespace FT
                             if (communication.ReadPLCAlarm[i])
                             {
                                 //MessageBox.Show(alarmInformation[i.ToString()], "报警信息", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                                if (!warning.Contains(alarmInformation[i.ToString()]))
+                                string warningMessage = alarmInformation[i.ToString()];
+                                if (!warning.Contains(warningMessage))
                                 {
+                                    warning.Add(warningMessage);
                                     TB_Warning.Invoke(new Action(() =>
                                     {
                                         TB_Warning.Clear();
                                     }));
-                                    warning.Add(alarmInformation[i.ToString()]);
                                     foreach (var item in warning)
                                     {
                                         TB_Warning.Invoke(new Action(() =>
@@ -721,7 +705,7 @@ namespace FT
                                             TB_Warning.AppendText(item + Environment.NewLine);
                                         }));
                                     }
-                                    logfile.Writelog(alarmInformation[i.ToString()], "报警记录");
+                                    logfile.Writelog(warningMessage, "报警记录");
                                 }
                             }
                         }
