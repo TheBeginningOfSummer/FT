@@ -1489,7 +1489,7 @@
             this.TC_Main.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TC_Main.ItemSize = new System.Drawing.Size(120, 40);
             this.TC_Main.Location = new System.Drawing.Point(0, 0);
-            this.TC_Main.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TC_Main.Margin = new System.Windows.Forms.Padding(2);
             this.TC_Main.Multiline = true;
             this.TC_Main.Name = "TC_Main";
             this.TC_Main.SelectedIndex = 0;
@@ -1516,9 +1516,9 @@
             this.tabPage1.Controls.Add(this.btn自动运行);
             this.tabPage1.Controls.Add(this.btn自动模式);
             this.tabPage1.Location = new System.Drawing.Point(4, 44);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage1.Size = new System.Drawing.Size(1276, 756);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "自动操作";
@@ -2058,7 +2058,7 @@
             // 
             this.TSTD_IDImg.Image = ((System.Drawing.Image)(resources.GetObject("TSTD_IDImg.Image")));
             this.TSTD_IDImg.Location = new System.Drawing.Point(8, 5);
-            this.TSTD_IDImg.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TSTD_IDImg.Margin = new System.Windows.Forms.Padding(2);
             this.TSTD_IDImg.Name = "TSTD_IDImg";
             this.TSTD_IDImg.Size = new System.Drawing.Size(92, 62);
             this.TSTD_IDImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -2095,7 +2095,7 @@
             this.btn报警复位.BackColor = System.Drawing.Color.Red;
             this.btn报警复位.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btn报警复位.Location = new System.Drawing.Point(177, 261);
-            this.btn报警复位.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn报警复位.Margin = new System.Windows.Forms.Padding(2);
             this.btn报警复位.Name = "btn报警复位";
             this.btn报警复位.Size = new System.Drawing.Size(104, 47);
             this.btn报警复位.TabIndex = 9;
@@ -2109,7 +2109,7 @@
             this.btn蜂鸣停止.BackColor = System.Drawing.Color.Yellow;
             this.btn蜂鸣停止.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btn蜂鸣停止.Location = new System.Drawing.Point(11, 261);
-            this.btn蜂鸣停止.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn蜂鸣停止.Margin = new System.Windows.Forms.Padding(2);
             this.btn蜂鸣停止.Name = "btn蜂鸣停止";
             this.btn蜂鸣停止.Size = new System.Drawing.Size(104, 47);
             this.btn蜂鸣停止.TabIndex = 8;
@@ -2135,7 +2135,7 @@
             // txt控制器时间
             // 
             this.txt控制器时间.Location = new System.Drawing.Point(107, 157);
-            this.txt控制器时间.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt控制器时间.Margin = new System.Windows.Forms.Padding(2);
             this.txt控制器时间.Name = "txt控制器时间";
             this.txt控制器时间.Size = new System.Drawing.Size(119, 24);
             this.txt控制器时间.TabIndex = 111;
@@ -2264,7 +2264,7 @@
             this.btn手动模式.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btn手动模式.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btn手动模式.Location = new System.Drawing.Point(199, 608);
-            this.btn手动模式.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn手动模式.Margin = new System.Windows.Forms.Padding(2);
             this.btn手动模式.Name = "btn手动模式";
             this.btn手动模式.Size = new System.Drawing.Size(104, 47);
             this.btn手动模式.TabIndex = 5;
@@ -2277,7 +2277,7 @@
             this.btn初始化.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btn初始化.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btn初始化.Location = new System.Drawing.Point(878, 608);
-            this.btn初始化.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn初始化.Margin = new System.Windows.Forms.Padding(2);
             this.btn初始化.Name = "btn初始化";
             this.btn初始化.Size = new System.Drawing.Size(104, 47);
             this.btn初始化.TabIndex = 4;
@@ -2290,7 +2290,7 @@
             this.btn自动停止.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btn自动停止.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btn自动停止.Location = new System.Drawing.Point(715, 608);
-            this.btn自动停止.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn自动停止.Margin = new System.Windows.Forms.Padding(2);
             this.btn自动停止.Name = "btn自动停止";
             this.btn自动停止.Size = new System.Drawing.Size(104, 47);
             this.btn自动停止.TabIndex = 3;
@@ -2303,7 +2303,7 @@
             this.btn自动运行.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btn自动运行.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btn自动运行.Location = new System.Drawing.Point(536, 608);
-            this.btn自动运行.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn自动运行.Margin = new System.Windows.Forms.Padding(2);
             this.btn自动运行.Name = "btn自动运行";
             this.btn自动运行.Size = new System.Drawing.Size(104, 47);
             this.btn自动运行.TabIndex = 2;
@@ -2316,7 +2316,7 @@
             this.btn自动模式.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btn自动模式.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btn自动模式.Location = new System.Drawing.Point(370, 608);
-            this.btn自动模式.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn自动模式.Margin = new System.Windows.Forms.Padding(2);
             this.btn自动模式.Name = "btn自动模式";
             this.btn自动模式.Size = new System.Drawing.Size(104, 47);
             this.btn自动模式.TabIndex = 1;
@@ -2337,9 +2337,9 @@
             this.tabPage2.Controls.Add(this.groupBox16);
             this.tabPage2.Controls.Add(this.groupBox15);
             this.tabPage2.Location = new System.Drawing.Point(4, 44);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage2.Size = new System.Drawing.Size(1276, 756);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "手动气缸";
@@ -2359,9 +2359,9 @@
             this.groupBox14.Controls.Add(this.btn搬运X移动);
             this.groupBox14.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox14.Location = new System.Drawing.Point(627, 555);
-            this.groupBox14.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox14.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox14.Name = "groupBox14";
-            this.groupBox14.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox14.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox14.Size = new System.Drawing.Size(166, 172);
             this.groupBox14.TabIndex = 92;
             this.groupBox14.TabStop = false;
@@ -2404,7 +2404,7 @@
             // txt计算偏移θ
             // 
             this.txt计算偏移θ.Location = new System.Drawing.Point(106, 70);
-            this.txt计算偏移θ.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt计算偏移θ.Margin = new System.Windows.Forms.Padding(2);
             this.txt计算偏移θ.Name = "txt计算偏移θ";
             this.txt计算偏移θ.Size = new System.Drawing.Size(49, 21);
             this.txt计算偏移θ.TabIndex = 67;
@@ -2423,7 +2423,7 @@
             // txt计算偏移Y
             // 
             this.txt计算偏移Y.Location = new System.Drawing.Point(106, 45);
-            this.txt计算偏移Y.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt计算偏移Y.Margin = new System.Windows.Forms.Padding(2);
             this.txt计算偏移Y.Name = "txt计算偏移Y";
             this.txt计算偏移Y.Size = new System.Drawing.Size(49, 21);
             this.txt计算偏移Y.TabIndex = 62;
@@ -2453,7 +2453,7 @@
             // txt计算偏移X
             // 
             this.txt计算偏移X.Location = new System.Drawing.Point(24, 44);
-            this.txt计算偏移X.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt计算偏移X.Margin = new System.Windows.Forms.Padding(2);
             this.txt计算偏移X.Name = "txt计算偏移X";
             this.txt计算偏移X.Size = new System.Drawing.Size(49, 21);
             this.txt计算偏移X.TabIndex = 61;
@@ -2462,7 +2462,7 @@
             // 
             this.btn搬运X移动.BackColor = System.Drawing.SystemColors.Control;
             this.btn搬运X移动.Location = new System.Drawing.Point(34, 139);
-            this.btn搬运X移动.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn搬运X移动.Margin = new System.Windows.Forms.Padding(2);
             this.btn搬运X移动.Name = "btn搬运X移动";
             this.btn搬运X移动.Size = new System.Drawing.Size(96, 24);
             this.btn搬运X移动.TabIndex = 44;
@@ -2486,9 +2486,9 @@
             this.groupBox68.Controls.Add(this.txt上视觉偏移X);
             this.groupBox68.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox68.Location = new System.Drawing.Point(415, 555);
-            this.groupBox68.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox68.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox68.Name = "groupBox68";
-            this.groupBox68.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox68.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox68.Size = new System.Drawing.Size(208, 172);
             this.groupBox68.TabIndex = 91;
             this.groupBox68.TabStop = false;
@@ -2498,7 +2498,7 @@
             // 
             this.btn上视觉标定有效.BackColor = System.Drawing.SystemColors.Control;
             this.btn上视觉标定有效.Location = new System.Drawing.Point(12, 29);
-            this.btn上视觉标定有效.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn上视觉标定有效.Margin = new System.Windows.Forms.Padding(2);
             this.btn上视觉标定有效.Name = "btn上视觉标定有效";
             this.btn上视觉标定有效.Size = new System.Drawing.Size(78, 24);
             this.btn上视觉标定有效.TabIndex = 66;
@@ -2511,7 +2511,7 @@
             // 
             this.btn上视觉标定复位.BackColor = System.Drawing.SystemColors.Control;
             this.btn上视觉标定复位.Location = new System.Drawing.Point(123, 29);
-            this.btn上视觉标定复位.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn上视觉标定复位.Margin = new System.Windows.Forms.Padding(2);
             this.btn上视觉标定复位.Name = "btn上视觉标定复位";
             this.btn上视觉标定复位.Size = new System.Drawing.Size(78, 24);
             this.btn上视觉标定复位.TabIndex = 65;
@@ -2535,7 +2535,7 @@
             // 
             this.btn上视觉2外观.BackColor = System.Drawing.SystemColors.Control;
             this.btn上视觉2外观.Location = new System.Drawing.Point(123, 102);
-            this.btn上视觉2外观.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn上视觉2外观.Margin = new System.Windows.Forms.Padding(2);
             this.btn上视觉2外观.Name = "btn上视觉2外观";
             this.btn上视觉2外观.Size = new System.Drawing.Size(78, 24);
             this.btn上视觉2外观.TabIndex = 46;
@@ -2559,7 +2559,7 @@
             // 
             this.btn上视觉2对位.BackColor = System.Drawing.SystemColors.Control;
             this.btn上视觉2对位.Location = new System.Drawing.Point(123, 71);
-            this.btn上视觉2对位.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn上视觉2对位.Margin = new System.Windows.Forms.Padding(2);
             this.btn上视觉2对位.Name = "btn上视觉2对位";
             this.btn上视觉2对位.Size = new System.Drawing.Size(78, 24);
             this.btn上视觉2对位.TabIndex = 45;
@@ -2583,7 +2583,7 @@
             // 
             this.btn上视觉标定开始.BackColor = System.Drawing.SystemColors.Control;
             this.btn上视觉标定开始.Location = new System.Drawing.Point(12, 71);
-            this.btn上视觉标定开始.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn上视觉标定开始.Margin = new System.Windows.Forms.Padding(2);
             this.btn上视觉标定开始.Name = "btn上视觉标定开始";
             this.btn上视觉标定开始.Size = new System.Drawing.Size(78, 24);
             this.btn上视觉标定开始.TabIndex = 44;
@@ -2595,7 +2595,7 @@
             // txt上视觉偏移θ
             // 
             this.txt上视觉偏移θ.Location = new System.Drawing.Point(143, 147);
-            this.txt上视觉偏移θ.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt上视觉偏移θ.Margin = new System.Windows.Forms.Padding(2);
             this.txt上视觉偏移θ.Name = "txt上视觉偏移θ";
             this.txt上视觉偏移θ.Size = new System.Drawing.Size(49, 21);
             this.txt上视觉偏移θ.TabIndex = 61;
@@ -2603,7 +2603,7 @@
             // txt上视觉偏移Y
             // 
             this.txt上视觉偏移Y.Location = new System.Drawing.Point(77, 147);
-            this.txt上视觉偏移Y.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt上视觉偏移Y.Margin = new System.Windows.Forms.Padding(2);
             this.txt上视觉偏移Y.Name = "txt上视觉偏移Y";
             this.txt上视觉偏移Y.Size = new System.Drawing.Size(49, 21);
             this.txt上视觉偏移Y.TabIndex = 60;
@@ -2611,7 +2611,7 @@
             // txt上视觉偏移X
             // 
             this.txt上视觉偏移X.Location = new System.Drawing.Point(11, 147);
-            this.txt上视觉偏移X.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt上视觉偏移X.Margin = new System.Windows.Forms.Padding(2);
             this.txt上视觉偏移X.Name = "txt上视觉偏移X";
             this.txt上视觉偏移X.Size = new System.Drawing.Size(49, 21);
             this.txt上视觉偏移X.TabIndex = 59;
@@ -2630,9 +2630,9 @@
             this.groupBox67.Controls.Add(this.btn下视觉标定开始);
             this.groupBox67.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox67.Location = new System.Drawing.Point(212, 555);
-            this.groupBox67.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox67.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox67.Name = "groupBox67";
-            this.groupBox67.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox67.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox67.Size = new System.Drawing.Size(197, 172);
             this.groupBox67.TabIndex = 90;
             this.groupBox67.TabStop = false;
@@ -2642,7 +2642,7 @@
             // 
             this.btn下视觉标定复位.BackColor = System.Drawing.SystemColors.Control;
             this.btn下视觉标定复位.Location = new System.Drawing.Point(115, 29);
-            this.btn下视觉标定复位.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn下视觉标定复位.Margin = new System.Windows.Forms.Padding(2);
             this.btn下视觉标定复位.Name = "btn下视觉标定复位";
             this.btn下视觉标定复位.Size = new System.Drawing.Size(78, 24);
             this.btn下视觉标定复位.TabIndex = 60;
@@ -2655,7 +2655,7 @@
             // 
             this.btn下视觉标定有效.BackColor = System.Drawing.SystemColors.Control;
             this.btn下视觉标定有效.Location = new System.Drawing.Point(4, 29);
-            this.btn下视觉标定有效.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn下视觉标定有效.Margin = new System.Windows.Forms.Padding(2);
             this.btn下视觉标定有效.Name = "btn下视觉标定有效";
             this.btn下视觉标定有效.Size = new System.Drawing.Size(78, 24);
             this.btn下视觉标定有效.TabIndex = 59;
@@ -2700,7 +2700,7 @@
             // txt下视觉偏移θ
             // 
             this.txt下视觉偏移θ.Location = new System.Drawing.Point(145, 147);
-            this.txt下视觉偏移θ.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt下视觉偏移θ.Margin = new System.Windows.Forms.Padding(2);
             this.txt下视觉偏移θ.Name = "txt下视觉偏移θ";
             this.txt下视觉偏移θ.Size = new System.Drawing.Size(49, 21);
             this.txt下视觉偏移θ.TabIndex = 55;
@@ -2708,7 +2708,7 @@
             // txt下视觉偏移Y
             // 
             this.txt下视觉偏移Y.Location = new System.Drawing.Point(79, 147);
-            this.txt下视觉偏移Y.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt下视觉偏移Y.Margin = new System.Windows.Forms.Padding(2);
             this.txt下视觉偏移Y.Name = "txt下视觉偏移Y";
             this.txt下视觉偏移Y.Size = new System.Drawing.Size(49, 21);
             this.txt下视觉偏移Y.TabIndex = 54;
@@ -2716,7 +2716,7 @@
             // txt下视觉偏移X
             // 
             this.txt下视觉偏移X.Location = new System.Drawing.Point(13, 147);
-            this.txt下视觉偏移X.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt下视觉偏移X.Margin = new System.Windows.Forms.Padding(2);
             this.txt下视觉偏移X.Name = "txt下视觉偏移X";
             this.txt下视觉偏移X.Size = new System.Drawing.Size(49, 21);
             this.txt下视觉偏移X.TabIndex = 53;
@@ -2725,7 +2725,7 @@
             // 
             this.btn下视觉对位.BackColor = System.Drawing.SystemColors.Control;
             this.btn下视觉对位.Location = new System.Drawing.Point(115, 71);
-            this.btn下视觉对位.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn下视觉对位.Margin = new System.Windows.Forms.Padding(2);
             this.btn下视觉对位.Name = "btn下视觉对位";
             this.btn下视觉对位.Size = new System.Drawing.Size(78, 24);
             this.btn下视觉对位.TabIndex = 45;
@@ -2738,7 +2738,7 @@
             // 
             this.btn下视觉标定开始.BackColor = System.Drawing.SystemColors.Control;
             this.btn下视觉标定开始.Location = new System.Drawing.Point(4, 71);
-            this.btn下视觉标定开始.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn下视觉标定开始.Margin = new System.Windows.Forms.Padding(2);
             this.btn下视觉标定开始.Name = "btn下视觉标定开始";
             this.btn下视觉标定开始.Size = new System.Drawing.Size(78, 24);
             this.btn下视觉标定开始.TabIndex = 44;
@@ -2754,9 +2754,9 @@
             this.groupBox66.Controls.Add(this.btn条形码);
             this.groupBox66.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox66.Location = new System.Drawing.Point(26, 555);
-            this.groupBox66.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox66.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox66.Name = "groupBox66";
-            this.groupBox66.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox66.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox66.Size = new System.Drawing.Size(181, 172);
             this.groupBox66.TabIndex = 89;
             this.groupBox66.TabStop = false;
@@ -2765,7 +2765,7 @@
             // txt扫码信息
             // 
             this.txt扫码信息.Location = new System.Drawing.Point(4, 143);
-            this.txt扫码信息.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt扫码信息.Margin = new System.Windows.Forms.Padding(2);
             this.txt扫码信息.Name = "txt扫码信息";
             this.txt扫码信息.Size = new System.Drawing.Size(169, 21);
             this.txt扫码信息.TabIndex = 52;
@@ -2774,7 +2774,7 @@
             // 
             this.btn二维码.BackColor = System.Drawing.SystemColors.Control;
             this.btn二维码.Location = new System.Drawing.Point(56, 70);
-            this.btn二维码.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn二维码.Margin = new System.Windows.Forms.Padding(2);
             this.btn二维码.Name = "btn二维码";
             this.btn二维码.Size = new System.Drawing.Size(78, 24);
             this.btn二维码.TabIndex = 45;
@@ -2787,7 +2787,7 @@
             // 
             this.btn条形码.BackColor = System.Drawing.SystemColors.Control;
             this.btn条形码.Location = new System.Drawing.Point(56, 29);
-            this.btn条形码.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn条形码.Margin = new System.Windows.Forms.Padding(2);
             this.btn条形码.Name = "btn条形码";
             this.btn条形码.Size = new System.Drawing.Size(78, 24);
             this.btn条形码.TabIndex = 44;
@@ -2812,9 +2812,9 @@
             this.groupBox20.Controls.Add(this.btn工位1风扇上电);
             this.groupBox20.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox20.Location = new System.Drawing.Point(412, 286);
-            this.groupBox20.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox20.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox20.Name = "groupBox20";
-            this.groupBox20.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox20.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox20.Size = new System.Drawing.Size(382, 265);
             this.groupBox20.TabIndex = 65;
             this.groupBox20.TabStop = false;
@@ -2824,7 +2824,7 @@
             // 
             this.btn热板断电.BackColor = System.Drawing.SystemColors.Control;
             this.btn热板断电.Location = new System.Drawing.Point(148, 173);
-            this.btn热板断电.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn热板断电.Margin = new System.Windows.Forms.Padding(2);
             this.btn热板断电.Name = "btn热板断电";
             this.btn热板断电.Size = new System.Drawing.Size(101, 24);
             this.btn热板断电.TabIndex = 59;
@@ -2837,7 +2837,7 @@
             // 
             this.btn热板上电.BackColor = System.Drawing.SystemColors.Control;
             this.btn热板上电.Location = new System.Drawing.Point(33, 173);
-            this.btn热板上电.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn热板上电.Margin = new System.Windows.Forms.Padding(2);
             this.btn热板上电.Name = "btn热板上电";
             this.btn热板上电.Size = new System.Drawing.Size(101, 24);
             this.btn热板上电.TabIndex = 58;
@@ -2850,7 +2850,7 @@
             // 
             this.btnEFU断电.BackColor = System.Drawing.SystemColors.Control;
             this.btnEFU断电.Location = new System.Drawing.Point(148, 146);
-            this.btnEFU断电.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEFU断电.Margin = new System.Windows.Forms.Padding(2);
             this.btnEFU断电.Name = "btnEFU断电";
             this.btnEFU断电.Size = new System.Drawing.Size(101, 24);
             this.btnEFU断电.TabIndex = 57;
@@ -2863,7 +2863,7 @@
             // 
             this.btn工位2风扇断电.BackColor = System.Drawing.SystemColors.Control;
             this.btn工位2风扇断电.Location = new System.Drawing.Point(148, 59);
-            this.btn工位2风扇断电.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn工位2风扇断电.Margin = new System.Windows.Forms.Padding(2);
             this.btn工位2风扇断电.Name = "btn工位2风扇断电";
             this.btn工位2风扇断电.Size = new System.Drawing.Size(101, 24);
             this.btn工位2风扇断电.TabIndex = 47;
@@ -2876,7 +2876,7 @@
             // 
             this.btn工位1风扇断电.BackColor = System.Drawing.SystemColors.Control;
             this.btn工位1风扇断电.Location = new System.Drawing.Point(148, 31);
-            this.btn工位1风扇断电.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn工位1风扇断电.Margin = new System.Windows.Forms.Padding(2);
             this.btn工位1风扇断电.Name = "btn工位1风扇断电";
             this.btn工位1风扇断电.Size = new System.Drawing.Size(101, 24);
             this.btn工位1风扇断电.TabIndex = 46;
@@ -2889,7 +2889,7 @@
             // 
             this.btnEFU上电.BackColor = System.Drawing.SystemColors.Control;
             this.btnEFU上电.Location = new System.Drawing.Point(33, 146);
-            this.btnEFU上电.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEFU上电.Margin = new System.Windows.Forms.Padding(2);
             this.btnEFU上电.Name = "btnEFU上电";
             this.btnEFU上电.Size = new System.Drawing.Size(101, 24);
             this.btnEFU上电.TabIndex = 56;
@@ -2902,7 +2902,7 @@
             // 
             this.btn工位4风扇断电.BackColor = System.Drawing.SystemColors.Control;
             this.btn工位4风扇断电.Location = new System.Drawing.Point(148, 118);
-            this.btn工位4风扇断电.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn工位4风扇断电.Margin = new System.Windows.Forms.Padding(2);
             this.btn工位4风扇断电.Name = "btn工位4风扇断电";
             this.btn工位4风扇断电.Size = new System.Drawing.Size(101, 24);
             this.btn工位4风扇断电.TabIndex = 51;
@@ -2915,7 +2915,7 @@
             // 
             this.btn工位3风扇断电.BackColor = System.Drawing.SystemColors.Control;
             this.btn工位3风扇断电.Location = new System.Drawing.Point(148, 89);
-            this.btn工位3风扇断电.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn工位3风扇断电.Margin = new System.Windows.Forms.Padding(2);
             this.btn工位3风扇断电.Name = "btn工位3风扇断电";
             this.btn工位3风扇断电.Size = new System.Drawing.Size(101, 24);
             this.btn工位3风扇断电.TabIndex = 50;
@@ -2928,7 +2928,7 @@
             // 
             this.btn工位4风扇上电.BackColor = System.Drawing.SystemColors.Control;
             this.btn工位4风扇上电.Location = new System.Drawing.Point(33, 118);
-            this.btn工位4风扇上电.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn工位4风扇上电.Margin = new System.Windows.Forms.Padding(2);
             this.btn工位4风扇上电.Name = "btn工位4风扇上电";
             this.btn工位4风扇上电.Size = new System.Drawing.Size(101, 24);
             this.btn工位4风扇上电.TabIndex = 43;
@@ -2941,7 +2941,7 @@
             // 
             this.btn工位3风扇上电.BackColor = System.Drawing.SystemColors.Control;
             this.btn工位3风扇上电.Location = new System.Drawing.Point(33, 89);
-            this.btn工位3风扇上电.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn工位3风扇上电.Margin = new System.Windows.Forms.Padding(2);
             this.btn工位3风扇上电.Name = "btn工位3风扇上电";
             this.btn工位3风扇上电.Size = new System.Drawing.Size(101, 24);
             this.btn工位3风扇上电.TabIndex = 42;
@@ -2954,7 +2954,7 @@
             // 
             this.btn工位2风扇上电.BackColor = System.Drawing.SystemColors.Control;
             this.btn工位2风扇上电.Location = new System.Drawing.Point(33, 60);
-            this.btn工位2风扇上电.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn工位2风扇上电.Margin = new System.Windows.Forms.Padding(2);
             this.btn工位2风扇上电.Name = "btn工位2风扇上电";
             this.btn工位2风扇上电.Size = new System.Drawing.Size(101, 24);
             this.btn工位2风扇上电.TabIndex = 41;
@@ -2967,7 +2967,7 @@
             // 
             this.btn工位1风扇上电.BackColor = System.Drawing.SystemColors.Control;
             this.btn工位1风扇上电.Location = new System.Drawing.Point(33, 31);
-            this.btn工位1风扇上电.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn工位1风扇上电.Margin = new System.Windows.Forms.Padding(2);
             this.btn工位1风扇上电.Name = "btn工位1风扇上电";
             this.btn工位1风扇上电.Size = new System.Drawing.Size(101, 24);
             this.btn工位1风扇上电.TabIndex = 40;
@@ -2996,9 +2996,9 @@
             this.groupBox19.Controls.Add(this.btn工位3光阑伸出);
             this.groupBox19.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox19.Location = new System.Drawing.Point(798, 286);
-            this.groupBox19.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox19.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox19.Name = "groupBox19";
-            this.groupBox19.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox19.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox19.Size = new System.Drawing.Size(382, 265);
             this.groupBox19.TabIndex = 80;
             this.groupBox19.TabStop = false;
@@ -3008,7 +3008,7 @@
             // 
             this.btn工位4翻转90.BackColor = System.Drawing.SystemColors.Control;
             this.btn工位4翻转90.Location = new System.Drawing.Point(148, 221);
-            this.btn工位4翻转90.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn工位4翻转90.Margin = new System.Windows.Forms.Padding(2);
             this.btn工位4翻转90.Name = "btn工位4翻转90";
             this.btn工位4翻转90.Size = new System.Drawing.Size(101, 24);
             this.btn工位4翻转90.TabIndex = 79;
@@ -3021,7 +3021,7 @@
             // 
             this.btn工位4翻转0.BackColor = System.Drawing.SystemColors.Control;
             this.btn工位4翻转0.Location = new System.Drawing.Point(148, 192);
-            this.btn工位4翻转0.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn工位4翻转0.Margin = new System.Windows.Forms.Padding(2);
             this.btn工位4翻转0.Name = "btn工位4翻转0";
             this.btn工位4翻转0.Size = new System.Drawing.Size(101, 24);
             this.btn工位4翻转0.TabIndex = 78;
@@ -3034,7 +3034,7 @@
             // 
             this.btn工位4辐射板缩回.BackColor = System.Drawing.SystemColors.Control;
             this.btn工位4辐射板缩回.Location = new System.Drawing.Point(148, 163);
-            this.btn工位4辐射板缩回.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn工位4辐射板缩回.Margin = new System.Windows.Forms.Padding(2);
             this.btn工位4辐射板缩回.Name = "btn工位4辐射板缩回";
             this.btn工位4辐射板缩回.Size = new System.Drawing.Size(101, 24);
             this.btn工位4辐射板缩回.TabIndex = 77;
@@ -3047,7 +3047,7 @@
             // 
             this.btn工位4辐射板伸出.BackColor = System.Drawing.SystemColors.Control;
             this.btn工位4辐射板伸出.Location = new System.Drawing.Point(148, 134);
-            this.btn工位4辐射板伸出.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn工位4辐射板伸出.Margin = new System.Windows.Forms.Padding(2);
             this.btn工位4辐射板伸出.Name = "btn工位4辐射板伸出";
             this.btn工位4辐射板伸出.Size = new System.Drawing.Size(101, 24);
             this.btn工位4辐射板伸出.TabIndex = 76;
@@ -3060,7 +3060,7 @@
             // 
             this.btn工位4光阑下降.BackColor = System.Drawing.SystemColors.Control;
             this.btn工位4光阑下降.Location = new System.Drawing.Point(148, 106);
-            this.btn工位4光阑下降.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn工位4光阑下降.Margin = new System.Windows.Forms.Padding(2);
             this.btn工位4光阑下降.Name = "btn工位4光阑下降";
             this.btn工位4光阑下降.Size = new System.Drawing.Size(101, 24);
             this.btn工位4光阑下降.TabIndex = 75;
@@ -3073,7 +3073,7 @@
             // 
             this.btn工位4光阑上升.BackColor = System.Drawing.SystemColors.Control;
             this.btn工位4光阑上升.Location = new System.Drawing.Point(148, 77);
-            this.btn工位4光阑上升.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn工位4光阑上升.Margin = new System.Windows.Forms.Padding(2);
             this.btn工位4光阑上升.Name = "btn工位4光阑上升";
             this.btn工位4光阑上升.Size = new System.Drawing.Size(101, 24);
             this.btn工位4光阑上升.TabIndex = 74;
@@ -3086,7 +3086,7 @@
             // 
             this.btn工位4光阑缩回.BackColor = System.Drawing.SystemColors.Control;
             this.btn工位4光阑缩回.Location = new System.Drawing.Point(148, 48);
-            this.btn工位4光阑缩回.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn工位4光阑缩回.Margin = new System.Windows.Forms.Padding(2);
             this.btn工位4光阑缩回.Name = "btn工位4光阑缩回";
             this.btn工位4光阑缩回.Size = new System.Drawing.Size(101, 24);
             this.btn工位4光阑缩回.TabIndex = 73;
@@ -3099,7 +3099,7 @@
             // 
             this.btn工位4光阑伸出.BackColor = System.Drawing.SystemColors.Control;
             this.btn工位4光阑伸出.Location = new System.Drawing.Point(148, 19);
-            this.btn工位4光阑伸出.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn工位4光阑伸出.Margin = new System.Windows.Forms.Padding(2);
             this.btn工位4光阑伸出.Name = "btn工位4光阑伸出";
             this.btn工位4光阑伸出.Size = new System.Drawing.Size(101, 24);
             this.btn工位4光阑伸出.TabIndex = 72;
@@ -3112,7 +3112,7 @@
             // 
             this.btn工位3翻转90.BackColor = System.Drawing.SystemColors.Control;
             this.btn工位3翻转90.Location = new System.Drawing.Point(33, 221);
-            this.btn工位3翻转90.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn工位3翻转90.Margin = new System.Windows.Forms.Padding(2);
             this.btn工位3翻转90.Name = "btn工位3翻转90";
             this.btn工位3翻转90.Size = new System.Drawing.Size(101, 24);
             this.btn工位3翻转90.TabIndex = 71;
@@ -3125,7 +3125,7 @@
             // 
             this.btn工位3翻转0.BackColor = System.Drawing.SystemColors.Control;
             this.btn工位3翻转0.Location = new System.Drawing.Point(33, 192);
-            this.btn工位3翻转0.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn工位3翻转0.Margin = new System.Windows.Forms.Padding(2);
             this.btn工位3翻转0.Name = "btn工位3翻转0";
             this.btn工位3翻转0.Size = new System.Drawing.Size(101, 24);
             this.btn工位3翻转0.TabIndex = 70;
@@ -3138,7 +3138,7 @@
             // 
             this.btn工位3辐射板缩回.BackColor = System.Drawing.SystemColors.Control;
             this.btn工位3辐射板缩回.Location = new System.Drawing.Point(33, 163);
-            this.btn工位3辐射板缩回.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn工位3辐射板缩回.Margin = new System.Windows.Forms.Padding(2);
             this.btn工位3辐射板缩回.Name = "btn工位3辐射板缩回";
             this.btn工位3辐射板缩回.Size = new System.Drawing.Size(101, 24);
             this.btn工位3辐射板缩回.TabIndex = 69;
@@ -3151,7 +3151,7 @@
             // 
             this.btn工位3辐射板伸出.BackColor = System.Drawing.SystemColors.Control;
             this.btn工位3辐射板伸出.Location = new System.Drawing.Point(33, 134);
-            this.btn工位3辐射板伸出.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn工位3辐射板伸出.Margin = new System.Windows.Forms.Padding(2);
             this.btn工位3辐射板伸出.Name = "btn工位3辐射板伸出";
             this.btn工位3辐射板伸出.Size = new System.Drawing.Size(101, 24);
             this.btn工位3辐射板伸出.TabIndex = 68;
@@ -3164,7 +3164,7 @@
             // 
             this.btn工位3光阑下降.BackColor = System.Drawing.SystemColors.Control;
             this.btn工位3光阑下降.Location = new System.Drawing.Point(33, 106);
-            this.btn工位3光阑下降.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn工位3光阑下降.Margin = new System.Windows.Forms.Padding(2);
             this.btn工位3光阑下降.Name = "btn工位3光阑下降";
             this.btn工位3光阑下降.Size = new System.Drawing.Size(101, 24);
             this.btn工位3光阑下降.TabIndex = 67;
@@ -3177,7 +3177,7 @@
             // 
             this.btn工位3光阑上升.BackColor = System.Drawing.SystemColors.Control;
             this.btn工位3光阑上升.Location = new System.Drawing.Point(33, 77);
-            this.btn工位3光阑上升.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn工位3光阑上升.Margin = new System.Windows.Forms.Padding(2);
             this.btn工位3光阑上升.Name = "btn工位3光阑上升";
             this.btn工位3光阑上升.Size = new System.Drawing.Size(101, 24);
             this.btn工位3光阑上升.TabIndex = 66;
@@ -3190,7 +3190,7 @@
             // 
             this.btn工位3光阑缩回.BackColor = System.Drawing.SystemColors.Control;
             this.btn工位3光阑缩回.Location = new System.Drawing.Point(33, 48);
-            this.btn工位3光阑缩回.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn工位3光阑缩回.Margin = new System.Windows.Forms.Padding(2);
             this.btn工位3光阑缩回.Name = "btn工位3光阑缩回";
             this.btn工位3光阑缩回.Size = new System.Drawing.Size(101, 24);
             this.btn工位3光阑缩回.TabIndex = 65;
@@ -3203,7 +3203,7 @@
             // 
             this.btn工位3光阑伸出.BackColor = System.Drawing.SystemColors.Control;
             this.btn工位3光阑伸出.Location = new System.Drawing.Point(33, 19);
-            this.btn工位3光阑伸出.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn工位3光阑伸出.Margin = new System.Windows.Forms.Padding(2);
             this.btn工位3光阑伸出.Name = "btn工位3光阑伸出";
             this.btn工位3光阑伸出.Size = new System.Drawing.Size(101, 24);
             this.btn工位3光阑伸出.TabIndex = 64;
@@ -3240,9 +3240,9 @@
             this.groupBox18.Controls.Add(this.btn旋转夹爪1上升);
             this.groupBox18.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox18.Location = new System.Drawing.Point(798, 16);
-            this.groupBox18.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox18.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox18.Name = "groupBox18";
-            this.groupBox18.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox18.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox18.Size = new System.Drawing.Size(382, 265);
             this.groupBox18.TabIndex = 58;
             this.groupBox18.TabStop = false;
@@ -3252,7 +3252,7 @@
             // 
             this.brn工位2翻转90.BackColor = System.Drawing.SystemColors.Control;
             this.brn工位2翻转90.Location = new System.Drawing.Point(262, 233);
-            this.brn工位2翻转90.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.brn工位2翻转90.Margin = new System.Windows.Forms.Padding(2);
             this.brn工位2翻转90.Name = "brn工位2翻转90";
             this.brn工位2翻转90.Size = new System.Drawing.Size(101, 24);
             this.brn工位2翻转90.TabIndex = 63;
@@ -3265,7 +3265,7 @@
             // 
             this.btn工位2翻转0.BackColor = System.Drawing.SystemColors.Control;
             this.btn工位2翻转0.Location = new System.Drawing.Point(262, 204);
-            this.btn工位2翻转0.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn工位2翻转0.Margin = new System.Windows.Forms.Padding(2);
             this.btn工位2翻转0.Name = "btn工位2翻转0";
             this.btn工位2翻转0.Size = new System.Drawing.Size(101, 24);
             this.btn工位2翻转0.TabIndex = 62;
@@ -3278,7 +3278,7 @@
             // 
             this.btn工位2辐射板缩回.BackColor = System.Drawing.SystemColors.Control;
             this.btn工位2辐射板缩回.Location = new System.Drawing.Point(262, 175);
-            this.btn工位2辐射板缩回.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn工位2辐射板缩回.Margin = new System.Windows.Forms.Padding(2);
             this.btn工位2辐射板缩回.Name = "btn工位2辐射板缩回";
             this.btn工位2辐射板缩回.Size = new System.Drawing.Size(101, 24);
             this.btn工位2辐射板缩回.TabIndex = 61;
@@ -3291,7 +3291,7 @@
             // 
             this.btn工位2辐射板伸出.BackColor = System.Drawing.SystemColors.Control;
             this.btn工位2辐射板伸出.Location = new System.Drawing.Point(262, 146);
-            this.btn工位2辐射板伸出.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn工位2辐射板伸出.Margin = new System.Windows.Forms.Padding(2);
             this.btn工位2辐射板伸出.Name = "btn工位2辐射板伸出";
             this.btn工位2辐射板伸出.Size = new System.Drawing.Size(101, 24);
             this.btn工位2辐射板伸出.TabIndex = 60;
@@ -3304,7 +3304,7 @@
             // 
             this.btn工位2光阑下降.BackColor = System.Drawing.SystemColors.Control;
             this.btn工位2光阑下降.Location = new System.Drawing.Point(262, 118);
-            this.btn工位2光阑下降.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn工位2光阑下降.Margin = new System.Windows.Forms.Padding(2);
             this.btn工位2光阑下降.Name = "btn工位2光阑下降";
             this.btn工位2光阑下降.Size = new System.Drawing.Size(101, 24);
             this.btn工位2光阑下降.TabIndex = 59;
@@ -3317,7 +3317,7 @@
             // 
             this.btn工位2光阑上升.BackColor = System.Drawing.SystemColors.Control;
             this.btn工位2光阑上升.Location = new System.Drawing.Point(262, 89);
-            this.btn工位2光阑上升.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn工位2光阑上升.Margin = new System.Windows.Forms.Padding(2);
             this.btn工位2光阑上升.Name = "btn工位2光阑上升";
             this.btn工位2光阑上升.Size = new System.Drawing.Size(101, 24);
             this.btn工位2光阑上升.TabIndex = 58;
@@ -3330,7 +3330,7 @@
             // 
             this.btn工位2光阑缩回.BackColor = System.Drawing.SystemColors.Control;
             this.btn工位2光阑缩回.Location = new System.Drawing.Point(262, 60);
-            this.btn工位2光阑缩回.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn工位2光阑缩回.Margin = new System.Windows.Forms.Padding(2);
             this.btn工位2光阑缩回.Name = "btn工位2光阑缩回";
             this.btn工位2光阑缩回.Size = new System.Drawing.Size(101, 24);
             this.btn工位2光阑缩回.TabIndex = 57;
@@ -3343,7 +3343,7 @@
             // 
             this.btn工位2光阑伸出.BackColor = System.Drawing.SystemColors.Control;
             this.btn工位2光阑伸出.Location = new System.Drawing.Point(262, 31);
-            this.btn工位2光阑伸出.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn工位2光阑伸出.Margin = new System.Windows.Forms.Padding(2);
             this.btn工位2光阑伸出.Name = "btn工位2光阑伸出";
             this.btn工位2光阑伸出.Size = new System.Drawing.Size(101, 24);
             this.btn工位2光阑伸出.TabIndex = 56;
@@ -3356,7 +3356,7 @@
             // 
             this.btn工位1翻转90.BackColor = System.Drawing.SystemColors.Control;
             this.btn工位1翻转90.Location = new System.Drawing.Point(148, 233);
-            this.btn工位1翻转90.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn工位1翻转90.Margin = new System.Windows.Forms.Padding(2);
             this.btn工位1翻转90.Name = "btn工位1翻转90";
             this.btn工位1翻转90.Size = new System.Drawing.Size(101, 24);
             this.btn工位1翻转90.TabIndex = 55;
@@ -3369,7 +3369,7 @@
             // 
             this.btn工位1翻转0.BackColor = System.Drawing.SystemColors.Control;
             this.btn工位1翻转0.Location = new System.Drawing.Point(148, 204);
-            this.btn工位1翻转0.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn工位1翻转0.Margin = new System.Windows.Forms.Padding(2);
             this.btn工位1翻转0.Name = "btn工位1翻转0";
             this.btn工位1翻转0.Size = new System.Drawing.Size(101, 24);
             this.btn工位1翻转0.TabIndex = 54;
@@ -3382,7 +3382,7 @@
             // 
             this.btn工位1辐射板缩回.BackColor = System.Drawing.SystemColors.Control;
             this.btn工位1辐射板缩回.Location = new System.Drawing.Point(148, 175);
-            this.btn工位1辐射板缩回.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn工位1辐射板缩回.Margin = new System.Windows.Forms.Padding(2);
             this.btn工位1辐射板缩回.Name = "btn工位1辐射板缩回";
             this.btn工位1辐射板缩回.Size = new System.Drawing.Size(101, 24);
             this.btn工位1辐射板缩回.TabIndex = 53;
@@ -3395,7 +3395,7 @@
             // 
             this.btn工位1辐射板伸出.BackColor = System.Drawing.SystemColors.Control;
             this.btn工位1辐射板伸出.Location = new System.Drawing.Point(148, 146);
-            this.btn工位1辐射板伸出.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn工位1辐射板伸出.Margin = new System.Windows.Forms.Padding(2);
             this.btn工位1辐射板伸出.Name = "btn工位1辐射板伸出";
             this.btn工位1辐射板伸出.Size = new System.Drawing.Size(101, 24);
             this.btn工位1辐射板伸出.TabIndex = 52;
@@ -3408,7 +3408,7 @@
             // 
             this.btn工位1光阑下降.BackColor = System.Drawing.SystemColors.Control;
             this.btn工位1光阑下降.Location = new System.Drawing.Point(148, 118);
-            this.btn工位1光阑下降.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn工位1光阑下降.Margin = new System.Windows.Forms.Padding(2);
             this.btn工位1光阑下降.Name = "btn工位1光阑下降";
             this.btn工位1光阑下降.Size = new System.Drawing.Size(101, 24);
             this.btn工位1光阑下降.TabIndex = 51;
@@ -3421,7 +3421,7 @@
             // 
             this.btn工位1光阑上升.BackColor = System.Drawing.SystemColors.Control;
             this.btn工位1光阑上升.Location = new System.Drawing.Point(148, 89);
-            this.btn工位1光阑上升.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn工位1光阑上升.Margin = new System.Windows.Forms.Padding(2);
             this.btn工位1光阑上升.Name = "btn工位1光阑上升";
             this.btn工位1光阑上升.Size = new System.Drawing.Size(101, 24);
             this.btn工位1光阑上升.TabIndex = 50;
@@ -3434,7 +3434,7 @@
             // 
             this.btn工位1光阑缩回.BackColor = System.Drawing.SystemColors.Control;
             this.btn工位1光阑缩回.Location = new System.Drawing.Point(148, 60);
-            this.btn工位1光阑缩回.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn工位1光阑缩回.Margin = new System.Windows.Forms.Padding(2);
             this.btn工位1光阑缩回.Name = "btn工位1光阑缩回";
             this.btn工位1光阑缩回.Size = new System.Drawing.Size(101, 24);
             this.btn工位1光阑缩回.TabIndex = 49;
@@ -3447,7 +3447,7 @@
             // 
             this.btn工位1光阑伸出.BackColor = System.Drawing.SystemColors.Control;
             this.btn工位1光阑伸出.Location = new System.Drawing.Point(148, 31);
-            this.btn工位1光阑伸出.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn工位1光阑伸出.Margin = new System.Windows.Forms.Padding(2);
             this.btn工位1光阑伸出.Name = "btn工位1光阑伸出";
             this.btn工位1光阑伸出.Size = new System.Drawing.Size(101, 24);
             this.btn工位1光阑伸出.TabIndex = 48;
@@ -3460,7 +3460,7 @@
             // 
             this.btn旋转夹爪4下降.BackColor = System.Drawing.SystemColors.Control;
             this.btn旋转夹爪4下降.Location = new System.Drawing.Point(33, 233);
-            this.btn旋转夹爪4下降.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn旋转夹爪4下降.Margin = new System.Windows.Forms.Padding(2);
             this.btn旋转夹爪4下降.Name = "btn旋转夹爪4下降";
             this.btn旋转夹爪4下降.Size = new System.Drawing.Size(101, 24);
             this.btn旋转夹爪4下降.TabIndex = 47;
@@ -3473,7 +3473,7 @@
             // 
             this.btn旋转夹爪4上升.BackColor = System.Drawing.SystemColors.Control;
             this.btn旋转夹爪4上升.Location = new System.Drawing.Point(33, 204);
-            this.btn旋转夹爪4上升.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn旋转夹爪4上升.Margin = new System.Windows.Forms.Padding(2);
             this.btn旋转夹爪4上升.Name = "btn旋转夹爪4上升";
             this.btn旋转夹爪4上升.Size = new System.Drawing.Size(101, 24);
             this.btn旋转夹爪4上升.TabIndex = 46;
@@ -3486,7 +3486,7 @@
             // 
             this.btn旋转夹爪3下降.BackColor = System.Drawing.SystemColors.Control;
             this.btn旋转夹爪3下降.Location = new System.Drawing.Point(33, 175);
-            this.btn旋转夹爪3下降.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn旋转夹爪3下降.Margin = new System.Windows.Forms.Padding(2);
             this.btn旋转夹爪3下降.Name = "btn旋转夹爪3下降";
             this.btn旋转夹爪3下降.Size = new System.Drawing.Size(101, 24);
             this.btn旋转夹爪3下降.TabIndex = 45;
@@ -3499,7 +3499,7 @@
             // 
             this.btn旋转夹爪3上升.BackColor = System.Drawing.SystemColors.Control;
             this.btn旋转夹爪3上升.Location = new System.Drawing.Point(33, 146);
-            this.btn旋转夹爪3上升.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn旋转夹爪3上升.Margin = new System.Windows.Forms.Padding(2);
             this.btn旋转夹爪3上升.Name = "btn旋转夹爪3上升";
             this.btn旋转夹爪3上升.Size = new System.Drawing.Size(101, 24);
             this.btn旋转夹爪3上升.TabIndex = 44;
@@ -3512,7 +3512,7 @@
             // 
             this.btn旋转夹爪2下降.BackColor = System.Drawing.SystemColors.Control;
             this.btn旋转夹爪2下降.Location = new System.Drawing.Point(33, 118);
-            this.btn旋转夹爪2下降.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn旋转夹爪2下降.Margin = new System.Windows.Forms.Padding(2);
             this.btn旋转夹爪2下降.Name = "btn旋转夹爪2下降";
             this.btn旋转夹爪2下降.Size = new System.Drawing.Size(101, 24);
             this.btn旋转夹爪2下降.TabIndex = 43;
@@ -3525,7 +3525,7 @@
             // 
             this.btn旋转夹爪2上升.BackColor = System.Drawing.SystemColors.Control;
             this.btn旋转夹爪2上升.Location = new System.Drawing.Point(33, 89);
-            this.btn旋转夹爪2上升.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn旋转夹爪2上升.Margin = new System.Windows.Forms.Padding(2);
             this.btn旋转夹爪2上升.Name = "btn旋转夹爪2上升";
             this.btn旋转夹爪2上升.Size = new System.Drawing.Size(101, 24);
             this.btn旋转夹爪2上升.TabIndex = 42;
@@ -3538,7 +3538,7 @@
             // 
             this.btn旋转夹爪1下降.BackColor = System.Drawing.SystemColors.Control;
             this.btn旋转夹爪1下降.Location = new System.Drawing.Point(33, 60);
-            this.btn旋转夹爪1下降.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn旋转夹爪1下降.Margin = new System.Windows.Forms.Padding(2);
             this.btn旋转夹爪1下降.Name = "btn旋转夹爪1下降";
             this.btn旋转夹爪1下降.Size = new System.Drawing.Size(101, 24);
             this.btn旋转夹爪1下降.TabIndex = 41;
@@ -3551,7 +3551,7 @@
             // 
             this.btn旋转夹爪1上升.BackColor = System.Drawing.SystemColors.Control;
             this.btn旋转夹爪1上升.Location = new System.Drawing.Point(33, 31);
-            this.btn旋转夹爪1上升.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn旋转夹爪1上升.Margin = new System.Windows.Forms.Padding(2);
             this.btn旋转夹爪1上升.Name = "btn旋转夹爪1上升";
             this.btn旋转夹爪1上升.Size = new System.Drawing.Size(101, 24);
             this.btn旋转夹爪1上升.TabIndex = 40;
@@ -3578,9 +3578,9 @@
             this.groupBox17.Controls.Add(this.btn夹爪1回原点);
             this.groupBox17.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox17.Location = new System.Drawing.Point(412, 16);
-            this.groupBox17.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox17.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox17.Name = "groupBox17";
-            this.groupBox17.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox17.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox17.Size = new System.Drawing.Size(382, 265);
             this.groupBox17.TabIndex = 64;
             this.groupBox17.TabStop = false;
@@ -3590,7 +3590,7 @@
             // 
             this.btnNG二级缩回.BackColor = System.Drawing.SystemColors.Control;
             this.btnNG二级缩回.Location = new System.Drawing.Point(33, 204);
-            this.btnNG二级缩回.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNG二级缩回.Margin = new System.Windows.Forms.Padding(2);
             this.btnNG二级缩回.Name = "btnNG二级缩回";
             this.btnNG二级缩回.Size = new System.Drawing.Size(101, 24);
             this.btnNG二级缩回.TabIndex = 65;
@@ -3603,7 +3603,7 @@
             // 
             this.btn夹爪2回原点.BackColor = System.Drawing.SystemColors.Control;
             this.btn夹爪2回原点.Location = new System.Drawing.Point(148, 31);
-            this.btn夹爪2回原点.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn夹爪2回原点.Margin = new System.Windows.Forms.Padding(2);
             this.btn夹爪2回原点.Name = "btn夹爪2回原点";
             this.btn夹爪2回原点.Size = new System.Drawing.Size(101, 24);
             this.btn夹爪2回原点.TabIndex = 46;
@@ -3616,7 +3616,7 @@
             // 
             this.btnNG二级伸出.BackColor = System.Drawing.SystemColors.Control;
             this.btnNG二级伸出.Location = new System.Drawing.Point(33, 175);
-            this.btnNG二级伸出.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNG二级伸出.Margin = new System.Windows.Forms.Padding(2);
             this.btnNG二级伸出.Name = "btnNG二级伸出";
             this.btnNG二级伸出.Size = new System.Drawing.Size(101, 24);
             this.btnNG二级伸出.TabIndex = 64;
@@ -3629,7 +3629,7 @@
             // 
             this.btn除尘器2复位.BackColor = System.Drawing.SystemColors.Control;
             this.btn除尘器2复位.Location = new System.Drawing.Point(262, 118);
-            this.btn除尘器2复位.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn除尘器2复位.Margin = new System.Windows.Forms.Padding(2);
             this.btn除尘器2复位.Name = "btn除尘器2复位";
             this.btn除尘器2复位.Size = new System.Drawing.Size(101, 24);
             this.btn除尘器2复位.TabIndex = 59;
@@ -3642,7 +3642,7 @@
             // 
             this.btnNG一级缩回.BackColor = System.Drawing.SystemColors.Control;
             this.btnNG一级缩回.Location = new System.Drawing.Point(33, 147);
-            this.btnNG一级缩回.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNG一级缩回.Margin = new System.Windows.Forms.Padding(2);
             this.btnNG一级缩回.Name = "btnNG一级缩回";
             this.btnNG一级缩回.Size = new System.Drawing.Size(101, 24);
             this.btnNG一级缩回.TabIndex = 63;
@@ -3655,7 +3655,7 @@
             // 
             this.btn除尘器2吹扫.BackColor = System.Drawing.SystemColors.Control;
             this.btn除尘器2吹扫.Location = new System.Drawing.Point(262, 89);
-            this.btn除尘器2吹扫.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn除尘器2吹扫.Margin = new System.Windows.Forms.Padding(2);
             this.btn除尘器2吹扫.Name = "btn除尘器2吹扫";
             this.btn除尘器2吹扫.Size = new System.Drawing.Size(101, 24);
             this.btn除尘器2吹扫.TabIndex = 58;
@@ -3668,7 +3668,7 @@
             // 
             this.btnNG一级伸出.BackColor = System.Drawing.SystemColors.Control;
             this.btnNG一级伸出.Location = new System.Drawing.Point(33, 118);
-            this.btnNG一级伸出.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNG一级伸出.Margin = new System.Windows.Forms.Padding(2);
             this.btnNG一级伸出.Name = "btnNG一级伸出";
             this.btnNG一级伸出.Size = new System.Drawing.Size(101, 24);
             this.btnNG一级伸出.TabIndex = 62;
@@ -3681,7 +3681,7 @@
             // 
             this.btn除尘器1复位.BackColor = System.Drawing.SystemColors.Control;
             this.btn除尘器1复位.Location = new System.Drawing.Point(262, 60);
-            this.btn除尘器1复位.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn除尘器1复位.Margin = new System.Windows.Forms.Padding(2);
             this.btn除尘器1复位.Name = "btn除尘器1复位";
             this.btn除尘器1复位.Size = new System.Drawing.Size(101, 24);
             this.btn除尘器1复位.TabIndex = 57;
@@ -3694,7 +3694,7 @@
             // 
             this.btn除尘器1吹扫.BackColor = System.Drawing.SystemColors.Control;
             this.btn除尘器1吹扫.Location = new System.Drawing.Point(262, 31);
-            this.btn除尘器1吹扫.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn除尘器1吹扫.Margin = new System.Windows.Forms.Padding(2);
             this.btn除尘器1吹扫.Name = "btn除尘器1吹扫";
             this.btn除尘器1吹扫.Size = new System.Drawing.Size(101, 24);
             this.btn除尘器1吹扫.TabIndex = 56;
@@ -3707,7 +3707,7 @@
             // 
             this.btn夹爪2复位.BackColor = System.Drawing.SystemColors.Control;
             this.btn夹爪2复位.Location = new System.Drawing.Point(148, 89);
-            this.btn夹爪2复位.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn夹爪2复位.Margin = new System.Windows.Forms.Padding(2);
             this.btn夹爪2复位.Name = "btn夹爪2复位";
             this.btn夹爪2复位.Size = new System.Drawing.Size(101, 24);
             this.btn夹爪2复位.TabIndex = 53;
@@ -3720,7 +3720,7 @@
             // 
             this.btn夹爪2闭合1.BackColor = System.Drawing.SystemColors.Control;
             this.btn夹爪2闭合1.Location = new System.Drawing.Point(148, 60);
-            this.btn夹爪2闭合1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn夹爪2闭合1.Margin = new System.Windows.Forms.Padding(2);
             this.btn夹爪2闭合1.Name = "btn夹爪2闭合1";
             this.btn夹爪2闭合1.Size = new System.Drawing.Size(101, 24);
             this.btn夹爪2闭合1.TabIndex = 50;
@@ -3733,7 +3733,7 @@
             // 
             this.btn夹爪1复位.BackColor = System.Drawing.SystemColors.Control;
             this.btn夹爪1复位.Location = new System.Drawing.Point(33, 89);
-            this.btn夹爪1复位.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn夹爪1复位.Margin = new System.Windows.Forms.Padding(2);
             this.btn夹爪1复位.Name = "btn夹爪1复位";
             this.btn夹爪1复位.Size = new System.Drawing.Size(101, 24);
             this.btn夹爪1复位.TabIndex = 45;
@@ -3746,7 +3746,7 @@
             // 
             this.btn夹爪1闭合1.BackColor = System.Drawing.SystemColors.Control;
             this.btn夹爪1闭合1.Location = new System.Drawing.Point(33, 60);
-            this.btn夹爪1闭合1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn夹爪1闭合1.Margin = new System.Windows.Forms.Padding(2);
             this.btn夹爪1闭合1.Name = "btn夹爪1闭合1";
             this.btn夹爪1闭合1.Size = new System.Drawing.Size(101, 24);
             this.btn夹爪1闭合1.TabIndex = 42;
@@ -3759,7 +3759,7 @@
             // 
             this.btn夹爪1回原点.BackColor = System.Drawing.SystemColors.Control;
             this.btn夹爪1回原点.Location = new System.Drawing.Point(33, 31);
-            this.btn夹爪1回原点.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn夹爪1回原点.Margin = new System.Windows.Forms.Padding(2);
             this.btn夹爪1回原点.Name = "btn夹爪1回原点";
             this.btn夹爪1回原点.Size = new System.Drawing.Size(101, 24);
             this.btn夹爪1回原点.TabIndex = 40;
@@ -3785,9 +3785,9 @@
             this.groupBox16.Controls.Add(this.btn上料吸嘴1真空);
             this.groupBox16.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox16.Location = new System.Drawing.Point(26, 286);
-            this.groupBox16.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox16.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox16.Name = "groupBox16";
-            this.groupBox16.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox16.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox16.Size = new System.Drawing.Size(382, 265);
             this.groupBox16.TabIndex = 48;
             this.groupBox16.TabStop = false;
@@ -3797,7 +3797,7 @@
             // 
             this.btn一键真空破坏.BackColor = System.Drawing.SystemColors.Control;
             this.btn一键真空破坏.Location = new System.Drawing.Point(262, 18);
-            this.btn一键真空破坏.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn一键真空破坏.Margin = new System.Windows.Forms.Padding(2);
             this.btn一键真空破坏.Name = "btn一键真空破坏";
             this.btn一键真空破坏.Size = new System.Drawing.Size(101, 24);
             this.btn一键真空破坏.TabIndex = 54;
@@ -3810,7 +3810,7 @@
             // 
             this.btn平移吸嘴4破坏.BackColor = System.Drawing.SystemColors.Control;
             this.btn平移吸嘴4破坏.Location = new System.Drawing.Point(148, 163);
-            this.btn平移吸嘴4破坏.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn平移吸嘴4破坏.Margin = new System.Windows.Forms.Padding(2);
             this.btn平移吸嘴4破坏.Name = "btn平移吸嘴4破坏";
             this.btn平移吸嘴4破坏.Size = new System.Drawing.Size(101, 24);
             this.btn平移吸嘴4破坏.TabIndex = 53;
@@ -3823,7 +3823,7 @@
             // 
             this.btn平移吸嘴3破坏.BackColor = System.Drawing.SystemColors.Control;
             this.btn平移吸嘴3破坏.Location = new System.Drawing.Point(148, 134);
-            this.btn平移吸嘴3破坏.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn平移吸嘴3破坏.Margin = new System.Windows.Forms.Padding(2);
             this.btn平移吸嘴3破坏.Name = "btn平移吸嘴3破坏";
             this.btn平移吸嘴3破坏.Size = new System.Drawing.Size(101, 24);
             this.btn平移吸嘴3破坏.TabIndex = 52;
@@ -3836,7 +3836,7 @@
             // 
             this.btn平移吸嘴2破坏.BackColor = System.Drawing.SystemColors.Control;
             this.btn平移吸嘴2破坏.Location = new System.Drawing.Point(148, 106);
-            this.btn平移吸嘴2破坏.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn平移吸嘴2破坏.Margin = new System.Windows.Forms.Padding(2);
             this.btn平移吸嘴2破坏.Name = "btn平移吸嘴2破坏";
             this.btn平移吸嘴2破坏.Size = new System.Drawing.Size(101, 24);
             this.btn平移吸嘴2破坏.TabIndex = 51;
@@ -3849,7 +3849,7 @@
             // 
             this.btn平移吸嘴1破坏.BackColor = System.Drawing.SystemColors.Control;
             this.btn平移吸嘴1破坏.Location = new System.Drawing.Point(148, 77);
-            this.btn平移吸嘴1破坏.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn平移吸嘴1破坏.Margin = new System.Windows.Forms.Padding(2);
             this.btn平移吸嘴1破坏.Name = "btn平移吸嘴1破坏";
             this.btn平移吸嘴1破坏.Size = new System.Drawing.Size(101, 24);
             this.btn平移吸嘴1破坏.TabIndex = 50;
@@ -3862,7 +3862,7 @@
             // 
             this.btn上料吸嘴2破坏.BackColor = System.Drawing.SystemColors.Control;
             this.btn上料吸嘴2破坏.Location = new System.Drawing.Point(148, 48);
-            this.btn上料吸嘴2破坏.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn上料吸嘴2破坏.Margin = new System.Windows.Forms.Padding(2);
             this.btn上料吸嘴2破坏.Name = "btn上料吸嘴2破坏";
             this.btn上料吸嘴2破坏.Size = new System.Drawing.Size(101, 24);
             this.btn上料吸嘴2破坏.TabIndex = 49;
@@ -3875,7 +3875,7 @@
             // 
             this.btn上料吸嘴1破坏.BackColor = System.Drawing.SystemColors.Control;
             this.btn上料吸嘴1破坏.Location = new System.Drawing.Point(148, 19);
-            this.btn上料吸嘴1破坏.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn上料吸嘴1破坏.Margin = new System.Windows.Forms.Padding(2);
             this.btn上料吸嘴1破坏.Name = "btn上料吸嘴1破坏";
             this.btn上料吸嘴1破坏.Size = new System.Drawing.Size(101, 24);
             this.btn上料吸嘴1破坏.TabIndex = 48;
@@ -3888,7 +3888,7 @@
             // 
             this.btn平移吸嘴4真空.BackColor = System.Drawing.SystemColors.Control;
             this.btn平移吸嘴4真空.Location = new System.Drawing.Point(33, 163);
-            this.btn平移吸嘴4真空.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn平移吸嘴4真空.Margin = new System.Windows.Forms.Padding(2);
             this.btn平移吸嘴4真空.Name = "btn平移吸嘴4真空";
             this.btn平移吸嘴4真空.Size = new System.Drawing.Size(101, 24);
             this.btn平移吸嘴4真空.TabIndex = 45;
@@ -3901,7 +3901,7 @@
             // 
             this.btn平移吸嘴3真空.BackColor = System.Drawing.SystemColors.Control;
             this.btn平移吸嘴3真空.Location = new System.Drawing.Point(33, 134);
-            this.btn平移吸嘴3真空.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn平移吸嘴3真空.Margin = new System.Windows.Forms.Padding(2);
             this.btn平移吸嘴3真空.Name = "btn平移吸嘴3真空";
             this.btn平移吸嘴3真空.Size = new System.Drawing.Size(101, 24);
             this.btn平移吸嘴3真空.TabIndex = 44;
@@ -3914,7 +3914,7 @@
             // 
             this.btn平移吸嘴2真空.BackColor = System.Drawing.SystemColors.Control;
             this.btn平移吸嘴2真空.Location = new System.Drawing.Point(33, 106);
-            this.btn平移吸嘴2真空.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn平移吸嘴2真空.Margin = new System.Windows.Forms.Padding(2);
             this.btn平移吸嘴2真空.Name = "btn平移吸嘴2真空";
             this.btn平移吸嘴2真空.Size = new System.Drawing.Size(101, 24);
             this.btn平移吸嘴2真空.TabIndex = 43;
@@ -3927,7 +3927,7 @@
             // 
             this.btn平移吸嘴1真空.BackColor = System.Drawing.SystemColors.Control;
             this.btn平移吸嘴1真空.Location = new System.Drawing.Point(33, 77);
-            this.btn平移吸嘴1真空.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn平移吸嘴1真空.Margin = new System.Windows.Forms.Padding(2);
             this.btn平移吸嘴1真空.Name = "btn平移吸嘴1真空";
             this.btn平移吸嘴1真空.Size = new System.Drawing.Size(101, 24);
             this.btn平移吸嘴1真空.TabIndex = 42;
@@ -3940,7 +3940,7 @@
             // 
             this.btn上料吸嘴2真空.BackColor = System.Drawing.SystemColors.Control;
             this.btn上料吸嘴2真空.Location = new System.Drawing.Point(33, 48);
-            this.btn上料吸嘴2真空.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn上料吸嘴2真空.Margin = new System.Windows.Forms.Padding(2);
             this.btn上料吸嘴2真空.Name = "btn上料吸嘴2真空";
             this.btn上料吸嘴2真空.Size = new System.Drawing.Size(101, 24);
             this.btn上料吸嘴2真空.TabIndex = 41;
@@ -3953,7 +3953,7 @@
             // 
             this.btn上料吸嘴1真空.BackColor = System.Drawing.SystemColors.Control;
             this.btn上料吸嘴1真空.Location = new System.Drawing.Point(33, 19);
-            this.btn上料吸嘴1真空.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn上料吸嘴1真空.Margin = new System.Windows.Forms.Padding(2);
             this.btn上料吸嘴1真空.Name = "btn上料吸嘴1真空";
             this.btn上料吸嘴1真空.Size = new System.Drawing.Size(101, 24);
             this.btn上料吸嘴1真空.TabIndex = 40;
@@ -3988,9 +3988,9 @@
             this.groupBox15.Controls.Add(this.btn上料机械手上升);
             this.groupBox15.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox15.Location = new System.Drawing.Point(26, 16);
-            this.groupBox15.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox15.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox15.Name = "groupBox15";
-            this.groupBox15.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox15.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox15.Size = new System.Drawing.Size(382, 265);
             this.groupBox15.TabIndex = 13;
             this.groupBox15.TabStop = false;
@@ -4000,7 +4000,7 @@
             // 
             this.btn倒实二级缩回.BackColor = System.Drawing.SystemColors.Control;
             this.btn倒实二级缩回.Location = new System.Drawing.Point(262, 175);
-            this.btn倒实二级缩回.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn倒实二级缩回.Margin = new System.Windows.Forms.Padding(2);
             this.btn倒实二级缩回.Name = "btn倒实二级缩回";
             this.btn倒实二级缩回.Size = new System.Drawing.Size(101, 24);
             this.btn倒实二级缩回.TabIndex = 61;
@@ -4013,7 +4013,7 @@
             // 
             this.btn倒实二级伸出.BackColor = System.Drawing.SystemColors.Control;
             this.btn倒实二级伸出.Location = new System.Drawing.Point(262, 146);
-            this.btn倒实二级伸出.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn倒实二级伸出.Margin = new System.Windows.Forms.Padding(2);
             this.btn倒实二级伸出.Name = "btn倒实二级伸出";
             this.btn倒实二级伸出.Size = new System.Drawing.Size(101, 24);
             this.btn倒实二级伸出.TabIndex = 60;
@@ -4026,7 +4026,7 @@
             // 
             this.btn倒实一级缩回.BackColor = System.Drawing.SystemColors.Control;
             this.btn倒实一级缩回.Location = new System.Drawing.Point(262, 118);
-            this.btn倒实一级缩回.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn倒实一级缩回.Margin = new System.Windows.Forms.Padding(2);
             this.btn倒实一级缩回.Name = "btn倒实一级缩回";
             this.btn倒实一级缩回.Size = new System.Drawing.Size(101, 24);
             this.btn倒实一级缩回.TabIndex = 59;
@@ -4039,7 +4039,7 @@
             // 
             this.btn倒实一级伸出.BackColor = System.Drawing.SystemColors.Control;
             this.btn倒实一级伸出.Location = new System.Drawing.Point(262, 89);
-            this.btn倒实一级伸出.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn倒实一级伸出.Margin = new System.Windows.Forms.Padding(2);
             this.btn倒实一级伸出.Name = "btn倒实一级伸出";
             this.btn倒实一级伸出.Size = new System.Drawing.Size(101, 24);
             this.btn倒实一级伸出.TabIndex = 58;
@@ -4052,7 +4052,7 @@
             // 
             this.btn翻转气缸180.BackColor = System.Drawing.SystemColors.Control;
             this.btn翻转气缸180.Location = new System.Drawing.Point(262, 60);
-            this.btn翻转气缸180.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn翻转气缸180.Margin = new System.Windows.Forms.Padding(2);
             this.btn翻转气缸180.Name = "btn翻转气缸180";
             this.btn翻转气缸180.Size = new System.Drawing.Size(101, 24);
             this.btn翻转气缸180.TabIndex = 57;
@@ -4065,7 +4065,7 @@
             // 
             this.btn翻转气缸0.BackColor = System.Drawing.SystemColors.Control;
             this.btn翻转气缸0.Location = new System.Drawing.Point(262, 31);
-            this.btn翻转气缸0.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn翻转气缸0.Margin = new System.Windows.Forms.Padding(2);
             this.btn翻转气缸0.Name = "btn翻转气缸0";
             this.btn翻转气缸0.Size = new System.Drawing.Size(101, 24);
             this.btn翻转气缸0.TabIndex = 56;
@@ -4078,7 +4078,7 @@
             // 
             this.btn平移吸嘴34下降.BackColor = System.Drawing.SystemColors.Control;
             this.btn平移吸嘴34下降.Location = new System.Drawing.Point(148, 233);
-            this.btn平移吸嘴34下降.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn平移吸嘴34下降.Margin = new System.Windows.Forms.Padding(2);
             this.btn平移吸嘴34下降.Name = "btn平移吸嘴34下降";
             this.btn平移吸嘴34下降.Size = new System.Drawing.Size(101, 24);
             this.btn平移吸嘴34下降.TabIndex = 55;
@@ -4091,7 +4091,7 @@
             // 
             this.btn平移吸嘴34上升.BackColor = System.Drawing.SystemColors.Control;
             this.btn平移吸嘴34上升.Location = new System.Drawing.Point(148, 204);
-            this.btn平移吸嘴34上升.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn平移吸嘴34上升.Margin = new System.Windows.Forms.Padding(2);
             this.btn平移吸嘴34上升.Name = "btn平移吸嘴34上升";
             this.btn平移吸嘴34上升.Size = new System.Drawing.Size(101, 24);
             this.btn平移吸嘴34上升.TabIndex = 54;
@@ -4104,7 +4104,7 @@
             // 
             this.btn平移吸嘴12下降.BackColor = System.Drawing.SystemColors.Control;
             this.btn平移吸嘴12下降.Location = new System.Drawing.Point(148, 175);
-            this.btn平移吸嘴12下降.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn平移吸嘴12下降.Margin = new System.Windows.Forms.Padding(2);
             this.btn平移吸嘴12下降.Name = "btn平移吸嘴12下降";
             this.btn平移吸嘴12下降.Size = new System.Drawing.Size(101, 24);
             this.btn平移吸嘴12下降.TabIndex = 53;
@@ -4117,7 +4117,7 @@
             // 
             this.btn平移吸嘴12上升.BackColor = System.Drawing.SystemColors.Control;
             this.btn平移吸嘴12上升.Location = new System.Drawing.Point(148, 146);
-            this.btn平移吸嘴12上升.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn平移吸嘴12上升.Margin = new System.Windows.Forms.Padding(2);
             this.btn平移吸嘴12上升.Name = "btn平移吸嘴12上升";
             this.btn平移吸嘴12上升.Size = new System.Drawing.Size(101, 24);
             this.btn平移吸嘴12上升.TabIndex = 52;
@@ -4130,7 +4130,7 @@
             // 
             this.btn上料吸嘴2下降.BackColor = System.Drawing.SystemColors.Control;
             this.btn上料吸嘴2下降.Location = new System.Drawing.Point(148, 118);
-            this.btn上料吸嘴2下降.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn上料吸嘴2下降.Margin = new System.Windows.Forms.Padding(2);
             this.btn上料吸嘴2下降.Name = "btn上料吸嘴2下降";
             this.btn上料吸嘴2下降.Size = new System.Drawing.Size(101, 24);
             this.btn上料吸嘴2下降.TabIndex = 51;
@@ -4143,7 +4143,7 @@
             // 
             this.btn上料吸嘴2上升.BackColor = System.Drawing.SystemColors.Control;
             this.btn上料吸嘴2上升.Location = new System.Drawing.Point(148, 89);
-            this.btn上料吸嘴2上升.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn上料吸嘴2上升.Margin = new System.Windows.Forms.Padding(2);
             this.btn上料吸嘴2上升.Name = "btn上料吸嘴2上升";
             this.btn上料吸嘴2上升.Size = new System.Drawing.Size(101, 24);
             this.btn上料吸嘴2上升.TabIndex = 50;
@@ -4156,7 +4156,7 @@
             // 
             this.btn上料吸嘴1下降.BackColor = System.Drawing.SystemColors.Control;
             this.btn上料吸嘴1下降.Location = new System.Drawing.Point(148, 60);
-            this.btn上料吸嘴1下降.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn上料吸嘴1下降.Margin = new System.Windows.Forms.Padding(2);
             this.btn上料吸嘴1下降.Name = "btn上料吸嘴1下降";
             this.btn上料吸嘴1下降.Size = new System.Drawing.Size(101, 24);
             this.btn上料吸嘴1下降.TabIndex = 49;
@@ -4169,7 +4169,7 @@
             // 
             this.btn上料吸嘴1上升.BackColor = System.Drawing.SystemColors.Control;
             this.btn上料吸嘴1上升.Location = new System.Drawing.Point(148, 31);
-            this.btn上料吸嘴1上升.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn上料吸嘴1上升.Margin = new System.Windows.Forms.Padding(2);
             this.btn上料吸嘴1上升.Name = "btn上料吸嘴1上升";
             this.btn上料吸嘴1上升.Size = new System.Drawing.Size(101, 24);
             this.btn上料吸嘴1上升.TabIndex = 48;
@@ -4182,7 +4182,7 @@
             // 
             this.btnNG盘防卡盘缩回.BackColor = System.Drawing.SystemColors.Control;
             this.btnNG盘防卡盘缩回.Location = new System.Drawing.Point(33, 233);
-            this.btnNG盘防卡盘缩回.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNG盘防卡盘缩回.Margin = new System.Windows.Forms.Padding(2);
             this.btnNG盘防卡盘缩回.Name = "btnNG盘防卡盘缩回";
             this.btnNG盘防卡盘缩回.Size = new System.Drawing.Size(101, 24);
             this.btnNG盘防卡盘缩回.TabIndex = 47;
@@ -4195,7 +4195,7 @@
             // 
             this.btnNG盘防卡盘伸出.BackColor = System.Drawing.SystemColors.Control;
             this.btnNG盘防卡盘伸出.Location = new System.Drawing.Point(33, 204);
-            this.btnNG盘防卡盘伸出.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNG盘防卡盘伸出.Margin = new System.Windows.Forms.Padding(2);
             this.btnNG盘防卡盘伸出.Name = "btnNG盘防卡盘伸出";
             this.btnNG盘防卡盘伸出.Size = new System.Drawing.Size(101, 24);
             this.btnNG盘防卡盘伸出.TabIndex = 46;
@@ -4208,7 +4208,7 @@
             // 
             this.btn实盘防卡盘缩回.BackColor = System.Drawing.SystemColors.Control;
             this.btn实盘防卡盘缩回.Location = new System.Drawing.Point(33, 175);
-            this.btn实盘防卡盘缩回.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn实盘防卡盘缩回.Margin = new System.Windows.Forms.Padding(2);
             this.btn实盘防卡盘缩回.Name = "btn实盘防卡盘缩回";
             this.btn实盘防卡盘缩回.Size = new System.Drawing.Size(101, 24);
             this.btn实盘防卡盘缩回.TabIndex = 45;
@@ -4221,7 +4221,7 @@
             // 
             this.btn实盘防卡盘伸出.BackColor = System.Drawing.SystemColors.Control;
             this.btn实盘防卡盘伸出.Location = new System.Drawing.Point(33, 146);
-            this.btn实盘防卡盘伸出.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn实盘防卡盘伸出.Margin = new System.Windows.Forms.Padding(2);
             this.btn实盘防卡盘伸出.Name = "btn实盘防卡盘伸出";
             this.btn实盘防卡盘伸出.Size = new System.Drawing.Size(101, 24);
             this.btn实盘防卡盘伸出.TabIndex = 44;
@@ -4234,7 +4234,7 @@
             // 
             this.btn上料机械手缩回.BackColor = System.Drawing.SystemColors.Control;
             this.btn上料机械手缩回.Location = new System.Drawing.Point(33, 118);
-            this.btn上料机械手缩回.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn上料机械手缩回.Margin = new System.Windows.Forms.Padding(2);
             this.btn上料机械手缩回.Name = "btn上料机械手缩回";
             this.btn上料机械手缩回.Size = new System.Drawing.Size(101, 24);
             this.btn上料机械手缩回.TabIndex = 43;
@@ -4247,7 +4247,7 @@
             // 
             this.btn上料机械手伸出.BackColor = System.Drawing.SystemColors.Control;
             this.btn上料机械手伸出.Location = new System.Drawing.Point(33, 89);
-            this.btn上料机械手伸出.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn上料机械手伸出.Margin = new System.Windows.Forms.Padding(2);
             this.btn上料机械手伸出.Name = "btn上料机械手伸出";
             this.btn上料机械手伸出.Size = new System.Drawing.Size(101, 24);
             this.btn上料机械手伸出.TabIndex = 42;
@@ -4260,7 +4260,7 @@
             // 
             this.btn上料机械手下降.BackColor = System.Drawing.SystemColors.Control;
             this.btn上料机械手下降.Location = new System.Drawing.Point(33, 60);
-            this.btn上料机械手下降.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn上料机械手下降.Margin = new System.Windows.Forms.Padding(2);
             this.btn上料机械手下降.Name = "btn上料机械手下降";
             this.btn上料机械手下降.Size = new System.Drawing.Size(101, 24);
             this.btn上料机械手下降.TabIndex = 41;
@@ -4273,7 +4273,7 @@
             // 
             this.btn上料机械手上升.BackColor = System.Drawing.SystemColors.Control;
             this.btn上料机械手上升.Location = new System.Drawing.Point(33, 31);
-            this.btn上料机械手上升.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn上料机械手上升.Margin = new System.Windows.Forms.Padding(2);
             this.btn上料机械手上升.Name = "btn上料机械手上升";
             this.btn上料机械手上升.Size = new System.Drawing.Size(101, 24);
             this.btn上料机械手上升.TabIndex = 40;
@@ -4297,9 +4297,9 @@
             this.tabPage7.Controls.Add(this.groupBox22);
             this.tabPage7.Controls.Add(this.groupBox21);
             this.tabPage7.Location = new System.Drawing.Point(4, 44);
-            this.tabPage7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage7.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage7.Size = new System.Drawing.Size(1276, 756);
             this.tabPage7.TabIndex = 6;
             this.tabPage7.Text = "手动电机1";
@@ -4323,9 +4323,9 @@
             this.groupBox32.Controls.Add(this.btnBYZ上料位置);
             this.groupBox32.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox32.Location = new System.Drawing.Point(998, 362);
-            this.groupBox32.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox32.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox32.Name = "groupBox32";
-            this.groupBox32.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox32.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox32.Size = new System.Drawing.Size(191, 354);
             this.groupBox32.TabIndex = 60;
             this.groupBox32.TabStop = false;
@@ -4335,7 +4335,7 @@
             // 
             this.btnBYZ平移位置34.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYZ平移位置34.Location = new System.Drawing.Point(103, 133);
-            this.btnBYZ平移位置34.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYZ平移位置34.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYZ平移位置34.Name = "btnBYZ平移位置34";
             this.btnBYZ平移位置34.Size = new System.Drawing.Size(75, 24);
             this.btnBYZ平移位置34.TabIndex = 60;
@@ -4348,7 +4348,7 @@
             // 
             this.btnBYZSok位置34.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYZSok位置34.Location = new System.Drawing.Point(103, 193);
-            this.btnBYZSok位置34.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYZSok位置34.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYZSok位置34.Name = "btnBYZSok位置34";
             this.btnBYZSok位置34.Size = new System.Drawing.Size(75, 24);
             this.btnBYZSok位置34.TabIndex = 59;
@@ -4361,7 +4361,7 @@
             // 
             this.btnBYZ视觉位置3.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYZ视觉位置3.Location = new System.Drawing.Point(15, 162);
-            this.btnBYZ视觉位置3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYZ视觉位置3.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYZ视觉位置3.Name = "btnBYZ视觉位置3";
             this.btnBYZ视觉位置3.Size = new System.Drawing.Size(75, 24);
             this.btnBYZ视觉位置3.TabIndex = 58;
@@ -4374,7 +4374,7 @@
             // 
             this.btnBYZ上升位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYZ上升位置.Location = new System.Drawing.Point(103, 74);
-            this.btnBYZ上升位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYZ上升位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYZ上升位置.Name = "btnBYZ上升位置";
             this.btnBYZ上升位置.Size = new System.Drawing.Size(75, 24);
             this.btnBYZ上升位置.TabIndex = 56;
@@ -4387,7 +4387,7 @@
             // 
             this.btnBYZ下料位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYZ下料位置.Location = new System.Drawing.Point(103, 163);
-            this.btnBYZ下料位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYZ下料位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYZ下料位置.Name = "btnBYZ下料位置";
             this.btnBYZ下料位置.Size = new System.Drawing.Size(75, 24);
             this.btnBYZ下料位置.TabIndex = 57;
@@ -4400,7 +4400,7 @@
             // 
             this.txtBYZ当前位置.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBYZ当前位置.Location = new System.Drawing.Point(84, 23);
-            this.txtBYZ当前位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBYZ当前位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtBYZ当前位置.Name = "txtBYZ当前位置";
             this.txtBYZ当前位置.Size = new System.Drawing.Size(67, 14);
             this.txtBYZ当前位置.TabIndex = 49;
@@ -4421,7 +4421,7 @@
             this.btnBYZ停止.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYZ停止.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBYZ停止.Location = new System.Drawing.Point(67, 308);
-            this.btnBYZ停止.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYZ停止.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYZ停止.Name = "btnBYZ停止";
             this.btnBYZ停止.Size = new System.Drawing.Size(50, 31);
             this.btnBYZ停止.TabIndex = 47;
@@ -4435,7 +4435,7 @@
             this.btnBYZ下行.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYZ下行.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBYZ下行.Location = new System.Drawing.Point(121, 308);
-            this.btnBYZ下行.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYZ下行.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYZ下行.Name = "btnBYZ下行";
             this.btnBYZ下行.Size = new System.Drawing.Size(35, 31);
             this.btnBYZ下行.TabIndex = 47;
@@ -4449,7 +4449,7 @@
             this.btnBYZ上行.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYZ上行.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBYZ上行.Location = new System.Drawing.Point(28, 308);
-            this.btnBYZ上行.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYZ上行.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYZ上行.Name = "btnBYZ上行";
             this.btnBYZ上行.Size = new System.Drawing.Size(35, 31);
             this.btnBYZ上行.TabIndex = 46;
@@ -4462,7 +4462,7 @@
             // 
             this.btnBYZ回原点.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYZ回原点.Location = new System.Drawing.Point(15, 74);
-            this.btnBYZ回原点.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYZ回原点.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYZ回原点.Name = "btnBYZ回原点";
             this.btnBYZ回原点.Size = new System.Drawing.Size(75, 24);
             this.btnBYZ回原点.TabIndex = 45;
@@ -4475,7 +4475,7 @@
             // 
             this.btnBYZ视觉位置2.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYZ视觉位置2.Location = new System.Drawing.Point(15, 132);
-            this.btnBYZ视觉位置2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYZ视觉位置2.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYZ视觉位置2.Name = "btnBYZ视觉位置2";
             this.btnBYZ视觉位置2.Size = new System.Drawing.Size(75, 24);
             this.btnBYZ视觉位置2.TabIndex = 43;
@@ -4488,7 +4488,7 @@
             // 
             this.btnBYZ视觉位置1.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYZ视觉位置1.Location = new System.Drawing.Point(15, 103);
-            this.btnBYZ视觉位置1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYZ视觉位置1.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYZ视觉位置1.Name = "btnBYZ视觉位置1";
             this.btnBYZ视觉位置1.Size = new System.Drawing.Size(75, 24);
             this.btnBYZ视觉位置1.TabIndex = 42;
@@ -4501,7 +4501,7 @@
             // 
             this.btnBYZ上料位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYZ上料位置.Location = new System.Drawing.Point(103, 103);
-            this.btnBYZ上料位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYZ上料位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYZ上料位置.Name = "btnBYZ上料位置";
             this.btnBYZ上料位置.Size = new System.Drawing.Size(75, 24);
             this.btnBYZ上料位置.TabIndex = 41;
@@ -4533,9 +4533,9 @@
             this.groupBox30.Controls.Add(this.btnBYY视觉位置1);
             this.groupBox30.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox30.Location = new System.Drawing.Point(802, 362);
-            this.groupBox30.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox30.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox30.Name = "groupBox30";
-            this.groupBox30.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox30.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox30.Size = new System.Drawing.Size(191, 354);
             this.groupBox30.TabIndex = 59;
             this.groupBox30.TabStop = false;
@@ -4545,7 +4545,7 @@
             // 
             this.btnBYYSokt夹爪1记忆.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYYSokt夹爪1记忆.Location = new System.Drawing.Point(98, 246);
-            this.btnBYYSokt夹爪1记忆.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYYSokt夹爪1记忆.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYYSokt夹爪1记忆.Name = "btnBYYSokt夹爪1记忆";
             this.btnBYYSokt夹爪1记忆.Size = new System.Drawing.Size(88, 24);
             this.btnBYYSokt夹爪1记忆.TabIndex = 67;
@@ -4558,7 +4558,7 @@
             // 
             this.btnSokt夹爪4.BackColor = System.Drawing.SystemColors.Control;
             this.btnSokt夹爪4.Location = new System.Drawing.Point(8, 246);
-            this.btnSokt夹爪4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSokt夹爪4.Margin = new System.Windows.Forms.Padding(2);
             this.btnSokt夹爪4.Name = "btnSokt夹爪4";
             this.btnSokt夹爪4.Size = new System.Drawing.Size(75, 24);
             this.btnSokt夹爪4.TabIndex = 66;
@@ -4571,7 +4571,7 @@
             // 
             this.btnSokt夹爪3.BackColor = System.Drawing.SystemColors.Control;
             this.btnSokt夹爪3.Location = new System.Drawing.Point(8, 217);
-            this.btnSokt夹爪3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSokt夹爪3.Margin = new System.Windows.Forms.Padding(2);
             this.btnSokt夹爪3.Name = "btnSokt夹爪3";
             this.btnSokt夹爪3.Size = new System.Drawing.Size(75, 24);
             this.btnSokt夹爪3.TabIndex = 65;
@@ -4584,7 +4584,7 @@
             // 
             this.btnBYY视觉位置6.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYY视觉位置6.Location = new System.Drawing.Point(8, 188);
-            this.btnBYY视觉位置6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYY视觉位置6.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYY视觉位置6.Name = "btnBYY视觉位置6";
             this.btnBYY视觉位置6.Size = new System.Drawing.Size(75, 24);
             this.btnBYY视觉位置6.TabIndex = 64;
@@ -4597,7 +4597,7 @@
             // 
             this.btnBYY视觉位置5.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYY视觉位置5.Location = new System.Drawing.Point(8, 159);
-            this.btnBYY视觉位置5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYY视觉位置5.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYY视觉位置5.Name = "btnBYY视觉位置5";
             this.btnBYY视觉位置5.Size = new System.Drawing.Size(75, 24);
             this.btnBYY视觉位置5.TabIndex = 63;
@@ -4610,7 +4610,7 @@
             // 
             this.btnBYY上料34位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYY上料34位置.Location = new System.Drawing.Point(98, 161);
-            this.btnBYY上料34位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYY上料34位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYY上料34位置.Name = "btnBYY上料34位置";
             this.btnBYY上料34位置.Size = new System.Drawing.Size(88, 24);
             this.btnBYY上料34位置.TabIndex = 62;
@@ -4623,7 +4623,7 @@
             // 
             this.btnBYY上料12位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYY上料12位置.Location = new System.Drawing.Point(98, 133);
-            this.btnBYY上料12位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYY上料12位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYY上料12位置.Name = "btnBYY上料12位置";
             this.btnBYY上料12位置.Size = new System.Drawing.Size(88, 24);
             this.btnBYY上料12位置.TabIndex = 61;
@@ -4636,7 +4636,7 @@
             // 
             this.btnBYY视觉位置4.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYY视觉位置4.Location = new System.Drawing.Point(98, 215);
-            this.btnBYY视觉位置4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYY视觉位置4.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYY视觉位置4.Name = "btnBYY视觉位置4";
             this.btnBYY视觉位置4.Size = new System.Drawing.Size(88, 24);
             this.btnBYY视觉位置4.TabIndex = 59;
@@ -4649,7 +4649,7 @@
             // 
             this.btnBYY视觉位置3.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYY视觉位置3.Location = new System.Drawing.Point(98, 188);
-            this.btnBYY视觉位置3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYY视觉位置3.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYY视觉位置3.Name = "btnBYY视觉位置3";
             this.btnBYY视觉位置3.Size = new System.Drawing.Size(88, 24);
             this.btnBYY视觉位置3.TabIndex = 58;
@@ -4662,7 +4662,7 @@
             // 
             this.btnBYY第一行.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYY第一行.Location = new System.Drawing.Point(98, 74);
-            this.btnBYY第一行.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYY第一行.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYY第一行.Name = "btnBYY第一行";
             this.btnBYY第一行.Size = new System.Drawing.Size(88, 24);
             this.btnBYY第一行.TabIndex = 56;
@@ -4675,7 +4675,7 @@
             // 
             this.btnBYY第二行.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYY第二行.Location = new System.Drawing.Point(98, 103);
-            this.btnBYY第二行.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYY第二行.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYY第二行.Name = "btnBYY第二行";
             this.btnBYY第二行.Size = new System.Drawing.Size(88, 24);
             this.btnBYY第二行.TabIndex = 57;
@@ -4688,7 +4688,7 @@
             // 
             this.txtBYY当前位置.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBYY当前位置.Location = new System.Drawing.Point(84, 23);
-            this.txtBYY当前位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBYY当前位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtBYY当前位置.Name = "txtBYY当前位置";
             this.txtBYY当前位置.Size = new System.Drawing.Size(67, 14);
             this.txtBYY当前位置.TabIndex = 49;
@@ -4709,7 +4709,7 @@
             this.btnBYY停止.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYY停止.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBYY停止.Location = new System.Drawing.Point(70, 308);
-            this.btnBYY停止.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYY停止.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYY停止.Name = "btnBYY停止";
             this.btnBYY停止.Size = new System.Drawing.Size(50, 31);
             this.btnBYY停止.TabIndex = 47;
@@ -4723,7 +4723,7 @@
             this.btnBYY后行.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYY后行.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBYY后行.Location = new System.Drawing.Point(124, 308);
-            this.btnBYY后行.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYY后行.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYY后行.Name = "btnBYY后行";
             this.btnBYY后行.Size = new System.Drawing.Size(35, 31);
             this.btnBYY后行.TabIndex = 47;
@@ -4737,7 +4737,7 @@
             this.btnBYY前行.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYY前行.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBYY前行.Location = new System.Drawing.Point(32, 308);
-            this.btnBYY前行.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYY前行.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYY前行.Name = "btnBYY前行";
             this.btnBYY前行.Size = new System.Drawing.Size(35, 31);
             this.btnBYY前行.TabIndex = 46;
@@ -4750,7 +4750,7 @@
             // 
             this.btnBYY回原点.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYY回原点.Location = new System.Drawing.Point(8, 73);
-            this.btnBYY回原点.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYY回原点.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYY回原点.Name = "btnBYY回原点";
             this.btnBYY回原点.Size = new System.Drawing.Size(75, 24);
             this.btnBYY回原点.TabIndex = 45;
@@ -4763,7 +4763,7 @@
             // 
             this.btnBYY视觉位置2.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYY视觉位置2.Location = new System.Drawing.Point(8, 132);
-            this.btnBYY视觉位置2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYY视觉位置2.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYY视觉位置2.Name = "btnBYY视觉位置2";
             this.btnBYY视觉位置2.Size = new System.Drawing.Size(75, 24);
             this.btnBYY视觉位置2.TabIndex = 43;
@@ -4776,7 +4776,7 @@
             // 
             this.btnBYY视觉位置1.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYY视觉位置1.Location = new System.Drawing.Point(8, 103);
-            this.btnBYY视觉位置1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYY视觉位置1.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYY视觉位置1.Name = "btnBYY视觉位置1";
             this.btnBYY视觉位置1.Size = new System.Drawing.Size(75, 24);
             this.btnBYY视觉位置1.TabIndex = 42;
@@ -4797,9 +4797,9 @@
             this.groupBox29.Controls.Add(this.btn旋转2左行);
             this.groupBox29.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox29.Location = new System.Drawing.Point(214, 401);
-            this.groupBox29.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox29.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox29.Name = "groupBox29";
-            this.groupBox29.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox29.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox29.Size = new System.Drawing.Size(191, 315);
             this.groupBox29.TabIndex = 61;
             this.groupBox29.TabStop = false;
@@ -4809,7 +4809,7 @@
             // 
             this.旋转二回原点.BackColor = System.Drawing.SystemColors.Control;
             this.旋转二回原点.Location = new System.Drawing.Point(40, 106);
-            this.旋转二回原点.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.旋转二回原点.Margin = new System.Windows.Forms.Padding(2);
             this.旋转二回原点.Name = "旋转二回原点";
             this.旋转二回原点.Size = new System.Drawing.Size(101, 24);
             this.旋转二回原点.TabIndex = 59;
@@ -4822,7 +4822,7 @@
             // 
             this.btn旋转二90位置.BackColor = System.Drawing.SystemColors.Control;
             this.btn旋转二90位置.Location = new System.Drawing.Point(40, 134);
-            this.btn旋转二90位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn旋转二90位置.Margin = new System.Windows.Forms.Padding(2);
             this.btn旋转二90位置.Name = "btn旋转二90位置";
             this.btn旋转二90位置.Size = new System.Drawing.Size(101, 24);
             this.btn旋转二90位置.TabIndex = 57;
@@ -4835,7 +4835,7 @@
             // 
             this.btn旋转二180位置.BackColor = System.Drawing.SystemColors.Control;
             this.btn旋转二180位置.Location = new System.Drawing.Point(40, 163);
-            this.btn旋转二180位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn旋转二180位置.Margin = new System.Windows.Forms.Padding(2);
             this.btn旋转二180位置.Name = "btn旋转二180位置";
             this.btn旋转二180位置.Size = new System.Drawing.Size(101, 24);
             this.btn旋转二180位置.TabIndex = 56;
@@ -4848,7 +4848,7 @@
             // 
             this.txt中空旋转2当前位置.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt中空旋转2当前位置.Location = new System.Drawing.Point(84, 23);
-            this.txt中空旋转2当前位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt中空旋转2当前位置.Margin = new System.Windows.Forms.Padding(2);
             this.txt中空旋转2当前位置.Name = "txt中空旋转2当前位置";
             this.txt中空旋转2当前位置.Size = new System.Drawing.Size(67, 14);
             this.txt中空旋转2当前位置.TabIndex = 49;
@@ -4869,7 +4869,7 @@
             this.btn旋转2停止.BackColor = System.Drawing.SystemColors.Control;
             this.btn旋转2停止.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn旋转2停止.Location = new System.Drawing.Point(67, 272);
-            this.btn旋转2停止.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn旋转2停止.Margin = new System.Windows.Forms.Padding(2);
             this.btn旋转2停止.Name = "btn旋转2停止";
             this.btn旋转2停止.Size = new System.Drawing.Size(50, 31);
             this.btn旋转2停止.TabIndex = 47;
@@ -4883,7 +4883,7 @@
             this.btn旋转2右行.BackColor = System.Drawing.SystemColors.Control;
             this.btn旋转2右行.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn旋转2右行.Location = new System.Drawing.Point(121, 272);
-            this.btn旋转2右行.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn旋转2右行.Margin = new System.Windows.Forms.Padding(2);
             this.btn旋转2右行.Name = "btn旋转2右行";
             this.btn旋转2右行.Size = new System.Drawing.Size(35, 31);
             this.btn旋转2右行.TabIndex = 47;
@@ -4897,7 +4897,7 @@
             this.btn旋转2左行.BackColor = System.Drawing.SystemColors.Control;
             this.btn旋转2左行.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn旋转2左行.Location = new System.Drawing.Point(28, 272);
-            this.btn旋转2左行.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn旋转2左行.Margin = new System.Windows.Forms.Padding(2);
             this.btn旋转2左行.Name = "btn旋转2左行";
             this.btn旋转2左行.Size = new System.Drawing.Size(35, 31);
             this.btn旋转2左行.TabIndex = 46;
@@ -4926,9 +4926,9 @@
             this.groupBox31.Controls.Add(this.btnBYX第二列);
             this.groupBox31.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox31.Location = new System.Drawing.Point(606, 362);
-            this.groupBox31.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox31.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox31.Name = "groupBox31";
-            this.groupBox31.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox31.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox31.Size = new System.Drawing.Size(191, 354);
             this.groupBox31.TabIndex = 58;
             this.groupBox31.TabStop = false;
@@ -4938,7 +4938,7 @@
             // 
             this.btnBYX第八列.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYX第八列.Location = new System.Drawing.Point(104, 217);
-            this.btnBYX第八列.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYX第八列.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYX第八列.Name = "btnBYX第八列";
             this.btnBYX第八列.Size = new System.Drawing.Size(75, 24);
             this.btnBYX第八列.TabIndex = 57;
@@ -4951,7 +4951,7 @@
             // 
             this.btnBYX第七列.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYX第七列.Location = new System.Drawing.Point(104, 188);
-            this.btnBYX第七列.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYX第七列.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYX第七列.Name = "btnBYX第七列";
             this.btnBYX第七列.Size = new System.Drawing.Size(75, 24);
             this.btnBYX第七列.TabIndex = 56;
@@ -4964,7 +4964,7 @@
             // 
             this.btnBYX第六列.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYX第六列.Location = new System.Drawing.Point(104, 159);
-            this.btnBYX第六列.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYX第六列.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYX第六列.Name = "btnBYX第六列";
             this.btnBYX第六列.Size = new System.Drawing.Size(75, 24);
             this.btnBYX第六列.TabIndex = 55;
@@ -4977,7 +4977,7 @@
             // 
             this.btnBYX第五列.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYX第五列.Location = new System.Drawing.Point(104, 130);
-            this.btnBYX第五列.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYX第五列.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYX第五列.Name = "btnBYX第五列";
             this.btnBYX第五列.Size = new System.Drawing.Size(75, 24);
             this.btnBYX第五列.TabIndex = 54;
@@ -4990,7 +4990,7 @@
             // 
             this.btnBYX第四列.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYX第四列.Location = new System.Drawing.Point(104, 102);
-            this.btnBYX第四列.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYX第四列.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYX第四列.Name = "btnBYX第四列";
             this.btnBYX第四列.Size = new System.Drawing.Size(75, 24);
             this.btnBYX第四列.TabIndex = 53;
@@ -5003,7 +5003,7 @@
             // 
             this.btnBYX第三列.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYX第三列.Location = new System.Drawing.Point(14, 217);
-            this.btnBYX第三列.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYX第三列.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYX第三列.Name = "btnBYX第三列";
             this.btnBYX第三列.Size = new System.Drawing.Size(75, 24);
             this.btnBYX第三列.TabIndex = 52;
@@ -5016,7 +5016,7 @@
             // 
             this.txtBYX当前位置.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBYX当前位置.Location = new System.Drawing.Point(84, 23);
-            this.txtBYX当前位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBYX当前位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtBYX当前位置.Name = "txtBYX当前位置";
             this.txtBYX当前位置.Size = new System.Drawing.Size(67, 14);
             this.txtBYX当前位置.TabIndex = 49;
@@ -5037,7 +5037,7 @@
             this.btnBYX停止.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYX停止.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBYX停止.Location = new System.Drawing.Point(67, 308);
-            this.btnBYX停止.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYX停止.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYX停止.Name = "btnBYX停止";
             this.btnBYX停止.Size = new System.Drawing.Size(50, 31);
             this.btnBYX停止.TabIndex = 47;
@@ -5051,7 +5051,7 @@
             this.btnBYX右行.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYX右行.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBYX右行.Location = new System.Drawing.Point(121, 308);
-            this.btnBYX右行.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYX右行.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYX右行.Name = "btnBYX右行";
             this.btnBYX右行.Size = new System.Drawing.Size(35, 31);
             this.btnBYX右行.TabIndex = 47;
@@ -5065,7 +5065,7 @@
             this.btnBYX左行.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYX左行.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBYX左行.Location = new System.Drawing.Point(28, 308);
-            this.btnBYX左行.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYX左行.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYX左行.Name = "btnBYX左行";
             this.btnBYX左行.Size = new System.Drawing.Size(35, 31);
             this.btnBYX左行.TabIndex = 46;
@@ -5078,7 +5078,7 @@
             // 
             this.btnBYX回原点.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYX回原点.Location = new System.Drawing.Point(14, 73);
-            this.btnBYX回原点.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYX回原点.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYX回原点.Name = "btnBYX回原点";
             this.btnBYX回原点.Size = new System.Drawing.Size(75, 24);
             this.btnBYX回原点.TabIndex = 45;
@@ -5091,7 +5091,7 @@
             // 
             this.btnBYX第一列.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYX第一列.Location = new System.Drawing.Point(14, 159);
-            this.btnBYX第一列.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYX第一列.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYX第一列.Name = "btnBYX第一列";
             this.btnBYX第一列.Size = new System.Drawing.Size(75, 24);
             this.btnBYX第一列.TabIndex = 43;
@@ -5104,7 +5104,7 @@
             // 
             this.btnBYX视觉位置1.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYX视觉位置1.Location = new System.Drawing.Point(14, 130);
-            this.btnBYX视觉位置1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYX视觉位置1.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYX视觉位置1.Name = "btnBYX视觉位置1";
             this.btnBYX视觉位置1.Size = new System.Drawing.Size(75, 24);
             this.btnBYX视觉位置1.TabIndex = 42;
@@ -5117,7 +5117,7 @@
             // 
             this.btnBYX上料位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYX上料位置.Location = new System.Drawing.Point(14, 102);
-            this.btnBYX上料位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYX上料位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYX上料位置.Name = "btnBYX上料位置";
             this.btnBYX上料位置.Size = new System.Drawing.Size(75, 24);
             this.btnBYX上料位置.TabIndex = 41;
@@ -5130,7 +5130,7 @@
             // 
             this.btnBYX第二列.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYX第二列.Location = new System.Drawing.Point(14, 188);
-            this.btnBYX第二列.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYX第二列.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYX第二列.Name = "btnBYX第二列";
             this.btnBYX第二列.Size = new System.Drawing.Size(75, 24);
             this.btnBYX第二列.TabIndex = 40;
@@ -5151,9 +5151,9 @@
             this.groupBox27.Controls.Add(this.btn旋转1左行);
             this.groupBox27.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox27.Location = new System.Drawing.Point(19, 401);
-            this.groupBox27.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox27.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox27.Name = "groupBox27";
-            this.groupBox27.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox27.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox27.Size = new System.Drawing.Size(191, 315);
             this.groupBox27.TabIndex = 60;
             this.groupBox27.TabStop = false;
@@ -5163,7 +5163,7 @@
             // 
             this.旋转一回原点.BackColor = System.Drawing.SystemColors.Control;
             this.旋转一回原点.Location = new System.Drawing.Point(40, 106);
-            this.旋转一回原点.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.旋转一回原点.Margin = new System.Windows.Forms.Padding(2);
             this.旋转一回原点.Name = "旋转一回原点";
             this.旋转一回原点.Size = new System.Drawing.Size(101, 24);
             this.旋转一回原点.TabIndex = 59;
@@ -5176,7 +5176,7 @@
             // 
             this.btn旋转一90位置.BackColor = System.Drawing.SystemColors.Control;
             this.btn旋转一90位置.Location = new System.Drawing.Point(40, 134);
-            this.btn旋转一90位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn旋转一90位置.Margin = new System.Windows.Forms.Padding(2);
             this.btn旋转一90位置.Name = "btn旋转一90位置";
             this.btn旋转一90位置.Size = new System.Drawing.Size(101, 24);
             this.btn旋转一90位置.TabIndex = 57;
@@ -5189,7 +5189,7 @@
             // 
             this.btn旋转一180位置.BackColor = System.Drawing.SystemColors.Control;
             this.btn旋转一180位置.Location = new System.Drawing.Point(40, 163);
-            this.btn旋转一180位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn旋转一180位置.Margin = new System.Windows.Forms.Padding(2);
             this.btn旋转一180位置.Name = "btn旋转一180位置";
             this.btn旋转一180位置.Size = new System.Drawing.Size(101, 24);
             this.btn旋转一180位置.TabIndex = 56;
@@ -5202,7 +5202,7 @@
             // 
             this.txt中空旋转1当前位置.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt中空旋转1当前位置.Location = new System.Drawing.Point(84, 23);
-            this.txt中空旋转1当前位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt中空旋转1当前位置.Margin = new System.Windows.Forms.Padding(2);
             this.txt中空旋转1当前位置.Name = "txt中空旋转1当前位置";
             this.txt中空旋转1当前位置.Size = new System.Drawing.Size(67, 14);
             this.txt中空旋转1当前位置.TabIndex = 49;
@@ -5223,7 +5223,7 @@
             this.btn旋转1停止.BackColor = System.Drawing.SystemColors.Control;
             this.btn旋转1停止.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn旋转1停止.Location = new System.Drawing.Point(67, 272);
-            this.btn旋转1停止.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn旋转1停止.Margin = new System.Windows.Forms.Padding(2);
             this.btn旋转1停止.Name = "btn旋转1停止";
             this.btn旋转1停止.Size = new System.Drawing.Size(50, 31);
             this.btn旋转1停止.TabIndex = 47;
@@ -5237,7 +5237,7 @@
             this.btn旋转1右行.BackColor = System.Drawing.SystemColors.Control;
             this.btn旋转1右行.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn旋转1右行.Location = new System.Drawing.Point(121, 272);
-            this.btn旋转1右行.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn旋转1右行.Margin = new System.Windows.Forms.Padding(2);
             this.btn旋转1右行.Name = "btn旋转1右行";
             this.btn旋转1右行.Size = new System.Drawing.Size(35, 31);
             this.btn旋转1右行.TabIndex = 47;
@@ -5251,7 +5251,7 @@
             this.btn旋转1左行.BackColor = System.Drawing.SystemColors.Control;
             this.btn旋转1左行.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn旋转1左行.Location = new System.Drawing.Point(28, 272);
-            this.btn旋转1左行.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn旋转1左行.Margin = new System.Windows.Forms.Padding(2);
             this.btn旋转1左行.Name = "btn旋转1左行";
             this.btn旋转1左行.Size = new System.Drawing.Size(35, 31);
             this.btn旋转1左行.TabIndex = 46;
@@ -5273,9 +5273,9 @@
             this.groupBox28.Controls.Add(this.btnBY平移左行);
             this.groupBox28.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox28.Location = new System.Drawing.Point(410, 362);
-            this.groupBox28.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox28.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox28.Name = "groupBox28";
-            this.groupBox28.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox28.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox28.Size = new System.Drawing.Size(191, 354);
             this.groupBox28.TabIndex = 58;
             this.groupBox28.TabStop = false;
@@ -5285,7 +5285,7 @@
             // 
             this.btnBY平移下料位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnBY平移下料位置.Location = new System.Drawing.Point(41, 161);
-            this.btnBY平移下料位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBY平移下料位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnBY平移下料位置.Name = "btnBY平移下料位置";
             this.btnBY平移下料位置.Size = new System.Drawing.Size(101, 24);
             this.btnBY平移下料位置.TabIndex = 59;
@@ -5298,7 +5298,7 @@
             // 
             this.btnBY平移中转位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnBY平移中转位置.Location = new System.Drawing.Point(41, 132);
-            this.btnBY平移中转位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBY平移中转位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnBY平移中转位置.Name = "btnBY平移中转位置";
             this.btnBY平移中转位置.Size = new System.Drawing.Size(101, 24);
             this.btnBY平移中转位置.TabIndex = 58;
@@ -5311,7 +5311,7 @@
             // 
             this.btnBY平移回原点.BackColor = System.Drawing.SystemColors.Control;
             this.btnBY平移回原点.Location = new System.Drawing.Point(41, 74);
-            this.btnBY平移回原点.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBY平移回原点.Margin = new System.Windows.Forms.Padding(2);
             this.btnBY平移回原点.Name = "btnBY平移回原点";
             this.btnBY平移回原点.Size = new System.Drawing.Size(101, 24);
             this.btnBY平移回原点.TabIndex = 57;
@@ -5324,7 +5324,7 @@
             // 
             this.btnBY平移上料位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnBY平移上料位置.Location = new System.Drawing.Point(41, 103);
-            this.btnBY平移上料位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBY平移上料位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnBY平移上料位置.Name = "btnBY平移上料位置";
             this.btnBY平移上料位置.Size = new System.Drawing.Size(101, 24);
             this.btnBY平移上料位置.TabIndex = 56;
@@ -5337,7 +5337,7 @@
             // 
             this.txtBY平移当前位置.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBY平移当前位置.Location = new System.Drawing.Point(84, 23);
-            this.txtBY平移当前位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBY平移当前位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtBY平移当前位置.Name = "txtBY平移当前位置";
             this.txtBY平移当前位置.Size = new System.Drawing.Size(67, 14);
             this.txtBY平移当前位置.TabIndex = 49;
@@ -5358,7 +5358,7 @@
             this.btnBY平移停止.BackColor = System.Drawing.SystemColors.Control;
             this.btnBY平移停止.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBY平移停止.Location = new System.Drawing.Point(67, 308);
-            this.btnBY平移停止.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBY平移停止.Margin = new System.Windows.Forms.Padding(2);
             this.btnBY平移停止.Name = "btnBY平移停止";
             this.btnBY平移停止.Size = new System.Drawing.Size(50, 31);
             this.btnBY平移停止.TabIndex = 47;
@@ -5372,7 +5372,7 @@
             this.btnBY平移右行.BackColor = System.Drawing.SystemColors.Control;
             this.btnBY平移右行.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBY平移右行.Location = new System.Drawing.Point(121, 308);
-            this.btnBY平移右行.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBY平移右行.Margin = new System.Windows.Forms.Padding(2);
             this.btnBY平移右行.Name = "btnBY平移右行";
             this.btnBY平移右行.Size = new System.Drawing.Size(35, 31);
             this.btnBY平移右行.TabIndex = 47;
@@ -5386,7 +5386,7 @@
             this.btnBY平移左行.BackColor = System.Drawing.SystemColors.Control;
             this.btnBY平移左行.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBY平移左行.Location = new System.Drawing.Point(28, 308);
-            this.btnBY平移左行.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBY平移左行.Margin = new System.Windows.Forms.Padding(2);
             this.btnBY平移左行.Name = "btnBY平移左行";
             this.btnBY平移左行.Size = new System.Drawing.Size(35, 31);
             this.btnBY平移左行.TabIndex = 46;
@@ -5406,9 +5406,9 @@
             this.groupBox26.Controls.Add(this.btn倒NG盘初始位置);
             this.groupBox26.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox26.Location = new System.Drawing.Point(998, 17);
-            this.groupBox26.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox26.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox26.Name = "groupBox26";
-            this.groupBox26.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox26.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox26.Size = new System.Drawing.Size(191, 315);
             this.groupBox26.TabIndex = 56;
             this.groupBox26.TabStop = false;
@@ -5418,7 +5418,7 @@
             // 
             this.btn倒NG盘回原点.BackColor = System.Drawing.SystemColors.Control;
             this.btn倒NG盘回原点.Location = new System.Drawing.Point(41, 104);
-            this.btn倒NG盘回原点.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn倒NG盘回原点.Margin = new System.Windows.Forms.Padding(2);
             this.btn倒NG盘回原点.Name = "btn倒NG盘回原点";
             this.btn倒NG盘回原点.Size = new System.Drawing.Size(101, 24);
             this.btn倒NG盘回原点.TabIndex = 56;
@@ -5431,7 +5431,7 @@
             // 
             this.txt倒NG盘当前位置.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt倒NG盘当前位置.Location = new System.Drawing.Point(84, 23);
-            this.txt倒NG盘当前位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt倒NG盘当前位置.Margin = new System.Windows.Forms.Padding(2);
             this.txt倒NG盘当前位置.Name = "txt倒NG盘当前位置";
             this.txt倒NG盘当前位置.Size = new System.Drawing.Size(67, 14);
             this.txt倒NG盘当前位置.TabIndex = 49;
@@ -5452,7 +5452,7 @@
             this.btn倒NG盘停止.BackColor = System.Drawing.SystemColors.Control;
             this.btn倒NG盘停止.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn倒NG盘停止.Location = new System.Drawing.Point(67, 272);
-            this.btn倒NG盘停止.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn倒NG盘停止.Margin = new System.Windows.Forms.Padding(2);
             this.btn倒NG盘停止.Name = "btn倒NG盘停止";
             this.btn倒NG盘停止.Size = new System.Drawing.Size(50, 31);
             this.btn倒NG盘停止.TabIndex = 47;
@@ -5466,7 +5466,7 @@
             this.btn倒NG盘下行.BackColor = System.Drawing.SystemColors.Control;
             this.btn倒NG盘下行.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn倒NG盘下行.Location = new System.Drawing.Point(121, 272);
-            this.btn倒NG盘下行.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn倒NG盘下行.Margin = new System.Windows.Forms.Padding(2);
             this.btn倒NG盘下行.Name = "btn倒NG盘下行";
             this.btn倒NG盘下行.Size = new System.Drawing.Size(35, 31);
             this.btn倒NG盘下行.TabIndex = 47;
@@ -5480,7 +5480,7 @@
             this.btn倒NG盘上行.BackColor = System.Drawing.SystemColors.Control;
             this.btn倒NG盘上行.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn倒NG盘上行.Location = new System.Drawing.Point(28, 272);
-            this.btn倒NG盘上行.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn倒NG盘上行.Margin = new System.Windows.Forms.Padding(2);
             this.btn倒NG盘上行.Name = "btn倒NG盘上行";
             this.btn倒NG盘上行.Size = new System.Drawing.Size(35, 31);
             this.btn倒NG盘上行.TabIndex = 46;
@@ -5493,7 +5493,7 @@
             // 
             this.btn倒NG盘初始位置.BackColor = System.Drawing.SystemColors.Control;
             this.btn倒NG盘初始位置.Location = new System.Drawing.Point(41, 133);
-            this.btn倒NG盘初始位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn倒NG盘初始位置.Margin = new System.Windows.Forms.Padding(2);
             this.btn倒NG盘初始位置.Name = "btn倒NG盘初始位置";
             this.btn倒NG盘初始位置.Size = new System.Drawing.Size(101, 24);
             this.btn倒NG盘初始位置.TabIndex = 45;
@@ -5514,9 +5514,9 @@
             this.groupBox25.Controls.Add(this.btn倒实盘初始位置);
             this.groupBox25.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox25.Location = new System.Drawing.Point(802, 17);
-            this.groupBox25.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox25.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox25.Name = "groupBox25";
-            this.groupBox25.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox25.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox25.Size = new System.Drawing.Size(191, 315);
             this.groupBox25.TabIndex = 55;
             this.groupBox25.TabStop = false;
@@ -5526,7 +5526,7 @@
             // 
             this.btn倒实盘回原点.BackColor = System.Drawing.SystemColors.Control;
             this.btn倒实盘回原点.Location = new System.Drawing.Point(41, 104);
-            this.btn倒实盘回原点.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn倒实盘回原点.Margin = new System.Windows.Forms.Padding(2);
             this.btn倒实盘回原点.Name = "btn倒实盘回原点";
             this.btn倒实盘回原点.Size = new System.Drawing.Size(101, 24);
             this.btn倒实盘回原点.TabIndex = 55;
@@ -5539,7 +5539,7 @@
             // 
             this.btn实盘扫码位置.BackColor = System.Drawing.SystemColors.Control;
             this.btn实盘扫码位置.Location = new System.Drawing.Point(41, 162);
-            this.btn实盘扫码位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn实盘扫码位置.Margin = new System.Windows.Forms.Padding(2);
             this.btn实盘扫码位置.Name = "btn实盘扫码位置";
             this.btn实盘扫码位置.Size = new System.Drawing.Size(101, 24);
             this.btn实盘扫码位置.TabIndex = 52;
@@ -5552,7 +5552,7 @@
             // 
             this.txt倒实盘当前位置.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt倒实盘当前位置.Location = new System.Drawing.Point(84, 23);
-            this.txt倒实盘当前位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt倒实盘当前位置.Margin = new System.Windows.Forms.Padding(2);
             this.txt倒实盘当前位置.Name = "txt倒实盘当前位置";
             this.txt倒实盘当前位置.Size = new System.Drawing.Size(67, 14);
             this.txt倒实盘当前位置.TabIndex = 49;
@@ -5573,7 +5573,7 @@
             this.btn倒实盘停止.BackColor = System.Drawing.SystemColors.Control;
             this.btn倒实盘停止.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn倒实盘停止.Location = new System.Drawing.Point(67, 272);
-            this.btn倒实盘停止.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn倒实盘停止.Margin = new System.Windows.Forms.Padding(2);
             this.btn倒实盘停止.Name = "btn倒实盘停止";
             this.btn倒实盘停止.Size = new System.Drawing.Size(50, 31);
             this.btn倒实盘停止.TabIndex = 47;
@@ -5587,7 +5587,7 @@
             this.btn倒实盘下行.BackColor = System.Drawing.SystemColors.Control;
             this.btn倒实盘下行.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn倒实盘下行.Location = new System.Drawing.Point(121, 272);
-            this.btn倒实盘下行.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn倒实盘下行.Margin = new System.Windows.Forms.Padding(2);
             this.btn倒实盘下行.Name = "btn倒实盘下行";
             this.btn倒实盘下行.Size = new System.Drawing.Size(35, 31);
             this.btn倒实盘下行.TabIndex = 47;
@@ -5601,7 +5601,7 @@
             this.btn倒实盘上行.BackColor = System.Drawing.SystemColors.Control;
             this.btn倒实盘上行.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn倒实盘上行.Location = new System.Drawing.Point(28, 272);
-            this.btn倒实盘上行.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn倒实盘上行.Margin = new System.Windows.Forms.Padding(2);
             this.btn倒实盘上行.Name = "btn倒实盘上行";
             this.btn倒实盘上行.Size = new System.Drawing.Size(35, 31);
             this.btn倒实盘上行.TabIndex = 46;
@@ -5614,7 +5614,7 @@
             // 
             this.btn倒实盘初始位置.BackColor = System.Drawing.SystemColors.Control;
             this.btn倒实盘初始位置.Location = new System.Drawing.Point(41, 133);
-            this.btn倒实盘初始位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn倒实盘初始位置.Margin = new System.Windows.Forms.Padding(2);
             this.btn倒实盘初始位置.Name = "btn倒实盘初始位置";
             this.btn倒实盘初始位置.Size = new System.Drawing.Size(101, 24);
             this.btn倒实盘初始位置.TabIndex = 45;
@@ -5634,9 +5634,9 @@
             this.groupBox24.Controls.Add(this.btnNG盘初始位置);
             this.groupBox24.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox24.Location = new System.Drawing.Point(606, 17);
-            this.groupBox24.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox24.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox24.Name = "groupBox24";
-            this.groupBox24.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox24.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox24.Size = new System.Drawing.Size(191, 315);
             this.groupBox24.TabIndex = 54;
             this.groupBox24.TabStop = false;
@@ -5646,7 +5646,7 @@
             // 
             this.btnNG盘回原点.BackColor = System.Drawing.SystemColors.Control;
             this.btnNG盘回原点.Location = new System.Drawing.Point(41, 104);
-            this.btnNG盘回原点.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNG盘回原点.Margin = new System.Windows.Forms.Padding(2);
             this.btnNG盘回原点.Name = "btnNG盘回原点";
             this.btnNG盘回原点.Size = new System.Drawing.Size(101, 24);
             this.btnNG盘回原点.TabIndex = 54;
@@ -5659,7 +5659,7 @@
             // 
             this.txtNG盘当前位置.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNG盘当前位置.Location = new System.Drawing.Point(84, 23);
-            this.txtNG盘当前位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNG盘当前位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtNG盘当前位置.Name = "txtNG盘当前位置";
             this.txtNG盘当前位置.Size = new System.Drawing.Size(67, 14);
             this.txtNG盘当前位置.TabIndex = 49;
@@ -5680,7 +5680,7 @@
             this.btnNG盘停止.BackColor = System.Drawing.SystemColors.Control;
             this.btnNG盘停止.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNG盘停止.Location = new System.Drawing.Point(67, 272);
-            this.btnNG盘停止.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNG盘停止.Margin = new System.Windows.Forms.Padding(2);
             this.btnNG盘停止.Name = "btnNG盘停止";
             this.btnNG盘停止.Size = new System.Drawing.Size(50, 31);
             this.btnNG盘停止.TabIndex = 47;
@@ -5694,7 +5694,7 @@
             this.btnNG盘下行.BackColor = System.Drawing.SystemColors.Control;
             this.btnNG盘下行.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNG盘下行.Location = new System.Drawing.Point(121, 272);
-            this.btnNG盘下行.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNG盘下行.Margin = new System.Windows.Forms.Padding(2);
             this.btnNG盘下行.Name = "btnNG盘下行";
             this.btnNG盘下行.Size = new System.Drawing.Size(35, 31);
             this.btnNG盘下行.TabIndex = 47;
@@ -5708,7 +5708,7 @@
             this.btnNG盘上行.BackColor = System.Drawing.SystemColors.Control;
             this.btnNG盘上行.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNG盘上行.Location = new System.Drawing.Point(28, 272);
-            this.btnNG盘上行.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNG盘上行.Margin = new System.Windows.Forms.Padding(2);
             this.btnNG盘上行.Name = "btnNG盘上行";
             this.btnNG盘上行.Size = new System.Drawing.Size(35, 31);
             this.btnNG盘上行.TabIndex = 46;
@@ -5721,7 +5721,7 @@
             // 
             this.btnNG盘初始位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnNG盘初始位置.Location = new System.Drawing.Point(41, 133);
-            this.btnNG盘初始位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNG盘初始位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnNG盘初始位置.Name = "btnNG盘初始位置";
             this.btnNG盘初始位置.Size = new System.Drawing.Size(101, 24);
             this.btnNG盘初始位置.TabIndex = 45;
@@ -5741,9 +5741,9 @@
             this.groupBox23.Controls.Add(this.btn实盘初始位置);
             this.groupBox23.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox23.Location = new System.Drawing.Point(410, 17);
-            this.groupBox23.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox23.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox23.Name = "groupBox23";
-            this.groupBox23.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox23.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox23.Size = new System.Drawing.Size(191, 315);
             this.groupBox23.TabIndex = 53;
             this.groupBox23.TabStop = false;
@@ -5753,7 +5753,7 @@
             // 
             this.btn实盘回原点.BackColor = System.Drawing.SystemColors.Control;
             this.btn实盘回原点.Location = new System.Drawing.Point(41, 104);
-            this.btn实盘回原点.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn实盘回原点.Margin = new System.Windows.Forms.Padding(2);
             this.btn实盘回原点.Name = "btn实盘回原点";
             this.btn实盘回原点.Size = new System.Drawing.Size(101, 24);
             this.btn实盘回原点.TabIndex = 53;
@@ -5766,7 +5766,7 @@
             // 
             this.txt实盘当前位置.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt实盘当前位置.Location = new System.Drawing.Point(84, 23);
-            this.txt实盘当前位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt实盘当前位置.Margin = new System.Windows.Forms.Padding(2);
             this.txt实盘当前位置.Name = "txt实盘当前位置";
             this.txt实盘当前位置.Size = new System.Drawing.Size(67, 14);
             this.txt实盘当前位置.TabIndex = 49;
@@ -5787,7 +5787,7 @@
             this.btn实盘停止.BackColor = System.Drawing.SystemColors.Control;
             this.btn实盘停止.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn实盘停止.Location = new System.Drawing.Point(67, 272);
-            this.btn实盘停止.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn实盘停止.Margin = new System.Windows.Forms.Padding(2);
             this.btn实盘停止.Name = "btn实盘停止";
             this.btn实盘停止.Size = new System.Drawing.Size(50, 31);
             this.btn实盘停止.TabIndex = 47;
@@ -5801,7 +5801,7 @@
             this.btn实盘下行.BackColor = System.Drawing.SystemColors.Control;
             this.btn实盘下行.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn实盘下行.Location = new System.Drawing.Point(121, 272);
-            this.btn实盘下行.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn实盘下行.Margin = new System.Windows.Forms.Padding(2);
             this.btn实盘下行.Name = "btn实盘下行";
             this.btn实盘下行.Size = new System.Drawing.Size(35, 31);
             this.btn实盘下行.TabIndex = 47;
@@ -5815,7 +5815,7 @@
             this.btn实盘上行.BackColor = System.Drawing.SystemColors.Control;
             this.btn实盘上行.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn实盘上行.Location = new System.Drawing.Point(28, 272);
-            this.btn实盘上行.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn实盘上行.Margin = new System.Windows.Forms.Padding(2);
             this.btn实盘上行.Name = "btn实盘上行";
             this.btn实盘上行.Size = new System.Drawing.Size(35, 31);
             this.btn实盘上行.TabIndex = 46;
@@ -5828,7 +5828,7 @@
             // 
             this.btn实盘初始位置.BackColor = System.Drawing.SystemColors.Control;
             this.btn实盘初始位置.Location = new System.Drawing.Point(41, 133);
-            this.btn实盘初始位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn实盘初始位置.Margin = new System.Windows.Forms.Padding(2);
             this.btn实盘初始位置.Name = "btn实盘初始位置";
             this.btn实盘初始位置.Size = new System.Drawing.Size(101, 24);
             this.btn实盘初始位置.TabIndex = 45;
@@ -5866,9 +5866,9 @@
             this.groupBox22.Controls.Add(this.btnY实盘位置);
             this.groupBox22.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox22.Location = new System.Drawing.Point(214, 17);
-            this.groupBox22.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox22.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox22.Name = "groupBox22";
-            this.groupBox22.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox22.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox22.Size = new System.Drawing.Size(191, 381);
             this.groupBox22.TabIndex = 52;
             this.groupBox22.TabStop = false;
@@ -5878,7 +5878,7 @@
             // 
             this.btnY下一行.BackColor = System.Drawing.SystemColors.Control;
             this.btnY下一行.Location = new System.Drawing.Point(104, 306);
-            this.btnY下一行.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnY下一行.Margin = new System.Windows.Forms.Padding(2);
             this.btnY下一行.Name = "btnY下一行";
             this.btnY下一行.Size = new System.Drawing.Size(75, 24);
             this.btnY下一行.TabIndex = 65;
@@ -5891,7 +5891,7 @@
             // 
             this.btnY上一行.BackColor = System.Drawing.SystemColors.Control;
             this.btnY上一行.Location = new System.Drawing.Point(14, 306);
-            this.btnY上一行.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnY上一行.Margin = new System.Windows.Forms.Padding(2);
             this.btnY上一行.Name = "btnY上一行";
             this.btnY上一行.Size = new System.Drawing.Size(75, 24);
             this.btnY上一行.TabIndex = 64;
@@ -5904,7 +5904,7 @@
             // 
             this.btnY扫码位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnY扫码位置.Location = new System.Drawing.Point(104, 278);
-            this.btnY扫码位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnY扫码位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnY扫码位置.Name = "btnY扫码位置";
             this.btnY扫码位置.Size = new System.Drawing.Size(75, 24);
             this.btnY扫码位置.TabIndex = 63;
@@ -5917,7 +5917,7 @@
             // 
             this.btnY夹爪位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnY夹爪位置.Location = new System.Drawing.Point(14, 278);
-            this.btnY夹爪位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnY夹爪位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnY夹爪位置.Name = "btnY夹爪位置";
             this.btnY夹爪位置.Size = new System.Drawing.Size(75, 24);
             this.btnY夹爪位置.TabIndex = 62;
@@ -5930,7 +5930,7 @@
             // 
             this.btnY视觉倒实盘位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnY视觉倒实盘位置.Location = new System.Drawing.Point(104, 249);
-            this.btnY视觉倒实盘位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnY视觉倒实盘位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnY视觉倒实盘位置.Name = "btnY视觉倒实盘位置";
             this.btnY视觉倒实盘位置.Size = new System.Drawing.Size(75, 24);
             this.btnY视觉倒实盘位置.TabIndex = 61;
@@ -5943,7 +5943,7 @@
             // 
             this.btnY视觉实盘位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnY视觉实盘位置.Location = new System.Drawing.Point(14, 249);
-            this.btnY视觉实盘位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnY视觉实盘位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnY视觉实盘位置.Name = "btnY视觉实盘位置";
             this.btnY视觉实盘位置.Size = new System.Drawing.Size(75, 24);
             this.btnY视觉实盘位置.TabIndex = 60;
@@ -5956,7 +5956,7 @@
             // 
             this.btnY吸1实盘.BackColor = System.Drawing.SystemColors.Control;
             this.btnY吸1实盘.Location = new System.Drawing.Point(104, 75);
-            this.btnY吸1实盘.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnY吸1实盘.Margin = new System.Windows.Forms.Padding(2);
             this.btnY吸1实盘.Name = "btnY吸1实盘";
             this.btnY吸1实盘.Size = new System.Drawing.Size(75, 24);
             this.btnY吸1实盘.TabIndex = 56;
@@ -5969,7 +5969,7 @@
             // 
             this.btnY吸2实盘.BackColor = System.Drawing.SystemColors.Control;
             this.btnY吸2实盘.Location = new System.Drawing.Point(104, 104);
-            this.btnY吸2实盘.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnY吸2实盘.Margin = new System.Windows.Forms.Padding(2);
             this.btnY吸2实盘.Name = "btnY吸2实盘";
             this.btnY吸2实盘.Size = new System.Drawing.Size(75, 24);
             this.btnY吸2实盘.TabIndex = 57;
@@ -5982,7 +5982,7 @@
             // 
             this.btnY吸1NG盘.BackColor = System.Drawing.SystemColors.Control;
             this.btnY吸1NG盘.Location = new System.Drawing.Point(104, 190);
-            this.btnY吸1NG盘.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnY吸1NG盘.Margin = new System.Windows.Forms.Padding(2);
             this.btnY吸1NG盘.Name = "btnY吸1NG盘";
             this.btnY吸1NG盘.Size = new System.Drawing.Size(75, 24);
             this.btnY吸1NG盘.TabIndex = 55;
@@ -5995,7 +5995,7 @@
             // 
             this.btnY吸2倒实盘.BackColor = System.Drawing.SystemColors.Control;
             this.btnY吸2倒实盘.Location = new System.Drawing.Point(104, 162);
-            this.btnY吸2倒实盘.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnY吸2倒实盘.Margin = new System.Windows.Forms.Padding(2);
             this.btnY吸2倒实盘.Name = "btnY吸2倒实盘";
             this.btnY吸2倒实盘.Size = new System.Drawing.Size(75, 24);
             this.btnY吸2倒实盘.TabIndex = 54;
@@ -6008,7 +6008,7 @@
             // 
             this.btnY吸1倒实盘.BackColor = System.Drawing.SystemColors.Control;
             this.btnY吸1倒实盘.Location = new System.Drawing.Point(104, 133);
-            this.btnY吸1倒实盘.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnY吸1倒实盘.Margin = new System.Windows.Forms.Padding(2);
             this.btnY吸1倒实盘.Name = "btnY吸1倒实盘";
             this.btnY吸1倒实盘.Size = new System.Drawing.Size(75, 24);
             this.btnY吸1倒实盘.TabIndex = 53;
@@ -6021,7 +6021,7 @@
             // 
             this.btnY吸2NG盘.BackColor = System.Drawing.SystemColors.Control;
             this.btnY吸2NG盘.Location = new System.Drawing.Point(104, 219);
-            this.btnY吸2NG盘.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnY吸2NG盘.Margin = new System.Windows.Forms.Padding(2);
             this.btnY吸2NG盘.Name = "btnY吸2NG盘";
             this.btnY吸2NG盘.Size = new System.Drawing.Size(75, 24);
             this.btnY吸2NG盘.TabIndex = 52;
@@ -6033,7 +6033,7 @@
             // txtY指定位置
             // 
             this.txtY指定位置.Location = new System.Drawing.Point(84, 45);
-            this.txtY指定位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtY指定位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtY指定位置.Name = "txtY指定位置";
             this.txtY指定位置.Size = new System.Drawing.Size(68, 21);
             this.txtY指定位置.TabIndex = 51;
@@ -6053,7 +6053,7 @@
             // 
             this.txtY当前位置.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtY当前位置.Location = new System.Drawing.Point(84, 23);
-            this.txtY当前位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtY当前位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtY当前位置.Name = "txtY当前位置";
             this.txtY当前位置.Size = new System.Drawing.Size(67, 14);
             this.txtY当前位置.TabIndex = 49;
@@ -6062,7 +6062,7 @@
             // 
             this.btnY指定位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnY指定位置.Location = new System.Drawing.Point(15, 75);
-            this.btnY指定位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnY指定位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnY指定位置.Name = "btnY指定位置";
             this.btnY指定位置.Size = new System.Drawing.Size(75, 24);
             this.btnY指定位置.TabIndex = 44;
@@ -6087,7 +6087,7 @@
             this.btnY停止.BackColor = System.Drawing.SystemColors.Control;
             this.btnY停止.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnY停止.Location = new System.Drawing.Point(68, 343);
-            this.btnY停止.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnY停止.Margin = new System.Windows.Forms.Padding(2);
             this.btnY停止.Name = "btnY停止";
             this.btnY停止.Size = new System.Drawing.Size(50, 31);
             this.btnY停止.TabIndex = 47;
@@ -6101,7 +6101,7 @@
             this.btnY后行.BackColor = System.Drawing.SystemColors.Control;
             this.btnY后行.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnY后行.Location = new System.Drawing.Point(122, 343);
-            this.btnY后行.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnY后行.Margin = new System.Windows.Forms.Padding(2);
             this.btnY后行.Name = "btnY后行";
             this.btnY后行.Size = new System.Drawing.Size(35, 31);
             this.btnY后行.TabIndex = 47;
@@ -6115,7 +6115,7 @@
             this.btnY前行.BackColor = System.Drawing.SystemColors.Control;
             this.btnY前行.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnY前行.Location = new System.Drawing.Point(28, 343);
-            this.btnY前行.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnY前行.Margin = new System.Windows.Forms.Padding(2);
             this.btnY前行.Name = "btnY前行";
             this.btnY前行.Size = new System.Drawing.Size(35, 31);
             this.btnY前行.TabIndex = 46;
@@ -6128,7 +6128,7 @@
             // 
             this.btnY回原点.BackColor = System.Drawing.SystemColors.Control;
             this.btnY回原点.Location = new System.Drawing.Point(15, 104);
-            this.btnY回原点.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnY回原点.Margin = new System.Windows.Forms.Padding(2);
             this.btnY回原点.Name = "btnY回原点";
             this.btnY回原点.Size = new System.Drawing.Size(75, 24);
             this.btnY回原点.TabIndex = 45;
@@ -6141,7 +6141,7 @@
             // 
             this.btnY倒NG盘位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnY倒NG盘位置.Location = new System.Drawing.Point(15, 190);
-            this.btnY倒NG盘位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnY倒NG盘位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnY倒NG盘位置.Name = "btnY倒NG盘位置";
             this.btnY倒NG盘位置.Size = new System.Drawing.Size(75, 24);
             this.btnY倒NG盘位置.TabIndex = 43;
@@ -6154,7 +6154,7 @@
             // 
             this.btnYNG盘位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnYNG盘位置.Location = new System.Drawing.Point(15, 162);
-            this.btnYNG盘位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnYNG盘位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnYNG盘位置.Name = "btnYNG盘位置";
             this.btnYNG盘位置.Size = new System.Drawing.Size(75, 24);
             this.btnYNG盘位置.TabIndex = 42;
@@ -6167,7 +6167,7 @@
             // 
             this.btnY倒实盘位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnY倒实盘位置.Location = new System.Drawing.Point(15, 133);
-            this.btnY倒实盘位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnY倒实盘位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnY倒实盘位置.Name = "btnY倒实盘位置";
             this.btnY倒实盘位置.Size = new System.Drawing.Size(75, 24);
             this.btnY倒实盘位置.TabIndex = 41;
@@ -6180,7 +6180,7 @@
             // 
             this.btnY实盘位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnY实盘位置.Location = new System.Drawing.Point(15, 219);
-            this.btnY实盘位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnY实盘位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnY实盘位置.Name = "btnY实盘位置";
             this.btnY实盘位置.Size = new System.Drawing.Size(75, 24);
             this.btnY实盘位置.TabIndex = 40;
@@ -6210,9 +6210,9 @@
             this.groupBox21.Controls.Add(this.btnX实盘位置);
             this.groupBox21.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox21.Location = new System.Drawing.Point(19, 17);
-            this.groupBox21.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox21.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox21.Name = "groupBox21";
-            this.groupBox21.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox21.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox21.Size = new System.Drawing.Size(191, 381);
             this.groupBox21.TabIndex = 14;
             this.groupBox21.TabStop = false;
@@ -6222,7 +6222,7 @@
             // 
             this.btnX吸1倒实盘.BackColor = System.Drawing.SystemColors.Control;
             this.btnX吸1倒实盘.Location = new System.Drawing.Point(104, 105);
-            this.btnX吸1倒实盘.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnX吸1倒实盘.Margin = new System.Windows.Forms.Padding(2);
             this.btnX吸1倒实盘.Name = "btnX吸1倒实盘";
             this.btnX吸1倒实盘.Size = new System.Drawing.Size(75, 24);
             this.btnX吸1倒实盘.TabIndex = 64;
@@ -6235,7 +6235,7 @@
             // 
             this.btnX下一列.BackColor = System.Drawing.SystemColors.Control;
             this.btnX下一列.Location = new System.Drawing.Point(104, 190);
-            this.btnX下一列.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnX下一列.Margin = new System.Windows.Forms.Padding(2);
             this.btnX下一列.Name = "btnX下一列";
             this.btnX下一列.Size = new System.Drawing.Size(75, 24);
             this.btnX下一列.TabIndex = 63;
@@ -6248,7 +6248,7 @@
             // 
             this.btnX上一列.BackColor = System.Drawing.SystemColors.Control;
             this.btnX上一列.Location = new System.Drawing.Point(14, 190);
-            this.btnX上一列.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnX上一列.Margin = new System.Windows.Forms.Padding(2);
             this.btnX上一列.Name = "btnX上一列";
             this.btnX上一列.Size = new System.Drawing.Size(75, 24);
             this.btnX上一列.TabIndex = 62;
@@ -6261,7 +6261,7 @@
             // 
             this.btnX扫码位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnX扫码位置.Location = new System.Drawing.Point(14, 162);
-            this.btnX扫码位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnX扫码位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnX扫码位置.Name = "btnX扫码位置";
             this.btnX扫码位置.Size = new System.Drawing.Size(75, 24);
             this.btnX扫码位置.TabIndex = 61;
@@ -6274,7 +6274,7 @@
             // 
             this.btnX夹爪位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnX夹爪位置.Location = new System.Drawing.Point(104, 162);
-            this.btnX夹爪位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnX夹爪位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnX夹爪位置.Name = "btnX夹爪位置";
             this.btnX夹爪位置.Size = new System.Drawing.Size(75, 24);
             this.btnX夹爪位置.TabIndex = 60;
@@ -6287,7 +6287,7 @@
             // 
             this.btnX视觉实盘位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnX视觉实盘位置.Location = new System.Drawing.Point(104, 133);
-            this.btnX视觉实盘位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnX视觉实盘位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnX视觉实盘位置.Name = "btnX视觉实盘位置";
             this.btnX视觉实盘位置.Size = new System.Drawing.Size(75, 24);
             this.btnX视觉实盘位置.TabIndex = 58;
@@ -6300,7 +6300,7 @@
             // 
             this.btnX吸1实盘.BackColor = System.Drawing.SystemColors.Control;
             this.btnX吸1实盘.Location = new System.Drawing.Point(104, 75);
-            this.btnX吸1实盘.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnX吸1实盘.Margin = new System.Windows.Forms.Padding(2);
             this.btnX吸1实盘.Name = "btnX吸1实盘";
             this.btnX吸1实盘.Size = new System.Drawing.Size(75, 24);
             this.btnX吸1实盘.TabIndex = 52;
@@ -6312,7 +6312,7 @@
             // txtX指定位置
             // 
             this.txtX指定位置.Location = new System.Drawing.Point(84, 45);
-            this.txtX指定位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtX指定位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtX指定位置.Name = "txtX指定位置";
             this.txtX指定位置.Size = new System.Drawing.Size(68, 21);
             this.txtX指定位置.TabIndex = 51;
@@ -6332,7 +6332,7 @@
             // 
             this.txtX当前位置.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtX当前位置.Location = new System.Drawing.Point(84, 23);
-            this.txtX当前位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtX当前位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtX当前位置.Name = "txtX当前位置";
             this.txtX当前位置.Size = new System.Drawing.Size(67, 14);
             this.txtX当前位置.TabIndex = 49;
@@ -6341,7 +6341,7 @@
             // 
             this.btnX指定位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnX指定位置.Location = new System.Drawing.Point(14, 75);
-            this.btnX指定位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnX指定位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnX指定位置.Name = "btnX指定位置";
             this.btnX指定位置.Size = new System.Drawing.Size(75, 24);
             this.btnX指定位置.TabIndex = 44;
@@ -6366,7 +6366,7 @@
             this.btnX停止.BackColor = System.Drawing.SystemColors.Control;
             this.btnX停止.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnX停止.Location = new System.Drawing.Point(66, 343);
-            this.btnX停止.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnX停止.Margin = new System.Windows.Forms.Padding(2);
             this.btnX停止.Name = "btnX停止";
             this.btnX停止.Size = new System.Drawing.Size(50, 31);
             this.btnX停止.TabIndex = 47;
@@ -6380,7 +6380,7 @@
             this.btnX右行.BackColor = System.Drawing.SystemColors.Control;
             this.btnX右行.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnX右行.Location = new System.Drawing.Point(120, 343);
-            this.btnX右行.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnX右行.Margin = new System.Windows.Forms.Padding(2);
             this.btnX右行.Name = "btnX右行";
             this.btnX右行.Size = new System.Drawing.Size(35, 31);
             this.btnX右行.TabIndex = 47;
@@ -6394,7 +6394,7 @@
             this.btnX左行.BackColor = System.Drawing.SystemColors.Control;
             this.btnX左行.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnX左行.Location = new System.Drawing.Point(27, 343);
-            this.btnX左行.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnX左行.Margin = new System.Windows.Forms.Padding(2);
             this.btnX左行.Name = "btnX左行";
             this.btnX左行.Size = new System.Drawing.Size(35, 31);
             this.btnX左行.TabIndex = 46;
@@ -6407,7 +6407,7 @@
             // 
             this.btnX回原点.BackColor = System.Drawing.SystemColors.Control;
             this.btnX回原点.Location = new System.Drawing.Point(14, 104);
-            this.btnX回原点.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnX回原点.Margin = new System.Windows.Forms.Padding(2);
             this.btnX回原点.Name = "btnX回原点";
             this.btnX回原点.Size = new System.Drawing.Size(75, 24);
             this.btnX回原点.TabIndex = 45;
@@ -6420,7 +6420,7 @@
             // 
             this.btnX实盘位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnX实盘位置.Location = new System.Drawing.Point(14, 133);
-            this.btnX实盘位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnX实盘位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnX实盘位置.Name = "btnX实盘位置";
             this.btnX实盘位置.Size = new System.Drawing.Size(75, 24);
             this.btnX实盘位置.TabIndex = 40;
@@ -6448,9 +6448,9 @@
             this.tabPage9.Controls.Add(this.groupBox34);
             this.tabPage9.Controls.Add(this.groupBox33);
             this.tabPage9.Location = new System.Drawing.Point(4, 44);
-            this.tabPage9.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage9.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage9.Name = "tabPage9";
-            this.tabPage9.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage9.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage9.Size = new System.Drawing.Size(1276, 756);
             this.tabPage9.TabIndex = 8;
             this.tabPage9.Text = "手动电机2";
@@ -6469,9 +6469,9 @@
             this.groupBox81.Controls.Add(this.btnRFB4回原点);
             this.groupBox81.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox81.Location = new System.Drawing.Point(607, 509);
-            this.groupBox81.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox81.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox81.Name = "groupBox81";
-            this.groupBox81.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox81.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox81.Size = new System.Drawing.Size(191, 168);
             this.groupBox81.TabIndex = 60;
             this.groupBox81.TabStop = false;
@@ -6481,7 +6481,7 @@
             // 
             this.btnRFBsi120位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnRFBsi120位置.Location = new System.Drawing.Point(14, 81);
-            this.btnRFBsi120位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRFBsi120位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnRFBsi120位置.Name = "btnRFBsi120位置";
             this.btnRFBsi120位置.Size = new System.Drawing.Size(75, 24);
             this.btnRFBsi120位置.TabIndex = 54;
@@ -6495,7 +6495,7 @@
             this.btnRFB4右转.BackColor = System.Drawing.SystemColors.Control;
             this.btnRFB4右转.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRFB4右转.Location = new System.Drawing.Point(121, 127);
-            this.btnRFB4右转.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRFB4右转.Margin = new System.Windows.Forms.Padding(2);
             this.btnRFB4右转.Name = "btnRFB4右转";
             this.btnRFB4右转.Size = new System.Drawing.Size(35, 31);
             this.btnRFB4右转.TabIndex = 49;
@@ -6509,7 +6509,7 @@
             this.btnRFB4左转.BackColor = System.Drawing.SystemColors.Control;
             this.btnRFB4左转.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRFB4左转.Location = new System.Drawing.Point(27, 127);
-            this.btnRFB4左转.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRFB4左转.Margin = new System.Windows.Forms.Padding(2);
             this.btnRFB4左转.Name = "btnRFB4左转";
             this.btnRFB4左转.Size = new System.Drawing.Size(35, 31);
             this.btnRFB4左转.TabIndex = 48;
@@ -6522,7 +6522,7 @@
             // 
             this.btnRFBsi90位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnRFBsi90位置.Location = new System.Drawing.Point(104, 81);
-            this.btnRFBsi90位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRFBsi90位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnRFBsi90位置.Name = "btnRFBsi90位置";
             this.btnRFBsi90位置.Size = new System.Drawing.Size(75, 24);
             this.btnRFBsi90位置.TabIndex = 53;
@@ -6535,7 +6535,7 @@
             // 
             this.btnRFBsi60位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnRFBsi60位置.Location = new System.Drawing.Point(104, 52);
-            this.btnRFBsi60位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRFBsi60位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnRFBsi60位置.Name = "btnRFBsi60位置";
             this.btnRFBsi60位置.Size = new System.Drawing.Size(75, 24);
             this.btnRFBsi60位置.TabIndex = 52;
@@ -6548,7 +6548,7 @@
             // 
             this.txtRFB4当前位置.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtRFB4当前位置.Location = new System.Drawing.Point(84, 27);
-            this.txtRFB4当前位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtRFB4当前位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtRFB4当前位置.Name = "txtRFB4当前位置";
             this.txtRFB4当前位置.Size = new System.Drawing.Size(67, 14);
             this.txtRFB4当前位置.TabIndex = 49;
@@ -6569,7 +6569,7 @@
             this.btnRFB4停止.BackColor = System.Drawing.SystemColors.Control;
             this.btnRFB4停止.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRFB4停止.Location = new System.Drawing.Point(67, 127);
-            this.btnRFB4停止.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRFB4停止.Margin = new System.Windows.Forms.Padding(2);
             this.btnRFB4停止.Name = "btnRFB4停止";
             this.btnRFB4停止.Size = new System.Drawing.Size(50, 31);
             this.btnRFB4停止.TabIndex = 47;
@@ -6582,7 +6582,7 @@
             // 
             this.btnRFB4回原点.BackColor = System.Drawing.SystemColors.Control;
             this.btnRFB4回原点.Location = new System.Drawing.Point(14, 52);
-            this.btnRFB4回原点.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRFB4回原点.Margin = new System.Windows.Forms.Padding(2);
             this.btnRFB4回原点.Name = "btnRFB4回原点";
             this.btnRFB4回原点.Size = new System.Drawing.Size(75, 24);
             this.btnRFB4回原点.TabIndex = 45;
@@ -6604,9 +6604,9 @@
             this.groupBox80.Controls.Add(this.btnRFB3回原点);
             this.groupBox80.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox80.Location = new System.Drawing.Point(410, 509);
-            this.groupBox80.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox80.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox80.Name = "groupBox80";
-            this.groupBox80.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox80.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox80.Size = new System.Drawing.Size(191, 168);
             this.groupBox80.TabIndex = 60;
             this.groupBox80.TabStop = false;
@@ -6616,7 +6616,7 @@
             // 
             this.btnRFBsan120位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnRFBsan120位置.Location = new System.Drawing.Point(14, 81);
-            this.btnRFBsan120位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRFBsan120位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnRFBsan120位置.Name = "btnRFBsan120位置";
             this.btnRFBsan120位置.Size = new System.Drawing.Size(75, 24);
             this.btnRFBsan120位置.TabIndex = 54;
@@ -6630,7 +6630,7 @@
             this.btnRFB3右转.BackColor = System.Drawing.SystemColors.Control;
             this.btnRFB3右转.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRFB3右转.Location = new System.Drawing.Point(121, 127);
-            this.btnRFB3右转.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRFB3右转.Margin = new System.Windows.Forms.Padding(2);
             this.btnRFB3右转.Name = "btnRFB3右转";
             this.btnRFB3右转.Size = new System.Drawing.Size(35, 31);
             this.btnRFB3右转.TabIndex = 49;
@@ -6644,7 +6644,7 @@
             this.btnRFB3左转.BackColor = System.Drawing.SystemColors.Control;
             this.btnRFB3左转.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRFB3左转.Location = new System.Drawing.Point(27, 127);
-            this.btnRFB3左转.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRFB3左转.Margin = new System.Windows.Forms.Padding(2);
             this.btnRFB3左转.Name = "btnRFB3左转";
             this.btnRFB3左转.Size = new System.Drawing.Size(35, 31);
             this.btnRFB3左转.TabIndex = 48;
@@ -6657,7 +6657,7 @@
             // 
             this.btnRFBsan90位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnRFBsan90位置.Location = new System.Drawing.Point(104, 81);
-            this.btnRFBsan90位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRFBsan90位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnRFBsan90位置.Name = "btnRFBsan90位置";
             this.btnRFBsan90位置.Size = new System.Drawing.Size(75, 24);
             this.btnRFBsan90位置.TabIndex = 53;
@@ -6670,7 +6670,7 @@
             // 
             this.btnRFBsan60位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnRFBsan60位置.Location = new System.Drawing.Point(104, 52);
-            this.btnRFBsan60位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRFBsan60位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnRFBsan60位置.Name = "btnRFBsan60位置";
             this.btnRFBsan60位置.Size = new System.Drawing.Size(75, 24);
             this.btnRFBsan60位置.TabIndex = 52;
@@ -6683,7 +6683,7 @@
             // 
             this.txtRFB3当前位置.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtRFB3当前位置.Location = new System.Drawing.Point(84, 27);
-            this.txtRFB3当前位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtRFB3当前位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtRFB3当前位置.Name = "txtRFB3当前位置";
             this.txtRFB3当前位置.Size = new System.Drawing.Size(67, 14);
             this.txtRFB3当前位置.TabIndex = 49;
@@ -6704,7 +6704,7 @@
             this.btnRFB3停止.BackColor = System.Drawing.SystemColors.Control;
             this.btnRFB3停止.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRFB3停止.Location = new System.Drawing.Point(67, 127);
-            this.btnRFB3停止.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRFB3停止.Margin = new System.Windows.Forms.Padding(2);
             this.btnRFB3停止.Name = "btnRFB3停止";
             this.btnRFB3停止.Size = new System.Drawing.Size(50, 31);
             this.btnRFB3停止.TabIndex = 47;
@@ -6717,7 +6717,7 @@
             // 
             this.btnRFB3回原点.BackColor = System.Drawing.SystemColors.Control;
             this.btnRFB3回原点.Location = new System.Drawing.Point(14, 52);
-            this.btnRFB3回原点.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRFB3回原点.Margin = new System.Windows.Forms.Padding(2);
             this.btnRFB3回原点.Name = "btnRFB3回原点";
             this.btnRFB3回原点.Size = new System.Drawing.Size(75, 24);
             this.btnRFB3回原点.TabIndex = 45;
@@ -6739,9 +6739,9 @@
             this.groupBox79.Controls.Add(this.btnRFB2回原点);
             this.groupBox79.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox79.Location = new System.Drawing.Point(214, 509);
-            this.groupBox79.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox79.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox79.Name = "groupBox79";
-            this.groupBox79.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox79.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox79.Size = new System.Drawing.Size(191, 168);
             this.groupBox79.TabIndex = 59;
             this.groupBox79.TabStop = false;
@@ -6751,7 +6751,7 @@
             // 
             this.btnRFBer120位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnRFBer120位置.Location = new System.Drawing.Point(14, 81);
-            this.btnRFBer120位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRFBer120位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnRFBer120位置.Name = "btnRFBer120位置";
             this.btnRFBer120位置.Size = new System.Drawing.Size(75, 24);
             this.btnRFBer120位置.TabIndex = 54;
@@ -6765,7 +6765,7 @@
             this.btnRFB2右转.BackColor = System.Drawing.SystemColors.Control;
             this.btnRFB2右转.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRFB2右转.Location = new System.Drawing.Point(121, 127);
-            this.btnRFB2右转.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRFB2右转.Margin = new System.Windows.Forms.Padding(2);
             this.btnRFB2右转.Name = "btnRFB2右转";
             this.btnRFB2右转.Size = new System.Drawing.Size(35, 31);
             this.btnRFB2右转.TabIndex = 49;
@@ -6779,7 +6779,7 @@
             this.btnRFB2左转.BackColor = System.Drawing.SystemColors.Control;
             this.btnRFB2左转.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRFB2左转.Location = new System.Drawing.Point(27, 127);
-            this.btnRFB2左转.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRFB2左转.Margin = new System.Windows.Forms.Padding(2);
             this.btnRFB2左转.Name = "btnRFB2左转";
             this.btnRFB2左转.Size = new System.Drawing.Size(35, 31);
             this.btnRFB2左转.TabIndex = 48;
@@ -6792,7 +6792,7 @@
             // 
             this.btnRFBer90位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnRFBer90位置.Location = new System.Drawing.Point(104, 81);
-            this.btnRFBer90位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRFBer90位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnRFBer90位置.Name = "btnRFBer90位置";
             this.btnRFBer90位置.Size = new System.Drawing.Size(75, 24);
             this.btnRFBer90位置.TabIndex = 53;
@@ -6805,7 +6805,7 @@
             // 
             this.btnRFBer60位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnRFBer60位置.Location = new System.Drawing.Point(104, 52);
-            this.btnRFBer60位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRFBer60位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnRFBer60位置.Name = "btnRFBer60位置";
             this.btnRFBer60位置.Size = new System.Drawing.Size(75, 24);
             this.btnRFBer60位置.TabIndex = 52;
@@ -6818,7 +6818,7 @@
             // 
             this.txtRFB2当前位置.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtRFB2当前位置.Location = new System.Drawing.Point(84, 27);
-            this.txtRFB2当前位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtRFB2当前位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtRFB2当前位置.Name = "txtRFB2当前位置";
             this.txtRFB2当前位置.Size = new System.Drawing.Size(67, 14);
             this.txtRFB2当前位置.TabIndex = 49;
@@ -6839,7 +6839,7 @@
             this.btnRFB2停止.BackColor = System.Drawing.SystemColors.Control;
             this.btnRFB2停止.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRFB2停止.Location = new System.Drawing.Point(67, 127);
-            this.btnRFB2停止.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRFB2停止.Margin = new System.Windows.Forms.Padding(2);
             this.btnRFB2停止.Name = "btnRFB2停止";
             this.btnRFB2停止.Size = new System.Drawing.Size(50, 31);
             this.btnRFB2停止.TabIndex = 47;
@@ -6852,7 +6852,7 @@
             // 
             this.btnRFB2回原点.BackColor = System.Drawing.SystemColors.Control;
             this.btnRFB2回原点.Location = new System.Drawing.Point(14, 52);
-            this.btnRFB2回原点.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRFB2回原点.Margin = new System.Windows.Forms.Padding(2);
             this.btnRFB2回原点.Name = "btnRFB2回原点";
             this.btnRFB2回原点.Size = new System.Drawing.Size(75, 24);
             this.btnRFB2回原点.TabIndex = 45;
@@ -6874,9 +6874,9 @@
             this.groupBox78.Controls.Add(this.btnRFB1回原点);
             this.groupBox78.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox78.Location = new System.Drawing.Point(19, 509);
-            this.groupBox78.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox78.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox78.Name = "groupBox78";
-            this.groupBox78.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox78.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox78.Size = new System.Drawing.Size(191, 168);
             this.groupBox78.TabIndex = 58;
             this.groupBox78.TabStop = false;
@@ -6886,7 +6886,7 @@
             // 
             this.btnRFByi120位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnRFByi120位置.Location = new System.Drawing.Point(14, 81);
-            this.btnRFByi120位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRFByi120位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnRFByi120位置.Name = "btnRFByi120位置";
             this.btnRFByi120位置.Size = new System.Drawing.Size(75, 24);
             this.btnRFByi120位置.TabIndex = 54;
@@ -6900,7 +6900,7 @@
             this.btnRFB1右转.BackColor = System.Drawing.SystemColors.Control;
             this.btnRFB1右转.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRFB1右转.Location = new System.Drawing.Point(121, 127);
-            this.btnRFB1右转.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRFB1右转.Margin = new System.Windows.Forms.Padding(2);
             this.btnRFB1右转.Name = "btnRFB1右转";
             this.btnRFB1右转.Size = new System.Drawing.Size(35, 31);
             this.btnRFB1右转.TabIndex = 49;
@@ -6914,7 +6914,7 @@
             this.btnRFB1左转.BackColor = System.Drawing.SystemColors.Control;
             this.btnRFB1左转.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRFB1左转.Location = new System.Drawing.Point(27, 127);
-            this.btnRFB1左转.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRFB1左转.Margin = new System.Windows.Forms.Padding(2);
             this.btnRFB1左转.Name = "btnRFB1左转";
             this.btnRFB1左转.Size = new System.Drawing.Size(35, 31);
             this.btnRFB1左转.TabIndex = 48;
@@ -6927,7 +6927,7 @@
             // 
             this.btnRFByi90位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnRFByi90位置.Location = new System.Drawing.Point(104, 81);
-            this.btnRFByi90位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRFByi90位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnRFByi90位置.Name = "btnRFByi90位置";
             this.btnRFByi90位置.Size = new System.Drawing.Size(75, 24);
             this.btnRFByi90位置.TabIndex = 53;
@@ -6940,7 +6940,7 @@
             // 
             this.btnRFByi60位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnRFByi60位置.Location = new System.Drawing.Point(104, 52);
-            this.btnRFByi60位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRFByi60位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnRFByi60位置.Name = "btnRFByi60位置";
             this.btnRFByi60位置.Size = new System.Drawing.Size(75, 24);
             this.btnRFByi60位置.TabIndex = 52;
@@ -6953,7 +6953,7 @@
             // 
             this.txtRFB1当前位置.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtRFB1当前位置.Location = new System.Drawing.Point(84, 27);
-            this.txtRFB1当前位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtRFB1当前位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtRFB1当前位置.Name = "txtRFB1当前位置";
             this.txtRFB1当前位置.Size = new System.Drawing.Size(67, 14);
             this.txtRFB1当前位置.TabIndex = 49;
@@ -6974,7 +6974,7 @@
             this.btnRFB1停止.BackColor = System.Drawing.SystemColors.Control;
             this.btnRFB1停止.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRFB1停止.Location = new System.Drawing.Point(67, 127);
-            this.btnRFB1停止.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRFB1停止.Margin = new System.Windows.Forms.Padding(2);
             this.btnRFB1停止.Name = "btnRFB1停止";
             this.btnRFB1停止.Size = new System.Drawing.Size(50, 31);
             this.btnRFB1停止.TabIndex = 47;
@@ -6987,7 +6987,7 @@
             // 
             this.btnRFB1回原点.BackColor = System.Drawing.SystemColors.Control;
             this.btnRFB1回原点.Location = new System.Drawing.Point(14, 52);
-            this.btnRFB1回原点.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRFB1回原点.Margin = new System.Windows.Forms.Padding(2);
             this.btnRFB1回原点.Name = "btnRFB1回原点";
             this.btnRFB1回原点.Size = new System.Drawing.Size(75, 24);
             this.btnRFB1回原点.TabIndex = 45;
@@ -7008,9 +7008,9 @@
             this.groupBox44.Controls.Add(this.btnJD4回原点);
             this.groupBox44.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox44.Location = new System.Drawing.Point(998, 337);
-            this.groupBox44.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox44.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox44.Name = "groupBox44";
-            this.groupBox44.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox44.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox44.Size = new System.Drawing.Size(191, 340);
             this.groupBox44.TabIndex = 61;
             this.groupBox44.TabStop = false;
@@ -7020,7 +7020,7 @@
             // 
             this.btnJD4打开小位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnJD4打开小位置.Location = new System.Drawing.Point(104, 134);
-            this.btnJD4打开小位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnJD4打开小位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnJD4打开小位置.Name = "btnJD4打开小位置";
             this.btnJD4打开小位置.Size = new System.Drawing.Size(75, 24);
             this.btnJD4打开小位置.TabIndex = 81;
@@ -7044,7 +7044,7 @@
             // 
             this.btnJD4打开.BackColor = System.Drawing.SystemColors.Control;
             this.btnJD4打开.Location = new System.Drawing.Point(104, 104);
-            this.btnJD4打开.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnJD4打开.Margin = new System.Windows.Forms.Padding(2);
             this.btnJD4打开.Name = "btnJD4打开";
             this.btnJD4打开.Size = new System.Drawing.Size(75, 24);
             this.btnJD4打开.TabIndex = 53;
@@ -7056,7 +7056,7 @@
             // txtR4旋转角度
             // 
             this.txtR4旋转角度.Location = new System.Drawing.Point(17, 186);
-            this.txtR4旋转角度.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtR4旋转角度.Margin = new System.Windows.Forms.Padding(2);
             this.txtR4旋转角度.MaxLength = 5;
             this.txtR4旋转角度.Name = "txtR4旋转角度";
             this.txtR4旋转角度.Size = new System.Drawing.Size(49, 21);
@@ -7067,7 +7067,7 @@
             // 
             this.btnJD4相对旋转.BackColor = System.Drawing.SystemColors.Control;
             this.btnJD4相对旋转.Location = new System.Drawing.Point(103, 184);
-            this.btnJD4相对旋转.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnJD4相对旋转.Margin = new System.Windows.Forms.Padding(2);
             this.btnJD4相对旋转.Name = "btnJD4相对旋转";
             this.btnJD4相对旋转.Size = new System.Drawing.Size(75, 24);
             this.btnJD4相对旋转.TabIndex = 81;
@@ -7080,7 +7080,7 @@
             // 
             this.btnJD4加紧.BackColor = System.Drawing.SystemColors.Control;
             this.btnJD4加紧.Location = new System.Drawing.Point(104, 75);
-            this.btnJD4加紧.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnJD4加紧.Margin = new System.Windows.Forms.Padding(2);
             this.btnJD4加紧.Name = "btnJD4加紧";
             this.btnJD4加紧.Size = new System.Drawing.Size(75, 24);
             this.btnJD4加紧.TabIndex = 52;
@@ -7093,7 +7093,7 @@
             // 
             this.btnJD4指定位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnJD4指定位置.Location = new System.Drawing.Point(14, 75);
-            this.btnJD4指定位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnJD4指定位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnJD4指定位置.Name = "btnJD4指定位置";
             this.btnJD4指定位置.Size = new System.Drawing.Size(75, 24);
             this.btnJD4指定位置.TabIndex = 44;
@@ -7104,7 +7104,7 @@
             // 
             this.btnJD4回原点.BackColor = System.Drawing.SystemColors.Control;
             this.btnJD4回原点.Location = new System.Drawing.Point(14, 104);
-            this.btnJD4回原点.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnJD4回原点.Margin = new System.Windows.Forms.Padding(2);
             this.btnJD4回原点.Name = "btnJD4回原点";
             this.btnJD4回原点.Size = new System.Drawing.Size(75, 24);
             this.btnJD4回原点.TabIndex = 45;
@@ -7125,9 +7125,9 @@
             this.groupBox43.Controls.Add(this.btnJD3回原点);
             this.groupBox43.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox43.Location = new System.Drawing.Point(802, 337);
-            this.groupBox43.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox43.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox43.Name = "groupBox43";
-            this.groupBox43.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox43.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox43.Size = new System.Drawing.Size(191, 340);
             this.groupBox43.TabIndex = 61;
             this.groupBox43.TabStop = false;
@@ -7137,7 +7137,7 @@
             // 
             this.btnJD3打开小位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnJD3打开小位置.Location = new System.Drawing.Point(105, 134);
-            this.btnJD3打开小位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnJD3打开小位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnJD3打开小位置.Name = "btnJD3打开小位置";
             this.btnJD3打开小位置.Size = new System.Drawing.Size(75, 24);
             this.btnJD3打开小位置.TabIndex = 78;
@@ -7161,7 +7161,7 @@
             // 
             this.btnJD3打开.BackColor = System.Drawing.SystemColors.Control;
             this.btnJD3打开.Location = new System.Drawing.Point(104, 104);
-            this.btnJD3打开.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnJD3打开.Margin = new System.Windows.Forms.Padding(2);
             this.btnJD3打开.Name = "btnJD3打开";
             this.btnJD3打开.Size = new System.Drawing.Size(75, 24);
             this.btnJD3打开.TabIndex = 53;
@@ -7173,7 +7173,7 @@
             // txtR3旋转角度
             // 
             this.txtR3旋转角度.Location = new System.Drawing.Point(14, 189);
-            this.txtR3旋转角度.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtR3旋转角度.Margin = new System.Windows.Forms.Padding(2);
             this.txtR3旋转角度.MaxLength = 5;
             this.txtR3旋转角度.Name = "txtR3旋转角度";
             this.txtR3旋转角度.Size = new System.Drawing.Size(49, 21);
@@ -7184,7 +7184,7 @@
             // 
             this.btnJD3相对旋转.BackColor = System.Drawing.SystemColors.Control;
             this.btnJD3相对旋转.Location = new System.Drawing.Point(100, 186);
-            this.btnJD3相对旋转.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnJD3相对旋转.Margin = new System.Windows.Forms.Padding(2);
             this.btnJD3相对旋转.Name = "btnJD3相对旋转";
             this.btnJD3相对旋转.Size = new System.Drawing.Size(75, 24);
             this.btnJD3相对旋转.TabIndex = 78;
@@ -7197,7 +7197,7 @@
             // 
             this.btnJD3加紧.BackColor = System.Drawing.SystemColors.Control;
             this.btnJD3加紧.Location = new System.Drawing.Point(104, 75);
-            this.btnJD3加紧.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnJD3加紧.Margin = new System.Windows.Forms.Padding(2);
             this.btnJD3加紧.Name = "btnJD3加紧";
             this.btnJD3加紧.Size = new System.Drawing.Size(75, 24);
             this.btnJD3加紧.TabIndex = 52;
@@ -7210,7 +7210,7 @@
             // 
             this.btnJD3指定位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnJD3指定位置.Location = new System.Drawing.Point(14, 75);
-            this.btnJD3指定位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnJD3指定位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnJD3指定位置.Name = "btnJD3指定位置";
             this.btnJD3指定位置.Size = new System.Drawing.Size(75, 24);
             this.btnJD3指定位置.TabIndex = 44;
@@ -7221,7 +7221,7 @@
             // 
             this.btnJD3回原点.BackColor = System.Drawing.SystemColors.Control;
             this.btnJD3回原点.Location = new System.Drawing.Point(14, 104);
-            this.btnJD3回原点.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnJD3回原点.Margin = new System.Windows.Forms.Padding(2);
             this.btnJD3回原点.Name = "btnJD3回原点";
             this.btnJD3回原点.Size = new System.Drawing.Size(75, 24);
             this.btnJD3回原点.TabIndex = 45;
@@ -7242,9 +7242,9 @@
             this.groupBox42.Controls.Add(this.btnJD2回原点);
             this.groupBox42.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox42.Location = new System.Drawing.Point(998, 17);
-            this.groupBox42.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox42.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox42.Name = "groupBox42";
-            this.groupBox42.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox42.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox42.Size = new System.Drawing.Size(191, 315);
             this.groupBox42.TabIndex = 61;
             this.groupBox42.TabStop = false;
@@ -7254,7 +7254,7 @@
             // 
             this.btnJD2打开小位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnJD2打开小位置.Location = new System.Drawing.Point(104, 133);
-            this.btnJD2打开小位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnJD2打开小位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnJD2打开小位置.Name = "btnJD2打开小位置";
             this.btnJD2打开小位置.Size = new System.Drawing.Size(75, 24);
             this.btnJD2打开小位置.TabIndex = 75;
@@ -7278,7 +7278,7 @@
             // 
             this.btnJD2打开.BackColor = System.Drawing.SystemColors.Control;
             this.btnJD2打开.Location = new System.Drawing.Point(104, 104);
-            this.btnJD2打开.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnJD2打开.Margin = new System.Windows.Forms.Padding(2);
             this.btnJD2打开.Name = "btnJD2打开";
             this.btnJD2打开.Size = new System.Drawing.Size(75, 24);
             this.btnJD2打开.TabIndex = 53;
@@ -7290,7 +7290,7 @@
             // txtR2旋转角度
             // 
             this.txtR2旋转角度.Location = new System.Drawing.Point(19, 208);
-            this.txtR2旋转角度.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtR2旋转角度.Margin = new System.Windows.Forms.Padding(2);
             this.txtR2旋转角度.MaxLength = 5;
             this.txtR2旋转角度.Name = "txtR2旋转角度";
             this.txtR2旋转角度.Size = new System.Drawing.Size(49, 21);
@@ -7301,7 +7301,7 @@
             // 
             this.btnJD2加紧.BackColor = System.Drawing.SystemColors.Control;
             this.btnJD2加紧.Location = new System.Drawing.Point(104, 75);
-            this.btnJD2加紧.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnJD2加紧.Margin = new System.Windows.Forms.Padding(2);
             this.btnJD2加紧.Name = "btnJD2加紧";
             this.btnJD2加紧.Size = new System.Drawing.Size(75, 24);
             this.btnJD2加紧.TabIndex = 52;
@@ -7314,7 +7314,7 @@
             // 
             this.btnJD2相对旋转.BackColor = System.Drawing.SystemColors.Control;
             this.btnJD2相对旋转.Location = new System.Drawing.Point(104, 206);
-            this.btnJD2相对旋转.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnJD2相对旋转.Margin = new System.Windows.Forms.Padding(2);
             this.btnJD2相对旋转.Name = "btnJD2相对旋转";
             this.btnJD2相对旋转.Size = new System.Drawing.Size(75, 24);
             this.btnJD2相对旋转.TabIndex = 75;
@@ -7327,7 +7327,7 @@
             // 
             this.btnJD2指定位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnJD2指定位置.Location = new System.Drawing.Point(14, 75);
-            this.btnJD2指定位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnJD2指定位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnJD2指定位置.Name = "btnJD2指定位置";
             this.btnJD2指定位置.Size = new System.Drawing.Size(75, 24);
             this.btnJD2指定位置.TabIndex = 44;
@@ -7338,7 +7338,7 @@
             // 
             this.btnJD2回原点.BackColor = System.Drawing.SystemColors.Control;
             this.btnJD2回原点.Location = new System.Drawing.Point(14, 104);
-            this.btnJD2回原点.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnJD2回原点.Margin = new System.Windows.Forms.Padding(2);
             this.btnJD2回原点.Name = "btnJD2回原点";
             this.btnJD2回原点.Size = new System.Drawing.Size(75, 24);
             this.btnJD2回原点.TabIndex = 45;
@@ -7361,9 +7361,9 @@
             this.groupBox41.Controls.Add(this.btnJD1回原点);
             this.groupBox41.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox41.Location = new System.Drawing.Point(802, 17);
-            this.groupBox41.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox41.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox41.Name = "groupBox41";
-            this.groupBox41.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox41.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox41.Size = new System.Drawing.Size(191, 315);
             this.groupBox41.TabIndex = 60;
             this.groupBox41.TabStop = false;
@@ -7396,7 +7396,7 @@
             // txtR1旋转角度
             // 
             this.txtR1旋转角度.Location = new System.Drawing.Point(19, 210);
-            this.txtR1旋转角度.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtR1旋转角度.Margin = new System.Windows.Forms.Padding(2);
             this.txtR1旋转角度.MaxLength = 5;
             this.txtR1旋转角度.Name = "txtR1旋转角度";
             this.txtR1旋转角度.Size = new System.Drawing.Size(49, 21);
@@ -7407,7 +7407,7 @@
             // 
             this.btnJD1相对旋转.BackColor = System.Drawing.SystemColors.Control;
             this.btnJD1相对旋转.Location = new System.Drawing.Point(104, 207);
-            this.btnJD1相对旋转.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnJD1相对旋转.Margin = new System.Windows.Forms.Padding(2);
             this.btnJD1相对旋转.Name = "btnJD1相对旋转";
             this.btnJD1相对旋转.Size = new System.Drawing.Size(75, 24);
             this.btnJD1相对旋转.TabIndex = 56;
@@ -7420,7 +7420,7 @@
             // 
             this.btnJD1打开小位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnJD1打开小位置.Location = new System.Drawing.Point(104, 133);
-            this.btnJD1打开小位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnJD1打开小位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnJD1打开小位置.Name = "btnJD1打开小位置";
             this.btnJD1打开小位置.Size = new System.Drawing.Size(75, 24);
             this.btnJD1打开小位置.TabIndex = 55;
@@ -7433,7 +7433,7 @@
             // 
             this.btnJD清除状态.BackColor = System.Drawing.SystemColors.Control;
             this.btnJD清除状态.Location = new System.Drawing.Point(14, 133);
-            this.btnJD清除状态.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnJD清除状态.Margin = new System.Windows.Forms.Padding(2);
             this.btnJD清除状态.Name = "btnJD清除状态";
             this.btnJD清除状态.Size = new System.Drawing.Size(75, 24);
             this.btnJD清除状态.TabIndex = 54;
@@ -7446,7 +7446,7 @@
             // 
             this.btnJD1打开.BackColor = System.Drawing.SystemColors.Control;
             this.btnJD1打开.Location = new System.Drawing.Point(104, 104);
-            this.btnJD1打开.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnJD1打开.Margin = new System.Windows.Forms.Padding(2);
             this.btnJD1打开.Name = "btnJD1打开";
             this.btnJD1打开.Size = new System.Drawing.Size(75, 24);
             this.btnJD1打开.TabIndex = 53;
@@ -7459,7 +7459,7 @@
             // 
             this.btnJD1加紧.BackColor = System.Drawing.SystemColors.Control;
             this.btnJD1加紧.Location = new System.Drawing.Point(104, 75);
-            this.btnJD1加紧.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnJD1加紧.Margin = new System.Windows.Forms.Padding(2);
             this.btnJD1加紧.Name = "btnJD1加紧";
             this.btnJD1加紧.Size = new System.Drawing.Size(75, 24);
             this.btnJD1加紧.TabIndex = 52;
@@ -7472,7 +7472,7 @@
             // 
             this.btnJD1指定位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnJD1指定位置.Location = new System.Drawing.Point(14, 75);
-            this.btnJD1指定位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnJD1指定位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnJD1指定位置.Name = "btnJD1指定位置";
             this.btnJD1指定位置.Size = new System.Drawing.Size(75, 24);
             this.btnJD1指定位置.TabIndex = 44;
@@ -7483,7 +7483,7 @@
             // 
             this.btnJD1回原点.BackColor = System.Drawing.SystemColors.Control;
             this.btnJD1回原点.Location = new System.Drawing.Point(14, 104);
-            this.btnJD1回原点.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnJD1回原点.Margin = new System.Windows.Forms.Padding(2);
             this.btnJD1回原点.Name = "btnJD1回原点";
             this.btnJD1回原点.Size = new System.Drawing.Size(75, 24);
             this.btnJD1回原点.TabIndex = 45;
@@ -7504,9 +7504,9 @@
             this.groupBox40.Controls.Add(this.btnBk4回原点);
             this.groupBox40.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox40.Location = new System.Drawing.Point(606, 337);
-            this.groupBox40.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox40.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox40.Name = "groupBox40";
-            this.groupBox40.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox40.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox40.Size = new System.Drawing.Size(191, 168);
             this.groupBox40.TabIndex = 60;
             this.groupBox40.TabStop = false;
@@ -7517,7 +7517,7 @@
             this.btnBk4下行.BackColor = System.Drawing.SystemColors.Control;
             this.btnBk4下行.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBk4下行.Location = new System.Drawing.Point(121, 127);
-            this.btnBk4下行.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBk4下行.Margin = new System.Windows.Forms.Padding(2);
             this.btnBk4下行.Name = "btnBk4下行";
             this.btnBk4下行.Size = new System.Drawing.Size(35, 31);
             this.btnBk4下行.TabIndex = 49;
@@ -7531,7 +7531,7 @@
             this.btnBk4上行.BackColor = System.Drawing.SystemColors.Control;
             this.btnBk4上行.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBk4上行.Location = new System.Drawing.Point(27, 127);
-            this.btnBk4上行.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBk4上行.Margin = new System.Windows.Forms.Padding(2);
             this.btnBk4上行.Name = "btnBk4上行";
             this.btnBk4上行.Size = new System.Drawing.Size(35, 31);
             this.btnBk4上行.TabIndex = 48;
@@ -7544,7 +7544,7 @@
             // 
             this.btnBksi35位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnBksi35位置.Location = new System.Drawing.Point(104, 81);
-            this.btnBksi35位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBksi35位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnBksi35位置.Name = "btnBksi35位置";
             this.btnBksi35位置.Size = new System.Drawing.Size(75, 24);
             this.btnBksi35位置.TabIndex = 53;
@@ -7557,7 +7557,7 @@
             // 
             this.btnBksi20位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnBksi20位置.Location = new System.Drawing.Point(104, 52);
-            this.btnBksi20位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBksi20位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnBksi20位置.Name = "btnBksi20位置";
             this.btnBksi20位置.Size = new System.Drawing.Size(75, 24);
             this.btnBksi20位置.TabIndex = 52;
@@ -7570,7 +7570,7 @@
             // 
             this.txtBk4当前位置.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBk4当前位置.Location = new System.Drawing.Point(84, 26);
-            this.txtBk4当前位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBk4当前位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtBk4当前位置.Name = "txtBk4当前位置";
             this.txtBk4当前位置.Size = new System.Drawing.Size(67, 14);
             this.txtBk4当前位置.TabIndex = 49;
@@ -7591,7 +7591,7 @@
             this.btnBk4停止.BackColor = System.Drawing.SystemColors.Control;
             this.btnBk4停止.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBk4停止.Location = new System.Drawing.Point(67, 127);
-            this.btnBk4停止.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBk4停止.Margin = new System.Windows.Forms.Padding(2);
             this.btnBk4停止.Name = "btnBk4停止";
             this.btnBk4停止.Size = new System.Drawing.Size(50, 31);
             this.btnBk4停止.TabIndex = 47;
@@ -7604,7 +7604,7 @@
             // 
             this.btnBk4回原点.BackColor = System.Drawing.SystemColors.Control;
             this.btnBk4回原点.Location = new System.Drawing.Point(14, 52);
-            this.btnBk4回原点.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBk4回原点.Margin = new System.Windows.Forms.Padding(2);
             this.btnBk4回原点.Name = "btnBk4回原点";
             this.btnBk4回原点.Size = new System.Drawing.Size(75, 24);
             this.btnBk4回原点.TabIndex = 45;
@@ -7625,9 +7625,9 @@
             this.groupBox39.Controls.Add(this.btnBk3回原点);
             this.groupBox39.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox39.Location = new System.Drawing.Point(410, 337);
-            this.groupBox39.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox39.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox39.Name = "groupBox39";
-            this.groupBox39.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox39.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox39.Size = new System.Drawing.Size(191, 168);
             this.groupBox39.TabIndex = 59;
             this.groupBox39.TabStop = false;
@@ -7638,7 +7638,7 @@
             this.btnBk3下行.BackColor = System.Drawing.SystemColors.Control;
             this.btnBk3下行.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBk3下行.Location = new System.Drawing.Point(121, 127);
-            this.btnBk3下行.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBk3下行.Margin = new System.Windows.Forms.Padding(2);
             this.btnBk3下行.Name = "btnBk3下行";
             this.btnBk3下行.Size = new System.Drawing.Size(35, 31);
             this.btnBk3下行.TabIndex = 49;
@@ -7652,7 +7652,7 @@
             this.btnBk3上行.BackColor = System.Drawing.SystemColors.Control;
             this.btnBk3上行.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBk3上行.Location = new System.Drawing.Point(27, 127);
-            this.btnBk3上行.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBk3上行.Margin = new System.Windows.Forms.Padding(2);
             this.btnBk3上行.Name = "btnBk3上行";
             this.btnBk3上行.Size = new System.Drawing.Size(35, 31);
             this.btnBk3上行.TabIndex = 48;
@@ -7665,7 +7665,7 @@
             // 
             this.btnBksan35位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnBksan35位置.Location = new System.Drawing.Point(104, 81);
-            this.btnBksan35位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBksan35位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnBksan35位置.Name = "btnBksan35位置";
             this.btnBksan35位置.Size = new System.Drawing.Size(75, 24);
             this.btnBksan35位置.TabIndex = 53;
@@ -7678,7 +7678,7 @@
             // 
             this.btnBksan20位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnBksan20位置.Location = new System.Drawing.Point(104, 52);
-            this.btnBksan20位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBksan20位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnBksan20位置.Name = "btnBksan20位置";
             this.btnBksan20位置.Size = new System.Drawing.Size(75, 24);
             this.btnBksan20位置.TabIndex = 52;
@@ -7691,7 +7691,7 @@
             // 
             this.txtBk3当前位置.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBk3当前位置.Location = new System.Drawing.Point(84, 26);
-            this.txtBk3当前位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBk3当前位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtBk3当前位置.Name = "txtBk3当前位置";
             this.txtBk3当前位置.Size = new System.Drawing.Size(67, 14);
             this.txtBk3当前位置.TabIndex = 49;
@@ -7712,7 +7712,7 @@
             this.btnBk3停止.BackColor = System.Drawing.SystemColors.Control;
             this.btnBk3停止.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBk3停止.Location = new System.Drawing.Point(67, 127);
-            this.btnBk3停止.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBk3停止.Margin = new System.Windows.Forms.Padding(2);
             this.btnBk3停止.Name = "btnBk3停止";
             this.btnBk3停止.Size = new System.Drawing.Size(50, 31);
             this.btnBk3停止.TabIndex = 47;
@@ -7725,7 +7725,7 @@
             // 
             this.btnBk3回原点.BackColor = System.Drawing.SystemColors.Control;
             this.btnBk3回原点.Location = new System.Drawing.Point(14, 52);
-            this.btnBk3回原点.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBk3回原点.Margin = new System.Windows.Forms.Padding(2);
             this.btnBk3回原点.Name = "btnBk3回原点";
             this.btnBk3回原点.Size = new System.Drawing.Size(75, 24);
             this.btnBk3回原点.TabIndex = 45;
@@ -7746,9 +7746,9 @@
             this.groupBox38.Controls.Add(this.btnBk2回原点);
             this.groupBox38.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox38.Location = new System.Drawing.Point(214, 337);
-            this.groupBox38.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox38.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox38.Name = "groupBox38";
-            this.groupBox38.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox38.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox38.Size = new System.Drawing.Size(191, 168);
             this.groupBox38.TabIndex = 58;
             this.groupBox38.TabStop = false;
@@ -7759,7 +7759,7 @@
             this.btnBk2下行.BackColor = System.Drawing.SystemColors.Control;
             this.btnBk2下行.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBk2下行.Location = new System.Drawing.Point(121, 127);
-            this.btnBk2下行.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBk2下行.Margin = new System.Windows.Forms.Padding(2);
             this.btnBk2下行.Name = "btnBk2下行";
             this.btnBk2下行.Size = new System.Drawing.Size(35, 31);
             this.btnBk2下行.TabIndex = 49;
@@ -7773,7 +7773,7 @@
             this.btnBk2上行.BackColor = System.Drawing.SystemColors.Control;
             this.btnBk2上行.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBk2上行.Location = new System.Drawing.Point(27, 127);
-            this.btnBk2上行.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBk2上行.Margin = new System.Windows.Forms.Padding(2);
             this.btnBk2上行.Name = "btnBk2上行";
             this.btnBk2上行.Size = new System.Drawing.Size(35, 31);
             this.btnBk2上行.TabIndex = 48;
@@ -7786,7 +7786,7 @@
             // 
             this.btnBker35位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnBker35位置.Location = new System.Drawing.Point(104, 81);
-            this.btnBker35位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBker35位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnBker35位置.Name = "btnBker35位置";
             this.btnBker35位置.Size = new System.Drawing.Size(75, 24);
             this.btnBker35位置.TabIndex = 53;
@@ -7799,7 +7799,7 @@
             // 
             this.btnBker20位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnBker20位置.Location = new System.Drawing.Point(104, 52);
-            this.btnBker20位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBker20位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnBker20位置.Name = "btnBker20位置";
             this.btnBker20位置.Size = new System.Drawing.Size(75, 24);
             this.btnBker20位置.TabIndex = 52;
@@ -7812,7 +7812,7 @@
             // 
             this.txtBk2当前位置.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBk2当前位置.Location = new System.Drawing.Point(84, 26);
-            this.txtBk2当前位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBk2当前位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtBk2当前位置.Name = "txtBk2当前位置";
             this.txtBk2当前位置.Size = new System.Drawing.Size(67, 14);
             this.txtBk2当前位置.TabIndex = 49;
@@ -7833,7 +7833,7 @@
             this.btnBk2停止.BackColor = System.Drawing.SystemColors.Control;
             this.btnBk2停止.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBk2停止.Location = new System.Drawing.Point(67, 127);
-            this.btnBk2停止.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBk2停止.Margin = new System.Windows.Forms.Padding(2);
             this.btnBk2停止.Name = "btnBk2停止";
             this.btnBk2停止.Size = new System.Drawing.Size(50, 31);
             this.btnBk2停止.TabIndex = 47;
@@ -7846,7 +7846,7 @@
             // 
             this.btnBk2回原点.BackColor = System.Drawing.SystemColors.Control;
             this.btnBk2回原点.Location = new System.Drawing.Point(14, 52);
-            this.btnBk2回原点.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBk2回原点.Margin = new System.Windows.Forms.Padding(2);
             this.btnBk2回原点.Name = "btnBk2回原点";
             this.btnBk2回原点.Size = new System.Drawing.Size(75, 24);
             this.btnBk2回原点.TabIndex = 45;
@@ -7868,9 +7868,9 @@
             this.groupBox37.Controls.Add(this.btnBk1回原点);
             this.groupBox37.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox37.Location = new System.Drawing.Point(19, 337);
-            this.groupBox37.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox37.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox37.Name = "groupBox37";
-            this.groupBox37.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox37.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox37.Size = new System.Drawing.Size(191, 168);
             this.groupBox37.TabIndex = 57;
             this.groupBox37.TabStop = false;
@@ -7880,7 +7880,7 @@
             // 
             this.btn黑体一键上升.BackColor = System.Drawing.SystemColors.Control;
             this.btn黑体一键上升.Location = new System.Drawing.Point(14, 81);
-            this.btn黑体一键上升.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn黑体一键上升.Margin = new System.Windows.Forms.Padding(2);
             this.btn黑体一键上升.Name = "btn黑体一键上升";
             this.btn黑体一键上升.Size = new System.Drawing.Size(75, 24);
             this.btn黑体一键上升.TabIndex = 54;
@@ -7894,7 +7894,7 @@
             this.btnBk1下行.BackColor = System.Drawing.SystemColors.Control;
             this.btnBk1下行.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBk1下行.Location = new System.Drawing.Point(121, 127);
-            this.btnBk1下行.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBk1下行.Margin = new System.Windows.Forms.Padding(2);
             this.btnBk1下行.Name = "btnBk1下行";
             this.btnBk1下行.Size = new System.Drawing.Size(35, 31);
             this.btnBk1下行.TabIndex = 49;
@@ -7908,7 +7908,7 @@
             this.btnBk1上行.BackColor = System.Drawing.SystemColors.Control;
             this.btnBk1上行.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBk1上行.Location = new System.Drawing.Point(27, 127);
-            this.btnBk1上行.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBk1上行.Margin = new System.Windows.Forms.Padding(2);
             this.btnBk1上行.Name = "btnBk1上行";
             this.btnBk1上行.Size = new System.Drawing.Size(35, 31);
             this.btnBk1上行.TabIndex = 48;
@@ -7921,7 +7921,7 @@
             // 
             this.btnBkyi35位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnBkyi35位置.Location = new System.Drawing.Point(104, 81);
-            this.btnBkyi35位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBkyi35位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnBkyi35位置.Name = "btnBkyi35位置";
             this.btnBkyi35位置.Size = new System.Drawing.Size(75, 24);
             this.btnBkyi35位置.TabIndex = 53;
@@ -7934,7 +7934,7 @@
             // 
             this.btnBkyi20位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnBkyi20位置.Location = new System.Drawing.Point(104, 52);
-            this.btnBkyi20位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBkyi20位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnBkyi20位置.Name = "btnBkyi20位置";
             this.btnBkyi20位置.Size = new System.Drawing.Size(75, 24);
             this.btnBkyi20位置.TabIndex = 52;
@@ -7947,7 +7947,7 @@
             // 
             this.txtBk1当前位置.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBk1当前位置.Location = new System.Drawing.Point(84, 26);
-            this.txtBk1当前位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBk1当前位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtBk1当前位置.Name = "txtBk1当前位置";
             this.txtBk1当前位置.Size = new System.Drawing.Size(67, 14);
             this.txtBk1当前位置.TabIndex = 49;
@@ -7968,7 +7968,7 @@
             this.btnBk1停止.BackColor = System.Drawing.SystemColors.Control;
             this.btnBk1停止.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBk1停止.Location = new System.Drawing.Point(67, 127);
-            this.btnBk1停止.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBk1停止.Margin = new System.Windows.Forms.Padding(2);
             this.btnBk1停止.Name = "btnBk1停止";
             this.btnBk1停止.Size = new System.Drawing.Size(50, 31);
             this.btnBk1停止.TabIndex = 47;
@@ -7981,7 +7981,7 @@
             // 
             this.btnBk1回原点.BackColor = System.Drawing.SystemColors.Control;
             this.btnBk1回原点.Location = new System.Drawing.Point(14, 52);
-            this.btnBk1回原点.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBk1回原点.Margin = new System.Windows.Forms.Padding(2);
             this.btnBk1回原点.Name = "btnBk1回原点";
             this.btnBk1回原点.Size = new System.Drawing.Size(75, 24);
             this.btnBk1回原点.TabIndex = 45;
@@ -8005,9 +8005,9 @@
             this.groupBox36.Controls.Add(this.btnSk4回原点);
             this.groupBox36.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox36.Location = new System.Drawing.Point(606, 17);
-            this.groupBox36.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox36.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox36.Name = "groupBox36";
-            this.groupBox36.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox36.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox36.Size = new System.Drawing.Size(191, 315);
             this.groupBox36.TabIndex = 59;
             this.groupBox36.TabStop = false;
@@ -8017,7 +8017,7 @@
             // 
             this.btnSk4测试3位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnSk4测试3位置.Location = new System.Drawing.Point(104, 190);
-            this.btnSk4测试3位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSk4测试3位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnSk4测试3位置.Name = "btnSk4测试3位置";
             this.btnSk4测试3位置.Size = new System.Drawing.Size(75, 24);
             this.btnSk4测试3位置.TabIndex = 56;
@@ -8031,7 +8031,7 @@
             this.btnSk4后行.BackColor = System.Drawing.SystemColors.Control;
             this.btnSk4后行.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSk4后行.Location = new System.Drawing.Point(121, 272);
-            this.btnSk4后行.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSk4后行.Margin = new System.Windows.Forms.Padding(2);
             this.btnSk4后行.Name = "btnSk4后行";
             this.btnSk4后行.Size = new System.Drawing.Size(35, 31);
             this.btnSk4后行.TabIndex = 49;
@@ -8044,7 +8044,7 @@
             // 
             this.btnSk4测试2位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnSk4测试2位置.Location = new System.Drawing.Point(104, 162);
-            this.btnSk4测试2位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSk4测试2位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnSk4测试2位置.Name = "btnSk4测试2位置";
             this.btnSk4测试2位置.Size = new System.Drawing.Size(75, 24);
             this.btnSk4测试2位置.TabIndex = 55;
@@ -8058,7 +8058,7 @@
             this.btnSk4前行.BackColor = System.Drawing.SystemColors.Control;
             this.btnSk4前行.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSk4前行.Location = new System.Drawing.Point(27, 272);
-            this.btnSk4前行.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSk4前行.Margin = new System.Windows.Forms.Padding(2);
             this.btnSk4前行.Name = "btnSk4前行";
             this.btnSk4前行.Size = new System.Drawing.Size(35, 31);
             this.btnSk4前行.TabIndex = 48;
@@ -8071,7 +8071,7 @@
             // 
             this.btnSk4测试1位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnSk4测试1位置.Location = new System.Drawing.Point(104, 133);
-            this.btnSk4测试1位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSk4测试1位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnSk4测试1位置.Name = "btnSk4测试1位置";
             this.btnSk4测试1位置.Size = new System.Drawing.Size(75, 24);
             this.btnSk4测试1位置.TabIndex = 54;
@@ -8084,7 +8084,7 @@
             // 
             this.btnSk4翻转位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnSk4翻转位置.Location = new System.Drawing.Point(104, 104);
-            this.btnSk4翻转位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSk4翻转位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnSk4翻转位置.Name = "btnSk4翻转位置";
             this.btnSk4翻转位置.Size = new System.Drawing.Size(75, 24);
             this.btnSk4翻转位置.TabIndex = 53;
@@ -8097,7 +8097,7 @@
             // 
             this.btnSk4黑体位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnSk4黑体位置.Location = new System.Drawing.Point(104, 75);
-            this.btnSk4黑体位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSk4黑体位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnSk4黑体位置.Name = "btnSk4黑体位置";
             this.btnSk4黑体位置.Size = new System.Drawing.Size(75, 24);
             this.btnSk4黑体位置.TabIndex = 52;
@@ -8110,7 +8110,7 @@
             // 
             this.txtSk4当前位置.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSk4当前位置.Location = new System.Drawing.Point(84, 26);
-            this.txtSk4当前位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSk4当前位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtSk4当前位置.Name = "txtSk4当前位置";
             this.txtSk4当前位置.Size = new System.Drawing.Size(67, 14);
             this.txtSk4当前位置.TabIndex = 49;
@@ -8131,7 +8131,7 @@
             this.btnSk4停止.BackColor = System.Drawing.SystemColors.Control;
             this.btnSk4停止.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSk4停止.Location = new System.Drawing.Point(67, 272);
-            this.btnSk4停止.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSk4停止.Margin = new System.Windows.Forms.Padding(2);
             this.btnSk4停止.Name = "btnSk4停止";
             this.btnSk4停止.Size = new System.Drawing.Size(50, 31);
             this.btnSk4停止.TabIndex = 47;
@@ -8144,7 +8144,7 @@
             // 
             this.btnSk4回原点.BackColor = System.Drawing.SystemColors.Control;
             this.btnSk4回原点.Location = new System.Drawing.Point(14, 75);
-            this.btnSk4回原点.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSk4回原点.Margin = new System.Windows.Forms.Padding(2);
             this.btnSk4回原点.Name = "btnSk4回原点";
             this.btnSk4回原点.Size = new System.Drawing.Size(75, 24);
             this.btnSk4回原点.TabIndex = 45;
@@ -8168,9 +8168,9 @@
             this.groupBox35.Controls.Add(this.btnSk3回原点);
             this.groupBox35.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox35.Location = new System.Drawing.Point(410, 17);
-            this.groupBox35.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox35.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox35.Name = "groupBox35";
-            this.groupBox35.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox35.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox35.Size = new System.Drawing.Size(191, 315);
             this.groupBox35.TabIndex = 58;
             this.groupBox35.TabStop = false;
@@ -8180,7 +8180,7 @@
             // 
             this.btnSk3测试3位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnSk3测试3位置.Location = new System.Drawing.Point(104, 190);
-            this.btnSk3测试3位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSk3测试3位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnSk3测试3位置.Name = "btnSk3测试3位置";
             this.btnSk3测试3位置.Size = new System.Drawing.Size(75, 24);
             this.btnSk3测试3位置.TabIndex = 56;
@@ -8194,7 +8194,7 @@
             this.btnSk3后行.BackColor = System.Drawing.SystemColors.Control;
             this.btnSk3后行.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSk3后行.Location = new System.Drawing.Point(121, 272);
-            this.btnSk3后行.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSk3后行.Margin = new System.Windows.Forms.Padding(2);
             this.btnSk3后行.Name = "btnSk3后行";
             this.btnSk3后行.Size = new System.Drawing.Size(35, 31);
             this.btnSk3后行.TabIndex = 49;
@@ -8207,7 +8207,7 @@
             // 
             this.btnSk3测试2位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnSk3测试2位置.Location = new System.Drawing.Point(104, 162);
-            this.btnSk3测试2位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSk3测试2位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnSk3测试2位置.Name = "btnSk3测试2位置";
             this.btnSk3测试2位置.Size = new System.Drawing.Size(75, 24);
             this.btnSk3测试2位置.TabIndex = 55;
@@ -8221,7 +8221,7 @@
             this.btnSk3前行.BackColor = System.Drawing.SystemColors.Control;
             this.btnSk3前行.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSk3前行.Location = new System.Drawing.Point(27, 272);
-            this.btnSk3前行.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSk3前行.Margin = new System.Windows.Forms.Padding(2);
             this.btnSk3前行.Name = "btnSk3前行";
             this.btnSk3前行.Size = new System.Drawing.Size(35, 31);
             this.btnSk3前行.TabIndex = 48;
@@ -8234,7 +8234,7 @@
             // 
             this.btnSk3测试1位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnSk3测试1位置.Location = new System.Drawing.Point(104, 133);
-            this.btnSk3测试1位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSk3测试1位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnSk3测试1位置.Name = "btnSk3测试1位置";
             this.btnSk3测试1位置.Size = new System.Drawing.Size(75, 24);
             this.btnSk3测试1位置.TabIndex = 54;
@@ -8247,7 +8247,7 @@
             // 
             this.btnSk3翻转位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnSk3翻转位置.Location = new System.Drawing.Point(104, 104);
-            this.btnSk3翻转位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSk3翻转位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnSk3翻转位置.Name = "btnSk3翻转位置";
             this.btnSk3翻转位置.Size = new System.Drawing.Size(75, 24);
             this.btnSk3翻转位置.TabIndex = 53;
@@ -8260,7 +8260,7 @@
             // 
             this.btnSk3黑体位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnSk3黑体位置.Location = new System.Drawing.Point(104, 75);
-            this.btnSk3黑体位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSk3黑体位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnSk3黑体位置.Name = "btnSk3黑体位置";
             this.btnSk3黑体位置.Size = new System.Drawing.Size(75, 24);
             this.btnSk3黑体位置.TabIndex = 52;
@@ -8273,7 +8273,7 @@
             // 
             this.txtSk3当前位置.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSk3当前位置.Location = new System.Drawing.Point(84, 26);
-            this.txtSk3当前位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSk3当前位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtSk3当前位置.Name = "txtSk3当前位置";
             this.txtSk3当前位置.Size = new System.Drawing.Size(67, 14);
             this.txtSk3当前位置.TabIndex = 49;
@@ -8294,7 +8294,7 @@
             this.btnSk3停止.BackColor = System.Drawing.SystemColors.Control;
             this.btnSk3停止.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSk3停止.Location = new System.Drawing.Point(67, 272);
-            this.btnSk3停止.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSk3停止.Margin = new System.Windows.Forms.Padding(2);
             this.btnSk3停止.Name = "btnSk3停止";
             this.btnSk3停止.Size = new System.Drawing.Size(50, 31);
             this.btnSk3停止.TabIndex = 47;
@@ -8307,7 +8307,7 @@
             // 
             this.btnSk3回原点.BackColor = System.Drawing.SystemColors.Control;
             this.btnSk3回原点.Location = new System.Drawing.Point(14, 75);
-            this.btnSk3回原点.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSk3回原点.Margin = new System.Windows.Forms.Padding(2);
             this.btnSk3回原点.Name = "btnSk3回原点";
             this.btnSk3回原点.Size = new System.Drawing.Size(75, 24);
             this.btnSk3回原点.TabIndex = 45;
@@ -8331,9 +8331,9 @@
             this.groupBox34.Controls.Add(this.btnSk2回原点);
             this.groupBox34.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox34.Location = new System.Drawing.Point(214, 17);
-            this.groupBox34.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox34.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox34.Name = "groupBox34";
-            this.groupBox34.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox34.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox34.Size = new System.Drawing.Size(191, 315);
             this.groupBox34.TabIndex = 57;
             this.groupBox34.TabStop = false;
@@ -8343,7 +8343,7 @@
             // 
             this.btnSk2测试3位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnSk2测试3位置.Location = new System.Drawing.Point(104, 190);
-            this.btnSk2测试3位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSk2测试3位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnSk2测试3位置.Name = "btnSk2测试3位置";
             this.btnSk2测试3位置.Size = new System.Drawing.Size(75, 24);
             this.btnSk2测试3位置.TabIndex = 56;
@@ -8357,7 +8357,7 @@
             this.btnSk2后行.BackColor = System.Drawing.SystemColors.Control;
             this.btnSk2后行.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSk2后行.Location = new System.Drawing.Point(121, 272);
-            this.btnSk2后行.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSk2后行.Margin = new System.Windows.Forms.Padding(2);
             this.btnSk2后行.Name = "btnSk2后行";
             this.btnSk2后行.Size = new System.Drawing.Size(35, 31);
             this.btnSk2后行.TabIndex = 49;
@@ -8370,7 +8370,7 @@
             // 
             this.btnSk2测试2位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnSk2测试2位置.Location = new System.Drawing.Point(104, 162);
-            this.btnSk2测试2位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSk2测试2位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnSk2测试2位置.Name = "btnSk2测试2位置";
             this.btnSk2测试2位置.Size = new System.Drawing.Size(75, 24);
             this.btnSk2测试2位置.TabIndex = 55;
@@ -8384,7 +8384,7 @@
             this.btnSk2前行.BackColor = System.Drawing.SystemColors.Control;
             this.btnSk2前行.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSk2前行.Location = new System.Drawing.Point(27, 272);
-            this.btnSk2前行.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSk2前行.Margin = new System.Windows.Forms.Padding(2);
             this.btnSk2前行.Name = "btnSk2前行";
             this.btnSk2前行.Size = new System.Drawing.Size(35, 31);
             this.btnSk2前行.TabIndex = 48;
@@ -8397,7 +8397,7 @@
             // 
             this.btnSk2测试1位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnSk2测试1位置.Location = new System.Drawing.Point(104, 133);
-            this.btnSk2测试1位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSk2测试1位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnSk2测试1位置.Name = "btnSk2测试1位置";
             this.btnSk2测试1位置.Size = new System.Drawing.Size(75, 24);
             this.btnSk2测试1位置.TabIndex = 54;
@@ -8410,7 +8410,7 @@
             // 
             this.btnSk2翻转位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnSk2翻转位置.Location = new System.Drawing.Point(104, 104);
-            this.btnSk2翻转位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSk2翻转位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnSk2翻转位置.Name = "btnSk2翻转位置";
             this.btnSk2翻转位置.Size = new System.Drawing.Size(75, 24);
             this.btnSk2翻转位置.TabIndex = 53;
@@ -8423,7 +8423,7 @@
             // 
             this.btnSk2黑体位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnSk2黑体位置.Location = new System.Drawing.Point(104, 75);
-            this.btnSk2黑体位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSk2黑体位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnSk2黑体位置.Name = "btnSk2黑体位置";
             this.btnSk2黑体位置.Size = new System.Drawing.Size(75, 24);
             this.btnSk2黑体位置.TabIndex = 52;
@@ -8436,7 +8436,7 @@
             // 
             this.txtSk2当前位置.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSk2当前位置.Location = new System.Drawing.Point(84, 26);
-            this.txtSk2当前位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSk2当前位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtSk2当前位置.Name = "txtSk2当前位置";
             this.txtSk2当前位置.Size = new System.Drawing.Size(67, 14);
             this.txtSk2当前位置.TabIndex = 49;
@@ -8457,7 +8457,7 @@
             this.btnSk2停止.BackColor = System.Drawing.SystemColors.Control;
             this.btnSk2停止.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSk2停止.Location = new System.Drawing.Point(67, 272);
-            this.btnSk2停止.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSk2停止.Margin = new System.Windows.Forms.Padding(2);
             this.btnSk2停止.Name = "btnSk2停止";
             this.btnSk2停止.Size = new System.Drawing.Size(50, 31);
             this.btnSk2停止.TabIndex = 47;
@@ -8470,7 +8470,7 @@
             // 
             this.btnSk2回原点.BackColor = System.Drawing.SystemColors.Control;
             this.btnSk2回原点.Location = new System.Drawing.Point(14, 75);
-            this.btnSk2回原点.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSk2回原点.Margin = new System.Windows.Forms.Padding(2);
             this.btnSk2回原点.Name = "btnSk2回原点";
             this.btnSk2回原点.Size = new System.Drawing.Size(75, 24);
             this.btnSk2回原点.TabIndex = 45;
@@ -8494,9 +8494,9 @@
             this.groupBox33.Controls.Add(this.btnSk1回原点);
             this.groupBox33.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox33.Location = new System.Drawing.Point(19, 17);
-            this.groupBox33.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox33.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox33.Name = "groupBox33";
-            this.groupBox33.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox33.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox33.Size = new System.Drawing.Size(191, 315);
             this.groupBox33.TabIndex = 15;
             this.groupBox33.TabStop = false;
@@ -8506,7 +8506,7 @@
             // 
             this.btnSk1测试3位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnSk1测试3位置.Location = new System.Drawing.Point(104, 190);
-            this.btnSk1测试3位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSk1测试3位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnSk1测试3位置.Name = "btnSk1测试3位置";
             this.btnSk1测试3位置.Size = new System.Drawing.Size(75, 24);
             this.btnSk1测试3位置.TabIndex = 56;
@@ -8520,7 +8520,7 @@
             this.btnSk1后行.BackColor = System.Drawing.SystemColors.Control;
             this.btnSk1后行.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSk1后行.Location = new System.Drawing.Point(121, 272);
-            this.btnSk1后行.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSk1后行.Margin = new System.Windows.Forms.Padding(2);
             this.btnSk1后行.Name = "btnSk1后行";
             this.btnSk1后行.Size = new System.Drawing.Size(35, 31);
             this.btnSk1后行.TabIndex = 49;
@@ -8533,7 +8533,7 @@
             // 
             this.btnSk1测试2位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnSk1测试2位置.Location = new System.Drawing.Point(104, 162);
-            this.btnSk1测试2位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSk1测试2位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnSk1测试2位置.Name = "btnSk1测试2位置";
             this.btnSk1测试2位置.Size = new System.Drawing.Size(75, 24);
             this.btnSk1测试2位置.TabIndex = 55;
@@ -8547,7 +8547,7 @@
             this.btnSk1前行.BackColor = System.Drawing.SystemColors.Control;
             this.btnSk1前行.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSk1前行.Location = new System.Drawing.Point(27, 272);
-            this.btnSk1前行.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSk1前行.Margin = new System.Windows.Forms.Padding(2);
             this.btnSk1前行.Name = "btnSk1前行";
             this.btnSk1前行.Size = new System.Drawing.Size(35, 31);
             this.btnSk1前行.TabIndex = 48;
@@ -8560,7 +8560,7 @@
             // 
             this.btnSk1测试1位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnSk1测试1位置.Location = new System.Drawing.Point(104, 133);
-            this.btnSk1测试1位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSk1测试1位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnSk1测试1位置.Name = "btnSk1测试1位置";
             this.btnSk1测试1位置.Size = new System.Drawing.Size(75, 24);
             this.btnSk1测试1位置.TabIndex = 54;
@@ -8573,7 +8573,7 @@
             // 
             this.btnSk1翻转位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnSk1翻转位置.Location = new System.Drawing.Point(104, 104);
-            this.btnSk1翻转位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSk1翻转位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnSk1翻转位置.Name = "btnSk1翻转位置";
             this.btnSk1翻转位置.Size = new System.Drawing.Size(75, 24);
             this.btnSk1翻转位置.TabIndex = 53;
@@ -8586,7 +8586,7 @@
             // 
             this.btnSk1黑体位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnSk1黑体位置.Location = new System.Drawing.Point(104, 75);
-            this.btnSk1黑体位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSk1黑体位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnSk1黑体位置.Name = "btnSk1黑体位置";
             this.btnSk1黑体位置.Size = new System.Drawing.Size(75, 24);
             this.btnSk1黑体位置.TabIndex = 52;
@@ -8599,7 +8599,7 @@
             // 
             this.txtSk1当前位置.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSk1当前位置.Location = new System.Drawing.Point(84, 26);
-            this.txtSk1当前位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSk1当前位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtSk1当前位置.Name = "txtSk1当前位置";
             this.txtSk1当前位置.Size = new System.Drawing.Size(67, 14);
             this.txtSk1当前位置.TabIndex = 49;
@@ -8620,7 +8620,7 @@
             this.btnSk1停止.BackColor = System.Drawing.SystemColors.Control;
             this.btnSk1停止.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSk1停止.Location = new System.Drawing.Point(67, 272);
-            this.btnSk1停止.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSk1停止.Margin = new System.Windows.Forms.Padding(2);
             this.btnSk1停止.Name = "btnSk1停止";
             this.btnSk1停止.Size = new System.Drawing.Size(50, 31);
             this.btnSk1停止.TabIndex = 47;
@@ -8633,7 +8633,7 @@
             // 
             this.btnSk1回原点.BackColor = System.Drawing.SystemColors.Control;
             this.btnSk1回原点.Location = new System.Drawing.Point(14, 75);
-            this.btnSk1回原点.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSk1回原点.Margin = new System.Windows.Forms.Padding(2);
             this.btnSk1回原点.Name = "btnSk1回原点";
             this.btnSk1回原点.Size = new System.Drawing.Size(75, 24);
             this.btnSk1回原点.TabIndex = 45;
@@ -8646,7 +8646,7 @@
             // 
             this.tabPage3.Controls.Add(this.GB_Trays);
             this.tabPage3.Location = new System.Drawing.Point(4, 44);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Size = new System.Drawing.Size(1276, 756);
             this.tabPage3.TabIndex = 2;
@@ -8809,7 +8809,7 @@
             this.tabPage4.Controls.Add(this.label1);
             this.tabPage4.Controls.Add(this.groupBox1);
             this.tabPage4.Location = new System.Drawing.Point(4, 44);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Size = new System.Drawing.Size(1276, 756);
             this.tabPage4.TabIndex = 3;
@@ -8842,9 +8842,9 @@
             this.groupBox82.Controls.Add(this.label531);
             this.groupBox82.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox82.Location = new System.Drawing.Point(732, 16);
-            this.groupBox82.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox82.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox82.Name = "groupBox82";
-            this.groupBox82.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox82.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox82.Size = new System.Drawing.Size(179, 315);
             this.groupBox82.TabIndex = 76;
             this.groupBox82.TabStop = false;
@@ -9252,9 +9252,9 @@
             this.groupBox8.Controls.Add(this.label224);
             this.groupBox8.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox8.Location = new System.Drawing.Point(360, 347);
-            this.groupBox8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox8.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox8.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox8.Size = new System.Drawing.Size(157, 315);
             this.groupBox8.TabIndex = 111;
             this.groupBox8.TabStop = false;
@@ -9749,9 +9749,9 @@
             this.groupBox7.Controls.Add(this.label200);
             this.groupBox7.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox7.Location = new System.Drawing.Point(205, 347);
-            this.groupBox7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox7.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox7.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox7.Size = new System.Drawing.Size(150, 315);
             this.groupBox7.TabIndex = 99;
             this.groupBox7.TabStop = false;
@@ -10246,9 +10246,9 @@
             this.groupBox6.Controls.Add(this.label176);
             this.groupBox6.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox6.Location = new System.Drawing.Point(15, 347);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox6.Size = new System.Drawing.Size(179, 315);
             this.groupBox6.TabIndex = 87;
             this.groupBox6.TabStop = false;
@@ -10848,9 +10848,9 @@
             this.groupBox2.Controls.Add(this.label64);
             this.groupBox2.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(172, 16);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(179, 315);
             this.groupBox2.TabIndex = 51;
             this.groupBox2.TabStop = false;
@@ -11240,9 +11240,9 @@
             this.groupBox5.Controls.Add(this.label152);
             this.groupBox5.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox5.Location = new System.Drawing.Point(549, 16);
-            this.groupBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox5.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox5.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox5.Size = new System.Drawing.Size(179, 315);
             this.groupBox5.TabIndex = 75;
             this.groupBox5.TabStop = false;
@@ -11737,9 +11737,9 @@
             this.groupBox3.Controls.Add(this.label88);
             this.groupBox3.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(359, 16);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox3.Size = new System.Drawing.Size(179, 315);
             this.groupBox3.TabIndex = 51;
             this.groupBox3.TabStop = false;
@@ -12234,9 +12234,9 @@
             this.groupBox1.Controls.Add(this.label18);
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(16, 16);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(150, 315);
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
@@ -12603,7 +12603,7 @@
             this.tabPage8.Controls.Add(this.groupBox46);
             this.tabPage8.Controls.Add(this.groupBox45);
             this.tabPage8.Location = new System.Drawing.Point(4, 44);
-            this.tabPage8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage8.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage8.Name = "tabPage8";
             this.tabPage8.Size = new System.Drawing.Size(1276, 756);
             this.tabPage8.TabIndex = 7;
@@ -12628,9 +12628,9 @@
             this.groupBox64.Controls.Add(this.label483);
             this.groupBox64.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox64.Location = new System.Drawing.Point(804, 20);
-            this.groupBox64.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox64.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox64.Name = "groupBox64";
-            this.groupBox64.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox64.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox64.Size = new System.Drawing.Size(180, 297);
             this.groupBox64.TabIndex = 101;
             this.groupBox64.TabStop = false;
@@ -12650,7 +12650,7 @@
             // txt平移示教中转位置2
             // 
             this.txt平移示教中转位置2.Location = new System.Drawing.Point(87, 132);
-            this.txt平移示教中转位置2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt平移示教中转位置2.Margin = new System.Windows.Forms.Padding(2);
             this.txt平移示教中转位置2.Name = "txt平移示教中转位置2";
             this.txt平移示教中转位置2.Size = new System.Drawing.Size(49, 21);
             this.txt平移示教中转位置2.TabIndex = 78;
@@ -12659,7 +12659,7 @@
             // 
             this.btn平移示教中转位置2.BackColor = System.Drawing.SystemColors.Control;
             this.btn平移示教中转位置2.Location = new System.Drawing.Point(4, 132);
-            this.btn平移示教中转位置2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn平移示教中转位置2.Margin = new System.Windows.Forms.Padding(2);
             this.btn平移示教中转位置2.Name = "btn平移示教中转位置2";
             this.btn平移示教中转位置2.Size = new System.Drawing.Size(78, 24);
             this.btn平移示教中转位置2.TabIndex = 76;
@@ -12682,7 +12682,7 @@
             // txt平移示教中转位置
             // 
             this.txt平移示教中转位置.Location = new System.Drawing.Point(87, 104);
-            this.txt平移示教中转位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt平移示教中转位置.Margin = new System.Windows.Forms.Padding(2);
             this.txt平移示教中转位置.Name = "txt平移示教中转位置";
             this.txt平移示教中转位置.Size = new System.Drawing.Size(49, 21);
             this.txt平移示教中转位置.TabIndex = 75;
@@ -12691,7 +12691,7 @@
             // 
             this.btn平移示教中转位置.BackColor = System.Drawing.SystemColors.Control;
             this.btn平移示教中转位置.Location = new System.Drawing.Point(4, 104);
-            this.btn平移示教中转位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn平移示教中转位置.Margin = new System.Windows.Forms.Padding(2);
             this.btn平移示教中转位置.Name = "btn平移示教中转位置";
             this.btn平移示教中转位置.Size = new System.Drawing.Size(78, 24);
             this.btn平移示教中转位置.TabIndex = 73;
@@ -12714,7 +12714,7 @@
             // txt平移示教下料位置
             // 
             this.txt平移示教下料位置.Location = new System.Drawing.Point(87, 75);
-            this.txt平移示教下料位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt平移示教下料位置.Margin = new System.Windows.Forms.Padding(2);
             this.txt平移示教下料位置.Name = "txt平移示教下料位置";
             this.txt平移示教下料位置.Size = new System.Drawing.Size(49, 21);
             this.txt平移示教下料位置.TabIndex = 72;
@@ -12723,7 +12723,7 @@
             // 
             this.btn平移示教下料位置.BackColor = System.Drawing.SystemColors.Control;
             this.btn平移示教下料位置.Location = new System.Drawing.Point(4, 75);
-            this.btn平移示教下料位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn平移示教下料位置.Margin = new System.Windows.Forms.Padding(2);
             this.btn平移示教下料位置.Name = "btn平移示教下料位置";
             this.btn平移示教下料位置.Size = new System.Drawing.Size(78, 24);
             this.btn平移示教下料位置.TabIndex = 70;
@@ -12746,7 +12746,7 @@
             // txt平移示教上料位置
             // 
             this.txt平移示教上料位置.Location = new System.Drawing.Point(87, 46);
-            this.txt平移示教上料位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt平移示教上料位置.Margin = new System.Windows.Forms.Padding(2);
             this.txt平移示教上料位置.Name = "txt平移示教上料位置";
             this.txt平移示教上料位置.Size = new System.Drawing.Size(49, 21);
             this.txt平移示教上料位置.TabIndex = 69;
@@ -12755,7 +12755,7 @@
             // 
             this.btn平移示教上料位置.BackColor = System.Drawing.SystemColors.Control;
             this.btn平移示教上料位置.Location = new System.Drawing.Point(4, 46);
-            this.btn平移示教上料位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn平移示教上料位置.Margin = new System.Windows.Forms.Padding(2);
             this.btn平移示教上料位置.Name = "btn平移示教上料位置";
             this.btn平移示教上料位置.Size = new System.Drawing.Size(78, 24);
             this.btn平移示教上料位置.TabIndex = 67;
@@ -12768,7 +12768,7 @@
             // 
             this.txt平移示教当前位置.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt平移示教当前位置.Location = new System.Drawing.Point(59, 21);
-            this.txt平移示教当前位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt平移示教当前位置.Margin = new System.Windows.Forms.Padding(2);
             this.txt平移示教当前位置.Name = "txt平移示教当前位置";
             this.txt平移示教当前位置.Size = new System.Drawing.Size(67, 14);
             this.txt平移示教当前位置.TabIndex = 49;
@@ -12793,9 +12793,9 @@
             this.groupBox50.Controls.Add(this.label400);
             this.groupBox50.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox50.Location = new System.Drawing.Point(661, 388);
-            this.groupBox50.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox50.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox50.Name = "groupBox50";
-            this.groupBox50.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox50.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox50.Size = new System.Drawing.Size(208, 112);
             this.groupBox50.TabIndex = 88;
             this.groupBox50.TabStop = false;
@@ -12815,7 +12815,7 @@
             // txt倒NG盘示教初始位置
             // 
             this.txt倒NG盘示教初始位置.Location = new System.Drawing.Point(122, 51);
-            this.txt倒NG盘示教初始位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt倒NG盘示教初始位置.Margin = new System.Windows.Forms.Padding(2);
             this.txt倒NG盘示教初始位置.Name = "txt倒NG盘示教初始位置";
             this.txt倒NG盘示教初始位置.Size = new System.Drawing.Size(49, 21);
             this.txt倒NG盘示教初始位置.TabIndex = 51;
@@ -12824,7 +12824,7 @@
             // 
             this.txt倒NG盘示教当前位置.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt倒NG盘示教当前位置.Location = new System.Drawing.Point(59, 24);
-            this.txt倒NG盘示教当前位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt倒NG盘示教当前位置.Margin = new System.Windows.Forms.Padding(2);
             this.txt倒NG盘示教当前位置.Name = "txt倒NG盘示教当前位置";
             this.txt倒NG盘示教当前位置.Size = new System.Drawing.Size(67, 14);
             this.txt倒NG盘示教当前位置.TabIndex = 49;
@@ -12833,7 +12833,7 @@
             // 
             this.btn倒NG盘示教初始位置.BackColor = System.Drawing.SystemColors.Control;
             this.btn倒NG盘示教初始位置.Location = new System.Drawing.Point(4, 50);
-            this.btn倒NG盘示教初始位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn倒NG盘示教初始位置.Margin = new System.Windows.Forms.Padding(2);
             this.btn倒NG盘示教初始位置.Name = "btn倒NG盘示教初始位置";
             this.btn倒NG盘示教初始位置.Size = new System.Drawing.Size(113, 24);
             this.btn倒NG盘示教初始位置.TabIndex = 44;
@@ -12865,9 +12865,9 @@
             this.groupBox49.Controls.Add(this.label398);
             this.groupBox49.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox49.Location = new System.Drawing.Point(449, 388);
-            this.groupBox49.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox49.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox49.Name = "groupBox49";
-            this.groupBox49.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox49.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox49.Size = new System.Drawing.Size(208, 112);
             this.groupBox49.TabIndex = 88;
             this.groupBox49.TabStop = false;
@@ -12898,7 +12898,7 @@
             // txt实盘示教扫码位置
             // 
             this.txt实盘示教扫码位置.Location = new System.Drawing.Point(122, 80);
-            this.txt实盘示教扫码位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt实盘示教扫码位置.Margin = new System.Windows.Forms.Padding(2);
             this.txt实盘示教扫码位置.Name = "txt实盘示教扫码位置";
             this.txt实盘示教扫码位置.Size = new System.Drawing.Size(49, 21);
             this.txt实盘示教扫码位置.TabIndex = 54;
@@ -12906,7 +12906,7 @@
             // txt倒实盘示教初始位置
             // 
             this.txt倒实盘示教初始位置.Location = new System.Drawing.Point(122, 51);
-            this.txt倒实盘示教初始位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt倒实盘示教初始位置.Margin = new System.Windows.Forms.Padding(2);
             this.txt倒实盘示教初始位置.Name = "txt倒实盘示教初始位置";
             this.txt倒实盘示教初始位置.Size = new System.Drawing.Size(49, 21);
             this.txt倒实盘示教初始位置.TabIndex = 51;
@@ -12915,7 +12915,7 @@
             // 
             this.btn实盘示教扫码位置.BackColor = System.Drawing.SystemColors.Control;
             this.btn实盘示教扫码位置.Location = new System.Drawing.Point(4, 78);
-            this.btn实盘示教扫码位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn实盘示教扫码位置.Margin = new System.Windows.Forms.Padding(2);
             this.btn实盘示教扫码位置.Name = "btn实盘示教扫码位置";
             this.btn实盘示教扫码位置.Size = new System.Drawing.Size(113, 24);
             this.btn实盘示教扫码位置.TabIndex = 52;
@@ -12928,7 +12928,7 @@
             // 
             this.txt倒实盘示教当前位置.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt倒实盘示教当前位置.Location = new System.Drawing.Point(59, 23);
-            this.txt倒实盘示教当前位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt倒实盘示教当前位置.Margin = new System.Windows.Forms.Padding(2);
             this.txt倒实盘示教当前位置.Name = "txt倒实盘示教当前位置";
             this.txt倒实盘示教当前位置.Size = new System.Drawing.Size(67, 14);
             this.txt倒实盘示教当前位置.TabIndex = 49;
@@ -12937,7 +12937,7 @@
             // 
             this.btn倒实盘示教初始位置.BackColor = System.Drawing.SystemColors.Control;
             this.btn倒实盘示教初始位置.Location = new System.Drawing.Point(4, 50);
-            this.btn倒实盘示教初始位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn倒实盘示教初始位置.Margin = new System.Windows.Forms.Padding(2);
             this.btn倒实盘示教初始位置.Name = "btn倒实盘示教初始位置";
             this.btn倒实盘示教初始位置.Size = new System.Drawing.Size(113, 24);
             this.btn倒实盘示教初始位置.TabIndex = 44;
@@ -12966,9 +12966,9 @@
             this.groupBox48.Controls.Add(this.label397);
             this.groupBox48.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox48.Location = new System.Drawing.Point(237, 388);
-            this.groupBox48.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox48.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox48.Name = "groupBox48";
-            this.groupBox48.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox48.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox48.Size = new System.Drawing.Size(208, 112);
             this.groupBox48.TabIndex = 87;
             this.groupBox48.TabStop = false;
@@ -12988,7 +12988,7 @@
             // txtNG盘示教初始位置
             // 
             this.txtNG盘示教初始位置.Location = new System.Drawing.Point(122, 51);
-            this.txtNG盘示教初始位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNG盘示教初始位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtNG盘示教初始位置.Name = "txtNG盘示教初始位置";
             this.txtNG盘示教初始位置.Size = new System.Drawing.Size(49, 21);
             this.txtNG盘示教初始位置.TabIndex = 51;
@@ -12997,7 +12997,7 @@
             // 
             this.txtNG盘示教当前位置.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNG盘示教当前位置.Location = new System.Drawing.Point(59, 24);
-            this.txtNG盘示教当前位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNG盘示教当前位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtNG盘示教当前位置.Name = "txtNG盘示教当前位置";
             this.txtNG盘示教当前位置.Size = new System.Drawing.Size(67, 14);
             this.txtNG盘示教当前位置.TabIndex = 49;
@@ -13006,7 +13006,7 @@
             // 
             this.btnNG盘示教初始位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnNG盘示教初始位置.Location = new System.Drawing.Point(4, 50);
-            this.btnNG盘示教初始位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnNG盘示教初始位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnNG盘示教初始位置.Name = "btnNG盘示教初始位置";
             this.btnNG盘示教初始位置.Size = new System.Drawing.Size(113, 24);
             this.btnNG盘示教初始位置.TabIndex = 44;
@@ -13035,9 +13035,9 @@
             this.groupBox47.Controls.Add(this.label407);
             this.groupBox47.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox47.Location = new System.Drawing.Point(28, 388);
-            this.groupBox47.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox47.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox47.Name = "groupBox47";
-            this.groupBox47.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox47.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox47.Size = new System.Drawing.Size(205, 112);
             this.groupBox47.TabIndex = 86;
             this.groupBox47.TabStop = false;
@@ -13057,7 +13057,7 @@
             // txt实盘示教初始位置
             // 
             this.txt实盘示教初始位置.Location = new System.Drawing.Point(122, 51);
-            this.txt实盘示教初始位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt实盘示教初始位置.Margin = new System.Windows.Forms.Padding(2);
             this.txt实盘示教初始位置.Name = "txt实盘示教初始位置";
             this.txt实盘示教初始位置.Size = new System.Drawing.Size(49, 21);
             this.txt实盘示教初始位置.TabIndex = 51;
@@ -13066,7 +13066,7 @@
             // 
             this.txt实盘示教当前位置.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt实盘示教当前位置.Location = new System.Drawing.Point(59, 25);
-            this.txt实盘示教当前位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt实盘示教当前位置.Margin = new System.Windows.Forms.Padding(2);
             this.txt实盘示教当前位置.Name = "txt实盘示教当前位置";
             this.txt实盘示教当前位置.Size = new System.Drawing.Size(67, 14);
             this.txt实盘示教当前位置.TabIndex = 49;
@@ -13075,7 +13075,7 @@
             // 
             this.btn实盘示教初始位置.BackColor = System.Drawing.SystemColors.Control;
             this.btn实盘示教初始位置.Location = new System.Drawing.Point(4, 50);
-            this.btn实盘示教初始位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn实盘示教初始位置.Margin = new System.Windows.Forms.Padding(2);
             this.btn实盘示教初始位置.Name = "btn实盘示教初始位置";
             this.btn实盘示教初始位置.Size = new System.Drawing.Size(113, 24);
             this.btn实盘示教初始位置.TabIndex = 44;
@@ -13143,9 +13143,9 @@
             this.groupBox46.Controls.Add(this.label394);
             this.groupBox46.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox46.Location = new System.Drawing.Point(414, 20);
-            this.groupBox46.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox46.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox46.Name = "groupBox46";
-            this.groupBox46.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox46.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox46.Size = new System.Drawing.Size(386, 297);
             this.groupBox46.TabIndex = 85;
             this.groupBox46.TabStop = false;
@@ -13176,7 +13176,7 @@
             // txtY示教视觉倒实盘第一列
             // 
             this.txtY示教视觉倒实盘第一列.Location = new System.Drawing.Point(122, 250);
-            this.txtY示教视觉倒实盘第一列.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtY示教视觉倒实盘第一列.Margin = new System.Windows.Forms.Padding(2);
             this.txtY示教视觉倒实盘第一列.Name = "txtY示教视觉倒实盘第一列";
             this.txtY示教视觉倒实盘第一列.Size = new System.Drawing.Size(49, 21);
             this.txtY示教视觉倒实盘第一列.TabIndex = 96;
@@ -13184,7 +13184,7 @@
             // txtY示教扫码位置
             // 
             this.txtY示教扫码位置.Location = new System.Drawing.Point(284, 194);
-            this.txtY示教扫码位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtY示教扫码位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtY示教扫码位置.Name = "txtY示教扫码位置";
             this.txtY示教扫码位置.Size = new System.Drawing.Size(49, 21);
             this.txtY示教扫码位置.TabIndex = 84;
@@ -13193,7 +13193,7 @@
             // 
             this.btnY示教视觉倒实盘第一列.BackColor = System.Drawing.SystemColors.Control;
             this.btnY示教视觉倒实盘第一列.Location = new System.Drawing.Point(4, 248);
-            this.btnY示教视觉倒实盘第一列.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnY示教视觉倒实盘第一列.Margin = new System.Windows.Forms.Padding(2);
             this.btnY示教视觉倒实盘第一列.Name = "btnY示教视觉倒实盘第一列";
             this.btnY示教视觉倒实盘第一列.Size = new System.Drawing.Size(113, 24);
             this.btnY示教视觉倒实盘第一列.TabIndex = 94;
@@ -13206,7 +13206,7 @@
             // 
             this.btnY示教扫码位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnY示教扫码位置.Location = new System.Drawing.Point(201, 194);
-            this.btnY示教扫码位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnY示教扫码位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnY示教扫码位置.Name = "btnY示教扫码位置";
             this.btnY示教扫码位置.Size = new System.Drawing.Size(78, 24);
             this.btnY示教扫码位置.TabIndex = 82;
@@ -13240,7 +13240,7 @@
             // txtY示教视觉实盘第一列
             // 
             this.txtY示教视觉实盘第一列.Location = new System.Drawing.Point(122, 222);
-            this.txtY示教视觉实盘第一列.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtY示教视觉实盘第一列.Margin = new System.Windows.Forms.Padding(2);
             this.txtY示教视觉实盘第一列.Name = "txtY示教视觉实盘第一列";
             this.txtY示教视觉实盘第一列.Size = new System.Drawing.Size(49, 21);
             this.txtY示教视觉实盘第一列.TabIndex = 93;
@@ -13248,7 +13248,7 @@
             // txtY示教夹爪位置
             // 
             this.txtY示教夹爪位置.Location = new System.Drawing.Point(284, 165);
-            this.txtY示教夹爪位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtY示教夹爪位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtY示教夹爪位置.Name = "txtY示教夹爪位置";
             this.txtY示教夹爪位置.Size = new System.Drawing.Size(49, 21);
             this.txtY示教夹爪位置.TabIndex = 81;
@@ -13257,7 +13257,7 @@
             // 
             this.btnY示教视觉实盘第一列.BackColor = System.Drawing.SystemColors.Control;
             this.btnY示教视觉实盘第一列.Location = new System.Drawing.Point(4, 221);
-            this.btnY示教视觉实盘第一列.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnY示教视觉实盘第一列.Margin = new System.Windows.Forms.Padding(2);
             this.btnY示教视觉实盘第一列.Name = "btnY示教视觉实盘第一列";
             this.btnY示教视觉实盘第一列.Size = new System.Drawing.Size(113, 24);
             this.btnY示教视觉实盘第一列.TabIndex = 91;
@@ -13270,7 +13270,7 @@
             // 
             this.btnY示教夹爪位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnY示教夹爪位置.Location = new System.Drawing.Point(201, 165);
-            this.btnY示教夹爪位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnY示教夹爪位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnY示教夹爪位置.Name = "btnY示教夹爪位置";
             this.btnY示教夹爪位置.Size = new System.Drawing.Size(78, 24);
             this.btnY示教夹爪位置.TabIndex = 79;
@@ -13293,7 +13293,7 @@
             // txtY示教倒NG盘位置
             // 
             this.txtY示教倒NG盘位置.Location = new System.Drawing.Point(284, 136);
-            this.txtY示教倒NG盘位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtY示教倒NG盘位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtY示教倒NG盘位置.Name = "txtY示教倒NG盘位置";
             this.txtY示教倒NG盘位置.Size = new System.Drawing.Size(49, 21);
             this.txtY示教倒NG盘位置.TabIndex = 78;
@@ -13302,7 +13302,7 @@
             // 
             this.btnY示教倒NG盘位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnY示教倒NG盘位置.Location = new System.Drawing.Point(201, 136);
-            this.btnY示教倒NG盘位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnY示教倒NG盘位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnY示教倒NG盘位置.Name = "btnY示教倒NG盘位置";
             this.btnY示教倒NG盘位置.Size = new System.Drawing.Size(78, 24);
             this.btnY示教倒NG盘位置.TabIndex = 76;
@@ -13325,7 +13325,7 @@
             // txtY示教NG盘位置
             // 
             this.txtY示教NG盘位置.Location = new System.Drawing.Point(284, 107);
-            this.txtY示教NG盘位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtY示教NG盘位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtY示教NG盘位置.Name = "txtY示教NG盘位置";
             this.txtY示教NG盘位置.Size = new System.Drawing.Size(49, 21);
             this.txtY示教NG盘位置.TabIndex = 75;
@@ -13334,7 +13334,7 @@
             // 
             this.btnY示教NG盘位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnY示教NG盘位置.Location = new System.Drawing.Point(201, 107);
-            this.btnY示教NG盘位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnY示教NG盘位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnY示教NG盘位置.Name = "btnY示教NG盘位置";
             this.btnY示教NG盘位置.Size = new System.Drawing.Size(78, 24);
             this.btnY示教NG盘位置.TabIndex = 73;
@@ -13357,7 +13357,7 @@
             // txtY示教倒实盘位置
             // 
             this.txtY示教倒实盘位置.Location = new System.Drawing.Point(284, 78);
-            this.txtY示教倒实盘位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtY示教倒实盘位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtY示教倒实盘位置.Name = "txtY示教倒实盘位置";
             this.txtY示教倒实盘位置.Size = new System.Drawing.Size(49, 21);
             this.txtY示教倒实盘位置.TabIndex = 72;
@@ -13366,7 +13366,7 @@
             // 
             this.btnY示教倒实盘位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnY示教倒实盘位置.Location = new System.Drawing.Point(201, 78);
-            this.btnY示教倒实盘位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnY示教倒实盘位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnY示教倒实盘位置.Name = "btnY示教倒实盘位置";
             this.btnY示教倒实盘位置.Size = new System.Drawing.Size(78, 24);
             this.btnY示教倒实盘位置.TabIndex = 70;
@@ -13389,7 +13389,7 @@
             // txtY示教实盘位置
             // 
             this.txtY示教实盘位置.Location = new System.Drawing.Point(284, 50);
-            this.txtY示教实盘位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtY示教实盘位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtY示教实盘位置.Name = "txtY示教实盘位置";
             this.txtY示教实盘位置.Size = new System.Drawing.Size(49, 21);
             this.txtY示教实盘位置.TabIndex = 69;
@@ -13398,7 +13398,7 @@
             // 
             this.btnY示教实盘位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnY示教实盘位置.Location = new System.Drawing.Point(201, 50);
-            this.btnY示教实盘位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnY示教实盘位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnY示教实盘位置.Name = "btnY示教实盘位置";
             this.btnY示教实盘位置.Size = new System.Drawing.Size(78, 24);
             this.btnY示教实盘位置.TabIndex = 67;
@@ -13421,7 +13421,7 @@
             // txtY示教吸2NG盘第一行
             // 
             this.txtY示教吸2NG盘第一行.Location = new System.Drawing.Point(122, 195);
-            this.txtY示教吸2NG盘第一行.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtY示教吸2NG盘第一行.Margin = new System.Windows.Forms.Padding(2);
             this.txtY示教吸2NG盘第一行.Name = "txtY示教吸2NG盘第一行";
             this.txtY示教吸2NG盘第一行.Size = new System.Drawing.Size(49, 21);
             this.txtY示教吸2NG盘第一行.TabIndex = 66;
@@ -13430,7 +13430,7 @@
             // 
             this.btnY示教吸2NG盘第一行.BackColor = System.Drawing.SystemColors.Control;
             this.btnY示教吸2NG盘第一行.Location = new System.Drawing.Point(4, 194);
-            this.btnY示教吸2NG盘第一行.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnY示教吸2NG盘第一行.Margin = new System.Windows.Forms.Padding(2);
             this.btnY示教吸2NG盘第一行.Name = "btnY示教吸2NG盘第一行";
             this.btnY示教吸2NG盘第一行.Size = new System.Drawing.Size(113, 24);
             this.btnY示教吸2NG盘第一行.TabIndex = 64;
@@ -13453,7 +13453,7 @@
             // txtY示教吸1NG盘第一行
             // 
             this.txtY示教吸1NG盘第一行.Location = new System.Drawing.Point(122, 166);
-            this.txtY示教吸1NG盘第一行.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtY示教吸1NG盘第一行.Margin = new System.Windows.Forms.Padding(2);
             this.txtY示教吸1NG盘第一行.Name = "txtY示教吸1NG盘第一行";
             this.txtY示教吸1NG盘第一行.Size = new System.Drawing.Size(49, 21);
             this.txtY示教吸1NG盘第一行.TabIndex = 63;
@@ -13462,7 +13462,7 @@
             // 
             this.btnY示教吸1NG盘第一行.BackColor = System.Drawing.SystemColors.Control;
             this.btnY示教吸1NG盘第一行.Location = new System.Drawing.Point(4, 165);
-            this.btnY示教吸1NG盘第一行.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnY示教吸1NG盘第一行.Margin = new System.Windows.Forms.Padding(2);
             this.btnY示教吸1NG盘第一行.Name = "btnY示教吸1NG盘第一行";
             this.btnY示教吸1NG盘第一行.Size = new System.Drawing.Size(113, 24);
             this.btnY示教吸1NG盘第一行.TabIndex = 61;
@@ -13485,7 +13485,7 @@
             // txtY示教吸2倒实盘第一行
             // 
             this.txtY示教吸2倒实盘第一行.Location = new System.Drawing.Point(122, 138);
-            this.txtY示教吸2倒实盘第一行.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtY示教吸2倒实盘第一行.Margin = new System.Windows.Forms.Padding(2);
             this.txtY示教吸2倒实盘第一行.Name = "txtY示教吸2倒实盘第一行";
             this.txtY示教吸2倒实盘第一行.Size = new System.Drawing.Size(49, 21);
             this.txtY示教吸2倒实盘第一行.TabIndex = 60;
@@ -13494,7 +13494,7 @@
             // 
             this.btnY示教吸2倒实盘第一行.BackColor = System.Drawing.SystemColors.Control;
             this.btnY示教吸2倒实盘第一行.Location = new System.Drawing.Point(4, 136);
-            this.btnY示教吸2倒实盘第一行.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnY示教吸2倒实盘第一行.Margin = new System.Windows.Forms.Padding(2);
             this.btnY示教吸2倒实盘第一行.Name = "btnY示教吸2倒实盘第一行";
             this.btnY示教吸2倒实盘第一行.Size = new System.Drawing.Size(113, 24);
             this.btnY示教吸2倒实盘第一行.TabIndex = 58;
@@ -13517,7 +13517,7 @@
             // txtY示教吸1倒实盘第一行
             // 
             this.txtY示教吸1倒实盘第一行.Location = new System.Drawing.Point(122, 109);
-            this.txtY示教吸1倒实盘第一行.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtY示教吸1倒实盘第一行.Margin = new System.Windows.Forms.Padding(2);
             this.txtY示教吸1倒实盘第一行.Name = "txtY示教吸1倒实盘第一行";
             this.txtY示教吸1倒实盘第一行.Size = new System.Drawing.Size(49, 21);
             this.txtY示教吸1倒实盘第一行.TabIndex = 57;
@@ -13526,7 +13526,7 @@
             // 
             this.btnY示教吸1倒实盘第一行.BackColor = System.Drawing.SystemColors.Control;
             this.btnY示教吸1倒实盘第一行.Location = new System.Drawing.Point(4, 107);
-            this.btnY示教吸1倒实盘第一行.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnY示教吸1倒实盘第一行.Margin = new System.Windows.Forms.Padding(2);
             this.btnY示教吸1倒实盘第一行.Name = "btnY示教吸1倒实盘第一行";
             this.btnY示教吸1倒实盘第一行.Size = new System.Drawing.Size(113, 24);
             this.btnY示教吸1倒实盘第一行.TabIndex = 55;
@@ -13549,7 +13549,7 @@
             // txtY示教吸2实盘第一行
             // 
             this.txtY示教吸2实盘第一行.Location = new System.Drawing.Point(122, 80);
-            this.txtY示教吸2实盘第一行.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtY示教吸2实盘第一行.Margin = new System.Windows.Forms.Padding(2);
             this.txtY示教吸2实盘第一行.Name = "txtY示教吸2实盘第一行";
             this.txtY示教吸2实盘第一行.Size = new System.Drawing.Size(49, 21);
             this.txtY示教吸2实盘第一行.TabIndex = 54;
@@ -13558,7 +13558,7 @@
             // 
             this.btnY示教吸2实盘第一行.BackColor = System.Drawing.SystemColors.Control;
             this.btnY示教吸2实盘第一行.Location = new System.Drawing.Point(4, 78);
-            this.btnY示教吸2实盘第一行.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnY示教吸2实盘第一行.Margin = new System.Windows.Forms.Padding(2);
             this.btnY示教吸2实盘第一行.Name = "btnY示教吸2实盘第一行";
             this.btnY示教吸2实盘第一行.Size = new System.Drawing.Size(113, 24);
             this.btnY示教吸2实盘第一行.TabIndex = 52;
@@ -13581,7 +13581,7 @@
             // txtY示教吸1实盘第一行
             // 
             this.txtY示教吸1实盘第一行.Location = new System.Drawing.Point(122, 51);
-            this.txtY示教吸1实盘第一行.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtY示教吸1实盘第一行.Margin = new System.Windows.Forms.Padding(2);
             this.txtY示教吸1实盘第一行.Name = "txtY示教吸1实盘第一行";
             this.txtY示教吸1实盘第一行.Size = new System.Drawing.Size(49, 21);
             this.txtY示教吸1实盘第一行.TabIndex = 51;
@@ -13590,7 +13590,7 @@
             // 
             this.txtY示教当前位置.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtY示教当前位置.Location = new System.Drawing.Point(59, 24);
-            this.txtY示教当前位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtY示教当前位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtY示教当前位置.Name = "txtY示教当前位置";
             this.txtY示教当前位置.Size = new System.Drawing.Size(67, 14);
             this.txtY示教当前位置.TabIndex = 49;
@@ -13599,7 +13599,7 @@
             // 
             this.btnY示教吸1实盘第一行.BackColor = System.Drawing.SystemColors.Control;
             this.btnY示教吸1实盘第一行.Location = new System.Drawing.Point(4, 50);
-            this.btnY示教吸1实盘第一行.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnY示教吸1实盘第一行.Margin = new System.Windows.Forms.Padding(2);
             this.btnY示教吸1实盘第一行.Name = "btnY示教吸1实盘第一行";
             this.btnY示教吸1实盘第一行.Size = new System.Drawing.Size(113, 24);
             this.btnY示教吸1实盘第一行.TabIndex = 44;
@@ -13652,9 +13652,9 @@
             this.groupBox45.Controls.Add(this.label370);
             this.groupBox45.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox45.Location = new System.Drawing.Point(24, 20);
-            this.groupBox45.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox45.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox45.Name = "groupBox45";
-            this.groupBox45.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox45.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox45.Size = new System.Drawing.Size(386, 297);
             this.groupBox45.TabIndex = 15;
             this.groupBox45.TabStop = false;
@@ -13674,7 +13674,7 @@
             // txtX示教吸1倒实盘第一列
             // 
             this.txtX示教吸1倒实盘第一列.Location = new System.Drawing.Point(122, 79);
-            this.txtX示教吸1倒实盘第一列.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtX示教吸1倒实盘第一列.Margin = new System.Windows.Forms.Padding(2);
             this.txtX示教吸1倒实盘第一列.Name = "txtX示教吸1倒实盘第一列";
             this.txtX示教吸1倒实盘第一列.Size = new System.Drawing.Size(49, 21);
             this.txtX示教吸1倒实盘第一列.TabIndex = 90;
@@ -13683,7 +13683,7 @@
             // 
             this.btnX示教吸1倒实盘第一列.BackColor = System.Drawing.SystemColors.Control;
             this.btnX示教吸1倒实盘第一列.Location = new System.Drawing.Point(4, 78);
-            this.btnX示教吸1倒实盘第一列.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnX示教吸1倒实盘第一列.Margin = new System.Windows.Forms.Padding(2);
             this.btnX示教吸1倒实盘第一列.Name = "btnX示教吸1倒实盘第一列";
             this.btnX示教吸1倒实盘第一列.Size = new System.Drawing.Size(113, 24);
             this.btnX示教吸1倒实盘第一列.TabIndex = 88;
@@ -13706,7 +13706,7 @@
             // txtX示教视觉实盘第一列
             // 
             this.txtX示教视觉实盘第一列.Location = new System.Drawing.Point(123, 108);
-            this.txtX示教视觉实盘第一列.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtX示教视觉实盘第一列.Margin = new System.Windows.Forms.Padding(2);
             this.txtX示教视觉实盘第一列.Name = "txtX示教视觉实盘第一列";
             this.txtX示教视觉实盘第一列.Size = new System.Drawing.Size(49, 21);
             this.txtX示教视觉实盘第一列.TabIndex = 87;
@@ -13715,7 +13715,7 @@
             // 
             this.btnX示教视觉实盘第一列.BackColor = System.Drawing.SystemColors.Control;
             this.btnX示教视觉实盘第一列.Location = new System.Drawing.Point(4, 106);
-            this.btnX示教视觉实盘第一列.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnX示教视觉实盘第一列.Margin = new System.Windows.Forms.Padding(2);
             this.btnX示教视觉实盘第一列.Name = "btnX示教视觉实盘第一列";
             this.btnX示教视觉实盘第一列.Size = new System.Drawing.Size(113, 24);
             this.btnX示教视觉实盘第一列.TabIndex = 85;
@@ -13738,7 +13738,7 @@
             // txtX示教扫码位置
             // 
             this.txtX示教扫码位置.Location = new System.Drawing.Point(284, 194);
-            this.txtX示教扫码位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtX示教扫码位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtX示教扫码位置.Name = "txtX示教扫码位置";
             this.txtX示教扫码位置.Size = new System.Drawing.Size(49, 21);
             this.txtX示教扫码位置.TabIndex = 84;
@@ -13747,7 +13747,7 @@
             // 
             this.btnX示教扫码位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnX示教扫码位置.Location = new System.Drawing.Point(201, 194);
-            this.btnX示教扫码位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnX示教扫码位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnX示教扫码位置.Name = "btnX示教扫码位置";
             this.btnX示教扫码位置.Size = new System.Drawing.Size(78, 24);
             this.btnX示教扫码位置.TabIndex = 82;
@@ -13770,7 +13770,7 @@
             // txtX示教夹爪位置
             // 
             this.txtX示教夹爪位置.Location = new System.Drawing.Point(284, 165);
-            this.txtX示教夹爪位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtX示教夹爪位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtX示教夹爪位置.Name = "txtX示教夹爪位置";
             this.txtX示教夹爪位置.Size = new System.Drawing.Size(49, 21);
             this.txtX示教夹爪位置.TabIndex = 81;
@@ -13779,7 +13779,7 @@
             // 
             this.btnX示教夹爪位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnX示教夹爪位置.Location = new System.Drawing.Point(201, 165);
-            this.btnX示教夹爪位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnX示教夹爪位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnX示教夹爪位置.Name = "btnX示教夹爪位置";
             this.btnX示教夹爪位置.Size = new System.Drawing.Size(78, 24);
             this.btnX示教夹爪位置.TabIndex = 79;
@@ -13802,7 +13802,7 @@
             // txtX示教倒NG盘位置
             // 
             this.txtX示教倒NG盘位置.Location = new System.Drawing.Point(284, 136);
-            this.txtX示教倒NG盘位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtX示教倒NG盘位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtX示教倒NG盘位置.Name = "txtX示教倒NG盘位置";
             this.txtX示教倒NG盘位置.Size = new System.Drawing.Size(49, 21);
             this.txtX示教倒NG盘位置.TabIndex = 78;
@@ -13811,7 +13811,7 @@
             // 
             this.btnX示教倒NG盘位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnX示教倒NG盘位置.Location = new System.Drawing.Point(201, 136);
-            this.btnX示教倒NG盘位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnX示教倒NG盘位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnX示教倒NG盘位置.Name = "btnX示教倒NG盘位置";
             this.btnX示教倒NG盘位置.Size = new System.Drawing.Size(78, 24);
             this.btnX示教倒NG盘位置.TabIndex = 76;
@@ -13834,7 +13834,7 @@
             // txtX示教NG盘位置
             // 
             this.txtX示教NG盘位置.Location = new System.Drawing.Point(284, 107);
-            this.txtX示教NG盘位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtX示教NG盘位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtX示教NG盘位置.Name = "txtX示教NG盘位置";
             this.txtX示教NG盘位置.Size = new System.Drawing.Size(49, 21);
             this.txtX示教NG盘位置.TabIndex = 75;
@@ -13843,7 +13843,7 @@
             // 
             this.btnX示教NG盘位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnX示教NG盘位置.Location = new System.Drawing.Point(201, 107);
-            this.btnX示教NG盘位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnX示教NG盘位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnX示教NG盘位置.Name = "btnX示教NG盘位置";
             this.btnX示教NG盘位置.Size = new System.Drawing.Size(78, 24);
             this.btnX示教NG盘位置.TabIndex = 73;
@@ -13866,7 +13866,7 @@
             // txtX示教倒实盘位置
             // 
             this.txtX示教倒实盘位置.Location = new System.Drawing.Point(284, 78);
-            this.txtX示教倒实盘位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtX示教倒实盘位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtX示教倒实盘位置.Name = "txtX示教倒实盘位置";
             this.txtX示教倒实盘位置.Size = new System.Drawing.Size(49, 21);
             this.txtX示教倒实盘位置.TabIndex = 72;
@@ -13875,7 +13875,7 @@
             // 
             this.btnX示教倒实盘位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnX示教倒实盘位置.Location = new System.Drawing.Point(201, 78);
-            this.btnX示教倒实盘位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnX示教倒实盘位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnX示教倒实盘位置.Name = "btnX示教倒实盘位置";
             this.btnX示教倒实盘位置.Size = new System.Drawing.Size(78, 24);
             this.btnX示教倒实盘位置.TabIndex = 70;
@@ -13898,7 +13898,7 @@
             // txtX示教实盘位置
             // 
             this.txtX示教实盘位置.Location = new System.Drawing.Point(284, 50);
-            this.txtX示教实盘位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtX示教实盘位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtX示教实盘位置.Name = "txtX示教实盘位置";
             this.txtX示教实盘位置.Size = new System.Drawing.Size(49, 21);
             this.txtX示教实盘位置.TabIndex = 69;
@@ -13907,7 +13907,7 @@
             // 
             this.btnX示教实盘位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnX示教实盘位置.Location = new System.Drawing.Point(201, 50);
-            this.btnX示教实盘位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnX示教实盘位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnX示教实盘位置.Name = "btnX示教实盘位置";
             this.btnX示教实盘位置.Size = new System.Drawing.Size(78, 24);
             this.btnX示教实盘位置.TabIndex = 67;
@@ -13930,7 +13930,7 @@
             // txtX示教吸1实盘第一列
             // 
             this.txtX示教吸1实盘第一列.Location = new System.Drawing.Point(122, 51);
-            this.txtX示教吸1实盘第一列.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtX示教吸1实盘第一列.Margin = new System.Windows.Forms.Padding(2);
             this.txtX示教吸1实盘第一列.Name = "txtX示教吸1实盘第一列";
             this.txtX示教吸1实盘第一列.Size = new System.Drawing.Size(49, 21);
             this.txtX示教吸1实盘第一列.TabIndex = 51;
@@ -13939,7 +13939,7 @@
             // 
             this.txtX示教当前位置.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtX示教当前位置.Location = new System.Drawing.Point(59, 24);
-            this.txtX示教当前位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtX示教当前位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtX示教当前位置.Name = "txtX示教当前位置";
             this.txtX示教当前位置.Size = new System.Drawing.Size(67, 14);
             this.txtX示教当前位置.TabIndex = 49;
@@ -13948,7 +13948,7 @@
             // 
             this.btnX示教吸1实盘第一列.BackColor = System.Drawing.SystemColors.Control;
             this.btnX示教吸1实盘第一列.Location = new System.Drawing.Point(4, 50);
-            this.btnX示教吸1实盘第一列.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnX示教吸1实盘第一列.Margin = new System.Windows.Forms.Padding(2);
             this.btnX示教吸1实盘第一列.Name = "btnX示教吸1实盘第一列";
             this.btnX示教吸1实盘第一列.Size = new System.Drawing.Size(113, 24);
             this.btnX示教吸1实盘第一列.TabIndex = 44;
@@ -13985,7 +13985,7 @@
             this.tabPage10.Controls.Add(this.groupBox51);
             this.tabPage10.Location = new System.Drawing.Point(4, 44);
             this.tabPage10.Name = "tabPage10";
-            this.tabPage10.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage10.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage10.Size = new System.Drawing.Size(1276, 756);
             this.tabPage10.TabIndex = 9;
             this.tabPage10.Text = "示教2";
@@ -14010,9 +14010,9 @@
             this.groupBox76.Controls.Add(this.txtSok矫正位置2);
             this.groupBox76.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox76.Location = new System.Drawing.Point(626, 358);
-            this.groupBox76.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox76.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox76.Name = "groupBox76";
-            this.groupBox76.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox76.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox76.Size = new System.Drawing.Size(364, 362);
             this.groupBox76.TabIndex = 124;
             this.groupBox76.TabStop = false;
@@ -14021,7 +14021,7 @@
             // txtSok矫正位置4当前
             // 
             this.txtSok矫正位置4当前.Location = new System.Drawing.Point(159, 100);
-            this.txtSok矫正位置4当前.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSok矫正位置4当前.Margin = new System.Windows.Forms.Padding(2);
             this.txtSok矫正位置4当前.Name = "txtSok矫正位置4当前";
             this.txtSok矫正位置4当前.Size = new System.Drawing.Size(49, 21);
             this.txtSok矫正位置4当前.TabIndex = 122;
@@ -14029,7 +14029,7 @@
             // txtSok矫正位置3当前
             // 
             this.txtSok矫正位置3当前.Location = new System.Drawing.Point(159, 71);
-            this.txtSok矫正位置3当前.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSok矫正位置3当前.Margin = new System.Windows.Forms.Padding(2);
             this.txtSok矫正位置3当前.Name = "txtSok矫正位置3当前";
             this.txtSok矫正位置3当前.Size = new System.Drawing.Size(49, 21);
             this.txtSok矫正位置3当前.TabIndex = 121;
@@ -14037,7 +14037,7 @@
             // txtSok矫正位置2当前
             // 
             this.txtSok矫正位置2当前.Location = new System.Drawing.Point(159, 42);
-            this.txtSok矫正位置2当前.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSok矫正位置2当前.Margin = new System.Windows.Forms.Padding(2);
             this.txtSok矫正位置2当前.Name = "txtSok矫正位置2当前";
             this.txtSok矫正位置2当前.Size = new System.Drawing.Size(49, 21);
             this.txtSok矫正位置2当前.TabIndex = 120;
@@ -14111,7 +14111,7 @@
             // txtSok矫正位置4
             // 
             this.txtSok矫正位置4.Location = new System.Drawing.Point(101, 100);
-            this.txtSok矫正位置4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSok矫正位置4.Margin = new System.Windows.Forms.Padding(2);
             this.txtSok矫正位置4.Name = "txtSok矫正位置4";
             this.txtSok矫正位置4.Size = new System.Drawing.Size(49, 21);
             this.txtSok矫正位置4.TabIndex = 114;
@@ -14131,7 +14131,7 @@
             // txtSok矫正位置3
             // 
             this.txtSok矫正位置3.Location = new System.Drawing.Point(101, 71);
-            this.txtSok矫正位置3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSok矫正位置3.Margin = new System.Windows.Forms.Padding(2);
             this.txtSok矫正位置3.Name = "txtSok矫正位置3";
             this.txtSok矫正位置3.Size = new System.Drawing.Size(49, 21);
             this.txtSok矫正位置3.TabIndex = 111;
@@ -14152,7 +14152,7 @@
             // 
             this.btn矫正按钮.BackColor = System.Drawing.SystemColors.Control;
             this.btn矫正按钮.Location = new System.Drawing.Point(10, 138);
-            this.btn矫正按钮.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn矫正按钮.Margin = new System.Windows.Forms.Padding(2);
             this.btn矫正按钮.Name = "btn矫正按钮";
             this.btn矫正按钮.Size = new System.Drawing.Size(91, 24);
             this.btn矫正按钮.TabIndex = 106;
@@ -14163,7 +14163,7 @@
             // txtSok矫正位置2
             // 
             this.txtSok矫正位置2.Location = new System.Drawing.Point(101, 42);
-            this.txtSok矫正位置2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSok矫正位置2.Margin = new System.Windows.Forms.Padding(2);
             this.txtSok矫正位置2.Name = "txtSok矫正位置2";
             this.txtSok矫正位置2.Size = new System.Drawing.Size(49, 21);
             this.txtSok矫正位置2.TabIndex = 108;
@@ -14197,9 +14197,9 @@
             this.groupBox75.Controls.Add(this.txtBYX示教矫正位置);
             this.groupBox75.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox75.Location = new System.Drawing.Point(442, 358);
-            this.groupBox75.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox75.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox75.Name = "groupBox75";
-            this.groupBox75.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox75.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox75.Size = new System.Drawing.Size(180, 362);
             this.groupBox75.TabIndex = 102;
             this.groupBox75.TabStop = false;
@@ -14220,7 +14220,7 @@
             // 
             this.btnBYX示教矫正位置8.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYX示教矫正位置8.Location = new System.Drawing.Point(4, 225);
-            this.btnBYX示教矫正位置8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYX示教矫正位置8.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYX示教矫正位置8.Name = "btnBYX示教矫正位置8";
             this.btnBYX示教矫正位置8.Size = new System.Drawing.Size(91, 24);
             this.btnBYX示教矫正位置8.TabIndex = 121;
@@ -14232,7 +14232,7 @@
             // txtBYX示教矫正位置8
             // 
             this.txtBYX示教矫正位置8.Location = new System.Drawing.Point(100, 225);
-            this.txtBYX示教矫正位置8.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBYX示教矫正位置8.Margin = new System.Windows.Forms.Padding(2);
             this.txtBYX示教矫正位置8.Name = "txtBYX示教矫正位置8";
             this.txtBYX示教矫正位置8.Size = new System.Drawing.Size(49, 21);
             this.txtBYX示教矫正位置8.TabIndex = 123;
@@ -14252,7 +14252,7 @@
             // 
             this.btnBYX示教矫正位置7.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYX示教矫正位置7.Location = new System.Drawing.Point(4, 196);
-            this.btnBYX示教矫正位置7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYX示教矫正位置7.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYX示教矫正位置7.Name = "btnBYX示教矫正位置7";
             this.btnBYX示教矫正位置7.Size = new System.Drawing.Size(91, 24);
             this.btnBYX示教矫正位置7.TabIndex = 118;
@@ -14264,7 +14264,7 @@
             // txtBYX示教矫正位置7
             // 
             this.txtBYX示教矫正位置7.Location = new System.Drawing.Point(100, 196);
-            this.txtBYX示教矫正位置7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBYX示教矫正位置7.Margin = new System.Windows.Forms.Padding(2);
             this.txtBYX示教矫正位置7.Name = "txtBYX示教矫正位置7";
             this.txtBYX示教矫正位置7.Size = new System.Drawing.Size(49, 21);
             this.txtBYX示教矫正位置7.TabIndex = 120;
@@ -14284,7 +14284,7 @@
             // 
             this.btnBYX示教矫正位置6.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYX示教矫正位置6.Location = new System.Drawing.Point(4, 167);
-            this.btnBYX示教矫正位置6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYX示教矫正位置6.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYX示教矫正位置6.Name = "btnBYX示教矫正位置6";
             this.btnBYX示教矫正位置6.Size = new System.Drawing.Size(91, 24);
             this.btnBYX示教矫正位置6.TabIndex = 115;
@@ -14296,7 +14296,7 @@
             // txtBYX示教矫正位置6
             // 
             this.txtBYX示教矫正位置6.Location = new System.Drawing.Point(100, 167);
-            this.txtBYX示教矫正位置6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBYX示教矫正位置6.Margin = new System.Windows.Forms.Padding(2);
             this.txtBYX示教矫正位置6.Name = "txtBYX示教矫正位置6";
             this.txtBYX示教矫正位置6.Size = new System.Drawing.Size(49, 21);
             this.txtBYX示教矫正位置6.TabIndex = 117;
@@ -14327,7 +14327,7 @@
             // 
             this.btnBYX示教矫正位置5.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYX示教矫正位置5.Location = new System.Drawing.Point(4, 138);
-            this.btnBYX示教矫正位置5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYX示教矫正位置5.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYX示教矫正位置5.Name = "btnBYX示教矫正位置5";
             this.btnBYX示教矫正位置5.Size = new System.Drawing.Size(91, 24);
             this.btnBYX示教矫正位置5.TabIndex = 111;
@@ -14339,7 +14339,7 @@
             // txtBYX示教矫正位置5
             // 
             this.txtBYX示教矫正位置5.Location = new System.Drawing.Point(100, 138);
-            this.txtBYX示教矫正位置5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBYX示教矫正位置5.Margin = new System.Windows.Forms.Padding(2);
             this.txtBYX示教矫正位置5.Name = "txtBYX示教矫正位置5";
             this.txtBYX示教矫正位置5.Size = new System.Drawing.Size(49, 21);
             this.txtBYX示教矫正位置5.TabIndex = 113;
@@ -14348,7 +14348,7 @@
             // 
             this.btnBYX示教矫正位置4.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYX示教矫正位置4.Location = new System.Drawing.Point(4, 110);
-            this.btnBYX示教矫正位置4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYX示教矫正位置4.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYX示教矫正位置4.Name = "btnBYX示教矫正位置4";
             this.btnBYX示教矫正位置4.Size = new System.Drawing.Size(91, 24);
             this.btnBYX示教矫正位置4.TabIndex = 112;
@@ -14360,7 +14360,7 @@
             // txtBYX示教矫正位置4
             // 
             this.txtBYX示教矫正位置4.Location = new System.Drawing.Point(100, 110);
-            this.txtBYX示教矫正位置4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBYX示教矫正位置4.Margin = new System.Windows.Forms.Padding(2);
             this.txtBYX示教矫正位置4.Name = "txtBYX示教矫正位置4";
             this.txtBYX示教矫正位置4.Size = new System.Drawing.Size(49, 21);
             this.txtBYX示教矫正位置4.TabIndex = 114;
@@ -14380,7 +14380,7 @@
             // 
             this.btnBYX示教矫正位置3.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYX示教矫正位置3.Location = new System.Drawing.Point(4, 81);
-            this.btnBYX示教矫正位置3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYX示教矫正位置3.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYX示教矫正位置3.Name = "btnBYX示教矫正位置3";
             this.btnBYX示教矫正位置3.Size = new System.Drawing.Size(91, 24);
             this.btnBYX示教矫正位置3.TabIndex = 109;
@@ -14392,7 +14392,7 @@
             // txtBYX示教矫正位置3
             // 
             this.txtBYX示教矫正位置3.Location = new System.Drawing.Point(100, 81);
-            this.txtBYX示教矫正位置3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBYX示教矫正位置3.Margin = new System.Windows.Forms.Padding(2);
             this.txtBYX示教矫正位置3.Name = "txtBYX示教矫正位置3";
             this.txtBYX示教矫正位置3.Size = new System.Drawing.Size(49, 21);
             this.txtBYX示教矫正位置3.TabIndex = 111;
@@ -14412,7 +14412,7 @@
             // 
             this.btnBYX示教矫正位置2.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYX示教矫正位置2.Location = new System.Drawing.Point(4, 52);
-            this.btnBYX示教矫正位置2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYX示教矫正位置2.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYX示教矫正位置2.Name = "btnBYX示教矫正位置2";
             this.btnBYX示教矫正位置2.Size = new System.Drawing.Size(91, 24);
             this.btnBYX示教矫正位置2.TabIndex = 106;
@@ -14424,7 +14424,7 @@
             // txtBYX示教矫正位置2
             // 
             this.txtBYX示教矫正位置2.Location = new System.Drawing.Point(100, 52);
-            this.txtBYX示教矫正位置2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBYX示教矫正位置2.Margin = new System.Windows.Forms.Padding(2);
             this.txtBYX示教矫正位置2.Name = "txtBYX示教矫正位置2";
             this.txtBYX示教矫正位置2.Size = new System.Drawing.Size(49, 21);
             this.txtBYX示教矫正位置2.TabIndex = 108;
@@ -14444,7 +14444,7 @@
             // 
             this.btnBYX示教矫正位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYX示教矫正位置.Location = new System.Drawing.Point(4, 23);
-            this.btnBYX示教矫正位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYX示教矫正位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYX示教矫正位置.Name = "btnBYX示教矫正位置";
             this.btnBYX示教矫正位置.Size = new System.Drawing.Size(91, 24);
             this.btnBYX示教矫正位置.TabIndex = 103;
@@ -14456,7 +14456,7 @@
             // txtBYX示教矫正位置
             // 
             this.txtBYX示教矫正位置.Location = new System.Drawing.Point(100, 23);
-            this.txtBYX示教矫正位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBYX示教矫正位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtBYX示教矫正位置.Name = "txtBYX示教矫正位置";
             this.txtBYX示教矫正位置.Size = new System.Drawing.Size(49, 21);
             this.txtBYX示教矫正位置.TabIndex = 105;
@@ -14506,9 +14506,9 @@
             this.groupBox52.Controls.Add(this.btnBYY示教第二行);
             this.groupBox52.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox52.Location = new System.Drawing.Point(21, 273);
-            this.groupBox52.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox52.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox52.Name = "groupBox52";
-            this.groupBox52.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox52.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox52.Size = new System.Drawing.Size(180, 446);
             this.groupBox52.TabIndex = 110;
             this.groupBox52.TabStop = false;
@@ -14528,7 +14528,7 @@
             // txtBYY示教Sokt夹爪1记忆
             // 
             this.txtBYY示教Sokt夹爪1记忆.Location = new System.Drawing.Point(100, 386);
-            this.txtBYY示教Sokt夹爪1记忆.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBYY示教Sokt夹爪1记忆.Margin = new System.Windows.Forms.Padding(2);
             this.txtBYY示教Sokt夹爪1记忆.Name = "txtBYY示教Sokt夹爪1记忆";
             this.txtBYY示教Sokt夹爪1记忆.Size = new System.Drawing.Size(49, 21);
             this.txtBYY示教Sokt夹爪1记忆.TabIndex = 105;
@@ -14537,7 +14537,7 @@
             // 
             this.btnBYY示教Sokt夹爪1记忆.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYY示教Sokt夹爪1记忆.Location = new System.Drawing.Point(4, 386);
-            this.btnBYY示教Sokt夹爪1记忆.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYY示教Sokt夹爪1记忆.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYY示教Sokt夹爪1记忆.Name = "btnBYY示教Sokt夹爪1记忆";
             this.btnBYY示教Sokt夹爪1记忆.Size = new System.Drawing.Size(92, 24);
             this.btnBYY示教Sokt夹爪1记忆.TabIndex = 103;
@@ -14561,7 +14561,7 @@
             // 
             this.btnBYY示教Sokt夹爪3.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYY示教Sokt夹爪3.Location = new System.Drawing.Point(4, 329);
-            this.btnBYY示教Sokt夹爪3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYY示教Sokt夹爪3.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYY示教Sokt夹爪3.Name = "btnBYY示教Sokt夹爪3";
             this.btnBYY示教Sokt夹爪3.Size = new System.Drawing.Size(92, 24);
             this.btnBYY示教Sokt夹爪3.TabIndex = 97;
@@ -14573,7 +14573,7 @@
             // txtBYY示教Sokt夹爪4
             // 
             this.txtBYY示教Sokt夹爪4.Location = new System.Drawing.Point(100, 358);
-            this.txtBYY示教Sokt夹爪4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBYY示教Sokt夹爪4.Margin = new System.Windows.Forms.Padding(2);
             this.txtBYY示教Sokt夹爪4.Name = "txtBYY示教Sokt夹爪4";
             this.txtBYY示教Sokt夹爪4.Size = new System.Drawing.Size(49, 21);
             this.txtBYY示教Sokt夹爪4.TabIndex = 102;
@@ -14581,7 +14581,7 @@
             // txtBYY示教Sokt夹爪3
             // 
             this.txtBYY示教Sokt夹爪3.Location = new System.Drawing.Point(100, 329);
-            this.txtBYY示教Sokt夹爪3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBYY示教Sokt夹爪3.Margin = new System.Windows.Forms.Padding(2);
             this.txtBYY示教Sokt夹爪3.Name = "txtBYY示教Sokt夹爪3";
             this.txtBYY示教Sokt夹爪3.Size = new System.Drawing.Size(49, 21);
             this.txtBYY示教Sokt夹爪3.TabIndex = 99;
@@ -14601,7 +14601,7 @@
             // 
             this.btnBYY示教Sokt夹爪4.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYY示教Sokt夹爪4.Location = new System.Drawing.Point(4, 358);
-            this.btnBYY示教Sokt夹爪4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYY示教Sokt夹爪4.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYY示教Sokt夹爪4.Name = "btnBYY示教Sokt夹爪4";
             this.btnBYY示教Sokt夹爪4.Size = new System.Drawing.Size(92, 24);
             this.btnBYY示教Sokt夹爪4.TabIndex = 100;
@@ -14624,7 +14624,7 @@
             // txtBYY示教视觉6位置
             // 
             this.txtBYY示教视觉6位置.Location = new System.Drawing.Point(100, 189);
-            this.txtBYY示教视觉6位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBYY示教视觉6位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtBYY示教视觉6位置.Name = "txtBYY示教视觉6位置";
             this.txtBYY示教视觉6位置.Size = new System.Drawing.Size(49, 21);
             this.txtBYY示教视觉6位置.TabIndex = 96;
@@ -14633,7 +14633,7 @@
             // 
             this.btnBYY示教视觉6位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYY示教视觉6位置.Location = new System.Drawing.Point(4, 189);
-            this.btnBYY示教视觉6位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYY示教视觉6位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYY示教视觉6位置.Name = "btnBYY示教视觉6位置";
             this.btnBYY示教视觉6位置.Size = new System.Drawing.Size(92, 24);
             this.btnBYY示教视觉6位置.TabIndex = 94;
@@ -14656,7 +14656,7 @@
             // txtBYY示教视觉5位置
             // 
             this.txtBYY示教视觉5位置.Location = new System.Drawing.Point(100, 159);
-            this.txtBYY示教视觉5位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBYY示教视觉5位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtBYY示教视觉5位置.Name = "txtBYY示教视觉5位置";
             this.txtBYY示教视觉5位置.Size = new System.Drawing.Size(49, 21);
             this.txtBYY示教视觉5位置.TabIndex = 93;
@@ -14665,7 +14665,7 @@
             // 
             this.btnBYY示教视觉5位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYY示教视觉5位置.Location = new System.Drawing.Point(4, 159);
-            this.btnBYY示教视觉5位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYY示教视觉5位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYY示教视觉5位置.Name = "btnBYY示教视觉5位置";
             this.btnBYY示教视觉5位置.Size = new System.Drawing.Size(92, 24);
             this.btnBYY示教视觉5位置.TabIndex = 91;
@@ -14688,7 +14688,7 @@
             // txtBYY示教上料34位置
             // 
             this.txtBYY示教上料34位置.Location = new System.Drawing.Point(100, 75);
-            this.txtBYY示教上料34位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBYY示教上料34位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtBYY示教上料34位置.Name = "txtBYY示教上料34位置";
             this.txtBYY示教上料34位置.Size = new System.Drawing.Size(49, 21);
             this.txtBYY示教上料34位置.TabIndex = 90;
@@ -14697,7 +14697,7 @@
             // 
             this.btnBYY示教上料34位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYY示教上料34位置.Location = new System.Drawing.Point(4, 75);
-            this.btnBYY示教上料34位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYY示教上料34位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYY示教上料34位置.Name = "btnBYY示教上料34位置";
             this.btnBYY示教上料34位置.Size = new System.Drawing.Size(92, 24);
             this.btnBYY示教上料34位置.TabIndex = 88;
@@ -14731,7 +14731,7 @@
             // txtBYY示教视觉2位置
             // 
             this.txtBYY示教视觉2位置.Location = new System.Drawing.Point(100, 132);
-            this.txtBYY示教视觉2位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBYY示教视觉2位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtBYY示教视觉2位置.Name = "txtBYY示教视觉2位置";
             this.txtBYY示教视觉2位置.Size = new System.Drawing.Size(49, 21);
             this.txtBYY示教视觉2位置.TabIndex = 75;
@@ -14739,7 +14739,7 @@
             // txtBYY示教视觉4位置
             // 
             this.txtBYY示教视觉4位置.Location = new System.Drawing.Point(100, 245);
-            this.txtBYY示教视觉4位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBYY示教视觉4位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtBYY示教视觉4位置.Name = "txtBYY示教视觉4位置";
             this.txtBYY示教视觉4位置.Size = new System.Drawing.Size(49, 21);
             this.txtBYY示教视觉4位置.TabIndex = 87;
@@ -14748,7 +14748,7 @@
             // 
             this.btnBYY示教视觉2位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYY示教视觉2位置.Location = new System.Drawing.Point(4, 132);
-            this.btnBYY示教视觉2位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYY示教视觉2位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYY示教视觉2位置.Name = "btnBYY示教视觉2位置";
             this.btnBYY示教视觉2位置.Size = new System.Drawing.Size(92, 24);
             this.btnBYY示教视觉2位置.TabIndex = 73;
@@ -14772,7 +14772,7 @@
             // 
             this.btnBYY示教视觉4位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYY示教视觉4位置.Location = new System.Drawing.Point(4, 245);
-            this.btnBYY示教视觉4位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYY示教视觉4位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYY示教视觉4位置.Name = "btnBYY示教视觉4位置";
             this.btnBYY示教视觉4位置.Size = new System.Drawing.Size(92, 24);
             this.btnBYY示教视觉4位置.TabIndex = 85;
@@ -14784,7 +14784,7 @@
             // txtBYY示教视觉1位置
             // 
             this.txtBYY示教视觉1位置.Location = new System.Drawing.Point(100, 103);
-            this.txtBYY示教视觉1位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBYY示教视觉1位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtBYY示教视觉1位置.Name = "txtBYY示教视觉1位置";
             this.txtBYY示教视觉1位置.Size = new System.Drawing.Size(49, 21);
             this.txtBYY示教视觉1位置.TabIndex = 72;
@@ -14793,7 +14793,7 @@
             // 
             this.btnBYY示教视觉1位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYY示教视觉1位置.Location = new System.Drawing.Point(4, 103);
-            this.btnBYY示教视觉1位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYY示教视觉1位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYY示教视觉1位置.Name = "btnBYY示教视觉1位置";
             this.btnBYY示教视觉1位置.Size = new System.Drawing.Size(92, 24);
             this.btnBYY示教视觉1位置.TabIndex = 70;
@@ -14827,7 +14827,7 @@
             // txtBYY示教上料12位置
             // 
             this.txtBYY示教上料12位置.Location = new System.Drawing.Point(100, 46);
-            this.txtBYY示教上料12位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBYY示教上料12位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtBYY示教上料12位置.Name = "txtBYY示教上料12位置";
             this.txtBYY示教上料12位置.Size = new System.Drawing.Size(49, 21);
             this.txtBYY示教上料12位置.TabIndex = 69;
@@ -14835,7 +14835,7 @@
             // txtBYY示教视觉3位置
             // 
             this.txtBYY示教视觉3位置.Location = new System.Drawing.Point(100, 216);
-            this.txtBYY示教视觉3位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBYY示教视觉3位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtBYY示教视觉3位置.Name = "txtBYY示教视觉3位置";
             this.txtBYY示教视觉3位置.Size = new System.Drawing.Size(49, 21);
             this.txtBYY示教视觉3位置.TabIndex = 84;
@@ -14844,7 +14844,7 @@
             // 
             this.btnBYY示教上料12位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYY示教上料12位置.Location = new System.Drawing.Point(4, 46);
-            this.btnBYY示教上料12位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYY示教上料12位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYY示教上料12位置.Name = "btnBYY示教上料12位置";
             this.btnBYY示教上料12位置.Size = new System.Drawing.Size(92, 24);
             this.btnBYY示教上料12位置.TabIndex = 67;
@@ -14857,7 +14857,7 @@
             // 
             this.txtBYY示教当前位置.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBYY示教当前位置.Location = new System.Drawing.Point(59, 21);
-            this.txtBYY示教当前位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBYY示教当前位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtBYY示教当前位置.Name = "txtBYY示教当前位置";
             this.txtBYY示教当前位置.Size = new System.Drawing.Size(67, 14);
             this.txtBYY示教当前位置.TabIndex = 49;
@@ -14866,7 +14866,7 @@
             // 
             this.btnBYY示教视觉3位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYY示教视觉3位置.Location = new System.Drawing.Point(4, 216);
-            this.btnBYY示教视觉3位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYY示教视觉3位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYY示教视觉3位置.Name = "btnBYY示教视觉3位置";
             this.btnBYY示教视觉3位置.Size = new System.Drawing.Size(92, 24);
             this.btnBYY示教视觉3位置.TabIndex = 82;
@@ -14901,7 +14901,7 @@
             // 
             this.btnBYY示教第一行.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYY示教第一行.Location = new System.Drawing.Point(4, 273);
-            this.btnBYY示教第一行.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYY示教第一行.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYY示教第一行.Name = "btnBYY示教第一行";
             this.btnBYY示教第一行.Size = new System.Drawing.Size(92, 24);
             this.btnBYY示教第一行.TabIndex = 76;
@@ -14913,7 +14913,7 @@
             // txtBYY示教第二行
             // 
             this.txtBYY示教第二行.Location = new System.Drawing.Point(100, 302);
-            this.txtBYY示教第二行.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBYY示教第二行.Margin = new System.Windows.Forms.Padding(2);
             this.txtBYY示教第二行.Name = "txtBYY示教第二行";
             this.txtBYY示教第二行.Size = new System.Drawing.Size(49, 21);
             this.txtBYY示教第二行.TabIndex = 81;
@@ -14921,7 +14921,7 @@
             // txtBYY示教第一行
             // 
             this.txtBYY示教第一行.Location = new System.Drawing.Point(100, 273);
-            this.txtBYY示教第一行.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBYY示教第一行.Margin = new System.Windows.Forms.Padding(2);
             this.txtBYY示教第一行.Name = "txtBYY示教第一行";
             this.txtBYY示教第一行.Size = new System.Drawing.Size(49, 21);
             this.txtBYY示教第一行.TabIndex = 78;
@@ -14941,7 +14941,7 @@
             // 
             this.btnBYY示教第二行.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYY示教第二行.Location = new System.Drawing.Point(4, 302);
-            this.btnBYY示教第二行.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYY示教第二行.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYY示教第二行.Name = "btnBYY示教第二行";
             this.btnBYY示教第二行.Size = new System.Drawing.Size(92, 24);
             this.btnBYY示教第二行.TabIndex = 79;
@@ -14962,9 +14962,9 @@
             this.groupBox61.Controls.Add(this.label462);
             this.groupBox61.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox61.Location = new System.Drawing.Point(994, 238);
-            this.groupBox61.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox61.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox61.Name = "groupBox61";
-            this.groupBox61.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox61.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox61.Size = new System.Drawing.Size(180, 107);
             this.groupBox61.TabIndex = 107;
             this.groupBox61.TabStop = false;
@@ -14984,7 +14984,7 @@
             // txtBk4示教35位置
             // 
             this.txtBk4示教35位置.Location = new System.Drawing.Point(87, 75);
-            this.txtBk4示教35位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBk4示教35位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtBk4示教35位置.Name = "txtBk4示教35位置";
             this.txtBk4示教35位置.Size = new System.Drawing.Size(49, 21);
             this.txtBk4示教35位置.TabIndex = 72;
@@ -14993,7 +14993,7 @@
             // 
             this.btnBk4示教35位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnBk4示教35位置.Location = new System.Drawing.Point(4, 75);
-            this.btnBk4示教35位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBk4示教35位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnBk4示教35位置.Name = "btnBk4示教35位置";
             this.btnBk4示教35位置.Size = new System.Drawing.Size(78, 24);
             this.btnBk4示教35位置.TabIndex = 70;
@@ -15016,7 +15016,7 @@
             // txtBk4示教20位置
             // 
             this.txtBk4示教20位置.Location = new System.Drawing.Point(87, 46);
-            this.txtBk4示教20位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBk4示教20位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtBk4示教20位置.Name = "txtBk4示教20位置";
             this.txtBk4示教20位置.Size = new System.Drawing.Size(49, 21);
             this.txtBk4示教20位置.TabIndex = 69;
@@ -15025,7 +15025,7 @@
             // 
             this.btnBk4示教20位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnBk4示教20位置.Location = new System.Drawing.Point(4, 46);
-            this.btnBk4示教20位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBk4示教20位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnBk4示教20位置.Name = "btnBk4示教20位置";
             this.btnBk4示教20位置.Size = new System.Drawing.Size(78, 24);
             this.btnBk4示教20位置.TabIndex = 67;
@@ -15038,7 +15038,7 @@
             // 
             this.txtBk4示教当前位置.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBk4示教当前位置.Location = new System.Drawing.Point(59, 21);
-            this.txtBk4示教当前位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBk4示教当前位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtBk4示教当前位置.Name = "txtBk4示教当前位置";
             this.txtBk4示教当前位置.Size = new System.Drawing.Size(67, 14);
             this.txtBk4示教当前位置.TabIndex = 49;
@@ -15066,9 +15066,9 @@
             this.groupBox60.Controls.Add(this.label459);
             this.groupBox60.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox60.Location = new System.Drawing.Point(810, 238);
-            this.groupBox60.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox60.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox60.Name = "groupBox60";
-            this.groupBox60.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox60.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox60.Size = new System.Drawing.Size(180, 107);
             this.groupBox60.TabIndex = 108;
             this.groupBox60.TabStop = false;
@@ -15088,7 +15088,7 @@
             // txtBk3示教35位置
             // 
             this.txtBk3示教35位置.Location = new System.Drawing.Point(87, 75);
-            this.txtBk3示教35位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBk3示教35位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtBk3示教35位置.Name = "txtBk3示教35位置";
             this.txtBk3示教35位置.Size = new System.Drawing.Size(49, 21);
             this.txtBk3示教35位置.TabIndex = 72;
@@ -15097,7 +15097,7 @@
             // 
             this.btnBk3示教35位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnBk3示教35位置.Location = new System.Drawing.Point(4, 75);
-            this.btnBk3示教35位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBk3示教35位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnBk3示教35位置.Name = "btnBk3示教35位置";
             this.btnBk3示教35位置.Size = new System.Drawing.Size(78, 24);
             this.btnBk3示教35位置.TabIndex = 70;
@@ -15120,7 +15120,7 @@
             // txtBk3示教20位置
             // 
             this.txtBk3示教20位置.Location = new System.Drawing.Point(87, 46);
-            this.txtBk3示教20位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBk3示教20位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtBk3示教20位置.Name = "txtBk3示教20位置";
             this.txtBk3示教20位置.Size = new System.Drawing.Size(49, 21);
             this.txtBk3示教20位置.TabIndex = 69;
@@ -15129,7 +15129,7 @@
             // 
             this.btnBk3示教20位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnBk3示教20位置.Location = new System.Drawing.Point(4, 46);
-            this.btnBk3示教20位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBk3示教20位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnBk3示教20位置.Name = "btnBk3示教20位置";
             this.btnBk3示教20位置.Size = new System.Drawing.Size(78, 24);
             this.btnBk3示教20位置.TabIndex = 67;
@@ -15142,7 +15142,7 @@
             // 
             this.txtBk3示教当前位置.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBk3示教当前位置.Location = new System.Drawing.Point(59, 21);
-            this.txtBk3示教当前位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBk3示教当前位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtBk3示教当前位置.Name = "txtBk3示教当前位置";
             this.txtBk3示教当前位置.Size = new System.Drawing.Size(67, 14);
             this.txtBk3示教当前位置.TabIndex = 49;
@@ -15170,9 +15170,9 @@
             this.groupBox59.Controls.Add(this.label453);
             this.groupBox59.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox59.Location = new System.Drawing.Point(626, 238);
-            this.groupBox59.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox59.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox59.Name = "groupBox59";
-            this.groupBox59.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox59.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox59.Size = new System.Drawing.Size(180, 107);
             this.groupBox59.TabIndex = 109;
             this.groupBox59.TabStop = false;
@@ -15192,7 +15192,7 @@
             // txtBk2示教35位置
             // 
             this.txtBk2示教35位置.Location = new System.Drawing.Point(87, 75);
-            this.txtBk2示教35位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBk2示教35位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtBk2示教35位置.Name = "txtBk2示教35位置";
             this.txtBk2示教35位置.Size = new System.Drawing.Size(49, 21);
             this.txtBk2示教35位置.TabIndex = 72;
@@ -15201,7 +15201,7 @@
             // 
             this.btnBk2示教35位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnBk2示教35位置.Location = new System.Drawing.Point(4, 75);
-            this.btnBk2示教35位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBk2示教35位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnBk2示教35位置.Name = "btnBk2示教35位置";
             this.btnBk2示教35位置.Size = new System.Drawing.Size(78, 24);
             this.btnBk2示教35位置.TabIndex = 70;
@@ -15224,7 +15224,7 @@
             // txtBk2示教20位置
             // 
             this.txtBk2示教20位置.Location = new System.Drawing.Point(87, 46);
-            this.txtBk2示教20位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBk2示教20位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtBk2示教20位置.Name = "txtBk2示教20位置";
             this.txtBk2示教20位置.Size = new System.Drawing.Size(49, 21);
             this.txtBk2示教20位置.TabIndex = 69;
@@ -15233,7 +15233,7 @@
             // 
             this.btnBk2示教20位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnBk2示教20位置.Location = new System.Drawing.Point(4, 46);
-            this.btnBk2示教20位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBk2示教20位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnBk2示教20位置.Name = "btnBk2示教20位置";
             this.btnBk2示教20位置.Size = new System.Drawing.Size(78, 24);
             this.btnBk2示教20位置.TabIndex = 67;
@@ -15246,7 +15246,7 @@
             // 
             this.txtBk2示教当前位置.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBk2示教当前位置.Location = new System.Drawing.Point(59, 21);
-            this.txtBk2示教当前位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBk2示教当前位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtBk2示教当前位置.Name = "txtBk2示教当前位置";
             this.txtBk2示教当前位置.Size = new System.Drawing.Size(67, 14);
             this.txtBk2示教当前位置.TabIndex = 49;
@@ -15274,9 +15274,9 @@
             this.groupBox58.Controls.Add(this.label456);
             this.groupBox58.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox58.Location = new System.Drawing.Point(442, 238);
-            this.groupBox58.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox58.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox58.Name = "groupBox58";
-            this.groupBox58.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox58.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox58.Size = new System.Drawing.Size(180, 107);
             this.groupBox58.TabIndex = 106;
             this.groupBox58.TabStop = false;
@@ -15296,7 +15296,7 @@
             // txtBk1示教35位置
             // 
             this.txtBk1示教35位置.Location = new System.Drawing.Point(87, 75);
-            this.txtBk1示教35位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBk1示教35位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtBk1示教35位置.Name = "txtBk1示教35位置";
             this.txtBk1示教35位置.Size = new System.Drawing.Size(49, 21);
             this.txtBk1示教35位置.TabIndex = 72;
@@ -15305,7 +15305,7 @@
             // 
             this.btnBk1示教35位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnBk1示教35位置.Location = new System.Drawing.Point(4, 75);
-            this.btnBk1示教35位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBk1示教35位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnBk1示教35位置.Name = "btnBk1示教35位置";
             this.btnBk1示教35位置.Size = new System.Drawing.Size(78, 24);
             this.btnBk1示教35位置.TabIndex = 70;
@@ -15328,7 +15328,7 @@
             // txtBk1示教20位置
             // 
             this.txtBk1示教20位置.Location = new System.Drawing.Point(87, 46);
-            this.txtBk1示教20位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBk1示教20位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtBk1示教20位置.Name = "txtBk1示教20位置";
             this.txtBk1示教20位置.Size = new System.Drawing.Size(49, 21);
             this.txtBk1示教20位置.TabIndex = 69;
@@ -15337,7 +15337,7 @@
             // 
             this.btnBk1示教20位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnBk1示教20位置.Location = new System.Drawing.Point(4, 46);
-            this.btnBk1示教20位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBk1示教20位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnBk1示教20位置.Name = "btnBk1示教20位置";
             this.btnBk1示教20位置.Size = new System.Drawing.Size(78, 24);
             this.btnBk1示教20位置.TabIndex = 67;
@@ -15350,7 +15350,7 @@
             // 
             this.txtBk1示教当前位置.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBk1示教当前位置.Location = new System.Drawing.Point(59, 21);
-            this.txtBk1示教当前位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBk1示教当前位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtBk1示教当前位置.Name = "txtBk1示教当前位置";
             this.txtBk1示教当前位置.Size = new System.Drawing.Size(67, 14);
             this.txtBk1示教当前位置.TabIndex = 49;
@@ -15387,9 +15387,9 @@
             this.groupBox56.Controls.Add(this.label450);
             this.groupBox56.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox56.Location = new System.Drawing.Point(994, 19);
-            this.groupBox56.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox56.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox56.Name = "groupBox56";
-            this.groupBox56.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox56.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox56.Size = new System.Drawing.Size(180, 215);
             this.groupBox56.TabIndex = 103;
             this.groupBox56.TabStop = false;
@@ -15409,7 +15409,7 @@
             // txtSk4示教测试3位置
             // 
             this.txtSk4示教测试3位置.Location = new System.Drawing.Point(87, 162);
-            this.txtSk4示教测试3位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSk4示教测试3位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtSk4示教测试3位置.Name = "txtSk4示教测试3位置";
             this.txtSk4示教测试3位置.Size = new System.Drawing.Size(49, 21);
             this.txtSk4示教测试3位置.TabIndex = 81;
@@ -15418,7 +15418,7 @@
             // 
             this.btnSk4示教测试3位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnSk4示教测试3位置.Location = new System.Drawing.Point(4, 162);
-            this.btnSk4示教测试3位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSk4示教测试3位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnSk4示教测试3位置.Name = "btnSk4示教测试3位置";
             this.btnSk4示教测试3位置.Size = new System.Drawing.Size(78, 24);
             this.btnSk4示教测试3位置.TabIndex = 79;
@@ -15441,7 +15441,7 @@
             // txtSk4示教测试2位置
             // 
             this.txtSk4示教测试2位置.Location = new System.Drawing.Point(87, 133);
-            this.txtSk4示教测试2位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSk4示教测试2位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtSk4示教测试2位置.Name = "txtSk4示教测试2位置";
             this.txtSk4示教测试2位置.Size = new System.Drawing.Size(49, 21);
             this.txtSk4示教测试2位置.TabIndex = 78;
@@ -15450,7 +15450,7 @@
             // 
             this.btnSk4示教测试2位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnSk4示教测试2位置.Location = new System.Drawing.Point(4, 133);
-            this.btnSk4示教测试2位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSk4示教测试2位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnSk4示教测试2位置.Name = "btnSk4示教测试2位置";
             this.btnSk4示教测试2位置.Size = new System.Drawing.Size(78, 24);
             this.btnSk4示教测试2位置.TabIndex = 76;
@@ -15473,7 +15473,7 @@
             // txtSk4示教测试1位置
             // 
             this.txtSk4示教测试1位置.Location = new System.Drawing.Point(87, 104);
-            this.txtSk4示教测试1位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSk4示教测试1位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtSk4示教测试1位置.Name = "txtSk4示教测试1位置";
             this.txtSk4示教测试1位置.Size = new System.Drawing.Size(49, 21);
             this.txtSk4示教测试1位置.TabIndex = 75;
@@ -15482,7 +15482,7 @@
             // 
             this.btnSk4示教测试1位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnSk4示教测试1位置.Location = new System.Drawing.Point(4, 104);
-            this.btnSk4示教测试1位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSk4示教测试1位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnSk4示教测试1位置.Name = "btnSk4示教测试1位置";
             this.btnSk4示教测试1位置.Size = new System.Drawing.Size(78, 24);
             this.btnSk4示教测试1位置.TabIndex = 73;
@@ -15505,7 +15505,7 @@
             // txtSk4示教翻转位置
             // 
             this.txtSk4示教翻转位置.Location = new System.Drawing.Point(87, 75);
-            this.txtSk4示教翻转位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSk4示教翻转位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtSk4示教翻转位置.Name = "txtSk4示教翻转位置";
             this.txtSk4示教翻转位置.Size = new System.Drawing.Size(49, 21);
             this.txtSk4示教翻转位置.TabIndex = 72;
@@ -15514,7 +15514,7 @@
             // 
             this.btnSk4示教翻转位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnSk4示教翻转位置.Location = new System.Drawing.Point(4, 75);
-            this.btnSk4示教翻转位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSk4示教翻转位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnSk4示教翻转位置.Name = "btnSk4示教翻转位置";
             this.btnSk4示教翻转位置.Size = new System.Drawing.Size(78, 24);
             this.btnSk4示教翻转位置.TabIndex = 70;
@@ -15537,7 +15537,7 @@
             // txtSk4示教黑体位置
             // 
             this.txtSk4示教黑体位置.Location = new System.Drawing.Point(87, 46);
-            this.txtSk4示教黑体位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSk4示教黑体位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtSk4示教黑体位置.Name = "txtSk4示教黑体位置";
             this.txtSk4示教黑体位置.Size = new System.Drawing.Size(49, 21);
             this.txtSk4示教黑体位置.TabIndex = 69;
@@ -15546,7 +15546,7 @@
             // 
             this.btnSk4示教黑体位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnSk4示教黑体位置.Location = new System.Drawing.Point(4, 46);
-            this.btnSk4示教黑体位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSk4示教黑体位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnSk4示教黑体位置.Name = "btnSk4示教黑体位置";
             this.btnSk4示教黑体位置.Size = new System.Drawing.Size(78, 24);
             this.btnSk4示教黑体位置.TabIndex = 67;
@@ -15559,7 +15559,7 @@
             // 
             this.txtSk4示教当前位置.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSk4示教当前位置.Location = new System.Drawing.Point(59, 21);
-            this.txtSk4示教当前位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSk4示教当前位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtSk4示教当前位置.Name = "txtSk4示教当前位置";
             this.txtSk4示教当前位置.Size = new System.Drawing.Size(67, 14);
             this.txtSk4示教当前位置.TabIndex = 49;
@@ -15596,9 +15596,9 @@
             this.groupBox55.Controls.Add(this.label444);
             this.groupBox55.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox55.Location = new System.Drawing.Point(810, 19);
-            this.groupBox55.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox55.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox55.Name = "groupBox55";
-            this.groupBox55.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox55.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox55.Size = new System.Drawing.Size(180, 215);
             this.groupBox55.TabIndex = 104;
             this.groupBox55.TabStop = false;
@@ -15618,7 +15618,7 @@
             // txtSk3示教测试3位置
             // 
             this.txtSk3示教测试3位置.Location = new System.Drawing.Point(87, 162);
-            this.txtSk3示教测试3位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSk3示教测试3位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtSk3示教测试3位置.Name = "txtSk3示教测试3位置";
             this.txtSk3示教测试3位置.Size = new System.Drawing.Size(49, 21);
             this.txtSk3示教测试3位置.TabIndex = 81;
@@ -15627,7 +15627,7 @@
             // 
             this.btnSk3示教测试3位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnSk3示教测试3位置.Location = new System.Drawing.Point(4, 162);
-            this.btnSk3示教测试3位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSk3示教测试3位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnSk3示教测试3位置.Name = "btnSk3示教测试3位置";
             this.btnSk3示教测试3位置.Size = new System.Drawing.Size(78, 24);
             this.btnSk3示教测试3位置.TabIndex = 79;
@@ -15650,7 +15650,7 @@
             // txtSk3示教测试2位置
             // 
             this.txtSk3示教测试2位置.Location = new System.Drawing.Point(87, 133);
-            this.txtSk3示教测试2位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSk3示教测试2位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtSk3示教测试2位置.Name = "txtSk3示教测试2位置";
             this.txtSk3示教测试2位置.Size = new System.Drawing.Size(49, 21);
             this.txtSk3示教测试2位置.TabIndex = 78;
@@ -15659,7 +15659,7 @@
             // 
             this.btnSk3示教测试2位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnSk3示教测试2位置.Location = new System.Drawing.Point(4, 133);
-            this.btnSk3示教测试2位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSk3示教测试2位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnSk3示教测试2位置.Name = "btnSk3示教测试2位置";
             this.btnSk3示教测试2位置.Size = new System.Drawing.Size(78, 24);
             this.btnSk3示教测试2位置.TabIndex = 76;
@@ -15682,7 +15682,7 @@
             // txtSk3示教测试1位置
             // 
             this.txtSk3示教测试1位置.Location = new System.Drawing.Point(87, 104);
-            this.txtSk3示教测试1位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSk3示教测试1位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtSk3示教测试1位置.Name = "txtSk3示教测试1位置";
             this.txtSk3示教测试1位置.Size = new System.Drawing.Size(49, 21);
             this.txtSk3示教测试1位置.TabIndex = 75;
@@ -15691,7 +15691,7 @@
             // 
             this.btnSk3示教测试1位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnSk3示教测试1位置.Location = new System.Drawing.Point(4, 104);
-            this.btnSk3示教测试1位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSk3示教测试1位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnSk3示教测试1位置.Name = "btnSk3示教测试1位置";
             this.btnSk3示教测试1位置.Size = new System.Drawing.Size(78, 24);
             this.btnSk3示教测试1位置.TabIndex = 73;
@@ -15714,7 +15714,7 @@
             // txtSk3示教翻转位置
             // 
             this.txtSk3示教翻转位置.Location = new System.Drawing.Point(87, 75);
-            this.txtSk3示教翻转位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSk3示教翻转位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtSk3示教翻转位置.Name = "txtSk3示教翻转位置";
             this.txtSk3示教翻转位置.Size = new System.Drawing.Size(49, 21);
             this.txtSk3示教翻转位置.TabIndex = 72;
@@ -15723,7 +15723,7 @@
             // 
             this.btnSk3示教翻转位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnSk3示教翻转位置.Location = new System.Drawing.Point(4, 75);
-            this.btnSk3示教翻转位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSk3示教翻转位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnSk3示教翻转位置.Name = "btnSk3示教翻转位置";
             this.btnSk3示教翻转位置.Size = new System.Drawing.Size(78, 24);
             this.btnSk3示教翻转位置.TabIndex = 70;
@@ -15746,7 +15746,7 @@
             // txtSk3示教黑体位置
             // 
             this.txtSk3示教黑体位置.Location = new System.Drawing.Point(87, 46);
-            this.txtSk3示教黑体位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSk3示教黑体位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtSk3示教黑体位置.Name = "txtSk3示教黑体位置";
             this.txtSk3示教黑体位置.Size = new System.Drawing.Size(49, 21);
             this.txtSk3示教黑体位置.TabIndex = 69;
@@ -15755,7 +15755,7 @@
             // 
             this.btnSk3示教黑体位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnSk3示教黑体位置.Location = new System.Drawing.Point(4, 46);
-            this.btnSk3示教黑体位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSk3示教黑体位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnSk3示教黑体位置.Name = "btnSk3示教黑体位置";
             this.btnSk3示教黑体位置.Size = new System.Drawing.Size(78, 24);
             this.btnSk3示教黑体位置.TabIndex = 67;
@@ -15768,7 +15768,7 @@
             // 
             this.txtSk3示教当前位置.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSk3示教当前位置.Location = new System.Drawing.Point(59, 21);
-            this.txtSk3示教当前位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSk3示教当前位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtSk3示教当前位置.Name = "txtSk3示教当前位置";
             this.txtSk3示教当前位置.Size = new System.Drawing.Size(67, 14);
             this.txtSk3示教当前位置.TabIndex = 49;
@@ -15805,9 +15805,9 @@
             this.groupBox53.Controls.Add(this.label438);
             this.groupBox53.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox53.Location = new System.Drawing.Point(626, 19);
-            this.groupBox53.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox53.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox53.Name = "groupBox53";
-            this.groupBox53.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox53.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox53.Size = new System.Drawing.Size(180, 215);
             this.groupBox53.TabIndex = 105;
             this.groupBox53.TabStop = false;
@@ -15827,7 +15827,7 @@
             // txtSk2示教测试3位置
             // 
             this.txtSk2示教测试3位置.Location = new System.Drawing.Point(87, 162);
-            this.txtSk2示教测试3位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSk2示教测试3位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtSk2示教测试3位置.Name = "txtSk2示教测试3位置";
             this.txtSk2示教测试3位置.Size = new System.Drawing.Size(49, 21);
             this.txtSk2示教测试3位置.TabIndex = 81;
@@ -15836,7 +15836,7 @@
             // 
             this.btnSk2示教测试3位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnSk2示教测试3位置.Location = new System.Drawing.Point(4, 162);
-            this.btnSk2示教测试3位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSk2示教测试3位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnSk2示教测试3位置.Name = "btnSk2示教测试3位置";
             this.btnSk2示教测试3位置.Size = new System.Drawing.Size(78, 24);
             this.btnSk2示教测试3位置.TabIndex = 79;
@@ -15859,7 +15859,7 @@
             // txtSk2示教测试2位置
             // 
             this.txtSk2示教测试2位置.Location = new System.Drawing.Point(87, 133);
-            this.txtSk2示教测试2位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSk2示教测试2位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtSk2示教测试2位置.Name = "txtSk2示教测试2位置";
             this.txtSk2示教测试2位置.Size = new System.Drawing.Size(49, 21);
             this.txtSk2示教测试2位置.TabIndex = 78;
@@ -15868,7 +15868,7 @@
             // 
             this.btnSk2示教测试2位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnSk2示教测试2位置.Location = new System.Drawing.Point(4, 133);
-            this.btnSk2示教测试2位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSk2示教测试2位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnSk2示教测试2位置.Name = "btnSk2示教测试2位置";
             this.btnSk2示教测试2位置.Size = new System.Drawing.Size(78, 24);
             this.btnSk2示教测试2位置.TabIndex = 76;
@@ -15891,7 +15891,7 @@
             // txtSk2示教测试1位置
             // 
             this.txtSk2示教测试1位置.Location = new System.Drawing.Point(87, 104);
-            this.txtSk2示教测试1位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSk2示教测试1位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtSk2示教测试1位置.Name = "txtSk2示教测试1位置";
             this.txtSk2示教测试1位置.Size = new System.Drawing.Size(49, 21);
             this.txtSk2示教测试1位置.TabIndex = 75;
@@ -15900,7 +15900,7 @@
             // 
             this.btnSk2示教测试1位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnSk2示教测试1位置.Location = new System.Drawing.Point(4, 104);
-            this.btnSk2示教测试1位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSk2示教测试1位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnSk2示教测试1位置.Name = "btnSk2示教测试1位置";
             this.btnSk2示教测试1位置.Size = new System.Drawing.Size(78, 24);
             this.btnSk2示教测试1位置.TabIndex = 73;
@@ -15923,7 +15923,7 @@
             // txtSk2示教翻转位置
             // 
             this.txtSk2示教翻转位置.Location = new System.Drawing.Point(87, 75);
-            this.txtSk2示教翻转位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSk2示教翻转位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtSk2示教翻转位置.Name = "txtSk2示教翻转位置";
             this.txtSk2示教翻转位置.Size = new System.Drawing.Size(49, 21);
             this.txtSk2示教翻转位置.TabIndex = 72;
@@ -15932,7 +15932,7 @@
             // 
             this.btnSk2示教翻转位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnSk2示教翻转位置.Location = new System.Drawing.Point(4, 75);
-            this.btnSk2示教翻转位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSk2示教翻转位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnSk2示教翻转位置.Name = "btnSk2示教翻转位置";
             this.btnSk2示教翻转位置.Size = new System.Drawing.Size(78, 24);
             this.btnSk2示教翻转位置.TabIndex = 70;
@@ -15955,7 +15955,7 @@
             // txtSk2示教黑体位置
             // 
             this.txtSk2示教黑体位置.Location = new System.Drawing.Point(87, 46);
-            this.txtSk2示教黑体位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSk2示教黑体位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtSk2示教黑体位置.Name = "txtSk2示教黑体位置";
             this.txtSk2示教黑体位置.Size = new System.Drawing.Size(49, 21);
             this.txtSk2示教黑体位置.TabIndex = 69;
@@ -15964,7 +15964,7 @@
             // 
             this.btnSk2示教黑体位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnSk2示教黑体位置.Location = new System.Drawing.Point(4, 46);
-            this.btnSk2示教黑体位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSk2示教黑体位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnSk2示教黑体位置.Name = "btnSk2示教黑体位置";
             this.btnSk2示教黑体位置.Size = new System.Drawing.Size(78, 24);
             this.btnSk2示教黑体位置.TabIndex = 67;
@@ -15977,7 +15977,7 @@
             // 
             this.txtSk2示教当前位置.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSk2示教当前位置.Location = new System.Drawing.Point(59, 21);
-            this.txtSk2示教当前位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSk2示教当前位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtSk2示教当前位置.Name = "txtSk2示教当前位置";
             this.txtSk2示教当前位置.Size = new System.Drawing.Size(67, 14);
             this.txtSk2示教当前位置.TabIndex = 49;
@@ -16014,9 +16014,9 @@
             this.groupBox57.Controls.Add(this.label432);
             this.groupBox57.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox57.Location = new System.Drawing.Point(442, 19);
-            this.groupBox57.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox57.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox57.Name = "groupBox57";
-            this.groupBox57.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox57.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox57.Size = new System.Drawing.Size(180, 215);
             this.groupBox57.TabIndex = 102;
             this.groupBox57.TabStop = false;
@@ -16036,7 +16036,7 @@
             // txtSk1示教测试3位置
             // 
             this.txtSk1示教测试3位置.Location = new System.Drawing.Point(87, 162);
-            this.txtSk1示教测试3位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSk1示教测试3位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtSk1示教测试3位置.Name = "txtSk1示教测试3位置";
             this.txtSk1示教测试3位置.Size = new System.Drawing.Size(49, 21);
             this.txtSk1示教测试3位置.TabIndex = 81;
@@ -16045,7 +16045,7 @@
             // 
             this.btnSk1示教测试3位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnSk1示教测试3位置.Location = new System.Drawing.Point(4, 162);
-            this.btnSk1示教测试3位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSk1示教测试3位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnSk1示教测试3位置.Name = "btnSk1示教测试3位置";
             this.btnSk1示教测试3位置.Size = new System.Drawing.Size(78, 24);
             this.btnSk1示教测试3位置.TabIndex = 79;
@@ -16068,7 +16068,7 @@
             // txtSk1示教测试2位置
             // 
             this.txtSk1示教测试2位置.Location = new System.Drawing.Point(87, 133);
-            this.txtSk1示教测试2位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSk1示教测试2位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtSk1示教测试2位置.Name = "txtSk1示教测试2位置";
             this.txtSk1示教测试2位置.Size = new System.Drawing.Size(49, 21);
             this.txtSk1示教测试2位置.TabIndex = 78;
@@ -16077,7 +16077,7 @@
             // 
             this.btnSk1示教测试2位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnSk1示教测试2位置.Location = new System.Drawing.Point(4, 133);
-            this.btnSk1示教测试2位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSk1示教测试2位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnSk1示教测试2位置.Name = "btnSk1示教测试2位置";
             this.btnSk1示教测试2位置.Size = new System.Drawing.Size(78, 24);
             this.btnSk1示教测试2位置.TabIndex = 76;
@@ -16100,7 +16100,7 @@
             // txtSk1示教测试1位置
             // 
             this.txtSk1示教测试1位置.Location = new System.Drawing.Point(87, 104);
-            this.txtSk1示教测试1位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSk1示教测试1位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtSk1示教测试1位置.Name = "txtSk1示教测试1位置";
             this.txtSk1示教测试1位置.Size = new System.Drawing.Size(49, 21);
             this.txtSk1示教测试1位置.TabIndex = 75;
@@ -16109,7 +16109,7 @@
             // 
             this.btnSk1示教测试1位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnSk1示教测试1位置.Location = new System.Drawing.Point(4, 104);
-            this.btnSk1示教测试1位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSk1示教测试1位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnSk1示教测试1位置.Name = "btnSk1示教测试1位置";
             this.btnSk1示教测试1位置.Size = new System.Drawing.Size(78, 24);
             this.btnSk1示教测试1位置.TabIndex = 73;
@@ -16132,7 +16132,7 @@
             // txtSk1示教翻转位置
             // 
             this.txtSk1示教翻转位置.Location = new System.Drawing.Point(87, 75);
-            this.txtSk1示教翻转位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSk1示教翻转位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtSk1示教翻转位置.Name = "txtSk1示教翻转位置";
             this.txtSk1示教翻转位置.Size = new System.Drawing.Size(49, 21);
             this.txtSk1示教翻转位置.TabIndex = 72;
@@ -16141,7 +16141,7 @@
             // 
             this.btnSk1示教翻转位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnSk1示教翻转位置.Location = new System.Drawing.Point(4, 75);
-            this.btnSk1示教翻转位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSk1示教翻转位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnSk1示教翻转位置.Name = "btnSk1示教翻转位置";
             this.btnSk1示教翻转位置.Size = new System.Drawing.Size(78, 24);
             this.btnSk1示教翻转位置.TabIndex = 70;
@@ -16164,7 +16164,7 @@
             // txtSk1示教黑体位置
             // 
             this.txtSk1示教黑体位置.Location = new System.Drawing.Point(87, 46);
-            this.txtSk1示教黑体位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSk1示教黑体位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtSk1示教黑体位置.Name = "txtSk1示教黑体位置";
             this.txtSk1示教黑体位置.Size = new System.Drawing.Size(49, 21);
             this.txtSk1示教黑体位置.TabIndex = 69;
@@ -16173,7 +16173,7 @@
             // 
             this.btnSk1示教黑体位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnSk1示教黑体位置.Location = new System.Drawing.Point(4, 46);
-            this.btnSk1示教黑体位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSk1示教黑体位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnSk1示教黑体位置.Name = "btnSk1示教黑体位置";
             this.btnSk1示教黑体位置.Size = new System.Drawing.Size(78, 24);
             this.btnSk1示教黑体位置.TabIndex = 67;
@@ -16186,7 +16186,7 @@
             // 
             this.txtSk1示教当前位置.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSk1示教当前位置.Location = new System.Drawing.Point(59, 21);
-            this.txtSk1示教当前位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSk1示教当前位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtSk1示教当前位置.Name = "txtSk1示教当前位置";
             this.txtSk1示教当前位置.Size = new System.Drawing.Size(67, 14);
             this.txtSk1示教当前位置.TabIndex = 49;
@@ -16226,9 +16226,9 @@
             this.groupBox54.Controls.Add(this.label428);
             this.groupBox54.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox54.Location = new System.Drawing.Point(205, 273);
-            this.groupBox54.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox54.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox54.Name = "groupBox54";
-            this.groupBox54.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox54.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox54.Size = new System.Drawing.Size(180, 446);
             this.groupBox54.TabIndex = 101;
             this.groupBox54.TabStop = false;
@@ -16248,7 +16248,7 @@
             // txtBYZ示教视觉位置2
             // 
             this.txtBYZ示教视觉位置2.Location = new System.Drawing.Point(94, 186);
-            this.txtBYZ示教视觉位置2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBYZ示教视觉位置2.Margin = new System.Windows.Forms.Padding(2);
             this.txtBYZ示教视觉位置2.Name = "txtBYZ示教视觉位置2";
             this.txtBYZ示教视觉位置2.Size = new System.Drawing.Size(49, 21);
             this.txtBYZ示教视觉位置2.TabIndex = 87;
@@ -16257,7 +16257,7 @@
             // 
             this.btnBYZ轴socket视觉位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYZ轴socket视觉位置.Location = new System.Drawing.Point(4, 186);
-            this.btnBYZ轴socket视觉位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYZ轴socket视觉位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYZ轴socket视觉位置.Name = "btnBYZ轴socket视觉位置";
             this.btnBYZ轴socket视觉位置.Size = new System.Drawing.Size(86, 24);
             this.btnBYZ轴socket视觉位置.TabIndex = 85;
@@ -16280,7 +16280,7 @@
             // txtBYZ示教视觉位置3
             // 
             this.txtBYZ示教视觉位置3.Location = new System.Drawing.Point(94, 132);
-            this.txtBYZ示教视觉位置3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBYZ示教视觉位置3.Margin = new System.Windows.Forms.Padding(2);
             this.txtBYZ示教视觉位置3.Name = "txtBYZ示教视觉位置3";
             this.txtBYZ示教视觉位置3.Size = new System.Drawing.Size(49, 21);
             this.txtBYZ示教视觉位置3.TabIndex = 84;
@@ -16289,7 +16289,7 @@
             // 
             this.btnBYZ示教视觉位置3.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYZ示教视觉位置3.Location = new System.Drawing.Point(4, 132);
-            this.btnBYZ示教视觉位置3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYZ示教视觉位置3.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYZ示教视觉位置3.Name = "btnBYZ示教视觉位置3";
             this.btnBYZ示教视觉位置3.Size = new System.Drawing.Size(86, 24);
             this.btnBYZ示教视觉位置3.TabIndex = 82;
@@ -16312,7 +16312,7 @@
             // txtBYZ下料视觉位置
             // 
             this.txtBYZ下料视觉位置.Location = new System.Drawing.Point(94, 158);
-            this.txtBYZ下料视觉位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBYZ下料视觉位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtBYZ下料视觉位置.Name = "txtBYZ下料视觉位置";
             this.txtBYZ下料视觉位置.Size = new System.Drawing.Size(49, 21);
             this.txtBYZ下料视觉位置.TabIndex = 81;
@@ -16321,7 +16321,7 @@
             // 
             this.btnBYZ下料视觉位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYZ下料视觉位置.Location = new System.Drawing.Point(4, 158);
-            this.btnBYZ下料视觉位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYZ下料视觉位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYZ下料视觉位置.Name = "btnBYZ下料视觉位置";
             this.btnBYZ下料视觉位置.Size = new System.Drawing.Size(86, 24);
             this.btnBYZ下料视觉位置.TabIndex = 79;
@@ -16344,7 +16344,7 @@
             // txtBYZ示教视觉位置1
             // 
             this.txtBYZ示教视觉位置1.Location = new System.Drawing.Point(94, 104);
-            this.txtBYZ示教视觉位置1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBYZ示教视觉位置1.Margin = new System.Windows.Forms.Padding(2);
             this.txtBYZ示教视觉位置1.Name = "txtBYZ示教视觉位置1";
             this.txtBYZ示教视觉位置1.Size = new System.Drawing.Size(49, 21);
             this.txtBYZ示教视觉位置1.TabIndex = 75;
@@ -16353,7 +16353,7 @@
             // 
             this.btnBYZ示教视觉位置1.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYZ示教视觉位置1.Location = new System.Drawing.Point(4, 104);
-            this.btnBYZ示教视觉位置1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYZ示教视觉位置1.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYZ示教视觉位置1.Name = "btnBYZ示教视觉位置1";
             this.btnBYZ示教视觉位置1.Size = new System.Drawing.Size(86, 24);
             this.btnBYZ示教视觉位置1.TabIndex = 73;
@@ -16376,7 +16376,7 @@
             // txtBYZ示教上升位置
             // 
             this.txtBYZ示教上升位置.Location = new System.Drawing.Point(94, 75);
-            this.txtBYZ示教上升位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBYZ示教上升位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtBYZ示教上升位置.Name = "txtBYZ示教上升位置";
             this.txtBYZ示教上升位置.Size = new System.Drawing.Size(49, 21);
             this.txtBYZ示教上升位置.TabIndex = 72;
@@ -16385,7 +16385,7 @@
             // 
             this.btnBYZ示教上升位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYZ示教上升位置.Location = new System.Drawing.Point(4, 75);
-            this.btnBYZ示教上升位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYZ示教上升位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYZ示教上升位置.Name = "btnBYZ示教上升位置";
             this.btnBYZ示教上升位置.Size = new System.Drawing.Size(86, 24);
             this.btnBYZ示教上升位置.TabIndex = 70;
@@ -16408,7 +16408,7 @@
             // txtBYZ示教上料位置
             // 
             this.txtBYZ示教上料位置.Location = new System.Drawing.Point(94, 46);
-            this.txtBYZ示教上料位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBYZ示教上料位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtBYZ示教上料位置.Name = "txtBYZ示教上料位置";
             this.txtBYZ示教上料位置.Size = new System.Drawing.Size(49, 21);
             this.txtBYZ示教上料位置.TabIndex = 69;
@@ -16417,7 +16417,7 @@
             // 
             this.btnBYZ示教上料位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYZ示教上料位置.Location = new System.Drawing.Point(4, 46);
-            this.btnBYZ示教上料位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYZ示教上料位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYZ示教上料位置.Name = "btnBYZ示教上料位置";
             this.btnBYZ示教上料位置.Size = new System.Drawing.Size(86, 24);
             this.btnBYZ示教上料位置.TabIndex = 67;
@@ -16430,7 +16430,7 @@
             // 
             this.txtBYZ示教当前位置.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBYZ示教当前位置.Location = new System.Drawing.Point(59, 21);
-            this.txtBYZ示教当前位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBYZ示教当前位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtBYZ示教当前位置.Name = "txtBYZ示教当前位置";
             this.txtBYZ示教当前位置.Size = new System.Drawing.Size(67, 14);
             this.txtBYZ示教当前位置.TabIndex = 49;
@@ -16485,9 +16485,9 @@
             this.groupBox51.Controls.Add(this.label416);
             this.groupBox51.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox51.Location = new System.Drawing.Point(21, 19);
-            this.groupBox51.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox51.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox51.Name = "groupBox51";
-            this.groupBox51.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox51.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox51.Size = new System.Drawing.Size(364, 250);
             this.groupBox51.TabIndex = 99;
             this.groupBox51.TabStop = false;
@@ -16507,7 +16507,7 @@
             // txtBYX示教视觉2位置
             // 
             this.txtBYX示教视觉2位置.Location = new System.Drawing.Point(87, 103);
-            this.txtBYX示教视觉2位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBYX示教视觉2位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtBYX示教视觉2位置.Name = "txtBYX示教视觉2位置";
             this.txtBYX示教视觉2位置.Size = new System.Drawing.Size(49, 21);
             this.txtBYX示教视觉2位置.TabIndex = 99;
@@ -16516,7 +16516,7 @@
             // 
             this.btnBYX示教视觉2位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYX示教视觉2位置.Location = new System.Drawing.Point(4, 103);
-            this.btnBYX示教视觉2位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYX示教视觉2位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYX示教视觉2位置.Name = "btnBYX示教视觉2位置";
             this.btnBYX示教视觉2位置.Size = new System.Drawing.Size(78, 24);
             this.btnBYX示教视觉2位置.TabIndex = 97;
@@ -16539,7 +16539,7 @@
             // txtBYX示教第八列
             // 
             this.txtBYX示教第八列.Location = new System.Drawing.Point(267, 157);
-            this.txtBYX示教第八列.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBYX示教第八列.Margin = new System.Windows.Forms.Padding(2);
             this.txtBYX示教第八列.Name = "txtBYX示教第八列";
             this.txtBYX示教第八列.Size = new System.Drawing.Size(49, 21);
             this.txtBYX示教第八列.TabIndex = 96;
@@ -16548,7 +16548,7 @@
             // 
             this.btnBYX示教第八列.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYX示教第八列.Location = new System.Drawing.Point(184, 157);
-            this.btnBYX示教第八列.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYX示教第八列.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYX示教第八列.Name = "btnBYX示教第八列";
             this.btnBYX示教第八列.Size = new System.Drawing.Size(78, 24);
             this.btnBYX示教第八列.TabIndex = 94;
@@ -16571,7 +16571,7 @@
             // txtBYX示教第七列
             // 
             this.txtBYX示教第七列.Location = new System.Drawing.Point(267, 128);
-            this.txtBYX示教第七列.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBYX示教第七列.Margin = new System.Windows.Forms.Padding(2);
             this.txtBYX示教第七列.Name = "txtBYX示教第七列";
             this.txtBYX示教第七列.Size = new System.Drawing.Size(49, 21);
             this.txtBYX示教第七列.TabIndex = 93;
@@ -16580,7 +16580,7 @@
             // 
             this.btnBYX示教第七列.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYX示教第七列.Location = new System.Drawing.Point(184, 128);
-            this.btnBYX示教第七列.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYX示教第七列.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYX示教第七列.Name = "btnBYX示教第七列";
             this.btnBYX示教第七列.Size = new System.Drawing.Size(78, 24);
             this.btnBYX示教第七列.TabIndex = 91;
@@ -16603,7 +16603,7 @@
             // txtBYX示教第六列
             // 
             this.txtBYX示教第六列.Location = new System.Drawing.Point(267, 100);
-            this.txtBYX示教第六列.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBYX示教第六列.Margin = new System.Windows.Forms.Padding(2);
             this.txtBYX示教第六列.Name = "txtBYX示教第六列";
             this.txtBYX示教第六列.Size = new System.Drawing.Size(49, 21);
             this.txtBYX示教第六列.TabIndex = 90;
@@ -16612,7 +16612,7 @@
             // 
             this.btnBYX示教第六列.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYX示教第六列.Location = new System.Drawing.Point(184, 100);
-            this.btnBYX示教第六列.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYX示教第六列.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYX示教第六列.Name = "btnBYX示教第六列";
             this.btnBYX示教第六列.Size = new System.Drawing.Size(78, 24);
             this.btnBYX示教第六列.TabIndex = 88;
@@ -16635,7 +16635,7 @@
             // txtBYX示教第五列
             // 
             this.txtBYX示教第五列.Location = new System.Drawing.Point(267, 71);
-            this.txtBYX示教第五列.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBYX示教第五列.Margin = new System.Windows.Forms.Padding(2);
             this.txtBYX示教第五列.Name = "txtBYX示教第五列";
             this.txtBYX示教第五列.Size = new System.Drawing.Size(49, 21);
             this.txtBYX示教第五列.TabIndex = 87;
@@ -16644,7 +16644,7 @@
             // 
             this.btnBYX示教第五列.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYX示教第五列.Location = new System.Drawing.Point(184, 71);
-            this.btnBYX示教第五列.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYX示教第五列.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYX示教第五列.Name = "btnBYX示教第五列";
             this.btnBYX示教第五列.Size = new System.Drawing.Size(78, 24);
             this.btnBYX示教第五列.TabIndex = 85;
@@ -16667,7 +16667,7 @@
             // txtBYX示教第四列
             // 
             this.txtBYX示教第四列.Location = new System.Drawing.Point(267, 44);
-            this.txtBYX示教第四列.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBYX示教第四列.Margin = new System.Windows.Forms.Padding(2);
             this.txtBYX示教第四列.Name = "txtBYX示教第四列";
             this.txtBYX示教第四列.Size = new System.Drawing.Size(49, 21);
             this.txtBYX示教第四列.TabIndex = 84;
@@ -16676,7 +16676,7 @@
             // 
             this.btnBYX示教第四列.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYX示教第四列.Location = new System.Drawing.Point(184, 44);
-            this.btnBYX示教第四列.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYX示教第四列.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYX示教第四列.Name = "btnBYX示教第四列";
             this.btnBYX示教第四列.Size = new System.Drawing.Size(78, 24);
             this.btnBYX示教第四列.TabIndex = 82;
@@ -16699,7 +16699,7 @@
             // txtBYX示教第三列
             // 
             this.txtBYX示教第三列.Location = new System.Drawing.Point(87, 190);
-            this.txtBYX示教第三列.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBYX示教第三列.Margin = new System.Windows.Forms.Padding(2);
             this.txtBYX示教第三列.Name = "txtBYX示教第三列";
             this.txtBYX示教第三列.Size = new System.Drawing.Size(49, 21);
             this.txtBYX示教第三列.TabIndex = 81;
@@ -16708,7 +16708,7 @@
             // 
             this.btnBYX示教第三列.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYX示教第三列.Location = new System.Drawing.Point(4, 190);
-            this.btnBYX示教第三列.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYX示教第三列.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYX示教第三列.Name = "btnBYX示教第三列";
             this.btnBYX示教第三列.Size = new System.Drawing.Size(78, 24);
             this.btnBYX示教第三列.TabIndex = 79;
@@ -16731,7 +16731,7 @@
             // txtBYX示教第二列
             // 
             this.txtBYX示教第二列.Location = new System.Drawing.Point(87, 162);
-            this.txtBYX示教第二列.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBYX示教第二列.Margin = new System.Windows.Forms.Padding(2);
             this.txtBYX示教第二列.Name = "txtBYX示教第二列";
             this.txtBYX示教第二列.Size = new System.Drawing.Size(49, 21);
             this.txtBYX示教第二列.TabIndex = 78;
@@ -16740,7 +16740,7 @@
             // 
             this.btnBYX示教第二列.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYX示教第二列.Location = new System.Drawing.Point(4, 162);
-            this.btnBYX示教第二列.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYX示教第二列.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYX示教第二列.Name = "btnBYX示教第二列";
             this.btnBYX示教第二列.Size = new System.Drawing.Size(78, 24);
             this.btnBYX示教第二列.TabIndex = 76;
@@ -16763,7 +16763,7 @@
             // txtBYX示教第一列
             // 
             this.txtBYX示教第一列.Location = new System.Drawing.Point(87, 133);
-            this.txtBYX示教第一列.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBYX示教第一列.Margin = new System.Windows.Forms.Padding(2);
             this.txtBYX示教第一列.Name = "txtBYX示教第一列";
             this.txtBYX示教第一列.Size = new System.Drawing.Size(49, 21);
             this.txtBYX示教第一列.TabIndex = 75;
@@ -16772,7 +16772,7 @@
             // 
             this.btnBYX示教第一列.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYX示教第一列.Location = new System.Drawing.Point(4, 133);
-            this.btnBYX示教第一列.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYX示教第一列.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYX示教第一列.Name = "btnBYX示教第一列";
             this.btnBYX示教第一列.Size = new System.Drawing.Size(78, 24);
             this.btnBYX示教第一列.TabIndex = 73;
@@ -16795,7 +16795,7 @@
             // txtBYX示教视觉1位置
             // 
             this.txtBYX示教视觉1位置.Location = new System.Drawing.Point(87, 75);
-            this.txtBYX示教视觉1位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBYX示教视觉1位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtBYX示教视觉1位置.Name = "txtBYX示教视觉1位置";
             this.txtBYX示教视觉1位置.Size = new System.Drawing.Size(49, 21);
             this.txtBYX示教视觉1位置.TabIndex = 72;
@@ -16804,7 +16804,7 @@
             // 
             this.btnBYX示教视觉1位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYX示教视觉1位置.Location = new System.Drawing.Point(4, 75);
-            this.btnBYX示教视觉1位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYX示教视觉1位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYX示教视觉1位置.Name = "btnBYX示教视觉1位置";
             this.btnBYX示教视觉1位置.Size = new System.Drawing.Size(78, 24);
             this.btnBYX示教视觉1位置.TabIndex = 70;
@@ -16827,7 +16827,7 @@
             // txtBYX示教上料位置
             // 
             this.txtBYX示教上料位置.Location = new System.Drawing.Point(87, 46);
-            this.txtBYX示教上料位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBYX示教上料位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtBYX示教上料位置.Name = "txtBYX示教上料位置";
             this.txtBYX示教上料位置.Size = new System.Drawing.Size(49, 21);
             this.txtBYX示教上料位置.TabIndex = 69;
@@ -16836,7 +16836,7 @@
             // 
             this.btnBYX示教上料位置.BackColor = System.Drawing.SystemColors.Control;
             this.btnBYX示教上料位置.Location = new System.Drawing.Point(4, 46);
-            this.btnBYX示教上料位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnBYX示教上料位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYX示教上料位置.Name = "btnBYX示教上料位置";
             this.btnBYX示教上料位置.Size = new System.Drawing.Size(78, 24);
             this.btnBYX示教上料位置.TabIndex = 67;
@@ -16849,7 +16849,7 @@
             // 
             this.txtBYX示教当前位置.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBYX示教当前位置.Location = new System.Drawing.Point(59, 21);
-            this.txtBYX示教当前位置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBYX示教当前位置.Margin = new System.Windows.Forms.Padding(2);
             this.txtBYX示教当前位置.Name = "txtBYX示教当前位置";
             this.txtBYX示教当前位置.Size = new System.Drawing.Size(67, 14);
             this.txtBYX示教当前位置.TabIndex = 49;
@@ -16870,7 +16870,7 @@
             this.tabPage6.Controls.Add(this.InquireCondition);
             this.tabPage6.Controls.Add(this.PN_Data);
             this.tabPage6.Location = new System.Drawing.Point(4, 44);
-            this.tabPage6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage6.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Size = new System.Drawing.Size(1276, 756);
             this.tabPage6.TabIndex = 5;
@@ -17019,7 +17019,7 @@
             this.tabPage5.Controls.Add(this.groupBox65);
             this.tabPage5.Controls.Add(this.groupBox63);
             this.tabPage5.Location = new System.Drawing.Point(4, 44);
-            this.tabPage5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage5.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Size = new System.Drawing.Size(1276, 756);
             this.tabPage5.TabIndex = 4;
@@ -17076,9 +17076,9 @@
             this.groupBox62.Controls.Add(this.label525);
             this.groupBox62.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox62.Location = new System.Drawing.Point(245, 2);
-            this.groupBox62.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox62.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox62.Name = "groupBox62";
-            this.groupBox62.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox62.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox62.Size = new System.Drawing.Size(226, 411);
             this.groupBox62.TabIndex = 129;
             this.groupBox62.TabStop = false;
@@ -17087,7 +17087,7 @@
             // txt热辐射轴手动速度
             // 
             this.txt热辐射轴手动速度.Location = new System.Drawing.Point(120, 327);
-            this.txt热辐射轴手动速度.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt热辐射轴手动速度.Margin = new System.Windows.Forms.Padding(2);
             this.txt热辐射轴手动速度.Name = "txt热辐射轴手动速度";
             this.txt热辐射轴手动速度.Size = new System.Drawing.Size(49, 21);
             this.txt热辐射轴手动速度.TabIndex = 132;
@@ -17117,7 +17117,7 @@
             // txt热辐射轴手动速度设置
             // 
             this.txt热辐射轴手动速度设置.Location = new System.Drawing.Point(68, 327);
-            this.txt热辐射轴手动速度设置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt热辐射轴手动速度设置.Margin = new System.Windows.Forms.Padding(2);
             this.txt热辐射轴手动速度设置.Name = "txt热辐射轴手动速度设置";
             this.txt热辐射轴手动速度设置.Size = new System.Drawing.Size(49, 21);
             this.txt热辐射轴手动速度设置.TabIndex = 130;
@@ -17125,7 +17125,7 @@
             // txt黑体轴手动速度
             // 
             this.txt黑体轴手动速度.Location = new System.Drawing.Point(120, 296);
-            this.txt黑体轴手动速度.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt黑体轴手动速度.Margin = new System.Windows.Forms.Padding(2);
             this.txt黑体轴手动速度.Name = "txt黑体轴手动速度";
             this.txt黑体轴手动速度.Size = new System.Drawing.Size(49, 21);
             this.txt黑体轴手动速度.TabIndex = 124;
@@ -17133,7 +17133,7 @@
             // txt黑体轴手动速度设置
             // 
             this.txt黑体轴手动速度设置.Location = new System.Drawing.Point(68, 296);
-            this.txt黑体轴手动速度设置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt黑体轴手动速度设置.Margin = new System.Windows.Forms.Padding(2);
             this.txt黑体轴手动速度设置.Name = "txt黑体轴手动速度设置";
             this.txt黑体轴手动速度设置.Size = new System.Drawing.Size(49, 21);
             this.txt黑体轴手动速度设置.TabIndex = 99;
@@ -17143,7 +17143,7 @@
             // txtSocket轴手动速度
             // 
             this.txtSocket轴手动速度.Location = new System.Drawing.Point(120, 267);
-            this.txtSocket轴手动速度.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSocket轴手动速度.Margin = new System.Windows.Forms.Padding(2);
             this.txtSocket轴手动速度.Name = "txtSocket轴手动速度";
             this.txtSocket轴手动速度.Size = new System.Drawing.Size(49, 21);
             this.txtSocket轴手动速度.TabIndex = 123;
@@ -17151,7 +17151,7 @@
             // txt搬运Z轴手动速度
             // 
             this.txt搬运Z轴手动速度.Location = new System.Drawing.Point(120, 238);
-            this.txt搬运Z轴手动速度.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt搬运Z轴手动速度.Margin = new System.Windows.Forms.Padding(2);
             this.txt搬运Z轴手动速度.Name = "txt搬运Z轴手动速度";
             this.txt搬运Z轴手动速度.Size = new System.Drawing.Size(49, 21);
             this.txt搬运Z轴手动速度.TabIndex = 122;
@@ -17159,7 +17159,7 @@
             // txt搬运Y轴手动速度
             // 
             this.txt搬运Y轴手动速度.Location = new System.Drawing.Point(120, 210);
-            this.txt搬运Y轴手动速度.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt搬运Y轴手动速度.Margin = new System.Windows.Forms.Padding(2);
             this.txt搬运Y轴手动速度.Name = "txt搬运Y轴手动速度";
             this.txt搬运Y轴手动速度.Size = new System.Drawing.Size(49, 21);
             this.txt搬运Y轴手动速度.TabIndex = 121;
@@ -17167,7 +17167,7 @@
             // txtSocket轴手动速度设置
             // 
             this.txtSocket轴手动速度设置.Location = new System.Drawing.Point(68, 267);
-            this.txtSocket轴手动速度设置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSocket轴手动速度设置.Margin = new System.Windows.Forms.Padding(2);
             this.txtSocket轴手动速度设置.Name = "txtSocket轴手动速度设置";
             this.txtSocket轴手动速度设置.Size = new System.Drawing.Size(49, 21);
             this.txtSocket轴手动速度设置.TabIndex = 96;
@@ -17177,7 +17177,7 @@
             // txt搬运X轴手动速度
             // 
             this.txt搬运X轴手动速度.Location = new System.Drawing.Point(120, 181);
-            this.txt搬运X轴手动速度.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt搬运X轴手动速度.Margin = new System.Windows.Forms.Padding(2);
             this.txt搬运X轴手动速度.Name = "txt搬运X轴手动速度";
             this.txt搬运X轴手动速度.Size = new System.Drawing.Size(49, 21);
             this.txt搬运X轴手动速度.TabIndex = 120;
@@ -17207,7 +17207,7 @@
             // txt搬运Z轴手动速度设置
             // 
             this.txt搬运Z轴手动速度设置.Location = new System.Drawing.Point(68, 238);
-            this.txt搬运Z轴手动速度设置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt搬运Z轴手动速度设置.Margin = new System.Windows.Forms.Padding(2);
             this.txt搬运Z轴手动速度设置.Name = "txt搬运Z轴手动速度设置";
             this.txt搬运Z轴手动速度设置.Size = new System.Drawing.Size(49, 21);
             this.txt搬运Z轴手动速度设置.TabIndex = 93;
@@ -17250,7 +17250,7 @@
             // txt搬运Y轴手动速度设置
             // 
             this.txt搬运Y轴手动速度设置.Location = new System.Drawing.Point(68, 210);
-            this.txt搬运Y轴手动速度设置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt搬运Y轴手动速度设置.Margin = new System.Windows.Forms.Padding(2);
             this.txt搬运Y轴手动速度设置.Name = "txt搬运Y轴手动速度设置";
             this.txt搬运Y轴手动速度设置.Size = new System.Drawing.Size(49, 21);
             this.txt搬运Y轴手动速度设置.TabIndex = 90;
@@ -17271,7 +17271,7 @@
             // txt中空轴手动速度
             // 
             this.txt中空轴手动速度.Location = new System.Drawing.Point(120, 153);
-            this.txt中空轴手动速度.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt中空轴手动速度.Margin = new System.Windows.Forms.Padding(2);
             this.txt中空轴手动速度.Name = "txt中空轴手动速度";
             this.txt中空轴手动速度.Size = new System.Drawing.Size(49, 21);
             this.txt中空轴手动速度.TabIndex = 113;
@@ -17279,7 +17279,7 @@
             // txt平移轴手动速度
             // 
             this.txt平移轴手动速度.Location = new System.Drawing.Point(120, 124);
-            this.txt平移轴手动速度.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt平移轴手动速度.Margin = new System.Windows.Forms.Padding(2);
             this.txt平移轴手动速度.Name = "txt平移轴手动速度";
             this.txt平移轴手动速度.Size = new System.Drawing.Size(49, 21);
             this.txt平移轴手动速度.TabIndex = 112;
@@ -17287,7 +17287,7 @@
             // txt搬运X轴手动速度设置
             // 
             this.txt搬运X轴手动速度设置.Location = new System.Drawing.Point(68, 181);
-            this.txt搬运X轴手动速度设置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt搬运X轴手动速度设置.Margin = new System.Windows.Forms.Padding(2);
             this.txt搬运X轴手动速度设置.Name = "txt搬运X轴手动速度设置";
             this.txt搬运X轴手动速度设置.Size = new System.Drawing.Size(49, 21);
             this.txt搬运X轴手动速度设置.TabIndex = 87;
@@ -17297,7 +17297,7 @@
             // txt升降轴手动速度
             // 
             this.txt升降轴手动速度.Location = new System.Drawing.Point(120, 96);
-            this.txt升降轴手动速度.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt升降轴手动速度.Margin = new System.Windows.Forms.Padding(2);
             this.txt升降轴手动速度.Name = "txt升降轴手动速度";
             this.txt升降轴手动速度.Size = new System.Drawing.Size(49, 21);
             this.txt升降轴手动速度.TabIndex = 111;
@@ -17305,7 +17305,7 @@
             // txt上料Y轴手动速度
             // 
             this.txt上料Y轴手动速度.Location = new System.Drawing.Point(120, 68);
-            this.txt上料Y轴手动速度.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt上料Y轴手动速度.Margin = new System.Windows.Forms.Padding(2);
             this.txt上料Y轴手动速度.Name = "txt上料Y轴手动速度";
             this.txt上料Y轴手动速度.Size = new System.Drawing.Size(49, 21);
             this.txt上料Y轴手动速度.TabIndex = 110;
@@ -17313,7 +17313,7 @@
             // txt上料X轴手动速度
             // 
             this.txt上料X轴手动速度.Location = new System.Drawing.Point(120, 38);
-            this.txt上料X轴手动速度.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt上料X轴手动速度.Margin = new System.Windows.Forms.Padding(2);
             this.txt上料X轴手动速度.Name = "txt上料X轴手动速度";
             this.txt上料X轴手动速度.Size = new System.Drawing.Size(49, 21);
             this.txt上料X轴手动速度.TabIndex = 109;
@@ -17321,7 +17321,7 @@
             // txt中空轴手动速度设置
             // 
             this.txt中空轴手动速度设置.Location = new System.Drawing.Point(68, 153);
-            this.txt中空轴手动速度设置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt中空轴手动速度设置.Margin = new System.Windows.Forms.Padding(2);
             this.txt中空轴手动速度设置.Name = "txt中空轴手动速度设置";
             this.txt中空轴手动速度设置.Size = new System.Drawing.Size(49, 21);
             this.txt中空轴手动速度设置.TabIndex = 84;
@@ -17364,7 +17364,7 @@
             // txt平移轴手动速度设置
             // 
             this.txt平移轴手动速度设置.Location = new System.Drawing.Point(68, 124);
-            this.txt平移轴手动速度设置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt平移轴手动速度设置.Margin = new System.Windows.Forms.Padding(2);
             this.txt平移轴手动速度设置.Name = "txt平移轴手动速度设置";
             this.txt平移轴手动速度设置.Size = new System.Drawing.Size(49, 21);
             this.txt平移轴手动速度设置.TabIndex = 81;
@@ -17407,7 +17407,7 @@
             // txt升降轴手动速度设置
             // 
             this.txt升降轴手动速度设置.Location = new System.Drawing.Point(68, 95);
-            this.txt升降轴手动速度设置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt升降轴手动速度设置.Margin = new System.Windows.Forms.Padding(2);
             this.txt升降轴手动速度设置.Name = "txt升降轴手动速度设置";
             this.txt升降轴手动速度设置.Size = new System.Drawing.Size(49, 21);
             this.txt升降轴手动速度设置.TabIndex = 78;
@@ -17450,7 +17450,7 @@
             // txt上料Y轴手动速度设置
             // 
             this.txt上料Y轴手动速度设置.Location = new System.Drawing.Point(68, 66);
-            this.txt上料Y轴手动速度设置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt上料Y轴手动速度设置.Margin = new System.Windows.Forms.Padding(2);
             this.txt上料Y轴手动速度设置.Name = "txt上料Y轴手动速度设置";
             this.txt上料Y轴手动速度设置.Size = new System.Drawing.Size(49, 21);
             this.txt上料Y轴手动速度设置.TabIndex = 75;
@@ -17493,7 +17493,7 @@
             // txt上料X轴手动速度设置
             // 
             this.txt上料X轴手动速度设置.Location = new System.Drawing.Point(68, 38);
-            this.txt上料X轴手动速度设置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt上料X轴手动速度设置.Margin = new System.Windows.Forms.Padding(2);
             this.txt上料X轴手动速度设置.MaxLength = 3;
             this.txt上料X轴手动速度设置.Name = "txt上料X轴手动速度设置";
             this.txt上料X轴手动速度设置.Size = new System.Drawing.Size(49, 21);
@@ -17549,7 +17549,7 @@
             // 
             this.btn写入速度.BackColor = System.Drawing.SystemColors.Control;
             this.btn写入速度.Location = new System.Drawing.Point(7, 426);
-            this.btn写入速度.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn写入速度.Margin = new System.Windows.Forms.Padding(2);
             this.btn写入速度.Name = "btn写入速度";
             this.btn写入速度.Size = new System.Drawing.Size(94, 43);
             this.btn写入速度.TabIndex = 126;
@@ -17570,9 +17570,9 @@
             this.groupBox65.Controls.Add(this.btn门开关功能开关);
             this.groupBox65.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox65.Location = new System.Drawing.Point(482, 2);
-            this.groupBox65.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox65.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox65.Name = "groupBox65";
-            this.groupBox65.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox65.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox65.Size = new System.Drawing.Size(226, 411);
             this.groupBox65.TabIndex = 128;
             this.groupBox65.TabStop = false;
@@ -17582,7 +17582,7 @@
             // 
             this.btn光源关.BackColor = System.Drawing.SystemColors.Control;
             this.btn光源关.Location = new System.Drawing.Point(160, 97);
-            this.btn光源关.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn光源关.Margin = new System.Windows.Forms.Padding(2);
             this.btn光源关.Name = "btn光源关";
             this.btn光源关.Size = new System.Drawing.Size(54, 24);
             this.btn光源关.TabIndex = 45;
@@ -17606,7 +17606,7 @@
             // 
             this.btn光源开.BackColor = System.Drawing.SystemColors.Control;
             this.btn光源开.Location = new System.Drawing.Point(94, 97);
-            this.btn光源开.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn光源开.Margin = new System.Windows.Forms.Padding(2);
             this.btn光源开.Name = "btn光源开";
             this.btn光源开.Size = new System.Drawing.Size(54, 24);
             this.btn光源开.TabIndex = 44;
@@ -17619,7 +17619,7 @@
             // 
             this.btn真空发生功能关.BackColor = System.Drawing.SystemColors.Control;
             this.btn真空发生功能关.Location = new System.Drawing.Point(160, 68);
-            this.btn真空发生功能关.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn真空发生功能关.Margin = new System.Windows.Forms.Padding(2);
             this.btn真空发生功能关.Name = "btn真空发生功能关";
             this.btn真空发生功能关.Size = new System.Drawing.Size(54, 24);
             this.btn真空发生功能关.TabIndex = 106;
@@ -17632,7 +17632,7 @@
             // 
             this.btn真空发生功能开.BackColor = System.Drawing.SystemColors.Control;
             this.btn真空发生功能开.Location = new System.Drawing.Point(94, 68);
-            this.btn真空发生功能开.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn真空发生功能开.Margin = new System.Windows.Forms.Padding(2);
             this.btn真空发生功能开.Name = "btn真空发生功能开";
             this.btn真空发生功能开.Size = new System.Drawing.Size(54, 24);
             this.btn真空发生功能开.TabIndex = 105;
@@ -17656,7 +17656,7 @@
             // 
             this.btn门开关功能关闭.BackColor = System.Drawing.SystemColors.Control;
             this.btn门开关功能关闭.Location = new System.Drawing.Point(160, 38);
-            this.btn门开关功能关闭.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn门开关功能关闭.Margin = new System.Windows.Forms.Padding(2);
             this.btn门开关功能关闭.Name = "btn门开关功能关闭";
             this.btn门开关功能关闭.Size = new System.Drawing.Size(54, 24);
             this.btn门开关功能关闭.TabIndex = 103;
@@ -17680,7 +17680,7 @@
             // 
             this.btn门开关功能开关.BackColor = System.Drawing.SystemColors.Control;
             this.btn门开关功能开关.Location = new System.Drawing.Point(94, 38);
-            this.btn门开关功能开关.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn门开关功能开关.Margin = new System.Windows.Forms.Padding(2);
             this.btn门开关功能开关.Name = "btn门开关功能开关";
             this.btn门开关功能开关.Size = new System.Drawing.Size(54, 24);
             this.btn门开关功能开关.TabIndex = 70;
@@ -17739,9 +17739,9 @@
             this.groupBox63.Controls.Add(this.label463);
             this.groupBox63.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox63.Location = new System.Drawing.Point(7, 2);
-            this.groupBox63.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox63.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox63.Name = "groupBox63";
-            this.groupBox63.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox63.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox63.Size = new System.Drawing.Size(226, 411);
             this.groupBox63.TabIndex = 127;
             this.groupBox63.TabStop = false;
@@ -17750,7 +17750,7 @@
             // txt热辐射轴定位速度
             // 
             this.txt热辐射轴定位速度.Location = new System.Drawing.Point(119, 327);
-            this.txt热辐射轴定位速度.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt热辐射轴定位速度.Margin = new System.Windows.Forms.Padding(2);
             this.txt热辐射轴定位速度.Name = "txt热辐射轴定位速度";
             this.txt热辐射轴定位速度.Size = new System.Drawing.Size(49, 21);
             this.txt热辐射轴定位速度.TabIndex = 128;
@@ -17780,7 +17780,7 @@
             // txt热辐射轴定位速度设置
             // 
             this.txt热辐射轴定位速度设置.Location = new System.Drawing.Point(67, 327);
-            this.txt热辐射轴定位速度设置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt热辐射轴定位速度设置.Margin = new System.Windows.Forms.Padding(2);
             this.txt热辐射轴定位速度设置.Name = "txt热辐射轴定位速度设置";
             this.txt热辐射轴定位速度设置.Size = new System.Drawing.Size(49, 21);
             this.txt热辐射轴定位速度设置.TabIndex = 126;
@@ -17788,7 +17788,7 @@
             // txt黑体轴定位速度
             // 
             this.txt黑体轴定位速度.Location = new System.Drawing.Point(120, 296);
-            this.txt黑体轴定位速度.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt黑体轴定位速度.Margin = new System.Windows.Forms.Padding(2);
             this.txt黑体轴定位速度.Name = "txt黑体轴定位速度";
             this.txt黑体轴定位速度.Size = new System.Drawing.Size(49, 21);
             this.txt黑体轴定位速度.TabIndex = 124;
@@ -17796,7 +17796,7 @@
             // txtSocket轴定位速度
             // 
             this.txtSocket轴定位速度.Location = new System.Drawing.Point(120, 267);
-            this.txtSocket轴定位速度.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSocket轴定位速度.Margin = new System.Windows.Forms.Padding(2);
             this.txtSocket轴定位速度.Name = "txtSocket轴定位速度";
             this.txtSocket轴定位速度.Size = new System.Drawing.Size(49, 21);
             this.txtSocket轴定位速度.TabIndex = 123;
@@ -17804,7 +17804,7 @@
             // txt搬运Z轴定位速度
             // 
             this.txt搬运Z轴定位速度.Location = new System.Drawing.Point(120, 238);
-            this.txt搬运Z轴定位速度.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt搬运Z轴定位速度.Margin = new System.Windows.Forms.Padding(2);
             this.txt搬运Z轴定位速度.Name = "txt搬运Z轴定位速度";
             this.txt搬运Z轴定位速度.Size = new System.Drawing.Size(49, 21);
             this.txt搬运Z轴定位速度.TabIndex = 122;
@@ -17812,7 +17812,7 @@
             // txt搬运Y轴定位速度
             // 
             this.txt搬运Y轴定位速度.Location = new System.Drawing.Point(120, 210);
-            this.txt搬运Y轴定位速度.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt搬运Y轴定位速度.Margin = new System.Windows.Forms.Padding(2);
             this.txt搬运Y轴定位速度.Name = "txt搬运Y轴定位速度";
             this.txt搬运Y轴定位速度.Size = new System.Drawing.Size(49, 21);
             this.txt搬运Y轴定位速度.TabIndex = 121;
@@ -17820,7 +17820,7 @@
             // txt搬运X轴定位速度
             // 
             this.txt搬运X轴定位速度.Location = new System.Drawing.Point(120, 181);
-            this.txt搬运X轴定位速度.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt搬运X轴定位速度.Margin = new System.Windows.Forms.Padding(2);
             this.txt搬运X轴定位速度.Name = "txt搬运X轴定位速度";
             this.txt搬运X轴定位速度.Size = new System.Drawing.Size(49, 21);
             this.txt搬运X轴定位速度.TabIndex = 120;
@@ -17894,7 +17894,7 @@
             // txt中空轴定位速度
             // 
             this.txt中空轴定位速度.Location = new System.Drawing.Point(120, 153);
-            this.txt中空轴定位速度.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt中空轴定位速度.Margin = new System.Windows.Forms.Padding(2);
             this.txt中空轴定位速度.Name = "txt中空轴定位速度";
             this.txt中空轴定位速度.Size = new System.Drawing.Size(49, 21);
             this.txt中空轴定位速度.TabIndex = 113;
@@ -17902,7 +17902,7 @@
             // txt平移轴定位速度
             // 
             this.txt平移轴定位速度.Location = new System.Drawing.Point(120, 124);
-            this.txt平移轴定位速度.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt平移轴定位速度.Margin = new System.Windows.Forms.Padding(2);
             this.txt平移轴定位速度.Name = "txt平移轴定位速度";
             this.txt平移轴定位速度.Size = new System.Drawing.Size(49, 21);
             this.txt平移轴定位速度.TabIndex = 112;
@@ -17910,7 +17910,7 @@
             // txt中空轴定位速度设置
             // 
             this.txt中空轴定位速度设置.Location = new System.Drawing.Point(68, 153);
-            this.txt中空轴定位速度设置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt中空轴定位速度设置.Margin = new System.Windows.Forms.Padding(2);
             this.txt中空轴定位速度设置.Name = "txt中空轴定位速度设置";
             this.txt中空轴定位速度设置.Size = new System.Drawing.Size(49, 21);
             this.txt中空轴定位速度设置.TabIndex = 84;
@@ -17920,7 +17920,7 @@
             // txt上料X轴定位速度设置
             // 
             this.txt上料X轴定位速度设置.Location = new System.Drawing.Point(68, 38);
-            this.txt上料X轴定位速度设置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt上料X轴定位速度设置.Margin = new System.Windows.Forms.Padding(2);
             this.txt上料X轴定位速度设置.MaxLength = 3;
             this.txt上料X轴定位速度设置.Name = "txt上料X轴定位速度设置";
             this.txt上料X轴定位速度设置.Size = new System.Drawing.Size(49, 21);
@@ -17931,7 +17931,7 @@
             // txt升降轴定位速度
             // 
             this.txt升降轴定位速度.Location = new System.Drawing.Point(120, 96);
-            this.txt升降轴定位速度.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt升降轴定位速度.Margin = new System.Windows.Forms.Padding(2);
             this.txt升降轴定位速度.Name = "txt升降轴定位速度";
             this.txt升降轴定位速度.Size = new System.Drawing.Size(49, 21);
             this.txt升降轴定位速度.TabIndex = 111;
@@ -17939,7 +17939,7 @@
             // txt上料Y轴定位速度设置
             // 
             this.txt上料Y轴定位速度设置.Location = new System.Drawing.Point(68, 66);
-            this.txt上料Y轴定位速度设置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt上料Y轴定位速度设置.Margin = new System.Windows.Forms.Padding(2);
             this.txt上料Y轴定位速度设置.Name = "txt上料Y轴定位速度设置";
             this.txt上料Y轴定位速度设置.Size = new System.Drawing.Size(49, 21);
             this.txt上料Y轴定位速度设置.TabIndex = 75;
@@ -17949,7 +17949,7 @@
             // txt上料Y轴定位速度
             // 
             this.txt上料Y轴定位速度.Location = new System.Drawing.Point(120, 68);
-            this.txt上料Y轴定位速度.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt上料Y轴定位速度.Margin = new System.Windows.Forms.Padding(2);
             this.txt上料Y轴定位速度.Name = "txt上料Y轴定位速度";
             this.txt上料Y轴定位速度.Size = new System.Drawing.Size(49, 21);
             this.txt上料Y轴定位速度.TabIndex = 110;
@@ -17957,7 +17957,7 @@
             // txt升降轴定位速度设置
             // 
             this.txt升降轴定位速度设置.Location = new System.Drawing.Point(68, 95);
-            this.txt升降轴定位速度设置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt升降轴定位速度设置.Margin = new System.Windows.Forms.Padding(2);
             this.txt升降轴定位速度设置.Name = "txt升降轴定位速度设置";
             this.txt升降轴定位速度设置.Size = new System.Drawing.Size(49, 21);
             this.txt升降轴定位速度设置.TabIndex = 78;
@@ -17967,7 +17967,7 @@
             // txt上料X轴定位速度
             // 
             this.txt上料X轴定位速度.Location = new System.Drawing.Point(120, 38);
-            this.txt上料X轴定位速度.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt上料X轴定位速度.Margin = new System.Windows.Forms.Padding(2);
             this.txt上料X轴定位速度.Name = "txt上料X轴定位速度";
             this.txt上料X轴定位速度.Size = new System.Drawing.Size(49, 21);
             this.txt上料X轴定位速度.TabIndex = 109;
@@ -17975,7 +17975,7 @@
             // txt平移轴定位速度设置
             // 
             this.txt平移轴定位速度设置.Location = new System.Drawing.Point(68, 124);
-            this.txt平移轴定位速度设置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt平移轴定位速度设置.Margin = new System.Windows.Forms.Padding(2);
             this.txt平移轴定位速度设置.Name = "txt平移轴定位速度设置";
             this.txt平移轴定位速度设置.Size = new System.Drawing.Size(49, 21);
             this.txt平移轴定位速度设置.TabIndex = 81;
@@ -18062,7 +18062,7 @@
             // txt黑体轴定位速度设置
             // 
             this.txt黑体轴定位速度设置.Location = new System.Drawing.Point(68, 296);
-            this.txt黑体轴定位速度设置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt黑体轴定位速度设置.Margin = new System.Windows.Forms.Padding(2);
             this.txt黑体轴定位速度设置.Name = "txt黑体轴定位速度设置";
             this.txt黑体轴定位速度设置.Size = new System.Drawing.Size(49, 21);
             this.txt黑体轴定位速度设置.TabIndex = 99;
@@ -18083,7 +18083,7 @@
             // txtSocket轴定位速度设置
             // 
             this.txtSocket轴定位速度设置.Location = new System.Drawing.Point(68, 267);
-            this.txtSocket轴定位速度设置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSocket轴定位速度设置.Margin = new System.Windows.Forms.Padding(2);
             this.txtSocket轴定位速度设置.Name = "txtSocket轴定位速度设置";
             this.txtSocket轴定位速度设置.Size = new System.Drawing.Size(49, 21);
             this.txtSocket轴定位速度设置.TabIndex = 96;
@@ -18104,7 +18104,7 @@
             // txt搬运Z轴定位速度设置
             // 
             this.txt搬运Z轴定位速度设置.Location = new System.Drawing.Point(68, 238);
-            this.txt搬运Z轴定位速度设置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt搬运Z轴定位速度设置.Margin = new System.Windows.Forms.Padding(2);
             this.txt搬运Z轴定位速度设置.Name = "txt搬运Z轴定位速度设置";
             this.txt搬运Z轴定位速度设置.Size = new System.Drawing.Size(49, 21);
             this.txt搬运Z轴定位速度设置.TabIndex = 93;
@@ -18125,7 +18125,7 @@
             // txt搬运Y轴定位速度设置
             // 
             this.txt搬运Y轴定位速度设置.Location = new System.Drawing.Point(68, 210);
-            this.txt搬运Y轴定位速度设置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt搬运Y轴定位速度设置.Margin = new System.Windows.Forms.Padding(2);
             this.txt搬运Y轴定位速度设置.Name = "txt搬运Y轴定位速度设置";
             this.txt搬运Y轴定位速度设置.Size = new System.Drawing.Size(49, 21);
             this.txt搬运Y轴定位速度设置.TabIndex = 90;
@@ -18146,7 +18146,7 @@
             // txt搬运X轴定位速度设置
             // 
             this.txt搬运X轴定位速度设置.Location = new System.Drawing.Point(68, 181);
-            this.txt搬运X轴定位速度设置.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt搬运X轴定位速度设置.Margin = new System.Windows.Forms.Padding(2);
             this.txt搬运X轴定位速度设置.Name = "txt搬运X轴定位速度设置";
             this.txt搬运X轴定位速度设置.Size = new System.Drawing.Size(49, 21);
             this.txt搬运X轴定位速度设置.TabIndex = 87;
@@ -18215,7 +18215,7 @@
             this.ClientSize = new System.Drawing.Size(1284, 804);
             this.Controls.Add(this.TC_Main);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FT";

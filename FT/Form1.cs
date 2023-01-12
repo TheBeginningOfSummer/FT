@@ -80,6 +80,7 @@ namespace FT
                 alarmInformation = JsonManager.ReadJsonString<Dictionary<string, string>>(Environment.CurrentDirectory + "\\Configuration\\", "Alarm");
 
                 DataUpdate();
+                InterfaceUpdate();
                 AlarmCheck();
             }
             catch (Exception e)
@@ -96,10 +97,10 @@ namespace FT
                 {
                     try
                     {
-                        Thread.Sleep(50);
-                        logfile.Writelog("更新数据触发", "更新数据");
+                        Thread.Sleep(10);
+                        //logfile.Writelog("更新数据触发", "更新数据记录");
                         communication.RefreshData();
-                        logfile.Writelog("更新数据结束", "更新数据");
+                        //logfile.Writelog("更新数据结束", "更新数据记录");
                         
                         #region 数据处理
                         if (communication.ReadTestInformation[20] != "" && communication.ReadTestInformation[20] != null)
@@ -165,7 +166,24 @@ namespace FT
                             logfile.Writelog("PLC标志位结束", "PLC标志位记录");
                         }
                         #endregion
+                    }
+                    catch (Exception e)
+                    {
+                        logfile.Writelog($"PLC读取数据。{e.Message}", "更新数据记录");
+                    }
+                }
+            });
+        }
 
+        public void InterfaceUpdate()
+        {
+            Task.Run(() =>
+            {
+                while (true)
+                {
+                    try
+                    {
+                        Thread.Sleep(20);
                         #region 更新数据
                         //示教界面数据更新
                         SetTextBoxText(txtX示教吸1实盘第一列, communication.ReadLocation[24]);
@@ -294,8 +312,6 @@ namespace FT
                         SetTextBoxText(txt托盘下料个数, communication.ReadLocation[61]);
                         SetTextBoxText(txtSokt上料个数, communication.ReadLocation[122]);
                         SetTextBoxText(txtSokt下料个数, communication.ReadLocation[123]);
-                       
-
 
                         //当前位置
                         SetTextBoxText(txtX示教当前位置, communication.ReadLocation[0]);
@@ -316,7 +332,7 @@ namespace FT
                         SetTextBoxText(txtBk2示教当前位置, communication.ReadLocation[15]);
                         SetTextBoxText(txtBk3示教当前位置, communication.ReadLocation[16]);
                         SetTextBoxText(txtBk4示教当前位置, communication.ReadLocation[17]);
-                        
+
 
                         SetTextBoxText(txtX当前位置, communication.ReadLocation[0]);
                         SetTextBoxText(txtY当前位置, communication.ReadLocation[1]);
@@ -668,8 +684,7 @@ namespace FT
                     }
                     catch (Exception e)
                     {
-                        logfile.Writelog(e.Message, "更新数据");
-                        //Invoke(new Action(() => { MessageBox.Show(e.Message, "信息更新"); }));
+                        logfile.Writelog($"界面数据更新。{e.Message}", "更新数据记录");
                     }
                 }
             });
@@ -804,7 +819,6 @@ namespace FT
                 MessageBox.Show(this, "保存EXCEL成功", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
-
         #endregion
 
         #region 数据库操作
@@ -5548,7 +5562,6 @@ namespace FT
                 //取消退出
                 e.Cancel = true;
             }
-
         }
 
 

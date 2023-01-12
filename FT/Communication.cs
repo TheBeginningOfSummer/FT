@@ -123,28 +123,28 @@ namespace FT
             try
             {
                 #region 读IO信息
-                //ReadBoolVariables(ReadPLCIO, "PlcOutIO", 0, 111);
-                //ReadBoolVariables(ReadPLCIO, "PlcOutIO", 128, 135);
-                ReadBoolVariables(ReadPLCIO, "PlcOutIO", 0, 162);
-                foreach (var item in ReadPLCIO)
-                {
-                    logfile.Writelog(item.ToString(), "IO信息原值");
-                }
-                string[] keys = compolet.GetVariablesKey(plcOutIOName);
-                foreach (var item in keys)
-                {
-                    logfile.Writelog(item, "IO信息键值");
-                }
-                keys = compolet.GetVariablesValue(plcOutIOName);
-                foreach (var item in keys)
-                {
-                    logfile.Writelog(item, "IO信息字符串值");
-                }
-                compolet.ReadVariablesBool(plcOutIOName).CopyTo(ReadPLCIO, 0);
-                foreach (var item in ReadPLCIO)
-                {
-                    logfile.Writelog(item.ToString(), "IO信息");
-                }
+                ReadBoolVariables(ReadPLCIO, "PlcOutIO", 0, 111);
+                ReadBoolVariables(ReadPLCIO, "PlcOutIO", 128, 135);
+                //ReadBoolVariables(ReadPLCIO, "PlcOutIO", 0, 162);
+                //foreach (var item in ReadPLCIO)
+                //{
+                //    logfile.Writelog(item.ToString(), "IO信息原值");
+                //}
+                //string[] keys = compolet.GetVariablesKey(plcOutIOName);
+                //foreach (var item in keys)
+                //{
+                //    logfile.Writelog(item, "IO信息键值");
+                //}
+                //keys = compolet.GetVariablesValue(plcOutIOName);
+                //foreach (var item in keys)
+                //{
+                //    logfile.Writelog(item, "IO信息字符串值");
+                //}
+                //compolet.ReadVariablesBool(plcOutIOName).CopyTo(ReadPLCIO, 0);
+                //foreach (var item in ReadPLCIO)
+                //{
+                //    logfile.Writelog(item.ToString(), "IO信息");
+                //}
                 #endregion
 
                 #region 读位置信息
@@ -153,69 +153,69 @@ namespace FT
                     ReadLocation[i] = compolet.ReadVariableReal("PlcOutLocation[" + i.ToString() + "]");
                     logfile.Writelog(ReadLocation[i].ToString(), "位置信息原值");
                 }
-                keys = compolet.GetVariablesKey(plcOutLocationName);
-                foreach (var item in keys)
-                {
-                    logfile.Writelog(item, "位置信息键值");
-                }
-                keys = compolet.GetVariablesValue(plcOutLocationName);
-                foreach (var item in keys)
-                {
-                    logfile.Writelog(item, "位置信息字符串值");
-                }
-                compolet.ReadVariablesReal(plcOutLocationName).CopyTo(ReadLocation, 0);
-                foreach (var item in ReadLocation)
-                {
-                    logfile.Writelog(item.ToString(), "位置信息");
-                }
+                //keys = compolet.GetVariablesKey(plcOutLocationName);
+                //foreach (var item in keys)
+                //{
+                //    logfile.Writelog(item, "位置信息键值");
+                //}
+                //keys = compolet.GetVariablesValue(plcOutLocationName);
+                //foreach (var item in keys)
+                //{
+                //    logfile.Writelog(item, "位置信息字符串值");
+                //}
+                //compolet.ReadVariablesReal(plcOutLocationName).CopyTo(ReadLocation, 0);
+                //foreach (var item in ReadLocation)
+                //{
+                //    logfile.Writelog(item.ToString(), "位置信息");
+                //}
                 #endregion
 
                 #region 读报警信息
-                //ReadBoolVariables(ReadPLCAlarm, "PlcOutAlarm", 0, 88);
-                //ReadBoolVariables(ReadPLCAlarm, "PlcOutAlarm", 100, 158);
-                //ReadBoolVariables(ReadPLCAlarm, "PlcOutAlarm", 170, 173);
-                ReadBoolVariables(ReadPLCAlarm, "PlcOutAlarm", 0, 173);
-                foreach (var item in ReadPLCAlarm)
-                {
-                    logfile.Writelog(item.ToString(), "报警信息原值");
-                }
-                keys = compolet.GetVariablesKey(plcOutAlarmName);
-                foreach (var item in keys)
-                {
-                    logfile.Writelog(item, "报警信息键值");
-                }
-                keys = compolet.GetVariablesValue(plcOutAlarmName);
-                foreach (var item in keys)
-                {
-                    logfile.Writelog(item, "报警信息字符串值");
-                }
-                compolet.ReadVariablesBool(plcOutAlarmName).CopyTo(ReadPLCAlarm, 0);
-                foreach (var item in ReadPLCAlarm)
-                {
-                    logfile.Writelog(item.ToString(), "报警信息");
-                }
+                ReadBoolVariables(ReadPLCAlarm, "PlcOutAlarm", 0, 88);
+                ReadBoolVariables(ReadPLCAlarm, "PlcOutAlarm", 100, 158);
+                ReadBoolVariables(ReadPLCAlarm, "PlcOutAlarm", 170, 173);
+                //ReadBoolVariables(ReadPLCAlarm, "PlcOutAlarm", 0, 173);
+                //foreach (var item in ReadPLCAlarm)
+                //{
+                //    logfile.Writelog(item.ToString(), "报警信息原值");
+                //}
+                //keys = compolet.GetVariablesKey(plcOutAlarmName);
+                //foreach (var item in keys)
+                //{
+                //    logfile.Writelog(item, "报警信息键值");
+                //}
+                //keys = compolet.GetVariablesValue(plcOutAlarmName);
+                //foreach (var item in keys)
+                //{
+                //    logfile.Writelog(item, "报警信息字符串值");
+                //}
+                //compolet.ReadVariablesBool(plcOutAlarmName).CopyTo(ReadPLCAlarm, 0);
+                //foreach (var item in ReadPLCAlarm)
+                //{
+                //    logfile.Writelog(item.ToString(), "报警信息");
+                //}
                 #endregion
 
                 #region 读参数信息
-                //for (int i = 0; i < 35; i++)
+                for (int i = 0; i < 35; i++)
+                {
+                    ReadPLCPmt[i] = compolet.ReadVariableReal("PlcInPmt[" + i.ToString() + "]");
+                }
+                //keys = compolet.GetVariablesKey(plcInPmtName);
+                //foreach (var item in keys)
                 //{
-                //    ReadPLCPmt[i] = compolet.ReadVariableReal("PlcInPmt[" + i.ToString() + "]");
+                //    logfile.Writelog(item, "参数信息键值");
                 //}
-                keys = compolet.GetVariablesKey(plcInPmtName);
-                foreach (var item in keys)
-                {
-                    logfile.Writelog(item, "参数信息键值");
-                }
-                keys = compolet.GetVariablesValue(plcInPmtName);
-                foreach (var item in keys)
-                {
-                    logfile.Writelog(item, "参数信息字符串值");
-                }
-                compolet.ReadVariablesReal(plcInPmtName).CopyTo(ReadPLCPmt, 0);
-                foreach (var item in ReadPLCPmt)
-                {
-                    logfile.Writelog(item.ToString(), "参数信息");
-                }
+                //keys = compolet.GetVariablesValue(plcInPmtName);
+                //foreach (var item in keys)
+                //{
+                //    logfile.Writelog(item, "参数信息字符串值");
+                //}
+                //compolet.ReadVariablesReal(plcInPmtName).CopyTo(ReadPLCPmt, 0);
+                //foreach (var item in ReadPLCPmt)
+                //{
+                //    logfile.Writelog(item.ToString(), "参数信息");
+                //}
                 #endregion
 
                 #region 读取测试信息（字符串变量）
