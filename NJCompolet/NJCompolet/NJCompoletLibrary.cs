@@ -6,24 +6,30 @@ using System.Text;
 using System.Threading.Tasks;
 using OMRON.Compolet.CIP;
 
-namespace NJCompolet
+namespace CIPCommunication
 {
     public class NJCompoletLibrary
     {
-        private OMRON.Compolet.CIP.NJCompolet compolet;
-        private OMRON.Compolet.CIP.CIPPortCompolet portCompolet;
+        private CIPPortCompolet portCompolet;
+        private NJCompolet compolet;
 
-        public DateTime currentTime;
-        public string PeerAddress = "192.168.250.6";
-        public int LocalPort = 2;
+        public DateTime CurrentTime;
+        public string PeerAddress;
+        public int LocalPort;
+
+        public NJCompoletLibrary(string peerAddress = "192.168.250.6", int localPort = 2)
+        {
+            PeerAddress = peerAddress;
+            LocalPort = localPort;
+        }
 
         /// <summary>
         /// 开启
         /// </summary>
         public void Open()
         {
-            this.portCompolet = new OMRON.Compolet.CIP.CIPPortCompolet();
-            this.compolet = new OMRON.Compolet.CIP.NJCompolet();
+            this.portCompolet = new CIPPortCompolet();
+            this.compolet = new NJCompolet();
 
             if (!portCompolet.IsOpened(LocalPort))
             {
@@ -36,9 +42,10 @@ namespace NJCompolet
                     throw ex;
                 }
             }
+
             if (portCompolet.IsOpened(LocalPort))
             {
-                this.compolet.ConnectionType = OMRON.Compolet.CIP.ConnectionType.UCMM;
+                this.compolet.ConnectionType = ConnectionType.UCMM;
                 this.compolet.DontFragment = false;
                 this.compolet.HeartBeatTimer = 0;
                 this.compolet.LocalPort = LocalPort;
@@ -54,7 +61,6 @@ namespace NJCompolet
                 }
             }
         }
-
         /// <summary>
         /// 关闭
         /// </summary>
@@ -75,10 +81,25 @@ namespace NJCompolet
             }
         }
 
+        private void njCompolet1_OnHeartBeatTimer(object sender, System.EventArgs e)
+        {
+            if (!portCompolet.IsOpened(LocalPort)) return;
+            try
+            {
+                DateTime date = (DateTime)this.compolet.ReadVariable("_CurrentTime");
+                this.CurrentTime = date;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        #region 读数据
         /// <summary>
         /// 读参数
         /// </summary>
-        /// <param name="variableName"></param>
+        /// <param name="variableName">变量名</param>
         /// <returns></returns>
         public int ReadVariableInt(string variableName)//int
         {
@@ -135,7 +156,11 @@ namespace NJCompolet
                 return out2;
             }
         }
-
+        /// <summary>
+        /// 读多个数据
+        /// </summary>
+        /// <param name="variableNames">数据变量名</param>
+        /// <returns></returns>
         public bool[] ReadVariablesBool(string[] variableNames)
         {
             if (!portCompolet.IsOpened(LocalPort)) return new bool[] { false };
@@ -172,6 +197,14 @@ namespace NJCompolet
             return values;
         }
 
+        public Hashtable GetHashtable(string[] variableNames)
+        {
+            if (!portCompolet.IsOpened(LocalPort))
+                return null;
+            else
+                return compolet.ReadVariableMultiple(variableNames);
+        }
+
         public string[] GetVariablesKey(string[] variableNames)
         {
             if (!portCompolet.IsOpened(LocalPort)) return new string[] { "null" };
@@ -195,35 +228,22 @@ namespace NJCompolet
             Array.Sort(keys, values);
             return values;
         }
+        #endregion
 
-        /// <summary>
-        /// 写参数q
-        /// </summary>
-        /// <param name="variableName"></param>
-        /// <param name="writeData"></param>
+        #region 写数据
         public void WriteVariable(string variableName, object writeData)
         {
-            if (!portCompolet.IsOpened(LocalPort))
-                return;
-
+            if (!portCompolet.IsOpened(LocalPort)) return;
             this.compolet.WriteVariable(variableName, writeData);
         }
 
-        private void njCompolet1_OnHeartBeatTimer(object sender, System.EventArgs e)
+        public void WriteVariable<T>(string variableName, T variable)
         {
-            if (!portCompolet.IsOpened(LocalPort))
-                return;
-
-            try
-            {
-                DateTime date = (DateTime)this.compolet.ReadVariable("_CurrentTime");
-                this.currentTime = date;
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
+            if (!portCompolet.IsOpened(LocalPort)) return;
+            this.compolet.WriteVariable(variableName, variable);
         }
+        #endregion
+
     }
 }
 

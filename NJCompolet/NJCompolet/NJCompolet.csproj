@@ -7,8 +7,8 @@
     <ProjectGuid>{88CBB760-F277-4629-8D8A-1E104AC89360}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NJCompolet</RootNamespace>
-    <AssemblyName>NJCompolet</AssemblyName>
+    <RootNamespace>CIPCommunication</RootNamespace>
+    <AssemblyName>CIPCommunication</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />

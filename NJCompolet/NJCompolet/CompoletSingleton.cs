@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 
-namespace NJCompolet
+namespace CIPCommunication
 {
     public class CompoletSingleton
     {
@@ -23,7 +23,6 @@ namespace NJCompolet
             //{
             instance = new CompoletSingleton();
             //}
-
             return instance.compolet;
         }
     }
