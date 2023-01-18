@@ -48,9 +48,9 @@ namespace FT
             if (MappingLayout == null)
             {
                 MappingLayout = new List<Position>();
-                MappingLayout.Add(new Position(20, 20));
-                MappingLayout.Add(new Position(60, 20));
-                MappingLayout.Add(new Position(100, 20));
+                MappingLayout.Add(new Position(20, 30));
+                MappingLayout.Add(new Position(220, 30));
+                MappingLayout.Add(new Position(420, 30));
                 JsonManager.SaveJsonString($"{Environment.CurrentDirectory}\\Configuration\\", "MappingLayout", MappingLayout);
             }
         }
