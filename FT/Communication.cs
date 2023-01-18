@@ -5,7 +5,8 @@ using System.Data.SQLite;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using NJCompolet;
+//using NJCompolet;
+using CIPCommunication;
 
 namespace FT
 {
@@ -120,6 +121,7 @@ namespace FT
             //}
 
             //读取PLC地址
+
             try
             {
                 #region 读IO信息

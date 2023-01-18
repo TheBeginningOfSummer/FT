@@ -57,23 +57,24 @@ namespace FT
                 DTP_MaxTime.Value = Convert.ToDateTime(DateTime.Now.AddDays(1));
                 #endregion
 
-                #region 托盘数据
-                //托盘数据
+                #region 托盘数据管理
+                //托盘数据管理类初始化
                 trayManager = new TrayManager();
                 //托盘类型设置
                 foreach (var trayType in trayManager.TrayType)
                 {
                     CB_TypeOfTray.Items.Add(trayType.Key);
                 }
-                trayType = CB_TypeOfTray.Text;
-
-                PN_Trays.Controls.Clear();
+                //trayType = "Default";
+                //加载上次的托盘状态
                 trayManager.LoadTraysData(trayType);
-                //trayManager.InitializeTrays("托盘1");
-                foreach (var tray in trayManager.Trays)
-                {
-                    tray.UpdateTrayLabel(PN_Trays);
-                }
+                //更新托盘状态到界面
+                trayManager.UpdateTrayControls(PN_Trays);
+                //PN_Trays.Controls.Clear();
+                //foreach (var tray in trayManager.Trays)
+                //{
+                //    tray.UpdateTrayLabel(PN_Trays);
+                //}
                 #endregion
 
                 //报警信息读取
@@ -118,12 +119,13 @@ namespace FT
                             if (trayType != "" && trayType != " ")
                             {
                                 //初始化
-                                PN_Trays.Invoke(new Action(() => PN_Trays.Controls.Clear()));
                                 trayManager.InitializeTrays(trayType);
-                                foreach (var tray in trayManager.Trays)
-                                {
-                                    tray.UpdateTrayLabel(PN_Trays);
-                                }
+                                trayManager.UpdateTrayControls(PN_Trays);
+                                //PN_Trays.Invoke(new Action(() => PN_Trays.Controls.Clear()));
+                                //foreach (var tray in trayManager.Trays)
+                                //{
+                                //    tray.UpdateTrayLabel(PN_Trays);
+                                //}
                                 //托盘初始化完成,PLC检测到此值为true后，将PLC标志位[2]置为false
                                 communication.WriteVariable(true, "PC标志位[2]");
                             }
@@ -751,7 +753,8 @@ namespace FT
         //实时显示Text内容方法
         public void SetTextBoxText<T>(TextBox textBox, T variable)
         {
-            textBox.Invoke(new Action(() => textBox.Text = variable.ToString()));
+            if (variable != null)
+                textBox.Invoke(new Action(() => textBox.Text = variable.ToString()));
         }
 
         //信息追溯导出EXCEL

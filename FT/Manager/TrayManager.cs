@@ -3,17 +3,19 @@ using MyToolkit;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Windows.Forms;
 
 namespace FT
 {
     public class TrayManager
     {
+        //托盘索引，区分托盘是第几盘
         public int TrayIndex;
         //托盘种类
         public Dictionary<string, TypeOfTray> TrayType;
         //Mapping图布局
         public List<Position> MappingLayout;
-        //上料盘数据
+        //当前所有的上料盘数据
         public List<Tray> Trays = new List<Tray>();
 
         LogFile logfile = new LogFile();
@@ -23,19 +25,54 @@ namespace FT
             try
             {
                 if (Trays == null) Trays = new List<Tray>();
+                InitialzeMappingLayout();
+                InitializeTrayType();
                 //读取托盘种类配置文件
-                TrayType = JsonManager.ReadJsonString<Dictionary<string, TypeOfTray>>(Environment.CurrentDirectory + "\\Configuration\\", "TypeOfTray");
+                //TrayType = JsonManager.ReadJsonString<Dictionary<string, TypeOfTray>>(Environment.CurrentDirectory + "\\Configuration\\", "TypeOfTray");
                 //读取Mapping图布局配置文件
-                MappingLayout = JsonManager.ReadJsonString<List<Position>>(Environment.CurrentDirectory + "\\Configuration\\", "MappingLayout");
+                //MappingLayout = JsonManager.ReadJsonString<List<Position>>(Environment.CurrentDirectory + "\\Configuration\\", "MappingLayout");
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                //logfile.Writelog("读取托盘配置数据：" + e.Message);
+                logfile.Writelog("读取托盘配置数据发生错误。" + e.Message, "托盘配置读取");
             }
         }
 
         /// <summary>
-        /// 按托盘种类初始化托盘
+        /// 初始化Mapping图的位置配置文件，如果没有则创建默认配置
+        /// </summary>
+        public void InitialzeMappingLayout()
+        {
+            //读取Mapping图布局配置文件
+            MappingLayout = JsonManager.ReadJsonString<List<Position>>(Environment.CurrentDirectory + "\\Configuration\\", "MappingLayout");
+            if (MappingLayout == null)
+            {
+                MappingLayout = new List<Position>();
+                MappingLayout.Add(new Position(20, 20));
+                MappingLayout.Add(new Position(60, 20));
+                MappingLayout.Add(new Position(100, 20));
+                JsonManager.SaveJsonString($"{Environment.CurrentDirectory}\\Configuration\\", "MappingLayout", MappingLayout);
+            }
+        }
+
+        /// <summary>
+        /// 初始化托盘种类，当没有配置文件时创建默认配置
+        /// </summary>
+        public void InitializeTrayType()
+        {
+            //读取托盘种类配置文件
+            TrayType = JsonManager.ReadJsonString<Dictionary<string, TypeOfTray>>(Environment.CurrentDirectory + "\\Configuration\\", "TypeOfTray");
+            if (TrayType == null)
+            {
+                TrayType = new Dictionary<string, TypeOfTray>();
+                TrayType.Add("Default", new TypeOfTray() { Index = 9999, TrayType = "Default", Length = 5, Width = 5 });
+                JsonManager.SaveJsonString($"{Environment.CurrentDirectory}\\Configuration\\", "TypeOfTray", TrayType);
+            }
+        }
+
+        /// <summary>
+        /// 按托盘种类初始化托盘，每个盘在界面上的位置是固定的
+        /// 按照每个盘在界面的位置来初始化
         /// </summary>
         /// <param name="trayType">托盘种类</param>
         public void InitializeTrays(string trayType)
@@ -59,7 +96,7 @@ namespace FT
         }
 
         /// <summary>
-        /// 设置托盘指定位置内探测器的数据
+        /// 设置指定编号的托盘内探测器的数据,参数sensorData包含了托盘探测器在盘中的位置
         /// </summary>
         /// <param name="sensorData">收到的探测器数据</param>
         public void SetSensorDataInTray(Sensor sensorData)
@@ -91,15 +128,15 @@ namespace FT
         }
 
         /// <summary>
-        /// 加载托盘数据
+        /// 加载托盘数据，加载上次保存的托盘数据
         /// </summary>
         /// <param name="trayType">托盘类型</param>
         public void LoadTraysData(string trayType)
         {
-            Trays.Clear();
             List<TrayData> trays = JsonManager.ReadJsonString<List<TrayData>>(Environment.CurrentDirectory + "\\Cache", "TraysData");
             if (trays != null)
             {
+                Trays.Clear();
                 foreach (TrayData trayData in trays)
                 {
                     Trays.Add(new Tray(trayData));
@@ -107,13 +144,20 @@ namespace FT
             }
             else
             {
-                if (trayType != "")
-                {
-                    for (int i = 0; i < MappingLayout.Count; i++)
-                    {
-                        Trays.Add(new Tray(TrayType[trayType].Length, TrayType[trayType].Width, MappingLayout[i], i.ToString()));
-                    }
-                }
+                InitializeTrays(trayType);
+            }
+        }
+
+        /// <summary>
+        /// 更新托盘显示
+        /// </summary>
+        /// <param name="canvasControl">显示托盘的控件</param>
+        public void UpdateTrayControls(Control canvasControl)
+        {
+            WinformTool.InvokeOnThread(canvasControl, new Action(() => canvasControl.Controls.Clear()));
+            foreach (var tray in Trays)
+            {
+                tray.UpdateTrayLabel(canvasControl);
             }
         }
     }
