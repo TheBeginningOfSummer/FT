@@ -67,7 +67,8 @@ namespace FT
         }
 
         /// <summary>
-        /// 按托盘种类初始化托盘
+        /// 按托盘种类初始化托盘，每个盘在界面上的位置是固定的
+        /// 按照每个盘在界面的位置来初始化
         /// </summary>
         /// <param name="trayType">托盘种类</param>
         public void InitializeTrays(string trayType)
@@ -91,7 +92,7 @@ namespace FT
         }
 
         /// <summary>
-        /// 设置托盘指定位置内探测器的数据
+        /// 设置指定编号的托盘内探测器的数据,参数sensorData包含了托盘探测器在盘中的位置
         /// </summary>
         /// <param name="sensorData">收到的探测器数据</param>
         public void SetSensorDataInTray(Sensor sensorData)
@@ -123,7 +124,7 @@ namespace FT
         }
 
         /// <summary>
-        /// 加载托盘数据
+        /// 加载托盘数据，加载上次保存的托盘数据
         /// </summary>
         /// <param name="trayType">托盘类型</param>
         public void LoadTraysData(string trayType)
