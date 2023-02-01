@@ -14,6 +14,7 @@ namespace FT
         public static Communication singleton = new Communication();
         public NJCompoletLibrary compolet;
         public string Error;
+        LogFile logfile = new LogFile();
 
         #region 从PLC读取的数据
         /// <summary>
@@ -96,11 +97,12 @@ namespace FT
             {
                 #region 读IO信息
                 ReadBoolVariables(ReadPLCIO, "PlcOutIO", 0, 111);
-                ReadBoolVariables(ReadPLCIO, "PlcOutIO", 150, 258);
+                ReadBoolVariables(ReadPLCIO, "PlcOutIO", 128, 135);
+                ReadBoolVariables(ReadPLCIO, "PlcOutIO", 155, 193);
                 #endregion
 
                 #region 读位置信息
-                for (int i = 0; i <= 165; i++)
+                for (int i = 0; i <= 180; i++)
                 {
                     ReadLocation[i] = compolet.ReadVariableReal("PlcOutLocation[" + i.ToString() + "]");
                 }
@@ -136,15 +138,45 @@ namespace FT
                 ReadTestInformation[8] = compolet.ReadVariableString("PLC测试信息[8]");
                 //当前托盘索引
                 ReadTestInformation[20] = compolet.ReadVariableString("PLC测试信息[20]");
+                //良率
+                ReadTestInformation[21] = compolet.ReadVariableString("PLC测试信息[21]");
+                //探针次数
+                ReadTestInformation[22] = compolet.ReadVariableString("PLC测试信息[22]");
+                //当前控制器时间
+                ReadTestInformation[29] = compolet.ReadVariableString("PLC测试信息[29]");
+                //上视觉1扫码信息
+                ReadTestInformation[30] = compolet.ReadVariableString("PLC测试信息[30]");
+                //下视觉对位X
+                ReadTestInformation[32] = compolet.ReadVariableString("PLC测试信息[32]");
+                //下视觉对位Y
+                ReadTestInformation[33] = compolet.ReadVariableString("PLC测试信息[33]");
+                //下视觉对位θ
+                ReadTestInformation[34] = compolet.ReadVariableString("PLC测试信息[34]");
+                //上视觉2对位X
+                ReadTestInformation[36] = compolet.ReadVariableString("PLC测试信息[36]");
+                //上视觉2对位Y
+                ReadTestInformation[37] = compolet.ReadVariableString("PLC测试信息[37]");
+                //上视觉2对位θ
+                ReadTestInformation[38] = compolet.ReadVariableString("PLC测试信息[38]");
+                //计算对位X
+                ReadTestInformation[39] = compolet.ReadVariableString("PLC测试信息[39]");
+                //计算对位Y
+                ReadTestInformation[40] = compolet.ReadVariableString("PLC测试信息[40]");
+                //计算对位θ
+                ReadTestInformation[41] = compolet.ReadVariableString("PLC测试信息[41]");
+
+
+
                 #endregion
 
                 #region 读报警信息
-                ReadBoolVariables(ReadPLCAlarm, "PlcOutAlarm", 0, 87);
-                ReadBoolVariables(ReadPLCAlarm, "PlcOutAlarm", 100, 155);
+                ReadBoolVariables(ReadPLCAlarm, "PlcOutAlarm", 0, 158);
+                ReadBoolVariables(ReadPLCAlarm, "PlcOutAlarm", 170, 173);
+
                 #endregion
 
                 #region 读参数信息
-                for (int i = 0; i < 25; i++)
+                for (int i = 0; i < 35; i++)
                 {
                     ReadPLCPmt[i] = compolet.ReadVariableReal("PlcInPmt[" + i.ToString() + "]");
                 }
@@ -152,6 +184,7 @@ namespace FT
             }
             catch (Exception ex)
             {
+                //logfile.Writelog(ex.Message, "更新数据1");
                 this.Error = ex.ToString();
                 throw ex;
             }

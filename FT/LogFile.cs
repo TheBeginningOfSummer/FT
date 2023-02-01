@@ -9,8 +9,7 @@ namespace FT
 {
     public class LogFile
     {
-
-        public void Writelog(string strlog, string fileName)
+        public void WriteLog(string strlog, string fileName)
         {
             string strFilePath = AppDomain.CurrentDomain.BaseDirectory + "log";
             string strFileName = DateTime.Now.ToString("yyyyMMdd") + fileName + ".log";
@@ -36,5 +35,21 @@ namespace FT
             fs.Close();
         }
 
+        public string[] ReadLog(string fileName)
+        {
+            string strFilePath = AppDomain.CurrentDomain.BaseDirectory + "log";
+            string strFileName = fileName + ".log";
+            string path = strFilePath + "\\" + strFileName;
+
+            if (!Directory.Exists(strFilePath)) Directory.CreateDirectory(strFilePath);
+            if (File.Exists(path))
+            {
+                return File.ReadAllLines(path);
+            }
+            else
+            {
+                return new string[1] { "没有数据" };
+            }
+        }
     }
 }
