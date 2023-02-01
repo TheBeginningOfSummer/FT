@@ -13,7 +13,7 @@ namespace FT
 {
     public partial class Form1 : Form
     {
-        Communication communication = Communication.singleton;
+        Communication communication = Communication.Singleton;
         //日志文件记录
         LogFile logfile = new LogFile();
         //加载的报警信息
@@ -39,7 +39,7 @@ namespace FT
             //打开通信端口
             try
             {
-                communication.compolet.Open();
+                communication.Compolet.Open();
             }
             catch (Exception ex)
             {
@@ -61,7 +61,7 @@ namespace FT
                 DTP_MaxTime.Value = Convert.ToDateTime(DateTime.Now.AddDays(1));
                 #endregion
 
-                #region 托盘数据
+                #region 托盘数据加载
                 //托盘数据
                 trayManager = new TrayManager();
                 //托盘类型设置
@@ -166,10 +166,11 @@ namespace FT
                         #endregion
                         stopwatch1.Stop();
                         //logfile.Writelog("更新数据结束", "更新数据");
+                        label93.Invoke(new Action(() => label93.Text = $"{stopwatch1.ElapsedMilliseconds}ms"));
                     }
                     catch (Exception e)
                     {
-                        logfile.WriteLog($"界面数据更新。{e.Message}", "更新数据");
+                        logfile.WriteLog($"实际数据更新。{e.Message}", "更新数据");
                     }
                 }
             });
@@ -693,7 +694,7 @@ namespace FT
                         #endregion
                         stopwatch2.Stop();
                         //logfile.Writelog("更新数据结束", "更新数据");
-                        //label73.Invoke(new Action(() => label73.Text = $"{stopwatch2.ElapsedMilliseconds}ms"));
+                        label95.Invoke(new Action(() => label95.Text = $"{stopwatch2.ElapsedMilliseconds}ms"));
                     }
                     catch (Exception e)
                     {
@@ -713,6 +714,7 @@ namespace FT
                     try
                     {
                         Thread.Sleep(300);
+                        warning.Clear();//测试
                         for (int i = 0; i < communication.ReadPLCAlarm.Length; i++)
                         {
                             if (communication.ReadPLCAlarm[i])
@@ -720,11 +722,9 @@ namespace FT
                                 //MessageBox.Show(alarmInformation[i.ToString()], "报警信息", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                                 if (!warning.Contains(alarmInformation[i.ToString()]))
                                 {
-                                    TB_Warning.Invoke(new Action(() =>
-                                    {
-                                        TB_Warning.Clear();
-                                    }));
+                                    TB_Warning.Invoke(new Action(() => TB_Warning.Clear()));
                                     warning.Add(alarmInformation[i.ToString()]);
+                                    //显示到控件上
                                     foreach (var item in warning)
                                     {
                                         TB_Warning.Invoke(new Action(() =>
@@ -763,7 +763,8 @@ namespace FT
         //实时显示Text内容方法
         public void SetTextBoxText<T>(TextBox textBox, T variable)
         {
-            textBox.Invoke(new Action(() => textBox.Text = variable.ToString()));
+            if (variable != null)
+                textBox.Invoke(new Action(() => textBox.Text = variable.ToString()));
         }
 
         //信息追溯导出EXCEL
@@ -5224,7 +5225,7 @@ namespace FT
             //打开通信端口
             try
             {
-                communication.compolet.Open();
+                communication.Compolet.Open();
                 MessageBox.Show("打开了端口", "打开端口");
             }
             catch (Exception ex)
@@ -5238,7 +5239,7 @@ namespace FT
             try
             {
                 //关闭通信端口
-                communication.compolet.Close();
+                communication.Compolet.Close();
                 MessageBox.Show("关闭了端口", "打开端口");
             }
             catch (Exception ex)
@@ -5271,9 +5272,9 @@ namespace FT
 
         private void btn报警复位_Click(object sender, EventArgs e)
         {
+            communication.WriteVariable(true, "PlcInIO[0]");
             warning.Clear();
             TB_Warning.Clear();
-            communication.WriteVariable(true, "PlcInIO[0]");
         }
 
         private void btn蜂鸣停止_Click(object sender, EventArgs e)
@@ -5333,8 +5334,14 @@ namespace FT
                 communication.WriteVariable(true, "PlcInIO[6]");
             }
         }
-        
-        
+
+        private void BTN_查看日志_Click(object sender, EventArgs e)
+        {
+            Form3 form3 = new Form3();
+            form3.ShowDialog();
+        }
+
+
         private void CB_TypeOfProduction_SelectedIndexChanged(object sender, EventArgs e)//选择产品索引
         {
             if (this.CB_TypeOfProduction.SelectedItem.ToString() == "GST212W2")
@@ -5560,7 +5567,7 @@ namespace FT
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
             //关闭通信端口
-            communication.compolet.Close();
+            communication.Compolet.Close();
             loginForm.Close();
         }
 
@@ -6444,5 +6451,7 @@ namespace FT
             communication.WriteVariable(false, "PlcInIO[29]");
         }
         #endregion
+
+        
     }
 }
