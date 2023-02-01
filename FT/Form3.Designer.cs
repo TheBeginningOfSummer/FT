@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.LB_ErrorLog = new System.Windows.Forms.ListBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.DTP_CheckDate = new System.Windows.Forms.DateTimePicker();
             this.BTN_错误日志加载 = new System.Windows.Forms.Button();
             this.BTN_错误日志删除 = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -47,12 +47,12 @@
             this.LB_ErrorLog.Size = new System.Drawing.Size(776, 364);
             this.LB_ErrorLog.TabIndex = 0;
             // 
-            // dateTimePicker1
+            // DTP_CheckDate
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(202, 26);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 21);
-            this.dateTimePicker1.TabIndex = 1;
+            this.DTP_CheckDate.Location = new System.Drawing.Point(202, 26);
+            this.DTP_CheckDate.Name = "DTP_CheckDate";
+            this.DTP_CheckDate.Size = new System.Drawing.Size(200, 21);
+            this.DTP_CheckDate.TabIndex = 1;
             // 
             // BTN_错误日志加载
             // 
@@ -81,7 +81,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.BTN_错误日志删除);
             this.Controls.Add(this.BTN_错误日志加载);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.DTP_CheckDate);
             this.Controls.Add(this.LB_ErrorLog);
             this.Name = "Form3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -93,7 +93,7 @@
         #endregion
 
         private System.Windows.Forms.ListBox LB_ErrorLog;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker DTP_CheckDate;
         private System.Windows.Forms.Button BTN_错误日志加载;
         private System.Windows.Forms.Button BTN_错误日志删除;
     }
