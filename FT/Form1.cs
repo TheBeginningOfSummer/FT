@@ -26,6 +26,8 @@ namespace FT
         string trayType;
         //登录界面
         Form2 loginForm;
+        //是否更新数据
+        bool isUpdateData = false;
 
         readonly Stopwatch stopwatch1 = new Stopwatch();
         readonly Stopwatch stopwatch2 = new Stopwatch();
@@ -35,17 +37,7 @@ namespace FT
             InitializeComponent();
 
             loginForm = form2;
-
-            //打开通信端口
-            try
-            {
-                communication.Compolet.Open();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "打开端口", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-
+            //数据初始化
             try
             {
                 #region 数据查询
@@ -78,14 +70,24 @@ namespace FT
 
                 //报警信息读取
                 alarmInformation = JsonManager.ReadJsonString<Dictionary<string, string>>(Environment.CurrentDirectory + "\\Configuration\\", "Alarm");
-
-                DataUpdate();
-                InterfaceUpdate();
-                AlarmCheck();
             }
             catch (Exception e)
             {
                 MessageBox.Show(e.Message, "程序初始化", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            //打开通信端口
+            try
+            {
+                communication.Compolet.Open();
+                isUpdateData = true;
+                DataUpdate();
+                InterfaceUpdate();
+                AlarmCheck();
+            }
+            catch (Exception ex)
+            {
+                isUpdateData = false;
+                MessageBox.Show(ex.Message, "打开端口", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -93,7 +95,7 @@ namespace FT
         {
             Task.Run(() =>
             {
-                while (true)
+                while (isUpdateData)
                 {
                     try
                     {
@@ -180,7 +182,7 @@ namespace FT
         {
             Task.Run(() =>
             {
-                while (true)
+                while (isUpdateData)
                 {
                     try
                     {
@@ -709,7 +711,7 @@ namespace FT
         {
             Task.Run(() =>
             {
-                while (true)
+                while (isUpdateData)
                 {
                     try
                     {
@@ -5226,10 +5228,15 @@ namespace FT
             try
             {
                 communication.Compolet.Open();
+                isUpdateData = true;
+                DataUpdate();
+                InterfaceUpdate();
+                AlarmCheck();
                 MessageBox.Show("打开了端口", "打开端口");
             }
             catch (Exception ex)
             {
+                isUpdateData = false;
                 MessageBox.Show(ex.Message, "打开端口");
             }
         }
@@ -5240,6 +5247,7 @@ namespace FT
             {
                 //关闭通信端口
                 communication.Compolet.Close();
+                isUpdateData = false;
                 MessageBox.Show("关闭了端口", "打开端口");
             }
             catch (Exception ex)
@@ -5566,9 +5574,16 @@ namespace FT
         #region 窗口关闭
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
-            //关闭通信端口
-            communication.Compolet.Close();
-            loginForm.Close();
+            try
+            {
+                loginForm.Close();
+                //关闭通信端口
+                communication.Compolet.Close();
+            }
+            catch (Exception)
+            {
+
+            }
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -5581,7 +5596,6 @@ namespace FT
                 //取消退出
                 e.Cancel = true;
             }
-
         }
         #endregion
 
