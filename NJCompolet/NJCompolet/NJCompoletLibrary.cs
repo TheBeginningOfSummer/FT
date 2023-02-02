@@ -13,6 +13,8 @@ namespace CIPCommunication
         public string PeerAddress;
         public int LocalPort;
 
+        readonly IComparer stringValueComparer = new StringValueComparer();
+
         public NJCompoletLibrary(string peerAddress = "192.168.250.6", int localPort = 2)
         {
             PeerAddress = peerAddress;
@@ -99,132 +101,55 @@ namespace CIPCommunication
         /// </summary>
         /// <param name="variableName">变量名</param>
         /// <returns></returns>
-        public int ReadVariableInt(string variableName)//int
+        public T ReadVariable<T>(string variableName)
         {
-            object out1;
-            int out2;
             if (!portCompolet.IsOpened(LocalPort))
-                return 0;
+                return default;
             else
-            {
-                out1 = this.compolet.ReadVariable(variableName);
-                out2 = Convert.ToInt32(out1);
-                return out2;
-            }
-        }
-
-        public bool ReadVariableBool(string variableName)//Bool
-        {
-            object out1;
-            bool out2;
-            if (!portCompolet.IsOpened(LocalPort))
-                return false;
-            else
-            {
-                out1 = this.compolet.ReadVariable(variableName);
-                out2 = Convert.ToBoolean(out1);
-                return out2;
-            }
-        }
-
-        public double ReadVariableReal(string variableName)//Real
-        {
-            object out1;
-            double out2;
-            if (!portCompolet.IsOpened(LocalPort))
-                return 0;
-            else
-            {
-                out1 = this.compolet.ReadVariable(variableName);
-                out2 = Convert.ToDouble(out1);
-                return out2;
-            }
-        }
-
-        public string ReadVariableString(string variableName)//string
-        {
-            object out1;
-            string out2;
-            if (!portCompolet.IsOpened(LocalPort))
-                return "0";
-            else
-            {
-                out1 = this.compolet.ReadVariable(variableName);
-                out2 = Convert.ToString(out1);
-                return out2;
-            }
+                return (T)Convert.ChangeType(compolet.ReadVariable(variableName), typeof(T));
         }
         /// <summary>
-        /// 读多个数据
+        /// 读多个数据的变量名
         /// </summary>
-        /// <param name="variableNames">数据变量名</param>
+        /// <param name="variableNames">变量名数组</param>
         /// <returns></returns>
-        public bool[] ReadVariablesBool(string[] variableNames)
-        {
-            if (!portCompolet.IsOpened(LocalPort)) return new bool[] { false };
-            Hashtable hashtable = this.compolet.ReadVariableMultiple(variableNames);
-            string[] keys = new string[hashtable.Count];
-            bool[] values = new bool[hashtable.Count];
-            hashtable.Keys.CopyTo(keys, 0);
-            hashtable.Values.CopyTo(values, 0);
-            Array.Sort(keys, values);
-            return values;
-        }
-
-        public double[] ReadVariablesReal(string[] variableNames)
-        {
-            if (!portCompolet.IsOpened(LocalPort)) return new double[] { 0 };
-            Hashtable hashtable = this.compolet.ReadVariableMultiple(variableNames);
-            string[] keys = new string[hashtable.Count];
-            double[] values = new double[hashtable.Count];
-            hashtable.Keys.CopyTo(keys, 0);
-            hashtable.Values.CopyTo(values, 0);
-            Array.Sort(keys, values);
-            return values;
-        }
-
-        public string[] ReadVariablesString(string[] variableNames)
+        public string[] ReadVariablesKeyArray(string[] variableNames)
         {
             if (!portCompolet.IsOpened(LocalPort)) return new string[] { "null" };
             Hashtable hashtable = this.compolet.ReadVariableMultiple(variableNames);
             string[] keys = new string[hashtable.Count];
-            string[] values = new string[hashtable.Count];
+            hashtable.Keys.CopyTo(keys, 0);
+            Array.Sort(keys, stringValueComparer);
+            return keys;
+        }
+        /// <summary>
+        /// 读多个数据的变量值
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="variableNames">变量名数组</param>
+        /// <returns></returns>
+        public T[] ReadVariablesValueArray<T>(string[] variableNames)
+        {
+            if (!portCompolet.IsOpened(LocalPort)) return null;
+            Hashtable hashtable = this.compolet.ReadVariableMultiple(variableNames);
+            string[] keys = new string[hashtable.Count];
+            T[] values = new T[hashtable.Count];
             hashtable.Keys.CopyTo(keys, 0);
             hashtable.Values.CopyTo(values, 0);
-            Array.Sort(keys, values);
+            Array.Sort(keys, values, stringValueComparer);
             return values;
         }
-
+        /// <summary>
+        /// 直接读取哈希表
+        /// </summary>
+        /// <param name="variableNames">变量名数组</param>
+        /// <returns></returns>
         public Hashtable GetHashtable(string[] variableNames)
         {
             if (!portCompolet.IsOpened(LocalPort))
                 return null;
             else
                 return compolet.ReadVariableMultiple(variableNames);
-        }
-
-        public string[] GetVariablesKey(string[] variableNames)
-        {
-            if (!portCompolet.IsOpened(LocalPort)) return new string[] { "null" };
-            Hashtable hashtable = this.compolet.ReadVariableMultiple(variableNames);
-            string[] keys = new string[hashtable.Count];
-            //string[] values = new string[hashtable.Count];
-            hashtable.Keys.CopyTo(keys, 0);
-            //hashtable.Values.CopyTo(values, 0);
-            Array.Sort(keys);
-            return keys;
-        }
-
-        public string[] GetVariablesValue(string[] variableNames)
-        {
-            if (!portCompolet.IsOpened(LocalPort)) return new string[] { "null" };
-            Hashtable hashtable = this.compolet.ReadVariableMultiple(variableNames);
-            string[] keys = new string[hashtable.Count];
-            string[] values = new string[hashtable.Count];
-            hashtable.Keys.CopyTo(keys, 0);
-            hashtable.Values.CopyTo(values, 0);
-            Array.Sort(keys, values);
-            return values;
         }
         #endregion
 

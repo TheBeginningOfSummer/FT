@@ -90,7 +90,13 @@ namespace FT
             TestInformation = InitializeHashtable<string>(plcTestInfoName, "noData");
             #endregion
         }
-
+        /// <summary>
+        /// 初始化一组连续的字符串数组
+        /// </summary>
+        /// <param name="mainValue">字符串值</param>
+        /// <param name="start">开始的索引</param>
+        /// <param name="end">结束的索引</param>
+        /// <returns></returns>
         public static string[] InitializeStringArray(string mainValue, int start, int end)
         {
             List<string> arrayList = new List<string>();
@@ -98,7 +104,13 @@ namespace FT
                 arrayList.Add($"{mainValue}[{i}]");
             return arrayList.ToArray();
         }
-
+        /// <summary>
+        /// 以一个字符串数组为键，创建哈希表
+        /// </summary>
+        /// <typeparam name="T">值类型</typeparam>
+        /// <param name="key">作为键的字符串数组</param>
+        /// <param name="value">初始值</param>
+        /// <returns></returns>
         public static Hashtable InitializeHashtable<T>(string[] key, T value)
         {
             if (key == null) return null;
@@ -109,7 +121,11 @@ namespace FT
             }
             return hashtable;
         }
-
+        /// <summary>
+        /// 复制哈希表
+        /// </summary>
+        /// <param name="sourceTable">源表</param>
+        /// <param name="targetTable">目标的表</param>
         public void GetValue(Hashtable sourceTable, Hashtable targetTable)
         {
             foreach (DictionaryEntry keyValue in sourceTable)
@@ -118,7 +134,12 @@ namespace FT
                     targetTable[keyValue.Key] = keyValue.Value;
             }
         }
-
+        /// <summary>
+        /// 将哈希表转化为按键排序的数组
+        /// </summary>
+        /// <typeparam name="T">数组类型</typeparam>
+        /// <param name="sourceTable">源表</param>
+        /// <param name="array">要更新的数组</param>
         public void HashtableToArray<T>(Hashtable sourceTable, T[] array)
         {
             if (sourceTable == null) return;

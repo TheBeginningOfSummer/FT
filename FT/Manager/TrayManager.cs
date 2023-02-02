@@ -88,6 +88,7 @@ namespace FT
         /// <param name="trayNumber">托盘编号</param>
         public void SetTrayNumber(string trayNumber)
         {
+            if (TrayIndex <= 0) return;
             Trays[TrayIndex - 1].TrayNumber = trayNumber;
         }
 

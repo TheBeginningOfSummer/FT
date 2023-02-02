@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections;
 
-namespace FT
+namespace CIPCommunication
 {
     public class StringValueComparer : IComparer
     {
-        //字符串按数字大小排序
         public int Compare(object x, object y)
         {
             if (x == null || y == null) throw new ArgumentException("参数不能为空");

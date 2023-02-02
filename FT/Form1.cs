@@ -110,6 +110,7 @@ namespace FT
                         }
                         else
                         {
+                            //托盘索引为0时，无法为托盘附码
                             trayManager.TrayIndex = 0;
                         }
                         //托盘数据初始化
@@ -118,12 +119,8 @@ namespace FT
                             if (trayType != "" && trayType != " ")
                             {
                                 //初始化
-                                PN_Trays.Invoke(new Action(() => PN_Trays.Controls.Clear()));
                                 trayManager.InitializeTrays(trayType);
-                                foreach (var tray in trayManager.Trays)
-                                {
-                                    tray.UpdateTrayLabel(PN_Trays);
-                                }
+                                trayManager.UpdateTrayLabels(PN_Trays);
                                 //托盘初始化完成,PLC检测到此值为true后，将PLC标志位[2]置为false
                                 communication.WriteVariable(true, "PC标志位[2]");
                             }
@@ -131,6 +128,7 @@ namespace FT
                         //托盘扫码完成
                         if (communication.ReadFlagBits[0])
                         {
+                            //将扫到的托盘码赋值给托盘管理类
                             trayManager.SetTrayNumber(communication.ReadTestInformation[4]);
                             //托盘扫码完成,PLC检测到此值为true后，将PLC标志位[0]置为false
                             communication.WriteVariable(true, "PC标志位[0]");
@@ -138,7 +136,6 @@ namespace FT
                         //产品测试完成
                         if (communication.ReadFlagBits[1])
                         {
-                            logfile.WriteLog("PLC标志位触发" , "PLC标志位记录");
                             Sensor sensor = new Sensor(
                                 communication.ReadTestInformation[0],
                                 communication.ReadTestInformation[1],
@@ -149,30 +146,24 @@ namespace FT
                                 communication.ReadTestInformation[6],
                                 communication.ReadTestInformation[7],
                                 communication.ReadTestInformation[8]);
-                            logfile.WriteLog("数据采集结束", "PLC标志位记录");
                             //Mapping图更新
                             trayManager.SetSensorDataInTray(sensor);
-                            logfile.WriteLog("Mapping图更新完成", "PLC标志位记录");
                             //数据存储
                             trayManager.SaveTraysData();
-                            logfile.WriteLog("Json存储完成", "PLC标志位记录");
                             //数据库数据存储
                             SensorDataManager.AddSensor(sensor);
-                            logfile.WriteLog("数据库数据存储", "PLC标志位记录");
-                            //产品信息录入完成。PLC检测到此值为true后，将PLC标志位[1]置为false
-                            //communication.WriteFlagBits[1] = true;
+                            //产品信息录入完成。将PLC标志位[1]置为false，PC标志位置true，表示准备好下一次的录入
                             communication.WriteVariable(false, "PLC标志位[1]");
                             communication.WriteVariable(true, "PC标志位[1]");
-                            logfile.WriteLog("PLC标志位结束", "PLC标志位记录");
                         }
                         #endregion
                         stopwatch1.Stop();
-                        //logfile.Writelog("更新数据结束", "更新数据");
+                        logfile.WriteLog("更新数据结束", "更新数据");
                         label93.Invoke(new Action(() => label93.Text = $"{stopwatch1.ElapsedMilliseconds}ms"));
                     }
                     catch (Exception e)
                     {
-                        logfile.WriteLog($"实际数据更新。{e.Message}", "更新数据");
+                        logfile.WriteLog($"数据更新出错。{e.Message}", "更新数据");
                     }
                 }
             });
@@ -695,12 +686,12 @@ namespace FT
                         SetTextBoxText(txt计算偏移θ, communication.ReadTestInformation[41]);
                         #endregion
                         stopwatch2.Stop();
-                        //logfile.Writelog("更新数据结束", "更新数据");
+                        logfile.WriteLog("界面数据更新结束", "界面数据更新");
                         label95.Invoke(new Action(() => label95.Text = $"{stopwatch2.ElapsedMilliseconds}ms"));
                     }
                     catch (Exception e)
                     {
-                        logfile.WriteLog($"界面数据更新。{e.Message}", "更新数据");
+                        logfile.WriteLog($"界面数据更新出错。{e.Message}", "界面数据更新");
                     }
                 }
             });
@@ -5222,6 +5213,28 @@ namespace FT
             this.Hide();
         }
 
+        private void BTN_Modify_Click(object sender, EventArgs e)
+        {
+            if (loginForm.CB_UserName.Text == "操作员")
+            {
+                MessageBox.Show("未授权用户组", "修改密码");
+                return;
+            }
+            if (TB_Password.Text == "" || TB_NewPassword.Text == "")
+            {
+                MessageBox.Show("请输入密码", "修改密码");
+                return;
+            }
+            if (TB_Password.Text != TB_NewPassword.Text)
+            {
+                MessageBox.Show("两次输入不一样", "修改密码");
+                return;
+            }
+            JsonManager.SaveJsonString(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\FTData", "engineerData",
+                new UserData() { UserType = 1, UserName = "工程师", Password = TB_Password.Text });
+            MessageBox.Show("修改成功", "修改密码");
+        }
+
         private void BTN_打开端口_Click(object sender, EventArgs e)
         {
             //打开通信端口
@@ -5254,28 +5267,6 @@ namespace FT
             {
                 MessageBox.Show(ex.Message, "关闭端口");
             }
-        }
-
-        private void BTN_Modify_Click(object sender, EventArgs e)
-        {
-            if (loginForm.CB_UserName.Text == "操作员")
-            {
-                MessageBox.Show("未授权用户组", "修改密码");
-                return;
-            }
-            if (TB_Password.Text == "" || TB_NewPassword.Text == "")
-            {
-                MessageBox.Show("请输入密码", "修改密码");
-                return;
-            }
-            if (TB_Password.Text != TB_NewPassword.Text)
-            {
-                MessageBox.Show("两次输入不一样", "修改密码");
-                return;
-            }
-            JsonManager.SaveJsonString(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\FTData", "engineerData",
-                new UserData() { UserType = 1, UserName = "工程师", Password = TB_Password.Text });
-            MessageBox.Show("修改成功", "修改密码");
         }
 
         private void btn报警复位_Click(object sender, EventArgs e)
@@ -5345,8 +5336,8 @@ namespace FT
 
         private void BTN_查看日志_Click(object sender, EventArgs e)
         {
-            Form3 form3 = new Form3();
-            form3.ShowDialog();
+            Form3 logForm = new Form3();
+            logForm.ShowDialog();
         }
 
 
@@ -6464,7 +6455,26 @@ namespace FT
         {
             communication.WriteVariable(false, "PlcInIO[29]");
         }
+
         #endregion
+
+        private void BTN_Test0_Click(object sender, EventArgs e)
+        {
+            //托盘附码
+            communication.WriteVariable(true, "PLC标志位[0]");
+        }
+
+        private void BTN_Test1_Click(object sender, EventArgs e)
+        {
+            //测试完成
+            communication.WriteVariable(true, "PLC标志位[1]");
+        }
+
+        private void BTN_Test2_Click(object sender, EventArgs e)
+        {
+            //初始化托盘数据
+            communication.WriteVariable(true, "PLC标志位[2]");
+        }
 
         
     }
