@@ -31,8 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.TC_Main = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.label95 = new System.Windows.Forms.Label();
-            this.label93 = new System.Windows.Forms.Label();
             this.groupBox77 = new System.Windows.Forms.GroupBox();
             this.btn人工上下料 = new System.Windows.Forms.Button();
             this.groupBox74 = new System.Windows.Forms.GroupBox();
@@ -1457,9 +1455,8 @@
             this.label469 = new System.Windows.Forms.Label();
             this.label464 = new System.Windows.Forms.Label();
             this.label463 = new System.Windows.Forms.Label();
-            this.BTN_Test1 = new System.Windows.Forms.Button();
-            this.BTN_Test2 = new System.Windows.Forms.Button();
-            this.BTN_Test0 = new System.Windows.Forms.Button();
+            this.label93 = new System.Windows.Forms.Label();
+            this.label95 = new System.Windows.Forms.Label();
             this.TC_Main.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox77.SuspendLayout();
@@ -1588,8 +1585,6 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.label95);
-            this.tabPage1.Controls.Add(this.label93);
             this.tabPage1.Controls.Add(this.groupBox77);
             this.tabPage1.Controls.Add(this.groupBox74);
             this.tabPage1.Controls.Add(this.groupBox73);
@@ -1615,29 +1610,8 @@
             this.tabPage1.Text = "自动操作";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // label95
-            // 
-            this.label95.AutoSize = true;
-            this.label95.Location = new System.Drawing.Point(186, 35);
-            this.label95.Name = "label95";
-            this.label95.Size = new System.Drawing.Size(49, 17);
-            this.label95.TabIndex = 223;
-            this.label95.Text = "label95";
-            // 
-            // label93
-            // 
-            this.label93.AutoSize = true;
-            this.label93.Location = new System.Drawing.Point(131, 35);
-            this.label93.Name = "label93";
-            this.label93.Size = new System.Drawing.Size(49, 17);
-            this.label93.TabIndex = 222;
-            this.label93.Text = "label93";
-            // 
             // groupBox77
             // 
-            this.groupBox77.Controls.Add(this.BTN_Test0);
-            this.groupBox77.Controls.Add(this.BTN_Test2);
-            this.groupBox77.Controls.Add(this.BTN_Test1);
             this.groupBox77.Controls.Add(this.btn人工上下料);
             this.groupBox77.Location = new System.Drawing.Point(992, 325);
             this.groupBox77.Name = "groupBox77";
@@ -2220,6 +2194,7 @@
             this.TB_Warning.Location = new System.Drawing.Point(11, 20);
             this.TB_Warning.Multiline = true;
             this.TB_Warning.Name = "TB_Warning";
+            this.TB_Warning.ReadOnly = true;
             this.TB_Warning.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.TB_Warning.Size = new System.Drawing.Size(267, 233);
             this.TB_Warning.TabIndex = 17;
@@ -8791,6 +8766,8 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.label95);
+            this.tabPage4.Controls.Add(this.label93);
             this.tabPage4.Controls.Add(this.groupBox9);
             this.tabPage4.Controls.Add(this.groupBox82);
             this.tabPage4.Controls.Add(this.label159);
@@ -19351,35 +19328,23 @@
             this.label463.TabIndex = 71;
             this.label463.Text = "mm/s";
             // 
-            // BTN_Test1
+            // label93
             // 
-            this.BTN_Test1.Location = new System.Drawing.Point(39, 162);
-            this.BTN_Test1.Name = "BTN_Test1";
-            this.BTN_Test1.Size = new System.Drawing.Size(75, 23);
-            this.BTN_Test1.TabIndex = 23;
-            this.BTN_Test1.Text = "测试1";
-            this.BTN_Test1.UseVisualStyleBackColor = true;
-            this.BTN_Test1.Click += new System.EventHandler(this.BTN_Test1_Click);
+            this.label93.AutoSize = true;
+            this.label93.Location = new System.Drawing.Point(13, 685);
+            this.label93.Name = "label93";
+            this.label93.Size = new System.Drawing.Size(104, 17);
+            this.label93.TabIndex = 172;
+            this.label93.Text = "数据刷新时间";
             // 
-            // BTN_Test2
+            // label95
             // 
-            this.BTN_Test2.Location = new System.Drawing.Point(39, 191);
-            this.BTN_Test2.Name = "BTN_Test2";
-            this.BTN_Test2.Size = new System.Drawing.Size(75, 23);
-            this.BTN_Test2.TabIndex = 24;
-            this.BTN_Test2.Text = "测试2";
-            this.BTN_Test2.UseVisualStyleBackColor = true;
-            this.BTN_Test2.Click += new System.EventHandler(this.BTN_Test2_Click);
-            // 
-            // BTN_Test0
-            // 
-            this.BTN_Test0.Location = new System.Drawing.Point(39, 133);
-            this.BTN_Test0.Name = "BTN_Test0";
-            this.BTN_Test0.Size = new System.Drawing.Size(75, 23);
-            this.BTN_Test0.TabIndex = 25;
-            this.BTN_Test0.Text = "测试0";
-            this.BTN_Test0.UseVisualStyleBackColor = true;
-            this.BTN_Test0.Click += new System.EventHandler(this.BTN_Test0_Click);
+            this.label95.AutoSize = true;
+            this.label95.Location = new System.Drawing.Point(13, 715);
+            this.label95.Name = "label95";
+            this.label95.Size = new System.Drawing.Size(104, 17);
+            this.label95.TabIndex = 173;
+            this.label95.Text = "界面刷新时间";
             // 
             // Form1
             // 
@@ -19396,7 +19361,6 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.TC_Main.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
             this.groupBox77.ResumeLayout(false);
             this.groupBox74.ResumeLayout(false);
             this.groupBox73.ResumeLayout(false);
@@ -21002,12 +20966,9 @@
         private System.Windows.Forms.Label LB_FW_黑体2;
         private System.Windows.Forms.Label LB_FW_夹具1;
         private System.Windows.Forms.Label LB_FW_钧舵4激活;
+        private System.Windows.Forms.Button BTN_查看日志;
         private System.Windows.Forms.Label label95;
         private System.Windows.Forms.Label label93;
-        private System.Windows.Forms.Button BTN_查看日志;
-        private System.Windows.Forms.Button BTN_Test1;
-        private System.Windows.Forms.Button BTN_Test2;
-        private System.Windows.Forms.Button BTN_Test0;
     }
 }
 

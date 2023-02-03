@@ -89,6 +89,8 @@ namespace FT
         public void SetTrayNumber(string trayNumber)
         {
             if (TrayIndex <= 0) return;
+            if (Trays == null) return;
+            if (TrayIndex > Trays.Count) return;
             Trays[TrayIndex - 1].TrayNumber = trayNumber;
         }
 
@@ -99,6 +101,9 @@ namespace FT
         public void SetSensorDataInTray(Sensor sensorData)
         {
             if (TrayIndex <= 0) return;
+            if (Trays == null) return;
+            if (TrayIndex > Trays.Count) return;
+            if (!Trays[TrayIndex - 1].Sensors.ContainsKey(sensorData.PosInTray.ToString())) return;
             Sensor sensor = Trays[TrayIndex - 1].Sensors[sensorData.PosInTray.ToString()];
             //SensorData sensor1 = Trays.Where((tray) => tray.TrayNumber == sensorData.TrayNumber).FirstOrDefault().Sensors[sensorData.PosInTray];
             sensor.SensorCode = sensorData.SensorCode;

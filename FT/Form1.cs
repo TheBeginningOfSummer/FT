@@ -155,10 +155,12 @@ namespace FT
                             //产品信息录入完成。将PLC标志位[1]置为false，PC标志位置true，表示准备好下一次的录入
                             communication.WriteVariable(false, "PLC标志位[1]");
                             communication.WriteVariable(true, "PC标志位[1]");
+                            //测试触发器
+                            //auto.Set();
                         }
                         #endregion
                         stopwatch1.Stop();
-                        logfile.WriteLog("更新数据结束", "更新数据");
+                        //logfile.WriteLog("更新数据结束", "更新数据");
                         label93.Invoke(new Action(() => label93.Text = $"{stopwatch1.ElapsedMilliseconds}ms"));
                     }
                     catch (Exception e)
@@ -686,7 +688,7 @@ namespace FT
                         SetTextBoxText(txt计算偏移θ, communication.ReadTestInformation[41]);
                         #endregion
                         stopwatch2.Stop();
-                        logfile.WriteLog("界面数据更新结束", "界面数据更新");
+                        //logfile.WriteLog("界面数据更新结束", "界面数据更新");
                         label95.Invoke(new Action(() => label95.Text = $"{stopwatch2.ElapsedMilliseconds}ms"));
                     }
                     catch (Exception e)
@@ -6463,24 +6465,25 @@ namespace FT
 
         #endregion
 
-        private void BTN_Test0_Click(object sender, EventArgs e)
+        #region 测试用代码
+        AutoResetEvent auto = new AutoResetEvent(false);
+        private void Test()
         {
-            //托盘附码
-            communication.WriteVariable(true, "PLC标志位[0]");
+            Task.Run(() =>
+            {
+                for (int i = 1; i <= 20; i++)
+                {
+                    communication.WriteVariable(i.ToString(), "PLC测试信息[20]");
+                    for (int j = 1; j <= 40; j++)
+                    {
+                        communication.WriteVariable(j.ToString(), "PLC测试信息[5]");
+                        communication.WriteVariable(true, "PLC标志位[1]");
+                        auto.WaitOne();
+                    }
+                }
+            });
         }
+        #endregion
 
-        private void BTN_Test1_Click(object sender, EventArgs e)
-        {
-            //测试完成
-            communication.WriteVariable(true, "PLC标志位[1]");
-        }
-
-        private void BTN_Test2_Click(object sender, EventArgs e)
-        {
-            //初始化托盘数据
-            communication.WriteVariable(true, "PLC标志位[2]");
-        }
-
-        
     }
 }

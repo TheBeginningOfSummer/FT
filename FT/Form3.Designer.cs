@@ -39,12 +39,13 @@
             this.LB_ErrorLog.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.LB_ErrorLog.Font = new System.Drawing.Font("宋体", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.LB_ErrorLog.FormattingEnabled = true;
-            this.LB_ErrorLog.ItemHeight = 12;
+            this.LB_ErrorLog.ItemHeight = 21;
             this.LB_ErrorLog.Location = new System.Drawing.Point(12, 74);
             this.LB_ErrorLog.Name = "LB_ErrorLog";
             this.LB_ErrorLog.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.LB_ErrorLog.Size = new System.Drawing.Size(776, 364);
+            this.LB_ErrorLog.Size = new System.Drawing.Size(776, 361);
             this.LB_ErrorLog.TabIndex = 0;
             // 
             // DTP_CheckDate
