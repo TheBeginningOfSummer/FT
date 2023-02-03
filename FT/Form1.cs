@@ -709,6 +709,7 @@ namespace FT
                         Thread.Sleep(300);
                         for (int i = 0; i < communication.ReadPLCAlarm.Length; i++)
                         {
+                            if (!alarmInformation.ContainsKey(i.ToString())) continue;
                             if (communication.ReadPLCAlarm[i])
                             {
                                 //如果当前报警列表不包含检测到的字符串
@@ -735,7 +736,6 @@ namespace FT
                                 }
                             }
                         }
-                        
                     }
                     catch (Exception e)
                     {
@@ -5279,11 +5279,6 @@ namespace FT
         private void btn报警复位_Click(object sender, EventArgs e)
         {
             communication.WriteVariable(true, "PlcInIO[0]");
-            communication.WriteVariable(false, "PlcOutAlarm[0]");
-            communication.WriteVariable(false, "PlcOutAlarm[1]");
-            communication.WriteVariable(false, "PlcOutAlarm[2]");
-            warning.Clear();
-            TB_Warning.Clear();
         }
 
         private void btn蜂鸣停止_Click(object sender, EventArgs e)
