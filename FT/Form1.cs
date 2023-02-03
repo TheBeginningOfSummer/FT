@@ -711,20 +711,27 @@ namespace FT
                         {
                             if (communication.ReadPLCAlarm[i])
                             {
-                                //如果有列表中未包含的值，则加入
+                                //如果当前报警列表不包含检测到的字符串
                                 if (!warning.Contains(alarmInformation[i.ToString()]))
                                 {
                                     TB_Warning.Invoke(new Action(() => TB_Warning.Clear()));
                                     warning.Add(alarmInformation[i.ToString()]);
                                     //显示到控件上
                                     foreach (var item in warning)
-                                    {
-                                        TB_Warning.Invoke(new Action(() =>
-                                        {
-                                            TB_Warning.AppendText(item + Environment.NewLine);
-                                        }));
-                                    }
+                                        TB_Warning.Invoke(new Action(() => TB_Warning.AppendText(item + Environment.NewLine)));
                                     logfile.WriteLog(alarmInformation[i.ToString()], "报警记录");
+                                }
+                            }
+                            else
+                            {
+                                //如果当前报警列表包含已经清除的报警
+                                if (warning.Contains(alarmInformation[i.ToString()]))
+                                {
+                                    TB_Warning.Invoke(new Action(() => TB_Warning.Clear()));
+                                    warning.Remove(alarmInformation[i.ToString()]);
+                                    //更新显示内容
+                                    foreach (var item in warning)
+                                        TB_Warning.Invoke(new Action(() => TB_Warning.AppendText(item + Environment.NewLine)));
                                 }
                             }
                         }
