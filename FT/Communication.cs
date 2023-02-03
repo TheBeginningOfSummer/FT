@@ -258,7 +258,7 @@ namespace FT
             catch (Exception ex)
             {
                 this.Error = ex.ToString();
-                throw ex;
+                //throw ex;
             }
         }
 

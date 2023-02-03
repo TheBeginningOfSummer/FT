@@ -707,12 +707,11 @@ namespace FT
                     try
                     {
                         Thread.Sleep(300);
-                        warning.Clear();//测试
                         for (int i = 0; i < communication.ReadPLCAlarm.Length; i++)
                         {
                             if (communication.ReadPLCAlarm[i])
                             {
-                                //MessageBox.Show(alarmInformation[i.ToString()], "报警信息", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                //如果有列表中未包含的值，则加入
                                 if (!warning.Contains(alarmInformation[i.ToString()]))
                                 {
                                     TB_Warning.Invoke(new Action(() => TB_Warning.Clear()));
@@ -729,6 +728,7 @@ namespace FT
                                 }
                             }
                         }
+                        
                     }
                     catch (Exception e)
                     {
@@ -5272,6 +5272,9 @@ namespace FT
         private void btn报警复位_Click(object sender, EventArgs e)
         {
             communication.WriteVariable(true, "PlcInIO[0]");
+            communication.WriteVariable(false, "PlcOutAlarm[0]");
+            communication.WriteVariable(false, "PlcOutAlarm[1]");
+            communication.WriteVariable(false, "PlcOutAlarm[2]");
             warning.Clear();
             TB_Warning.Clear();
         }

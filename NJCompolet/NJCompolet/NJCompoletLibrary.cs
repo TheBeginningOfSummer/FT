@@ -109,7 +109,7 @@ namespace CIPCommunication
                 return (T)Convert.ChangeType(compolet.ReadVariable(variableName), typeof(T));
         }
         /// <summary>
-        /// 读多个数据的变量名
+        /// 读多个数据的变量名(按变量名中的数字排序)
         /// </summary>
         /// <param name="variableNames">变量名数组</param>
         /// <returns></returns>
@@ -123,7 +123,7 @@ namespace CIPCommunication
             return keys;
         }
         /// <summary>
-        /// 读多个数据的变量值
+        /// 读多个数据的变量值(按变量名中的数字排序)
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="variableNames">变量名数组</param>
