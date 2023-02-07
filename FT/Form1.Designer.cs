@@ -577,6 +577,8 @@
             this.label286 = new System.Windows.Forms.Label();
             this.PN_Trays = new System.Windows.Forms.Panel();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.label95 = new System.Windows.Forms.Label();
+            this.label93 = new System.Windows.Forms.Label();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.LB_FW_工位3零度 = new System.Windows.Forms.Label();
             this.LB_FW_工位3光阑右上 = new System.Windows.Forms.Label();
@@ -1342,8 +1344,6 @@
             this.LB_InquireTime = new System.Windows.Forms.Label();
             this.DTP_MinTime = new System.Windows.Forms.DateTimePicker();
             this.DTP_MaxTime = new System.Windows.Forms.DateTimePicker();
-            this.PN_Data = new System.Windows.Forms.Panel();
-            this.dataGridView = new System.Windows.Forms.DataGridView();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.groupBox62 = new System.Windows.Forms.GroupBox();
             this.txt热辐射轴手动速度 = new System.Windows.Forms.TextBox();
@@ -1455,8 +1455,9 @@
             this.label469 = new System.Windows.Forms.Label();
             this.label464 = new System.Windows.Forms.Label();
             this.label463 = new System.Windows.Forms.Label();
-            this.label93 = new System.Windows.Forms.Label();
-            this.label95 = new System.Windows.Forms.Label();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.PN_Data = new System.Windows.Forms.Panel();
+            this.BTN_Test = new System.Windows.Forms.Button();
             this.TC_Main.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox77.SuspendLayout();
@@ -1550,12 +1551,12 @@
             this.groupBox57.SuspendLayout();
             this.tabPage6.SuspendLayout();
             this.InquireCondition.SuspendLayout();
-            this.PN_Data.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.tabPage5.SuspendLayout();
             this.groupBox62.SuspendLayout();
             this.groupBox65.SuspendLayout();
             this.groupBox63.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
+            this.PN_Data.SuspendLayout();
             this.SuspendLayout();
             // 
             // TC_Main
@@ -1612,6 +1613,7 @@
             // 
             // groupBox77
             // 
+            this.groupBox77.Controls.Add(this.BTN_Test);
             this.groupBox77.Controls.Add(this.btn人工上下料);
             this.groupBox77.Location = new System.Drawing.Point(992, 325);
             this.groupBox77.Name = "groupBox77";
@@ -8861,6 +8863,24 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "I/O信息";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // label95
+            // 
+            this.label95.AutoSize = true;
+            this.label95.Location = new System.Drawing.Point(13, 715);
+            this.label95.Name = "label95";
+            this.label95.Size = new System.Drawing.Size(104, 17);
+            this.label95.TabIndex = 173;
+            this.label95.Text = "界面刷新时间";
+            // 
+            // label93
+            // 
+            this.label93.AutoSize = true;
+            this.label93.Location = new System.Drawing.Point(13, 685);
+            this.label93.Name = "label93";
+            this.label93.Size = new System.Drawing.Size(104, 17);
+            this.label93.TabIndex = 172;
+            this.label93.Text = "数据刷新时间";
             // 
             // groupBox9
             // 
@@ -18041,31 +18061,6 @@
             this.DTP_MaxTime.Size = new System.Drawing.Size(160, 24);
             this.DTP_MaxTime.TabIndex = 11;
             // 
-            // PN_Data
-            // 
-            this.PN_Data.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.PN_Data.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.PN_Data.Controls.Add(this.dataGridView);
-            this.PN_Data.Location = new System.Drawing.Point(3, 3);
-            this.PN_Data.Name = "PN_Data";
-            this.PN_Data.Size = new System.Drawing.Size(1039, 713);
-            this.PN_Data.TabIndex = 16;
-            // 
-            // dataGridView
-            // 
-            this.dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
-            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView.Name = "dataGridView";
-            this.dataGridView.ReadOnly = true;
-            this.dataGridView.RowHeadersWidth = 51;
-            this.dataGridView.RowTemplate.Height = 23;
-            this.dataGridView.Size = new System.Drawing.Size(1039, 713);
-            this.dataGridView.TabIndex = 2;
-            // 
             // tabPage5
             // 
             this.tabPage5.Controls.Add(this.groupBox62);
@@ -19328,23 +19323,40 @@
             this.label463.TabIndex = 71;
             this.label463.Text = "mm/s";
             // 
-            // label93
+            // dataGridView
             // 
-            this.label93.AutoSize = true;
-            this.label93.Location = new System.Drawing.Point(13, 685);
-            this.label93.Name = "label93";
-            this.label93.Size = new System.Drawing.Size(104, 17);
-            this.label93.TabIndex = 172;
-            this.label93.Text = "数据刷新时间";
+            this.dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.ReadOnly = true;
+            this.dataGridView.RowHeadersWidth = 51;
+            this.dataGridView.RowTemplate.Height = 23;
+            this.dataGridView.Size = new System.Drawing.Size(1039, 750);
+            this.dataGridView.TabIndex = 2;
             // 
-            // label95
+            // PN_Data
             // 
-            this.label95.AutoSize = true;
-            this.label95.Location = new System.Drawing.Point(13, 715);
-            this.label95.Name = "label95";
-            this.label95.Size = new System.Drawing.Size(104, 17);
-            this.label95.TabIndex = 173;
-            this.label95.Text = "界面刷新时间";
+            this.PN_Data.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.PN_Data.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.PN_Data.Controls.Add(this.dataGridView);
+            this.PN_Data.Location = new System.Drawing.Point(3, 3);
+            this.PN_Data.Name = "PN_Data";
+            this.PN_Data.Size = new System.Drawing.Size(1039, 750);
+            this.PN_Data.TabIndex = 16;
+            // 
+            // BTN_Test
+            // 
+            this.BTN_Test.Location = new System.Drawing.Point(39, 189);
+            this.BTN_Test.Name = "BTN_Test";
+            this.BTN_Test.Size = new System.Drawing.Size(75, 23);
+            this.BTN_Test.TabIndex = 23;
+            this.BTN_Test.Text = "测试";
+            this.BTN_Test.UseVisualStyleBackColor = true;
+            this.BTN_Test.Click += new System.EventHandler(this.BTN_Test_Click);
             // 
             // Form1
             // 
@@ -19526,8 +19538,6 @@
             this.tabPage6.ResumeLayout(false);
             this.InquireCondition.ResumeLayout(false);
             this.InquireCondition.PerformLayout();
-            this.PN_Data.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.groupBox62.ResumeLayout(false);
             this.groupBox62.PerformLayout();
@@ -19535,6 +19545,8 @@
             this.groupBox65.PerformLayout();
             this.groupBox63.ResumeLayout(false);
             this.groupBox63.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
+            this.PN_Data.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -20222,7 +20234,6 @@
         private System.Windows.Forms.TextBox txt实盘示教当前位置;
         private System.Windows.Forms.Button btn实盘示教初始位置;
         private System.Windows.Forms.Label label407;
-        private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.Button BTN_SensorInquire;
         private System.Windows.Forms.DateTimePicker DTP_MaxTime;
         private System.Windows.Forms.DateTimePicker DTP_MinTime;
@@ -20416,7 +20427,6 @@
         private System.Windows.Forms.GroupBox InquireCondition;
         private System.Windows.Forms.ComboBox CB_TypeOfTray;
         private System.Windows.Forms.Label LB_TypeOfTray;
-        private System.Windows.Forms.Panel PN_Data;
         private System.Windows.Forms.Button btn报警复位;
         private System.Windows.Forms.Button btn蜂鸣停止;
         private System.Windows.Forms.Button btnX夹爪位置;
@@ -20969,6 +20979,9 @@
         private System.Windows.Forms.Button BTN_查看日志;
         private System.Windows.Forms.Label label95;
         private System.Windows.Forms.Label label93;
+        private System.Windows.Forms.Panel PN_Data;
+        private System.Windows.Forms.DataGridView dataGridView;
+        private System.Windows.Forms.Button BTN_Test;
     }
 }
 
