@@ -20,7 +20,7 @@ namespace FT
             CB_UserName.Items.Add("工程师");
             CB_UserName.Items.Add("管理员");
             Users.Add("操作员", new UserData() { UserType = 2, UserName = "操作员", Password = "" });
-            Users.Add("管理员", new UserData() { UserType = 0, UserName = "管理员", Password = "" });
+            Users.Add("管理员", new UserData() { UserType = 0, UserName = "管理员", Password = "666666" });
             UserData engineer = JsonManager.ReadJsonString<UserData>(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\FTData", "engineerData");
             if (engineer == null)
             {
@@ -39,12 +39,13 @@ namespace FT
             {
                 if (form1 == null)
                 {
-                    form1 = new Form1(this); form1.Show();
+                    form1 = new Form1(this); form1.LB_实时权限显示.Text = "操作员"; form1.Show();
                     form1.TC_Main.Selecting += new TabControlCancelEventHandler(TC_Main_Selecting);
                     this.Hide();
                 }
                 else
                 {
+                    form1.LB_实时权限显示.Text = "操作员";
                     form1.Show();
                     this.Hide();
                 }
@@ -53,12 +54,13 @@ namespace FT
             {
                 if (form1 == null)
                 {
-                    form1 = new Form1(this); form1.Show();
+                    form1 = new Form1(this); form1.LB_实时权限显示.Text = CB_UserName.Text; form1.Show();
                     form1.TC_Main.Selecting += new TabControlCancelEventHandler(TC_Main_Selecting);
                     this.Hide();
                 }
                 else
                 {
+                    form1.LB_实时权限显示.Text = CB_UserName.Text;
                     form1.Show();
                     this.Hide();
                 }
@@ -69,6 +71,7 @@ namespace FT
             }
         }
 
+                
         void TC_Main_Selecting(object sender, TabControlCancelEventArgs e)
         {
             if (CB_UserName.Text == "操作员")//禁用某个Tab

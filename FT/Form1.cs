@@ -1,10 +1,12 @@
 ﻿using FT.Data;
 using MyToolkit;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
+using System.Security.Claims;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -131,6 +133,7 @@ namespace FT
                             //将扫到的托盘码赋值给托盘管理类
                             trayManager.SetTrayNumber(communication.ReadTestInformation[4]);
                             //托盘扫码完成,PLC检测到此值为true后，将PLC标志位[0]置为false
+                            communication.WriteVariable(false, "PLC标志位[0]");
                             communication.WriteVariable(true, "PC标志位[0]");
                         }
                         //产品测试完成
@@ -197,6 +200,7 @@ namespace FT
                         SetTextBoxText(txtX示教扫码位置, communication.ReadLocation[35]);
                         SetTextBoxText(txtX示教视觉实盘第一列, communication.ReadLocation[36]);
                         //SetTextBoxText(txtX示教视觉倒实盘第一列, communication.ReadLocation[37]);
+                        SetTextBoxText(txtX示教下视觉2位置, communication.ReadLocation[38]);
 
                         SetTextBoxText(txtY示教吸1实盘第一行, communication.ReadLocation[41]);
                         SetTextBoxText(txtY示教吸2实盘第一行, communication.ReadLocation[42]);
@@ -212,6 +216,7 @@ namespace FT
                         SetTextBoxText(txtY示教扫码位置, communication.ReadLocation[52]);
                         SetTextBoxText(txtY示教视觉实盘第一列, communication.ReadLocation[53]);
                         SetTextBoxText(txtY示教视觉倒实盘第一列, communication.ReadLocation[54]);
+                        SetTextBoxText(txtY示教下视觉2位置, communication.ReadLocation[55]);
 
                         SetTextBoxText(txt实盘示教初始位置, communication.ReadLocation[58]);
                         //SetTextBoxText(txt实盘示教扫码位置, communication.ReadLocation[59]);
@@ -246,6 +251,8 @@ namespace FT
                         SetTextBoxText(txtBYX示教矫正位置6, communication.ReadLocation[174]);
                         SetTextBoxText(txtBYX示教矫正位置7, communication.ReadLocation[175]);
                         SetTextBoxText(txtBYX示教矫正位置8, communication.ReadLocation[176]);
+                        SetTextBoxText(txt夹爪2与1距离位置, communication.ReadLocation[177]);
+
 
                         SetTextBoxText(txtBYY示教Sokt夹爪3, communication.ReadLocation[95]);
                         SetTextBoxText(txtBYY示教Sokt夹爪4, communication.ReadLocation[96]);
@@ -268,6 +275,8 @@ namespace FT
                         SetTextBoxText(txtBYZ示教视觉位置2, communication.ReadLocation[110]);
                         SetTextBoxText(txtBYZ下料视觉位置, communication.ReadLocation[111]);
                         SetTextBoxText(txtBYZ示教视觉位置3, communication.ReadLocation[112]);
+                        SetTextBoxText(txtBYZ示教下视觉位置, communication.ReadLocation[113]);
+
 
                         SetTextBoxText(txtSk1示教黑体位置, communication.ReadLocation[117]);
                         SetTextBoxText(txtSk1示教翻转位置, communication.ReadLocation[118]);
@@ -477,14 +486,14 @@ namespace FT
                         SetLabelColor(communication.ReadPLCIO[109], X109);
                         SetLabelColor(communication.ReadPLCIO[110], X110);
                         SetLabelColor(communication.ReadPLCIO[111], X111);
-                        //SetLabelColor(communication.ReadPLCIO[112], X112);
-                        //SetLabelColor(communication.ReadPLCIO[113], X113);
-                        //SetLabelColor(communication.ReadPLCIO[114], X114);
-                        //SetLabelColor(communication.ReadPLCIO[115], X115);
-                        //SetLabelColor(communication.ReadPLCIO[116], X116);
-                        //SetLabelColor(communication.ReadPLCIO[117], X117);
-                        //SetLabelColor(communication.ReadPLCIO[118], X118);
-                        //SetLabelColor(communication.ReadPLCIO[119], X119);
+                        SetLabelColor(communication.ReadPLCIO[112], X112);
+                        SetLabelColor(communication.ReadPLCIO[113], X113);
+                        SetLabelColor(communication.ReadPLCIO[114], X114);
+                        SetLabelColor(communication.ReadPLCIO[115], X115);
+                        SetLabelColor(communication.ReadPLCIO[116], X116);
+                        SetLabelColor(communication.ReadPLCIO[117], X117);
+                        SetLabelColor(communication.ReadPLCIO[118], X118);
+                        SetLabelColor(communication.ReadPLCIO[119], X119);
                         //SetLabelColor(communication.ReadPLCIO[120], X120);
                         //SetLabelColor(communication.ReadPLCIO[121], X121);
                         //SetLabelColor(communication.ReadPLCIO[122], X122);
@@ -515,11 +524,52 @@ namespace FT
                         //SetLabelColor(communication.ReadPLCIO[152], Y02);
                         //SetLabelColor(communication.ReadPLCIO[153], Y03);
                         //SetLabelColor(communication.ReadPLCIO[154], Y04);
+
+                        #region Lable显示本机当前状态
+                        if (communication.ReadPLCIO[157])
+                        {
+                            LB_手动状态.Invoke(new Action(() => LB_手动状态.Text = "手动模式"));
+                        }
+
+                        if (communication.ReadPLCIO[158])
+                        {
+                            LB_手动状态.Invoke(new Action(() => LB_手动状态.Text = "自动模式"));
+                        }
+
+                        if (communication.ReadPLCIO[159])
+                        {
+                            LB_自动运行状态.Invoke(new Action(() => LB_自动运行状态.Text = "运行中"));
+                        }
+                        else
+                        {
+                            LB_自动运行状态.Invoke(new Action(() => LB_自动运行状态.Text = "停止中"));
+                        }
+
+                        if (communication.ReadPLCIO[156])
+                        {
+                            LB_初始化状态.Invoke(new Action(() => LB_初始化状态.Text = "初始化完成"));
+                        }
+                        else
+                        {
+                            LB_初始化状态.Invoke(new Action(() => LB_初始化状态.Text = "初始化未完成"));
+                        }
+
+                        if (communication.ReadPLCIO[155])
+                        {
+                            LB_Connection.Invoke(new Action(() => LB_Connection.Text = "本机已连接"));
+                        }
+                        else
+                        {
+                            LB_Connection.Invoke(new Action(() => LB_Connection.Text = "本机未连接"));
+                        }
+                                                
                         SetLabelColor(communication.ReadPLCIO[155], LB_Connection);
                         SetLabelColor(communication.ReadPLCIO[156], LB_初始化状态);
-                        SetLabelColor(communication.ReadPLCIO[157], LB_手动状态);
-                        SetLabelColor(communication.ReadPLCIO[158], LB_自动状态);
+                        SetLabelColor(communication.ReadPLCIO[158], LB_手动状态);
                         SetLabelColor(communication.ReadPLCIO[159], LB_自动运行状态);
+
+                        #endregion
+                                               
                         //SetLabelColor(communication.ReadPLCIO[155], Y05);
                         //SetLabelColor(communication.ReadPLCIO[156], Y06);
                         //SetLabelColor(communication.ReadPLCIO[157], Y07);
@@ -560,9 +610,9 @@ namespace FT
                         SetLabelColor(communication.ReadPLCIO[192], LB_FW_钧舵3激活);
                         SetLabelColor(communication.ReadPLCIO[193], LB_FW_钧舵4激活);
                         //SetLabelColor(communication.ReadPLCIO[194], Y44);
-                        //SetLabelColor(communication.ReadPLCIO[195], Y45);
-                        //SetLabelColor(communication.ReadPLCIO[196], Y46);
-                        //SetLabelColor(communication.ReadPLCIO[197], Y47);
+                        SetLabelColor(communication.ReadPLCIO[195], 夹爪2状态);
+                        SetLabelColor(communication.ReadPLCIO[196], 夹爪3状态);
+                        SetLabelColor(communication.ReadPLCIO[197], 夹爪4状态);
                         //SetLabelColor(communication.ReadPLCIO[198], Y48);
                         //SetLabelColor(communication.ReadPLCIO[199], Y49);
                         //SetLabelColor(communication.ReadPLCIO[200], Y50);
@@ -644,6 +694,108 @@ namespace FT
                         //SetLabelColor(communication.ReadPLCIO[276], Y126);
                         //SetLabelColor(communication.ReadPLCIO[277], Y127);
 
+                        //气缸信号显示
+                        SetLabelColor(communication.ReadPLCIO[16], LB上料机械手上升);
+                        SetLabelColor(communication.ReadPLCIO[17], LB上料机械手下降);
+                        SetLabelColor(communication.ReadPLCIO[18], LB上料机械手夹紧);
+                        SetLabelColor(communication.ReadPLCIO[19], LB上料机械手张开);
+                        SetLabelColor(communication.ReadPLCIO[32], LB上料吸嘴1上升);
+                        SetLabelColor(communication.ReadPLCIO[33], LB上料吸嘴1下降);
+                        SetLabelColor(communication.ReadPLCIO[35], LB上料吸嘴2上升);
+                        SetLabelColor(communication.ReadPLCIO[36], LB上料吸嘴2下降);
+                        SetLabelColor(communication.ReadPLCIO[40], LB平移吸嘴12上升);
+                        SetLabelColor(communication.ReadPLCIO[41], LB平移吸嘴12下降);
+                        SetLabelColor(communication.ReadPLCIO[42], LB平移吸嘴34上升);
+                        SetLabelColor(communication.ReadPLCIO[43], LB平移吸嘴34下降);
+                        SetLabelColor(communication.ReadPLCIO[48], LB翻转气缸0);
+                        SetLabelColor(communication.ReadPLCIO[49], LB翻转气缸180);
+                        SetLabelColor(communication.ReadPLCIO[128], LB实盘卡盘伸出);
+                        SetLabelColor(communication.ReadPLCIO[131], LB实盘卡盘缩回);
+                        SetLabelColor(communication.ReadPLCIO[134], LBNG卡盘伸出);
+                        SetLabelColor(communication.ReadPLCIO[132], LBNG卡盘缩回);
+                        SetLabelColor(communication.ReadPLCIO[34], LB上料吸嘴1真空);
+                        SetLabelColor(communication.ReadPLCIO[37], LB上料吸嘴2真空);
+                        SetLabelColor(communication.ReadPLCIO[44], LB平移吸嘴1真空);
+                        SetLabelColor(communication.ReadPLCIO[45], LB平移吸嘴2真空);
+                        SetLabelColor(communication.ReadPLCIO[46], LB平移吸嘴3真空);
+                        SetLabelColor(communication.ReadPLCIO[47], LB平移吸嘴4真空);
+                        SetLabelColor(communication.ReadPLCIO[238], LBEFU上电);
+                        SetLabelColor(communication.ReadPLCIO[50], LB夹爪1回原点);
+                        SetLabelColor(communication.ReadPLCIO[57], LB夹爪2回原点);
+                        SetLabelColor(communication.ReadPLCIO[52], LB夹爪1闭合1);
+                        SetLabelColor(communication.ReadPLCIO[59], LB夹爪2闭合1);
+                        SetLabelColor(communication.ReadPLCIO[194], LB除尘器1吹扫);
+                        SetLabelColor(communication.ReadPLCIO[64], LB旋转夹爪1上升);
+                        SetLabelColor(communication.ReadPLCIO[66], LB旋转夹爪2上升);
+                        SetLabelColor(communication.ReadPLCIO[68], LB旋转夹爪3上升);
+                        SetLabelColor(communication.ReadPLCIO[70], LB旋转夹爪4上升);
+                        SetLabelColor(communication.ReadPLCIO[65], LB旋转夹爪1下降);
+                        SetLabelColor(communication.ReadPLCIO[67], LB旋转夹爪2下降);
+                        SetLabelColor(communication.ReadPLCIO[69], LB旋转夹爪3下降);
+                        SetLabelColor(communication.ReadPLCIO[71], LB旋转夹爪4下降);
+                        SetLabelColor(communication.ReadPLCIO[72], LB工位1光阑伸出);
+                        SetLabelColor(communication.ReadPLCIO[80], LB工位2光阑伸出);
+                        SetLabelColor(communication.ReadPLCIO[88], LB工位3光阑伸出);
+                        SetLabelColor(communication.ReadPLCIO[96], LB工位4光阑伸出);
+                        SetLabelColor(communication.ReadPLCIO[73], LB工位1光阑缩回);
+                        SetLabelColor(communication.ReadPLCIO[81], LB工位2光阑缩回);
+                        SetLabelColor(communication.ReadPLCIO[89], LB工位3光阑缩回);
+                        SetLabelColor(communication.ReadPLCIO[97], LB工位4光阑缩回);
+                        SetLabelColor(communication.ReadPLCIO[74], LB工位1光阑上升);
+                        SetLabelColor(communication.ReadPLCIO[82], LB工位2光阑上升);
+                        SetLabelColor(communication.ReadPLCIO[90], LB工位3光阑上升);
+                        SetLabelColor(communication.ReadPLCIO[98], LB工位4光阑上升);
+                        SetLabelColor(communication.ReadPLCIO[104], LB工位1光阑右上升);
+                        SetLabelColor(communication.ReadPLCIO[106], LB工位2光阑右上升);
+                        SetLabelColor(communication.ReadPLCIO[108], LB工位3光阑右上升);
+                        SetLabelColor(communication.ReadPLCIO[110], LB工位4光阑右上升);
+                        SetLabelColor(communication.ReadPLCIO[75], LB工位1光阑下降);
+                        SetLabelColor(communication.ReadPLCIO[83], LB工位2光阑下降);
+                        SetLabelColor(communication.ReadPLCIO[91], LB工位3光阑下降);
+                        SetLabelColor(communication.ReadPLCIO[99], LB工位4光阑下降);
+                        SetLabelColor(communication.ReadPLCIO[105], LB工位1光阑右下降);
+                        SetLabelColor(communication.ReadPLCIO[107], LB工位2光阑右下降);
+                        SetLabelColor(communication.ReadPLCIO[109], LB工位3光阑右下降);
+                        SetLabelColor(communication.ReadPLCIO[111], LB工位4光阑右下降);
+                        SetLabelColor(communication.ReadPLCIO[76], LB工位1辐射板上升);
+                        SetLabelColor(communication.ReadPLCIO[84], LB工位2辐射板上升);
+                        SetLabelColor(communication.ReadPLCIO[92], LB工位3辐射板上升);
+                        SetLabelColor(communication.ReadPLCIO[100], LB工位4辐射板上升);
+                        SetLabelColor(communication.ReadPLCIO[77], LB工位1辐射板下降);
+                        SetLabelColor(communication.ReadPLCIO[85], LB工位2辐射板下降);
+                        SetLabelColor(communication.ReadPLCIO[93], LB工位3辐射板下降);
+                        SetLabelColor(communication.ReadPLCIO[101], LB工位4辐射板下降);
+                        SetLabelColor(communication.ReadPLCIO[78], LB工位1翻转0);
+                        SetLabelColor(communication.ReadPLCIO[86], LB工位2翻转0);
+                        SetLabelColor(communication.ReadPLCIO[94], LB工位3翻转0);
+                        SetLabelColor(communication.ReadPLCIO[102], LB工位4翻转0);
+                        SetLabelColor(communication.ReadPLCIO[79], LB工位1翻转90);
+                        SetLabelColor(communication.ReadPLCIO[87], LB工位2翻转90);
+                        SetLabelColor(communication.ReadPLCIO[95], LB工位3翻转90);
+                        SetLabelColor(communication.ReadPLCIO[103], LB工位4翻转90);
+                        SetLabelColor(communication.ReadPLCIO[112], LB工位1光阑伸出右);
+                        SetLabelColor(communication.ReadPLCIO[114], LB工位2光阑伸出右);
+                        SetLabelColor(communication.ReadPLCIO[116], LB工位3光阑伸出右);
+                        SetLabelColor(communication.ReadPLCIO[118], LB工位4光阑伸出右);
+                        SetLabelColor(communication.ReadPLCIO[113], LB工位1光阑缩回右);
+                        SetLabelColor(communication.ReadPLCIO[115], LB工位2光阑缩回右);
+                        SetLabelColor(communication.ReadPLCIO[117], LB工位3光阑缩回右);
+                        SetLabelColor(communication.ReadPLCIO[119], LB工位4光阑缩回右);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                         //参数设置
                         SetTextBoxText(txt上料X轴定位速度, communication.ReadPLCPmt[0]);
                         SetTextBoxText(txt上料Y轴定位速度, communication.ReadPLCPmt[1]);
@@ -686,10 +838,55 @@ namespace FT
                         SetTextBoxText(txt计算偏移X, communication.ReadTestInformation[39]);
                         SetTextBoxText(txt计算偏移Y, communication.ReadTestInformation[40]);
                         SetTextBoxText(txt计算偏移θ, communication.ReadTestInformation[41]);
+                        SetTextBoxText(txt下视觉2偏移X, communication.ReadTestInformation[42]);
+                        SetTextBoxText(txt下视觉2偏移Y, communication.ReadTestInformation[43]);
+                        SetTextBoxText(txt下视觉2偏移θ, communication.ReadTestInformation[44]);
+                        SetTextBoxText(txtR1当前字节, communication.ReadTestInformation[45]);
+                        SetTextBoxText(txtR2当前字节, communication.ReadTestInformation[46]);
+                        SetTextBoxText(txtR3当前字节, communication.ReadTestInformation[47]);
+                        SetTextBoxText(txtR4当前字节, communication.ReadTestInformation[48]);
+
+                        //复位信息读取
+                        SetLabelColor(communication.ReadPLCIO[50], LB_FW_增广1);
+                        SetLabelColor(communication.ReadPLCIO[57], LB_FW_增广2);
+                        SetLabelColor(communication.ReadPLCIO[16], LB_FW_夹爪气缸上);
+                        SetLabelColor(communication.ReadPLCIO[19], LB_FW_夹爪气缸张);
+                        SetLabelColor(communication.ReadPLCIO[32], LB_FW_吸嘴1上);
+                        SetLabelColor(communication.ReadPLCIO[35], LB_FW_吸嘴2上);
+                        SetLabelColor(communication.ReadPLCIO[41], LB_FW_吸嘴12下);
+                        SetLabelColor(communication.ReadPLCIO[43], LB_FW_吸嘴34下);
+                        SetLabelColor(communication.ReadPLCIO[48], LB_FW_翻转0度);
+                        SetLabelColor(communication.ReadPLCIO[64], LB_FW_钧舵1上);
+                        SetLabelColor(communication.ReadPLCIO[66], LB_FW_钧舵2上);
+                        SetLabelColor(communication.ReadPLCIO[68], LB_FW_钧舵3上);
+                        SetLabelColor(communication.ReadPLCIO[70], LB_FW_钧舵4上);
+                        SetLabelColor(communication.ReadPLCIO[104], LB_FW_工位1光阑右上);
+                        SetLabelColor(communication.ReadPLCIO[73], LB_FW_工位1光阑缩回);
+                        SetLabelColor(communication.ReadPLCIO[74], LB_FW_工位1光阑左上);
+                        SetLabelColor(communication.ReadPLCIO[77], LB_FW_工位1辐射板下);
+                        SetLabelColor(communication.ReadPLCIO[78], LB_FW_工位1零度);
+                        SetLabelColor(communication.ReadPLCIO[106], LB_FW_工位2光阑右上);
+                        SetLabelColor(communication.ReadPLCIO[81], LB_FW_工位2光阑缩回);
+                        SetLabelColor(communication.ReadPLCIO[82], LB_FW_工位2光阑左上);
+                        SetLabelColor(communication.ReadPLCIO[85], LB_FW_工位2辐射板下);
+                        SetLabelColor(communication.ReadPLCIO[86], LB_FW_工位2零度);
+                        SetLabelColor(communication.ReadPLCIO[108], LB_FW_工位3光阑右上);
+                        SetLabelColor(communication.ReadPLCIO[89], LB_FW_工位3光阑缩回);
+                        SetLabelColor(communication.ReadPLCIO[90], LB_FW_工位3光阑左上);
+                        SetLabelColor(communication.ReadPLCIO[93], LB_FW_工位3辐射板下);
+                        SetLabelColor(communication.ReadPLCIO[94], LB_FW_工位3零度);
+                        SetLabelColor(communication.ReadPLCIO[110], LB_FW_工位4光阑右上);
+                        SetLabelColor(communication.ReadPLCIO[97], LB_FW_工位4光阑缩回);
+                        SetLabelColor(communication.ReadPLCIO[98], LB_FW_工位4光阑左上);
+                        SetLabelColor(communication.ReadPLCIO[101], LB_FW_工位4辐射板下);
+                        SetLabelColor(communication.ReadPLCIO[102], LB_FW_工位4零度);
+
+
                         #endregion
                         stopwatch2.Stop();
                         //logfile.WriteLog("界面数据更新结束", "界面数据更新");
                         label95.Invoke(new Action(() => label95.Text = $"{stopwatch2.ElapsedMilliseconds}ms"));
+                                                                
                     }
                     catch (Exception e)
                     {
@@ -709,10 +906,43 @@ namespace FT
                     try
                     {
                         Thread.Sleep(300);
-                        for (int i = 0; i < communication.ReadPLCAlarm.Length; i++)
+
+                        //for (int i = 0; i < communication.ReadPLCAlarm.Length; i++)
+                        //{
+                        //    if (!alarmInformation.ContainsKey(i.ToString())) continue;
+                        //    if (communication.ReadPLCAlarm[i])
+                        //    {
+                        //        //如果当前报警列表不包含检测到的字符串
+                        //        if (!warning.Contains(alarmInformation[i.ToString()]))
+                        //        {
+                        //            TB_Warning.Invoke(new Action(() => TB_Warning.Clear()));
+                        //            warning.Add(alarmInformation[i.ToString()]);
+                        //            //显示到控件上
+                        //            foreach (var item in warning)
+                        //                TB_Warning.Invoke(new Action(() => TB_Warning.AppendText(item + Environment.NewLine)));
+                        //            logfile.WriteLog(alarmInformation[i.ToString()], "报警记录");
+                        //        }
+                        //    }
+                        //    else
+                        //    {
+                        //        //如果当前报警列表包含已经清除的报警
+                        //        if (warning.Contains(alarmInformation[i.ToString()]))
+                        //        {
+                        //            TB_Warning.Invoke(new Action(() => TB_Warning.Clear()));
+                        //            warning.Remove(alarmInformation[i.ToString()]);
+                        //            //更新显示内容
+                        //            foreach (var item in warning)
+                        //                TB_Warning.Invoke(new Action(() => TB_Warning.AppendText(item + Environment.NewLine)));
+                        //        }
+                        //    }
+                        //}
+
+                        //方法二
+                        for (int i = 0; i < communication.Alarm.Count; i++)
                         {
+                            string key = $"PlcOutAlarm[{i}]";
                             if (!alarmInformation.ContainsKey(i.ToString())) continue;
-                            if (communication.ReadPLCAlarm[i])
+                            if ((bool)communication.Alarm[key])
                             {
                                 //如果当前报警列表不包含检测到的字符串
                                 if (!warning.Contains(alarmInformation[i.ToString()]))
@@ -727,7 +957,6 @@ namespace FT
                             }
                             else
                             {
-                                //如果当前报警列表包含已经清除的报警
                                 if (warning.Contains(alarmInformation[i.ToString()]))
                                 {
                                     TB_Warning.Invoke(new Action(() => TB_Warning.Clear()));
@@ -859,8 +1088,21 @@ namespace FT
         #region 切换托盘类型
         private void CB_TypeOfTray_SelectedIndexChanged(object sender, EventArgs e)
         {
-            trayType = CB_TypeOfTray.Text;
-            communication.WriteVariable(trayManager.TrayType[CB_TypeOfTray.Text].Index, "PlcInID[0]");
+            if (CB_TypeOfTray.SelectedIndex >= 0)
+            {
+
+                DialogResult result = MessageBox.Show($"您是否选择 “{CB_TypeOfTray.Text}” 型号？", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    trayType = CB_TypeOfTray.Text;
+                    communication.WriteVariable(trayManager.TrayType[CB_TypeOfTray.Text].Index, "PlcInID[0]");
+                }
+                else
+                {
+                    CB_TypeOfTray.SelectedIndex = -1;
+                }
+
+            }
         }
         #endregion
 
@@ -2816,6 +3058,36 @@ namespace FT
         private void btn上视觉标定复位_MouseUp(object sender, MouseEventArgs e)
         {
             communication.WriteVariable(false, "PlcInIO[628]");
+        }
+
+        private void btn下视觉2标定复位_MouseDown(object sender, MouseEventArgs e)
+        {
+            communication.WriteVariable(true, "PlcInIO[633]");
+        }
+
+        private void btn下视觉2标定复位_MouseUp(object sender, MouseEventArgs e)
+        {
+            communication.WriteVariable(false, "PlcInIO[633]");
+        }
+
+        private void btn下视觉2标定开始_MouseDown(object sender, MouseEventArgs e)
+        {
+            communication.WriteVariable(true, "PlcInIO[631]");
+        }
+
+        private void btn下视觉2标定开始_MouseUp(object sender, MouseEventArgs e)
+        {
+            communication.WriteVariable(false, "PlcInIO[631]");
+        }
+
+        private void btn下视觉2对位_MouseDown(object sender, MouseEventArgs e)
+        {
+            communication.WriteVariable(true, "PlcInIO[632]");
+        }
+
+        private void btn下视觉2对位_MouseUp(object sender, MouseEventArgs e)
+        {
+            communication.WriteVariable(false, "PlcInIO[632]");
         }
 
         #endregion
@@ -5224,9 +5496,11 @@ namespace FT
 
         private void BTN_Modify_Click(object sender, EventArgs e)
         {
-            if (loginForm.CB_UserName.Text == "操作员")
+            if (loginForm.CB_UserName.Text == "操作员" || loginForm.CB_UserName.Text == "管理员")
             {
                 MessageBox.Show("未授权用户组", "修改密码");
+                TB_Password.Text = "";
+                TB_NewPassword.Text = "";
                 return;
             }
             if (TB_Password.Text == "" || TB_NewPassword.Text == "")
@@ -5235,48 +5509,52 @@ namespace FT
                 return;
             }
             if (TB_Password.Text != TB_NewPassword.Text)
-            {
+            {                
                 MessageBox.Show("两次输入不一样", "修改密码");
+                TB_Password.Text = "";
+                TB_NewPassword.Text = "";
                 return;
             }
             JsonManager.SaveJsonString(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\FTData", "engineerData",
                 new UserData() { UserType = 1, UserName = "工程师", Password = TB_Password.Text });
             MessageBox.Show("修改成功", "修改密码");
+            TB_Password.Text = "";
+            TB_NewPassword.Text = "";
         }
 
-        private void BTN_打开端口_Click(object sender, EventArgs e)
-        {
-            //打开通信端口
-            try
-            {
-                communication.Compolet.Open();
-                isUpdateData = true;
-                DataUpdate();
-                InterfaceUpdate();
-                AlarmCheck();
-                MessageBox.Show("打开了端口", "打开端口");
-            }
-            catch (Exception ex)
-            {
-                isUpdateData = false;
-                MessageBox.Show(ex.Message, "打开端口");
-            }
-        }
+        //private void BTN_打开端口_Click(object sender, EventArgs e)
+        //{
+        //    //打开通信端口
+        //    try
+        //    {
+        //        communication.Compolet.Open();
+        //        isUpdateData = true;
+        //        DataUpdate();
+        //        InterfaceUpdate();
+        //        AlarmCheck();
+        //        MessageBox.Show("打开了端口", "打开端口");
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        isUpdateData = false;
+        //        MessageBox.Show(ex.Message, "打开端口");
+        //    }
+        //}
 
-        private void BTN_关闭端口_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                //关闭通信端口
-                communication.Compolet.Close();
-                isUpdateData = false;
-                MessageBox.Show("关闭了端口", "打开端口");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "关闭端口");
-            }
-        }
+        //private void BTN_关闭端口_Click(object sender, EventArgs e)
+        //{
+        //    try
+        //    {
+        //        //关闭通信端口
+        //        communication.Compolet.Close();
+        //        isUpdateData = false;
+        //        MessageBox.Show("关闭了端口", "打开端口");
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show(ex.Message, "关闭端口");
+        //    }
+        //}
 
         private void btn报警复位_Click(object sender, EventArgs e)
         {
@@ -5308,7 +5586,7 @@ namespace FT
 
         private void btn自动运行_Click(object sender, EventArgs e)
         {
-            if (CB_TypeOfTray.Text == "" || CB_TypeOfProduction.Text == "" || CB_Socket类.Text == "" || CB_工位.Text == "" || CB_工作盘数.Text == "")
+            if (CB_TypeOfTray.Text == "" || CB_Socket类.Text == "" || CB_工位.Text == "" || CB_工作盘数.Text == "")
             {
                 MessageBox.Show("类别未选择完成，不能启动", "提示");
                 return;
@@ -5328,7 +5606,7 @@ namespace FT
 
         private void btn初始化_Click(object sender, EventArgs e)
         {
-            if (CB_TypeOfTray.Text == "" || CB_TypeOfProduction.Text == "" || CB_Socket类.Text == "" || CB_工位.Text == "" || CB_工作盘数.Text == "")
+            if (CB_TypeOfTray.Text == "" || CB_Socket类.Text == "" || CB_工位.Text == "" || CB_工作盘数.Text == "")
             {
                 MessageBox.Show("类别未选择完成，不能启动", "提示");
                 return;
@@ -5348,223 +5626,270 @@ namespace FT
         }
 
 
-        private void CB_TypeOfProduction_SelectedIndexChanged(object sender, EventArgs e)//选择产品索引
-        {
-            if (this.CB_TypeOfProduction.SelectedItem.ToString() == "GST212W2")
-            {
-                communication.WriteVariable(1, "PlcInID[1]");
-            }
+        //private void CB_TypeOfProduction_SelectedIndexChanged(object sender, EventArgs e)//选择产品索引
+        //{
+        //    if (this.CB_TypeOfProduction.SelectedItem.ToString() == "GST212W2")
+        //    {
+        //        communication.WriteVariable(1, "PlcInID[1]");
+        //    }
 
-            if (this.CB_TypeOfProduction.SelectedItem.ToString() == "GST612W2")
-            {
-                communication.WriteVariable(2, "PlcInID[1]");
-            }
+        //    if (this.CB_TypeOfProduction.SelectedItem.ToString() == "GST612W2")
+        //    {
+        //        communication.WriteVariable(2, "PlcInID[1]");
+        //    }
 
-            if (this.CB_TypeOfProduction.SelectedItem.ToString() == "GST412C0")
-            {
-                communication.WriteVariable(3, "PlcInID[1]");
-            }
+        //    if (this.CB_TypeOfProduction.SelectedItem.ToString() == "GST412C0")
+        //    {
+        //        communication.WriteVariable(3, "PlcInID[1]");
+        //    }
 
-            if (this.CB_TypeOfProduction.SelectedItem.ToString() == "GST612M2")
-            {
-                communication.WriteVariable(4, "PlcInID[1]");
-            }
+        //    if (this.CB_TypeOfProduction.SelectedItem.ToString() == "GST612M2")
+        //    {
+        //        communication.WriteVariable(4, "PlcInID[1]");
+        //    }
 
-            if (this.CB_TypeOfProduction.SelectedItem.ToString() == "GST612W9")
-            {
-                communication.WriteVariable(5, "PlcInID[1]");
-            }
-        }
+        //    if (this.CB_TypeOfProduction.SelectedItem.ToString() == "GST612W9")
+        //    {
+        //        communication.WriteVariable(5, "PlcInID[1]");
+        //    }
+        //}
 
         private void CB_Socket类_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (this.CB_Socket类.SelectedItem.ToString() == "四目")
+
+            if (CB_Socket类.SelectedIndex >= 0)
             {
-                communication.WriteVariable(1, "PlcInID[2]");
+
+                DialogResult result = MessageBox.Show($"您是否选择 “{CB_Socket类.Text}” ？", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    if (this.CB_Socket类.SelectedItem.ToString() == "四目")
+                    {
+                        communication.WriteVariable(1, "PlcInID[2]");
+                    }
+
+                    if (this.CB_Socket类.SelectedItem.ToString() == "单目")
+                    {
+                        communication.WriteVariable(2, "PlcInID[2]");
+                    }
+                }
+                else
+                {
+                    CB_Socket类.SelectedIndex = -1;
+                }
+
             }
 
-            if (this.CB_Socket类.SelectedItem.ToString() == "单目")
-            {
-                communication.WriteVariable(2, "PlcInID[2]");
-            }
         }
 
         private void CB_工位_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (this.CB_工位.SelectedItem.ToString() == "1工位")
-            {
-                communication.WriteVariable(1, "PlcInID[3]");
-            }
 
-            if (this.CB_工位.SelectedItem.ToString() == "2工位")
+            if (CB_工位.SelectedIndex >= 0)
             {
-                communication.WriteVariable(2, "PlcInID[3]");
-            }
 
-            if (this.CB_工位.SelectedItem.ToString() == "3工位")
-            {
-                communication.WriteVariable(3, "PlcInID[3]");
-            }
+                DialogResult result = MessageBox.Show($"您是否选择 “{CB_工位.Text}” ？", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    if (this.CB_工位.SelectedItem.ToString() == "1工位")
+                    {
+                        communication.WriteVariable(1, "PlcInID[3]");
+                    }
 
-            if (this.CB_工位.SelectedItem.ToString() == "4工位")
-            {
-                communication.WriteVariable(4, "PlcInID[3]");
-            }
+                    if (this.CB_工位.SelectedItem.ToString() == "2工位")
+                    {
+                        communication.WriteVariable(2, "PlcInID[3]");
+                    }
 
-            if (this.CB_工位.SelectedItem.ToString() == "12工位")
-            {
-                communication.WriteVariable(12, "PlcInID[3]");
-            }
+                    if (this.CB_工位.SelectedItem.ToString() == "3工位")
+                    {
+                        communication.WriteVariable(3, "PlcInID[3]");
+                    }
 
-            if (this.CB_工位.SelectedItem.ToString() == "13工位")
-            {
-                communication.WriteVariable(13, "PlcInID[3]");
-            }
+                    if (this.CB_工位.SelectedItem.ToString() == "4工位")
+                    {
+                        communication.WriteVariable(4, "PlcInID[3]");
+                    }
 
-            if (this.CB_工位.SelectedItem.ToString() == "14工位")
-            {
-                communication.WriteVariable(14, "PlcInID[3]");
-            }
+                    if (this.CB_工位.SelectedItem.ToString() == "12工位")
+                    {
+                        communication.WriteVariable(12, "PlcInID[3]");
+                    }
 
-            if (this.CB_工位.SelectedItem.ToString() == "23工位")
-            {
-                communication.WriteVariable(23, "PlcInID[3]");
-            }
+                    if (this.CB_工位.SelectedItem.ToString() == "13工位")
+                    {
+                        communication.WriteVariable(13, "PlcInID[3]");
+                    }
 
-            if (this.CB_工位.SelectedItem.ToString() == "24工位")
-            {
-                communication.WriteVariable(24, "PlcInID[3]");
-            }
+                    if (this.CB_工位.SelectedItem.ToString() == "14工位")
+                    {
+                        communication.WriteVariable(14, "PlcInID[3]");
+                    }
 
-            if (this.CB_工位.SelectedItem.ToString() == "34工位")
-            {
-                communication.WriteVariable(34, "PlcInID[3]");
-            }
+                    if (this.CB_工位.SelectedItem.ToString() == "23工位")
+                    {
+                        communication.WriteVariable(23, "PlcInID[3]");
+                    }
 
-            if (this.CB_工位.SelectedItem.ToString() == "123工位")
-            {
-                communication.WriteVariable(123, "PlcInID[3]");
-            }
+                    if (this.CB_工位.SelectedItem.ToString() == "24工位")
+                    {
+                        communication.WriteVariable(24, "PlcInID[3]");
+                    }
 
-            if (this.CB_工位.SelectedItem.ToString() == "124工位")
-            {
-                communication.WriteVariable(124, "PlcInID[3]");
-            }
+                    if (this.CB_工位.SelectedItem.ToString() == "34工位")
+                    {
+                        communication.WriteVariable(34, "PlcInID[3]");
+                    }
 
-            if (this.CB_工位.SelectedItem.ToString() == "234工位")
-            {
-                communication.WriteVariable(234, "PlcInID[3]");
-            }
+                    if (this.CB_工位.SelectedItem.ToString() == "123工位")
+                    {
+                        communication.WriteVariable(123, "PlcInID[3]");
+                    }
 
-            if (this.CB_工位.SelectedItem.ToString() == "1234工位")
-            {
-                communication.WriteVariable(66, "PlcInID[3]");
+                    if (this.CB_工位.SelectedItem.ToString() == "124工位")
+                    {
+                        communication.WriteVariable(124, "PlcInID[3]");
+                    }
+
+                    if (this.CB_工位.SelectedItem.ToString() == "134工位")
+                    {
+                        communication.WriteVariable(134, "PlcInID[3]");
+                    }
+
+                    if (this.CB_工位.SelectedItem.ToString() == "234工位")
+                    {
+                        communication.WriteVariable(234, "PlcInID[3]");
+                    }
+
+                    if (this.CB_工位.SelectedItem.ToString() == "1234工位")
+                    {
+                        communication.WriteVariable(66, "PlcInID[3]");
+                    }
+                }
+                else
+                {
+                    CB_工位.SelectedIndex = -1;
+                }
+
             }
 
         }
 
         private void CB_工作盘数_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (this.CB_工作盘数.SelectedItem.ToString() == "1盘")
+            if (CB_工作盘数.SelectedIndex >= 0)
             {
-                communication.WriteVariable(1, "PlcInID[5]");
-            }
 
-            if (this.CB_工作盘数.SelectedItem.ToString() == "2盘")
-            {
-                communication.WriteVariable(2, "PlcInID[5]");
-            }
+                DialogResult result = MessageBox.Show($"您是否选择 “{CB_工作盘数.Text}” ？", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    if (this.CB_工作盘数.SelectedItem.ToString() == "1盘")
+                    {
+                        communication.WriteVariable(1, "PlcInID[5]");
+                    }
 
-            if (this.CB_工作盘数.SelectedItem.ToString() == "3盘")
-            {
-                communication.WriteVariable(3, "PlcInID[5]");
-            }
+                    if (this.CB_工作盘数.SelectedItem.ToString() == "2盘")
+                    {
+                        communication.WriteVariable(2, "PlcInID[5]");
+                    }
 
-            if (this.CB_工作盘数.SelectedItem.ToString() == "4盘")
-            {
-                communication.WriteVariable(4, "PlcInID[5]");
-            }
+                    if (this.CB_工作盘数.SelectedItem.ToString() == "3盘")
+                    {
+                        communication.WriteVariable(3, "PlcInID[5]");
+                    }
 
-            if (this.CB_工作盘数.SelectedItem.ToString() == "5盘")
-            {
-                communication.WriteVariable(5, "PlcInID[5]");
-            }
+                    if (this.CB_工作盘数.SelectedItem.ToString() == "4盘")
+                    {
+                        communication.WriteVariable(4, "PlcInID[5]");
+                    }
 
-            if (this.CB_工作盘数.SelectedItem.ToString() == "6盘")
-            {
-                communication.WriteVariable(6, "PlcInID[5]");
-            }
+                    if (this.CB_工作盘数.SelectedItem.ToString() == "5盘")
+                    {
+                        communication.WriteVariable(5, "PlcInID[5]");
+                    }
 
-            if (this.CB_工作盘数.SelectedItem.ToString() == "7盘")
-            {
-                communication.WriteVariable(7, "PlcInID[5]");
-            }
+                    if (this.CB_工作盘数.SelectedItem.ToString() == "6盘")
+                    {
+                        communication.WriteVariable(6, "PlcInID[5]");
+                    }
 
-            if (this.CB_工作盘数.SelectedItem.ToString() == "8盘")
-            {
-                communication.WriteVariable(8, "PlcInID[5]");
-            }
+                    if (this.CB_工作盘数.SelectedItem.ToString() == "7盘")
+                    {
+                        communication.WriteVariable(7, "PlcInID[5]");
+                    }
 
-            if (this.CB_工作盘数.SelectedItem.ToString() == "9盘")
-            {
-                communication.WriteVariable(9, "PlcInID[5]");
-            }
+                    if (this.CB_工作盘数.SelectedItem.ToString() == "8盘")
+                    {
+                        communication.WriteVariable(8, "PlcInID[5]");
+                    }
 
-            if (this.CB_工作盘数.SelectedItem.ToString() == "10盘")
-            {
-                communication.WriteVariable(10, "PlcInID[5]");
-            }
+                    if (this.CB_工作盘数.SelectedItem.ToString() == "9盘")
+                    {
+                        communication.WriteVariable(9, "PlcInID[5]");
+                    }
 
-            if (this.CB_工作盘数.SelectedItem.ToString() == "11盘")
-            {
-                communication.WriteVariable(11, "PlcInID[5]");
-            }
+                    if (this.CB_工作盘数.SelectedItem.ToString() == "10盘")
+                    {
+                        communication.WriteVariable(10, "PlcInID[5]");
+                    }
 
-            if (this.CB_工作盘数.SelectedItem.ToString() == "12盘")
-            {
-                communication.WriteVariable(12, "PlcInID[5]");
-            }
+                    if (this.CB_工作盘数.SelectedItem.ToString() == "11盘")
+                    {
+                        communication.WriteVariable(11, "PlcInID[5]");
+                    }
 
-            if (this.CB_工作盘数.SelectedItem.ToString() == "13盘")
-            {
-                communication.WriteVariable(13, "PlcInID[5]");
-            }
+                    if (this.CB_工作盘数.SelectedItem.ToString() == "12盘")
+                    {
+                        communication.WriteVariable(12, "PlcInID[5]");
+                    }
 
-            if (this.CB_工作盘数.SelectedItem.ToString() == "14盘")
-            {
-                communication.WriteVariable(14, "PlcInID[5]");
-            }
+                    if (this.CB_工作盘数.SelectedItem.ToString() == "13盘")
+                    {
+                        communication.WriteVariable(13, "PlcInID[5]");
+                    }
 
-            if (this.CB_工作盘数.SelectedItem.ToString() == "15盘")
-            {
-                communication.WriteVariable(15, "PlcInID[5]");
-            }
+                    if (this.CB_工作盘数.SelectedItem.ToString() == "14盘")
+                    {
+                        communication.WriteVariable(14, "PlcInID[5]");
+                    }
 
-            if (this.CB_工作盘数.SelectedItem.ToString() == "16盘")
-            {
-                communication.WriteVariable(16, "PlcInID[5]");
-            }
+                    if (this.CB_工作盘数.SelectedItem.ToString() == "15盘")
+                    {
+                        communication.WriteVariable(15, "PlcInID[5]");
+                    }
 
-            if (this.CB_工作盘数.SelectedItem.ToString() == "17盘")
-            {
-                communication.WriteVariable(17, "PlcInID[5]");
-            }
+                    if (this.CB_工作盘数.SelectedItem.ToString() == "16盘")
+                    {
+                        communication.WriteVariable(16, "PlcInID[5]");
+                    }
 
-            if (this.CB_工作盘数.SelectedItem.ToString() == "18盘")
-            {
-                communication.WriteVariable(18, "PlcInID[5]");
-            }
+                    if (this.CB_工作盘数.SelectedItem.ToString() == "17盘")
+                    {
+                        communication.WriteVariable(17, "PlcInID[5]");
+                    }
 
-            if (this.CB_工作盘数.SelectedItem.ToString() == "19盘")
-            {
-                communication.WriteVariable(19, "PlcInID[5]");
-            }
+                    if (this.CB_工作盘数.SelectedItem.ToString() == "18盘")
+                    {
+                        communication.WriteVariable(18, "PlcInID[5]");
+                    }
 
-            if (this.CB_工作盘数.SelectedItem.ToString() == "20盘")
-            {
-                communication.WriteVariable(20, "PlcInID[5]");
-            }
+                    if (this.CB_工作盘数.SelectedItem.ToString() == "19盘")
+                    {
+                        communication.WriteVariable(19, "PlcInID[5]");
+                    }
 
+                    if (this.CB_工作盘数.SelectedItem.ToString() == "20盘")
+                    {
+                        communication.WriteVariable(20, "PlcInID[5]");
+                    }
+                }
+                else
+                {
+                    CB_工作盘数.SelectedIndex = -1;
+                }
+
+            }
+                       
         }
 
         #endregion
@@ -5640,12 +5965,12 @@ namespace FT
 
         private void btnJD清除状态_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WriteVariable(true, "PlcInIO[613]");
+            communication.WriteVariable(true, "PlcInIO[614]");
         }
 
         private void btnJD清除状态_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WriteVariable(false, "PlcInIO[613]");
+            communication.WriteVariable(false, "PlcInIO[614]");
         }
 
         private void btn一键真空破坏_MouseDown(object sender, MouseEventArgs e)
@@ -5942,16 +6267,29 @@ namespace FT
             {
                 communication.WriteVariable(true, "PlcInIO[3]");
                 communication.WriteVariable(false, "PlcInIO[27]");
+                communication.WriteVariable(false, "PlcInIO[29]");
             }
         }
 
         private void btn自动模式远程_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("是否选择自动模式远程？", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show("是否选择自动模式远程-控料？", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
                 communication.WriteVariable(true, "PlcInIO[27]");
                 communication.WriteVariable(false, "PlcInIO[3]");
+                communication.WriteVariable(false, "PlcInIO[29]");
+            }
+        }
+
+        private void btn自动模式远程测试_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("是否选择自动模式远程-测试？", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                communication.WriteVariable(true, "PlcInIO[29]");
+                communication.WriteVariable(false, "PlcInIO[3]");
+                communication.WriteVariable(false, "PlcInIO[27]");
             }
         }
 
@@ -6423,16 +6761,15 @@ namespace FT
             communication.WriteVariable(false, "PlcInIO[74]");
         }
 
-        private void btn计数功能清零_MouseDown(object sender, MouseEventArgs e)
+        private void btn计数功能清零_Click(object sender, EventArgs e)
         {
-            communication.WriteVariable(true, "PlcInIO[474]");
+            DialogResult result = MessageBox.Show("是否计数清零？", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                communication.WriteVariable(true, "PlcInIO[474]");
+            }
         }
-
-        private void btn计数功能清零_MouseUp(object sender, MouseEventArgs e)
-        {
-            communication.WriteVariable(false, "PlcInIO[474]");
-        }
-
+                
         private void btn人工上下料_MouseDown(object sender, MouseEventArgs e)
         {
             communication.WriteVariable(true, "PlcInIO[210]");
@@ -6453,14 +6790,184 @@ namespace FT
             communication.WriteVariable(false, "PlcInIO[475]");
         }
 
-        private void btn自动模式远程测试_MouseDown(object sender, MouseEventArgs e)
+        private void btnBYYSokt夹爪2记忆_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WriteVariable(true, "PlcInIO[29]");
+            communication.WriteVariable(true, "PlcInIO[284]");
         }
 
-        private void btn自动模式远程测试_MouseUp(object sender, MouseEventArgs e)
+        private void btnBYYSokt夹爪2记忆_MouseUp(object sender, MouseEventArgs e)
         {
-            communication.WriteVariable(false, "PlcInIO[29]");
+            communication.WriteVariable(false, "PlcInIO[284]");
+        }
+
+        private void btn夹爪2与夹爪1位置确认_MouseDown(object sender, MouseEventArgs e)
+        {
+            communication.WriteVariable(true, "PlcInIO[643]");
+        }
+
+        private void btn夹爪2与夹爪1位置确认_MouseUp(object sender, MouseEventArgs e)
+        {
+            communication.WriteVariable(false, "PlcInIO[643]");
+        }
+
+        private void btn工位1光阑伸出右_MouseDown(object sender, MouseEventArgs e)
+        {
+            communication.WriteVariable(true, "PlcInIO[740]");
+        }
+
+        private void btn工位1光阑伸出右_MouseUp(object sender, MouseEventArgs e)
+        {
+            communication.WriteVariable(false, "PlcInIO[740]");
+        }
+
+        private void btn工位1光阑缩回右_MouseDown(object sender, MouseEventArgs e)
+        {
+            communication.WriteVariable(true, "PlcInIO[741]");
+        }
+
+        private void btn工位1光阑缩回右_MouseUp(object sender, MouseEventArgs e)
+        {
+            communication.WriteVariable(false, "PlcInIO[741]");
+        }
+
+        private void btn工位2光阑伸出右_MouseDown(object sender, MouseEventArgs e)
+        {
+            communication.WriteVariable(true, "PlcInIO[742]");
+        }
+
+        private void btn工位2光阑伸出右_MouseUp(object sender, MouseEventArgs e)
+        {
+            communication.WriteVariable(false, "PlcInIO[742]");
+        }
+
+        private void btn工位2光阑缩回右_MouseDown(object sender, MouseEventArgs e)
+        {
+            communication.WriteVariable(true, "PlcInIO[743]");
+        }
+
+        private void btn工位2光阑缩回右_MouseUp(object sender, MouseEventArgs e)
+        {
+            communication.WriteVariable(false, "PlcInIO[743]");
+        }
+
+        private void btn工位3光阑伸出右_MouseDown(object sender, MouseEventArgs e)
+        {
+            communication.WriteVariable(true, "PlcInIO[744]");
+        }
+
+        private void btn工位3光阑伸出右_MouseUp(object sender, MouseEventArgs e)
+        {
+            communication.WriteVariable(false, "PlcInIO[744]");
+        }
+
+        private void btn工位3光阑缩回右_MouseDown(object sender, MouseEventArgs e)
+        {
+            communication.WriteVariable(true, "PlcInIO[745]");
+        }
+
+        private void btn工位3光阑缩回右_MouseUp(object sender, MouseEventArgs e)
+        {
+            communication.WriteVariable(false, "PlcInIO[745]");
+        }
+
+        private void btn工位4光阑伸出右_MouseDown(object sender, MouseEventArgs e)
+        {
+            communication.WriteVariable(true, "PlcInIO[746]");
+        }
+
+        private void btn工位4光阑伸出右_MouseUp(object sender, MouseEventArgs e)
+        {
+            communication.WriteVariable(false, "PlcInIO[746]");
+        }
+
+        private void btn工位4光阑缩回右_MouseDown(object sender, MouseEventArgs e)
+        {
+            communication.WriteVariable(true, "PlcInIO[747]");
+        }
+
+        private void btn工位4光阑缩回右_MouseUp(object sender, MouseEventArgs e)
+        {
+            communication.WriteVariable(false, "PlcInIO[747]");
+        }
+
+        private void btnX示教下视觉2位置_MouseDown(object sender, MouseEventArgs e)
+        {
+            communication.WriteVariable(true, "PlcInIO[44]");
+        }
+
+        private void btnX示教下视觉2位置_MouseUp(object sender, MouseEventArgs e)
+        {
+            communication.WriteVariable(false, "PlcInIO[44]");
+        }
+
+        private void btnY示教下视觉2位置_MouseDown(object sender, MouseEventArgs e)
+        {
+            communication.WriteVariable(true, "PlcInIO[55]");
+        }
+
+        private void btnY示教下视觉2位置_MouseUp(object sender, MouseEventArgs e)
+        {
+            communication.WriteVariable(false, "PlcInIO[55]");
+        }
+
+        private void btnX下视觉2位置_MouseDown(object sender, MouseEventArgs e)
+        {
+            communication.WriteVariable(true, "PlcInIO[218]");
+        }
+
+        private void btnX下视觉2位置_MouseUp(object sender, MouseEventArgs e)
+        {
+            communication.WriteVariable(false, "PlcInIO[218]");
+        }
+
+        private void btnY下视觉2位置_MouseDown(object sender, MouseEventArgs e)
+        {
+            communication.WriteVariable(true, "PlcInIO[238]");
+        }
+
+        private void btnY下视觉2位置_MouseUp(object sender, MouseEventArgs e)
+        {
+            communication.WriteVariable(false, "PlcInIO[238]");
+        }
+
+        private void btnBYZ轴下视觉位置_MouseDown(object sender, MouseEventArgs e)
+        {
+            communication.WriteVariable(true, "PlcInIO[112]");
+        }
+
+        private void btnBYZ轴下视觉位置_MouseUp(object sender, MouseEventArgs e)
+        {
+            communication.WriteVariable(false, "PlcInIO[112]");
+        }
+
+        private void btnJD清除状态2_MouseDown(object sender, MouseEventArgs e)
+        {
+            communication.WriteVariable(true, "PlcInIO[615]");
+        }
+
+        private void btnJD清除状态2_MouseUp(object sender, MouseEventArgs e)
+        {
+            communication.WriteVariable(false, "PlcInIO[615]");
+        }
+
+        private void btnJD清除状态3_MouseDown(object sender, MouseEventArgs e)
+        {
+            communication.WriteVariable(true, "PlcInIO[616]");
+        }
+
+        private void btnJD清除状态3_MouseUp(object sender, MouseEventArgs e)
+        {
+            communication.WriteVariable(false, "PlcInIO[616]");
+        }
+
+        private void btnJD清除状态4_MouseDown(object sender, MouseEventArgs e)
+        {
+            communication.WriteVariable(true, "PlcInIO[617]");
+        }
+
+        private void btnJD清除状态4_MouseUp(object sender, MouseEventArgs e)
+        {
+            communication.WriteVariable(false, "PlcInIO[617]");
         }
 
         #endregion
@@ -6483,7 +6990,25 @@ namespace FT
                 }
             });
         }
+
+        private void BTN_Test_Click(object sender, EventArgs e)
+        {
+            //communication.ReadPLCAlarm[38] = !communication.ReadPLCAlarm[38];
+            
+            for (int i = 0; i < 20; i++)
+            {
+                communication.Alarm[$"PlcOutAlarm[{i}]"] = !(bool)communication.Alarm[$"PlcOutAlarm[{i}]"];
+            }
+        }
+
+
+
+
+
+
+
         #endregion
+
 
     }
 }

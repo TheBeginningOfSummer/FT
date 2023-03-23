@@ -31,11 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.TC_Main = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.groupBox77 = new System.Windows.Forms.GroupBox();
-            this.btn人工上下料 = new System.Windows.Forms.Button();
+            this.label101 = new System.Windows.Forms.Label();
             this.groupBox74 = new System.Windows.Forms.GroupBox();
-            this.btn下料命令 = new System.Windows.Forms.Button();
-            this.btn上料命令 = new System.Windows.Forms.Button();
             this.groupBox73 = new System.Windows.Forms.GroupBox();
             this.LB_自动远程状态测试 = new System.Windows.Forms.Label();
             this.btn自动模式远程测试 = new System.Windows.Forms.Button();
@@ -44,23 +41,20 @@
             this.btn自动模式远程 = new System.Windows.Forms.Button();
             this.btn自动模式本地 = new System.Windows.Forms.Button();
             this.groupBox72 = new System.Windows.Forms.GroupBox();
-            this.txtSokt下料个数 = new System.Windows.Forms.TextBox();
-            this.txtSokt上料个数 = new System.Windows.Forms.TextBox();
-            this.txt托盘下料个数 = new System.Windows.Forms.TextBox();
-            this.txt托盘上料个数 = new System.Windows.Forms.TextBox();
-            this.label251 = new System.Windows.Forms.Label();
-            this.label253 = new System.Windows.Forms.Label();
-            this.label255 = new System.Windows.Forms.Label();
-            this.label266 = new System.Windows.Forms.Label();
+            this.label99 = new System.Windows.Forms.Label();
+            this.label98 = new System.Windows.Forms.Label();
+            this.btn人工上下料 = new System.Windows.Forms.Button();
+            this.label97 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox70 = new System.Windows.Forms.GroupBox();
-            this.label249 = new System.Windows.Forms.Label();
-            this.LB_自动运行状态 = new System.Windows.Forms.Label();
-            this.label250 = new System.Windows.Forms.Label();
-            this.LB_自动状态 = new System.Windows.Forms.Label();
-            this.label248 = new System.Windows.Forms.Label();
-            this.LB_手动状态 = new System.Windows.Forms.Label();
             this.label245 = new System.Windows.Forms.Label();
             this.LB_初始化状态 = new System.Windows.Forms.Label();
+            this.LB_ConnectionStatus = new System.Windows.Forms.Label();
+            this.label249 = new System.Windows.Forms.Label();
+            this.LB_Connection = new System.Windows.Forms.Label();
+            this.LB_手动状态 = new System.Windows.Forms.Label();
+            this.label248 = new System.Windows.Forms.Label();
+            this.LB_自动运行状态 = new System.Windows.Forms.Label();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.txt夹具4次数 = new System.Windows.Forms.TextBox();
             this.label186 = new System.Windows.Forms.Label();
@@ -79,8 +73,6 @@
             this.label288 = new System.Windows.Forms.Label();
             this.CB_TypeOfTray = new System.Windows.Forms.ComboBox();
             this.CB_Socket类 = new System.Windows.Forms.ComboBox();
-            this.CB_TypeOfProduction = new System.Windows.Forms.ComboBox();
-            this.LB_TypeOfProduction = new System.Windows.Forms.Label();
             this.TSTD_IDImg = new System.Windows.Forms.PictureBox();
             this.GB_Warning = new System.Windows.Forms.GroupBox();
             this.BTN_查看日志 = new System.Windows.Forms.Button();
@@ -88,13 +80,17 @@
             this.btn报警复位 = new System.Windows.Forms.Button();
             this.btn蜂鸣停止 = new System.Windows.Forms.Button();
             this.GB_Coonnection = new System.Windows.Forms.GroupBox();
-            this.txt控制器时间 = new System.Windows.Forms.TextBox();
-            this.label68 = new System.Windows.Forms.Label();
-            this.BTN_关闭端口 = new System.Windows.Forms.Button();
-            this.BTN_打开端口 = new System.Windows.Forms.Button();
-            this.LB_ConnectionStatus = new System.Windows.Forms.Label();
-            this.LB_Connection = new System.Windows.Forms.Label();
+            this.txtSokt下料个数 = new System.Windows.Forms.TextBox();
+            this.label266 = new System.Windows.Forms.Label();
+            this.txtSokt上料个数 = new System.Windows.Forms.TextBox();
+            this.label255 = new System.Windows.Forms.Label();
+            this.txt托盘下料个数 = new System.Windows.Forms.TextBox();
+            this.label253 = new System.Windows.Forms.Label();
+            this.txt托盘上料个数 = new System.Windows.Forms.TextBox();
+            this.label251 = new System.Windows.Forms.Label();
             this.GB_Modify = new System.Windows.Forms.GroupBox();
+            this.label100 = new System.Windows.Forms.Label();
+            this.LB_实时权限显示 = new System.Windows.Forms.Label();
             this.BTN_SwitchUser = new System.Windows.Forms.Button();
             this.BTN_Modify = new System.Windows.Forms.Button();
             this.TB_NewPassword = new System.Windows.Forms.TextBox();
@@ -107,7 +103,210 @@
             this.btn自动运行 = new System.Windows.Forms.Button();
             this.btn自动模式 = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.groupBox20 = new System.Windows.Forms.GroupBox();
+            this.LBEFU上电 = new System.Windows.Forms.Label();
+            this.btnEFU断电 = new System.Windows.Forms.Button();
+            this.btn工位2风扇断电 = new System.Windows.Forms.Button();
+            this.btn工位1风扇断电 = new System.Windows.Forms.Button();
+            this.btnEFU上电 = new System.Windows.Forms.Button();
+            this.btn工位4风扇断电 = new System.Windows.Forms.Button();
+            this.btn工位3风扇断电 = new System.Windows.Forms.Button();
+            this.btn工位4风扇上电 = new System.Windows.Forms.Button();
+            this.btn工位3风扇上电 = new System.Windows.Forms.Button();
+            this.btn工位2风扇上电 = new System.Windows.Forms.Button();
+            this.btn工位1风扇上电 = new System.Windows.Forms.Button();
+            this.groupBox19 = new System.Windows.Forms.GroupBox();
+            this.LB工位4光阑右下降 = new System.Windows.Forms.Label();
+            this.LB工位4光阑右上升 = new System.Windows.Forms.Label();
+            this.LB工位3光阑右下降 = new System.Windows.Forms.Label();
+            this.LB工位4光阑缩回右 = new System.Windows.Forms.Label();
+            this.LB工位3光阑右上升 = new System.Windows.Forms.Label();
+            this.LB工位4光阑伸出右 = new System.Windows.Forms.Label();
+            this.LB工位3光阑缩回右 = new System.Windows.Forms.Label();
+            this.LB工位3光阑伸出右 = new System.Windows.Forms.Label();
+            this.LB工位2光阑缩回右 = new System.Windows.Forms.Label();
+            this.LB工位2光阑伸出右 = new System.Windows.Forms.Label();
+            this.LB工位1光阑缩回右 = new System.Windows.Forms.Label();
+            this.LB工位1光阑伸出右 = new System.Windows.Forms.Label();
+            this.LB工位4翻转90 = new System.Windows.Forms.Label();
+            this.LB工位3翻转90 = new System.Windows.Forms.Label();
+            this.LB工位4翻转0 = new System.Windows.Forms.Label();
+            this.btn工位4光阑缩回右 = new System.Windows.Forms.Button();
+            this.LB工位4辐射板下降 = new System.Windows.Forms.Label();
+            this.LB工位3翻转0 = new System.Windows.Forms.Label();
+            this.LB工位4辐射板上升 = new System.Windows.Forms.Label();
+            this.btn工位4光阑伸出右 = new System.Windows.Forms.Button();
+            this.LB工位4光阑下降 = new System.Windows.Forms.Label();
+            this.LB工位3辐射板下降 = new System.Windows.Forms.Label();
+            this.LB工位4光阑上升 = new System.Windows.Forms.Label();
+            this.btn工位3光阑缩回右 = new System.Windows.Forms.Button();
+            this.LB工位4光阑缩回 = new System.Windows.Forms.Label();
+            this.LB工位3辐射板上升 = new System.Windows.Forms.Label();
+            this.LB工位4光阑伸出 = new System.Windows.Forms.Label();
+            this.btn工位3光阑伸出右 = new System.Windows.Forms.Button();
+            this.LB工位3光阑下降 = new System.Windows.Forms.Label();
+            this.btn工位2光阑缩回右 = new System.Windows.Forms.Button();
+            this.LB工位3光阑上升 = new System.Windows.Forms.Label();
+            this.btn工位2光阑伸出右 = new System.Windows.Forms.Button();
+            this.LB工位3光阑缩回 = new System.Windows.Forms.Label();
+            this.btn工位1光阑缩回右 = new System.Windows.Forms.Button();
+            this.LB工位3光阑伸出 = new System.Windows.Forms.Label();
+            this.btn工位1光阑伸出右 = new System.Windows.Forms.Button();
+            this.btn工位4翻转90 = new System.Windows.Forms.Button();
+            this.btn工位4翻转0 = new System.Windows.Forms.Button();
+            this.btn工位4辐射板缩回 = new System.Windows.Forms.Button();
+            this.btn工位4辐射板伸出 = new System.Windows.Forms.Button();
+            this.btn工位4光阑下降 = new System.Windows.Forms.Button();
+            this.btn工位4光阑上升 = new System.Windows.Forms.Button();
+            this.btn工位4光阑缩回 = new System.Windows.Forms.Button();
+            this.btn工位4光阑伸出 = new System.Windows.Forms.Button();
+            this.btn工位3翻转90 = new System.Windows.Forms.Button();
+            this.btn工位3翻转0 = new System.Windows.Forms.Button();
+            this.btn工位3辐射板缩回 = new System.Windows.Forms.Button();
+            this.btn工位3辐射板伸出 = new System.Windows.Forms.Button();
+            this.btn工位3光阑下降 = new System.Windows.Forms.Button();
+            this.btn工位3光阑上升 = new System.Windows.Forms.Button();
+            this.btn工位3光阑缩回 = new System.Windows.Forms.Button();
+            this.btn工位3光阑伸出 = new System.Windows.Forms.Button();
+            this.groupBox18 = new System.Windows.Forms.GroupBox();
+            this.LB工位2光阑右下降 = new System.Windows.Forms.Label();
+            this.LB工位2光阑右上升 = new System.Windows.Forms.Label();
+            this.LB工位1光阑右下降 = new System.Windows.Forms.Label();
+            this.LB工位1光阑右上升 = new System.Windows.Forms.Label();
+            this.LB工位1翻转90 = new System.Windows.Forms.Label();
+            this.LB工位1翻转0 = new System.Windows.Forms.Label();
+            this.LB工位1辐射板下降 = new System.Windows.Forms.Label();
+            this.LB工位1辐射板上升 = new System.Windows.Forms.Label();
+            this.LB工位1光阑下降 = new System.Windows.Forms.Label();
+            this.LB工位1光阑上升 = new System.Windows.Forms.Label();
+            this.LB工位1光阑缩回 = new System.Windows.Forms.Label();
+            this.LB工位1光阑伸出 = new System.Windows.Forms.Label();
+            this.LB工位2翻转90 = new System.Windows.Forms.Label();
+            this.LB工位2翻转0 = new System.Windows.Forms.Label();
+            this.LB工位2辐射板下降 = new System.Windows.Forms.Label();
+            this.LB工位2辐射板上升 = new System.Windows.Forms.Label();
+            this.LB工位2光阑下降 = new System.Windows.Forms.Label();
+            this.LB工位2光阑上升 = new System.Windows.Forms.Label();
+            this.LB工位2光阑缩回 = new System.Windows.Forms.Label();
+            this.LB工位2光阑伸出 = new System.Windows.Forms.Label();
+            this.LB旋转夹爪4下降 = new System.Windows.Forms.Label();
+            this.LB旋转夹爪4上升 = new System.Windows.Forms.Label();
+            this.LB旋转夹爪3下降 = new System.Windows.Forms.Label();
+            this.LB旋转夹爪3上升 = new System.Windows.Forms.Label();
+            this.LB旋转夹爪2下降 = new System.Windows.Forms.Label();
+            this.LB旋转夹爪2上升 = new System.Windows.Forms.Label();
+            this.LB旋转夹爪1下降 = new System.Windows.Forms.Label();
+            this.LB旋转夹爪1上升 = new System.Windows.Forms.Label();
+            this.brn工位2翻转90 = new System.Windows.Forms.Button();
+            this.btn工位2翻转0 = new System.Windows.Forms.Button();
+            this.btn工位2辐射板缩回 = new System.Windows.Forms.Button();
+            this.btn工位2辐射板伸出 = new System.Windows.Forms.Button();
+            this.btn工位2光阑下降 = new System.Windows.Forms.Button();
+            this.btn工位2光阑上升 = new System.Windows.Forms.Button();
+            this.btn工位2光阑缩回 = new System.Windows.Forms.Button();
+            this.btn工位2光阑伸出 = new System.Windows.Forms.Button();
+            this.btn工位1翻转90 = new System.Windows.Forms.Button();
+            this.btn工位1翻转0 = new System.Windows.Forms.Button();
+            this.btn工位1辐射板缩回 = new System.Windows.Forms.Button();
+            this.btn工位1辐射板伸出 = new System.Windows.Forms.Button();
+            this.btn工位1光阑下降 = new System.Windows.Forms.Button();
+            this.btn工位1光阑上升 = new System.Windows.Forms.Button();
+            this.btn工位1光阑缩回 = new System.Windows.Forms.Button();
+            this.btn工位1光阑伸出 = new System.Windows.Forms.Button();
+            this.btn旋转夹爪4下降 = new System.Windows.Forms.Button();
+            this.btn旋转夹爪4上升 = new System.Windows.Forms.Button();
+            this.btn旋转夹爪3下降 = new System.Windows.Forms.Button();
+            this.btn旋转夹爪3上升 = new System.Windows.Forms.Button();
+            this.btn旋转夹爪2下降 = new System.Windows.Forms.Button();
+            this.btn旋转夹爪2上升 = new System.Windows.Forms.Button();
+            this.btn旋转夹爪1下降 = new System.Windows.Forms.Button();
+            this.btn旋转夹爪1上升 = new System.Windows.Forms.Button();
+            this.groupBox17 = new System.Windows.Forms.GroupBox();
+            this.LB除尘器1吹扫 = new System.Windows.Forms.Label();
+            this.LB夹爪2闭合1 = new System.Windows.Forms.Label();
+            this.LB夹爪2回原点 = new System.Windows.Forms.Label();
+            this.LB夹爪1闭合1 = new System.Windows.Forms.Label();
+            this.LB夹爪1回原点 = new System.Windows.Forms.Label();
+            this.btn夹爪2回原点 = new System.Windows.Forms.Button();
+            this.btn除尘器2吹扫 = new System.Windows.Forms.Button();
+            this.btn除尘器1吹扫 = new System.Windows.Forms.Button();
+            this.btn夹爪2复位 = new System.Windows.Forms.Button();
+            this.btn夹爪2闭合1 = new System.Windows.Forms.Button();
+            this.btn夹爪1复位 = new System.Windows.Forms.Button();
+            this.btn夹爪1闭合1 = new System.Windows.Forms.Button();
+            this.btn夹爪1回原点 = new System.Windows.Forms.Button();
+            this.groupBox16 = new System.Windows.Forms.GroupBox();
+            this.LB平移吸嘴4真空 = new System.Windows.Forms.Label();
+            this.LB平移吸嘴3真空 = new System.Windows.Forms.Label();
+            this.LB平移吸嘴2真空 = new System.Windows.Forms.Label();
+            this.LB平移吸嘴1真空 = new System.Windows.Forms.Label();
+            this.LB上料吸嘴2真空 = new System.Windows.Forms.Label();
+            this.LB上料吸嘴1真空 = new System.Windows.Forms.Label();
+            this.btn一键真空破坏 = new System.Windows.Forms.Button();
+            this.btn平移吸嘴4破坏 = new System.Windows.Forms.Button();
+            this.btn平移吸嘴3破坏 = new System.Windows.Forms.Button();
+            this.btn平移吸嘴2破坏 = new System.Windows.Forms.Button();
+            this.btn平移吸嘴1破坏 = new System.Windows.Forms.Button();
+            this.btn上料吸嘴2破坏 = new System.Windows.Forms.Button();
+            this.btn上料吸嘴1破坏 = new System.Windows.Forms.Button();
+            this.btn平移吸嘴4真空 = new System.Windows.Forms.Button();
+            this.btn平移吸嘴3真空 = new System.Windows.Forms.Button();
+            this.btn平移吸嘴2真空 = new System.Windows.Forms.Button();
+            this.btn平移吸嘴1真空 = new System.Windows.Forms.Button();
+            this.btn上料吸嘴2真空 = new System.Windows.Forms.Button();
+            this.btn上料吸嘴1真空 = new System.Windows.Forms.Button();
+            this.groupBox15 = new System.Windows.Forms.GroupBox();
+            this.LB实盘卡盘缩回 = new System.Windows.Forms.Label();
+            this.LB实盘卡盘伸出 = new System.Windows.Forms.Label();
+            this.LB翻转气缸180 = new System.Windows.Forms.Label();
+            this.LB翻转气缸0 = new System.Windows.Forms.Label();
+            this.LBNG卡盘缩回 = new System.Windows.Forms.Label();
+            this.LB平移吸嘴34下降 = new System.Windows.Forms.Label();
+            this.LBNG卡盘伸出 = new System.Windows.Forms.Label();
+            this.LB平移吸嘴34上升 = new System.Windows.Forms.Label();
+            this.LB平移吸嘴12下降 = new System.Windows.Forms.Label();
+            this.LB平移吸嘴12上升 = new System.Windows.Forms.Label();
+            this.btnNG二级缩回 = new System.Windows.Forms.Button();
+            this.LB上料吸嘴2下降 = new System.Windows.Forms.Label();
+            this.LB上料吸嘴2上升 = new System.Windows.Forms.Label();
+            this.btnNG二级伸出 = new System.Windows.Forms.Button();
+            this.LB上料吸嘴1下降 = new System.Windows.Forms.Label();
+            this.LB上料吸嘴1上升 = new System.Windows.Forms.Label();
+            this.LB上料机械手张开 = new System.Windows.Forms.Label();
+            this.LB上料机械手夹紧 = new System.Windows.Forms.Label();
+            this.LB上料机械手下降 = new System.Windows.Forms.Label();
+            this.LB上料机械手上升 = new System.Windows.Forms.Label();
+            this.btn倒实二级缩回 = new System.Windows.Forms.Button();
+            this.btn倒实二级伸出 = new System.Windows.Forms.Button();
+            this.btn翻转气缸180 = new System.Windows.Forms.Button();
+            this.btn翻转气缸0 = new System.Windows.Forms.Button();
+            this.btn平移吸嘴34下降 = new System.Windows.Forms.Button();
+            this.btn平移吸嘴34上升 = new System.Windows.Forms.Button();
+            this.btn平移吸嘴12下降 = new System.Windows.Forms.Button();
+            this.btn平移吸嘴12上升 = new System.Windows.Forms.Button();
+            this.btn上料吸嘴2下降 = new System.Windows.Forms.Button();
+            this.btn上料吸嘴2上升 = new System.Windows.Forms.Button();
+            this.btn上料吸嘴1下降 = new System.Windows.Forms.Button();
+            this.btn上料吸嘴1上升 = new System.Windows.Forms.Button();
+            this.btn上料机械手缩回 = new System.Windows.Forms.Button();
+            this.btn上料机械手伸出 = new System.Windows.Forms.Button();
+            this.btn上料机械手下降 = new System.Windows.Forms.Button();
+            this.btn上料机械手上升 = new System.Windows.Forms.Button();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.groupBox76 = new System.Windows.Forms.GroupBox();
+            this.btn下视觉2标定复位 = new System.Windows.Forms.Button();
+            this.btn下视觉2标定有效 = new System.Windows.Forms.Button();
+            this.label105 = new System.Windows.Forms.Label();
+            this.label230 = new System.Windows.Forms.Label();
+            this.label232 = new System.Windows.Forms.Label();
+            this.txt下视觉2偏移θ = new System.Windows.Forms.TextBox();
+            this.txt下视觉2偏移Y = new System.Windows.Forms.TextBox();
+            this.txt下视觉2偏移X = new System.Windows.Forms.TextBox();
+            this.btn下视觉2对位 = new System.Windows.Forms.Button();
+            this.btn下视觉2标定开始 = new System.Windows.Forms.Button();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.label103 = new System.Windows.Forms.Label();
+            this.label102 = new System.Windows.Forms.Label();
             this.label67 = new System.Windows.Forms.Label();
             this.CB_选择夹爪 = new System.Windows.Forms.ComboBox();
             this.label66 = new System.Windows.Forms.Label();
@@ -145,110 +344,6 @@
             this.txt扫码信息 = new System.Windows.Forms.TextBox();
             this.btn二维码 = new System.Windows.Forms.Button();
             this.btn条形码 = new System.Windows.Forms.Button();
-            this.groupBox20 = new System.Windows.Forms.GroupBox();
-            this.btnEFU断电 = new System.Windows.Forms.Button();
-            this.btn工位2风扇断电 = new System.Windows.Forms.Button();
-            this.btn工位1风扇断电 = new System.Windows.Forms.Button();
-            this.btnEFU上电 = new System.Windows.Forms.Button();
-            this.btn工位4风扇断电 = new System.Windows.Forms.Button();
-            this.btn工位3风扇断电 = new System.Windows.Forms.Button();
-            this.btn工位4风扇上电 = new System.Windows.Forms.Button();
-            this.btn工位3风扇上电 = new System.Windows.Forms.Button();
-            this.btn工位2风扇上电 = new System.Windows.Forms.Button();
-            this.btn工位1风扇上电 = new System.Windows.Forms.Button();
-            this.groupBox19 = new System.Windows.Forms.GroupBox();
-            this.btn工位4翻转90 = new System.Windows.Forms.Button();
-            this.btn工位4翻转0 = new System.Windows.Forms.Button();
-            this.btn工位4辐射板缩回 = new System.Windows.Forms.Button();
-            this.btn工位4辐射板伸出 = new System.Windows.Forms.Button();
-            this.btn工位4光阑下降 = new System.Windows.Forms.Button();
-            this.btn工位4光阑上升 = new System.Windows.Forms.Button();
-            this.btn工位4光阑缩回 = new System.Windows.Forms.Button();
-            this.btn工位4光阑伸出 = new System.Windows.Forms.Button();
-            this.btn工位3翻转90 = new System.Windows.Forms.Button();
-            this.btn工位3翻转0 = new System.Windows.Forms.Button();
-            this.btn工位3辐射板缩回 = new System.Windows.Forms.Button();
-            this.btn工位3辐射板伸出 = new System.Windows.Forms.Button();
-            this.btn工位3光阑下降 = new System.Windows.Forms.Button();
-            this.btn工位3光阑上升 = new System.Windows.Forms.Button();
-            this.btn工位3光阑缩回 = new System.Windows.Forms.Button();
-            this.btn工位3光阑伸出 = new System.Windows.Forms.Button();
-            this.groupBox18 = new System.Windows.Forms.GroupBox();
-            this.brn工位2翻转90 = new System.Windows.Forms.Button();
-            this.btn工位2翻转0 = new System.Windows.Forms.Button();
-            this.btn工位2辐射板缩回 = new System.Windows.Forms.Button();
-            this.btn工位2辐射板伸出 = new System.Windows.Forms.Button();
-            this.btn工位2光阑下降 = new System.Windows.Forms.Button();
-            this.btn工位2光阑上升 = new System.Windows.Forms.Button();
-            this.btn工位2光阑缩回 = new System.Windows.Forms.Button();
-            this.btn工位2光阑伸出 = new System.Windows.Forms.Button();
-            this.btn工位1翻转90 = new System.Windows.Forms.Button();
-            this.btn工位1翻转0 = new System.Windows.Forms.Button();
-            this.btn工位1辐射板缩回 = new System.Windows.Forms.Button();
-            this.btn工位1辐射板伸出 = new System.Windows.Forms.Button();
-            this.btn工位1光阑下降 = new System.Windows.Forms.Button();
-            this.btn工位1光阑上升 = new System.Windows.Forms.Button();
-            this.btn工位1光阑缩回 = new System.Windows.Forms.Button();
-            this.btn工位1光阑伸出 = new System.Windows.Forms.Button();
-            this.btn旋转夹爪4下降 = new System.Windows.Forms.Button();
-            this.btn旋转夹爪4上升 = new System.Windows.Forms.Button();
-            this.btn旋转夹爪3下降 = new System.Windows.Forms.Button();
-            this.btn旋转夹爪3上升 = new System.Windows.Forms.Button();
-            this.btn旋转夹爪2下降 = new System.Windows.Forms.Button();
-            this.btn旋转夹爪2上升 = new System.Windows.Forms.Button();
-            this.btn旋转夹爪1下降 = new System.Windows.Forms.Button();
-            this.btn旋转夹爪1上升 = new System.Windows.Forms.Button();
-            this.groupBox17 = new System.Windows.Forms.GroupBox();
-            this.btnNG二级缩回 = new System.Windows.Forms.Button();
-            this.btn夹爪2回原点 = new System.Windows.Forms.Button();
-            this.btnNG二级伸出 = new System.Windows.Forms.Button();
-            this.btnNG一级缩回 = new System.Windows.Forms.Button();
-            this.btn除尘器2吹扫 = new System.Windows.Forms.Button();
-            this.btnNG一级伸出 = new System.Windows.Forms.Button();
-            this.btn除尘器1吹扫 = new System.Windows.Forms.Button();
-            this.btn夹爪2复位 = new System.Windows.Forms.Button();
-            this.btn夹爪2闭合1 = new System.Windows.Forms.Button();
-            this.btn夹爪1复位 = new System.Windows.Forms.Button();
-            this.btn夹爪1闭合1 = new System.Windows.Forms.Button();
-            this.btn夹爪1回原点 = new System.Windows.Forms.Button();
-            this.groupBox16 = new System.Windows.Forms.GroupBox();
-            this.btn一键真空破坏 = new System.Windows.Forms.Button();
-            this.btn平移吸嘴4破坏 = new System.Windows.Forms.Button();
-            this.btn平移吸嘴3破坏 = new System.Windows.Forms.Button();
-            this.btn平移吸嘴2破坏 = new System.Windows.Forms.Button();
-            this.btn平移吸嘴1破坏 = new System.Windows.Forms.Button();
-            this.btn上料吸嘴2破坏 = new System.Windows.Forms.Button();
-            this.btn上料吸嘴1破坏 = new System.Windows.Forms.Button();
-            this.btn平移吸嘴4真空 = new System.Windows.Forms.Button();
-            this.btn平移吸嘴3真空 = new System.Windows.Forms.Button();
-            this.btn平移吸嘴2真空 = new System.Windows.Forms.Button();
-            this.btn平移吸嘴1真空 = new System.Windows.Forms.Button();
-            this.btn上料吸嘴2真空 = new System.Windows.Forms.Button();
-            this.btn上料吸嘴1真空 = new System.Windows.Forms.Button();
-            this.groupBox15 = new System.Windows.Forms.GroupBox();
-            this.btn倒实二级缩回 = new System.Windows.Forms.Button();
-            this.btn倒实二级伸出 = new System.Windows.Forms.Button();
-            this.btn倒实一级缩回 = new System.Windows.Forms.Button();
-            this.btn倒实一级伸出 = new System.Windows.Forms.Button();
-            this.btn翻转气缸180 = new System.Windows.Forms.Button();
-            this.btn翻转气缸0 = new System.Windows.Forms.Button();
-            this.btn平移吸嘴34下降 = new System.Windows.Forms.Button();
-            this.btn平移吸嘴34上升 = new System.Windows.Forms.Button();
-            this.btn平移吸嘴12下降 = new System.Windows.Forms.Button();
-            this.btn平移吸嘴12上升 = new System.Windows.Forms.Button();
-            this.btn上料吸嘴2下降 = new System.Windows.Forms.Button();
-            this.btn上料吸嘴2上升 = new System.Windows.Forms.Button();
-            this.btn上料吸嘴1下降 = new System.Windows.Forms.Button();
-            this.btn上料吸嘴1上升 = new System.Windows.Forms.Button();
-            this.btnNG盘防卡盘缩回 = new System.Windows.Forms.Button();
-            this.btnNG盘防卡盘伸出 = new System.Windows.Forms.Button();
-            this.btn实盘防卡盘缩回 = new System.Windows.Forms.Button();
-            this.btn实盘防卡盘伸出 = new System.Windows.Forms.Button();
-            this.btn上料机械手缩回 = new System.Windows.Forms.Button();
-            this.btn上料机械手伸出 = new System.Windows.Forms.Button();
-            this.btn上料机械手下降 = new System.Windows.Forms.Button();
-            this.btn上料机械手上升 = new System.Windows.Forms.Button();
-            this.tabPage7 = new System.Windows.Forms.TabPage();
             this.groupBox32 = new System.Windows.Forms.GroupBox();
             this.btnBYZ平移位置34 = new System.Windows.Forms.Button();
             this.btnBYZSok位置34 = new System.Windows.Forms.Button();
@@ -265,6 +360,7 @@
             this.btnBYZ视觉位置1 = new System.Windows.Forms.Button();
             this.btnBYZ上料位置 = new System.Windows.Forms.Button();
             this.groupBox30 = new System.Windows.Forms.GroupBox();
+            this.btnBYYSokt夹爪2记忆 = new System.Windows.Forms.Button();
             this.btnBYYSokt夹爪1记忆 = new System.Windows.Forms.Button();
             this.btnSokt夹爪4 = new System.Windows.Forms.Button();
             this.btnSokt夹爪3 = new System.Windows.Forms.Button();
@@ -339,13 +435,11 @@
             this.btn倒NG盘初始位置 = new System.Windows.Forms.Button();
             this.groupBox25 = new System.Windows.Forms.GroupBox();
             this.btn倒实盘回原点 = new System.Windows.Forms.Button();
-            this.btn实盘扫码位置 = new System.Windows.Forms.Button();
             this.txt倒实盘当前位置 = new System.Windows.Forms.TextBox();
             this.label291 = new System.Windows.Forms.Label();
             this.btn倒实盘停止 = new System.Windows.Forms.Button();
             this.btn倒实盘下行 = new System.Windows.Forms.Button();
             this.btn倒实盘上行 = new System.Windows.Forms.Button();
-            this.btn倒实盘初始位置 = new System.Windows.Forms.Button();
             this.groupBox24 = new System.Windows.Forms.GroupBox();
             this.btnNG盘回原点 = new System.Windows.Forms.Button();
             this.txtNG盘当前位置 = new System.Windows.Forms.TextBox();
@@ -363,6 +457,7 @@
             this.btn实盘上行 = new System.Windows.Forms.Button();
             this.btn实盘初始位置 = new System.Windows.Forms.Button();
             this.groupBox22 = new System.Windows.Forms.GroupBox();
+            this.btnY下视觉2位置 = new System.Windows.Forms.Button();
             this.btnY下一行 = new System.Windows.Forms.Button();
             this.btnY上一行 = new System.Windows.Forms.Button();
             this.btnY扫码位置 = new System.Windows.Forms.Button();
@@ -375,8 +470,6 @@
             this.btnY吸2倒实盘 = new System.Windows.Forms.Button();
             this.btnY吸1倒实盘 = new System.Windows.Forms.Button();
             this.btnY吸2NG盘 = new System.Windows.Forms.Button();
-            this.txtY指定位置 = new System.Windows.Forms.TextBox();
-            this.label284 = new System.Windows.Forms.Label();
             this.txtY当前位置 = new System.Windows.Forms.TextBox();
             this.btnY指定位置 = new System.Windows.Forms.Button();
             this.label285 = new System.Windows.Forms.Label();
@@ -389,6 +482,7 @@
             this.btnY倒实盘位置 = new System.Windows.Forms.Button();
             this.btnY实盘位置 = new System.Windows.Forms.Button();
             this.groupBox21 = new System.Windows.Forms.GroupBox();
+            this.btnX下视觉2位置 = new System.Windows.Forms.Button();
             this.btnX吸1倒实盘 = new System.Windows.Forms.Button();
             this.btnX下一列 = new System.Windows.Forms.Button();
             this.btnX上一列 = new System.Windows.Forms.Button();
@@ -396,8 +490,6 @@
             this.btnX夹爪位置 = new System.Windows.Forms.Button();
             this.btnX视觉实盘位置 = new System.Windows.Forms.Button();
             this.btnX吸1实盘 = new System.Windows.Forms.Button();
-            this.txtX指定位置 = new System.Windows.Forms.TextBox();
-            this.label283 = new System.Windows.Forms.Label();
             this.txtX当前位置 = new System.Windows.Forms.TextBox();
             this.btnX指定位置 = new System.Windows.Forms.Button();
             this.label282 = new System.Windows.Forms.Label();
@@ -448,7 +540,11 @@
             this.btnRFB1停止 = new System.Windows.Forms.Button();
             this.btnRFB1回原点 = new System.Windows.Forms.Button();
             this.groupBox44 = new System.Windows.Forms.GroupBox();
+            this.btnJD清除状态4 = new System.Windows.Forms.Button();
+            this.夹爪4状态 = new System.Windows.Forms.Label();
+            this.label276 = new System.Windows.Forms.Label();
             this.btnJD4打开小位置 = new System.Windows.Forms.Button();
+            this.txtR4当前字节 = new System.Windows.Forms.TextBox();
             this.label281 = new System.Windows.Forms.Label();
             this.btnJD4打开 = new System.Windows.Forms.Button();
             this.txtR4旋转角度 = new System.Windows.Forms.TextBox();
@@ -457,7 +553,11 @@
             this.btnJD4指定位置 = new System.Windows.Forms.Button();
             this.btnJD4回原点 = new System.Windows.Forms.Button();
             this.groupBox43 = new System.Windows.Forms.GroupBox();
+            this.btnJD清除状态3 = new System.Windows.Forms.Button();
+            this.夹爪3状态 = new System.Windows.Forms.Label();
+            this.label275 = new System.Windows.Forms.Label();
             this.btnJD3打开小位置 = new System.Windows.Forms.Button();
+            this.txtR3当前字节 = new System.Windows.Forms.TextBox();
             this.label267 = new System.Windows.Forms.Label();
             this.btnJD3打开 = new System.Windows.Forms.Button();
             this.txtR3旋转角度 = new System.Windows.Forms.TextBox();
@@ -466,6 +566,10 @@
             this.btnJD3指定位置 = new System.Windows.Forms.Button();
             this.btnJD3回原点 = new System.Windows.Forms.Button();
             this.groupBox42 = new System.Windows.Forms.GroupBox();
+            this.btnJD清除状态2 = new System.Windows.Forms.Button();
+            this.夹爪2状态 = new System.Windows.Forms.Label();
+            this.label274 = new System.Windows.Forms.Label();
+            this.txtR2当前字节 = new System.Windows.Forms.TextBox();
             this.btnJD2打开小位置 = new System.Windows.Forms.Button();
             this.label256 = new System.Windows.Forms.Label();
             this.btnJD2打开 = new System.Windows.Forms.Button();
@@ -475,6 +579,8 @@
             this.btnJD2指定位置 = new System.Windows.Forms.Button();
             this.btnJD2回原点 = new System.Windows.Forms.Button();
             this.groupBox41 = new System.Windows.Forms.GroupBox();
+            this.label250 = new System.Windows.Forms.Label();
+            this.txtR1当前字节 = new System.Windows.Forms.TextBox();
             this.夹爪状态 = new System.Windows.Forms.Label();
             this.label254 = new System.Windows.Forms.Label();
             this.txtR1旋转角度 = new System.Windows.Forms.TextBox();
@@ -577,11 +683,30 @@
             this.label286 = new System.Windows.Forms.Label();
             this.PN_Trays = new System.Windows.Forms.Panel();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.groupBox77 = new System.Windows.Forms.GroupBox();
+            this.label237 = new System.Windows.Forms.Label();
+            this.label238 = new System.Windows.Forms.Label();
+            this.label239 = new System.Windows.Forms.Label();
+            this.label240 = new System.Windows.Forms.Label();
+            this.X116 = new System.Windows.Forms.Label();
+            this.X117 = new System.Windows.Forms.Label();
+            this.X118 = new System.Windows.Forms.Label();
+            this.X119 = new System.Windows.Forms.Label();
+            this.label236 = new System.Windows.Forms.Label();
+            this.label235 = new System.Windows.Forms.Label();
+            this.label104 = new System.Windows.Forms.Label();
+            this.label334 = new System.Windows.Forms.Label();
+            this.X112 = new System.Windows.Forms.Label();
+            this.X113 = new System.Windows.Forms.Label();
+            this.X114 = new System.Windows.Forms.Label();
+            this.X115 = new System.Windows.Forms.Label();
+            this.label95 = new System.Windows.Forms.Label();
+            this.label93 = new System.Windows.Forms.Label();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.LB_FW_工位3零度 = new System.Windows.Forms.Label();
             this.LB_FW_工位3光阑右上 = new System.Windows.Forms.Label();
             this.LB_FW_工位3光阑缩回 = new System.Windows.Forms.Label();
-            this.lLB_FW_工位3光阑左上 = new System.Windows.Forms.Label();
+            this.LB_FW_工位3光阑左上 = new System.Windows.Forms.Label();
             this.LB_FW_工位3辐射板下 = new System.Windows.Forms.Label();
             this.LB_FW_工位4光阑右上 = new System.Windows.Forms.Label();
             this.LB_FW_工位4光阑缩回 = new System.Windows.Forms.Label();
@@ -701,6 +826,8 @@
             this.label112 = new System.Windows.Forms.Label();
             this.label187 = new System.Windows.Forms.Label();
             this.groupBox82 = new System.Windows.Forms.GroupBox();
+            this.txt控制器时间 = new System.Windows.Forms.TextBox();
+            this.label68 = new System.Windows.Forms.Label();
             this.label375 = new System.Windows.Forms.Label();
             this.X132 = new System.Windows.Forms.Label();
             this.label418 = new System.Windows.Forms.Label();
@@ -1036,6 +1163,9 @@
             this.label421 = new System.Windows.Forms.Label();
             this.btnBYY示教第二行 = new System.Windows.Forms.Button();
             this.groupBox54 = new System.Windows.Forms.GroupBox();
+            this.label278 = new System.Windows.Forms.Label();
+            this.txtBYZ示教下视觉位置 = new System.Windows.Forms.TextBox();
+            this.btnBYZ轴下视觉位置 = new System.Windows.Forms.Button();
             this.label48 = new System.Windows.Forms.Label();
             this.txtBYZ示教视觉位置2 = new System.Windows.Forms.TextBox();
             this.btnBYZ轴socket视觉位置 = new System.Windows.Forms.Button();
@@ -1102,6 +1232,9 @@
             this.btn实盘示教初始位置 = new System.Windows.Forms.Button();
             this.label407 = new System.Windows.Forms.Label();
             this.groupBox46 = new System.Windows.Forms.GroupBox();
+            this.label242 = new System.Windows.Forms.Label();
+            this.txtY示教下视觉2位置 = new System.Windows.Forms.TextBox();
+            this.btnY示教下视觉2位置 = new System.Windows.Forms.Button();
             this.label490 = new System.Windows.Forms.Label();
             this.txtY示教视觉倒实盘第一列 = new System.Windows.Forms.TextBox();
             this.btnY示教视觉倒实盘第一列 = new System.Windows.Forms.Button();
@@ -1129,6 +1262,9 @@
             this.btnY示教吸1实盘第一行 = new System.Windows.Forms.Button();
             this.label394 = new System.Windows.Forms.Label();
             this.groupBox45 = new System.Windows.Forms.GroupBox();
+            this.label241 = new System.Windows.Forms.Label();
+            this.txtX示教下视觉2位置 = new System.Windows.Forms.TextBox();
+            this.btnX示教下视觉2位置 = new System.Windows.Forms.Button();
             this.label69 = new System.Windows.Forms.Label();
             this.txtX示教吸1倒实盘第一列 = new System.Windows.Forms.TextBox();
             this.btnX示教吸1倒实盘第一列 = new System.Windows.Forms.Button();
@@ -1144,6 +1280,10 @@
             this.btnX示教吸1实盘第一列 = new System.Windows.Forms.Button();
             this.label370 = new System.Windows.Forms.Label();
             this.tabPage10 = new System.Windows.Forms.TabPage();
+            this.groupBox71 = new System.Windows.Forms.GroupBox();
+            this.label234 = new System.Windows.Forms.Label();
+            this.txt夹爪2与1距离位置 = new System.Windows.Forms.TextBox();
+            this.btn夹爪2与夹爪1位置确认 = new System.Windows.Forms.Button();
             this.groupBox49 = new System.Windows.Forms.GroupBox();
             this.label201 = new System.Windows.Forms.Label();
             this.txtBYY示教视觉6位置 = new System.Windows.Forms.TextBox();
@@ -1455,11 +1595,9 @@
             this.label469 = new System.Windows.Forms.Label();
             this.label464 = new System.Windows.Forms.Label();
             this.label463 = new System.Windows.Forms.Label();
-            this.label93 = new System.Windows.Forms.Label();
-            this.label95 = new System.Windows.Forms.Label();
+            this.BTN_Test = new System.Windows.Forms.Button();
             this.TC_Main.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.groupBox77.SuspendLayout();
             this.groupBox74.SuspendLayout();
             this.groupBox73.SuspendLayout();
             this.groupBox72.SuspendLayout();
@@ -1471,10 +1609,6 @@
             this.GB_Coonnection.SuspendLayout();
             this.GB_Modify.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            this.groupBox14.SuspendLayout();
-            this.groupBox68.SuspendLayout();
-            this.groupBox67.SuspendLayout();
-            this.groupBox66.SuspendLayout();
             this.groupBox20.SuspendLayout();
             this.groupBox19.SuspendLayout();
             this.groupBox18.SuspendLayout();
@@ -1482,6 +1616,11 @@
             this.groupBox16.SuspendLayout();
             this.groupBox15.SuspendLayout();
             this.tabPage7.SuspendLayout();
+            this.groupBox76.SuspendLayout();
+            this.groupBox14.SuspendLayout();
+            this.groupBox68.SuspendLayout();
+            this.groupBox67.SuspendLayout();
+            this.groupBox66.SuspendLayout();
             this.groupBox32.SuspendLayout();
             this.groupBox30.SuspendLayout();
             this.groupBox29.SuspendLayout();
@@ -1514,6 +1653,7 @@
             this.tabPage3.SuspendLayout();
             this.GB_Trays.SuspendLayout();
             this.tabPage4.SuspendLayout();
+            this.groupBox77.SuspendLayout();
             this.groupBox9.SuspendLayout();
             this.groupBox82.SuspendLayout();
             this.groupBox8.SuspendLayout();
@@ -1533,6 +1673,7 @@
             this.groupBox46.SuspendLayout();
             this.groupBox45.SuspendLayout();
             this.tabPage10.SuspendLayout();
+            this.groupBox71.SuspendLayout();
             this.groupBox49.SuspendLayout();
             this.groupBox13.SuspendLayout();
             this.groupBox12.SuspendLayout();
@@ -1585,7 +1726,8 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.groupBox77);
+            this.tabPage1.BackColor = System.Drawing.SystemColors.Control;
+            this.tabPage1.Controls.Add(this.label101);
             this.tabPage1.Controls.Add(this.groupBox74);
             this.tabPage1.Controls.Add(this.groupBox73);
             this.tabPage1.Controls.Add(this.groupBox72);
@@ -1608,59 +1750,27 @@
             this.tabPage1.Size = new System.Drawing.Size(1276, 756);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "自动操作";
-            this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // groupBox77
+            // label101
             // 
-            this.groupBox77.Controls.Add(this.btn人工上下料);
-            this.groupBox77.Location = new System.Drawing.Point(992, 325);
-            this.groupBox77.Name = "groupBox77";
-            this.groupBox77.Size = new System.Drawing.Size(240, 227);
-            this.groupBox77.TabIndex = 221;
-            this.groupBox77.TabStop = false;
-            this.groupBox77.Text = "备用";
-            // 
-            // btn人工上下料
-            // 
-            this.btn人工上下料.Location = new System.Drawing.Point(39, 37);
-            this.btn人工上下料.Name = "btn人工上下料";
-            this.btn人工上下料.Size = new System.Drawing.Size(170, 62);
-            this.btn人工上下料.TabIndex = 22;
-            this.btn人工上下料.Text = "手动-人工上下料位置";
-            this.btn人工上下料.UseVisualStyleBackColor = true;
-            this.btn人工上下料.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn人工上下料_MouseDown);
-            this.btn人工上下料.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn人工上下料_MouseUp);
+            this.label101.AutoSize = true;
+            this.label101.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label101.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label101.Location = new System.Drawing.Point(472, 26);
+            this.label101.Name = "label101";
+            this.label101.Size = new System.Drawing.Size(361, 22);
+            this.label101.TabIndex = 30;
+            this.label101.Text = "TZC-05A型非制冷探测器自动测试设备";
             // 
             // groupBox74
             // 
-            this.groupBox74.Controls.Add(this.btn下料命令);
-            this.groupBox74.Controls.Add(this.btn上料命令);
+            this.groupBox74.Controls.Add(this.BTN_Test);
             this.groupBox74.Location = new System.Drawing.Point(746, 325);
             this.groupBox74.Name = "groupBox74";
             this.groupBox74.Size = new System.Drawing.Size(240, 227);
             this.groupBox74.TabIndex = 220;
             this.groupBox74.TabStop = false;
             this.groupBox74.Text = "备用";
-            // 
-            // btn下料命令
-            // 
-            this.btn下料命令.Location = new System.Drawing.Point(62, 123);
-            this.btn下料命令.Name = "btn下料命令";
-            this.btn下料命令.Size = new System.Drawing.Size(125, 62);
-            this.btn下料命令.TabIndex = 21;
-            this.btn下料命令.Text = "下料";
-            this.btn下料命令.UseVisualStyleBackColor = true;
-            this.btn下料命令.Click += new System.EventHandler(this.btn下料命令_Click);
-            // 
-            // btn上料命令
-            // 
-            this.btn上料命令.Location = new System.Drawing.Point(62, 32);
-            this.btn上料命令.Name = "btn上料命令";
-            this.btn上料命令.Size = new System.Drawing.Size(125, 62);
-            this.btn上料命令.TabIndex = 20;
-            this.btn上料命令.Text = "上料";
-            this.btn上料命令.UseVisualStyleBackColor = true;
-            this.btn上料命令.Click += new System.EventHandler(this.btn上料命令_Click);
             // 
             // groupBox73
             // 
@@ -1675,7 +1785,7 @@
             this.groupBox73.Size = new System.Drawing.Size(240, 227);
             this.groupBox73.TabIndex = 219;
             this.groupBox73.TabStop = false;
-            this.groupBox73.Text = "按钮选择";
+            this.groupBox73.Text = "自动模式选择";
             // 
             // LB_自动远程状态测试
             // 
@@ -1695,8 +1805,7 @@
             this.btn自动模式远程测试.TabIndex = 25;
             this.btn自动模式远程测试.Text = "自动远程-测试";
             this.btn自动模式远程测试.UseVisualStyleBackColor = true;
-            this.btn自动模式远程测试.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn自动模式远程测试_MouseDown);
-            this.btn自动模式远程测试.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn自动模式远程测试_MouseUp);
+            this.btn自动模式远程测试.Click += new System.EventHandler(this.btn自动模式远程测试_Click);
             // 
             // LB_自动远程状态
             // 
@@ -1740,163 +1849,93 @@
             // 
             // groupBox72
             // 
-            this.groupBox72.Controls.Add(this.txtSokt下料个数);
-            this.groupBox72.Controls.Add(this.txtSokt上料个数);
-            this.groupBox72.Controls.Add(this.txt托盘下料个数);
-            this.groupBox72.Controls.Add(this.txt托盘上料个数);
-            this.groupBox72.Controls.Add(this.label251);
-            this.groupBox72.Controls.Add(this.label253);
-            this.groupBox72.Controls.Add(this.label255);
-            this.groupBox72.Controls.Add(this.label266);
+            this.groupBox72.Controls.Add(this.label99);
+            this.groupBox72.Controls.Add(this.label98);
+            this.groupBox72.Controls.Add(this.btn人工上下料);
+            this.groupBox72.Controls.Add(this.label97);
+            this.groupBox72.Controls.Add(this.button1);
             this.groupBox72.Location = new System.Drawing.Point(254, 325);
             this.groupBox72.Name = "groupBox72";
             this.groupBox72.Size = new System.Drawing.Size(240, 227);
             this.groupBox72.TabIndex = 23;
             this.groupBox72.TabStop = false;
-            this.groupBox72.Text = "个数";
+            this.groupBox72.Text = "常用按钮";
             // 
-            // txtSokt下料个数
+            // label99
             // 
-            this.txtSokt下料个数.Location = new System.Drawing.Point(156, 110);
-            this.txtSokt下料个数.Name = "txtSokt下料个数";
-            this.txtSokt下料个数.Size = new System.Drawing.Size(65, 24);
-            this.txtSokt下料个数.TabIndex = 29;
+            this.label99.AutoSize = true;
+            this.label99.Location = new System.Drawing.Point(12, 88);
+            this.label99.Name = "label99";
+            this.label99.Size = new System.Drawing.Size(15, 17);
+            this.label99.TabIndex = 58;
+            this.label99.Text = "2";
             // 
-            // txtSokt上料个数
+            // label98
             // 
-            this.txtSokt上料个数.Location = new System.Drawing.Point(156, 81);
-            this.txtSokt上料个数.Name = "txtSokt上料个数";
-            this.txtSokt上料个数.Size = new System.Drawing.Size(65, 24);
-            this.txtSokt上料个数.TabIndex = 28;
+            this.label98.AutoSize = true;
+            this.label98.Location = new System.Drawing.Point(11, 44);
+            this.label98.Name = "label98";
+            this.label98.Size = new System.Drawing.Size(15, 17);
+            this.label98.TabIndex = 57;
+            this.label98.Text = "1";
             // 
-            // txt托盘下料个数
+            // btn人工上下料
             // 
-            this.txt托盘下料个数.Location = new System.Drawing.Point(156, 53);
-            this.txt托盘下料个数.Name = "txt托盘下料个数";
-            this.txt托盘下料个数.Size = new System.Drawing.Size(65, 24);
-            this.txt托盘下料个数.TabIndex = 27;
+            this.btn人工上下料.Font = new System.Drawing.Font("Times New Roman", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn人工上下料.Location = new System.Drawing.Point(32, 40);
+            this.btn人工上下料.Name = "btn人工上下料";
+            this.btn人工上下料.Size = new System.Drawing.Size(161, 25);
+            this.btn人工上下料.TabIndex = 22;
+            this.btn人工上下料.Text = "上料机械手避让位置";
+            this.btn人工上下料.UseVisualStyleBackColor = true;
+            this.btn人工上下料.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn人工上下料_MouseDown);
+            this.btn人工上下料.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn人工上下料_MouseUp);
             // 
-            // txt托盘上料个数
+            // label97
             // 
-            this.txt托盘上料个数.Location = new System.Drawing.Point(156, 24);
-            this.txt托盘上料个数.Name = "txt托盘上料个数";
-            this.txt托盘上料个数.Size = new System.Drawing.Size(65, 24);
-            this.txt托盘上料个数.TabIndex = 26;
+            this.label97.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label97.ForeColor = System.Drawing.Color.Red;
+            this.label97.Location = new System.Drawing.Point(15, 170);
+            this.label97.Name = "label97";
+            this.label97.Size = new System.Drawing.Size(205, 47);
+            this.label97.TabIndex = 56;
+            this.label97.Text = "提示：以上按钮请在手动模式触发，如发生异常，请点下方“自动停止”！！";
             // 
-            // label251
+            // button1
             // 
-            this.label251.AutoSize = true;
-            this.label251.Location = new System.Drawing.Point(16, 116);
-            this.label251.Name = "label251";
-            this.label251.Size = new System.Drawing.Size(114, 17);
-            this.label251.TabIndex = 22;
-            this.label251.Text = "Sokt下料个数：";
-            // 
-            // label253
-            // 
-            this.label253.AutoSize = true;
-            this.label253.Location = new System.Drawing.Point(16, 87);
-            this.label253.Name = "label253";
-            this.label253.Size = new System.Drawing.Size(114, 17);
-            this.label253.TabIndex = 20;
-            this.label253.Text = "Sokt上料个数：";
-            // 
-            // label255
-            // 
-            this.label255.AutoSize = true;
-            this.label255.Location = new System.Drawing.Point(16, 58);
-            this.label255.Name = "label255";
-            this.label255.Size = new System.Drawing.Size(120, 17);
-            this.label255.TabIndex = 18;
-            this.label255.Text = "托盘下料个数：";
-            // 
-            // label266
-            // 
-            this.label266.AutoSize = true;
-            this.label266.Location = new System.Drawing.Point(16, 30);
-            this.label266.Name = "label266";
-            this.label266.Size = new System.Drawing.Size(120, 17);
-            this.label266.TabIndex = 16;
-            this.label266.Text = "托盘上料个数：";
+            this.button1.BackColor = System.Drawing.SystemColors.Control;
+            this.button1.Font = new System.Drawing.Font("Times New Roman", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(32, 84);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(161, 24);
+            this.button1.TabIndex = 55;
+            this.button1.Text = "黑体全部上升位置";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn黑体一键上升_MouseDown);
+            this.button1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn黑体一键上升_MouseUp);
             // 
             // groupBox70
             // 
-            this.groupBox70.Controls.Add(this.label249);
-            this.groupBox70.Controls.Add(this.LB_自动运行状态);
-            this.groupBox70.Controls.Add(this.label250);
-            this.groupBox70.Controls.Add(this.LB_自动状态);
-            this.groupBox70.Controls.Add(this.label248);
-            this.groupBox70.Controls.Add(this.LB_手动状态);
             this.groupBox70.Controls.Add(this.label245);
             this.groupBox70.Controls.Add(this.LB_初始化状态);
+            this.groupBox70.Controls.Add(this.LB_ConnectionStatus);
+            this.groupBox70.Controls.Add(this.label249);
+            this.groupBox70.Controls.Add(this.LB_Connection);
+            this.groupBox70.Controls.Add(this.LB_手动状态);
+            this.groupBox70.Controls.Add(this.label248);
+            this.groupBox70.Controls.Add(this.LB_自动运行状态);
             this.groupBox70.Location = new System.Drawing.Point(8, 325);
             this.groupBox70.Name = "groupBox70";
             this.groupBox70.Size = new System.Drawing.Size(240, 227);
             this.groupBox70.TabIndex = 18;
             this.groupBox70.TabStop = false;
-            this.groupBox70.Text = "状态";
-            // 
-            // label249
-            // 
-            this.label249.AutoSize = true;
-            this.label249.Location = new System.Drawing.Point(16, 105);
-            this.label249.Name = "label249";
-            this.label249.Size = new System.Drawing.Size(120, 17);
-            this.label249.TabIndex = 22;
-            this.label249.Text = "自动运行状态：";
-            // 
-            // LB_自动运行状态
-            // 
-            this.LB_自动运行状态.AutoSize = true;
-            this.LB_自动运行状态.BackColor = System.Drawing.Color.White;
-            this.LB_自动运行状态.Location = new System.Drawing.Point(188, 107);
-            this.LB_自动运行状态.Name = "LB_自动运行状态";
-            this.LB_自动运行状态.Size = new System.Drawing.Size(32, 17);
-            this.LB_自动运行状态.TabIndex = 21;
-            this.LB_自动运行状态.Text = "      ";
-            // 
-            // label250
-            // 
-            this.label250.AutoSize = true;
-            this.label250.Location = new System.Drawing.Point(16, 80);
-            this.label250.Name = "label250";
-            this.label250.Size = new System.Drawing.Size(88, 17);
-            this.label250.TabIndex = 20;
-            this.label250.Text = "自动状态：";
-            // 
-            // LB_自动状态
-            // 
-            this.LB_自动状态.AutoSize = true;
-            this.LB_自动状态.BackColor = System.Drawing.Color.White;
-            this.LB_自动状态.Location = new System.Drawing.Point(188, 82);
-            this.LB_自动状态.Name = "LB_自动状态";
-            this.LB_自动状态.Size = new System.Drawing.Size(32, 17);
-            this.LB_自动状态.TabIndex = 19;
-            this.LB_自动状态.Text = "      ";
-            // 
-            // label248
-            // 
-            this.label248.AutoSize = true;
-            this.label248.Location = new System.Drawing.Point(16, 55);
-            this.label248.Name = "label248";
-            this.label248.Size = new System.Drawing.Size(88, 17);
-            this.label248.TabIndex = 18;
-            this.label248.Text = "手动状态：";
-            // 
-            // LB_手动状态
-            // 
-            this.LB_手动状态.AutoSize = true;
-            this.LB_手动状态.BackColor = System.Drawing.Color.White;
-            this.LB_手动状态.Location = new System.Drawing.Point(188, 56);
-            this.LB_手动状态.Name = "LB_手动状态";
-            this.LB_手动状态.Size = new System.Drawing.Size(32, 17);
-            this.LB_手动状态.TabIndex = 17;
-            this.LB_手动状态.Text = "      ";
+            this.groupBox70.Text = "本机状态";
             // 
             // label245
             // 
             this.label245.AutoSize = true;
-            this.label245.Location = new System.Drawing.Point(16, 30);
+            this.label245.Location = new System.Drawing.Point(8, 68);
             this.label245.Name = "label245";
             this.label245.Size = new System.Drawing.Size(104, 17);
             this.label245.TabIndex = 16;
@@ -1906,11 +1945,68 @@
             // 
             this.LB_初始化状态.AutoSize = true;
             this.LB_初始化状态.BackColor = System.Drawing.Color.White;
-            this.LB_初始化状态.Location = new System.Drawing.Point(188, 30);
+            this.LB_初始化状态.Location = new System.Drawing.Point(134, 65);
             this.LB_初始化状态.Name = "LB_初始化状态";
             this.LB_初始化状态.Size = new System.Drawing.Size(32, 17);
             this.LB_初始化状态.TabIndex = 15;
             this.LB_初始化状态.Text = "      ";
+            // 
+            // LB_ConnectionStatus
+            // 
+            this.LB_ConnectionStatus.AutoSize = true;
+            this.LB_ConnectionStatus.Location = new System.Drawing.Point(8, 27);
+            this.LB_ConnectionStatus.Name = "LB_ConnectionStatus";
+            this.LB_ConnectionStatus.Size = new System.Drawing.Size(88, 17);
+            this.LB_ConnectionStatus.TabIndex = 12;
+            this.LB_ConnectionStatus.Text = "本机连接：";
+            // 
+            // label249
+            // 
+            this.label249.AutoSize = true;
+            this.label249.Location = new System.Drawing.Point(8, 152);
+            this.label249.Name = "label249";
+            this.label249.Size = new System.Drawing.Size(88, 17);
+            this.label249.TabIndex = 22;
+            this.label249.Text = "运行状态：";
+            // 
+            // LB_Connection
+            // 
+            this.LB_Connection.AutoSize = true;
+            this.LB_Connection.BackColor = System.Drawing.Color.White;
+            this.LB_Connection.Location = new System.Drawing.Point(134, 26);
+            this.LB_Connection.Name = "LB_Connection";
+            this.LB_Connection.Size = new System.Drawing.Size(32, 17);
+            this.LB_Connection.TabIndex = 11;
+            this.LB_Connection.Text = "      ";
+            // 
+            // LB_手动状态
+            // 
+            this.LB_手动状态.AutoSize = true;
+            this.LB_手动状态.BackColor = System.Drawing.Color.White;
+            this.LB_手动状态.Location = new System.Drawing.Point(134, 108);
+            this.LB_手动状态.Name = "LB_手动状态";
+            this.LB_手动状态.Size = new System.Drawing.Size(32, 17);
+            this.LB_手动状态.TabIndex = 17;
+            this.LB_手动状态.Text = "      ";
+            // 
+            // label248
+            // 
+            this.label248.AutoSize = true;
+            this.label248.Location = new System.Drawing.Point(8, 110);
+            this.label248.Name = "label248";
+            this.label248.Size = new System.Drawing.Size(88, 17);
+            this.label248.TabIndex = 18;
+            this.label248.Text = "本机模式：";
+            // 
+            // LB_自动运行状态
+            // 
+            this.LB_自动运行状态.AutoSize = true;
+            this.LB_自动运行状态.BackColor = System.Drawing.Color.White;
+            this.LB_自动运行状态.Location = new System.Drawing.Point(134, 151);
+            this.LB_自动运行状态.Name = "LB_自动运行状态";
+            this.LB_自动运行状态.Size = new System.Drawing.Size(32, 17);
+            this.LB_自动运行状态.TabIndex = 21;
+            this.LB_自动运行状态.Text = "      ";
             // 
             // groupBox10
             // 
@@ -1927,11 +2023,11 @@
             this.groupBox10.Size = new System.Drawing.Size(240, 227);
             this.groupBox10.TabIndex = 219;
             this.groupBox10.TabStop = false;
-            this.groupBox10.Text = "统计";
+            this.groupBox10.Text = "夹具使用次数统计";
             // 
             // txt夹具4次数
             // 
-            this.txt夹具4次数.Location = new System.Drawing.Point(111, 151);
+            this.txt夹具4次数.Location = new System.Drawing.Point(111, 169);
             this.txt夹具4次数.Name = "txt夹具4次数";
             this.txt夹具4次数.Size = new System.Drawing.Size(65, 24);
             this.txt夹具4次数.TabIndex = 25;
@@ -1939,7 +2035,7 @@
             // label186
             // 
             this.label186.AutoSize = true;
-            this.label186.Location = new System.Drawing.Point(20, 154);
+            this.label186.Location = new System.Drawing.Point(20, 172);
             this.label186.Name = "label186";
             this.label186.Size = new System.Drawing.Size(95, 17);
             this.label186.TabIndex = 24;
@@ -1947,7 +2043,7 @@
             // 
             // txt夹具3次数
             // 
-            this.txt夹具3次数.Location = new System.Drawing.Point(111, 114);
+            this.txt夹具3次数.Location = new System.Drawing.Point(111, 126);
             this.txt夹具3次数.Name = "txt夹具3次数";
             this.txt夹具3次数.Size = new System.Drawing.Size(65, 24);
             this.txt夹具3次数.TabIndex = 23;
@@ -1955,7 +2051,7 @@
             // label185
             // 
             this.label185.AutoSize = true;
-            this.label185.Location = new System.Drawing.Point(20, 117);
+            this.label185.Location = new System.Drawing.Point(20, 129);
             this.label185.Name = "label185";
             this.label185.Size = new System.Drawing.Size(95, 17);
             this.label185.TabIndex = 22;
@@ -1963,7 +2059,7 @@
             // 
             // txt夹具2次数
             // 
-            this.txt夹具2次数.Location = new System.Drawing.Point(111, 77);
+            this.txt夹具2次数.Location = new System.Drawing.Point(111, 83);
             this.txt夹具2次数.Name = "txt夹具2次数";
             this.txt夹具2次数.Size = new System.Drawing.Size(65, 24);
             this.txt夹具2次数.TabIndex = 21;
@@ -1971,7 +2067,7 @@
             // label183
             // 
             this.label183.AutoSize = true;
-            this.label183.Location = new System.Drawing.Point(20, 80);
+            this.label183.Location = new System.Drawing.Point(20, 86);
             this.label183.Name = "label183";
             this.label183.Size = new System.Drawing.Size(95, 17);
             this.label183.TabIndex = 20;
@@ -2003,19 +2099,17 @@
             this.groupBox69.Controls.Add(this.label288);
             this.groupBox69.Controls.Add(this.CB_TypeOfTray);
             this.groupBox69.Controls.Add(this.CB_Socket类);
-            this.groupBox69.Controls.Add(this.CB_TypeOfProduction);
-            this.groupBox69.Controls.Add(this.LB_TypeOfProduction);
             this.groupBox69.Location = new System.Drawing.Point(499, 91);
             this.groupBox69.Name = "groupBox69";
             this.groupBox69.Size = new System.Drawing.Size(240, 227);
             this.groupBox69.TabIndex = 16;
             this.groupBox69.TabStop = false;
-            this.groupBox69.Text = "类别选择";
+            this.groupBox69.Text = "配方选择";
             // 
             // label71
             // 
             this.label71.AutoSize = true;
-            this.label71.Location = new System.Drawing.Point(14, 175);
+            this.label71.Location = new System.Drawing.Point(14, 174);
             this.label71.Name = "label71";
             this.label71.Size = new System.Drawing.Size(88, 17);
             this.label71.TabIndex = 222;
@@ -2045,7 +2139,7 @@
             "18盘",
             "19盘",
             "20盘"});
-            this.CB_工作盘数.Location = new System.Drawing.Point(106, 173);
+            this.CB_工作盘数.Location = new System.Drawing.Point(106, 171);
             this.CB_工作盘数.Name = "CB_工作盘数";
             this.CB_工作盘数.Size = new System.Drawing.Size(121, 24);
             this.CB_工作盘数.TabIndex = 221;
@@ -2054,7 +2148,7 @@
             // label324
             // 
             this.label324.AutoSize = true;
-            this.label324.Location = new System.Drawing.Point(14, 141);
+            this.label324.Location = new System.Drawing.Point(14, 130);
             this.label324.Name = "label324";
             this.label324.Size = new System.Drawing.Size(88, 17);
             this.label324.TabIndex = 220;
@@ -2076,9 +2170,10 @@
             "34工位",
             "123工位",
             "124工位",
+            "134工位",
             "234工位",
             "1234工位"});
-            this.CB_工位.Location = new System.Drawing.Point(106, 139);
+            this.CB_工位.Location = new System.Drawing.Point(106, 127);
             this.CB_工位.Name = "CB_工位";
             this.CB_工位.Size = new System.Drawing.Size(121, 24);
             this.CB_工位.TabIndex = 219;
@@ -2091,16 +2186,16 @@
             this.LB_TypeOfTray.Name = "LB_TypeOfTray";
             this.LB_TypeOfTray.Size = new System.Drawing.Size(88, 17);
             this.LB_TypeOfTray.TabIndex = 6;
-            this.LB_TypeOfTray.Text = "托盘种类：";
+            this.LB_TypeOfTray.Text = "产品选择：";
             // 
             // label288
             // 
             this.label288.AutoSize = true;
-            this.label288.Location = new System.Drawing.Point(14, 108);
+            this.label288.Location = new System.Drawing.Point(14, 86);
             this.label288.Name = "label288";
-            this.label288.Size = new System.Drawing.Size(80, 17);
+            this.label288.Size = new System.Drawing.Size(88, 17);
             this.label288.TabIndex = 218;
-            this.label288.Text = "Socket类：";
+            this.label288.Text = "夹具选择：";
             // 
             // CB_TypeOfTray
             // 
@@ -2117,40 +2212,11 @@
             this.CB_Socket类.Items.AddRange(new object[] {
             "四目",
             "单目"});
-            this.CB_Socket类.Location = new System.Drawing.Point(106, 105);
+            this.CB_Socket类.Location = new System.Drawing.Point(106, 83);
             this.CB_Socket类.Name = "CB_Socket类";
             this.CB_Socket类.Size = new System.Drawing.Size(121, 24);
             this.CB_Socket类.TabIndex = 217;
             this.CB_Socket类.SelectedIndexChanged += new System.EventHandler(this.CB_Socket类_SelectedIndexChanged);
-            // 
-            // CB_TypeOfProduction
-            // 
-            this.CB_TypeOfProduction.FormattingEnabled = true;
-            this.CB_TypeOfProduction.Items.AddRange(new object[] {
-            "GST212W2",
-            "GST612W2",
-            "GST412C0",
-            "GST612M2",
-            "GST612W9",
-            "产品6",
-            "产品7",
-            "产品8",
-            "产品9",
-            "产品10"});
-            this.CB_TypeOfProduction.Location = new System.Drawing.Point(106, 71);
-            this.CB_TypeOfProduction.Name = "CB_TypeOfProduction";
-            this.CB_TypeOfProduction.Size = new System.Drawing.Size(121, 24);
-            this.CB_TypeOfProduction.TabIndex = 13;
-            this.CB_TypeOfProduction.SelectedIndexChanged += new System.EventHandler(this.CB_TypeOfProduction_SelectedIndexChanged);
-            // 
-            // LB_TypeOfProduction
-            // 
-            this.LB_TypeOfProduction.AutoSize = true;
-            this.LB_TypeOfProduction.Location = new System.Drawing.Point(14, 74);
-            this.LB_TypeOfProduction.Name = "LB_TypeOfProduction";
-            this.LB_TypeOfProduction.Size = new System.Drawing.Size(88, 17);
-            this.LB_TypeOfProduction.TabIndex = 14;
-            this.LB_TypeOfProduction.Text = "产品种类：";
             // 
             // TSTD_IDImg
             // 
@@ -2170,16 +2236,17 @@
             this.GB_Warning.Controls.Add(this.TB_Warning);
             this.GB_Warning.Controls.Add(this.btn报警复位);
             this.GB_Warning.Controls.Add(this.btn蜂鸣停止);
-            this.GB_Warning.Location = new System.Drawing.Point(992, 5);
+            this.GB_Warning.ForeColor = System.Drawing.Color.Red;
+            this.GB_Warning.Location = new System.Drawing.Point(992, 91);
             this.GB_Warning.Name = "GB_Warning";
-            this.GB_Warning.Size = new System.Drawing.Size(281, 313);
+            this.GB_Warning.Size = new System.Drawing.Size(281, 461);
             this.GB_Warning.TabIndex = 18;
             this.GB_Warning.TabStop = false;
             this.GB_Warning.Text = "报警信息";
             // 
             // BTN_查看日志
             // 
-            this.BTN_查看日志.Location = new System.Drawing.Point(11, 259);
+            this.BTN_查看日志.Location = new System.Drawing.Point(11, 407);
             this.BTN_查看日志.Name = "BTN_查看日志";
             this.BTN_查看日志.Size = new System.Drawing.Size(85, 47);
             this.BTN_查看日志.TabIndex = 18;
@@ -2196,7 +2263,7 @@
             this.TB_Warning.Name = "TB_Warning";
             this.TB_Warning.ReadOnly = true;
             this.TB_Warning.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.TB_Warning.Size = new System.Drawing.Size(267, 233);
+            this.TB_Warning.Size = new System.Drawing.Size(267, 366);
             this.TB_Warning.TabIndex = 17;
             // 
             // btn报警复位
@@ -2204,7 +2271,7 @@
             this.btn报警复位.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btn报警复位.BackColor = System.Drawing.Color.Red;
             this.btn报警复位.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn报警复位.Location = new System.Drawing.Point(190, 259);
+            this.btn报警复位.Location = new System.Drawing.Point(190, 407);
             this.btn报警复位.Margin = new System.Windows.Forms.Padding(2);
             this.btn报警复位.Name = "btn报警复位";
             this.btn报警复位.Size = new System.Drawing.Size(85, 47);
@@ -2218,7 +2285,7 @@
             this.btn蜂鸣停止.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btn蜂鸣停止.BackColor = System.Drawing.Color.Yellow;
             this.btn蜂鸣停止.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn蜂鸣停止.Location = new System.Drawing.Point(101, 259);
+            this.btn蜂鸣停止.Location = new System.Drawing.Point(101, 407);
             this.btn蜂鸣停止.Margin = new System.Windows.Forms.Padding(2);
             this.btn蜂鸣停止.Name = "btn蜂鸣停止";
             this.btn蜂鸣停止.Size = new System.Drawing.Size(85, 47);
@@ -2229,79 +2296,90 @@
             // 
             // GB_Coonnection
             // 
-            this.GB_Coonnection.Controls.Add(this.txt控制器时间);
-            this.GB_Coonnection.Controls.Add(this.label68);
-            this.GB_Coonnection.Controls.Add(this.BTN_关闭端口);
-            this.GB_Coonnection.Controls.Add(this.BTN_打开端口);
-            this.GB_Coonnection.Controls.Add(this.LB_ConnectionStatus);
-            this.GB_Coonnection.Controls.Add(this.LB_Connection);
+            this.GB_Coonnection.Controls.Add(this.txtSokt下料个数);
+            this.GB_Coonnection.Controls.Add(this.label266);
+            this.GB_Coonnection.Controls.Add(this.txtSokt上料个数);
+            this.GB_Coonnection.Controls.Add(this.label255);
+            this.GB_Coonnection.Controls.Add(this.txt托盘下料个数);
+            this.GB_Coonnection.Controls.Add(this.label253);
+            this.GB_Coonnection.Controls.Add(this.txt托盘上料个数);
+            this.GB_Coonnection.Controls.Add(this.label251);
             this.GB_Coonnection.Location = new System.Drawing.Point(254, 91);
             this.GB_Coonnection.Name = "GB_Coonnection";
             this.GB_Coonnection.Size = new System.Drawing.Size(240, 227);
             this.GB_Coonnection.TabIndex = 15;
             this.GB_Coonnection.TabStop = false;
-            this.GB_Coonnection.Text = "连接";
+            this.GB_Coonnection.Text = "本机上下料统计";
             // 
-            // txt控制器时间
+            // txtSokt下料个数
             // 
-            this.txt控制器时间.Location = new System.Drawing.Point(107, 157);
-            this.txt控制器时间.Margin = new System.Windows.Forms.Padding(2);
-            this.txt控制器时间.Name = "txt控制器时间";
-            this.txt控制器时间.Size = new System.Drawing.Size(119, 24);
-            this.txt控制器时间.TabIndex = 111;
+            this.txtSokt下料个数.Location = new System.Drawing.Point(155, 169);
+            this.txtSokt下料个数.Name = "txtSokt下料个数";
+            this.txtSokt下料个数.Size = new System.Drawing.Size(65, 24);
+            this.txtSokt下料个数.TabIndex = 29;
             // 
-            // label68
+            // label266
             // 
-            this.label68.AutoSize = true;
-            this.label68.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label68.Location = new System.Drawing.Point(14, 160);
-            this.label68.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label68.Name = "label68";
-            this.label68.Size = new System.Drawing.Size(91, 15);
-            this.label68.TabIndex = 110;
-            this.label68.Text = "当前控制器时间";
+            this.label266.AutoSize = true;
+            this.label266.Location = new System.Drawing.Point(15, 42);
+            this.label266.Name = "label266";
+            this.label266.Size = new System.Drawing.Size(120, 17);
+            this.label266.TabIndex = 16;
+            this.label266.Text = "托盘上料个数：";
             // 
-            // BTN_关闭端口
+            // txtSokt上料个数
             // 
-            this.BTN_关闭端口.Location = new System.Drawing.Point(120, 110);
-            this.BTN_关闭端口.Name = "BTN_关闭端口";
-            this.BTN_关闭端口.Size = new System.Drawing.Size(85, 23);
-            this.BTN_关闭端口.TabIndex = 14;
-            this.BTN_关闭端口.Text = "关闭端口";
-            this.BTN_关闭端口.UseVisualStyleBackColor = true;
-            this.BTN_关闭端口.Click += new System.EventHandler(this.BTN_关闭端口_Click);
+            this.txtSokt上料个数.Location = new System.Drawing.Point(155, 125);
+            this.txtSokt上料个数.Name = "txtSokt上料个数";
+            this.txtSokt上料个数.Size = new System.Drawing.Size(65, 24);
+            this.txtSokt上料个数.TabIndex = 28;
             // 
-            // BTN_打开端口
+            // label255
             // 
-            this.BTN_打开端口.Location = new System.Drawing.Point(15, 110);
-            this.BTN_打开端口.Name = "BTN_打开端口";
-            this.BTN_打开端口.Size = new System.Drawing.Size(85, 23);
-            this.BTN_打开端口.TabIndex = 13;
-            this.BTN_打开端口.Text = "打开端口";
-            this.BTN_打开端口.UseVisualStyleBackColor = true;
-            this.BTN_打开端口.Click += new System.EventHandler(this.BTN_打开端口_Click);
+            this.label255.AutoSize = true;
+            this.label255.Location = new System.Drawing.Point(15, 86);
+            this.label255.Name = "label255";
+            this.label255.Size = new System.Drawing.Size(120, 17);
+            this.label255.TabIndex = 18;
+            this.label255.Text = "托盘下料个数：";
             // 
-            // LB_ConnectionStatus
+            // txt托盘下料个数
             // 
-            this.LB_ConnectionStatus.AutoSize = true;
-            this.LB_ConnectionStatus.Location = new System.Drawing.Point(14, 67);
-            this.LB_ConnectionStatus.Name = "LB_ConnectionStatus";
-            this.LB_ConnectionStatus.Size = new System.Drawing.Size(88, 17);
-            this.LB_ConnectionStatus.TabIndex = 12;
-            this.LB_ConnectionStatus.Text = "连接状态：";
+            this.txt托盘下料个数.Location = new System.Drawing.Point(155, 81);
+            this.txt托盘下料个数.Name = "txt托盘下料个数";
+            this.txt托盘下料个数.Size = new System.Drawing.Size(65, 24);
+            this.txt托盘下料个数.TabIndex = 27;
             // 
-            // LB_Connection
+            // label253
             // 
-            this.LB_Connection.AutoSize = true;
-            this.LB_Connection.BackColor = System.Drawing.Color.White;
-            this.LB_Connection.Location = new System.Drawing.Point(103, 67);
-            this.LB_Connection.Name = "LB_Connection";
-            this.LB_Connection.Size = new System.Drawing.Size(32, 17);
-            this.LB_Connection.TabIndex = 11;
-            this.LB_Connection.Text = "      ";
+            this.label253.AutoSize = true;
+            this.label253.Location = new System.Drawing.Point(15, 130);
+            this.label253.Name = "label253";
+            this.label253.Size = new System.Drawing.Size(114, 17);
+            this.label253.TabIndex = 20;
+            this.label253.Text = "Sokt上料个数：";
+            // 
+            // txt托盘上料个数
+            // 
+            this.txt托盘上料个数.Location = new System.Drawing.Point(155, 37);
+            this.txt托盘上料个数.Name = "txt托盘上料个数";
+            this.txt托盘上料个数.Size = new System.Drawing.Size(65, 24);
+            this.txt托盘上料个数.TabIndex = 26;
+            // 
+            // label251
+            // 
+            this.label251.AutoSize = true;
+            this.label251.Location = new System.Drawing.Point(15, 174);
+            this.label251.Name = "label251";
+            this.label251.Size = new System.Drawing.Size(114, 17);
+            this.label251.TabIndex = 22;
+            this.label251.Text = "Sokt下料个数：";
             // 
             // GB_Modify
             // 
+            this.GB_Modify.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.GB_Modify.Controls.Add(this.label100);
+            this.GB_Modify.Controls.Add(this.LB_实时权限显示);
             this.GB_Modify.Controls.Add(this.BTN_SwitchUser);
             this.GB_Modify.Controls.Add(this.BTN_Modify);
             this.GB_Modify.Controls.Add(this.TB_NewPassword);
@@ -2313,31 +2391,53 @@
             this.GB_Modify.Size = new System.Drawing.Size(240, 227);
             this.GB_Modify.TabIndex = 10;
             this.GB_Modify.TabStop = false;
-            this.GB_Modify.Text = "修改密码";
+            this.GB_Modify.Text = "权限及密码";
+            // 
+            // label100
+            // 
+            this.label100.AutoSize = true;
+            this.label100.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label100.Location = new System.Drawing.Point(13, 46);
+            this.label100.Name = "label100";
+            this.label100.Size = new System.Drawing.Size(72, 17);
+            this.label100.TabIndex = 24;
+            this.label100.Text = "当前用户";
+            // 
+            // LB_实时权限显示
+            // 
+            this.LB_实时权限显示.AutoSize = true;
+            this.LB_实时权限显示.BackColor = System.Drawing.Color.Lime;
+            this.LB_实时权限显示.Location = new System.Drawing.Point(90, 43);
+            this.LB_实时权限显示.Name = "LB_实时权限显示";
+            this.LB_实时权限显示.Size = new System.Drawing.Size(32, 17);
+            this.LB_实时权限显示.TabIndex = 23;
+            this.LB_实时权限显示.Text = "      ";
             // 
             // BTN_SwitchUser
             // 
-            this.BTN_SwitchUser.Location = new System.Drawing.Point(19, 156);
+            this.BTN_SwitchUser.BackColor = System.Drawing.SystemColors.Control;
+            this.BTN_SwitchUser.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.BTN_SwitchUser.Location = new System.Drawing.Point(16, 178);
             this.BTN_SwitchUser.Name = "BTN_SwitchUser";
-            this.BTN_SwitchUser.Size = new System.Drawing.Size(80, 23);
+            this.BTN_SwitchUser.Size = new System.Drawing.Size(80, 37);
             this.BTN_SwitchUser.TabIndex = 17;
             this.BTN_SwitchUser.Text = "切换用户";
-            this.BTN_SwitchUser.UseVisualStyleBackColor = true;
+            this.BTN_SwitchUser.UseVisualStyleBackColor = false;
             this.BTN_SwitchUser.Click += new System.EventHandler(this.BTN_SwitchUser_Click);
             // 
             // BTN_Modify
             // 
-            this.BTN_Modify.Location = new System.Drawing.Point(123, 156);
+            this.BTN_Modify.Location = new System.Drawing.Point(137, 179);
             this.BTN_Modify.Name = "BTN_Modify";
-            this.BTN_Modify.Size = new System.Drawing.Size(75, 23);
+            this.BTN_Modify.Size = new System.Drawing.Size(86, 34);
             this.BTN_Modify.TabIndex = 4;
-            this.BTN_Modify.Text = "修改";
+            this.BTN_Modify.Text = "确认修改";
             this.BTN_Modify.UseVisualStyleBackColor = true;
             this.BTN_Modify.Click += new System.EventHandler(this.BTN_Modify_Click);
             // 
             // TB_NewPassword
             // 
-            this.TB_NewPassword.Location = new System.Drawing.Point(98, 115);
+            this.TB_NewPassword.Location = new System.Drawing.Point(86, 136);
             this.TB_NewPassword.Name = "TB_NewPassword";
             this.TB_NewPassword.PasswordChar = '*';
             this.TB_NewPassword.Size = new System.Drawing.Size(100, 24);
@@ -2345,7 +2445,7 @@
             // 
             // TB_Password
             // 
-            this.TB_Password.Location = new System.Drawing.Point(98, 66);
+            this.TB_Password.Location = new System.Drawing.Point(86, 87);
             this.TB_Password.Name = "TB_Password";
             this.TB_Password.PasswordChar = '*';
             this.TB_Password.Size = new System.Drawing.Size(100, 24);
@@ -2354,7 +2454,7 @@
             // LB_NewPassword
             // 
             this.LB_NewPassword.AutoSize = true;
-            this.LB_NewPassword.Location = new System.Drawing.Point(20, 118);
+            this.LB_NewPassword.Location = new System.Drawing.Point(8, 139);
             this.LB_NewPassword.Name = "LB_NewPassword";
             this.LB_NewPassword.Size = new System.Drawing.Size(72, 17);
             this.LB_NewPassword.TabIndex = 1;
@@ -2363,7 +2463,8 @@
             // LB_Password
             // 
             this.LB_Password.AutoSize = true;
-            this.LB_Password.Location = new System.Drawing.Point(36, 69);
+            this.LB_Password.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.LB_Password.Location = new System.Drawing.Point(24, 90);
             this.LB_Password.Name = "LB_Password";
             this.LB_Password.Size = new System.Drawing.Size(56, 17);
             this.LB_Password.TabIndex = 0;
@@ -2373,7 +2474,7 @@
             // 
             this.btn手动模式.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btn手动模式.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn手动模式.Location = new System.Drawing.Point(199, 608);
+            this.btn手动模式.Location = new System.Drawing.Point(230, 608);
             this.btn手动模式.Margin = new System.Windows.Forms.Padding(2);
             this.btn手动模式.Name = "btn手动模式";
             this.btn手动模式.Size = new System.Drawing.Size(104, 47);
@@ -2386,7 +2487,7 @@
             // 
             this.btn初始化.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btn初始化.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn初始化.Location = new System.Drawing.Point(878, 608);
+            this.btn初始化.Location = new System.Drawing.Point(909, 608);
             this.btn初始化.Margin = new System.Windows.Forms.Padding(2);
             this.btn初始化.Name = "btn初始化";
             this.btn初始化.Size = new System.Drawing.Size(104, 47);
@@ -2399,7 +2500,7 @@
             // 
             this.btn自动停止.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btn自动停止.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn自动停止.Location = new System.Drawing.Point(715, 608);
+            this.btn自动停止.Location = new System.Drawing.Point(746, 608);
             this.btn自动停止.Margin = new System.Windows.Forms.Padding(2);
             this.btn自动停止.Name = "btn自动停止";
             this.btn自动停止.Size = new System.Drawing.Size(104, 47);
@@ -2412,7 +2513,7 @@
             // 
             this.btn自动运行.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btn自动运行.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn自动运行.Location = new System.Drawing.Point(536, 608);
+            this.btn自动运行.Location = new System.Drawing.Point(567, 608);
             this.btn自动运行.Margin = new System.Windows.Forms.Padding(2);
             this.btn自动运行.Name = "btn自动运行";
             this.btn自动运行.Size = new System.Drawing.Size(104, 47);
@@ -2425,7 +2526,7 @@
             // 
             this.btn自动模式.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btn自动模式.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn自动模式.Location = new System.Drawing.Point(370, 608);
+            this.btn自动模式.Location = new System.Drawing.Point(401, 608);
             this.btn自动模式.Margin = new System.Windows.Forms.Padding(2);
             this.btn自动模式.Name = "btn自动模式";
             this.btn自动模式.Size = new System.Drawing.Size(104, 47);
@@ -2436,10 +2537,6 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.groupBox14);
-            this.tabPage2.Controls.Add(this.groupBox68);
-            this.tabPage2.Controls.Add(this.groupBox67);
-            this.tabPage2.Controls.Add(this.groupBox66);
             this.tabPage2.Controls.Add(this.groupBox20);
             this.tabPage2.Controls.Add(this.groupBox19);
             this.tabPage2.Controls.Add(this.groupBox18);
@@ -2455,8 +2552,2632 @@
             this.tabPage2.Text = "手动气缸";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // groupBox20
+            // 
+            this.groupBox20.Controls.Add(this.LBEFU上电);
+            this.groupBox20.Controls.Add(this.btnEFU断电);
+            this.groupBox20.Controls.Add(this.btn工位2风扇断电);
+            this.groupBox20.Controls.Add(this.btn工位1风扇断电);
+            this.groupBox20.Controls.Add(this.btnEFU上电);
+            this.groupBox20.Controls.Add(this.btn工位4风扇断电);
+            this.groupBox20.Controls.Add(this.btn工位3风扇断电);
+            this.groupBox20.Controls.Add(this.btn工位4风扇上电);
+            this.groupBox20.Controls.Add(this.btn工位3风扇上电);
+            this.groupBox20.Controls.Add(this.btn工位2风扇上电);
+            this.groupBox20.Controls.Add(this.btn工位1风扇上电);
+            this.groupBox20.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox20.Location = new System.Drawing.Point(412, 286);
+            this.groupBox20.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox20.Name = "groupBox20";
+            this.groupBox20.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox20.Size = new System.Drawing.Size(382, 265);
+            this.groupBox20.TabIndex = 65;
+            this.groupBox20.TabStop = false;
+            this.groupBox20.Text = "风扇";
+            // 
+            // LBEFU上电
+            // 
+            this.LBEFU上电.BackColor = System.Drawing.Color.White;
+            this.LBEFU上电.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LBEFU上电.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBEFU上电.Location = new System.Drawing.Point(12, 146);
+            this.LBEFU上电.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LBEFU上电.Name = "LBEFU上电";
+            this.LBEFU上电.Size = new System.Drawing.Size(8, 23);
+            this.LBEFU上电.TabIndex = 82;
+            // 
+            // btnEFU断电
+            // 
+            this.btnEFU断电.BackColor = System.Drawing.SystemColors.Control;
+            this.btnEFU断电.Location = new System.Drawing.Point(148, 146);
+            this.btnEFU断电.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEFU断电.Name = "btnEFU断电";
+            this.btnEFU断电.Size = new System.Drawing.Size(101, 24);
+            this.btnEFU断电.TabIndex = 57;
+            this.btnEFU断电.Text = "EFU断电";
+            this.btnEFU断电.UseVisualStyleBackColor = true;
+            this.btnEFU断电.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnEFU断电_MouseDown);
+            this.btnEFU断电.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnEFU断电_MouseUp);
+            // 
+            // btn工位2风扇断电
+            // 
+            this.btn工位2风扇断电.BackColor = System.Drawing.SystemColors.Control;
+            this.btn工位2风扇断电.Location = new System.Drawing.Point(148, 59);
+            this.btn工位2风扇断电.Margin = new System.Windows.Forms.Padding(2);
+            this.btn工位2风扇断电.Name = "btn工位2风扇断电";
+            this.btn工位2风扇断电.Size = new System.Drawing.Size(101, 24);
+            this.btn工位2风扇断电.TabIndex = 47;
+            this.btn工位2风扇断电.Text = "工位2风扇断电";
+            this.btn工位2风扇断电.UseVisualStyleBackColor = true;
+            this.btn工位2风扇断电.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位2风扇断电_MouseDown);
+            this.btn工位2风扇断电.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位2风扇断电_MouseUp);
+            // 
+            // btn工位1风扇断电
+            // 
+            this.btn工位1风扇断电.BackColor = System.Drawing.SystemColors.Control;
+            this.btn工位1风扇断电.Location = new System.Drawing.Point(148, 31);
+            this.btn工位1风扇断电.Margin = new System.Windows.Forms.Padding(2);
+            this.btn工位1风扇断电.Name = "btn工位1风扇断电";
+            this.btn工位1风扇断电.Size = new System.Drawing.Size(101, 24);
+            this.btn工位1风扇断电.TabIndex = 46;
+            this.btn工位1风扇断电.Text = "工位1风扇断电";
+            this.btn工位1风扇断电.UseVisualStyleBackColor = true;
+            this.btn工位1风扇断电.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位1风扇断电_MouseDown);
+            this.btn工位1风扇断电.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位1风扇断电_MouseUp);
+            // 
+            // btnEFU上电
+            // 
+            this.btnEFU上电.BackColor = System.Drawing.SystemColors.Control;
+            this.btnEFU上电.Location = new System.Drawing.Point(18, 146);
+            this.btnEFU上电.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEFU上电.Name = "btnEFU上电";
+            this.btnEFU上电.Size = new System.Drawing.Size(101, 24);
+            this.btnEFU上电.TabIndex = 56;
+            this.btnEFU上电.Text = "EFU上电";
+            this.btnEFU上电.UseVisualStyleBackColor = true;
+            this.btnEFU上电.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnEFU上电_MouseDown);
+            this.btnEFU上电.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnEFU上电_MouseUp);
+            // 
+            // btn工位4风扇断电
+            // 
+            this.btn工位4风扇断电.BackColor = System.Drawing.SystemColors.Control;
+            this.btn工位4风扇断电.Location = new System.Drawing.Point(148, 118);
+            this.btn工位4风扇断电.Margin = new System.Windows.Forms.Padding(2);
+            this.btn工位4风扇断电.Name = "btn工位4风扇断电";
+            this.btn工位4风扇断电.Size = new System.Drawing.Size(101, 24);
+            this.btn工位4风扇断电.TabIndex = 51;
+            this.btn工位4风扇断电.Text = "工位4风扇断电";
+            this.btn工位4风扇断电.UseVisualStyleBackColor = true;
+            this.btn工位4风扇断电.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位4风扇断电_MouseDown);
+            this.btn工位4风扇断电.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位4风扇断电_MouseUp);
+            // 
+            // btn工位3风扇断电
+            // 
+            this.btn工位3风扇断电.BackColor = System.Drawing.SystemColors.Control;
+            this.btn工位3风扇断电.Location = new System.Drawing.Point(148, 89);
+            this.btn工位3风扇断电.Margin = new System.Windows.Forms.Padding(2);
+            this.btn工位3风扇断电.Name = "btn工位3风扇断电";
+            this.btn工位3风扇断电.Size = new System.Drawing.Size(101, 24);
+            this.btn工位3风扇断电.TabIndex = 50;
+            this.btn工位3风扇断电.Text = "工位3风扇断电";
+            this.btn工位3风扇断电.UseVisualStyleBackColor = true;
+            this.btn工位3风扇断电.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位3风扇断电_MouseDown);
+            this.btn工位3风扇断电.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位3风扇断电_MouseUp);
+            // 
+            // btn工位4风扇上电
+            // 
+            this.btn工位4风扇上电.BackColor = System.Drawing.SystemColors.Control;
+            this.btn工位4风扇上电.Location = new System.Drawing.Point(18, 118);
+            this.btn工位4风扇上电.Margin = new System.Windows.Forms.Padding(2);
+            this.btn工位4风扇上电.Name = "btn工位4风扇上电";
+            this.btn工位4风扇上电.Size = new System.Drawing.Size(101, 24);
+            this.btn工位4风扇上电.TabIndex = 43;
+            this.btn工位4风扇上电.Text = "工位4风扇上电";
+            this.btn工位4风扇上电.UseVisualStyleBackColor = true;
+            this.btn工位4风扇上电.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位4风扇上电_MouseDown);
+            this.btn工位4风扇上电.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位4风扇上电_MouseUp);
+            // 
+            // btn工位3风扇上电
+            // 
+            this.btn工位3风扇上电.BackColor = System.Drawing.SystemColors.Control;
+            this.btn工位3风扇上电.Location = new System.Drawing.Point(18, 89);
+            this.btn工位3风扇上电.Margin = new System.Windows.Forms.Padding(2);
+            this.btn工位3风扇上电.Name = "btn工位3风扇上电";
+            this.btn工位3风扇上电.Size = new System.Drawing.Size(101, 24);
+            this.btn工位3风扇上电.TabIndex = 42;
+            this.btn工位3风扇上电.Text = "工位3风扇上电";
+            this.btn工位3风扇上电.UseVisualStyleBackColor = true;
+            this.btn工位3风扇上电.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位3风扇上电_MouseDown);
+            this.btn工位3风扇上电.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位3风扇上电_MouseUp);
+            // 
+            // btn工位2风扇上电
+            // 
+            this.btn工位2风扇上电.BackColor = System.Drawing.SystemColors.Control;
+            this.btn工位2风扇上电.Location = new System.Drawing.Point(18, 60);
+            this.btn工位2风扇上电.Margin = new System.Windows.Forms.Padding(2);
+            this.btn工位2风扇上电.Name = "btn工位2风扇上电";
+            this.btn工位2风扇上电.Size = new System.Drawing.Size(101, 24);
+            this.btn工位2风扇上电.TabIndex = 41;
+            this.btn工位2风扇上电.Text = "工位2风扇上电";
+            this.btn工位2风扇上电.UseVisualStyleBackColor = true;
+            this.btn工位2风扇上电.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位2风扇上电_MouseDown);
+            this.btn工位2风扇上电.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位2风扇上电_MouseUp);
+            // 
+            // btn工位1风扇上电
+            // 
+            this.btn工位1风扇上电.BackColor = System.Drawing.SystemColors.Control;
+            this.btn工位1风扇上电.Location = new System.Drawing.Point(18, 31);
+            this.btn工位1风扇上电.Margin = new System.Windows.Forms.Padding(2);
+            this.btn工位1风扇上电.Name = "btn工位1风扇上电";
+            this.btn工位1风扇上电.Size = new System.Drawing.Size(101, 24);
+            this.btn工位1风扇上电.TabIndex = 40;
+            this.btn工位1风扇上电.Text = "工位1风扇上电";
+            this.btn工位1风扇上电.UseVisualStyleBackColor = true;
+            this.btn工位1风扇上电.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位1风扇上电_MouseDown);
+            this.btn工位1风扇上电.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位1风扇上电_MouseUp);
+            // 
+            // groupBox19
+            // 
+            this.groupBox19.Controls.Add(this.LB工位4光阑右下降);
+            this.groupBox19.Controls.Add(this.LB工位4光阑右上升);
+            this.groupBox19.Controls.Add(this.LB工位3光阑右下降);
+            this.groupBox19.Controls.Add(this.LB工位4光阑缩回右);
+            this.groupBox19.Controls.Add(this.LB工位3光阑右上升);
+            this.groupBox19.Controls.Add(this.LB工位4光阑伸出右);
+            this.groupBox19.Controls.Add(this.LB工位3光阑缩回右);
+            this.groupBox19.Controls.Add(this.LB工位3光阑伸出右);
+            this.groupBox19.Controls.Add(this.LB工位2光阑缩回右);
+            this.groupBox19.Controls.Add(this.LB工位2光阑伸出右);
+            this.groupBox19.Controls.Add(this.LB工位1光阑缩回右);
+            this.groupBox19.Controls.Add(this.LB工位1光阑伸出右);
+            this.groupBox19.Controls.Add(this.LB工位4翻转90);
+            this.groupBox19.Controls.Add(this.LB工位3翻转90);
+            this.groupBox19.Controls.Add(this.LB工位4翻转0);
+            this.groupBox19.Controls.Add(this.btn工位4光阑缩回右);
+            this.groupBox19.Controls.Add(this.LB工位4辐射板下降);
+            this.groupBox19.Controls.Add(this.LB工位3翻转0);
+            this.groupBox19.Controls.Add(this.LB工位4辐射板上升);
+            this.groupBox19.Controls.Add(this.btn工位4光阑伸出右);
+            this.groupBox19.Controls.Add(this.LB工位4光阑下降);
+            this.groupBox19.Controls.Add(this.LB工位3辐射板下降);
+            this.groupBox19.Controls.Add(this.LB工位4光阑上升);
+            this.groupBox19.Controls.Add(this.btn工位3光阑缩回右);
+            this.groupBox19.Controls.Add(this.LB工位4光阑缩回);
+            this.groupBox19.Controls.Add(this.LB工位3辐射板上升);
+            this.groupBox19.Controls.Add(this.LB工位4光阑伸出);
+            this.groupBox19.Controls.Add(this.btn工位3光阑伸出右);
+            this.groupBox19.Controls.Add(this.LB工位3光阑下降);
+            this.groupBox19.Controls.Add(this.btn工位2光阑缩回右);
+            this.groupBox19.Controls.Add(this.LB工位3光阑上升);
+            this.groupBox19.Controls.Add(this.btn工位2光阑伸出右);
+            this.groupBox19.Controls.Add(this.LB工位3光阑缩回);
+            this.groupBox19.Controls.Add(this.btn工位1光阑缩回右);
+            this.groupBox19.Controls.Add(this.LB工位3光阑伸出);
+            this.groupBox19.Controls.Add(this.btn工位1光阑伸出右);
+            this.groupBox19.Controls.Add(this.btn工位4翻转90);
+            this.groupBox19.Controls.Add(this.btn工位4翻转0);
+            this.groupBox19.Controls.Add(this.btn工位4辐射板缩回);
+            this.groupBox19.Controls.Add(this.btn工位4辐射板伸出);
+            this.groupBox19.Controls.Add(this.btn工位4光阑下降);
+            this.groupBox19.Controls.Add(this.btn工位4光阑上升);
+            this.groupBox19.Controls.Add(this.btn工位4光阑缩回);
+            this.groupBox19.Controls.Add(this.btn工位4光阑伸出);
+            this.groupBox19.Controls.Add(this.btn工位3翻转90);
+            this.groupBox19.Controls.Add(this.btn工位3翻转0);
+            this.groupBox19.Controls.Add(this.btn工位3辐射板缩回);
+            this.groupBox19.Controls.Add(this.btn工位3辐射板伸出);
+            this.groupBox19.Controls.Add(this.btn工位3光阑下降);
+            this.groupBox19.Controls.Add(this.btn工位3光阑上升);
+            this.groupBox19.Controls.Add(this.btn工位3光阑缩回);
+            this.groupBox19.Controls.Add(this.btn工位3光阑伸出);
+            this.groupBox19.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox19.Location = new System.Drawing.Point(798, 286);
+            this.groupBox19.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox19.Name = "groupBox19";
+            this.groupBox19.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox19.Size = new System.Drawing.Size(433, 265);
+            this.groupBox19.TabIndex = 80;
+            this.groupBox19.TabStop = false;
+            this.groupBox19.Text = "测试气缸2";
+            // 
+            // LB工位4光阑右下降
+            // 
+            this.LB工位4光阑右下降.BackColor = System.Drawing.Color.White;
+            this.LB工位4光阑右下降.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB工位4光阑右下降.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB工位4光阑右下降.Location = new System.Drawing.Point(249, 107);
+            this.LB工位4光阑右下降.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB工位4光阑右下降.Name = "LB工位4光阑右下降";
+            this.LB工位4光阑右下降.Size = new System.Drawing.Size(8, 23);
+            this.LB工位4光阑右下降.TabIndex = 127;
+            // 
+            // LB工位4光阑右上升
+            // 
+            this.LB工位4光阑右上升.BackColor = System.Drawing.Color.White;
+            this.LB工位4光阑右上升.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB工位4光阑右上升.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB工位4光阑右上升.Location = new System.Drawing.Point(249, 77);
+            this.LB工位4光阑右上升.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB工位4光阑右上升.Name = "LB工位4光阑右上升";
+            this.LB工位4光阑右上升.Size = new System.Drawing.Size(8, 23);
+            this.LB工位4光阑右上升.TabIndex = 126;
+            // 
+            // LB工位3光阑右下降
+            // 
+            this.LB工位3光阑右下降.BackColor = System.Drawing.Color.White;
+            this.LB工位3光阑右下降.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB工位3光阑右下降.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB工位3光阑右下降.Location = new System.Drawing.Point(121, 107);
+            this.LB工位3光阑右下降.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB工位3光阑右下降.Name = "LB工位3光阑右下降";
+            this.LB工位3光阑右下降.Size = new System.Drawing.Size(8, 23);
+            this.LB工位3光阑右下降.TabIndex = 113;
+            // 
+            // LB工位4光阑缩回右
+            // 
+            this.LB工位4光阑缩回右.BackColor = System.Drawing.Color.White;
+            this.LB工位4光阑缩回右.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB工位4光阑缩回右.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB工位4光阑缩回右.Location = new System.Drawing.Point(276, 222);
+            this.LB工位4光阑缩回右.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB工位4光阑缩回右.Name = "LB工位4光阑缩回右";
+            this.LB工位4光阑缩回右.Size = new System.Drawing.Size(8, 23);
+            this.LB工位4光阑缩回右.TabIndex = 125;
+            // 
+            // LB工位3光阑右上升
+            // 
+            this.LB工位3光阑右上升.BackColor = System.Drawing.Color.White;
+            this.LB工位3光阑右上升.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB工位3光阑右上升.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB工位3光阑右上升.Location = new System.Drawing.Point(121, 77);
+            this.LB工位3光阑右上升.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB工位3光阑右上升.Name = "LB工位3光阑右上升";
+            this.LB工位3光阑右上升.Size = new System.Drawing.Size(8, 23);
+            this.LB工位3光阑右上升.TabIndex = 112;
+            // 
+            // LB工位4光阑伸出右
+            // 
+            this.LB工位4光阑伸出右.BackColor = System.Drawing.Color.White;
+            this.LB工位4光阑伸出右.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB工位4光阑伸出右.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB工位4光阑伸出右.Location = new System.Drawing.Point(276, 193);
+            this.LB工位4光阑伸出右.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB工位4光阑伸出右.Name = "LB工位4光阑伸出右";
+            this.LB工位4光阑伸出右.Size = new System.Drawing.Size(8, 23);
+            this.LB工位4光阑伸出右.TabIndex = 124;
+            // 
+            // LB工位3光阑缩回右
+            // 
+            this.LB工位3光阑缩回右.BackColor = System.Drawing.Color.White;
+            this.LB工位3光阑缩回右.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB工位3光阑缩回右.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB工位3光阑缩回右.Location = new System.Drawing.Point(276, 164);
+            this.LB工位3光阑缩回右.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB工位3光阑缩回右.Name = "LB工位3光阑缩回右";
+            this.LB工位3光阑缩回右.Size = new System.Drawing.Size(8, 23);
+            this.LB工位3光阑缩回右.TabIndex = 123;
+            // 
+            // LB工位3光阑伸出右
+            // 
+            this.LB工位3光阑伸出右.BackColor = System.Drawing.Color.White;
+            this.LB工位3光阑伸出右.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB工位3光阑伸出右.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB工位3光阑伸出右.Location = new System.Drawing.Point(276, 134);
+            this.LB工位3光阑伸出右.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB工位3光阑伸出右.Name = "LB工位3光阑伸出右";
+            this.LB工位3光阑伸出右.Size = new System.Drawing.Size(8, 23);
+            this.LB工位3光阑伸出右.TabIndex = 122;
+            // 
+            // LB工位2光阑缩回右
+            // 
+            this.LB工位2光阑缩回右.BackColor = System.Drawing.Color.White;
+            this.LB工位2光阑缩回右.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB工位2光阑缩回右.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB工位2光阑缩回右.Location = new System.Drawing.Point(276, 107);
+            this.LB工位2光阑缩回右.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB工位2光阑缩回右.Name = "LB工位2光阑缩回右";
+            this.LB工位2光阑缩回右.Size = new System.Drawing.Size(8, 23);
+            this.LB工位2光阑缩回右.TabIndex = 121;
+            // 
+            // LB工位2光阑伸出右
+            // 
+            this.LB工位2光阑伸出右.BackColor = System.Drawing.Color.White;
+            this.LB工位2光阑伸出右.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB工位2光阑伸出右.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB工位2光阑伸出右.Location = new System.Drawing.Point(276, 78);
+            this.LB工位2光阑伸出右.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB工位2光阑伸出右.Name = "LB工位2光阑伸出右";
+            this.LB工位2光阑伸出右.Size = new System.Drawing.Size(8, 23);
+            this.LB工位2光阑伸出右.TabIndex = 120;
+            // 
+            // LB工位1光阑缩回右
+            // 
+            this.LB工位1光阑缩回右.BackColor = System.Drawing.Color.White;
+            this.LB工位1光阑缩回右.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB工位1光阑缩回右.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB工位1光阑缩回右.Location = new System.Drawing.Point(276, 49);
+            this.LB工位1光阑缩回右.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB工位1光阑缩回右.Name = "LB工位1光阑缩回右";
+            this.LB工位1光阑缩回右.Size = new System.Drawing.Size(8, 23);
+            this.LB工位1光阑缩回右.TabIndex = 119;
+            // 
+            // LB工位1光阑伸出右
+            // 
+            this.LB工位1光阑伸出右.BackColor = System.Drawing.Color.White;
+            this.LB工位1光阑伸出右.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB工位1光阑伸出右.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB工位1光阑伸出右.Location = new System.Drawing.Point(276, 20);
+            this.LB工位1光阑伸出右.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB工位1光阑伸出右.Name = "LB工位1光阑伸出右";
+            this.LB工位1光阑伸出右.Size = new System.Drawing.Size(8, 23);
+            this.LB工位1光阑伸出右.TabIndex = 118;
+            // 
+            // LB工位4翻转90
+            // 
+            this.LB工位4翻转90.BackColor = System.Drawing.Color.White;
+            this.LB工位4翻转90.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB工位4翻转90.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB工位4翻转90.Location = new System.Drawing.Point(146, 222);
+            this.LB工位4翻转90.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB工位4翻转90.Name = "LB工位4翻转90";
+            this.LB工位4翻转90.Size = new System.Drawing.Size(8, 23);
+            this.LB工位4翻转90.TabIndex = 99;
+            // 
+            // LB工位3翻转90
+            // 
+            this.LB工位3翻转90.BackColor = System.Drawing.Color.White;
+            this.LB工位3翻转90.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB工位3翻转90.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB工位3翻转90.Location = new System.Drawing.Point(16, 222);
+            this.LB工位3翻转90.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB工位3翻转90.Name = "LB工位3翻转90";
+            this.LB工位3翻转90.Size = new System.Drawing.Size(8, 23);
+            this.LB工位3翻转90.TabIndex = 117;
+            // 
+            // LB工位4翻转0
+            // 
+            this.LB工位4翻转0.BackColor = System.Drawing.Color.White;
+            this.LB工位4翻转0.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB工位4翻转0.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB工位4翻转0.Location = new System.Drawing.Point(146, 193);
+            this.LB工位4翻转0.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB工位4翻转0.Name = "LB工位4翻转0";
+            this.LB工位4翻转0.Size = new System.Drawing.Size(8, 23);
+            this.LB工位4翻转0.TabIndex = 98;
+            // 
+            // btn工位4光阑缩回右
+            // 
+            this.btn工位4光阑缩回右.BackColor = System.Drawing.SystemColors.Control;
+            this.btn工位4光阑缩回右.Location = new System.Drawing.Point(282, 221);
+            this.btn工位4光阑缩回右.Margin = new System.Windows.Forms.Padding(2);
+            this.btn工位4光阑缩回右.Name = "btn工位4光阑缩回右";
+            this.btn工位4光阑缩回右.Size = new System.Drawing.Size(116, 24);
+            this.btn工位4光阑缩回右.TabIndex = 87;
+            this.btn工位4光阑缩回右.Text = "工位4光阑缩回右";
+            this.btn工位4光阑缩回右.UseVisualStyleBackColor = true;
+            this.btn工位4光阑缩回右.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位4光阑缩回右_MouseDown);
+            this.btn工位4光阑缩回右.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位4光阑缩回右_MouseUp);
+            // 
+            // LB工位4辐射板下降
+            // 
+            this.LB工位4辐射板下降.BackColor = System.Drawing.Color.White;
+            this.LB工位4辐射板下降.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB工位4辐射板下降.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB工位4辐射板下降.Location = new System.Drawing.Point(146, 164);
+            this.LB工位4辐射板下降.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB工位4辐射板下降.Name = "LB工位4辐射板下降";
+            this.LB工位4辐射板下降.Size = new System.Drawing.Size(8, 23);
+            this.LB工位4辐射板下降.TabIndex = 97;
+            // 
+            // LB工位3翻转0
+            // 
+            this.LB工位3翻转0.BackColor = System.Drawing.Color.White;
+            this.LB工位3翻转0.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB工位3翻转0.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB工位3翻转0.Location = new System.Drawing.Point(16, 193);
+            this.LB工位3翻转0.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB工位3翻转0.Name = "LB工位3翻转0";
+            this.LB工位3翻转0.Size = new System.Drawing.Size(8, 23);
+            this.LB工位3翻转0.TabIndex = 116;
+            // 
+            // LB工位4辐射板上升
+            // 
+            this.LB工位4辐射板上升.BackColor = System.Drawing.Color.White;
+            this.LB工位4辐射板上升.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB工位4辐射板上升.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB工位4辐射板上升.Location = new System.Drawing.Point(146, 134);
+            this.LB工位4辐射板上升.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB工位4辐射板上升.Name = "LB工位4辐射板上升";
+            this.LB工位4辐射板上升.Size = new System.Drawing.Size(8, 23);
+            this.LB工位4辐射板上升.TabIndex = 96;
+            // 
+            // btn工位4光阑伸出右
+            // 
+            this.btn工位4光阑伸出右.BackColor = System.Drawing.SystemColors.Control;
+            this.btn工位4光阑伸出右.Location = new System.Drawing.Point(282, 192);
+            this.btn工位4光阑伸出右.Margin = new System.Windows.Forms.Padding(2);
+            this.btn工位4光阑伸出右.Name = "btn工位4光阑伸出右";
+            this.btn工位4光阑伸出右.Size = new System.Drawing.Size(116, 24);
+            this.btn工位4光阑伸出右.TabIndex = 86;
+            this.btn工位4光阑伸出右.Text = "工位4光阑伸出右";
+            this.btn工位4光阑伸出右.UseVisualStyleBackColor = true;
+            this.btn工位4光阑伸出右.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位4光阑伸出右_MouseDown);
+            this.btn工位4光阑伸出右.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位4光阑伸出右_MouseUp);
+            // 
+            // LB工位4光阑下降
+            // 
+            this.LB工位4光阑下降.BackColor = System.Drawing.Color.White;
+            this.LB工位4光阑下降.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB工位4光阑下降.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB工位4光阑下降.Location = new System.Drawing.Point(146, 107);
+            this.LB工位4光阑下降.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB工位4光阑下降.Name = "LB工位4光阑下降";
+            this.LB工位4光阑下降.Size = new System.Drawing.Size(8, 23);
+            this.LB工位4光阑下降.TabIndex = 95;
+            // 
+            // LB工位3辐射板下降
+            // 
+            this.LB工位3辐射板下降.BackColor = System.Drawing.Color.White;
+            this.LB工位3辐射板下降.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB工位3辐射板下降.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB工位3辐射板下降.Location = new System.Drawing.Point(16, 164);
+            this.LB工位3辐射板下降.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB工位3辐射板下降.Name = "LB工位3辐射板下降";
+            this.LB工位3辐射板下降.Size = new System.Drawing.Size(8, 23);
+            this.LB工位3辐射板下降.TabIndex = 115;
+            // 
+            // LB工位4光阑上升
+            // 
+            this.LB工位4光阑上升.BackColor = System.Drawing.Color.White;
+            this.LB工位4光阑上升.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB工位4光阑上升.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB工位4光阑上升.Location = new System.Drawing.Point(146, 78);
+            this.LB工位4光阑上升.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB工位4光阑上升.Name = "LB工位4光阑上升";
+            this.LB工位4光阑上升.Size = new System.Drawing.Size(8, 23);
+            this.LB工位4光阑上升.TabIndex = 94;
+            // 
+            // btn工位3光阑缩回右
+            // 
+            this.btn工位3光阑缩回右.BackColor = System.Drawing.SystemColors.Control;
+            this.btn工位3光阑缩回右.Location = new System.Drawing.Point(282, 163);
+            this.btn工位3光阑缩回右.Margin = new System.Windows.Forms.Padding(2);
+            this.btn工位3光阑缩回右.Name = "btn工位3光阑缩回右";
+            this.btn工位3光阑缩回右.Size = new System.Drawing.Size(116, 24);
+            this.btn工位3光阑缩回右.TabIndex = 85;
+            this.btn工位3光阑缩回右.Text = "工位3光阑缩回右";
+            this.btn工位3光阑缩回右.UseVisualStyleBackColor = true;
+            this.btn工位3光阑缩回右.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位3光阑缩回右_MouseDown);
+            this.btn工位3光阑缩回右.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位3光阑缩回右_MouseUp);
+            // 
+            // LB工位4光阑缩回
+            // 
+            this.LB工位4光阑缩回.BackColor = System.Drawing.Color.White;
+            this.LB工位4光阑缩回.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB工位4光阑缩回.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB工位4光阑缩回.Location = new System.Drawing.Point(146, 49);
+            this.LB工位4光阑缩回.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB工位4光阑缩回.Name = "LB工位4光阑缩回";
+            this.LB工位4光阑缩回.Size = new System.Drawing.Size(8, 23);
+            this.LB工位4光阑缩回.TabIndex = 93;
+            // 
+            // LB工位3辐射板上升
+            // 
+            this.LB工位3辐射板上升.BackColor = System.Drawing.Color.White;
+            this.LB工位3辐射板上升.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB工位3辐射板上升.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB工位3辐射板上升.Location = new System.Drawing.Point(16, 134);
+            this.LB工位3辐射板上升.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB工位3辐射板上升.Name = "LB工位3辐射板上升";
+            this.LB工位3辐射板上升.Size = new System.Drawing.Size(8, 23);
+            this.LB工位3辐射板上升.TabIndex = 114;
+            // 
+            // LB工位4光阑伸出
+            // 
+            this.LB工位4光阑伸出.BackColor = System.Drawing.Color.White;
+            this.LB工位4光阑伸出.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB工位4光阑伸出.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB工位4光阑伸出.Location = new System.Drawing.Point(146, 20);
+            this.LB工位4光阑伸出.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB工位4光阑伸出.Name = "LB工位4光阑伸出";
+            this.LB工位4光阑伸出.Size = new System.Drawing.Size(8, 23);
+            this.LB工位4光阑伸出.TabIndex = 92;
+            // 
+            // btn工位3光阑伸出右
+            // 
+            this.btn工位3光阑伸出右.BackColor = System.Drawing.SystemColors.Control;
+            this.btn工位3光阑伸出右.Location = new System.Drawing.Point(282, 134);
+            this.btn工位3光阑伸出右.Margin = new System.Windows.Forms.Padding(2);
+            this.btn工位3光阑伸出右.Name = "btn工位3光阑伸出右";
+            this.btn工位3光阑伸出右.Size = new System.Drawing.Size(116, 24);
+            this.btn工位3光阑伸出右.TabIndex = 84;
+            this.btn工位3光阑伸出右.Text = "工位3光阑伸出右";
+            this.btn工位3光阑伸出右.UseVisualStyleBackColor = true;
+            this.btn工位3光阑伸出右.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位3光阑伸出右_MouseDown);
+            this.btn工位3光阑伸出右.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位3光阑伸出右_MouseUp);
+            // 
+            // LB工位3光阑下降
+            // 
+            this.LB工位3光阑下降.BackColor = System.Drawing.Color.White;
+            this.LB工位3光阑下降.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB工位3光阑下降.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB工位3光阑下降.Location = new System.Drawing.Point(16, 107);
+            this.LB工位3光阑下降.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB工位3光阑下降.Name = "LB工位3光阑下降";
+            this.LB工位3光阑下降.Size = new System.Drawing.Size(8, 23);
+            this.LB工位3光阑下降.TabIndex = 113;
+            // 
+            // btn工位2光阑缩回右
+            // 
+            this.btn工位2光阑缩回右.BackColor = System.Drawing.SystemColors.Control;
+            this.btn工位2光阑缩回右.Location = new System.Drawing.Point(282, 106);
+            this.btn工位2光阑缩回右.Margin = new System.Windows.Forms.Padding(2);
+            this.btn工位2光阑缩回右.Name = "btn工位2光阑缩回右";
+            this.btn工位2光阑缩回右.Size = new System.Drawing.Size(116, 24);
+            this.btn工位2光阑缩回右.TabIndex = 83;
+            this.btn工位2光阑缩回右.Text = "工位2光阑缩回右";
+            this.btn工位2光阑缩回右.UseVisualStyleBackColor = true;
+            this.btn工位2光阑缩回右.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位2光阑缩回右_MouseDown);
+            this.btn工位2光阑缩回右.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位2光阑缩回右_MouseUp);
+            // 
+            // LB工位3光阑上升
+            // 
+            this.LB工位3光阑上升.BackColor = System.Drawing.Color.White;
+            this.LB工位3光阑上升.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB工位3光阑上升.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB工位3光阑上升.Location = new System.Drawing.Point(16, 78);
+            this.LB工位3光阑上升.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB工位3光阑上升.Name = "LB工位3光阑上升";
+            this.LB工位3光阑上升.Size = new System.Drawing.Size(8, 23);
+            this.LB工位3光阑上升.TabIndex = 112;
+            // 
+            // btn工位2光阑伸出右
+            // 
+            this.btn工位2光阑伸出右.BackColor = System.Drawing.SystemColors.Control;
+            this.btn工位2光阑伸出右.Location = new System.Drawing.Point(282, 77);
+            this.btn工位2光阑伸出右.Margin = new System.Windows.Forms.Padding(2);
+            this.btn工位2光阑伸出右.Name = "btn工位2光阑伸出右";
+            this.btn工位2光阑伸出右.Size = new System.Drawing.Size(116, 24);
+            this.btn工位2光阑伸出右.TabIndex = 82;
+            this.btn工位2光阑伸出右.Text = "工位2光阑伸出右";
+            this.btn工位2光阑伸出右.UseVisualStyleBackColor = true;
+            this.btn工位2光阑伸出右.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位2光阑伸出右_MouseDown);
+            this.btn工位2光阑伸出右.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位2光阑伸出右_MouseUp);
+            // 
+            // LB工位3光阑缩回
+            // 
+            this.LB工位3光阑缩回.BackColor = System.Drawing.Color.White;
+            this.LB工位3光阑缩回.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB工位3光阑缩回.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB工位3光阑缩回.Location = new System.Drawing.Point(16, 49);
+            this.LB工位3光阑缩回.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB工位3光阑缩回.Name = "LB工位3光阑缩回";
+            this.LB工位3光阑缩回.Size = new System.Drawing.Size(8, 23);
+            this.LB工位3光阑缩回.TabIndex = 111;
+            // 
+            // btn工位1光阑缩回右
+            // 
+            this.btn工位1光阑缩回右.BackColor = System.Drawing.SystemColors.Control;
+            this.btn工位1光阑缩回右.Location = new System.Drawing.Point(282, 48);
+            this.btn工位1光阑缩回右.Margin = new System.Windows.Forms.Padding(2);
+            this.btn工位1光阑缩回右.Name = "btn工位1光阑缩回右";
+            this.btn工位1光阑缩回右.Size = new System.Drawing.Size(116, 24);
+            this.btn工位1光阑缩回右.TabIndex = 81;
+            this.btn工位1光阑缩回右.Text = "工位1光阑缩回右";
+            this.btn工位1光阑缩回右.UseVisualStyleBackColor = true;
+            this.btn工位1光阑缩回右.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位1光阑缩回右_MouseDown);
+            this.btn工位1光阑缩回右.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位1光阑缩回右_MouseUp);
+            // 
+            // LB工位3光阑伸出
+            // 
+            this.LB工位3光阑伸出.BackColor = System.Drawing.Color.White;
+            this.LB工位3光阑伸出.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB工位3光阑伸出.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB工位3光阑伸出.Location = new System.Drawing.Point(16, 20);
+            this.LB工位3光阑伸出.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB工位3光阑伸出.Name = "LB工位3光阑伸出";
+            this.LB工位3光阑伸出.Size = new System.Drawing.Size(8, 23);
+            this.LB工位3光阑伸出.TabIndex = 110;
+            // 
+            // btn工位1光阑伸出右
+            // 
+            this.btn工位1光阑伸出右.BackColor = System.Drawing.SystemColors.Control;
+            this.btn工位1光阑伸出右.Location = new System.Drawing.Point(282, 19);
+            this.btn工位1光阑伸出右.Margin = new System.Windows.Forms.Padding(2);
+            this.btn工位1光阑伸出右.Name = "btn工位1光阑伸出右";
+            this.btn工位1光阑伸出右.Size = new System.Drawing.Size(116, 24);
+            this.btn工位1光阑伸出右.TabIndex = 80;
+            this.btn工位1光阑伸出右.Text = "工位1光阑伸出右";
+            this.btn工位1光阑伸出右.UseVisualStyleBackColor = true;
+            this.btn工位1光阑伸出右.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位1光阑伸出右_MouseDown);
+            this.btn工位1光阑伸出右.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位1光阑伸出右_MouseUp);
+            // 
+            // btn工位4翻转90
+            // 
+            this.btn工位4翻转90.BackColor = System.Drawing.SystemColors.Control;
+            this.btn工位4翻转90.Location = new System.Drawing.Point(152, 221);
+            this.btn工位4翻转90.Margin = new System.Windows.Forms.Padding(2);
+            this.btn工位4翻转90.Name = "btn工位4翻转90";
+            this.btn工位4翻转90.Size = new System.Drawing.Size(101, 24);
+            this.btn工位4翻转90.TabIndex = 79;
+            this.btn工位4翻转90.Text = "工位4翻转90°";
+            this.btn工位4翻转90.UseVisualStyleBackColor = true;
+            this.btn工位4翻转90.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位4翻转90_MouseDown);
+            this.btn工位4翻转90.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位4翻转90_MouseUp);
+            // 
+            // btn工位4翻转0
+            // 
+            this.btn工位4翻转0.BackColor = System.Drawing.SystemColors.Control;
+            this.btn工位4翻转0.Location = new System.Drawing.Point(152, 192);
+            this.btn工位4翻转0.Margin = new System.Windows.Forms.Padding(2);
+            this.btn工位4翻转0.Name = "btn工位4翻转0";
+            this.btn工位4翻转0.Size = new System.Drawing.Size(101, 24);
+            this.btn工位4翻转0.TabIndex = 78;
+            this.btn工位4翻转0.Text = "工位4翻转0°";
+            this.btn工位4翻转0.UseVisualStyleBackColor = true;
+            this.btn工位4翻转0.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位4翻转0_MouseDown);
+            this.btn工位4翻转0.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位4翻转0_MouseUp);
+            // 
+            // btn工位4辐射板缩回
+            // 
+            this.btn工位4辐射板缩回.BackColor = System.Drawing.SystemColors.Control;
+            this.btn工位4辐射板缩回.Location = new System.Drawing.Point(152, 163);
+            this.btn工位4辐射板缩回.Margin = new System.Windows.Forms.Padding(2);
+            this.btn工位4辐射板缩回.Name = "btn工位4辐射板缩回";
+            this.btn工位4辐射板缩回.Size = new System.Drawing.Size(101, 24);
+            this.btn工位4辐射板缩回.TabIndex = 77;
+            this.btn工位4辐射板缩回.Text = "工位4辐射板下降";
+            this.btn工位4辐射板缩回.UseVisualStyleBackColor = true;
+            this.btn工位4辐射板缩回.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位4辐射板缩回_MouseDown);
+            this.btn工位4辐射板缩回.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位4辐射板缩回_MouseUp);
+            // 
+            // btn工位4辐射板伸出
+            // 
+            this.btn工位4辐射板伸出.BackColor = System.Drawing.SystemColors.Control;
+            this.btn工位4辐射板伸出.Location = new System.Drawing.Point(152, 134);
+            this.btn工位4辐射板伸出.Margin = new System.Windows.Forms.Padding(2);
+            this.btn工位4辐射板伸出.Name = "btn工位4辐射板伸出";
+            this.btn工位4辐射板伸出.Size = new System.Drawing.Size(101, 24);
+            this.btn工位4辐射板伸出.TabIndex = 76;
+            this.btn工位4辐射板伸出.Text = "工位4辐射板上升";
+            this.btn工位4辐射板伸出.UseVisualStyleBackColor = true;
+            this.btn工位4辐射板伸出.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位4辐射板伸出_MouseDown);
+            this.btn工位4辐射板伸出.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位4辐射板伸出_MouseUp);
+            // 
+            // btn工位4光阑下降
+            // 
+            this.btn工位4光阑下降.BackColor = System.Drawing.SystemColors.Control;
+            this.btn工位4光阑下降.Location = new System.Drawing.Point(152, 106);
+            this.btn工位4光阑下降.Margin = new System.Windows.Forms.Padding(2);
+            this.btn工位4光阑下降.Name = "btn工位4光阑下降";
+            this.btn工位4光阑下降.Size = new System.Drawing.Size(101, 24);
+            this.btn工位4光阑下降.TabIndex = 75;
+            this.btn工位4光阑下降.Text = "工位4光阑下降";
+            this.btn工位4光阑下降.UseVisualStyleBackColor = true;
+            this.btn工位4光阑下降.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位4光阑下降_MouseDown);
+            this.btn工位4光阑下降.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位4光阑下降_MouseUp);
+            // 
+            // btn工位4光阑上升
+            // 
+            this.btn工位4光阑上升.BackColor = System.Drawing.SystemColors.Control;
+            this.btn工位4光阑上升.Location = new System.Drawing.Point(152, 77);
+            this.btn工位4光阑上升.Margin = new System.Windows.Forms.Padding(2);
+            this.btn工位4光阑上升.Name = "btn工位4光阑上升";
+            this.btn工位4光阑上升.Size = new System.Drawing.Size(101, 24);
+            this.btn工位4光阑上升.TabIndex = 74;
+            this.btn工位4光阑上升.Text = "工位4光阑上升";
+            this.btn工位4光阑上升.UseVisualStyleBackColor = true;
+            this.btn工位4光阑上升.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位4光阑上升_MouseDown);
+            this.btn工位4光阑上升.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位4光阑上升_MouseUp);
+            // 
+            // btn工位4光阑缩回
+            // 
+            this.btn工位4光阑缩回.BackColor = System.Drawing.SystemColors.Control;
+            this.btn工位4光阑缩回.Location = new System.Drawing.Point(152, 48);
+            this.btn工位4光阑缩回.Margin = new System.Windows.Forms.Padding(2);
+            this.btn工位4光阑缩回.Name = "btn工位4光阑缩回";
+            this.btn工位4光阑缩回.Size = new System.Drawing.Size(101, 24);
+            this.btn工位4光阑缩回.TabIndex = 73;
+            this.btn工位4光阑缩回.Text = "工位4光阑缩回";
+            this.btn工位4光阑缩回.UseVisualStyleBackColor = true;
+            this.btn工位4光阑缩回.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位4光阑缩回_MouseDown);
+            this.btn工位4光阑缩回.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位4光阑缩回_MouseUp);
+            // 
+            // btn工位4光阑伸出
+            // 
+            this.btn工位4光阑伸出.BackColor = System.Drawing.SystemColors.Control;
+            this.btn工位4光阑伸出.Location = new System.Drawing.Point(152, 19);
+            this.btn工位4光阑伸出.Margin = new System.Windows.Forms.Padding(2);
+            this.btn工位4光阑伸出.Name = "btn工位4光阑伸出";
+            this.btn工位4光阑伸出.Size = new System.Drawing.Size(101, 24);
+            this.btn工位4光阑伸出.TabIndex = 72;
+            this.btn工位4光阑伸出.Text = "工位4光阑伸出";
+            this.btn工位4光阑伸出.UseVisualStyleBackColor = true;
+            this.btn工位4光阑伸出.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位4光阑伸出_MouseDown);
+            this.btn工位4光阑伸出.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位4光阑伸出_MouseUp);
+            // 
+            // btn工位3翻转90
+            // 
+            this.btn工位3翻转90.BackColor = System.Drawing.SystemColors.Control;
+            this.btn工位3翻转90.Location = new System.Drawing.Point(22, 221);
+            this.btn工位3翻转90.Margin = new System.Windows.Forms.Padding(2);
+            this.btn工位3翻转90.Name = "btn工位3翻转90";
+            this.btn工位3翻转90.Size = new System.Drawing.Size(101, 24);
+            this.btn工位3翻转90.TabIndex = 71;
+            this.btn工位3翻转90.Text = "工位3翻转90°";
+            this.btn工位3翻转90.UseVisualStyleBackColor = true;
+            this.btn工位3翻转90.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位3翻转90_MouseDown);
+            this.btn工位3翻转90.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位3翻转90_MouseUp);
+            // 
+            // btn工位3翻转0
+            // 
+            this.btn工位3翻转0.BackColor = System.Drawing.SystemColors.Control;
+            this.btn工位3翻转0.Location = new System.Drawing.Point(22, 192);
+            this.btn工位3翻转0.Margin = new System.Windows.Forms.Padding(2);
+            this.btn工位3翻转0.Name = "btn工位3翻转0";
+            this.btn工位3翻转0.Size = new System.Drawing.Size(101, 24);
+            this.btn工位3翻转0.TabIndex = 70;
+            this.btn工位3翻转0.Text = "工位3翻转0°";
+            this.btn工位3翻转0.UseVisualStyleBackColor = true;
+            this.btn工位3翻转0.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位3翻转0_MouseDown);
+            this.btn工位3翻转0.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位3翻转0_MouseUp);
+            // 
+            // btn工位3辐射板缩回
+            // 
+            this.btn工位3辐射板缩回.BackColor = System.Drawing.SystemColors.Control;
+            this.btn工位3辐射板缩回.Location = new System.Drawing.Point(22, 163);
+            this.btn工位3辐射板缩回.Margin = new System.Windows.Forms.Padding(2);
+            this.btn工位3辐射板缩回.Name = "btn工位3辐射板缩回";
+            this.btn工位3辐射板缩回.Size = new System.Drawing.Size(101, 24);
+            this.btn工位3辐射板缩回.TabIndex = 69;
+            this.btn工位3辐射板缩回.Text = "工位3辐射板下降";
+            this.btn工位3辐射板缩回.UseVisualStyleBackColor = true;
+            this.btn工位3辐射板缩回.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位3辐射板缩回_MouseDown);
+            this.btn工位3辐射板缩回.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位3辐射板缩回_MouseUp);
+            // 
+            // btn工位3辐射板伸出
+            // 
+            this.btn工位3辐射板伸出.BackColor = System.Drawing.SystemColors.Control;
+            this.btn工位3辐射板伸出.Location = new System.Drawing.Point(22, 134);
+            this.btn工位3辐射板伸出.Margin = new System.Windows.Forms.Padding(2);
+            this.btn工位3辐射板伸出.Name = "btn工位3辐射板伸出";
+            this.btn工位3辐射板伸出.Size = new System.Drawing.Size(101, 24);
+            this.btn工位3辐射板伸出.TabIndex = 68;
+            this.btn工位3辐射板伸出.Text = "工位3辐射板上升";
+            this.btn工位3辐射板伸出.UseVisualStyleBackColor = true;
+            this.btn工位3辐射板伸出.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位3辐射板伸出_MouseDown);
+            this.btn工位3辐射板伸出.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位3辐射板伸出_MouseUp);
+            // 
+            // btn工位3光阑下降
+            // 
+            this.btn工位3光阑下降.BackColor = System.Drawing.SystemColors.Control;
+            this.btn工位3光阑下降.Location = new System.Drawing.Point(22, 106);
+            this.btn工位3光阑下降.Margin = new System.Windows.Forms.Padding(2);
+            this.btn工位3光阑下降.Name = "btn工位3光阑下降";
+            this.btn工位3光阑下降.Size = new System.Drawing.Size(101, 24);
+            this.btn工位3光阑下降.TabIndex = 67;
+            this.btn工位3光阑下降.Text = "工位3光阑下降";
+            this.btn工位3光阑下降.UseVisualStyleBackColor = true;
+            this.btn工位3光阑下降.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位3光阑下降_MouseDown);
+            this.btn工位3光阑下降.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位3光阑下降_MouseUp);
+            // 
+            // btn工位3光阑上升
+            // 
+            this.btn工位3光阑上升.BackColor = System.Drawing.SystemColors.Control;
+            this.btn工位3光阑上升.Location = new System.Drawing.Point(22, 77);
+            this.btn工位3光阑上升.Margin = new System.Windows.Forms.Padding(2);
+            this.btn工位3光阑上升.Name = "btn工位3光阑上升";
+            this.btn工位3光阑上升.Size = new System.Drawing.Size(101, 24);
+            this.btn工位3光阑上升.TabIndex = 66;
+            this.btn工位3光阑上升.Text = "工位3光阑上升";
+            this.btn工位3光阑上升.UseVisualStyleBackColor = true;
+            this.btn工位3光阑上升.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位3光阑上升_MouseDown);
+            this.btn工位3光阑上升.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位3光阑上升_MouseUp);
+            // 
+            // btn工位3光阑缩回
+            // 
+            this.btn工位3光阑缩回.BackColor = System.Drawing.SystemColors.Control;
+            this.btn工位3光阑缩回.Location = new System.Drawing.Point(22, 48);
+            this.btn工位3光阑缩回.Margin = new System.Windows.Forms.Padding(2);
+            this.btn工位3光阑缩回.Name = "btn工位3光阑缩回";
+            this.btn工位3光阑缩回.Size = new System.Drawing.Size(101, 24);
+            this.btn工位3光阑缩回.TabIndex = 65;
+            this.btn工位3光阑缩回.Text = "工位3光阑缩回";
+            this.btn工位3光阑缩回.UseVisualStyleBackColor = true;
+            this.btn工位3光阑缩回.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位3光阑缩回_MouseDown);
+            this.btn工位3光阑缩回.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位3光阑缩回_MouseUp);
+            // 
+            // btn工位3光阑伸出
+            // 
+            this.btn工位3光阑伸出.BackColor = System.Drawing.SystemColors.Control;
+            this.btn工位3光阑伸出.Location = new System.Drawing.Point(22, 19);
+            this.btn工位3光阑伸出.Margin = new System.Windows.Forms.Padding(2);
+            this.btn工位3光阑伸出.Name = "btn工位3光阑伸出";
+            this.btn工位3光阑伸出.Size = new System.Drawing.Size(101, 24);
+            this.btn工位3光阑伸出.TabIndex = 64;
+            this.btn工位3光阑伸出.Text = "工位3光阑伸出";
+            this.btn工位3光阑伸出.UseVisualStyleBackColor = true;
+            this.btn工位3光阑伸出.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位3光阑伸出_MouseDown);
+            this.btn工位3光阑伸出.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位3光阑伸出_MouseUp);
+            // 
+            // groupBox18
+            // 
+            this.groupBox18.Controls.Add(this.LB工位2光阑右下降);
+            this.groupBox18.Controls.Add(this.LB工位2光阑右上升);
+            this.groupBox18.Controls.Add(this.LB工位1光阑右下降);
+            this.groupBox18.Controls.Add(this.LB工位1光阑右上升);
+            this.groupBox18.Controls.Add(this.LB工位1翻转90);
+            this.groupBox18.Controls.Add(this.LB工位1翻转0);
+            this.groupBox18.Controls.Add(this.LB工位1辐射板下降);
+            this.groupBox18.Controls.Add(this.LB工位1辐射板上升);
+            this.groupBox18.Controls.Add(this.LB工位1光阑下降);
+            this.groupBox18.Controls.Add(this.LB工位1光阑上升);
+            this.groupBox18.Controls.Add(this.LB工位1光阑缩回);
+            this.groupBox18.Controls.Add(this.LB工位1光阑伸出);
+            this.groupBox18.Controls.Add(this.LB工位2翻转90);
+            this.groupBox18.Controls.Add(this.LB工位2翻转0);
+            this.groupBox18.Controls.Add(this.LB工位2辐射板下降);
+            this.groupBox18.Controls.Add(this.LB工位2辐射板上升);
+            this.groupBox18.Controls.Add(this.LB工位2光阑下降);
+            this.groupBox18.Controls.Add(this.LB工位2光阑上升);
+            this.groupBox18.Controls.Add(this.LB工位2光阑缩回);
+            this.groupBox18.Controls.Add(this.LB工位2光阑伸出);
+            this.groupBox18.Controls.Add(this.LB旋转夹爪4下降);
+            this.groupBox18.Controls.Add(this.LB旋转夹爪4上升);
+            this.groupBox18.Controls.Add(this.LB旋转夹爪3下降);
+            this.groupBox18.Controls.Add(this.LB旋转夹爪3上升);
+            this.groupBox18.Controls.Add(this.LB旋转夹爪2下降);
+            this.groupBox18.Controls.Add(this.LB旋转夹爪2上升);
+            this.groupBox18.Controls.Add(this.LB旋转夹爪1下降);
+            this.groupBox18.Controls.Add(this.LB旋转夹爪1上升);
+            this.groupBox18.Controls.Add(this.brn工位2翻转90);
+            this.groupBox18.Controls.Add(this.btn工位2翻转0);
+            this.groupBox18.Controls.Add(this.btn工位2辐射板缩回);
+            this.groupBox18.Controls.Add(this.btn工位2辐射板伸出);
+            this.groupBox18.Controls.Add(this.btn工位2光阑下降);
+            this.groupBox18.Controls.Add(this.btn工位2光阑上升);
+            this.groupBox18.Controls.Add(this.btn工位2光阑缩回);
+            this.groupBox18.Controls.Add(this.btn工位2光阑伸出);
+            this.groupBox18.Controls.Add(this.btn工位1翻转90);
+            this.groupBox18.Controls.Add(this.btn工位1翻转0);
+            this.groupBox18.Controls.Add(this.btn工位1辐射板缩回);
+            this.groupBox18.Controls.Add(this.btn工位1辐射板伸出);
+            this.groupBox18.Controls.Add(this.btn工位1光阑下降);
+            this.groupBox18.Controls.Add(this.btn工位1光阑上升);
+            this.groupBox18.Controls.Add(this.btn工位1光阑缩回);
+            this.groupBox18.Controls.Add(this.btn工位1光阑伸出);
+            this.groupBox18.Controls.Add(this.btn旋转夹爪4下降);
+            this.groupBox18.Controls.Add(this.btn旋转夹爪4上升);
+            this.groupBox18.Controls.Add(this.btn旋转夹爪3下降);
+            this.groupBox18.Controls.Add(this.btn旋转夹爪3上升);
+            this.groupBox18.Controls.Add(this.btn旋转夹爪2下降);
+            this.groupBox18.Controls.Add(this.btn旋转夹爪2上升);
+            this.groupBox18.Controls.Add(this.btn旋转夹爪1下降);
+            this.groupBox18.Controls.Add(this.btn旋转夹爪1上升);
+            this.groupBox18.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox18.Location = new System.Drawing.Point(798, 16);
+            this.groupBox18.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox18.Name = "groupBox18";
+            this.groupBox18.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox18.Size = new System.Drawing.Size(433, 265);
+            this.groupBox18.TabIndex = 58;
+            this.groupBox18.TabStop = false;
+            this.groupBox18.Text = "测试气缸1";
+            // 
+            // LB工位2光阑右下降
+            // 
+            this.LB工位2光阑右下降.BackColor = System.Drawing.Color.White;
+            this.LB工位2光阑右下降.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB工位2光阑右下降.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB工位2光阑右下降.Location = new System.Drawing.Point(382, 119);
+            this.LB工位2光阑右下降.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB工位2光阑右下降.Name = "LB工位2光阑右下降";
+            this.LB工位2光阑右下降.Size = new System.Drawing.Size(8, 23);
+            this.LB工位2光阑右下降.TabIndex = 113;
+            // 
+            // LB工位2光阑右上升
+            // 
+            this.LB工位2光阑右上升.BackColor = System.Drawing.Color.White;
+            this.LB工位2光阑右上升.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB工位2光阑右上升.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB工位2光阑右上升.Location = new System.Drawing.Point(382, 89);
+            this.LB工位2光阑右上升.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB工位2光阑右上升.Name = "LB工位2光阑右上升";
+            this.LB工位2光阑右上升.Size = new System.Drawing.Size(8, 23);
+            this.LB工位2光阑右上升.TabIndex = 112;
+            // 
+            // LB工位1光阑右下降
+            // 
+            this.LB工位1光阑右下降.BackColor = System.Drawing.Color.White;
+            this.LB工位1光阑右下降.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB工位1光阑右下降.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB工位1光阑右下降.Location = new System.Drawing.Point(246, 119);
+            this.LB工位1光阑右下降.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB工位1光阑右下降.Name = "LB工位1光阑右下降";
+            this.LB工位1光阑右下降.Size = new System.Drawing.Size(8, 23);
+            this.LB工位1光阑右下降.TabIndex = 111;
+            // 
+            // LB工位1光阑右上升
+            // 
+            this.LB工位1光阑右上升.BackColor = System.Drawing.Color.White;
+            this.LB工位1光阑右上升.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB工位1光阑右上升.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB工位1光阑右上升.Location = new System.Drawing.Point(246, 89);
+            this.LB工位1光阑右上升.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB工位1光阑右上升.Name = "LB工位1光阑右上升";
+            this.LB工位1光阑右上升.Size = new System.Drawing.Size(8, 23);
+            this.LB工位1光阑右上升.TabIndex = 110;
+            // 
+            // LB工位1翻转90
+            // 
+            this.LB工位1翻转90.BackColor = System.Drawing.Color.White;
+            this.LB工位1翻转90.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB工位1翻转90.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB工位1翻转90.Location = new System.Drawing.Point(143, 234);
+            this.LB工位1翻转90.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB工位1翻转90.Name = "LB工位1翻转90";
+            this.LB工位1翻转90.Size = new System.Drawing.Size(8, 23);
+            this.LB工位1翻转90.TabIndex = 109;
+            // 
+            // LB工位1翻转0
+            // 
+            this.LB工位1翻转0.BackColor = System.Drawing.Color.White;
+            this.LB工位1翻转0.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB工位1翻转0.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB工位1翻转0.Location = new System.Drawing.Point(143, 205);
+            this.LB工位1翻转0.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB工位1翻转0.Name = "LB工位1翻转0";
+            this.LB工位1翻转0.Size = new System.Drawing.Size(8, 23);
+            this.LB工位1翻转0.TabIndex = 108;
+            // 
+            // LB工位1辐射板下降
+            // 
+            this.LB工位1辐射板下降.BackColor = System.Drawing.Color.White;
+            this.LB工位1辐射板下降.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB工位1辐射板下降.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB工位1辐射板下降.Location = new System.Drawing.Point(143, 176);
+            this.LB工位1辐射板下降.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB工位1辐射板下降.Name = "LB工位1辐射板下降";
+            this.LB工位1辐射板下降.Size = new System.Drawing.Size(8, 23);
+            this.LB工位1辐射板下降.TabIndex = 107;
+            // 
+            // LB工位1辐射板上升
+            // 
+            this.LB工位1辐射板上升.BackColor = System.Drawing.Color.White;
+            this.LB工位1辐射板上升.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB工位1辐射板上升.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB工位1辐射板上升.Location = new System.Drawing.Point(143, 146);
+            this.LB工位1辐射板上升.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB工位1辐射板上升.Name = "LB工位1辐射板上升";
+            this.LB工位1辐射板上升.Size = new System.Drawing.Size(8, 23);
+            this.LB工位1辐射板上升.TabIndex = 106;
+            // 
+            // LB工位1光阑下降
+            // 
+            this.LB工位1光阑下降.BackColor = System.Drawing.Color.White;
+            this.LB工位1光阑下降.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB工位1光阑下降.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB工位1光阑下降.Location = new System.Drawing.Point(143, 119);
+            this.LB工位1光阑下降.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB工位1光阑下降.Name = "LB工位1光阑下降";
+            this.LB工位1光阑下降.Size = new System.Drawing.Size(8, 23);
+            this.LB工位1光阑下降.TabIndex = 105;
+            // 
+            // LB工位1光阑上升
+            // 
+            this.LB工位1光阑上升.BackColor = System.Drawing.Color.White;
+            this.LB工位1光阑上升.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB工位1光阑上升.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB工位1光阑上升.Location = new System.Drawing.Point(143, 90);
+            this.LB工位1光阑上升.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB工位1光阑上升.Name = "LB工位1光阑上升";
+            this.LB工位1光阑上升.Size = new System.Drawing.Size(8, 23);
+            this.LB工位1光阑上升.TabIndex = 104;
+            // 
+            // LB工位1光阑缩回
+            // 
+            this.LB工位1光阑缩回.BackColor = System.Drawing.Color.White;
+            this.LB工位1光阑缩回.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB工位1光阑缩回.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB工位1光阑缩回.Location = new System.Drawing.Point(143, 61);
+            this.LB工位1光阑缩回.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB工位1光阑缩回.Name = "LB工位1光阑缩回";
+            this.LB工位1光阑缩回.Size = new System.Drawing.Size(8, 23);
+            this.LB工位1光阑缩回.TabIndex = 103;
+            // 
+            // LB工位1光阑伸出
+            // 
+            this.LB工位1光阑伸出.BackColor = System.Drawing.Color.White;
+            this.LB工位1光阑伸出.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB工位1光阑伸出.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB工位1光阑伸出.Location = new System.Drawing.Point(143, 32);
+            this.LB工位1光阑伸出.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB工位1光阑伸出.Name = "LB工位1光阑伸出";
+            this.LB工位1光阑伸出.Size = new System.Drawing.Size(8, 23);
+            this.LB工位1光阑伸出.TabIndex = 102;
+            // 
+            // LB工位2翻转90
+            // 
+            this.LB工位2翻转90.BackColor = System.Drawing.Color.White;
+            this.LB工位2翻转90.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB工位2翻转90.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB工位2翻转90.Location = new System.Drawing.Point(277, 234);
+            this.LB工位2翻转90.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB工位2翻转90.Name = "LB工位2翻转90";
+            this.LB工位2翻转90.Size = new System.Drawing.Size(8, 23);
+            this.LB工位2翻转90.TabIndex = 101;
+            // 
+            // LB工位2翻转0
+            // 
+            this.LB工位2翻转0.BackColor = System.Drawing.Color.White;
+            this.LB工位2翻转0.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB工位2翻转0.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB工位2翻转0.Location = new System.Drawing.Point(277, 205);
+            this.LB工位2翻转0.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB工位2翻转0.Name = "LB工位2翻转0";
+            this.LB工位2翻转0.Size = new System.Drawing.Size(8, 23);
+            this.LB工位2翻转0.TabIndex = 100;
+            // 
+            // LB工位2辐射板下降
+            // 
+            this.LB工位2辐射板下降.BackColor = System.Drawing.Color.White;
+            this.LB工位2辐射板下降.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB工位2辐射板下降.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB工位2辐射板下降.Location = new System.Drawing.Point(277, 176);
+            this.LB工位2辐射板下降.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB工位2辐射板下降.Name = "LB工位2辐射板下降";
+            this.LB工位2辐射板下降.Size = new System.Drawing.Size(8, 23);
+            this.LB工位2辐射板下降.TabIndex = 99;
+            // 
+            // LB工位2辐射板上升
+            // 
+            this.LB工位2辐射板上升.BackColor = System.Drawing.Color.White;
+            this.LB工位2辐射板上升.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB工位2辐射板上升.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB工位2辐射板上升.Location = new System.Drawing.Point(277, 146);
+            this.LB工位2辐射板上升.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB工位2辐射板上升.Name = "LB工位2辐射板上升";
+            this.LB工位2辐射板上升.Size = new System.Drawing.Size(8, 23);
+            this.LB工位2辐射板上升.TabIndex = 98;
+            // 
+            // LB工位2光阑下降
+            // 
+            this.LB工位2光阑下降.BackColor = System.Drawing.Color.White;
+            this.LB工位2光阑下降.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB工位2光阑下降.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB工位2光阑下降.Location = new System.Drawing.Point(277, 119);
+            this.LB工位2光阑下降.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB工位2光阑下降.Name = "LB工位2光阑下降";
+            this.LB工位2光阑下降.Size = new System.Drawing.Size(8, 23);
+            this.LB工位2光阑下降.TabIndex = 97;
+            // 
+            // LB工位2光阑上升
+            // 
+            this.LB工位2光阑上升.BackColor = System.Drawing.Color.White;
+            this.LB工位2光阑上升.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB工位2光阑上升.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB工位2光阑上升.Location = new System.Drawing.Point(277, 90);
+            this.LB工位2光阑上升.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB工位2光阑上升.Name = "LB工位2光阑上升";
+            this.LB工位2光阑上升.Size = new System.Drawing.Size(8, 23);
+            this.LB工位2光阑上升.TabIndex = 96;
+            // 
+            // LB工位2光阑缩回
+            // 
+            this.LB工位2光阑缩回.BackColor = System.Drawing.Color.White;
+            this.LB工位2光阑缩回.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB工位2光阑缩回.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB工位2光阑缩回.Location = new System.Drawing.Point(277, 61);
+            this.LB工位2光阑缩回.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB工位2光阑缩回.Name = "LB工位2光阑缩回";
+            this.LB工位2光阑缩回.Size = new System.Drawing.Size(8, 23);
+            this.LB工位2光阑缩回.TabIndex = 95;
+            // 
+            // LB工位2光阑伸出
+            // 
+            this.LB工位2光阑伸出.BackColor = System.Drawing.Color.White;
+            this.LB工位2光阑伸出.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB工位2光阑伸出.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB工位2光阑伸出.Location = new System.Drawing.Point(277, 32);
+            this.LB工位2光阑伸出.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB工位2光阑伸出.Name = "LB工位2光阑伸出";
+            this.LB工位2光阑伸出.Size = new System.Drawing.Size(8, 23);
+            this.LB工位2光阑伸出.TabIndex = 94;
+            // 
+            // LB旋转夹爪4下降
+            // 
+            this.LB旋转夹爪4下降.BackColor = System.Drawing.Color.White;
+            this.LB旋转夹爪4下降.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB旋转夹爪4下降.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB旋转夹爪4下降.Location = new System.Drawing.Point(14, 234);
+            this.LB旋转夹爪4下降.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB旋转夹爪4下降.Name = "LB旋转夹爪4下降";
+            this.LB旋转夹爪4下降.Size = new System.Drawing.Size(8, 23);
+            this.LB旋转夹爪4下降.TabIndex = 91;
+            // 
+            // LB旋转夹爪4上升
+            // 
+            this.LB旋转夹爪4上升.BackColor = System.Drawing.Color.White;
+            this.LB旋转夹爪4上升.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB旋转夹爪4上升.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB旋转夹爪4上升.Location = new System.Drawing.Point(14, 205);
+            this.LB旋转夹爪4上升.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB旋转夹爪4上升.Name = "LB旋转夹爪4上升";
+            this.LB旋转夹爪4上升.Size = new System.Drawing.Size(8, 23);
+            this.LB旋转夹爪4上升.TabIndex = 90;
+            // 
+            // LB旋转夹爪3下降
+            // 
+            this.LB旋转夹爪3下降.BackColor = System.Drawing.Color.White;
+            this.LB旋转夹爪3下降.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB旋转夹爪3下降.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB旋转夹爪3下降.Location = new System.Drawing.Point(14, 176);
+            this.LB旋转夹爪3下降.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB旋转夹爪3下降.Name = "LB旋转夹爪3下降";
+            this.LB旋转夹爪3下降.Size = new System.Drawing.Size(8, 23);
+            this.LB旋转夹爪3下降.TabIndex = 89;
+            // 
+            // LB旋转夹爪3上升
+            // 
+            this.LB旋转夹爪3上升.BackColor = System.Drawing.Color.White;
+            this.LB旋转夹爪3上升.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB旋转夹爪3上升.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB旋转夹爪3上升.Location = new System.Drawing.Point(14, 146);
+            this.LB旋转夹爪3上升.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB旋转夹爪3上升.Name = "LB旋转夹爪3上升";
+            this.LB旋转夹爪3上升.Size = new System.Drawing.Size(8, 23);
+            this.LB旋转夹爪3上升.TabIndex = 88;
+            // 
+            // LB旋转夹爪2下降
+            // 
+            this.LB旋转夹爪2下降.BackColor = System.Drawing.Color.White;
+            this.LB旋转夹爪2下降.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB旋转夹爪2下降.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB旋转夹爪2下降.Location = new System.Drawing.Point(14, 119);
+            this.LB旋转夹爪2下降.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB旋转夹爪2下降.Name = "LB旋转夹爪2下降";
+            this.LB旋转夹爪2下降.Size = new System.Drawing.Size(8, 23);
+            this.LB旋转夹爪2下降.TabIndex = 87;
+            // 
+            // LB旋转夹爪2上升
+            // 
+            this.LB旋转夹爪2上升.BackColor = System.Drawing.Color.White;
+            this.LB旋转夹爪2上升.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB旋转夹爪2上升.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB旋转夹爪2上升.Location = new System.Drawing.Point(14, 90);
+            this.LB旋转夹爪2上升.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB旋转夹爪2上升.Name = "LB旋转夹爪2上升";
+            this.LB旋转夹爪2上升.Size = new System.Drawing.Size(8, 23);
+            this.LB旋转夹爪2上升.TabIndex = 86;
+            // 
+            // LB旋转夹爪1下降
+            // 
+            this.LB旋转夹爪1下降.BackColor = System.Drawing.Color.White;
+            this.LB旋转夹爪1下降.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB旋转夹爪1下降.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB旋转夹爪1下降.Location = new System.Drawing.Point(14, 61);
+            this.LB旋转夹爪1下降.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB旋转夹爪1下降.Name = "LB旋转夹爪1下降";
+            this.LB旋转夹爪1下降.Size = new System.Drawing.Size(8, 23);
+            this.LB旋转夹爪1下降.TabIndex = 85;
+            // 
+            // LB旋转夹爪1上升
+            // 
+            this.LB旋转夹爪1上升.BackColor = System.Drawing.Color.White;
+            this.LB旋转夹爪1上升.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB旋转夹爪1上升.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB旋转夹爪1上升.Location = new System.Drawing.Point(14, 32);
+            this.LB旋转夹爪1上升.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB旋转夹爪1上升.Name = "LB旋转夹爪1上升";
+            this.LB旋转夹爪1上升.Size = new System.Drawing.Size(8, 23);
+            this.LB旋转夹爪1上升.TabIndex = 84;
+            // 
+            // brn工位2翻转90
+            // 
+            this.brn工位2翻转90.BackColor = System.Drawing.SystemColors.Control;
+            this.brn工位2翻转90.Location = new System.Drawing.Point(283, 233);
+            this.brn工位2翻转90.Margin = new System.Windows.Forms.Padding(2);
+            this.brn工位2翻转90.Name = "brn工位2翻转90";
+            this.brn工位2翻转90.Size = new System.Drawing.Size(101, 24);
+            this.brn工位2翻转90.TabIndex = 63;
+            this.brn工位2翻转90.Text = "工位2翻转90°";
+            this.brn工位2翻转90.UseVisualStyleBackColor = true;
+            this.brn工位2翻转90.MouseDown += new System.Windows.Forms.MouseEventHandler(this.brn工位2翻转90_MouseDown);
+            this.brn工位2翻转90.MouseUp += new System.Windows.Forms.MouseEventHandler(this.brn工位2翻转90_MouseUp);
+            // 
+            // btn工位2翻转0
+            // 
+            this.btn工位2翻转0.BackColor = System.Drawing.SystemColors.Control;
+            this.btn工位2翻转0.Location = new System.Drawing.Point(283, 204);
+            this.btn工位2翻转0.Margin = new System.Windows.Forms.Padding(2);
+            this.btn工位2翻转0.Name = "btn工位2翻转0";
+            this.btn工位2翻转0.Size = new System.Drawing.Size(101, 24);
+            this.btn工位2翻转0.TabIndex = 62;
+            this.btn工位2翻转0.Text = "工位2翻转0°";
+            this.btn工位2翻转0.UseVisualStyleBackColor = true;
+            this.btn工位2翻转0.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位2翻转0_MouseDown);
+            this.btn工位2翻转0.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位2翻转0_MouseUp);
+            // 
+            // btn工位2辐射板缩回
+            // 
+            this.btn工位2辐射板缩回.BackColor = System.Drawing.SystemColors.Control;
+            this.btn工位2辐射板缩回.Location = new System.Drawing.Point(283, 175);
+            this.btn工位2辐射板缩回.Margin = new System.Windows.Forms.Padding(2);
+            this.btn工位2辐射板缩回.Name = "btn工位2辐射板缩回";
+            this.btn工位2辐射板缩回.Size = new System.Drawing.Size(101, 24);
+            this.btn工位2辐射板缩回.TabIndex = 61;
+            this.btn工位2辐射板缩回.Text = "工位2辐射板下降";
+            this.btn工位2辐射板缩回.UseVisualStyleBackColor = true;
+            this.btn工位2辐射板缩回.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位2辐射板缩回_MouseDown);
+            this.btn工位2辐射板缩回.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位2辐射板缩回_MouseUp);
+            // 
+            // btn工位2辐射板伸出
+            // 
+            this.btn工位2辐射板伸出.BackColor = System.Drawing.SystemColors.Control;
+            this.btn工位2辐射板伸出.Location = new System.Drawing.Point(283, 146);
+            this.btn工位2辐射板伸出.Margin = new System.Windows.Forms.Padding(2);
+            this.btn工位2辐射板伸出.Name = "btn工位2辐射板伸出";
+            this.btn工位2辐射板伸出.Size = new System.Drawing.Size(101, 24);
+            this.btn工位2辐射板伸出.TabIndex = 60;
+            this.btn工位2辐射板伸出.Text = "工位2辐射板上升";
+            this.btn工位2辐射板伸出.UseVisualStyleBackColor = true;
+            this.btn工位2辐射板伸出.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位2辐射板伸出_MouseDown);
+            this.btn工位2辐射板伸出.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位2辐射板伸出_MouseUp);
+            // 
+            // btn工位2光阑下降
+            // 
+            this.btn工位2光阑下降.BackColor = System.Drawing.SystemColors.Control;
+            this.btn工位2光阑下降.Location = new System.Drawing.Point(283, 118);
+            this.btn工位2光阑下降.Margin = new System.Windows.Forms.Padding(2);
+            this.btn工位2光阑下降.Name = "btn工位2光阑下降";
+            this.btn工位2光阑下降.Size = new System.Drawing.Size(101, 24);
+            this.btn工位2光阑下降.TabIndex = 59;
+            this.btn工位2光阑下降.Text = "工位2光阑下降";
+            this.btn工位2光阑下降.UseVisualStyleBackColor = true;
+            this.btn工位2光阑下降.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位2光阑下降_MouseDown);
+            this.btn工位2光阑下降.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位2光阑下降_MouseUp);
+            // 
+            // btn工位2光阑上升
+            // 
+            this.btn工位2光阑上升.BackColor = System.Drawing.SystemColors.Control;
+            this.btn工位2光阑上升.Location = new System.Drawing.Point(283, 89);
+            this.btn工位2光阑上升.Margin = new System.Windows.Forms.Padding(2);
+            this.btn工位2光阑上升.Name = "btn工位2光阑上升";
+            this.btn工位2光阑上升.Size = new System.Drawing.Size(101, 24);
+            this.btn工位2光阑上升.TabIndex = 58;
+            this.btn工位2光阑上升.Text = "工位2光阑上升";
+            this.btn工位2光阑上升.UseVisualStyleBackColor = true;
+            this.btn工位2光阑上升.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位2光阑上升_MouseDown);
+            this.btn工位2光阑上升.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位2光阑上升_MouseUp);
+            // 
+            // btn工位2光阑缩回
+            // 
+            this.btn工位2光阑缩回.BackColor = System.Drawing.SystemColors.Control;
+            this.btn工位2光阑缩回.Location = new System.Drawing.Point(283, 60);
+            this.btn工位2光阑缩回.Margin = new System.Windows.Forms.Padding(2);
+            this.btn工位2光阑缩回.Name = "btn工位2光阑缩回";
+            this.btn工位2光阑缩回.Size = new System.Drawing.Size(101, 24);
+            this.btn工位2光阑缩回.TabIndex = 57;
+            this.btn工位2光阑缩回.Text = "工位2光阑缩回";
+            this.btn工位2光阑缩回.UseVisualStyleBackColor = true;
+            this.btn工位2光阑缩回.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位2光阑缩回_MouseDown);
+            this.btn工位2光阑缩回.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位2光阑缩回_MouseUp);
+            // 
+            // btn工位2光阑伸出
+            // 
+            this.btn工位2光阑伸出.BackColor = System.Drawing.SystemColors.Control;
+            this.btn工位2光阑伸出.Location = new System.Drawing.Point(283, 31);
+            this.btn工位2光阑伸出.Margin = new System.Windows.Forms.Padding(2);
+            this.btn工位2光阑伸出.Name = "btn工位2光阑伸出";
+            this.btn工位2光阑伸出.Size = new System.Drawing.Size(101, 24);
+            this.btn工位2光阑伸出.TabIndex = 56;
+            this.btn工位2光阑伸出.Text = "工位2光阑伸出";
+            this.btn工位2光阑伸出.UseVisualStyleBackColor = true;
+            this.btn工位2光阑伸出.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位2光阑伸出_MouseDown);
+            this.btn工位2光阑伸出.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位2光阑伸出_MouseUp);
+            // 
+            // btn工位1翻转90
+            // 
+            this.btn工位1翻转90.BackColor = System.Drawing.SystemColors.Control;
+            this.btn工位1翻转90.Location = new System.Drawing.Point(149, 233);
+            this.btn工位1翻转90.Margin = new System.Windows.Forms.Padding(2);
+            this.btn工位1翻转90.Name = "btn工位1翻转90";
+            this.btn工位1翻转90.Size = new System.Drawing.Size(101, 24);
+            this.btn工位1翻转90.TabIndex = 55;
+            this.btn工位1翻转90.Text = "工位1翻转90°";
+            this.btn工位1翻转90.UseVisualStyleBackColor = true;
+            this.btn工位1翻转90.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位1翻转90_MouseDown);
+            this.btn工位1翻转90.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位1翻转90_MouseUp);
+            // 
+            // btn工位1翻转0
+            // 
+            this.btn工位1翻转0.BackColor = System.Drawing.SystemColors.Control;
+            this.btn工位1翻转0.Location = new System.Drawing.Point(149, 204);
+            this.btn工位1翻转0.Margin = new System.Windows.Forms.Padding(2);
+            this.btn工位1翻转0.Name = "btn工位1翻转0";
+            this.btn工位1翻转0.Size = new System.Drawing.Size(101, 24);
+            this.btn工位1翻转0.TabIndex = 54;
+            this.btn工位1翻转0.Text = "工位1翻转0°";
+            this.btn工位1翻转0.UseVisualStyleBackColor = true;
+            this.btn工位1翻转0.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位1翻转0_MouseDown);
+            this.btn工位1翻转0.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位1翻转0_MouseUp);
+            // 
+            // btn工位1辐射板缩回
+            // 
+            this.btn工位1辐射板缩回.BackColor = System.Drawing.SystemColors.Control;
+            this.btn工位1辐射板缩回.Location = new System.Drawing.Point(149, 175);
+            this.btn工位1辐射板缩回.Margin = new System.Windows.Forms.Padding(2);
+            this.btn工位1辐射板缩回.Name = "btn工位1辐射板缩回";
+            this.btn工位1辐射板缩回.Size = new System.Drawing.Size(101, 24);
+            this.btn工位1辐射板缩回.TabIndex = 53;
+            this.btn工位1辐射板缩回.Text = "工位1辐射板下降";
+            this.btn工位1辐射板缩回.UseVisualStyleBackColor = true;
+            this.btn工位1辐射板缩回.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位1辐射板缩回_MouseDown);
+            this.btn工位1辐射板缩回.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位1辐射板缩回_MouseUp);
+            // 
+            // btn工位1辐射板伸出
+            // 
+            this.btn工位1辐射板伸出.BackColor = System.Drawing.SystemColors.Control;
+            this.btn工位1辐射板伸出.Location = new System.Drawing.Point(149, 146);
+            this.btn工位1辐射板伸出.Margin = new System.Windows.Forms.Padding(2);
+            this.btn工位1辐射板伸出.Name = "btn工位1辐射板伸出";
+            this.btn工位1辐射板伸出.Size = new System.Drawing.Size(101, 24);
+            this.btn工位1辐射板伸出.TabIndex = 52;
+            this.btn工位1辐射板伸出.Text = "工位1辐射板上升";
+            this.btn工位1辐射板伸出.UseVisualStyleBackColor = true;
+            this.btn工位1辐射板伸出.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位1辐射板伸出_MouseDown);
+            this.btn工位1辐射板伸出.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位1辐射板伸出_MouseUp);
+            // 
+            // btn工位1光阑下降
+            // 
+            this.btn工位1光阑下降.BackColor = System.Drawing.SystemColors.Control;
+            this.btn工位1光阑下降.Location = new System.Drawing.Point(149, 118);
+            this.btn工位1光阑下降.Margin = new System.Windows.Forms.Padding(2);
+            this.btn工位1光阑下降.Name = "btn工位1光阑下降";
+            this.btn工位1光阑下降.Size = new System.Drawing.Size(101, 24);
+            this.btn工位1光阑下降.TabIndex = 51;
+            this.btn工位1光阑下降.Text = "工位1光阑下降";
+            this.btn工位1光阑下降.UseVisualStyleBackColor = true;
+            this.btn工位1光阑下降.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位1光阑下降_MouseDown);
+            this.btn工位1光阑下降.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位1光阑下降_MouseUp);
+            // 
+            // btn工位1光阑上升
+            // 
+            this.btn工位1光阑上升.BackColor = System.Drawing.SystemColors.Control;
+            this.btn工位1光阑上升.Location = new System.Drawing.Point(149, 89);
+            this.btn工位1光阑上升.Margin = new System.Windows.Forms.Padding(2);
+            this.btn工位1光阑上升.Name = "btn工位1光阑上升";
+            this.btn工位1光阑上升.Size = new System.Drawing.Size(101, 24);
+            this.btn工位1光阑上升.TabIndex = 50;
+            this.btn工位1光阑上升.Text = "工位1光阑上升";
+            this.btn工位1光阑上升.UseVisualStyleBackColor = true;
+            this.btn工位1光阑上升.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位1光阑上升_MouseDown);
+            this.btn工位1光阑上升.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位1光阑上升_MouseUp);
+            // 
+            // btn工位1光阑缩回
+            // 
+            this.btn工位1光阑缩回.BackColor = System.Drawing.SystemColors.Control;
+            this.btn工位1光阑缩回.Location = new System.Drawing.Point(149, 60);
+            this.btn工位1光阑缩回.Margin = new System.Windows.Forms.Padding(2);
+            this.btn工位1光阑缩回.Name = "btn工位1光阑缩回";
+            this.btn工位1光阑缩回.Size = new System.Drawing.Size(101, 24);
+            this.btn工位1光阑缩回.TabIndex = 49;
+            this.btn工位1光阑缩回.Text = "工位1光阑缩回";
+            this.btn工位1光阑缩回.UseVisualStyleBackColor = true;
+            this.btn工位1光阑缩回.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位1光阑缩回_MouseDown);
+            this.btn工位1光阑缩回.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位1光阑缩回_MouseUp);
+            // 
+            // btn工位1光阑伸出
+            // 
+            this.btn工位1光阑伸出.BackColor = System.Drawing.SystemColors.Control;
+            this.btn工位1光阑伸出.Location = new System.Drawing.Point(149, 31);
+            this.btn工位1光阑伸出.Margin = new System.Windows.Forms.Padding(2);
+            this.btn工位1光阑伸出.Name = "btn工位1光阑伸出";
+            this.btn工位1光阑伸出.Size = new System.Drawing.Size(101, 24);
+            this.btn工位1光阑伸出.TabIndex = 48;
+            this.btn工位1光阑伸出.Text = "工位1光阑伸出";
+            this.btn工位1光阑伸出.UseVisualStyleBackColor = true;
+            this.btn工位1光阑伸出.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位1光阑伸出_MouseDown);
+            this.btn工位1光阑伸出.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位1光阑伸出_MouseUp);
+            // 
+            // btn旋转夹爪4下降
+            // 
+            this.btn旋转夹爪4下降.BackColor = System.Drawing.SystemColors.Control;
+            this.btn旋转夹爪4下降.Location = new System.Drawing.Point(20, 233);
+            this.btn旋转夹爪4下降.Margin = new System.Windows.Forms.Padding(2);
+            this.btn旋转夹爪4下降.Name = "btn旋转夹爪4下降";
+            this.btn旋转夹爪4下降.Size = new System.Drawing.Size(101, 24);
+            this.btn旋转夹爪4下降.TabIndex = 47;
+            this.btn旋转夹爪4下降.Text = "旋转夹爪4下降";
+            this.btn旋转夹爪4下降.UseVisualStyleBackColor = true;
+            this.btn旋转夹爪4下降.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn旋转夹爪4下降_MouseDown);
+            this.btn旋转夹爪4下降.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn旋转夹爪4下降_MouseUp);
+            // 
+            // btn旋转夹爪4上升
+            // 
+            this.btn旋转夹爪4上升.BackColor = System.Drawing.SystemColors.Control;
+            this.btn旋转夹爪4上升.Location = new System.Drawing.Point(20, 204);
+            this.btn旋转夹爪4上升.Margin = new System.Windows.Forms.Padding(2);
+            this.btn旋转夹爪4上升.Name = "btn旋转夹爪4上升";
+            this.btn旋转夹爪4上升.Size = new System.Drawing.Size(101, 24);
+            this.btn旋转夹爪4上升.TabIndex = 46;
+            this.btn旋转夹爪4上升.Text = "旋转夹爪4上升";
+            this.btn旋转夹爪4上升.UseVisualStyleBackColor = true;
+            this.btn旋转夹爪4上升.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn旋转夹爪4上升_MouseDown);
+            this.btn旋转夹爪4上升.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn旋转夹爪4上升_MouseUp);
+            // 
+            // btn旋转夹爪3下降
+            // 
+            this.btn旋转夹爪3下降.BackColor = System.Drawing.SystemColors.Control;
+            this.btn旋转夹爪3下降.Location = new System.Drawing.Point(20, 175);
+            this.btn旋转夹爪3下降.Margin = new System.Windows.Forms.Padding(2);
+            this.btn旋转夹爪3下降.Name = "btn旋转夹爪3下降";
+            this.btn旋转夹爪3下降.Size = new System.Drawing.Size(101, 24);
+            this.btn旋转夹爪3下降.TabIndex = 45;
+            this.btn旋转夹爪3下降.Text = "旋转夹爪3下降";
+            this.btn旋转夹爪3下降.UseVisualStyleBackColor = true;
+            this.btn旋转夹爪3下降.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn旋转夹爪3下降_MouseDown);
+            this.btn旋转夹爪3下降.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn旋转夹爪3下降_MouseUp);
+            // 
+            // btn旋转夹爪3上升
+            // 
+            this.btn旋转夹爪3上升.BackColor = System.Drawing.SystemColors.Control;
+            this.btn旋转夹爪3上升.Location = new System.Drawing.Point(20, 146);
+            this.btn旋转夹爪3上升.Margin = new System.Windows.Forms.Padding(2);
+            this.btn旋转夹爪3上升.Name = "btn旋转夹爪3上升";
+            this.btn旋转夹爪3上升.Size = new System.Drawing.Size(101, 24);
+            this.btn旋转夹爪3上升.TabIndex = 44;
+            this.btn旋转夹爪3上升.Text = "旋转夹爪3上升";
+            this.btn旋转夹爪3上升.UseVisualStyleBackColor = true;
+            this.btn旋转夹爪3上升.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn旋转夹爪3上升_MouseDown);
+            this.btn旋转夹爪3上升.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn旋转夹爪3上升_MouseUp);
+            // 
+            // btn旋转夹爪2下降
+            // 
+            this.btn旋转夹爪2下降.BackColor = System.Drawing.SystemColors.Control;
+            this.btn旋转夹爪2下降.Location = new System.Drawing.Point(20, 118);
+            this.btn旋转夹爪2下降.Margin = new System.Windows.Forms.Padding(2);
+            this.btn旋转夹爪2下降.Name = "btn旋转夹爪2下降";
+            this.btn旋转夹爪2下降.Size = new System.Drawing.Size(101, 24);
+            this.btn旋转夹爪2下降.TabIndex = 43;
+            this.btn旋转夹爪2下降.Text = "旋转夹爪2下降";
+            this.btn旋转夹爪2下降.UseVisualStyleBackColor = true;
+            this.btn旋转夹爪2下降.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn旋转夹爪2下降_MouseDown);
+            this.btn旋转夹爪2下降.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn旋转夹爪2下降_MouseUp);
+            // 
+            // btn旋转夹爪2上升
+            // 
+            this.btn旋转夹爪2上升.BackColor = System.Drawing.SystemColors.Control;
+            this.btn旋转夹爪2上升.Location = new System.Drawing.Point(20, 89);
+            this.btn旋转夹爪2上升.Margin = new System.Windows.Forms.Padding(2);
+            this.btn旋转夹爪2上升.Name = "btn旋转夹爪2上升";
+            this.btn旋转夹爪2上升.Size = new System.Drawing.Size(101, 24);
+            this.btn旋转夹爪2上升.TabIndex = 42;
+            this.btn旋转夹爪2上升.Text = "旋转夹爪2上升";
+            this.btn旋转夹爪2上升.UseVisualStyleBackColor = true;
+            this.btn旋转夹爪2上升.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn旋转夹爪2上升_MouseDown);
+            this.btn旋转夹爪2上升.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn旋转夹爪2上升_MouseUp);
+            // 
+            // btn旋转夹爪1下降
+            // 
+            this.btn旋转夹爪1下降.BackColor = System.Drawing.SystemColors.Control;
+            this.btn旋转夹爪1下降.Location = new System.Drawing.Point(20, 60);
+            this.btn旋转夹爪1下降.Margin = new System.Windows.Forms.Padding(2);
+            this.btn旋转夹爪1下降.Name = "btn旋转夹爪1下降";
+            this.btn旋转夹爪1下降.Size = new System.Drawing.Size(101, 24);
+            this.btn旋转夹爪1下降.TabIndex = 41;
+            this.btn旋转夹爪1下降.Text = "旋转夹爪1下降";
+            this.btn旋转夹爪1下降.UseVisualStyleBackColor = true;
+            this.btn旋转夹爪1下降.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn旋转夹爪1下降_MouseDown);
+            this.btn旋转夹爪1下降.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn旋转夹爪1下降_MouseUp);
+            // 
+            // btn旋转夹爪1上升
+            // 
+            this.btn旋转夹爪1上升.BackColor = System.Drawing.SystemColors.Control;
+            this.btn旋转夹爪1上升.Location = new System.Drawing.Point(20, 31);
+            this.btn旋转夹爪1上升.Margin = new System.Windows.Forms.Padding(2);
+            this.btn旋转夹爪1上升.Name = "btn旋转夹爪1上升";
+            this.btn旋转夹爪1上升.Size = new System.Drawing.Size(101, 24);
+            this.btn旋转夹爪1上升.TabIndex = 40;
+            this.btn旋转夹爪1上升.Text = "旋转夹爪1上升";
+            this.btn旋转夹爪1上升.UseVisualStyleBackColor = true;
+            this.btn旋转夹爪1上升.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn旋转夹爪1上升_MouseDown);
+            this.btn旋转夹爪1上升.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn旋转夹爪1上升_MouseUp);
+            // 
+            // groupBox17
+            // 
+            this.groupBox17.Controls.Add(this.LB除尘器1吹扫);
+            this.groupBox17.Controls.Add(this.LB夹爪2闭合1);
+            this.groupBox17.Controls.Add(this.LB夹爪2回原点);
+            this.groupBox17.Controls.Add(this.LB夹爪1闭合1);
+            this.groupBox17.Controls.Add(this.LB夹爪1回原点);
+            this.groupBox17.Controls.Add(this.btn夹爪2回原点);
+            this.groupBox17.Controls.Add(this.btn除尘器2吹扫);
+            this.groupBox17.Controls.Add(this.btn除尘器1吹扫);
+            this.groupBox17.Controls.Add(this.btn夹爪2复位);
+            this.groupBox17.Controls.Add(this.btn夹爪2闭合1);
+            this.groupBox17.Controls.Add(this.btn夹爪1复位);
+            this.groupBox17.Controls.Add(this.btn夹爪1闭合1);
+            this.groupBox17.Controls.Add(this.btn夹爪1回原点);
+            this.groupBox17.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox17.Location = new System.Drawing.Point(412, 16);
+            this.groupBox17.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox17.Name = "groupBox17";
+            this.groupBox17.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox17.Size = new System.Drawing.Size(382, 265);
+            this.groupBox17.TabIndex = 64;
+            this.groupBox17.TabStop = false;
+            this.groupBox17.Text = "增广夹爪、离子除尘";
+            // 
+            // LB除尘器1吹扫
+            // 
+            this.LB除尘器1吹扫.BackColor = System.Drawing.Color.White;
+            this.LB除尘器1吹扫.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB除尘器1吹扫.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB除尘器1吹扫.Location = new System.Drawing.Point(268, 32);
+            this.LB除尘器1吹扫.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB除尘器1吹扫.Name = "LB除尘器1吹扫";
+            this.LB除尘器1吹扫.Size = new System.Drawing.Size(8, 23);
+            this.LB除尘器1吹扫.TabIndex = 87;
+            // 
+            // LB夹爪2闭合1
+            // 
+            this.LB夹爪2闭合1.BackColor = System.Drawing.Color.White;
+            this.LB夹爪2闭合1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB夹爪2闭合1.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB夹爪2闭合1.Location = new System.Drawing.Point(142, 61);
+            this.LB夹爪2闭合1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB夹爪2闭合1.Name = "LB夹爪2闭合1";
+            this.LB夹爪2闭合1.Size = new System.Drawing.Size(8, 23);
+            this.LB夹爪2闭合1.TabIndex = 86;
+            // 
+            // LB夹爪2回原点
+            // 
+            this.LB夹爪2回原点.BackColor = System.Drawing.Color.White;
+            this.LB夹爪2回原点.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB夹爪2回原点.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB夹爪2回原点.Location = new System.Drawing.Point(142, 32);
+            this.LB夹爪2回原点.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB夹爪2回原点.Name = "LB夹爪2回原点";
+            this.LB夹爪2回原点.Size = new System.Drawing.Size(8, 23);
+            this.LB夹爪2回原点.TabIndex = 85;
+            // 
+            // LB夹爪1闭合1
+            // 
+            this.LB夹爪1闭合1.BackColor = System.Drawing.Color.White;
+            this.LB夹爪1闭合1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB夹爪1闭合1.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB夹爪1闭合1.Location = new System.Drawing.Point(10, 61);
+            this.LB夹爪1闭合1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB夹爪1闭合1.Name = "LB夹爪1闭合1";
+            this.LB夹爪1闭合1.Size = new System.Drawing.Size(8, 23);
+            this.LB夹爪1闭合1.TabIndex = 82;
+            // 
+            // LB夹爪1回原点
+            // 
+            this.LB夹爪1回原点.BackColor = System.Drawing.Color.White;
+            this.LB夹爪1回原点.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB夹爪1回原点.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB夹爪1回原点.Location = new System.Drawing.Point(10, 32);
+            this.LB夹爪1回原点.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB夹爪1回原点.Name = "LB夹爪1回原点";
+            this.LB夹爪1回原点.Size = new System.Drawing.Size(8, 23);
+            this.LB夹爪1回原点.TabIndex = 81;
+            // 
+            // btn夹爪2回原点
+            // 
+            this.btn夹爪2回原点.BackColor = System.Drawing.SystemColors.Control;
+            this.btn夹爪2回原点.Location = new System.Drawing.Point(148, 31);
+            this.btn夹爪2回原点.Margin = new System.Windows.Forms.Padding(2);
+            this.btn夹爪2回原点.Name = "btn夹爪2回原点";
+            this.btn夹爪2回原点.Size = new System.Drawing.Size(101, 24);
+            this.btn夹爪2回原点.TabIndex = 46;
+            this.btn夹爪2回原点.Text = "夹爪2回原点";
+            this.btn夹爪2回原点.UseVisualStyleBackColor = true;
+            this.btn夹爪2回原点.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn夹爪2回原点_MouseDown);
+            this.btn夹爪2回原点.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn夹爪2回原点_MouseUp);
+            // 
+            // btn除尘器2吹扫
+            // 
+            this.btn除尘器2吹扫.BackColor = System.Drawing.SystemColors.Control;
+            this.btn除尘器2吹扫.Location = new System.Drawing.Point(274, 60);
+            this.btn除尘器2吹扫.Margin = new System.Windows.Forms.Padding(2);
+            this.btn除尘器2吹扫.Name = "btn除尘器2吹扫";
+            this.btn除尘器2吹扫.Size = new System.Drawing.Size(101, 24);
+            this.btn除尘器2吹扫.TabIndex = 58;
+            this.btn除尘器2吹扫.Text = "除尘器吹扫关";
+            this.btn除尘器2吹扫.UseVisualStyleBackColor = true;
+            this.btn除尘器2吹扫.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn除尘器2吹扫_MouseDown);
+            this.btn除尘器2吹扫.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn除尘器2吹扫_MouseUp);
+            // 
+            // btn除尘器1吹扫
+            // 
+            this.btn除尘器1吹扫.BackColor = System.Drawing.SystemColors.Control;
+            this.btn除尘器1吹扫.Location = new System.Drawing.Point(274, 31);
+            this.btn除尘器1吹扫.Margin = new System.Windows.Forms.Padding(2);
+            this.btn除尘器1吹扫.Name = "btn除尘器1吹扫";
+            this.btn除尘器1吹扫.Size = new System.Drawing.Size(101, 24);
+            this.btn除尘器1吹扫.TabIndex = 56;
+            this.btn除尘器1吹扫.Text = "除尘器吹扫开";
+            this.btn除尘器1吹扫.UseVisualStyleBackColor = true;
+            this.btn除尘器1吹扫.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn除尘器1吹扫_MouseDown);
+            this.btn除尘器1吹扫.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn除尘器1吹扫_MouseUp);
+            // 
+            // btn夹爪2复位
+            // 
+            this.btn夹爪2复位.BackColor = System.Drawing.SystemColors.Control;
+            this.btn夹爪2复位.Location = new System.Drawing.Point(148, 89);
+            this.btn夹爪2复位.Margin = new System.Windows.Forms.Padding(2);
+            this.btn夹爪2复位.Name = "btn夹爪2复位";
+            this.btn夹爪2复位.Size = new System.Drawing.Size(101, 24);
+            this.btn夹爪2复位.TabIndex = 53;
+            this.btn夹爪2复位.Text = "夹爪2复位";
+            this.btn夹爪2复位.UseVisualStyleBackColor = true;
+            this.btn夹爪2复位.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn夹爪2复位_MouseDown);
+            this.btn夹爪2复位.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn夹爪2复位_MouseUp);
+            // 
+            // btn夹爪2闭合1
+            // 
+            this.btn夹爪2闭合1.BackColor = System.Drawing.SystemColors.Control;
+            this.btn夹爪2闭合1.Location = new System.Drawing.Point(148, 60);
+            this.btn夹爪2闭合1.Margin = new System.Windows.Forms.Padding(2);
+            this.btn夹爪2闭合1.Name = "btn夹爪2闭合1";
+            this.btn夹爪2闭合1.Size = new System.Drawing.Size(101, 24);
+            this.btn夹爪2闭合1.TabIndex = 50;
+            this.btn夹爪2闭合1.Text = "夹爪2闭合";
+            this.btn夹爪2闭合1.UseVisualStyleBackColor = true;
+            this.btn夹爪2闭合1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn夹爪2闭合1_MouseDown);
+            this.btn夹爪2闭合1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn夹爪2闭合1_MouseUp);
+            // 
+            // btn夹爪1复位
+            // 
+            this.btn夹爪1复位.BackColor = System.Drawing.SystemColors.Control;
+            this.btn夹爪1复位.Location = new System.Drawing.Point(16, 89);
+            this.btn夹爪1复位.Margin = new System.Windows.Forms.Padding(2);
+            this.btn夹爪1复位.Name = "btn夹爪1复位";
+            this.btn夹爪1复位.Size = new System.Drawing.Size(101, 24);
+            this.btn夹爪1复位.TabIndex = 45;
+            this.btn夹爪1复位.Text = "夹爪1复位";
+            this.btn夹爪1复位.UseVisualStyleBackColor = true;
+            this.btn夹爪1复位.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn夹爪1复位_MouseDown);
+            this.btn夹爪1复位.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn夹爪1复位_MouseUp);
+            // 
+            // btn夹爪1闭合1
+            // 
+            this.btn夹爪1闭合1.BackColor = System.Drawing.SystemColors.Control;
+            this.btn夹爪1闭合1.Location = new System.Drawing.Point(16, 60);
+            this.btn夹爪1闭合1.Margin = new System.Windows.Forms.Padding(2);
+            this.btn夹爪1闭合1.Name = "btn夹爪1闭合1";
+            this.btn夹爪1闭合1.Size = new System.Drawing.Size(101, 24);
+            this.btn夹爪1闭合1.TabIndex = 42;
+            this.btn夹爪1闭合1.Text = "夹爪1闭合";
+            this.btn夹爪1闭合1.UseVisualStyleBackColor = true;
+            this.btn夹爪1闭合1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn夹爪1闭合1_MouseDown);
+            this.btn夹爪1闭合1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn夹爪1闭合1_MouseUp);
+            // 
+            // btn夹爪1回原点
+            // 
+            this.btn夹爪1回原点.BackColor = System.Drawing.SystemColors.Control;
+            this.btn夹爪1回原点.Location = new System.Drawing.Point(16, 31);
+            this.btn夹爪1回原点.Margin = new System.Windows.Forms.Padding(2);
+            this.btn夹爪1回原点.Name = "btn夹爪1回原点";
+            this.btn夹爪1回原点.Size = new System.Drawing.Size(101, 24);
+            this.btn夹爪1回原点.TabIndex = 40;
+            this.btn夹爪1回原点.Text = "夹爪1回原点";
+            this.btn夹爪1回原点.UseVisualStyleBackColor = true;
+            this.btn夹爪1回原点.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn夹爪1回原点_MouseDown);
+            this.btn夹爪1回原点.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn夹爪1回原点_MouseUp);
+            // 
+            // groupBox16
+            // 
+            this.groupBox16.Controls.Add(this.LB平移吸嘴4真空);
+            this.groupBox16.Controls.Add(this.LB平移吸嘴3真空);
+            this.groupBox16.Controls.Add(this.LB平移吸嘴2真空);
+            this.groupBox16.Controls.Add(this.LB平移吸嘴1真空);
+            this.groupBox16.Controls.Add(this.LB上料吸嘴2真空);
+            this.groupBox16.Controls.Add(this.LB上料吸嘴1真空);
+            this.groupBox16.Controls.Add(this.btn一键真空破坏);
+            this.groupBox16.Controls.Add(this.btn平移吸嘴4破坏);
+            this.groupBox16.Controls.Add(this.btn平移吸嘴3破坏);
+            this.groupBox16.Controls.Add(this.btn平移吸嘴2破坏);
+            this.groupBox16.Controls.Add(this.btn平移吸嘴1破坏);
+            this.groupBox16.Controls.Add(this.btn上料吸嘴2破坏);
+            this.groupBox16.Controls.Add(this.btn上料吸嘴1破坏);
+            this.groupBox16.Controls.Add(this.btn平移吸嘴4真空);
+            this.groupBox16.Controls.Add(this.btn平移吸嘴3真空);
+            this.groupBox16.Controls.Add(this.btn平移吸嘴2真空);
+            this.groupBox16.Controls.Add(this.btn平移吸嘴1真空);
+            this.groupBox16.Controls.Add(this.btn上料吸嘴2真空);
+            this.groupBox16.Controls.Add(this.btn上料吸嘴1真空);
+            this.groupBox16.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox16.Location = new System.Drawing.Point(26, 286);
+            this.groupBox16.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox16.Name = "groupBox16";
+            this.groupBox16.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox16.Size = new System.Drawing.Size(382, 265);
+            this.groupBox16.TabIndex = 48;
+            this.groupBox16.TabStop = false;
+            this.groupBox16.Text = "吸附";
+            // 
+            // LB平移吸嘴4真空
+            // 
+            this.LB平移吸嘴4真空.BackColor = System.Drawing.Color.White;
+            this.LB平移吸嘴4真空.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB平移吸嘴4真空.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB平移吸嘴4真空.Location = new System.Drawing.Point(7, 164);
+            this.LB平移吸嘴4真空.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB平移吸嘴4真空.Name = "LB平移吸嘴4真空";
+            this.LB平移吸嘴4真空.Size = new System.Drawing.Size(8, 23);
+            this.LB平移吸嘴4真空.TabIndex = 86;
+            // 
+            // LB平移吸嘴3真空
+            // 
+            this.LB平移吸嘴3真空.BackColor = System.Drawing.Color.White;
+            this.LB平移吸嘴3真空.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB平移吸嘴3真空.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB平移吸嘴3真空.Location = new System.Drawing.Point(7, 135);
+            this.LB平移吸嘴3真空.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB平移吸嘴3真空.Name = "LB平移吸嘴3真空";
+            this.LB平移吸嘴3真空.Size = new System.Drawing.Size(8, 23);
+            this.LB平移吸嘴3真空.TabIndex = 85;
+            // 
+            // LB平移吸嘴2真空
+            // 
+            this.LB平移吸嘴2真空.BackColor = System.Drawing.Color.White;
+            this.LB平移吸嘴2真空.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB平移吸嘴2真空.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB平移吸嘴2真空.Location = new System.Drawing.Point(7, 106);
+            this.LB平移吸嘴2真空.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB平移吸嘴2真空.Name = "LB平移吸嘴2真空";
+            this.LB平移吸嘴2真空.Size = new System.Drawing.Size(8, 23);
+            this.LB平移吸嘴2真空.TabIndex = 84;
+            // 
+            // LB平移吸嘴1真空
+            // 
+            this.LB平移吸嘴1真空.BackColor = System.Drawing.Color.White;
+            this.LB平移吸嘴1真空.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB平移吸嘴1真空.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB平移吸嘴1真空.Location = new System.Drawing.Point(7, 78);
+            this.LB平移吸嘴1真空.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB平移吸嘴1真空.Name = "LB平移吸嘴1真空";
+            this.LB平移吸嘴1真空.Size = new System.Drawing.Size(8, 23);
+            this.LB平移吸嘴1真空.TabIndex = 83;
+            // 
+            // LB上料吸嘴2真空
+            // 
+            this.LB上料吸嘴2真空.BackColor = System.Drawing.Color.White;
+            this.LB上料吸嘴2真空.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB上料吸嘴2真空.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB上料吸嘴2真空.Location = new System.Drawing.Point(7, 49);
+            this.LB上料吸嘴2真空.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB上料吸嘴2真空.Name = "LB上料吸嘴2真空";
+            this.LB上料吸嘴2真空.Size = new System.Drawing.Size(8, 23);
+            this.LB上料吸嘴2真空.TabIndex = 82;
+            // 
+            // LB上料吸嘴1真空
+            // 
+            this.LB上料吸嘴1真空.BackColor = System.Drawing.Color.White;
+            this.LB上料吸嘴1真空.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB上料吸嘴1真空.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB上料吸嘴1真空.Location = new System.Drawing.Point(7, 20);
+            this.LB上料吸嘴1真空.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB上料吸嘴1真空.Name = "LB上料吸嘴1真空";
+            this.LB上料吸嘴1真空.Size = new System.Drawing.Size(8, 23);
+            this.LB上料吸嘴1真空.TabIndex = 81;
+            // 
+            // btn一键真空破坏
+            // 
+            this.btn一键真空破坏.BackColor = System.Drawing.SystemColors.Control;
+            this.btn一键真空破坏.Location = new System.Drawing.Point(262, 18);
+            this.btn一键真空破坏.Margin = new System.Windows.Forms.Padding(2);
+            this.btn一键真空破坏.Name = "btn一键真空破坏";
+            this.btn一键真空破坏.Size = new System.Drawing.Size(101, 24);
+            this.btn一键真空破坏.TabIndex = 54;
+            this.btn一键真空破坏.Text = "一键真空破坏";
+            this.btn一键真空破坏.UseVisualStyleBackColor = true;
+            this.btn一键真空破坏.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn一键真空破坏_MouseDown);
+            this.btn一键真空破坏.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn一键真空破坏_MouseUp);
+            // 
+            // btn平移吸嘴4破坏
+            // 
+            this.btn平移吸嘴4破坏.BackColor = System.Drawing.SystemColors.Control;
+            this.btn平移吸嘴4破坏.Location = new System.Drawing.Point(142, 163);
+            this.btn平移吸嘴4破坏.Margin = new System.Windows.Forms.Padding(2);
+            this.btn平移吸嘴4破坏.Name = "btn平移吸嘴4破坏";
+            this.btn平移吸嘴4破坏.Size = new System.Drawing.Size(101, 24);
+            this.btn平移吸嘴4破坏.TabIndex = 53;
+            this.btn平移吸嘴4破坏.Text = "平移吸嘴4破坏";
+            this.btn平移吸嘴4破坏.UseVisualStyleBackColor = true;
+            this.btn平移吸嘴4破坏.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn平移吸嘴4破坏_MouseDown);
+            this.btn平移吸嘴4破坏.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn平移吸嘴4破坏_MouseUp);
+            // 
+            // btn平移吸嘴3破坏
+            // 
+            this.btn平移吸嘴3破坏.BackColor = System.Drawing.SystemColors.Control;
+            this.btn平移吸嘴3破坏.Location = new System.Drawing.Point(142, 134);
+            this.btn平移吸嘴3破坏.Margin = new System.Windows.Forms.Padding(2);
+            this.btn平移吸嘴3破坏.Name = "btn平移吸嘴3破坏";
+            this.btn平移吸嘴3破坏.Size = new System.Drawing.Size(101, 24);
+            this.btn平移吸嘴3破坏.TabIndex = 52;
+            this.btn平移吸嘴3破坏.Text = "平移吸嘴3破坏";
+            this.btn平移吸嘴3破坏.UseVisualStyleBackColor = true;
+            this.btn平移吸嘴3破坏.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn平移吸嘴3破坏_MouseDown);
+            this.btn平移吸嘴3破坏.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn平移吸嘴3破坏_MouseUp);
+            // 
+            // btn平移吸嘴2破坏
+            // 
+            this.btn平移吸嘴2破坏.BackColor = System.Drawing.SystemColors.Control;
+            this.btn平移吸嘴2破坏.Location = new System.Drawing.Point(142, 106);
+            this.btn平移吸嘴2破坏.Margin = new System.Windows.Forms.Padding(2);
+            this.btn平移吸嘴2破坏.Name = "btn平移吸嘴2破坏";
+            this.btn平移吸嘴2破坏.Size = new System.Drawing.Size(101, 24);
+            this.btn平移吸嘴2破坏.TabIndex = 51;
+            this.btn平移吸嘴2破坏.Text = "平移吸嘴2破坏";
+            this.btn平移吸嘴2破坏.UseVisualStyleBackColor = true;
+            this.btn平移吸嘴2破坏.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn平移吸嘴2破坏_MouseDown);
+            this.btn平移吸嘴2破坏.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn平移吸嘴2破坏_MouseUp);
+            // 
+            // btn平移吸嘴1破坏
+            // 
+            this.btn平移吸嘴1破坏.BackColor = System.Drawing.SystemColors.Control;
+            this.btn平移吸嘴1破坏.Location = new System.Drawing.Point(142, 77);
+            this.btn平移吸嘴1破坏.Margin = new System.Windows.Forms.Padding(2);
+            this.btn平移吸嘴1破坏.Name = "btn平移吸嘴1破坏";
+            this.btn平移吸嘴1破坏.Size = new System.Drawing.Size(101, 24);
+            this.btn平移吸嘴1破坏.TabIndex = 50;
+            this.btn平移吸嘴1破坏.Text = "平移吸嘴1破坏";
+            this.btn平移吸嘴1破坏.UseVisualStyleBackColor = true;
+            this.btn平移吸嘴1破坏.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn平移吸嘴1破坏_MouseDown);
+            this.btn平移吸嘴1破坏.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn平移吸嘴1破坏_MouseUp);
+            // 
+            // btn上料吸嘴2破坏
+            // 
+            this.btn上料吸嘴2破坏.BackColor = System.Drawing.SystemColors.Control;
+            this.btn上料吸嘴2破坏.Location = new System.Drawing.Point(142, 48);
+            this.btn上料吸嘴2破坏.Margin = new System.Windows.Forms.Padding(2);
+            this.btn上料吸嘴2破坏.Name = "btn上料吸嘴2破坏";
+            this.btn上料吸嘴2破坏.Size = new System.Drawing.Size(101, 24);
+            this.btn上料吸嘴2破坏.TabIndex = 49;
+            this.btn上料吸嘴2破坏.Text = "上料吸嘴2破坏";
+            this.btn上料吸嘴2破坏.UseVisualStyleBackColor = true;
+            this.btn上料吸嘴2破坏.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn上料吸嘴2破坏_MouseDown);
+            this.btn上料吸嘴2破坏.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn上料吸嘴2破坏_MouseUp);
+            // 
+            // btn上料吸嘴1破坏
+            // 
+            this.btn上料吸嘴1破坏.BackColor = System.Drawing.SystemColors.Control;
+            this.btn上料吸嘴1破坏.Location = new System.Drawing.Point(142, 19);
+            this.btn上料吸嘴1破坏.Margin = new System.Windows.Forms.Padding(2);
+            this.btn上料吸嘴1破坏.Name = "btn上料吸嘴1破坏";
+            this.btn上料吸嘴1破坏.Size = new System.Drawing.Size(101, 24);
+            this.btn上料吸嘴1破坏.TabIndex = 48;
+            this.btn上料吸嘴1破坏.Text = "上料吸嘴1破坏";
+            this.btn上料吸嘴1破坏.UseVisualStyleBackColor = true;
+            this.btn上料吸嘴1破坏.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn上料吸嘴1破坏_MouseDown);
+            this.btn上料吸嘴1破坏.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn上料吸嘴1破坏_MouseUp);
+            // 
+            // btn平移吸嘴4真空
+            // 
+            this.btn平移吸嘴4真空.BackColor = System.Drawing.SystemColors.Control;
+            this.btn平移吸嘴4真空.Location = new System.Drawing.Point(13, 163);
+            this.btn平移吸嘴4真空.Margin = new System.Windows.Forms.Padding(2);
+            this.btn平移吸嘴4真空.Name = "btn平移吸嘴4真空";
+            this.btn平移吸嘴4真空.Size = new System.Drawing.Size(101, 24);
+            this.btn平移吸嘴4真空.TabIndex = 45;
+            this.btn平移吸嘴4真空.Text = "平移吸嘴4真空";
+            this.btn平移吸嘴4真空.UseVisualStyleBackColor = true;
+            this.btn平移吸嘴4真空.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn平移吸嘴4真空_MouseDown);
+            this.btn平移吸嘴4真空.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn平移吸嘴4真空_MouseUp);
+            // 
+            // btn平移吸嘴3真空
+            // 
+            this.btn平移吸嘴3真空.BackColor = System.Drawing.SystemColors.Control;
+            this.btn平移吸嘴3真空.Location = new System.Drawing.Point(13, 134);
+            this.btn平移吸嘴3真空.Margin = new System.Windows.Forms.Padding(2);
+            this.btn平移吸嘴3真空.Name = "btn平移吸嘴3真空";
+            this.btn平移吸嘴3真空.Size = new System.Drawing.Size(101, 24);
+            this.btn平移吸嘴3真空.TabIndex = 44;
+            this.btn平移吸嘴3真空.Text = "平移吸嘴3真空";
+            this.btn平移吸嘴3真空.UseVisualStyleBackColor = true;
+            this.btn平移吸嘴3真空.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn平移吸嘴3真空_MouseDown);
+            this.btn平移吸嘴3真空.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn平移吸嘴3真空_MouseUp);
+            // 
+            // btn平移吸嘴2真空
+            // 
+            this.btn平移吸嘴2真空.BackColor = System.Drawing.SystemColors.Control;
+            this.btn平移吸嘴2真空.Location = new System.Drawing.Point(13, 106);
+            this.btn平移吸嘴2真空.Margin = new System.Windows.Forms.Padding(2);
+            this.btn平移吸嘴2真空.Name = "btn平移吸嘴2真空";
+            this.btn平移吸嘴2真空.Size = new System.Drawing.Size(101, 24);
+            this.btn平移吸嘴2真空.TabIndex = 43;
+            this.btn平移吸嘴2真空.Text = "平移吸嘴2真空";
+            this.btn平移吸嘴2真空.UseVisualStyleBackColor = true;
+            this.btn平移吸嘴2真空.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn平移吸嘴2真空_MouseDown);
+            this.btn平移吸嘴2真空.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn平移吸嘴2真空_MouseUp);
+            // 
+            // btn平移吸嘴1真空
+            // 
+            this.btn平移吸嘴1真空.BackColor = System.Drawing.SystemColors.Control;
+            this.btn平移吸嘴1真空.Location = new System.Drawing.Point(13, 77);
+            this.btn平移吸嘴1真空.Margin = new System.Windows.Forms.Padding(2);
+            this.btn平移吸嘴1真空.Name = "btn平移吸嘴1真空";
+            this.btn平移吸嘴1真空.Size = new System.Drawing.Size(101, 24);
+            this.btn平移吸嘴1真空.TabIndex = 42;
+            this.btn平移吸嘴1真空.Text = "平移吸嘴1真空";
+            this.btn平移吸嘴1真空.UseVisualStyleBackColor = true;
+            this.btn平移吸嘴1真空.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn平移吸嘴1真空_MouseDown);
+            this.btn平移吸嘴1真空.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn平移吸嘴1真空_MouseUp);
+            // 
+            // btn上料吸嘴2真空
+            // 
+            this.btn上料吸嘴2真空.BackColor = System.Drawing.SystemColors.Control;
+            this.btn上料吸嘴2真空.Location = new System.Drawing.Point(13, 48);
+            this.btn上料吸嘴2真空.Margin = new System.Windows.Forms.Padding(2);
+            this.btn上料吸嘴2真空.Name = "btn上料吸嘴2真空";
+            this.btn上料吸嘴2真空.Size = new System.Drawing.Size(101, 24);
+            this.btn上料吸嘴2真空.TabIndex = 41;
+            this.btn上料吸嘴2真空.Text = "上料吸嘴2真空";
+            this.btn上料吸嘴2真空.UseVisualStyleBackColor = true;
+            this.btn上料吸嘴2真空.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn上料吸嘴2真空_MouseDown);
+            this.btn上料吸嘴2真空.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn上料吸嘴2真空_MouseUp);
+            // 
+            // btn上料吸嘴1真空
+            // 
+            this.btn上料吸嘴1真空.BackColor = System.Drawing.SystemColors.Control;
+            this.btn上料吸嘴1真空.Location = new System.Drawing.Point(13, 19);
+            this.btn上料吸嘴1真空.Margin = new System.Windows.Forms.Padding(2);
+            this.btn上料吸嘴1真空.Name = "btn上料吸嘴1真空";
+            this.btn上料吸嘴1真空.Size = new System.Drawing.Size(101, 24);
+            this.btn上料吸嘴1真空.TabIndex = 40;
+            this.btn上料吸嘴1真空.Text = "上料吸嘴1真空";
+            this.btn上料吸嘴1真空.UseVisualStyleBackColor = true;
+            this.btn上料吸嘴1真空.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn上料吸嘴1真空_MouseDown);
+            this.btn上料吸嘴1真空.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn上料吸嘴1真空_MouseUp);
+            // 
+            // groupBox15
+            // 
+            this.groupBox15.Controls.Add(this.LB实盘卡盘缩回);
+            this.groupBox15.Controls.Add(this.LB实盘卡盘伸出);
+            this.groupBox15.Controls.Add(this.LB翻转气缸180);
+            this.groupBox15.Controls.Add(this.LB翻转气缸0);
+            this.groupBox15.Controls.Add(this.LBNG卡盘缩回);
+            this.groupBox15.Controls.Add(this.LB平移吸嘴34下降);
+            this.groupBox15.Controls.Add(this.LBNG卡盘伸出);
+            this.groupBox15.Controls.Add(this.LB平移吸嘴34上升);
+            this.groupBox15.Controls.Add(this.LB平移吸嘴12下降);
+            this.groupBox15.Controls.Add(this.LB平移吸嘴12上升);
+            this.groupBox15.Controls.Add(this.btnNG二级缩回);
+            this.groupBox15.Controls.Add(this.LB上料吸嘴2下降);
+            this.groupBox15.Controls.Add(this.LB上料吸嘴2上升);
+            this.groupBox15.Controls.Add(this.btnNG二级伸出);
+            this.groupBox15.Controls.Add(this.LB上料吸嘴1下降);
+            this.groupBox15.Controls.Add(this.LB上料吸嘴1上升);
+            this.groupBox15.Controls.Add(this.LB上料机械手张开);
+            this.groupBox15.Controls.Add(this.LB上料机械手夹紧);
+            this.groupBox15.Controls.Add(this.LB上料机械手下降);
+            this.groupBox15.Controls.Add(this.LB上料机械手上升);
+            this.groupBox15.Controls.Add(this.btn倒实二级缩回);
+            this.groupBox15.Controls.Add(this.btn倒实二级伸出);
+            this.groupBox15.Controls.Add(this.btn翻转气缸180);
+            this.groupBox15.Controls.Add(this.btn翻转气缸0);
+            this.groupBox15.Controls.Add(this.btn平移吸嘴34下降);
+            this.groupBox15.Controls.Add(this.btn平移吸嘴34上升);
+            this.groupBox15.Controls.Add(this.btn平移吸嘴12下降);
+            this.groupBox15.Controls.Add(this.btn平移吸嘴12上升);
+            this.groupBox15.Controls.Add(this.btn上料吸嘴2下降);
+            this.groupBox15.Controls.Add(this.btn上料吸嘴2上升);
+            this.groupBox15.Controls.Add(this.btn上料吸嘴1下降);
+            this.groupBox15.Controls.Add(this.btn上料吸嘴1上升);
+            this.groupBox15.Controls.Add(this.btn上料机械手缩回);
+            this.groupBox15.Controls.Add(this.btn上料机械手伸出);
+            this.groupBox15.Controls.Add(this.btn上料机械手下降);
+            this.groupBox15.Controls.Add(this.btn上料机械手上升);
+            this.groupBox15.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox15.Location = new System.Drawing.Point(26, 16);
+            this.groupBox15.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox15.Name = "groupBox15";
+            this.groupBox15.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox15.Size = new System.Drawing.Size(382, 265);
+            this.groupBox15.TabIndex = 13;
+            this.groupBox15.TabStop = false;
+            this.groupBox15.Text = "上料气缸";
+            // 
+            // LB实盘卡盘缩回
+            // 
+            this.LB实盘卡盘缩回.BackColor = System.Drawing.Color.White;
+            this.LB实盘卡盘缩回.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB实盘卡盘缩回.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB实盘卡盘缩回.Location = new System.Drawing.Point(264, 119);
+            this.LB实盘卡盘缩回.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB实盘卡盘缩回.Name = "LB实盘卡盘缩回";
+            this.LB实盘卡盘缩回.Size = new System.Drawing.Size(8, 23);
+            this.LB实盘卡盘缩回.TabIndex = 81;
+            // 
+            // LB实盘卡盘伸出
+            // 
+            this.LB实盘卡盘伸出.BackColor = System.Drawing.Color.White;
+            this.LB实盘卡盘伸出.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB实盘卡盘伸出.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB实盘卡盘伸出.Location = new System.Drawing.Point(264, 90);
+            this.LB实盘卡盘伸出.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB实盘卡盘伸出.Name = "LB实盘卡盘伸出";
+            this.LB实盘卡盘伸出.Size = new System.Drawing.Size(8, 23);
+            this.LB实盘卡盘伸出.TabIndex = 80;
+            // 
+            // LB翻转气缸180
+            // 
+            this.LB翻转气缸180.BackColor = System.Drawing.Color.White;
+            this.LB翻转气缸180.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB翻转气缸180.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB翻转气缸180.Location = new System.Drawing.Point(264, 61);
+            this.LB翻转气缸180.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB翻转气缸180.Name = "LB翻转气缸180";
+            this.LB翻转气缸180.Size = new System.Drawing.Size(8, 23);
+            this.LB翻转气缸180.TabIndex = 79;
+            // 
+            // LB翻转气缸0
+            // 
+            this.LB翻转气缸0.BackColor = System.Drawing.Color.White;
+            this.LB翻转气缸0.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB翻转气缸0.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB翻转气缸0.Location = new System.Drawing.Point(264, 32);
+            this.LB翻转气缸0.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB翻转气缸0.Name = "LB翻转气缸0";
+            this.LB翻转气缸0.Size = new System.Drawing.Size(8, 23);
+            this.LB翻转气缸0.TabIndex = 78;
+            // 
+            // LBNG卡盘缩回
+            // 
+            this.LBNG卡盘缩回.BackColor = System.Drawing.Color.White;
+            this.LBNG卡盘缩回.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LBNG卡盘缩回.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBNG卡盘缩回.Location = new System.Drawing.Point(264, 176);
+            this.LBNG卡盘缩回.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LBNG卡盘缩回.Name = "LBNG卡盘缩回";
+            this.LBNG卡盘缩回.Size = new System.Drawing.Size(8, 23);
+            this.LBNG卡盘缩回.TabIndex = 84;
+            // 
+            // LB平移吸嘴34下降
+            // 
+            this.LB平移吸嘴34下降.BackColor = System.Drawing.Color.White;
+            this.LB平移吸嘴34下降.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB平移吸嘴34下降.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB平移吸嘴34下降.Location = new System.Drawing.Point(134, 234);
+            this.LB平移吸嘴34下降.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB平移吸嘴34下降.Name = "LB平移吸嘴34下降";
+            this.LB平移吸嘴34下降.Size = new System.Drawing.Size(8, 23);
+            this.LB平移吸嘴34下降.TabIndex = 77;
+            // 
+            // LBNG卡盘伸出
+            // 
+            this.LBNG卡盘伸出.BackColor = System.Drawing.Color.White;
+            this.LBNG卡盘伸出.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LBNG卡盘伸出.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBNG卡盘伸出.Location = new System.Drawing.Point(264, 147);
+            this.LBNG卡盘伸出.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LBNG卡盘伸出.Name = "LBNG卡盘伸出";
+            this.LBNG卡盘伸出.Size = new System.Drawing.Size(8, 23);
+            this.LBNG卡盘伸出.TabIndex = 83;
+            // 
+            // LB平移吸嘴34上升
+            // 
+            this.LB平移吸嘴34上升.BackColor = System.Drawing.Color.White;
+            this.LB平移吸嘴34上升.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB平移吸嘴34上升.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB平移吸嘴34上升.Location = new System.Drawing.Point(134, 205);
+            this.LB平移吸嘴34上升.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB平移吸嘴34上升.Name = "LB平移吸嘴34上升";
+            this.LB平移吸嘴34上升.Size = new System.Drawing.Size(8, 23);
+            this.LB平移吸嘴34上升.TabIndex = 76;
+            // 
+            // LB平移吸嘴12下降
+            // 
+            this.LB平移吸嘴12下降.BackColor = System.Drawing.Color.White;
+            this.LB平移吸嘴12下降.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB平移吸嘴12下降.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB平移吸嘴12下降.Location = new System.Drawing.Point(134, 176);
+            this.LB平移吸嘴12下降.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB平移吸嘴12下降.Name = "LB平移吸嘴12下降";
+            this.LB平移吸嘴12下降.Size = new System.Drawing.Size(8, 23);
+            this.LB平移吸嘴12下降.TabIndex = 75;
+            // 
+            // LB平移吸嘴12上升
+            // 
+            this.LB平移吸嘴12上升.BackColor = System.Drawing.Color.White;
+            this.LB平移吸嘴12上升.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB平移吸嘴12上升.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB平移吸嘴12上升.Location = new System.Drawing.Point(134, 146);
+            this.LB平移吸嘴12上升.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB平移吸嘴12上升.Name = "LB平移吸嘴12上升";
+            this.LB平移吸嘴12上升.Size = new System.Drawing.Size(8, 23);
+            this.LB平移吸嘴12上升.TabIndex = 74;
+            // 
+            // btnNG二级缩回
+            // 
+            this.btnNG二级缩回.BackColor = System.Drawing.SystemColors.Control;
+            this.btnNG二级缩回.Location = new System.Drawing.Point(270, 176);
+            this.btnNG二级缩回.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNG二级缩回.Name = "btnNG二级缩回";
+            this.btnNG二级缩回.Size = new System.Drawing.Size(101, 24);
+            this.btnNG二级缩回.TabIndex = 65;
+            this.btnNG二级缩回.Text = "NG卡盘缩回";
+            this.btnNG二级缩回.UseVisualStyleBackColor = true;
+            this.btnNG二级缩回.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnNG二级缩回_MouseDown);
+            this.btnNG二级缩回.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnNG二级缩回_MouseUp);
+            // 
+            // LB上料吸嘴2下降
+            // 
+            this.LB上料吸嘴2下降.BackColor = System.Drawing.Color.White;
+            this.LB上料吸嘴2下降.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB上料吸嘴2下降.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB上料吸嘴2下降.Location = new System.Drawing.Point(134, 119);
+            this.LB上料吸嘴2下降.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB上料吸嘴2下降.Name = "LB上料吸嘴2下降";
+            this.LB上料吸嘴2下降.Size = new System.Drawing.Size(8, 23);
+            this.LB上料吸嘴2下降.TabIndex = 73;
+            // 
+            // LB上料吸嘴2上升
+            // 
+            this.LB上料吸嘴2上升.BackColor = System.Drawing.Color.White;
+            this.LB上料吸嘴2上升.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB上料吸嘴2上升.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB上料吸嘴2上升.Location = new System.Drawing.Point(134, 90);
+            this.LB上料吸嘴2上升.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB上料吸嘴2上升.Name = "LB上料吸嘴2上升";
+            this.LB上料吸嘴2上升.Size = new System.Drawing.Size(8, 23);
+            this.LB上料吸嘴2上升.TabIndex = 72;
+            // 
+            // btnNG二级伸出
+            // 
+            this.btnNG二级伸出.BackColor = System.Drawing.SystemColors.Control;
+            this.btnNG二级伸出.Location = new System.Drawing.Point(270, 147);
+            this.btnNG二级伸出.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNG二级伸出.Name = "btnNG二级伸出";
+            this.btnNG二级伸出.Size = new System.Drawing.Size(101, 24);
+            this.btnNG二级伸出.TabIndex = 64;
+            this.btnNG二级伸出.Text = "NG卡盘伸出";
+            this.btnNG二级伸出.UseVisualStyleBackColor = true;
+            this.btnNG二级伸出.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnNG二级伸出_MouseDown);
+            this.btnNG二级伸出.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnNG二级伸出_MouseUp);
+            // 
+            // LB上料吸嘴1下降
+            // 
+            this.LB上料吸嘴1下降.BackColor = System.Drawing.Color.White;
+            this.LB上料吸嘴1下降.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB上料吸嘴1下降.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB上料吸嘴1下降.Location = new System.Drawing.Point(134, 61);
+            this.LB上料吸嘴1下降.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB上料吸嘴1下降.Name = "LB上料吸嘴1下降";
+            this.LB上料吸嘴1下降.Size = new System.Drawing.Size(8, 23);
+            this.LB上料吸嘴1下降.TabIndex = 71;
+            // 
+            // LB上料吸嘴1上升
+            // 
+            this.LB上料吸嘴1上升.BackColor = System.Drawing.Color.White;
+            this.LB上料吸嘴1上升.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB上料吸嘴1上升.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB上料吸嘴1上升.Location = new System.Drawing.Point(134, 32);
+            this.LB上料吸嘴1上升.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB上料吸嘴1上升.Name = "LB上料吸嘴1上升";
+            this.LB上料吸嘴1上升.Size = new System.Drawing.Size(8, 23);
+            this.LB上料吸嘴1上升.TabIndex = 70;
+            // 
+            // LB上料机械手张开
+            // 
+            this.LB上料机械手张开.BackColor = System.Drawing.Color.White;
+            this.LB上料机械手张开.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB上料机械手张开.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB上料机械手张开.Location = new System.Drawing.Point(8, 119);
+            this.LB上料机械手张开.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB上料机械手张开.Name = "LB上料机械手张开";
+            this.LB上料机械手张开.Size = new System.Drawing.Size(8, 23);
+            this.LB上料机械手张开.TabIndex = 65;
+            // 
+            // LB上料机械手夹紧
+            // 
+            this.LB上料机械手夹紧.BackColor = System.Drawing.Color.White;
+            this.LB上料机械手夹紧.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB上料机械手夹紧.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB上料机械手夹紧.Location = new System.Drawing.Point(8, 90);
+            this.LB上料机械手夹紧.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB上料机械手夹紧.Name = "LB上料机械手夹紧";
+            this.LB上料机械手夹紧.Size = new System.Drawing.Size(8, 23);
+            this.LB上料机械手夹紧.TabIndex = 64;
+            // 
+            // LB上料机械手下降
+            // 
+            this.LB上料机械手下降.BackColor = System.Drawing.Color.White;
+            this.LB上料机械手下降.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB上料机械手下降.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB上料机械手下降.Location = new System.Drawing.Point(8, 61);
+            this.LB上料机械手下降.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB上料机械手下降.Name = "LB上料机械手下降";
+            this.LB上料机械手下降.Size = new System.Drawing.Size(8, 23);
+            this.LB上料机械手下降.TabIndex = 63;
+            // 
+            // LB上料机械手上升
+            // 
+            this.LB上料机械手上升.BackColor = System.Drawing.Color.White;
+            this.LB上料机械手上升.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB上料机械手上升.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB上料机械手上升.Location = new System.Drawing.Point(8, 32);
+            this.LB上料机械手上升.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB上料机械手上升.Name = "LB上料机械手上升";
+            this.LB上料机械手上升.Size = new System.Drawing.Size(8, 23);
+            this.LB上料机械手上升.TabIndex = 62;
+            // 
+            // btn倒实二级缩回
+            // 
+            this.btn倒实二级缩回.BackColor = System.Drawing.SystemColors.Control;
+            this.btn倒实二级缩回.Location = new System.Drawing.Point(270, 119);
+            this.btn倒实二级缩回.Margin = new System.Windows.Forms.Padding(2);
+            this.btn倒实二级缩回.Name = "btn倒实二级缩回";
+            this.btn倒实二级缩回.Size = new System.Drawing.Size(101, 24);
+            this.btn倒实二级缩回.TabIndex = 61;
+            this.btn倒实二级缩回.Text = "实盘卡盘缩回";
+            this.btn倒实二级缩回.UseVisualStyleBackColor = true;
+            this.btn倒实二级缩回.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn倒实二级缩回_MouseDown);
+            this.btn倒实二级缩回.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn倒实二级缩回_MouseUp);
+            // 
+            // btn倒实二级伸出
+            // 
+            this.btn倒实二级伸出.BackColor = System.Drawing.SystemColors.Control;
+            this.btn倒实二级伸出.Location = new System.Drawing.Point(270, 89);
+            this.btn倒实二级伸出.Margin = new System.Windows.Forms.Padding(2);
+            this.btn倒实二级伸出.Name = "btn倒实二级伸出";
+            this.btn倒实二级伸出.Size = new System.Drawing.Size(101, 24);
+            this.btn倒实二级伸出.TabIndex = 60;
+            this.btn倒实二级伸出.Text = "实盘卡盘伸出";
+            this.btn倒实二级伸出.UseVisualStyleBackColor = true;
+            this.btn倒实二级伸出.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn倒实二级伸出_MouseDown);
+            this.btn倒实二级伸出.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn倒实二级伸出_MouseUp);
+            // 
+            // btn翻转气缸180
+            // 
+            this.btn翻转气缸180.BackColor = System.Drawing.SystemColors.Control;
+            this.btn翻转气缸180.Location = new System.Drawing.Point(270, 60);
+            this.btn翻转气缸180.Margin = new System.Windows.Forms.Padding(2);
+            this.btn翻转气缸180.Name = "btn翻转气缸180";
+            this.btn翻转气缸180.Size = new System.Drawing.Size(101, 24);
+            this.btn翻转气缸180.TabIndex = 57;
+            this.btn翻转气缸180.Text = "翻转气缸180°";
+            this.btn翻转气缸180.UseVisualStyleBackColor = true;
+            this.btn翻转气缸180.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn翻转气缸180_MouseDown);
+            this.btn翻转气缸180.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn翻转气缸180_MouseUp);
+            // 
+            // btn翻转气缸0
+            // 
+            this.btn翻转气缸0.BackColor = System.Drawing.SystemColors.Control;
+            this.btn翻转气缸0.Location = new System.Drawing.Point(270, 31);
+            this.btn翻转气缸0.Margin = new System.Windows.Forms.Padding(2);
+            this.btn翻转气缸0.Name = "btn翻转气缸0";
+            this.btn翻转气缸0.Size = new System.Drawing.Size(101, 24);
+            this.btn翻转气缸0.TabIndex = 56;
+            this.btn翻转气缸0.Text = "翻转气缸0°";
+            this.btn翻转气缸0.UseVisualStyleBackColor = true;
+            this.btn翻转气缸0.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn翻转气缸0_MouseDown);
+            this.btn翻转气缸0.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn翻转气缸0_MouseUp);
+            // 
+            // btn平移吸嘴34下降
+            // 
+            this.btn平移吸嘴34下降.BackColor = System.Drawing.SystemColors.Control;
+            this.btn平移吸嘴34下降.Location = new System.Drawing.Point(140, 233);
+            this.btn平移吸嘴34下降.Margin = new System.Windows.Forms.Padding(2);
+            this.btn平移吸嘴34下降.Name = "btn平移吸嘴34下降";
+            this.btn平移吸嘴34下降.Size = new System.Drawing.Size(101, 24);
+            this.btn平移吸嘴34下降.TabIndex = 55;
+            this.btn平移吸嘴34下降.Text = "平移吸嘴3/4下降";
+            this.btn平移吸嘴34下降.UseVisualStyleBackColor = true;
+            this.btn平移吸嘴34下降.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn平移吸嘴34下降_MouseDown);
+            this.btn平移吸嘴34下降.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn平移吸嘴34下降_MouseUp);
+            // 
+            // btn平移吸嘴34上升
+            // 
+            this.btn平移吸嘴34上升.BackColor = System.Drawing.SystemColors.Control;
+            this.btn平移吸嘴34上升.Location = new System.Drawing.Point(140, 204);
+            this.btn平移吸嘴34上升.Margin = new System.Windows.Forms.Padding(2);
+            this.btn平移吸嘴34上升.Name = "btn平移吸嘴34上升";
+            this.btn平移吸嘴34上升.Size = new System.Drawing.Size(101, 24);
+            this.btn平移吸嘴34上升.TabIndex = 54;
+            this.btn平移吸嘴34上升.Text = "平移吸嘴3/4上升";
+            this.btn平移吸嘴34上升.UseVisualStyleBackColor = true;
+            this.btn平移吸嘴34上升.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn平移吸嘴34上升_MouseDown);
+            this.btn平移吸嘴34上升.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn平移吸嘴34上升_MouseUp);
+            // 
+            // btn平移吸嘴12下降
+            // 
+            this.btn平移吸嘴12下降.BackColor = System.Drawing.SystemColors.Control;
+            this.btn平移吸嘴12下降.Location = new System.Drawing.Point(140, 175);
+            this.btn平移吸嘴12下降.Margin = new System.Windows.Forms.Padding(2);
+            this.btn平移吸嘴12下降.Name = "btn平移吸嘴12下降";
+            this.btn平移吸嘴12下降.Size = new System.Drawing.Size(101, 24);
+            this.btn平移吸嘴12下降.TabIndex = 53;
+            this.btn平移吸嘴12下降.Text = "平移吸嘴1/2下降";
+            this.btn平移吸嘴12下降.UseVisualStyleBackColor = true;
+            this.btn平移吸嘴12下降.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn平移吸嘴12下降_MouseDown);
+            this.btn平移吸嘴12下降.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn平移吸嘴12下降_MouseUp);
+            // 
+            // btn平移吸嘴12上升
+            // 
+            this.btn平移吸嘴12上升.BackColor = System.Drawing.SystemColors.Control;
+            this.btn平移吸嘴12上升.Location = new System.Drawing.Point(140, 146);
+            this.btn平移吸嘴12上升.Margin = new System.Windows.Forms.Padding(2);
+            this.btn平移吸嘴12上升.Name = "btn平移吸嘴12上升";
+            this.btn平移吸嘴12上升.Size = new System.Drawing.Size(101, 24);
+            this.btn平移吸嘴12上升.TabIndex = 52;
+            this.btn平移吸嘴12上升.Text = "平移吸嘴1/2上升";
+            this.btn平移吸嘴12上升.UseVisualStyleBackColor = true;
+            this.btn平移吸嘴12上升.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn平移吸嘴12上升_MouseDown);
+            this.btn平移吸嘴12上升.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn平移吸嘴12上升_MouseUp);
+            // 
+            // btn上料吸嘴2下降
+            // 
+            this.btn上料吸嘴2下降.BackColor = System.Drawing.SystemColors.Control;
+            this.btn上料吸嘴2下降.Location = new System.Drawing.Point(140, 118);
+            this.btn上料吸嘴2下降.Margin = new System.Windows.Forms.Padding(2);
+            this.btn上料吸嘴2下降.Name = "btn上料吸嘴2下降";
+            this.btn上料吸嘴2下降.Size = new System.Drawing.Size(101, 24);
+            this.btn上料吸嘴2下降.TabIndex = 51;
+            this.btn上料吸嘴2下降.Text = "上料吸嘴2下降";
+            this.btn上料吸嘴2下降.UseVisualStyleBackColor = true;
+            this.btn上料吸嘴2下降.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn上料吸嘴2下降_MouseDown);
+            this.btn上料吸嘴2下降.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn上料吸嘴2下降_MouseUp);
+            // 
+            // btn上料吸嘴2上升
+            // 
+            this.btn上料吸嘴2上升.BackColor = System.Drawing.SystemColors.Control;
+            this.btn上料吸嘴2上升.Location = new System.Drawing.Point(140, 89);
+            this.btn上料吸嘴2上升.Margin = new System.Windows.Forms.Padding(2);
+            this.btn上料吸嘴2上升.Name = "btn上料吸嘴2上升";
+            this.btn上料吸嘴2上升.Size = new System.Drawing.Size(101, 24);
+            this.btn上料吸嘴2上升.TabIndex = 50;
+            this.btn上料吸嘴2上升.Text = "上料吸嘴2上升";
+            this.btn上料吸嘴2上升.UseVisualStyleBackColor = true;
+            this.btn上料吸嘴2上升.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn上料吸嘴2上升_MouseDown);
+            this.btn上料吸嘴2上升.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn上料吸嘴2上升_MouseUp);
+            // 
+            // btn上料吸嘴1下降
+            // 
+            this.btn上料吸嘴1下降.BackColor = System.Drawing.SystemColors.Control;
+            this.btn上料吸嘴1下降.Location = new System.Drawing.Point(140, 60);
+            this.btn上料吸嘴1下降.Margin = new System.Windows.Forms.Padding(2);
+            this.btn上料吸嘴1下降.Name = "btn上料吸嘴1下降";
+            this.btn上料吸嘴1下降.Size = new System.Drawing.Size(101, 24);
+            this.btn上料吸嘴1下降.TabIndex = 49;
+            this.btn上料吸嘴1下降.Text = "上料吸嘴1下降";
+            this.btn上料吸嘴1下降.UseVisualStyleBackColor = true;
+            this.btn上料吸嘴1下降.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn上料吸嘴1下降_MouseDown);
+            this.btn上料吸嘴1下降.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn上料吸嘴1下降_MouseUp);
+            // 
+            // btn上料吸嘴1上升
+            // 
+            this.btn上料吸嘴1上升.BackColor = System.Drawing.SystemColors.Control;
+            this.btn上料吸嘴1上升.Location = new System.Drawing.Point(140, 31);
+            this.btn上料吸嘴1上升.Margin = new System.Windows.Forms.Padding(2);
+            this.btn上料吸嘴1上升.Name = "btn上料吸嘴1上升";
+            this.btn上料吸嘴1上升.Size = new System.Drawing.Size(101, 24);
+            this.btn上料吸嘴1上升.TabIndex = 48;
+            this.btn上料吸嘴1上升.Text = "上料吸嘴1上升";
+            this.btn上料吸嘴1上升.UseVisualStyleBackColor = true;
+            this.btn上料吸嘴1上升.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn上料吸嘴1上升_MouseDown);
+            this.btn上料吸嘴1上升.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn上料吸嘴1上升_MouseUp);
+            // 
+            // btn上料机械手缩回
+            // 
+            this.btn上料机械手缩回.BackColor = System.Drawing.SystemColors.Control;
+            this.btn上料机械手缩回.Location = new System.Drawing.Point(14, 118);
+            this.btn上料机械手缩回.Margin = new System.Windows.Forms.Padding(2);
+            this.btn上料机械手缩回.Name = "btn上料机械手缩回";
+            this.btn上料机械手缩回.Size = new System.Drawing.Size(101, 24);
+            this.btn上料机械手缩回.TabIndex = 43;
+            this.btn上料机械手缩回.Text = "上料机械手张开";
+            this.btn上料机械手缩回.UseVisualStyleBackColor = true;
+            this.btn上料机械手缩回.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn上料机械手缩回_MouseDown);
+            this.btn上料机械手缩回.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn上料机械手缩回_MouseUp);
+            // 
+            // btn上料机械手伸出
+            // 
+            this.btn上料机械手伸出.BackColor = System.Drawing.SystemColors.Control;
+            this.btn上料机械手伸出.Location = new System.Drawing.Point(14, 89);
+            this.btn上料机械手伸出.Margin = new System.Windows.Forms.Padding(2);
+            this.btn上料机械手伸出.Name = "btn上料机械手伸出";
+            this.btn上料机械手伸出.Size = new System.Drawing.Size(101, 24);
+            this.btn上料机械手伸出.TabIndex = 42;
+            this.btn上料机械手伸出.Text = "上料机械手夹紧";
+            this.btn上料机械手伸出.UseVisualStyleBackColor = true;
+            this.btn上料机械手伸出.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn上料机械手伸出_MouseDown);
+            this.btn上料机械手伸出.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn上料机械手伸出_MouseUp);
+            // 
+            // btn上料机械手下降
+            // 
+            this.btn上料机械手下降.BackColor = System.Drawing.SystemColors.Control;
+            this.btn上料机械手下降.Location = new System.Drawing.Point(14, 60);
+            this.btn上料机械手下降.Margin = new System.Windows.Forms.Padding(2);
+            this.btn上料机械手下降.Name = "btn上料机械手下降";
+            this.btn上料机械手下降.Size = new System.Drawing.Size(101, 24);
+            this.btn上料机械手下降.TabIndex = 41;
+            this.btn上料机械手下降.Text = "上料机械手下降";
+            this.btn上料机械手下降.UseVisualStyleBackColor = true;
+            this.btn上料机械手下降.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn上料机械手下降_MouseDown);
+            this.btn上料机械手下降.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn上料机械手下降_MouseUp);
+            // 
+            // btn上料机械手上升
+            // 
+            this.btn上料机械手上升.BackColor = System.Drawing.SystemColors.Control;
+            this.btn上料机械手上升.Location = new System.Drawing.Point(14, 31);
+            this.btn上料机械手上升.Margin = new System.Windows.Forms.Padding(2);
+            this.btn上料机械手上升.Name = "btn上料机械手上升";
+            this.btn上料机械手上升.Size = new System.Drawing.Size(101, 24);
+            this.btn上料机械手上升.TabIndex = 40;
+            this.btn上料机械手上升.Text = "上料机械手上升";
+            this.btn上料机械手上升.UseVisualStyleBackColor = true;
+            this.btn上料机械手上升.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn上料机械手上升_MouseDown);
+            this.btn上料机械手上升.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn上料机械手上升_MouseUp);
+            // 
+            // tabPage7
+            // 
+            this.tabPage7.AutoScroll = true;
+            this.tabPage7.Controls.Add(this.groupBox76);
+            this.tabPage7.Controls.Add(this.groupBox14);
+            this.tabPage7.Controls.Add(this.groupBox68);
+            this.tabPage7.Controls.Add(this.groupBox67);
+            this.tabPage7.Controls.Add(this.groupBox66);
+            this.tabPage7.Controls.Add(this.groupBox32);
+            this.tabPage7.Controls.Add(this.groupBox30);
+            this.tabPage7.Controls.Add(this.groupBox29);
+            this.tabPage7.Controls.Add(this.groupBox31);
+            this.tabPage7.Controls.Add(this.groupBox27);
+            this.tabPage7.Controls.Add(this.groupBox28);
+            this.tabPage7.Controls.Add(this.groupBox26);
+            this.tabPage7.Controls.Add(this.groupBox25);
+            this.tabPage7.Controls.Add(this.groupBox24);
+            this.tabPage7.Controls.Add(this.groupBox23);
+            this.tabPage7.Controls.Add(this.groupBox22);
+            this.tabPage7.Controls.Add(this.groupBox21);
+            this.tabPage7.Location = new System.Drawing.Point(4, 44);
+            this.tabPage7.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage7.Size = new System.Drawing.Size(1276, 756);
+            this.tabPage7.TabIndex = 6;
+            this.tabPage7.Text = "手动电机1";
+            this.tabPage7.UseVisualStyleBackColor = true;
+            // 
+            // groupBox76
+            // 
+            this.groupBox76.Controls.Add(this.btn下视觉2标定复位);
+            this.groupBox76.Controls.Add(this.btn下视觉2标定有效);
+            this.groupBox76.Controls.Add(this.label105);
+            this.groupBox76.Controls.Add(this.label230);
+            this.groupBox76.Controls.Add(this.label232);
+            this.groupBox76.Controls.Add(this.txt下视觉2偏移θ);
+            this.groupBox76.Controls.Add(this.txt下视觉2偏移Y);
+            this.groupBox76.Controls.Add(this.txt下视觉2偏移X);
+            this.groupBox76.Controls.Add(this.btn下视觉2对位);
+            this.groupBox76.Controls.Add(this.btn下视觉2标定开始);
+            this.groupBox76.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox76.Location = new System.Drawing.Point(214, 403);
+            this.groupBox76.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox76.Name = "groupBox76";
+            this.groupBox76.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox76.Size = new System.Drawing.Size(191, 172);
+            this.groupBox76.TabIndex = 104;
+            this.groupBox76.TabStop = false;
+            this.groupBox76.Text = "下视觉2--上料部分";
+            // 
+            // btn下视觉2标定复位
+            // 
+            this.btn下视觉2标定复位.BackColor = System.Drawing.SystemColors.Control;
+            this.btn下视觉2标定复位.Location = new System.Drawing.Point(107, 29);
+            this.btn下视觉2标定复位.Margin = new System.Windows.Forms.Padding(2);
+            this.btn下视觉2标定复位.Name = "btn下视觉2标定复位";
+            this.btn下视觉2标定复位.Size = new System.Drawing.Size(78, 24);
+            this.btn下视觉2标定复位.TabIndex = 60;
+            this.btn下视觉2标定复位.Text = "2标定复位";
+            this.btn下视觉2标定复位.UseVisualStyleBackColor = true;
+            this.btn下视觉2标定复位.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn下视觉2标定复位_MouseDown);
+            this.btn下视觉2标定复位.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn下视觉2标定复位_MouseUp);
+            // 
+            // btn下视觉2标定有效
+            // 
+            this.btn下视觉2标定有效.BackColor = System.Drawing.SystemColors.Control;
+            this.btn下视觉2标定有效.Location = new System.Drawing.Point(11, 29);
+            this.btn下视觉2标定有效.Margin = new System.Windows.Forms.Padding(2);
+            this.btn下视觉2标定有效.Name = "btn下视觉2标定有效";
+            this.btn下视觉2标定有效.Size = new System.Drawing.Size(78, 24);
+            this.btn下视觉2标定有效.TabIndex = 59;
+            this.btn下视觉2标定有效.Text = "1标定有效";
+            this.btn下视觉2标定有效.UseVisualStyleBackColor = true;
+            this.btn下视觉2标定有效.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn下视觉标定有效_MouseDown);
+            this.btn下视觉2标定有效.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn下视觉标定有效_MouseUp);
+            // 
+            // label105
+            // 
+            this.label105.AutoSize = true;
+            this.label105.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label105.Location = new System.Drawing.Point(152, 125);
+            this.label105.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label105.Name = "label105";
+            this.label105.Size = new System.Drawing.Size(13, 15);
+            this.label105.TabIndex = 58;
+            this.label105.Text = "θ";
+            // 
+            // label230
+            // 
+            this.label230.AutoSize = true;
+            this.label230.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label230.Location = new System.Drawing.Point(88, 125);
+            this.label230.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label230.Name = "label230";
+            this.label230.Size = new System.Drawing.Size(15, 15);
+            this.label230.TabIndex = 57;
+            this.label230.Text = "Y";
+            // 
+            // label232
+            // 
+            this.label232.AutoSize = true;
+            this.label232.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label232.Location = new System.Drawing.Point(24, 125);
+            this.label232.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label232.Name = "label232";
+            this.label232.Size = new System.Drawing.Size(16, 15);
+            this.label232.TabIndex = 56;
+            this.label232.Text = "X";
+            // 
+            // txt下视觉2偏移θ
+            // 
+            this.txt下视觉2偏移θ.Location = new System.Drawing.Point(136, 144);
+            this.txt下视觉2偏移θ.Margin = new System.Windows.Forms.Padding(2);
+            this.txt下视觉2偏移θ.Name = "txt下视觉2偏移θ";
+            this.txt下视觉2偏移θ.Size = new System.Drawing.Size(49, 21);
+            this.txt下视觉2偏移θ.TabIndex = 55;
+            // 
+            // txt下视觉2偏移Y
+            // 
+            this.txt下视觉2偏移Y.Location = new System.Drawing.Point(72, 144);
+            this.txt下视觉2偏移Y.Margin = new System.Windows.Forms.Padding(2);
+            this.txt下视觉2偏移Y.Name = "txt下视觉2偏移Y";
+            this.txt下视觉2偏移Y.Size = new System.Drawing.Size(49, 21);
+            this.txt下视觉2偏移Y.TabIndex = 54;
+            // 
+            // txt下视觉2偏移X
+            // 
+            this.txt下视觉2偏移X.Location = new System.Drawing.Point(8, 144);
+            this.txt下视觉2偏移X.Margin = new System.Windows.Forms.Padding(2);
+            this.txt下视觉2偏移X.Name = "txt下视觉2偏移X";
+            this.txt下视觉2偏移X.Size = new System.Drawing.Size(49, 21);
+            this.txt下视觉2偏移X.TabIndex = 53;
+            // 
+            // btn下视觉2对位
+            // 
+            this.btn下视觉2对位.BackColor = System.Drawing.SystemColors.Control;
+            this.btn下视觉2对位.Location = new System.Drawing.Point(107, 71);
+            this.btn下视觉2对位.Margin = new System.Windows.Forms.Padding(2);
+            this.btn下视觉2对位.Name = "btn下视觉2对位";
+            this.btn下视觉2对位.Size = new System.Drawing.Size(78, 24);
+            this.btn下视觉2对位.TabIndex = 45;
+            this.btn下视觉2对位.Text = "对位";
+            this.btn下视觉2对位.UseVisualStyleBackColor = true;
+            this.btn下视觉2对位.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn下视觉2对位_MouseDown);
+            this.btn下视觉2对位.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn下视觉2对位_MouseUp);
+            // 
+            // btn下视觉2标定开始
+            // 
+            this.btn下视觉2标定开始.BackColor = System.Drawing.SystemColors.Control;
+            this.btn下视觉2标定开始.Location = new System.Drawing.Point(11, 71);
+            this.btn下视觉2标定开始.Margin = new System.Windows.Forms.Padding(2);
+            this.btn下视觉2标定开始.Name = "btn下视觉2标定开始";
+            this.btn下视觉2标定开始.Size = new System.Drawing.Size(78, 24);
+            this.btn下视觉2标定开始.TabIndex = 44;
+            this.btn下视觉2标定开始.Text = "3标定开始";
+            this.btn下视觉2标定开始.UseVisualStyleBackColor = true;
+            this.btn下视觉2标定开始.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn下视觉2标定开始_MouseDown);
+            this.btn下视觉2标定开始.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn下视觉2标定开始_MouseUp);
+            // 
             // groupBox14
             // 
+            this.groupBox14.Controls.Add(this.label103);
+            this.groupBox14.Controls.Add(this.label102);
             this.groupBox14.Controls.Add(this.label67);
             this.groupBox14.Controls.Add(this.CB_选择夹爪);
             this.groupBox14.Controls.Add(this.label66);
@@ -2468,14 +5189,38 @@
             this.groupBox14.Controls.Add(this.txt计算偏移X);
             this.groupBox14.Controls.Add(this.btn搬运X移动);
             this.groupBox14.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox14.Location = new System.Drawing.Point(627, 555);
+            this.groupBox14.Location = new System.Drawing.Point(409, 403);
             this.groupBox14.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox14.Name = "groupBox14";
             this.groupBox14.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox14.Size = new System.Drawing.Size(166, 172);
-            this.groupBox14.TabIndex = 92;
+            this.groupBox14.Size = new System.Drawing.Size(189, 172);
+            this.groupBox14.TabIndex = 103;
             this.groupBox14.TabStop = false;
             this.groupBox14.Text = "视觉补偿位置";
+            // 
+            // label103
+            // 
+            this.label103.AutoSize = true;
+            this.label103.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label103.ForeColor = System.Drawing.Color.Red;
+            this.label103.Location = new System.Drawing.Point(6, 146);
+            this.label103.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label103.Name = "label103";
+            this.label103.Size = new System.Drawing.Size(13, 15);
+            this.label103.TabIndex = 229;
+            this.label103.Text = "2";
+            // 
+            // label102
+            // 
+            this.label102.AutoSize = true;
+            this.label102.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label102.ForeColor = System.Drawing.Color.Red;
+            this.label102.Location = new System.Drawing.Point(6, 110);
+            this.label102.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label102.Name = "label102";
+            this.label102.Size = new System.Drawing.Size(13, 15);
+            this.label102.TabIndex = 228;
+            this.label102.Text = "1";
             // 
             // label67
             // 
@@ -2498,7 +5243,6 @@
             this.CB_选择夹爪.Name = "CB_选择夹爪";
             this.CB_选择夹爪.Size = new System.Drawing.Size(57, 23);
             this.CB_选择夹爪.TabIndex = 224;
-            this.CB_选择夹爪.SelectedIndexChanged += new System.EventHandler(this.CB_选择夹爪_SelectedIndexChanged);
             // 
             // label66
             // 
@@ -2595,19 +5339,19 @@
             this.groupBox68.Controls.Add(this.txt上视觉偏移Y);
             this.groupBox68.Controls.Add(this.txt上视觉偏移X);
             this.groupBox68.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox68.Location = new System.Drawing.Point(415, 555);
+            this.groupBox68.Location = new System.Drawing.Point(18, 575);
             this.groupBox68.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox68.Name = "groupBox68";
             this.groupBox68.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox68.Size = new System.Drawing.Size(208, 172);
-            this.groupBox68.TabIndex = 91;
+            this.groupBox68.Size = new System.Drawing.Size(192, 182);
+            this.groupBox68.TabIndex = 102;
             this.groupBox68.TabStop = false;
-            this.groupBox68.Text = "上视觉2";
+            this.groupBox68.Text = "上视觉2-测试部分";
             // 
             // btn上视觉标定有效
             // 
             this.btn上视觉标定有效.BackColor = System.Drawing.SystemColors.Control;
-            this.btn上视觉标定有效.Location = new System.Drawing.Point(12, 29);
+            this.btn上视觉标定有效.Location = new System.Drawing.Point(10, 29);
             this.btn上视觉标定有效.Margin = new System.Windows.Forms.Padding(2);
             this.btn上视觉标定有效.Name = "btn上视觉标定有效";
             this.btn上视觉标定有效.Size = new System.Drawing.Size(78, 24);
@@ -2620,7 +5364,7 @@
             // btn上视觉标定复位
             // 
             this.btn上视觉标定复位.BackColor = System.Drawing.SystemColors.Control;
-            this.btn上视觉标定复位.Location = new System.Drawing.Point(123, 29);
+            this.btn上视觉标定复位.Location = new System.Drawing.Point(106, 29);
             this.btn上视觉标定复位.Margin = new System.Windows.Forms.Padding(2);
             this.btn上视觉标定复位.Name = "btn上视觉标定复位";
             this.btn上视觉标定复位.Size = new System.Drawing.Size(78, 24);
@@ -2634,7 +5378,7 @@
             // 
             this.label339.AutoSize = true;
             this.label339.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label339.Location = new System.Drawing.Point(158, 128);
+            this.label339.Location = new System.Drawing.Point(153, 128);
             this.label339.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label339.Name = "label339";
             this.label339.Size = new System.Drawing.Size(13, 15);
@@ -2644,7 +5388,7 @@
             // btn上视觉2外观
             // 
             this.btn上视觉2外观.BackColor = System.Drawing.SystemColors.Control;
-            this.btn上视觉2外观.Location = new System.Drawing.Point(123, 102);
+            this.btn上视觉2外观.Location = new System.Drawing.Point(106, 102);
             this.btn上视觉2外观.Margin = new System.Windows.Forms.Padding(2);
             this.btn上视觉2外观.Name = "btn上视觉2外观";
             this.btn上视觉2外观.Size = new System.Drawing.Size(78, 24);
@@ -2668,7 +5412,7 @@
             // btn上视觉2对位
             // 
             this.btn上视觉2对位.BackColor = System.Drawing.SystemColors.Control;
-            this.btn上视觉2对位.Location = new System.Drawing.Point(123, 71);
+            this.btn上视觉2对位.Location = new System.Drawing.Point(106, 71);
             this.btn上视觉2对位.Margin = new System.Windows.Forms.Padding(2);
             this.btn上视觉2对位.Name = "btn上视觉2对位";
             this.btn上视觉2对位.Size = new System.Drawing.Size(78, 24);
@@ -2692,7 +5436,7 @@
             // btn上视觉标定开始
             // 
             this.btn上视觉标定开始.BackColor = System.Drawing.SystemColors.Control;
-            this.btn上视觉标定开始.Location = new System.Drawing.Point(12, 71);
+            this.btn上视觉标定开始.Location = new System.Drawing.Point(10, 71);
             this.btn上视觉标定开始.Margin = new System.Windows.Forms.Padding(2);
             this.btn上视觉标定开始.Name = "btn上视觉标定开始";
             this.btn上视觉标定开始.Size = new System.Drawing.Size(78, 24);
@@ -2704,7 +5448,7 @@
             // 
             // txt上视觉偏移θ
             // 
-            this.txt上视觉偏移θ.Location = new System.Drawing.Point(143, 147);
+            this.txt上视觉偏移θ.Location = new System.Drawing.Point(137, 147);
             this.txt上视觉偏移θ.Margin = new System.Windows.Forms.Padding(2);
             this.txt上视觉偏移θ.Name = "txt上视觉偏移θ";
             this.txt上视觉偏移θ.Size = new System.Drawing.Size(49, 21);
@@ -2712,7 +5456,7 @@
             // 
             // txt上视觉偏移Y
             // 
-            this.txt上视觉偏移Y.Location = new System.Drawing.Point(77, 147);
+            this.txt上视觉偏移Y.Location = new System.Drawing.Point(74, 147);
             this.txt上视觉偏移Y.Margin = new System.Windows.Forms.Padding(2);
             this.txt上视觉偏移Y.Name = "txt上视觉偏移Y";
             this.txt上视觉偏移Y.Size = new System.Drawing.Size(49, 21);
@@ -2739,19 +5483,19 @@
             this.groupBox67.Controls.Add(this.btn下视觉对位);
             this.groupBox67.Controls.Add(this.btn下视觉标定开始);
             this.groupBox67.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox67.Location = new System.Drawing.Point(212, 555);
+            this.groupBox67.Location = new System.Drawing.Point(214, 575);
             this.groupBox67.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox67.Name = "groupBox67";
             this.groupBox67.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox67.Size = new System.Drawing.Size(197, 172);
-            this.groupBox67.TabIndex = 90;
+            this.groupBox67.Size = new System.Drawing.Size(191, 182);
+            this.groupBox67.TabIndex = 101;
             this.groupBox67.TabStop = false;
-            this.groupBox67.Text = "下视觉";
+            this.groupBox67.Text = "下视觉1-测试部分";
             // 
             // btn下视觉标定复位
             // 
             this.btn下视觉标定复位.BackColor = System.Drawing.SystemColors.Control;
-            this.btn下视觉标定复位.Location = new System.Drawing.Point(115, 29);
+            this.btn下视觉标定复位.Location = new System.Drawing.Point(103, 29);
             this.btn下视觉标定复位.Margin = new System.Windows.Forms.Padding(2);
             this.btn下视觉标定复位.Name = "btn下视觉标定复位";
             this.btn下视觉标定复位.Size = new System.Drawing.Size(78, 24);
@@ -2764,7 +5508,7 @@
             // btn下视觉标定有效
             // 
             this.btn下视觉标定有效.BackColor = System.Drawing.SystemColors.Control;
-            this.btn下视觉标定有效.Location = new System.Drawing.Point(4, 29);
+            this.btn下视觉标定有效.Location = new System.Drawing.Point(9, 29);
             this.btn下视觉标定有效.Margin = new System.Windows.Forms.Padding(2);
             this.btn下视觉标定有效.Name = "btn下视觉标定有效";
             this.btn下视觉标定有效.Size = new System.Drawing.Size(78, 24);
@@ -2778,7 +5522,7 @@
             // 
             this.label337.AutoSize = true;
             this.label337.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label337.Location = new System.Drawing.Point(160, 128);
+            this.label337.Location = new System.Drawing.Point(151, 127);
             this.label337.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label337.Name = "label337";
             this.label337.Size = new System.Drawing.Size(13, 15);
@@ -2789,7 +5533,7 @@
             // 
             this.label322.AutoSize = true;
             this.label322.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label322.Location = new System.Drawing.Point(95, 128);
+            this.label322.Location = new System.Drawing.Point(89, 129);
             this.label322.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label322.Name = "label322";
             this.label322.Size = new System.Drawing.Size(15, 15);
@@ -2800,7 +5544,7 @@
             // 
             this.label290.AutoSize = true;
             this.label290.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label290.Location = new System.Drawing.Point(29, 128);
+            this.label290.Location = new System.Drawing.Point(25, 129);
             this.label290.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label290.Name = "label290";
             this.label290.Size = new System.Drawing.Size(16, 15);
@@ -2809,7 +5553,7 @@
             // 
             // txt下视觉偏移θ
             // 
-            this.txt下视觉偏移θ.Location = new System.Drawing.Point(145, 147);
+            this.txt下视觉偏移θ.Location = new System.Drawing.Point(135, 148);
             this.txt下视觉偏移θ.Margin = new System.Windows.Forms.Padding(2);
             this.txt下视觉偏移θ.Name = "txt下视觉偏移θ";
             this.txt下视觉偏移θ.Size = new System.Drawing.Size(49, 21);
@@ -2817,7 +5561,7 @@
             // 
             // txt下视觉偏移Y
             // 
-            this.txt下视觉偏移Y.Location = new System.Drawing.Point(79, 147);
+            this.txt下视觉偏移Y.Location = new System.Drawing.Point(72, 148);
             this.txt下视觉偏移Y.Margin = new System.Windows.Forms.Padding(2);
             this.txt下视觉偏移Y.Name = "txt下视觉偏移Y";
             this.txt下视觉偏移Y.Size = new System.Drawing.Size(49, 21);
@@ -2825,7 +5569,7 @@
             // 
             // txt下视觉偏移X
             // 
-            this.txt下视觉偏移X.Location = new System.Drawing.Point(13, 147);
+            this.txt下视觉偏移X.Location = new System.Drawing.Point(9, 148);
             this.txt下视觉偏移X.Margin = new System.Windows.Forms.Padding(2);
             this.txt下视觉偏移X.Name = "txt下视觉偏移X";
             this.txt下视觉偏移X.Size = new System.Drawing.Size(49, 21);
@@ -2834,7 +5578,7 @@
             // btn下视觉对位
             // 
             this.btn下视觉对位.BackColor = System.Drawing.SystemColors.Control;
-            this.btn下视觉对位.Location = new System.Drawing.Point(115, 71);
+            this.btn下视觉对位.Location = new System.Drawing.Point(103, 71);
             this.btn下视觉对位.Margin = new System.Windows.Forms.Padding(2);
             this.btn下视觉对位.Name = "btn下视觉对位";
             this.btn下视觉对位.Size = new System.Drawing.Size(78, 24);
@@ -2847,7 +5591,7 @@
             // btn下视觉标定开始
             // 
             this.btn下视觉标定开始.BackColor = System.Drawing.SystemColors.Control;
-            this.btn下视觉标定开始.Location = new System.Drawing.Point(4, 71);
+            this.btn下视觉标定开始.Location = new System.Drawing.Point(9, 71);
             this.btn下视觉标定开始.Margin = new System.Windows.Forms.Padding(2);
             this.btn下视觉标定开始.Name = "btn下视觉标定开始";
             this.btn下视觉标定开始.Size = new System.Drawing.Size(78, 24);
@@ -2863,18 +5607,18 @@
             this.groupBox66.Controls.Add(this.btn二维码);
             this.groupBox66.Controls.Add(this.btn条形码);
             this.groupBox66.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox66.Location = new System.Drawing.Point(26, 555);
+            this.groupBox66.Location = new System.Drawing.Point(19, 407);
             this.groupBox66.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox66.Name = "groupBox66";
             this.groupBox66.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox66.Size = new System.Drawing.Size(181, 172);
-            this.groupBox66.TabIndex = 89;
+            this.groupBox66.Size = new System.Drawing.Size(191, 168);
+            this.groupBox66.TabIndex = 100;
             this.groupBox66.TabStop = false;
-            this.groupBox66.Text = "上视觉1";
+            this.groupBox66.Text = "上视觉1--上料部分";
             // 
             // txt扫码信息
             // 
-            this.txt扫码信息.Location = new System.Drawing.Point(4, 143);
+            this.txt扫码信息.Location = new System.Drawing.Point(8, 140);
             this.txt扫码信息.Margin = new System.Windows.Forms.Padding(2);
             this.txt扫码信息.Name = "txt扫码信息";
             this.txt扫码信息.Size = new System.Drawing.Size(169, 21);
@@ -2883,20 +5627,18 @@
             // btn二维码
             // 
             this.btn二维码.BackColor = System.Drawing.SystemColors.Control;
-            this.btn二维码.Location = new System.Drawing.Point(56, 70);
+            this.btn二维码.Location = new System.Drawing.Point(56, 68);
             this.btn二维码.Margin = new System.Windows.Forms.Padding(2);
             this.btn二维码.Name = "btn二维码";
             this.btn二维码.Size = new System.Drawing.Size(78, 24);
             this.btn二维码.TabIndex = 45;
             this.btn二维码.Text = "二维码";
             this.btn二维码.UseVisualStyleBackColor = true;
-            this.btn二维码.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn二维码_MouseDown);
-            this.btn二维码.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn二维码_MouseUp);
             // 
             // btn条形码
             // 
             this.btn条形码.BackColor = System.Drawing.SystemColors.Control;
-            this.btn条形码.Location = new System.Drawing.Point(56, 29);
+            this.btn条形码.Location = new System.Drawing.Point(56, 25);
             this.btn条形码.Margin = new System.Windows.Forms.Padding(2);
             this.btn条形码.Name = "btn条形码";
             this.btn条形码.Size = new System.Drawing.Size(78, 24);
@@ -2905,1459 +5647,6 @@
             this.btn条形码.UseVisualStyleBackColor = true;
             this.btn条形码.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn条形码_MouseDown);
             this.btn条形码.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn条形码_MouseUp);
-            // 
-            // groupBox20
-            // 
-            this.groupBox20.Controls.Add(this.btnEFU断电);
-            this.groupBox20.Controls.Add(this.btn工位2风扇断电);
-            this.groupBox20.Controls.Add(this.btn工位1风扇断电);
-            this.groupBox20.Controls.Add(this.btnEFU上电);
-            this.groupBox20.Controls.Add(this.btn工位4风扇断电);
-            this.groupBox20.Controls.Add(this.btn工位3风扇断电);
-            this.groupBox20.Controls.Add(this.btn工位4风扇上电);
-            this.groupBox20.Controls.Add(this.btn工位3风扇上电);
-            this.groupBox20.Controls.Add(this.btn工位2风扇上电);
-            this.groupBox20.Controls.Add(this.btn工位1风扇上电);
-            this.groupBox20.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox20.Location = new System.Drawing.Point(412, 286);
-            this.groupBox20.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox20.Name = "groupBox20";
-            this.groupBox20.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox20.Size = new System.Drawing.Size(382, 265);
-            this.groupBox20.TabIndex = 65;
-            this.groupBox20.TabStop = false;
-            this.groupBox20.Text = "风扇";
-            // 
-            // btnEFU断电
-            // 
-            this.btnEFU断电.BackColor = System.Drawing.SystemColors.Control;
-            this.btnEFU断电.Location = new System.Drawing.Point(148, 146);
-            this.btnEFU断电.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEFU断电.Name = "btnEFU断电";
-            this.btnEFU断电.Size = new System.Drawing.Size(101, 24);
-            this.btnEFU断电.TabIndex = 57;
-            this.btnEFU断电.Text = "EFU断电";
-            this.btnEFU断电.UseVisualStyleBackColor = true;
-            this.btnEFU断电.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnEFU断电_MouseDown);
-            this.btnEFU断电.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnEFU断电_MouseUp);
-            // 
-            // btn工位2风扇断电
-            // 
-            this.btn工位2风扇断电.BackColor = System.Drawing.SystemColors.Control;
-            this.btn工位2风扇断电.Location = new System.Drawing.Point(148, 59);
-            this.btn工位2风扇断电.Margin = new System.Windows.Forms.Padding(2);
-            this.btn工位2风扇断电.Name = "btn工位2风扇断电";
-            this.btn工位2风扇断电.Size = new System.Drawing.Size(101, 24);
-            this.btn工位2风扇断电.TabIndex = 47;
-            this.btn工位2风扇断电.Text = "工位2风扇断电";
-            this.btn工位2风扇断电.UseVisualStyleBackColor = true;
-            this.btn工位2风扇断电.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位2风扇断电_MouseDown);
-            this.btn工位2风扇断电.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位2风扇断电_MouseUp);
-            // 
-            // btn工位1风扇断电
-            // 
-            this.btn工位1风扇断电.BackColor = System.Drawing.SystemColors.Control;
-            this.btn工位1风扇断电.Location = new System.Drawing.Point(148, 31);
-            this.btn工位1风扇断电.Margin = new System.Windows.Forms.Padding(2);
-            this.btn工位1风扇断电.Name = "btn工位1风扇断电";
-            this.btn工位1风扇断电.Size = new System.Drawing.Size(101, 24);
-            this.btn工位1风扇断电.TabIndex = 46;
-            this.btn工位1风扇断电.Text = "工位1风扇断电";
-            this.btn工位1风扇断电.UseVisualStyleBackColor = true;
-            this.btn工位1风扇断电.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位1风扇断电_MouseDown);
-            this.btn工位1风扇断电.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位1风扇断电_MouseUp);
-            // 
-            // btnEFU上电
-            // 
-            this.btnEFU上电.BackColor = System.Drawing.SystemColors.Control;
-            this.btnEFU上电.Location = new System.Drawing.Point(33, 146);
-            this.btnEFU上电.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEFU上电.Name = "btnEFU上电";
-            this.btnEFU上电.Size = new System.Drawing.Size(101, 24);
-            this.btnEFU上电.TabIndex = 56;
-            this.btnEFU上电.Text = "EFU上电";
-            this.btnEFU上电.UseVisualStyleBackColor = true;
-            this.btnEFU上电.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnEFU上电_MouseDown);
-            this.btnEFU上电.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnEFU上电_MouseUp);
-            // 
-            // btn工位4风扇断电
-            // 
-            this.btn工位4风扇断电.BackColor = System.Drawing.SystemColors.Control;
-            this.btn工位4风扇断电.Location = new System.Drawing.Point(148, 118);
-            this.btn工位4风扇断电.Margin = new System.Windows.Forms.Padding(2);
-            this.btn工位4风扇断电.Name = "btn工位4风扇断电";
-            this.btn工位4风扇断电.Size = new System.Drawing.Size(101, 24);
-            this.btn工位4风扇断电.TabIndex = 51;
-            this.btn工位4风扇断电.Text = "工位4风扇断电";
-            this.btn工位4风扇断电.UseVisualStyleBackColor = true;
-            this.btn工位4风扇断电.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位4风扇断电_MouseDown);
-            this.btn工位4风扇断电.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位4风扇断电_MouseUp);
-            // 
-            // btn工位3风扇断电
-            // 
-            this.btn工位3风扇断电.BackColor = System.Drawing.SystemColors.Control;
-            this.btn工位3风扇断电.Location = new System.Drawing.Point(148, 89);
-            this.btn工位3风扇断电.Margin = new System.Windows.Forms.Padding(2);
-            this.btn工位3风扇断电.Name = "btn工位3风扇断电";
-            this.btn工位3风扇断电.Size = new System.Drawing.Size(101, 24);
-            this.btn工位3风扇断电.TabIndex = 50;
-            this.btn工位3风扇断电.Text = "工位3风扇断电";
-            this.btn工位3风扇断电.UseVisualStyleBackColor = true;
-            this.btn工位3风扇断电.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位3风扇断电_MouseDown);
-            this.btn工位3风扇断电.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位3风扇断电_MouseUp);
-            // 
-            // btn工位4风扇上电
-            // 
-            this.btn工位4风扇上电.BackColor = System.Drawing.SystemColors.Control;
-            this.btn工位4风扇上电.Location = new System.Drawing.Point(33, 118);
-            this.btn工位4风扇上电.Margin = new System.Windows.Forms.Padding(2);
-            this.btn工位4风扇上电.Name = "btn工位4风扇上电";
-            this.btn工位4风扇上电.Size = new System.Drawing.Size(101, 24);
-            this.btn工位4风扇上电.TabIndex = 43;
-            this.btn工位4风扇上电.Text = "工位4风扇上电";
-            this.btn工位4风扇上电.UseVisualStyleBackColor = true;
-            this.btn工位4风扇上电.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位4风扇上电_MouseDown);
-            this.btn工位4风扇上电.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位4风扇上电_MouseUp);
-            // 
-            // btn工位3风扇上电
-            // 
-            this.btn工位3风扇上电.BackColor = System.Drawing.SystemColors.Control;
-            this.btn工位3风扇上电.Location = new System.Drawing.Point(33, 89);
-            this.btn工位3风扇上电.Margin = new System.Windows.Forms.Padding(2);
-            this.btn工位3风扇上电.Name = "btn工位3风扇上电";
-            this.btn工位3风扇上电.Size = new System.Drawing.Size(101, 24);
-            this.btn工位3风扇上电.TabIndex = 42;
-            this.btn工位3风扇上电.Text = "工位3风扇上电";
-            this.btn工位3风扇上电.UseVisualStyleBackColor = true;
-            this.btn工位3风扇上电.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位3风扇上电_MouseDown);
-            this.btn工位3风扇上电.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位3风扇上电_MouseUp);
-            // 
-            // btn工位2风扇上电
-            // 
-            this.btn工位2风扇上电.BackColor = System.Drawing.SystemColors.Control;
-            this.btn工位2风扇上电.Location = new System.Drawing.Point(33, 60);
-            this.btn工位2风扇上电.Margin = new System.Windows.Forms.Padding(2);
-            this.btn工位2风扇上电.Name = "btn工位2风扇上电";
-            this.btn工位2风扇上电.Size = new System.Drawing.Size(101, 24);
-            this.btn工位2风扇上电.TabIndex = 41;
-            this.btn工位2风扇上电.Text = "工位2风扇上电";
-            this.btn工位2风扇上电.UseVisualStyleBackColor = true;
-            this.btn工位2风扇上电.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位2风扇上电_MouseDown);
-            this.btn工位2风扇上电.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位2风扇上电_MouseUp);
-            // 
-            // btn工位1风扇上电
-            // 
-            this.btn工位1风扇上电.BackColor = System.Drawing.SystemColors.Control;
-            this.btn工位1风扇上电.Location = new System.Drawing.Point(33, 31);
-            this.btn工位1风扇上电.Margin = new System.Windows.Forms.Padding(2);
-            this.btn工位1风扇上电.Name = "btn工位1风扇上电";
-            this.btn工位1风扇上电.Size = new System.Drawing.Size(101, 24);
-            this.btn工位1风扇上电.TabIndex = 40;
-            this.btn工位1风扇上电.Text = "工位1风扇上电";
-            this.btn工位1风扇上电.UseVisualStyleBackColor = true;
-            this.btn工位1风扇上电.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位1风扇上电_MouseDown);
-            this.btn工位1风扇上电.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位1风扇上电_MouseUp);
-            // 
-            // groupBox19
-            // 
-            this.groupBox19.Controls.Add(this.btn工位4翻转90);
-            this.groupBox19.Controls.Add(this.btn工位4翻转0);
-            this.groupBox19.Controls.Add(this.btn工位4辐射板缩回);
-            this.groupBox19.Controls.Add(this.btn工位4辐射板伸出);
-            this.groupBox19.Controls.Add(this.btn工位4光阑下降);
-            this.groupBox19.Controls.Add(this.btn工位4光阑上升);
-            this.groupBox19.Controls.Add(this.btn工位4光阑缩回);
-            this.groupBox19.Controls.Add(this.btn工位4光阑伸出);
-            this.groupBox19.Controls.Add(this.btn工位3翻转90);
-            this.groupBox19.Controls.Add(this.btn工位3翻转0);
-            this.groupBox19.Controls.Add(this.btn工位3辐射板缩回);
-            this.groupBox19.Controls.Add(this.btn工位3辐射板伸出);
-            this.groupBox19.Controls.Add(this.btn工位3光阑下降);
-            this.groupBox19.Controls.Add(this.btn工位3光阑上升);
-            this.groupBox19.Controls.Add(this.btn工位3光阑缩回);
-            this.groupBox19.Controls.Add(this.btn工位3光阑伸出);
-            this.groupBox19.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox19.Location = new System.Drawing.Point(798, 286);
-            this.groupBox19.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox19.Name = "groupBox19";
-            this.groupBox19.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox19.Size = new System.Drawing.Size(382, 265);
-            this.groupBox19.TabIndex = 80;
-            this.groupBox19.TabStop = false;
-            this.groupBox19.Text = "测试气缸2";
-            // 
-            // btn工位4翻转90
-            // 
-            this.btn工位4翻转90.BackColor = System.Drawing.SystemColors.Control;
-            this.btn工位4翻转90.Location = new System.Drawing.Point(148, 221);
-            this.btn工位4翻转90.Margin = new System.Windows.Forms.Padding(2);
-            this.btn工位4翻转90.Name = "btn工位4翻转90";
-            this.btn工位4翻转90.Size = new System.Drawing.Size(101, 24);
-            this.btn工位4翻转90.TabIndex = 79;
-            this.btn工位4翻转90.Text = "工位4翻转90°";
-            this.btn工位4翻转90.UseVisualStyleBackColor = true;
-            this.btn工位4翻转90.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位4翻转90_MouseDown);
-            this.btn工位4翻转90.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位4翻转90_MouseUp);
-            // 
-            // btn工位4翻转0
-            // 
-            this.btn工位4翻转0.BackColor = System.Drawing.SystemColors.Control;
-            this.btn工位4翻转0.Location = new System.Drawing.Point(148, 192);
-            this.btn工位4翻转0.Margin = new System.Windows.Forms.Padding(2);
-            this.btn工位4翻转0.Name = "btn工位4翻转0";
-            this.btn工位4翻转0.Size = new System.Drawing.Size(101, 24);
-            this.btn工位4翻转0.TabIndex = 78;
-            this.btn工位4翻转0.Text = "工位4翻转0°";
-            this.btn工位4翻转0.UseVisualStyleBackColor = true;
-            this.btn工位4翻转0.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位4翻转0_MouseDown);
-            this.btn工位4翻转0.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位4翻转0_MouseUp);
-            // 
-            // btn工位4辐射板缩回
-            // 
-            this.btn工位4辐射板缩回.BackColor = System.Drawing.SystemColors.Control;
-            this.btn工位4辐射板缩回.Location = new System.Drawing.Point(148, 163);
-            this.btn工位4辐射板缩回.Margin = new System.Windows.Forms.Padding(2);
-            this.btn工位4辐射板缩回.Name = "btn工位4辐射板缩回";
-            this.btn工位4辐射板缩回.Size = new System.Drawing.Size(101, 24);
-            this.btn工位4辐射板缩回.TabIndex = 77;
-            this.btn工位4辐射板缩回.Text = "工位4辐射板下降";
-            this.btn工位4辐射板缩回.UseVisualStyleBackColor = true;
-            this.btn工位4辐射板缩回.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位4辐射板缩回_MouseDown);
-            this.btn工位4辐射板缩回.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位4辐射板缩回_MouseUp);
-            // 
-            // btn工位4辐射板伸出
-            // 
-            this.btn工位4辐射板伸出.BackColor = System.Drawing.SystemColors.Control;
-            this.btn工位4辐射板伸出.Location = new System.Drawing.Point(148, 134);
-            this.btn工位4辐射板伸出.Margin = new System.Windows.Forms.Padding(2);
-            this.btn工位4辐射板伸出.Name = "btn工位4辐射板伸出";
-            this.btn工位4辐射板伸出.Size = new System.Drawing.Size(101, 24);
-            this.btn工位4辐射板伸出.TabIndex = 76;
-            this.btn工位4辐射板伸出.Text = "工位4辐射板上升";
-            this.btn工位4辐射板伸出.UseVisualStyleBackColor = true;
-            this.btn工位4辐射板伸出.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位4辐射板伸出_MouseDown);
-            this.btn工位4辐射板伸出.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位4辐射板伸出_MouseUp);
-            // 
-            // btn工位4光阑下降
-            // 
-            this.btn工位4光阑下降.BackColor = System.Drawing.SystemColors.Control;
-            this.btn工位4光阑下降.Location = new System.Drawing.Point(148, 106);
-            this.btn工位4光阑下降.Margin = new System.Windows.Forms.Padding(2);
-            this.btn工位4光阑下降.Name = "btn工位4光阑下降";
-            this.btn工位4光阑下降.Size = new System.Drawing.Size(101, 24);
-            this.btn工位4光阑下降.TabIndex = 75;
-            this.btn工位4光阑下降.Text = "工位4光阑下降";
-            this.btn工位4光阑下降.UseVisualStyleBackColor = true;
-            this.btn工位4光阑下降.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位4光阑下降_MouseDown);
-            this.btn工位4光阑下降.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位4光阑下降_MouseUp);
-            // 
-            // btn工位4光阑上升
-            // 
-            this.btn工位4光阑上升.BackColor = System.Drawing.SystemColors.Control;
-            this.btn工位4光阑上升.Location = new System.Drawing.Point(148, 77);
-            this.btn工位4光阑上升.Margin = new System.Windows.Forms.Padding(2);
-            this.btn工位4光阑上升.Name = "btn工位4光阑上升";
-            this.btn工位4光阑上升.Size = new System.Drawing.Size(101, 24);
-            this.btn工位4光阑上升.TabIndex = 74;
-            this.btn工位4光阑上升.Text = "工位4光阑上升";
-            this.btn工位4光阑上升.UseVisualStyleBackColor = true;
-            this.btn工位4光阑上升.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位4光阑上升_MouseDown);
-            this.btn工位4光阑上升.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位4光阑上升_MouseUp);
-            // 
-            // btn工位4光阑缩回
-            // 
-            this.btn工位4光阑缩回.BackColor = System.Drawing.SystemColors.Control;
-            this.btn工位4光阑缩回.Location = new System.Drawing.Point(148, 48);
-            this.btn工位4光阑缩回.Margin = new System.Windows.Forms.Padding(2);
-            this.btn工位4光阑缩回.Name = "btn工位4光阑缩回";
-            this.btn工位4光阑缩回.Size = new System.Drawing.Size(101, 24);
-            this.btn工位4光阑缩回.TabIndex = 73;
-            this.btn工位4光阑缩回.Text = "工位4光阑缩回";
-            this.btn工位4光阑缩回.UseVisualStyleBackColor = true;
-            this.btn工位4光阑缩回.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位4光阑缩回_MouseDown);
-            this.btn工位4光阑缩回.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位4光阑缩回_MouseUp);
-            // 
-            // btn工位4光阑伸出
-            // 
-            this.btn工位4光阑伸出.BackColor = System.Drawing.SystemColors.Control;
-            this.btn工位4光阑伸出.Location = new System.Drawing.Point(148, 19);
-            this.btn工位4光阑伸出.Margin = new System.Windows.Forms.Padding(2);
-            this.btn工位4光阑伸出.Name = "btn工位4光阑伸出";
-            this.btn工位4光阑伸出.Size = new System.Drawing.Size(101, 24);
-            this.btn工位4光阑伸出.TabIndex = 72;
-            this.btn工位4光阑伸出.Text = "工位4光阑伸出";
-            this.btn工位4光阑伸出.UseVisualStyleBackColor = true;
-            this.btn工位4光阑伸出.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位4光阑伸出_MouseDown);
-            this.btn工位4光阑伸出.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位4光阑伸出_MouseUp);
-            // 
-            // btn工位3翻转90
-            // 
-            this.btn工位3翻转90.BackColor = System.Drawing.SystemColors.Control;
-            this.btn工位3翻转90.Location = new System.Drawing.Point(33, 221);
-            this.btn工位3翻转90.Margin = new System.Windows.Forms.Padding(2);
-            this.btn工位3翻转90.Name = "btn工位3翻转90";
-            this.btn工位3翻转90.Size = new System.Drawing.Size(101, 24);
-            this.btn工位3翻转90.TabIndex = 71;
-            this.btn工位3翻转90.Text = "工位3翻转90°";
-            this.btn工位3翻转90.UseVisualStyleBackColor = true;
-            this.btn工位3翻转90.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位3翻转90_MouseDown);
-            this.btn工位3翻转90.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位3翻转90_MouseUp);
-            // 
-            // btn工位3翻转0
-            // 
-            this.btn工位3翻转0.BackColor = System.Drawing.SystemColors.Control;
-            this.btn工位3翻转0.Location = new System.Drawing.Point(33, 192);
-            this.btn工位3翻转0.Margin = new System.Windows.Forms.Padding(2);
-            this.btn工位3翻转0.Name = "btn工位3翻转0";
-            this.btn工位3翻转0.Size = new System.Drawing.Size(101, 24);
-            this.btn工位3翻转0.TabIndex = 70;
-            this.btn工位3翻转0.Text = "工位3翻转0°";
-            this.btn工位3翻转0.UseVisualStyleBackColor = true;
-            this.btn工位3翻转0.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位3翻转0_MouseDown);
-            this.btn工位3翻转0.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位3翻转0_MouseUp);
-            // 
-            // btn工位3辐射板缩回
-            // 
-            this.btn工位3辐射板缩回.BackColor = System.Drawing.SystemColors.Control;
-            this.btn工位3辐射板缩回.Location = new System.Drawing.Point(33, 163);
-            this.btn工位3辐射板缩回.Margin = new System.Windows.Forms.Padding(2);
-            this.btn工位3辐射板缩回.Name = "btn工位3辐射板缩回";
-            this.btn工位3辐射板缩回.Size = new System.Drawing.Size(101, 24);
-            this.btn工位3辐射板缩回.TabIndex = 69;
-            this.btn工位3辐射板缩回.Text = "工位3辐射板下降";
-            this.btn工位3辐射板缩回.UseVisualStyleBackColor = true;
-            this.btn工位3辐射板缩回.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位3辐射板缩回_MouseDown);
-            this.btn工位3辐射板缩回.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位3辐射板缩回_MouseUp);
-            // 
-            // btn工位3辐射板伸出
-            // 
-            this.btn工位3辐射板伸出.BackColor = System.Drawing.SystemColors.Control;
-            this.btn工位3辐射板伸出.Location = new System.Drawing.Point(33, 134);
-            this.btn工位3辐射板伸出.Margin = new System.Windows.Forms.Padding(2);
-            this.btn工位3辐射板伸出.Name = "btn工位3辐射板伸出";
-            this.btn工位3辐射板伸出.Size = new System.Drawing.Size(101, 24);
-            this.btn工位3辐射板伸出.TabIndex = 68;
-            this.btn工位3辐射板伸出.Text = "工位3辐射板上升";
-            this.btn工位3辐射板伸出.UseVisualStyleBackColor = true;
-            this.btn工位3辐射板伸出.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位3辐射板伸出_MouseDown);
-            this.btn工位3辐射板伸出.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位3辐射板伸出_MouseUp);
-            // 
-            // btn工位3光阑下降
-            // 
-            this.btn工位3光阑下降.BackColor = System.Drawing.SystemColors.Control;
-            this.btn工位3光阑下降.Location = new System.Drawing.Point(33, 106);
-            this.btn工位3光阑下降.Margin = new System.Windows.Forms.Padding(2);
-            this.btn工位3光阑下降.Name = "btn工位3光阑下降";
-            this.btn工位3光阑下降.Size = new System.Drawing.Size(101, 24);
-            this.btn工位3光阑下降.TabIndex = 67;
-            this.btn工位3光阑下降.Text = "工位3光阑下降";
-            this.btn工位3光阑下降.UseVisualStyleBackColor = true;
-            this.btn工位3光阑下降.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位3光阑下降_MouseDown);
-            this.btn工位3光阑下降.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位3光阑下降_MouseUp);
-            // 
-            // btn工位3光阑上升
-            // 
-            this.btn工位3光阑上升.BackColor = System.Drawing.SystemColors.Control;
-            this.btn工位3光阑上升.Location = new System.Drawing.Point(33, 77);
-            this.btn工位3光阑上升.Margin = new System.Windows.Forms.Padding(2);
-            this.btn工位3光阑上升.Name = "btn工位3光阑上升";
-            this.btn工位3光阑上升.Size = new System.Drawing.Size(101, 24);
-            this.btn工位3光阑上升.TabIndex = 66;
-            this.btn工位3光阑上升.Text = "工位3光阑上升";
-            this.btn工位3光阑上升.UseVisualStyleBackColor = true;
-            this.btn工位3光阑上升.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位3光阑上升_MouseDown);
-            this.btn工位3光阑上升.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位3光阑上升_MouseUp);
-            // 
-            // btn工位3光阑缩回
-            // 
-            this.btn工位3光阑缩回.BackColor = System.Drawing.SystemColors.Control;
-            this.btn工位3光阑缩回.Location = new System.Drawing.Point(33, 48);
-            this.btn工位3光阑缩回.Margin = new System.Windows.Forms.Padding(2);
-            this.btn工位3光阑缩回.Name = "btn工位3光阑缩回";
-            this.btn工位3光阑缩回.Size = new System.Drawing.Size(101, 24);
-            this.btn工位3光阑缩回.TabIndex = 65;
-            this.btn工位3光阑缩回.Text = "工位3光阑缩回";
-            this.btn工位3光阑缩回.UseVisualStyleBackColor = true;
-            this.btn工位3光阑缩回.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位3光阑缩回_MouseDown);
-            this.btn工位3光阑缩回.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位3光阑缩回_MouseUp);
-            // 
-            // btn工位3光阑伸出
-            // 
-            this.btn工位3光阑伸出.BackColor = System.Drawing.SystemColors.Control;
-            this.btn工位3光阑伸出.Location = new System.Drawing.Point(33, 19);
-            this.btn工位3光阑伸出.Margin = new System.Windows.Forms.Padding(2);
-            this.btn工位3光阑伸出.Name = "btn工位3光阑伸出";
-            this.btn工位3光阑伸出.Size = new System.Drawing.Size(101, 24);
-            this.btn工位3光阑伸出.TabIndex = 64;
-            this.btn工位3光阑伸出.Text = "工位3光阑伸出";
-            this.btn工位3光阑伸出.UseVisualStyleBackColor = true;
-            this.btn工位3光阑伸出.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位3光阑伸出_MouseDown);
-            this.btn工位3光阑伸出.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位3光阑伸出_MouseUp);
-            // 
-            // groupBox18
-            // 
-            this.groupBox18.Controls.Add(this.brn工位2翻转90);
-            this.groupBox18.Controls.Add(this.btn工位2翻转0);
-            this.groupBox18.Controls.Add(this.btn工位2辐射板缩回);
-            this.groupBox18.Controls.Add(this.btn工位2辐射板伸出);
-            this.groupBox18.Controls.Add(this.btn工位2光阑下降);
-            this.groupBox18.Controls.Add(this.btn工位2光阑上升);
-            this.groupBox18.Controls.Add(this.btn工位2光阑缩回);
-            this.groupBox18.Controls.Add(this.btn工位2光阑伸出);
-            this.groupBox18.Controls.Add(this.btn工位1翻转90);
-            this.groupBox18.Controls.Add(this.btn工位1翻转0);
-            this.groupBox18.Controls.Add(this.btn工位1辐射板缩回);
-            this.groupBox18.Controls.Add(this.btn工位1辐射板伸出);
-            this.groupBox18.Controls.Add(this.btn工位1光阑下降);
-            this.groupBox18.Controls.Add(this.btn工位1光阑上升);
-            this.groupBox18.Controls.Add(this.btn工位1光阑缩回);
-            this.groupBox18.Controls.Add(this.btn工位1光阑伸出);
-            this.groupBox18.Controls.Add(this.btn旋转夹爪4下降);
-            this.groupBox18.Controls.Add(this.btn旋转夹爪4上升);
-            this.groupBox18.Controls.Add(this.btn旋转夹爪3下降);
-            this.groupBox18.Controls.Add(this.btn旋转夹爪3上升);
-            this.groupBox18.Controls.Add(this.btn旋转夹爪2下降);
-            this.groupBox18.Controls.Add(this.btn旋转夹爪2上升);
-            this.groupBox18.Controls.Add(this.btn旋转夹爪1下降);
-            this.groupBox18.Controls.Add(this.btn旋转夹爪1上升);
-            this.groupBox18.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox18.Location = new System.Drawing.Point(798, 16);
-            this.groupBox18.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox18.Name = "groupBox18";
-            this.groupBox18.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox18.Size = new System.Drawing.Size(382, 265);
-            this.groupBox18.TabIndex = 58;
-            this.groupBox18.TabStop = false;
-            this.groupBox18.Text = "测试气缸1";
-            // 
-            // brn工位2翻转90
-            // 
-            this.brn工位2翻转90.BackColor = System.Drawing.SystemColors.Control;
-            this.brn工位2翻转90.Location = new System.Drawing.Point(262, 233);
-            this.brn工位2翻转90.Margin = new System.Windows.Forms.Padding(2);
-            this.brn工位2翻转90.Name = "brn工位2翻转90";
-            this.brn工位2翻转90.Size = new System.Drawing.Size(101, 24);
-            this.brn工位2翻转90.TabIndex = 63;
-            this.brn工位2翻转90.Text = "工位2翻转90°";
-            this.brn工位2翻转90.UseVisualStyleBackColor = true;
-            this.brn工位2翻转90.MouseDown += new System.Windows.Forms.MouseEventHandler(this.brn工位2翻转90_MouseDown);
-            this.brn工位2翻转90.MouseUp += new System.Windows.Forms.MouseEventHandler(this.brn工位2翻转90_MouseUp);
-            // 
-            // btn工位2翻转0
-            // 
-            this.btn工位2翻转0.BackColor = System.Drawing.SystemColors.Control;
-            this.btn工位2翻转0.Location = new System.Drawing.Point(262, 204);
-            this.btn工位2翻转0.Margin = new System.Windows.Forms.Padding(2);
-            this.btn工位2翻转0.Name = "btn工位2翻转0";
-            this.btn工位2翻转0.Size = new System.Drawing.Size(101, 24);
-            this.btn工位2翻转0.TabIndex = 62;
-            this.btn工位2翻转0.Text = "工位2翻转0°";
-            this.btn工位2翻转0.UseVisualStyleBackColor = true;
-            this.btn工位2翻转0.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位2翻转0_MouseDown);
-            this.btn工位2翻转0.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位2翻转0_MouseUp);
-            // 
-            // btn工位2辐射板缩回
-            // 
-            this.btn工位2辐射板缩回.BackColor = System.Drawing.SystemColors.Control;
-            this.btn工位2辐射板缩回.Location = new System.Drawing.Point(262, 175);
-            this.btn工位2辐射板缩回.Margin = new System.Windows.Forms.Padding(2);
-            this.btn工位2辐射板缩回.Name = "btn工位2辐射板缩回";
-            this.btn工位2辐射板缩回.Size = new System.Drawing.Size(101, 24);
-            this.btn工位2辐射板缩回.TabIndex = 61;
-            this.btn工位2辐射板缩回.Text = "工位2辐射板下降";
-            this.btn工位2辐射板缩回.UseVisualStyleBackColor = true;
-            this.btn工位2辐射板缩回.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位2辐射板缩回_MouseDown);
-            this.btn工位2辐射板缩回.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位2辐射板缩回_MouseUp);
-            // 
-            // btn工位2辐射板伸出
-            // 
-            this.btn工位2辐射板伸出.BackColor = System.Drawing.SystemColors.Control;
-            this.btn工位2辐射板伸出.Location = new System.Drawing.Point(262, 146);
-            this.btn工位2辐射板伸出.Margin = new System.Windows.Forms.Padding(2);
-            this.btn工位2辐射板伸出.Name = "btn工位2辐射板伸出";
-            this.btn工位2辐射板伸出.Size = new System.Drawing.Size(101, 24);
-            this.btn工位2辐射板伸出.TabIndex = 60;
-            this.btn工位2辐射板伸出.Text = "工位2辐射板上升";
-            this.btn工位2辐射板伸出.UseVisualStyleBackColor = true;
-            this.btn工位2辐射板伸出.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位2辐射板伸出_MouseDown);
-            this.btn工位2辐射板伸出.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位2辐射板伸出_MouseUp);
-            // 
-            // btn工位2光阑下降
-            // 
-            this.btn工位2光阑下降.BackColor = System.Drawing.SystemColors.Control;
-            this.btn工位2光阑下降.Location = new System.Drawing.Point(262, 118);
-            this.btn工位2光阑下降.Margin = new System.Windows.Forms.Padding(2);
-            this.btn工位2光阑下降.Name = "btn工位2光阑下降";
-            this.btn工位2光阑下降.Size = new System.Drawing.Size(101, 24);
-            this.btn工位2光阑下降.TabIndex = 59;
-            this.btn工位2光阑下降.Text = "工位2光阑下降";
-            this.btn工位2光阑下降.UseVisualStyleBackColor = true;
-            this.btn工位2光阑下降.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位2光阑下降_MouseDown);
-            this.btn工位2光阑下降.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位2光阑下降_MouseUp);
-            // 
-            // btn工位2光阑上升
-            // 
-            this.btn工位2光阑上升.BackColor = System.Drawing.SystemColors.Control;
-            this.btn工位2光阑上升.Location = new System.Drawing.Point(262, 89);
-            this.btn工位2光阑上升.Margin = new System.Windows.Forms.Padding(2);
-            this.btn工位2光阑上升.Name = "btn工位2光阑上升";
-            this.btn工位2光阑上升.Size = new System.Drawing.Size(101, 24);
-            this.btn工位2光阑上升.TabIndex = 58;
-            this.btn工位2光阑上升.Text = "工位2光阑上升";
-            this.btn工位2光阑上升.UseVisualStyleBackColor = true;
-            this.btn工位2光阑上升.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位2光阑上升_MouseDown);
-            this.btn工位2光阑上升.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位2光阑上升_MouseUp);
-            // 
-            // btn工位2光阑缩回
-            // 
-            this.btn工位2光阑缩回.BackColor = System.Drawing.SystemColors.Control;
-            this.btn工位2光阑缩回.Location = new System.Drawing.Point(262, 60);
-            this.btn工位2光阑缩回.Margin = new System.Windows.Forms.Padding(2);
-            this.btn工位2光阑缩回.Name = "btn工位2光阑缩回";
-            this.btn工位2光阑缩回.Size = new System.Drawing.Size(101, 24);
-            this.btn工位2光阑缩回.TabIndex = 57;
-            this.btn工位2光阑缩回.Text = "工位2光阑缩回";
-            this.btn工位2光阑缩回.UseVisualStyleBackColor = true;
-            this.btn工位2光阑缩回.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位2光阑缩回_MouseDown);
-            this.btn工位2光阑缩回.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位2光阑缩回_MouseUp);
-            // 
-            // btn工位2光阑伸出
-            // 
-            this.btn工位2光阑伸出.BackColor = System.Drawing.SystemColors.Control;
-            this.btn工位2光阑伸出.Location = new System.Drawing.Point(262, 31);
-            this.btn工位2光阑伸出.Margin = new System.Windows.Forms.Padding(2);
-            this.btn工位2光阑伸出.Name = "btn工位2光阑伸出";
-            this.btn工位2光阑伸出.Size = new System.Drawing.Size(101, 24);
-            this.btn工位2光阑伸出.TabIndex = 56;
-            this.btn工位2光阑伸出.Text = "工位2光阑伸出";
-            this.btn工位2光阑伸出.UseVisualStyleBackColor = true;
-            this.btn工位2光阑伸出.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位2光阑伸出_MouseDown);
-            this.btn工位2光阑伸出.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位2光阑伸出_MouseUp);
-            // 
-            // btn工位1翻转90
-            // 
-            this.btn工位1翻转90.BackColor = System.Drawing.SystemColors.Control;
-            this.btn工位1翻转90.Location = new System.Drawing.Point(148, 233);
-            this.btn工位1翻转90.Margin = new System.Windows.Forms.Padding(2);
-            this.btn工位1翻转90.Name = "btn工位1翻转90";
-            this.btn工位1翻转90.Size = new System.Drawing.Size(101, 24);
-            this.btn工位1翻转90.TabIndex = 55;
-            this.btn工位1翻转90.Text = "工位1翻转90°";
-            this.btn工位1翻转90.UseVisualStyleBackColor = true;
-            this.btn工位1翻转90.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位1翻转90_MouseDown);
-            this.btn工位1翻转90.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位1翻转90_MouseUp);
-            // 
-            // btn工位1翻转0
-            // 
-            this.btn工位1翻转0.BackColor = System.Drawing.SystemColors.Control;
-            this.btn工位1翻转0.Location = new System.Drawing.Point(148, 204);
-            this.btn工位1翻转0.Margin = new System.Windows.Forms.Padding(2);
-            this.btn工位1翻转0.Name = "btn工位1翻转0";
-            this.btn工位1翻转0.Size = new System.Drawing.Size(101, 24);
-            this.btn工位1翻转0.TabIndex = 54;
-            this.btn工位1翻转0.Text = "工位1翻转0°";
-            this.btn工位1翻转0.UseVisualStyleBackColor = true;
-            this.btn工位1翻转0.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位1翻转0_MouseDown);
-            this.btn工位1翻转0.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位1翻转0_MouseUp);
-            // 
-            // btn工位1辐射板缩回
-            // 
-            this.btn工位1辐射板缩回.BackColor = System.Drawing.SystemColors.Control;
-            this.btn工位1辐射板缩回.Location = new System.Drawing.Point(148, 175);
-            this.btn工位1辐射板缩回.Margin = new System.Windows.Forms.Padding(2);
-            this.btn工位1辐射板缩回.Name = "btn工位1辐射板缩回";
-            this.btn工位1辐射板缩回.Size = new System.Drawing.Size(101, 24);
-            this.btn工位1辐射板缩回.TabIndex = 53;
-            this.btn工位1辐射板缩回.Text = "工位1辐射板下降";
-            this.btn工位1辐射板缩回.UseVisualStyleBackColor = true;
-            this.btn工位1辐射板缩回.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位1辐射板缩回_MouseDown);
-            this.btn工位1辐射板缩回.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位1辐射板缩回_MouseUp);
-            // 
-            // btn工位1辐射板伸出
-            // 
-            this.btn工位1辐射板伸出.BackColor = System.Drawing.SystemColors.Control;
-            this.btn工位1辐射板伸出.Location = new System.Drawing.Point(148, 146);
-            this.btn工位1辐射板伸出.Margin = new System.Windows.Forms.Padding(2);
-            this.btn工位1辐射板伸出.Name = "btn工位1辐射板伸出";
-            this.btn工位1辐射板伸出.Size = new System.Drawing.Size(101, 24);
-            this.btn工位1辐射板伸出.TabIndex = 52;
-            this.btn工位1辐射板伸出.Text = "工位1辐射板上升";
-            this.btn工位1辐射板伸出.UseVisualStyleBackColor = true;
-            this.btn工位1辐射板伸出.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位1辐射板伸出_MouseDown);
-            this.btn工位1辐射板伸出.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位1辐射板伸出_MouseUp);
-            // 
-            // btn工位1光阑下降
-            // 
-            this.btn工位1光阑下降.BackColor = System.Drawing.SystemColors.Control;
-            this.btn工位1光阑下降.Location = new System.Drawing.Point(148, 118);
-            this.btn工位1光阑下降.Margin = new System.Windows.Forms.Padding(2);
-            this.btn工位1光阑下降.Name = "btn工位1光阑下降";
-            this.btn工位1光阑下降.Size = new System.Drawing.Size(101, 24);
-            this.btn工位1光阑下降.TabIndex = 51;
-            this.btn工位1光阑下降.Text = "工位1光阑下降";
-            this.btn工位1光阑下降.UseVisualStyleBackColor = true;
-            this.btn工位1光阑下降.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位1光阑下降_MouseDown);
-            this.btn工位1光阑下降.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位1光阑下降_MouseUp);
-            // 
-            // btn工位1光阑上升
-            // 
-            this.btn工位1光阑上升.BackColor = System.Drawing.SystemColors.Control;
-            this.btn工位1光阑上升.Location = new System.Drawing.Point(148, 89);
-            this.btn工位1光阑上升.Margin = new System.Windows.Forms.Padding(2);
-            this.btn工位1光阑上升.Name = "btn工位1光阑上升";
-            this.btn工位1光阑上升.Size = new System.Drawing.Size(101, 24);
-            this.btn工位1光阑上升.TabIndex = 50;
-            this.btn工位1光阑上升.Text = "工位1光阑上升";
-            this.btn工位1光阑上升.UseVisualStyleBackColor = true;
-            this.btn工位1光阑上升.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位1光阑上升_MouseDown);
-            this.btn工位1光阑上升.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位1光阑上升_MouseUp);
-            // 
-            // btn工位1光阑缩回
-            // 
-            this.btn工位1光阑缩回.BackColor = System.Drawing.SystemColors.Control;
-            this.btn工位1光阑缩回.Location = new System.Drawing.Point(148, 60);
-            this.btn工位1光阑缩回.Margin = new System.Windows.Forms.Padding(2);
-            this.btn工位1光阑缩回.Name = "btn工位1光阑缩回";
-            this.btn工位1光阑缩回.Size = new System.Drawing.Size(101, 24);
-            this.btn工位1光阑缩回.TabIndex = 49;
-            this.btn工位1光阑缩回.Text = "工位1光阑缩回";
-            this.btn工位1光阑缩回.UseVisualStyleBackColor = true;
-            this.btn工位1光阑缩回.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位1光阑缩回_MouseDown);
-            this.btn工位1光阑缩回.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位1光阑缩回_MouseUp);
-            // 
-            // btn工位1光阑伸出
-            // 
-            this.btn工位1光阑伸出.BackColor = System.Drawing.SystemColors.Control;
-            this.btn工位1光阑伸出.Location = new System.Drawing.Point(148, 31);
-            this.btn工位1光阑伸出.Margin = new System.Windows.Forms.Padding(2);
-            this.btn工位1光阑伸出.Name = "btn工位1光阑伸出";
-            this.btn工位1光阑伸出.Size = new System.Drawing.Size(101, 24);
-            this.btn工位1光阑伸出.TabIndex = 48;
-            this.btn工位1光阑伸出.Text = "工位1光阑伸出";
-            this.btn工位1光阑伸出.UseVisualStyleBackColor = true;
-            this.btn工位1光阑伸出.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn工位1光阑伸出_MouseDown);
-            this.btn工位1光阑伸出.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn工位1光阑伸出_MouseUp);
-            // 
-            // btn旋转夹爪4下降
-            // 
-            this.btn旋转夹爪4下降.BackColor = System.Drawing.SystemColors.Control;
-            this.btn旋转夹爪4下降.Location = new System.Drawing.Point(33, 233);
-            this.btn旋转夹爪4下降.Margin = new System.Windows.Forms.Padding(2);
-            this.btn旋转夹爪4下降.Name = "btn旋转夹爪4下降";
-            this.btn旋转夹爪4下降.Size = new System.Drawing.Size(101, 24);
-            this.btn旋转夹爪4下降.TabIndex = 47;
-            this.btn旋转夹爪4下降.Text = "旋转夹爪4下降";
-            this.btn旋转夹爪4下降.UseVisualStyleBackColor = true;
-            this.btn旋转夹爪4下降.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn旋转夹爪4下降_MouseDown);
-            this.btn旋转夹爪4下降.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn旋转夹爪4下降_MouseUp);
-            // 
-            // btn旋转夹爪4上升
-            // 
-            this.btn旋转夹爪4上升.BackColor = System.Drawing.SystemColors.Control;
-            this.btn旋转夹爪4上升.Location = new System.Drawing.Point(33, 204);
-            this.btn旋转夹爪4上升.Margin = new System.Windows.Forms.Padding(2);
-            this.btn旋转夹爪4上升.Name = "btn旋转夹爪4上升";
-            this.btn旋转夹爪4上升.Size = new System.Drawing.Size(101, 24);
-            this.btn旋转夹爪4上升.TabIndex = 46;
-            this.btn旋转夹爪4上升.Text = "旋转夹爪4上升";
-            this.btn旋转夹爪4上升.UseVisualStyleBackColor = true;
-            this.btn旋转夹爪4上升.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn旋转夹爪4上升_MouseDown);
-            this.btn旋转夹爪4上升.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn旋转夹爪4上升_MouseUp);
-            // 
-            // btn旋转夹爪3下降
-            // 
-            this.btn旋转夹爪3下降.BackColor = System.Drawing.SystemColors.Control;
-            this.btn旋转夹爪3下降.Location = new System.Drawing.Point(33, 175);
-            this.btn旋转夹爪3下降.Margin = new System.Windows.Forms.Padding(2);
-            this.btn旋转夹爪3下降.Name = "btn旋转夹爪3下降";
-            this.btn旋转夹爪3下降.Size = new System.Drawing.Size(101, 24);
-            this.btn旋转夹爪3下降.TabIndex = 45;
-            this.btn旋转夹爪3下降.Text = "旋转夹爪3下降";
-            this.btn旋转夹爪3下降.UseVisualStyleBackColor = true;
-            this.btn旋转夹爪3下降.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn旋转夹爪3下降_MouseDown);
-            this.btn旋转夹爪3下降.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn旋转夹爪3下降_MouseUp);
-            // 
-            // btn旋转夹爪3上升
-            // 
-            this.btn旋转夹爪3上升.BackColor = System.Drawing.SystemColors.Control;
-            this.btn旋转夹爪3上升.Location = new System.Drawing.Point(33, 146);
-            this.btn旋转夹爪3上升.Margin = new System.Windows.Forms.Padding(2);
-            this.btn旋转夹爪3上升.Name = "btn旋转夹爪3上升";
-            this.btn旋转夹爪3上升.Size = new System.Drawing.Size(101, 24);
-            this.btn旋转夹爪3上升.TabIndex = 44;
-            this.btn旋转夹爪3上升.Text = "旋转夹爪3上升";
-            this.btn旋转夹爪3上升.UseVisualStyleBackColor = true;
-            this.btn旋转夹爪3上升.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn旋转夹爪3上升_MouseDown);
-            this.btn旋转夹爪3上升.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn旋转夹爪3上升_MouseUp);
-            // 
-            // btn旋转夹爪2下降
-            // 
-            this.btn旋转夹爪2下降.BackColor = System.Drawing.SystemColors.Control;
-            this.btn旋转夹爪2下降.Location = new System.Drawing.Point(33, 118);
-            this.btn旋转夹爪2下降.Margin = new System.Windows.Forms.Padding(2);
-            this.btn旋转夹爪2下降.Name = "btn旋转夹爪2下降";
-            this.btn旋转夹爪2下降.Size = new System.Drawing.Size(101, 24);
-            this.btn旋转夹爪2下降.TabIndex = 43;
-            this.btn旋转夹爪2下降.Text = "旋转夹爪2下降";
-            this.btn旋转夹爪2下降.UseVisualStyleBackColor = true;
-            this.btn旋转夹爪2下降.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn旋转夹爪2下降_MouseDown);
-            this.btn旋转夹爪2下降.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn旋转夹爪2下降_MouseUp);
-            // 
-            // btn旋转夹爪2上升
-            // 
-            this.btn旋转夹爪2上升.BackColor = System.Drawing.SystemColors.Control;
-            this.btn旋转夹爪2上升.Location = new System.Drawing.Point(33, 89);
-            this.btn旋转夹爪2上升.Margin = new System.Windows.Forms.Padding(2);
-            this.btn旋转夹爪2上升.Name = "btn旋转夹爪2上升";
-            this.btn旋转夹爪2上升.Size = new System.Drawing.Size(101, 24);
-            this.btn旋转夹爪2上升.TabIndex = 42;
-            this.btn旋转夹爪2上升.Text = "旋转夹爪2上升";
-            this.btn旋转夹爪2上升.UseVisualStyleBackColor = true;
-            this.btn旋转夹爪2上升.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn旋转夹爪2上升_MouseDown);
-            this.btn旋转夹爪2上升.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn旋转夹爪2上升_MouseUp);
-            // 
-            // btn旋转夹爪1下降
-            // 
-            this.btn旋转夹爪1下降.BackColor = System.Drawing.SystemColors.Control;
-            this.btn旋转夹爪1下降.Location = new System.Drawing.Point(33, 60);
-            this.btn旋转夹爪1下降.Margin = new System.Windows.Forms.Padding(2);
-            this.btn旋转夹爪1下降.Name = "btn旋转夹爪1下降";
-            this.btn旋转夹爪1下降.Size = new System.Drawing.Size(101, 24);
-            this.btn旋转夹爪1下降.TabIndex = 41;
-            this.btn旋转夹爪1下降.Text = "旋转夹爪1下降";
-            this.btn旋转夹爪1下降.UseVisualStyleBackColor = true;
-            this.btn旋转夹爪1下降.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn旋转夹爪1下降_MouseDown);
-            this.btn旋转夹爪1下降.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn旋转夹爪1下降_MouseUp);
-            // 
-            // btn旋转夹爪1上升
-            // 
-            this.btn旋转夹爪1上升.BackColor = System.Drawing.SystemColors.Control;
-            this.btn旋转夹爪1上升.Location = new System.Drawing.Point(33, 31);
-            this.btn旋转夹爪1上升.Margin = new System.Windows.Forms.Padding(2);
-            this.btn旋转夹爪1上升.Name = "btn旋转夹爪1上升";
-            this.btn旋转夹爪1上升.Size = new System.Drawing.Size(101, 24);
-            this.btn旋转夹爪1上升.TabIndex = 40;
-            this.btn旋转夹爪1上升.Text = "旋转夹爪1上升";
-            this.btn旋转夹爪1上升.UseVisualStyleBackColor = true;
-            this.btn旋转夹爪1上升.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn旋转夹爪1上升_MouseDown);
-            this.btn旋转夹爪1上升.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn旋转夹爪1上升_MouseUp);
-            // 
-            // groupBox17
-            // 
-            this.groupBox17.Controls.Add(this.btnNG二级缩回);
-            this.groupBox17.Controls.Add(this.btn夹爪2回原点);
-            this.groupBox17.Controls.Add(this.btnNG二级伸出);
-            this.groupBox17.Controls.Add(this.btnNG一级缩回);
-            this.groupBox17.Controls.Add(this.btn除尘器2吹扫);
-            this.groupBox17.Controls.Add(this.btnNG一级伸出);
-            this.groupBox17.Controls.Add(this.btn除尘器1吹扫);
-            this.groupBox17.Controls.Add(this.btn夹爪2复位);
-            this.groupBox17.Controls.Add(this.btn夹爪2闭合1);
-            this.groupBox17.Controls.Add(this.btn夹爪1复位);
-            this.groupBox17.Controls.Add(this.btn夹爪1闭合1);
-            this.groupBox17.Controls.Add(this.btn夹爪1回原点);
-            this.groupBox17.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox17.Location = new System.Drawing.Point(412, 16);
-            this.groupBox17.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox17.Name = "groupBox17";
-            this.groupBox17.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox17.Size = new System.Drawing.Size(382, 265);
-            this.groupBox17.TabIndex = 64;
-            this.groupBox17.TabStop = false;
-            this.groupBox17.Text = "增广夹爪、离子除尘";
-            // 
-            // btnNG二级缩回
-            // 
-            this.btnNG二级缩回.BackColor = System.Drawing.SystemColors.Control;
-            this.btnNG二级缩回.Location = new System.Drawing.Point(33, 204);
-            this.btnNG二级缩回.Margin = new System.Windows.Forms.Padding(2);
-            this.btnNG二级缩回.Name = "btnNG二级缩回";
-            this.btnNG二级缩回.Size = new System.Drawing.Size(101, 24);
-            this.btnNG二级缩回.TabIndex = 65;
-            this.btnNG二级缩回.Text = "NG二级缩回";
-            this.btnNG二级缩回.UseVisualStyleBackColor = true;
-            this.btnNG二级缩回.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnNG二级缩回_MouseDown);
-            this.btnNG二级缩回.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnNG二级缩回_MouseUp);
-            // 
-            // btn夹爪2回原点
-            // 
-            this.btn夹爪2回原点.BackColor = System.Drawing.SystemColors.Control;
-            this.btn夹爪2回原点.Location = new System.Drawing.Point(148, 31);
-            this.btn夹爪2回原点.Margin = new System.Windows.Forms.Padding(2);
-            this.btn夹爪2回原点.Name = "btn夹爪2回原点";
-            this.btn夹爪2回原点.Size = new System.Drawing.Size(101, 24);
-            this.btn夹爪2回原点.TabIndex = 46;
-            this.btn夹爪2回原点.Text = "夹爪2回原点";
-            this.btn夹爪2回原点.UseVisualStyleBackColor = true;
-            this.btn夹爪2回原点.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn夹爪2回原点_MouseDown);
-            this.btn夹爪2回原点.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn夹爪2回原点_MouseUp);
-            // 
-            // btnNG二级伸出
-            // 
-            this.btnNG二级伸出.BackColor = System.Drawing.SystemColors.Control;
-            this.btnNG二级伸出.Location = new System.Drawing.Point(33, 175);
-            this.btnNG二级伸出.Margin = new System.Windows.Forms.Padding(2);
-            this.btnNG二级伸出.Name = "btnNG二级伸出";
-            this.btnNG二级伸出.Size = new System.Drawing.Size(101, 24);
-            this.btnNG二级伸出.TabIndex = 64;
-            this.btnNG二级伸出.Text = "NG二级伸出";
-            this.btnNG二级伸出.UseVisualStyleBackColor = true;
-            this.btnNG二级伸出.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnNG二级伸出_MouseDown);
-            this.btnNG二级伸出.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnNG二级伸出_MouseUp);
-            // 
-            // btnNG一级缩回
-            // 
-            this.btnNG一级缩回.BackColor = System.Drawing.SystemColors.Control;
-            this.btnNG一级缩回.Location = new System.Drawing.Point(33, 147);
-            this.btnNG一级缩回.Margin = new System.Windows.Forms.Padding(2);
-            this.btnNG一级缩回.Name = "btnNG一级缩回";
-            this.btnNG一级缩回.Size = new System.Drawing.Size(101, 24);
-            this.btnNG一级缩回.TabIndex = 63;
-            this.btnNG一级缩回.Text = "NG一级缩回";
-            this.btnNG一级缩回.UseVisualStyleBackColor = true;
-            this.btnNG一级缩回.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnNG一级缩回_MouseDown);
-            this.btnNG一级缩回.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnNG一级缩回_MouseUp);
-            // 
-            // btn除尘器2吹扫
-            // 
-            this.btn除尘器2吹扫.BackColor = System.Drawing.SystemColors.Control;
-            this.btn除尘器2吹扫.Location = new System.Drawing.Point(262, 60);
-            this.btn除尘器2吹扫.Margin = new System.Windows.Forms.Padding(2);
-            this.btn除尘器2吹扫.Name = "btn除尘器2吹扫";
-            this.btn除尘器2吹扫.Size = new System.Drawing.Size(101, 24);
-            this.btn除尘器2吹扫.TabIndex = 58;
-            this.btn除尘器2吹扫.Text = "除尘器吹扫关";
-            this.btn除尘器2吹扫.UseVisualStyleBackColor = true;
-            this.btn除尘器2吹扫.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn除尘器2吹扫_MouseDown);
-            this.btn除尘器2吹扫.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn除尘器2吹扫_MouseUp);
-            // 
-            // btnNG一级伸出
-            // 
-            this.btnNG一级伸出.BackColor = System.Drawing.SystemColors.Control;
-            this.btnNG一级伸出.Location = new System.Drawing.Point(33, 118);
-            this.btnNG一级伸出.Margin = new System.Windows.Forms.Padding(2);
-            this.btnNG一级伸出.Name = "btnNG一级伸出";
-            this.btnNG一级伸出.Size = new System.Drawing.Size(101, 24);
-            this.btnNG一级伸出.TabIndex = 62;
-            this.btnNG一级伸出.Text = "NG一级伸出";
-            this.btnNG一级伸出.UseVisualStyleBackColor = true;
-            this.btnNG一级伸出.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnNG一级伸出_MouseDown);
-            this.btnNG一级伸出.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnNG一级伸出_MouseUp);
-            // 
-            // btn除尘器1吹扫
-            // 
-            this.btn除尘器1吹扫.BackColor = System.Drawing.SystemColors.Control;
-            this.btn除尘器1吹扫.Location = new System.Drawing.Point(262, 31);
-            this.btn除尘器1吹扫.Margin = new System.Windows.Forms.Padding(2);
-            this.btn除尘器1吹扫.Name = "btn除尘器1吹扫";
-            this.btn除尘器1吹扫.Size = new System.Drawing.Size(101, 24);
-            this.btn除尘器1吹扫.TabIndex = 56;
-            this.btn除尘器1吹扫.Text = "除尘器吹扫开";
-            this.btn除尘器1吹扫.UseVisualStyleBackColor = true;
-            this.btn除尘器1吹扫.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn除尘器1吹扫_MouseDown);
-            this.btn除尘器1吹扫.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn除尘器1吹扫_MouseUp);
-            // 
-            // btn夹爪2复位
-            // 
-            this.btn夹爪2复位.BackColor = System.Drawing.SystemColors.Control;
-            this.btn夹爪2复位.Location = new System.Drawing.Point(148, 89);
-            this.btn夹爪2复位.Margin = new System.Windows.Forms.Padding(2);
-            this.btn夹爪2复位.Name = "btn夹爪2复位";
-            this.btn夹爪2复位.Size = new System.Drawing.Size(101, 24);
-            this.btn夹爪2复位.TabIndex = 53;
-            this.btn夹爪2复位.Text = "夹爪2复位";
-            this.btn夹爪2复位.UseVisualStyleBackColor = true;
-            this.btn夹爪2复位.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn夹爪2复位_MouseDown);
-            this.btn夹爪2复位.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn夹爪2复位_MouseUp);
-            // 
-            // btn夹爪2闭合1
-            // 
-            this.btn夹爪2闭合1.BackColor = System.Drawing.SystemColors.Control;
-            this.btn夹爪2闭合1.Location = new System.Drawing.Point(148, 60);
-            this.btn夹爪2闭合1.Margin = new System.Windows.Forms.Padding(2);
-            this.btn夹爪2闭合1.Name = "btn夹爪2闭合1";
-            this.btn夹爪2闭合1.Size = new System.Drawing.Size(101, 24);
-            this.btn夹爪2闭合1.TabIndex = 50;
-            this.btn夹爪2闭合1.Text = "夹爪2闭合";
-            this.btn夹爪2闭合1.UseVisualStyleBackColor = true;
-            this.btn夹爪2闭合1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn夹爪2闭合1_MouseDown);
-            this.btn夹爪2闭合1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn夹爪2闭合1_MouseUp);
-            // 
-            // btn夹爪1复位
-            // 
-            this.btn夹爪1复位.BackColor = System.Drawing.SystemColors.Control;
-            this.btn夹爪1复位.Location = new System.Drawing.Point(33, 89);
-            this.btn夹爪1复位.Margin = new System.Windows.Forms.Padding(2);
-            this.btn夹爪1复位.Name = "btn夹爪1复位";
-            this.btn夹爪1复位.Size = new System.Drawing.Size(101, 24);
-            this.btn夹爪1复位.TabIndex = 45;
-            this.btn夹爪1复位.Text = "夹爪1复位";
-            this.btn夹爪1复位.UseVisualStyleBackColor = true;
-            this.btn夹爪1复位.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn夹爪1复位_MouseDown);
-            this.btn夹爪1复位.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn夹爪1复位_MouseUp);
-            // 
-            // btn夹爪1闭合1
-            // 
-            this.btn夹爪1闭合1.BackColor = System.Drawing.SystemColors.Control;
-            this.btn夹爪1闭合1.Location = new System.Drawing.Point(33, 60);
-            this.btn夹爪1闭合1.Margin = new System.Windows.Forms.Padding(2);
-            this.btn夹爪1闭合1.Name = "btn夹爪1闭合1";
-            this.btn夹爪1闭合1.Size = new System.Drawing.Size(101, 24);
-            this.btn夹爪1闭合1.TabIndex = 42;
-            this.btn夹爪1闭合1.Text = "夹爪1闭合";
-            this.btn夹爪1闭合1.UseVisualStyleBackColor = true;
-            this.btn夹爪1闭合1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn夹爪1闭合1_MouseDown);
-            this.btn夹爪1闭合1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn夹爪1闭合1_MouseUp);
-            // 
-            // btn夹爪1回原点
-            // 
-            this.btn夹爪1回原点.BackColor = System.Drawing.SystemColors.Control;
-            this.btn夹爪1回原点.Location = new System.Drawing.Point(33, 31);
-            this.btn夹爪1回原点.Margin = new System.Windows.Forms.Padding(2);
-            this.btn夹爪1回原点.Name = "btn夹爪1回原点";
-            this.btn夹爪1回原点.Size = new System.Drawing.Size(101, 24);
-            this.btn夹爪1回原点.TabIndex = 40;
-            this.btn夹爪1回原点.Text = "夹爪1回原点";
-            this.btn夹爪1回原点.UseVisualStyleBackColor = true;
-            this.btn夹爪1回原点.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn夹爪1回原点_MouseDown);
-            this.btn夹爪1回原点.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn夹爪1回原点_MouseUp);
-            // 
-            // groupBox16
-            // 
-            this.groupBox16.Controls.Add(this.btn一键真空破坏);
-            this.groupBox16.Controls.Add(this.btn平移吸嘴4破坏);
-            this.groupBox16.Controls.Add(this.btn平移吸嘴3破坏);
-            this.groupBox16.Controls.Add(this.btn平移吸嘴2破坏);
-            this.groupBox16.Controls.Add(this.btn平移吸嘴1破坏);
-            this.groupBox16.Controls.Add(this.btn上料吸嘴2破坏);
-            this.groupBox16.Controls.Add(this.btn上料吸嘴1破坏);
-            this.groupBox16.Controls.Add(this.btn平移吸嘴4真空);
-            this.groupBox16.Controls.Add(this.btn平移吸嘴3真空);
-            this.groupBox16.Controls.Add(this.btn平移吸嘴2真空);
-            this.groupBox16.Controls.Add(this.btn平移吸嘴1真空);
-            this.groupBox16.Controls.Add(this.btn上料吸嘴2真空);
-            this.groupBox16.Controls.Add(this.btn上料吸嘴1真空);
-            this.groupBox16.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox16.Location = new System.Drawing.Point(26, 286);
-            this.groupBox16.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox16.Name = "groupBox16";
-            this.groupBox16.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox16.Size = new System.Drawing.Size(382, 265);
-            this.groupBox16.TabIndex = 48;
-            this.groupBox16.TabStop = false;
-            this.groupBox16.Text = "吸附";
-            // 
-            // btn一键真空破坏
-            // 
-            this.btn一键真空破坏.BackColor = System.Drawing.SystemColors.Control;
-            this.btn一键真空破坏.Location = new System.Drawing.Point(262, 18);
-            this.btn一键真空破坏.Margin = new System.Windows.Forms.Padding(2);
-            this.btn一键真空破坏.Name = "btn一键真空破坏";
-            this.btn一键真空破坏.Size = new System.Drawing.Size(101, 24);
-            this.btn一键真空破坏.TabIndex = 54;
-            this.btn一键真空破坏.Text = "一键真空破坏";
-            this.btn一键真空破坏.UseVisualStyleBackColor = true;
-            this.btn一键真空破坏.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn一键真空破坏_MouseDown);
-            this.btn一键真空破坏.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn一键真空破坏_MouseUp);
-            // 
-            // btn平移吸嘴4破坏
-            // 
-            this.btn平移吸嘴4破坏.BackColor = System.Drawing.SystemColors.Control;
-            this.btn平移吸嘴4破坏.Location = new System.Drawing.Point(148, 163);
-            this.btn平移吸嘴4破坏.Margin = new System.Windows.Forms.Padding(2);
-            this.btn平移吸嘴4破坏.Name = "btn平移吸嘴4破坏";
-            this.btn平移吸嘴4破坏.Size = new System.Drawing.Size(101, 24);
-            this.btn平移吸嘴4破坏.TabIndex = 53;
-            this.btn平移吸嘴4破坏.Text = "平移吸嘴4破坏";
-            this.btn平移吸嘴4破坏.UseVisualStyleBackColor = true;
-            this.btn平移吸嘴4破坏.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn平移吸嘴4破坏_MouseDown);
-            this.btn平移吸嘴4破坏.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn平移吸嘴4破坏_MouseUp);
-            // 
-            // btn平移吸嘴3破坏
-            // 
-            this.btn平移吸嘴3破坏.BackColor = System.Drawing.SystemColors.Control;
-            this.btn平移吸嘴3破坏.Location = new System.Drawing.Point(148, 134);
-            this.btn平移吸嘴3破坏.Margin = new System.Windows.Forms.Padding(2);
-            this.btn平移吸嘴3破坏.Name = "btn平移吸嘴3破坏";
-            this.btn平移吸嘴3破坏.Size = new System.Drawing.Size(101, 24);
-            this.btn平移吸嘴3破坏.TabIndex = 52;
-            this.btn平移吸嘴3破坏.Text = "平移吸嘴3破坏";
-            this.btn平移吸嘴3破坏.UseVisualStyleBackColor = true;
-            this.btn平移吸嘴3破坏.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn平移吸嘴3破坏_MouseDown);
-            this.btn平移吸嘴3破坏.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn平移吸嘴3破坏_MouseUp);
-            // 
-            // btn平移吸嘴2破坏
-            // 
-            this.btn平移吸嘴2破坏.BackColor = System.Drawing.SystemColors.Control;
-            this.btn平移吸嘴2破坏.Location = new System.Drawing.Point(148, 106);
-            this.btn平移吸嘴2破坏.Margin = new System.Windows.Forms.Padding(2);
-            this.btn平移吸嘴2破坏.Name = "btn平移吸嘴2破坏";
-            this.btn平移吸嘴2破坏.Size = new System.Drawing.Size(101, 24);
-            this.btn平移吸嘴2破坏.TabIndex = 51;
-            this.btn平移吸嘴2破坏.Text = "平移吸嘴2破坏";
-            this.btn平移吸嘴2破坏.UseVisualStyleBackColor = true;
-            this.btn平移吸嘴2破坏.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn平移吸嘴2破坏_MouseDown);
-            this.btn平移吸嘴2破坏.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn平移吸嘴2破坏_MouseUp);
-            // 
-            // btn平移吸嘴1破坏
-            // 
-            this.btn平移吸嘴1破坏.BackColor = System.Drawing.SystemColors.Control;
-            this.btn平移吸嘴1破坏.Location = new System.Drawing.Point(148, 77);
-            this.btn平移吸嘴1破坏.Margin = new System.Windows.Forms.Padding(2);
-            this.btn平移吸嘴1破坏.Name = "btn平移吸嘴1破坏";
-            this.btn平移吸嘴1破坏.Size = new System.Drawing.Size(101, 24);
-            this.btn平移吸嘴1破坏.TabIndex = 50;
-            this.btn平移吸嘴1破坏.Text = "平移吸嘴1破坏";
-            this.btn平移吸嘴1破坏.UseVisualStyleBackColor = true;
-            this.btn平移吸嘴1破坏.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn平移吸嘴1破坏_MouseDown);
-            this.btn平移吸嘴1破坏.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn平移吸嘴1破坏_MouseUp);
-            // 
-            // btn上料吸嘴2破坏
-            // 
-            this.btn上料吸嘴2破坏.BackColor = System.Drawing.SystemColors.Control;
-            this.btn上料吸嘴2破坏.Location = new System.Drawing.Point(148, 48);
-            this.btn上料吸嘴2破坏.Margin = new System.Windows.Forms.Padding(2);
-            this.btn上料吸嘴2破坏.Name = "btn上料吸嘴2破坏";
-            this.btn上料吸嘴2破坏.Size = new System.Drawing.Size(101, 24);
-            this.btn上料吸嘴2破坏.TabIndex = 49;
-            this.btn上料吸嘴2破坏.Text = "上料吸嘴2破坏";
-            this.btn上料吸嘴2破坏.UseVisualStyleBackColor = true;
-            this.btn上料吸嘴2破坏.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn上料吸嘴2破坏_MouseDown);
-            this.btn上料吸嘴2破坏.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn上料吸嘴2破坏_MouseUp);
-            // 
-            // btn上料吸嘴1破坏
-            // 
-            this.btn上料吸嘴1破坏.BackColor = System.Drawing.SystemColors.Control;
-            this.btn上料吸嘴1破坏.Location = new System.Drawing.Point(148, 19);
-            this.btn上料吸嘴1破坏.Margin = new System.Windows.Forms.Padding(2);
-            this.btn上料吸嘴1破坏.Name = "btn上料吸嘴1破坏";
-            this.btn上料吸嘴1破坏.Size = new System.Drawing.Size(101, 24);
-            this.btn上料吸嘴1破坏.TabIndex = 48;
-            this.btn上料吸嘴1破坏.Text = "上料吸嘴1破坏";
-            this.btn上料吸嘴1破坏.UseVisualStyleBackColor = true;
-            this.btn上料吸嘴1破坏.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn上料吸嘴1破坏_MouseDown);
-            this.btn上料吸嘴1破坏.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn上料吸嘴1破坏_MouseUp);
-            // 
-            // btn平移吸嘴4真空
-            // 
-            this.btn平移吸嘴4真空.BackColor = System.Drawing.SystemColors.Control;
-            this.btn平移吸嘴4真空.Location = new System.Drawing.Point(33, 163);
-            this.btn平移吸嘴4真空.Margin = new System.Windows.Forms.Padding(2);
-            this.btn平移吸嘴4真空.Name = "btn平移吸嘴4真空";
-            this.btn平移吸嘴4真空.Size = new System.Drawing.Size(101, 24);
-            this.btn平移吸嘴4真空.TabIndex = 45;
-            this.btn平移吸嘴4真空.Text = "平移吸嘴4真空";
-            this.btn平移吸嘴4真空.UseVisualStyleBackColor = true;
-            this.btn平移吸嘴4真空.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn平移吸嘴4真空_MouseDown);
-            this.btn平移吸嘴4真空.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn平移吸嘴4真空_MouseUp);
-            // 
-            // btn平移吸嘴3真空
-            // 
-            this.btn平移吸嘴3真空.BackColor = System.Drawing.SystemColors.Control;
-            this.btn平移吸嘴3真空.Location = new System.Drawing.Point(33, 134);
-            this.btn平移吸嘴3真空.Margin = new System.Windows.Forms.Padding(2);
-            this.btn平移吸嘴3真空.Name = "btn平移吸嘴3真空";
-            this.btn平移吸嘴3真空.Size = new System.Drawing.Size(101, 24);
-            this.btn平移吸嘴3真空.TabIndex = 44;
-            this.btn平移吸嘴3真空.Text = "平移吸嘴3真空";
-            this.btn平移吸嘴3真空.UseVisualStyleBackColor = true;
-            this.btn平移吸嘴3真空.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn平移吸嘴3真空_MouseDown);
-            this.btn平移吸嘴3真空.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn平移吸嘴3真空_MouseUp);
-            // 
-            // btn平移吸嘴2真空
-            // 
-            this.btn平移吸嘴2真空.BackColor = System.Drawing.SystemColors.Control;
-            this.btn平移吸嘴2真空.Location = new System.Drawing.Point(33, 106);
-            this.btn平移吸嘴2真空.Margin = new System.Windows.Forms.Padding(2);
-            this.btn平移吸嘴2真空.Name = "btn平移吸嘴2真空";
-            this.btn平移吸嘴2真空.Size = new System.Drawing.Size(101, 24);
-            this.btn平移吸嘴2真空.TabIndex = 43;
-            this.btn平移吸嘴2真空.Text = "平移吸嘴2真空";
-            this.btn平移吸嘴2真空.UseVisualStyleBackColor = true;
-            this.btn平移吸嘴2真空.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn平移吸嘴2真空_MouseDown);
-            this.btn平移吸嘴2真空.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn平移吸嘴2真空_MouseUp);
-            // 
-            // btn平移吸嘴1真空
-            // 
-            this.btn平移吸嘴1真空.BackColor = System.Drawing.SystemColors.Control;
-            this.btn平移吸嘴1真空.Location = new System.Drawing.Point(33, 77);
-            this.btn平移吸嘴1真空.Margin = new System.Windows.Forms.Padding(2);
-            this.btn平移吸嘴1真空.Name = "btn平移吸嘴1真空";
-            this.btn平移吸嘴1真空.Size = new System.Drawing.Size(101, 24);
-            this.btn平移吸嘴1真空.TabIndex = 42;
-            this.btn平移吸嘴1真空.Text = "平移吸嘴1真空";
-            this.btn平移吸嘴1真空.UseVisualStyleBackColor = true;
-            this.btn平移吸嘴1真空.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn平移吸嘴1真空_MouseDown);
-            this.btn平移吸嘴1真空.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn平移吸嘴1真空_MouseUp);
-            // 
-            // btn上料吸嘴2真空
-            // 
-            this.btn上料吸嘴2真空.BackColor = System.Drawing.SystemColors.Control;
-            this.btn上料吸嘴2真空.Location = new System.Drawing.Point(33, 48);
-            this.btn上料吸嘴2真空.Margin = new System.Windows.Forms.Padding(2);
-            this.btn上料吸嘴2真空.Name = "btn上料吸嘴2真空";
-            this.btn上料吸嘴2真空.Size = new System.Drawing.Size(101, 24);
-            this.btn上料吸嘴2真空.TabIndex = 41;
-            this.btn上料吸嘴2真空.Text = "上料吸嘴2真空";
-            this.btn上料吸嘴2真空.UseVisualStyleBackColor = true;
-            this.btn上料吸嘴2真空.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn上料吸嘴2真空_MouseDown);
-            this.btn上料吸嘴2真空.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn上料吸嘴2真空_MouseUp);
-            // 
-            // btn上料吸嘴1真空
-            // 
-            this.btn上料吸嘴1真空.BackColor = System.Drawing.SystemColors.Control;
-            this.btn上料吸嘴1真空.Location = new System.Drawing.Point(33, 19);
-            this.btn上料吸嘴1真空.Margin = new System.Windows.Forms.Padding(2);
-            this.btn上料吸嘴1真空.Name = "btn上料吸嘴1真空";
-            this.btn上料吸嘴1真空.Size = new System.Drawing.Size(101, 24);
-            this.btn上料吸嘴1真空.TabIndex = 40;
-            this.btn上料吸嘴1真空.Text = "上料吸嘴1真空";
-            this.btn上料吸嘴1真空.UseVisualStyleBackColor = true;
-            this.btn上料吸嘴1真空.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn上料吸嘴1真空_MouseDown);
-            this.btn上料吸嘴1真空.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn上料吸嘴1真空_MouseUp);
-            // 
-            // groupBox15
-            // 
-            this.groupBox15.Controls.Add(this.btn倒实二级缩回);
-            this.groupBox15.Controls.Add(this.btn倒实二级伸出);
-            this.groupBox15.Controls.Add(this.btn倒实一级缩回);
-            this.groupBox15.Controls.Add(this.btn倒实一级伸出);
-            this.groupBox15.Controls.Add(this.btn翻转气缸180);
-            this.groupBox15.Controls.Add(this.btn翻转气缸0);
-            this.groupBox15.Controls.Add(this.btn平移吸嘴34下降);
-            this.groupBox15.Controls.Add(this.btn平移吸嘴34上升);
-            this.groupBox15.Controls.Add(this.btn平移吸嘴12下降);
-            this.groupBox15.Controls.Add(this.btn平移吸嘴12上升);
-            this.groupBox15.Controls.Add(this.btn上料吸嘴2下降);
-            this.groupBox15.Controls.Add(this.btn上料吸嘴2上升);
-            this.groupBox15.Controls.Add(this.btn上料吸嘴1下降);
-            this.groupBox15.Controls.Add(this.btn上料吸嘴1上升);
-            this.groupBox15.Controls.Add(this.btnNG盘防卡盘缩回);
-            this.groupBox15.Controls.Add(this.btnNG盘防卡盘伸出);
-            this.groupBox15.Controls.Add(this.btn实盘防卡盘缩回);
-            this.groupBox15.Controls.Add(this.btn实盘防卡盘伸出);
-            this.groupBox15.Controls.Add(this.btn上料机械手缩回);
-            this.groupBox15.Controls.Add(this.btn上料机械手伸出);
-            this.groupBox15.Controls.Add(this.btn上料机械手下降);
-            this.groupBox15.Controls.Add(this.btn上料机械手上升);
-            this.groupBox15.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox15.Location = new System.Drawing.Point(26, 16);
-            this.groupBox15.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox15.Name = "groupBox15";
-            this.groupBox15.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox15.Size = new System.Drawing.Size(382, 265);
-            this.groupBox15.TabIndex = 13;
-            this.groupBox15.TabStop = false;
-            this.groupBox15.Text = "上料气缸";
-            // 
-            // btn倒实二级缩回
-            // 
-            this.btn倒实二级缩回.BackColor = System.Drawing.SystemColors.Control;
-            this.btn倒实二级缩回.Location = new System.Drawing.Point(262, 175);
-            this.btn倒实二级缩回.Margin = new System.Windows.Forms.Padding(2);
-            this.btn倒实二级缩回.Name = "btn倒实二级缩回";
-            this.btn倒实二级缩回.Size = new System.Drawing.Size(101, 24);
-            this.btn倒实二级缩回.TabIndex = 61;
-            this.btn倒实二级缩回.Text = "倒实二级缩回";
-            this.btn倒实二级缩回.UseVisualStyleBackColor = true;
-            this.btn倒实二级缩回.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn倒实二级缩回_MouseDown);
-            this.btn倒实二级缩回.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn倒实二级缩回_MouseUp);
-            // 
-            // btn倒实二级伸出
-            // 
-            this.btn倒实二级伸出.BackColor = System.Drawing.SystemColors.Control;
-            this.btn倒实二级伸出.Location = new System.Drawing.Point(262, 146);
-            this.btn倒实二级伸出.Margin = new System.Windows.Forms.Padding(2);
-            this.btn倒实二级伸出.Name = "btn倒实二级伸出";
-            this.btn倒实二级伸出.Size = new System.Drawing.Size(101, 24);
-            this.btn倒实二级伸出.TabIndex = 60;
-            this.btn倒实二级伸出.Text = "倒实二级伸出";
-            this.btn倒实二级伸出.UseVisualStyleBackColor = true;
-            this.btn倒实二级伸出.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn倒实二级伸出_MouseDown);
-            this.btn倒实二级伸出.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn倒实二级伸出_MouseUp);
-            // 
-            // btn倒实一级缩回
-            // 
-            this.btn倒实一级缩回.BackColor = System.Drawing.SystemColors.Control;
-            this.btn倒实一级缩回.Location = new System.Drawing.Point(262, 118);
-            this.btn倒实一级缩回.Margin = new System.Windows.Forms.Padding(2);
-            this.btn倒实一级缩回.Name = "btn倒实一级缩回";
-            this.btn倒实一级缩回.Size = new System.Drawing.Size(101, 24);
-            this.btn倒实一级缩回.TabIndex = 59;
-            this.btn倒实一级缩回.Text = "倒实一级缩回";
-            this.btn倒实一级缩回.UseVisualStyleBackColor = true;
-            this.btn倒实一级缩回.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn倒实一级缩回_MouseDown);
-            this.btn倒实一级缩回.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn倒实一级缩回_MouseUp);
-            // 
-            // btn倒实一级伸出
-            // 
-            this.btn倒实一级伸出.BackColor = System.Drawing.SystemColors.Control;
-            this.btn倒实一级伸出.Location = new System.Drawing.Point(262, 89);
-            this.btn倒实一级伸出.Margin = new System.Windows.Forms.Padding(2);
-            this.btn倒实一级伸出.Name = "btn倒实一级伸出";
-            this.btn倒实一级伸出.Size = new System.Drawing.Size(101, 24);
-            this.btn倒实一级伸出.TabIndex = 58;
-            this.btn倒实一级伸出.Text = "倒实一级伸出";
-            this.btn倒实一级伸出.UseVisualStyleBackColor = true;
-            this.btn倒实一级伸出.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn倒实一级伸出_MouseDown);
-            this.btn倒实一级伸出.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn倒实一级伸出_MouseUp);
-            // 
-            // btn翻转气缸180
-            // 
-            this.btn翻转气缸180.BackColor = System.Drawing.SystemColors.Control;
-            this.btn翻转气缸180.Location = new System.Drawing.Point(262, 60);
-            this.btn翻转气缸180.Margin = new System.Windows.Forms.Padding(2);
-            this.btn翻转气缸180.Name = "btn翻转气缸180";
-            this.btn翻转气缸180.Size = new System.Drawing.Size(101, 24);
-            this.btn翻转气缸180.TabIndex = 57;
-            this.btn翻转气缸180.Text = "翻转气缸180°";
-            this.btn翻转气缸180.UseVisualStyleBackColor = true;
-            this.btn翻转气缸180.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn翻转气缸180_MouseDown);
-            this.btn翻转气缸180.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn翻转气缸180_MouseUp);
-            // 
-            // btn翻转气缸0
-            // 
-            this.btn翻转气缸0.BackColor = System.Drawing.SystemColors.Control;
-            this.btn翻转气缸0.Location = new System.Drawing.Point(262, 31);
-            this.btn翻转气缸0.Margin = new System.Windows.Forms.Padding(2);
-            this.btn翻转气缸0.Name = "btn翻转气缸0";
-            this.btn翻转气缸0.Size = new System.Drawing.Size(101, 24);
-            this.btn翻转气缸0.TabIndex = 56;
-            this.btn翻转气缸0.Text = "翻转气缸0°";
-            this.btn翻转气缸0.UseVisualStyleBackColor = true;
-            this.btn翻转气缸0.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn翻转气缸0_MouseDown);
-            this.btn翻转气缸0.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn翻转气缸0_MouseUp);
-            // 
-            // btn平移吸嘴34下降
-            // 
-            this.btn平移吸嘴34下降.BackColor = System.Drawing.SystemColors.Control;
-            this.btn平移吸嘴34下降.Location = new System.Drawing.Point(148, 233);
-            this.btn平移吸嘴34下降.Margin = new System.Windows.Forms.Padding(2);
-            this.btn平移吸嘴34下降.Name = "btn平移吸嘴34下降";
-            this.btn平移吸嘴34下降.Size = new System.Drawing.Size(101, 24);
-            this.btn平移吸嘴34下降.TabIndex = 55;
-            this.btn平移吸嘴34下降.Text = "平移吸嘴3/4下降";
-            this.btn平移吸嘴34下降.UseVisualStyleBackColor = true;
-            this.btn平移吸嘴34下降.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn平移吸嘴34下降_MouseDown);
-            this.btn平移吸嘴34下降.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn平移吸嘴34下降_MouseUp);
-            // 
-            // btn平移吸嘴34上升
-            // 
-            this.btn平移吸嘴34上升.BackColor = System.Drawing.SystemColors.Control;
-            this.btn平移吸嘴34上升.Location = new System.Drawing.Point(148, 204);
-            this.btn平移吸嘴34上升.Margin = new System.Windows.Forms.Padding(2);
-            this.btn平移吸嘴34上升.Name = "btn平移吸嘴34上升";
-            this.btn平移吸嘴34上升.Size = new System.Drawing.Size(101, 24);
-            this.btn平移吸嘴34上升.TabIndex = 54;
-            this.btn平移吸嘴34上升.Text = "平移吸嘴3/4上升";
-            this.btn平移吸嘴34上升.UseVisualStyleBackColor = true;
-            this.btn平移吸嘴34上升.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn平移吸嘴34上升_MouseDown);
-            this.btn平移吸嘴34上升.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn平移吸嘴34上升_MouseUp);
-            // 
-            // btn平移吸嘴12下降
-            // 
-            this.btn平移吸嘴12下降.BackColor = System.Drawing.SystemColors.Control;
-            this.btn平移吸嘴12下降.Location = new System.Drawing.Point(148, 175);
-            this.btn平移吸嘴12下降.Margin = new System.Windows.Forms.Padding(2);
-            this.btn平移吸嘴12下降.Name = "btn平移吸嘴12下降";
-            this.btn平移吸嘴12下降.Size = new System.Drawing.Size(101, 24);
-            this.btn平移吸嘴12下降.TabIndex = 53;
-            this.btn平移吸嘴12下降.Text = "平移吸嘴1/2下降";
-            this.btn平移吸嘴12下降.UseVisualStyleBackColor = true;
-            this.btn平移吸嘴12下降.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn平移吸嘴12下降_MouseDown);
-            this.btn平移吸嘴12下降.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn平移吸嘴12下降_MouseUp);
-            // 
-            // btn平移吸嘴12上升
-            // 
-            this.btn平移吸嘴12上升.BackColor = System.Drawing.SystemColors.Control;
-            this.btn平移吸嘴12上升.Location = new System.Drawing.Point(148, 146);
-            this.btn平移吸嘴12上升.Margin = new System.Windows.Forms.Padding(2);
-            this.btn平移吸嘴12上升.Name = "btn平移吸嘴12上升";
-            this.btn平移吸嘴12上升.Size = new System.Drawing.Size(101, 24);
-            this.btn平移吸嘴12上升.TabIndex = 52;
-            this.btn平移吸嘴12上升.Text = "平移吸嘴1/2上升";
-            this.btn平移吸嘴12上升.UseVisualStyleBackColor = true;
-            this.btn平移吸嘴12上升.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn平移吸嘴12上升_MouseDown);
-            this.btn平移吸嘴12上升.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn平移吸嘴12上升_MouseUp);
-            // 
-            // btn上料吸嘴2下降
-            // 
-            this.btn上料吸嘴2下降.BackColor = System.Drawing.SystemColors.Control;
-            this.btn上料吸嘴2下降.Location = new System.Drawing.Point(148, 118);
-            this.btn上料吸嘴2下降.Margin = new System.Windows.Forms.Padding(2);
-            this.btn上料吸嘴2下降.Name = "btn上料吸嘴2下降";
-            this.btn上料吸嘴2下降.Size = new System.Drawing.Size(101, 24);
-            this.btn上料吸嘴2下降.TabIndex = 51;
-            this.btn上料吸嘴2下降.Text = "上料吸嘴2下降";
-            this.btn上料吸嘴2下降.UseVisualStyleBackColor = true;
-            this.btn上料吸嘴2下降.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn上料吸嘴2下降_MouseDown);
-            this.btn上料吸嘴2下降.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn上料吸嘴2下降_MouseUp);
-            // 
-            // btn上料吸嘴2上升
-            // 
-            this.btn上料吸嘴2上升.BackColor = System.Drawing.SystemColors.Control;
-            this.btn上料吸嘴2上升.Location = new System.Drawing.Point(148, 89);
-            this.btn上料吸嘴2上升.Margin = new System.Windows.Forms.Padding(2);
-            this.btn上料吸嘴2上升.Name = "btn上料吸嘴2上升";
-            this.btn上料吸嘴2上升.Size = new System.Drawing.Size(101, 24);
-            this.btn上料吸嘴2上升.TabIndex = 50;
-            this.btn上料吸嘴2上升.Text = "上料吸嘴2上升";
-            this.btn上料吸嘴2上升.UseVisualStyleBackColor = true;
-            this.btn上料吸嘴2上升.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn上料吸嘴2上升_MouseDown);
-            this.btn上料吸嘴2上升.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn上料吸嘴2上升_MouseUp);
-            // 
-            // btn上料吸嘴1下降
-            // 
-            this.btn上料吸嘴1下降.BackColor = System.Drawing.SystemColors.Control;
-            this.btn上料吸嘴1下降.Location = new System.Drawing.Point(148, 60);
-            this.btn上料吸嘴1下降.Margin = new System.Windows.Forms.Padding(2);
-            this.btn上料吸嘴1下降.Name = "btn上料吸嘴1下降";
-            this.btn上料吸嘴1下降.Size = new System.Drawing.Size(101, 24);
-            this.btn上料吸嘴1下降.TabIndex = 49;
-            this.btn上料吸嘴1下降.Text = "上料吸嘴1下降";
-            this.btn上料吸嘴1下降.UseVisualStyleBackColor = true;
-            this.btn上料吸嘴1下降.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn上料吸嘴1下降_MouseDown);
-            this.btn上料吸嘴1下降.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn上料吸嘴1下降_MouseUp);
-            // 
-            // btn上料吸嘴1上升
-            // 
-            this.btn上料吸嘴1上升.BackColor = System.Drawing.SystemColors.Control;
-            this.btn上料吸嘴1上升.Location = new System.Drawing.Point(148, 31);
-            this.btn上料吸嘴1上升.Margin = new System.Windows.Forms.Padding(2);
-            this.btn上料吸嘴1上升.Name = "btn上料吸嘴1上升";
-            this.btn上料吸嘴1上升.Size = new System.Drawing.Size(101, 24);
-            this.btn上料吸嘴1上升.TabIndex = 48;
-            this.btn上料吸嘴1上升.Text = "上料吸嘴1上升";
-            this.btn上料吸嘴1上升.UseVisualStyleBackColor = true;
-            this.btn上料吸嘴1上升.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn上料吸嘴1上升_MouseDown);
-            this.btn上料吸嘴1上升.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn上料吸嘴1上升_MouseUp);
-            // 
-            // btnNG盘防卡盘缩回
-            // 
-            this.btnNG盘防卡盘缩回.BackColor = System.Drawing.SystemColors.Control;
-            this.btnNG盘防卡盘缩回.Location = new System.Drawing.Point(33, 233);
-            this.btnNG盘防卡盘缩回.Margin = new System.Windows.Forms.Padding(2);
-            this.btnNG盘防卡盘缩回.Name = "btnNG盘防卡盘缩回";
-            this.btnNG盘防卡盘缩回.Size = new System.Drawing.Size(101, 24);
-            this.btnNG盘防卡盘缩回.TabIndex = 47;
-            this.btnNG盘防卡盘缩回.Text = "NG盘防卡盘缩回";
-            this.btnNG盘防卡盘缩回.UseVisualStyleBackColor = true;
-            this.btnNG盘防卡盘缩回.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnNG盘防卡盘缩回_MouseDown);
-            this.btnNG盘防卡盘缩回.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnNG盘防卡盘缩回_MouseUp);
-            // 
-            // btnNG盘防卡盘伸出
-            // 
-            this.btnNG盘防卡盘伸出.BackColor = System.Drawing.SystemColors.Control;
-            this.btnNG盘防卡盘伸出.Location = new System.Drawing.Point(33, 204);
-            this.btnNG盘防卡盘伸出.Margin = new System.Windows.Forms.Padding(2);
-            this.btnNG盘防卡盘伸出.Name = "btnNG盘防卡盘伸出";
-            this.btnNG盘防卡盘伸出.Size = new System.Drawing.Size(101, 24);
-            this.btnNG盘防卡盘伸出.TabIndex = 46;
-            this.btnNG盘防卡盘伸出.Text = "NG盘防卡盘伸出";
-            this.btnNG盘防卡盘伸出.UseVisualStyleBackColor = true;
-            this.btnNG盘防卡盘伸出.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnNG盘防卡盘伸出_MouseDown);
-            this.btnNG盘防卡盘伸出.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnNG盘防卡盘伸出_MouseUp);
-            // 
-            // btn实盘防卡盘缩回
-            // 
-            this.btn实盘防卡盘缩回.BackColor = System.Drawing.SystemColors.Control;
-            this.btn实盘防卡盘缩回.Location = new System.Drawing.Point(33, 175);
-            this.btn实盘防卡盘缩回.Margin = new System.Windows.Forms.Padding(2);
-            this.btn实盘防卡盘缩回.Name = "btn实盘防卡盘缩回";
-            this.btn实盘防卡盘缩回.Size = new System.Drawing.Size(101, 24);
-            this.btn实盘防卡盘缩回.TabIndex = 45;
-            this.btn实盘防卡盘缩回.Text = "实盘防卡盘缩回";
-            this.btn实盘防卡盘缩回.UseVisualStyleBackColor = true;
-            this.btn实盘防卡盘缩回.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn实盘防卡盘缩回_MouseDown);
-            this.btn实盘防卡盘缩回.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn实盘防卡盘缩回_MouseUp);
-            // 
-            // btn实盘防卡盘伸出
-            // 
-            this.btn实盘防卡盘伸出.BackColor = System.Drawing.SystemColors.Control;
-            this.btn实盘防卡盘伸出.Location = new System.Drawing.Point(33, 146);
-            this.btn实盘防卡盘伸出.Margin = new System.Windows.Forms.Padding(2);
-            this.btn实盘防卡盘伸出.Name = "btn实盘防卡盘伸出";
-            this.btn实盘防卡盘伸出.Size = new System.Drawing.Size(101, 24);
-            this.btn实盘防卡盘伸出.TabIndex = 44;
-            this.btn实盘防卡盘伸出.Text = "实盘防卡盘伸出";
-            this.btn实盘防卡盘伸出.UseVisualStyleBackColor = true;
-            this.btn实盘防卡盘伸出.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn实盘防卡盘伸出_MouseDown);
-            this.btn实盘防卡盘伸出.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn实盘防卡盘伸出_MouseUp);
-            // 
-            // btn上料机械手缩回
-            // 
-            this.btn上料机械手缩回.BackColor = System.Drawing.SystemColors.Control;
-            this.btn上料机械手缩回.Location = new System.Drawing.Point(33, 118);
-            this.btn上料机械手缩回.Margin = new System.Windows.Forms.Padding(2);
-            this.btn上料机械手缩回.Name = "btn上料机械手缩回";
-            this.btn上料机械手缩回.Size = new System.Drawing.Size(101, 24);
-            this.btn上料机械手缩回.TabIndex = 43;
-            this.btn上料机械手缩回.Text = "上料机械手张开";
-            this.btn上料机械手缩回.UseVisualStyleBackColor = true;
-            this.btn上料机械手缩回.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn上料机械手缩回_MouseDown);
-            this.btn上料机械手缩回.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn上料机械手缩回_MouseUp);
-            // 
-            // btn上料机械手伸出
-            // 
-            this.btn上料机械手伸出.BackColor = System.Drawing.SystemColors.Control;
-            this.btn上料机械手伸出.Location = new System.Drawing.Point(33, 89);
-            this.btn上料机械手伸出.Margin = new System.Windows.Forms.Padding(2);
-            this.btn上料机械手伸出.Name = "btn上料机械手伸出";
-            this.btn上料机械手伸出.Size = new System.Drawing.Size(101, 24);
-            this.btn上料机械手伸出.TabIndex = 42;
-            this.btn上料机械手伸出.Text = "上料机械手夹紧";
-            this.btn上料机械手伸出.UseVisualStyleBackColor = true;
-            this.btn上料机械手伸出.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn上料机械手伸出_MouseDown);
-            this.btn上料机械手伸出.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn上料机械手伸出_MouseUp);
-            // 
-            // btn上料机械手下降
-            // 
-            this.btn上料机械手下降.BackColor = System.Drawing.SystemColors.Control;
-            this.btn上料机械手下降.Location = new System.Drawing.Point(33, 60);
-            this.btn上料机械手下降.Margin = new System.Windows.Forms.Padding(2);
-            this.btn上料机械手下降.Name = "btn上料机械手下降";
-            this.btn上料机械手下降.Size = new System.Drawing.Size(101, 24);
-            this.btn上料机械手下降.TabIndex = 41;
-            this.btn上料机械手下降.Text = "上料机械手下降";
-            this.btn上料机械手下降.UseVisualStyleBackColor = true;
-            this.btn上料机械手下降.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn上料机械手下降_MouseDown);
-            this.btn上料机械手下降.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn上料机械手下降_MouseUp);
-            // 
-            // btn上料机械手上升
-            // 
-            this.btn上料机械手上升.BackColor = System.Drawing.SystemColors.Control;
-            this.btn上料机械手上升.Location = new System.Drawing.Point(33, 31);
-            this.btn上料机械手上升.Margin = new System.Windows.Forms.Padding(2);
-            this.btn上料机械手上升.Name = "btn上料机械手上升";
-            this.btn上料机械手上升.Size = new System.Drawing.Size(101, 24);
-            this.btn上料机械手上升.TabIndex = 40;
-            this.btn上料机械手上升.Text = "上料机械手上升";
-            this.btn上料机械手上升.UseVisualStyleBackColor = true;
-            this.btn上料机械手上升.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn上料机械手上升_MouseDown);
-            this.btn上料机械手上升.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn上料机械手上升_MouseUp);
-            // 
-            // tabPage7
-            // 
-            this.tabPage7.Controls.Add(this.groupBox32);
-            this.tabPage7.Controls.Add(this.groupBox30);
-            this.tabPage7.Controls.Add(this.groupBox29);
-            this.tabPage7.Controls.Add(this.groupBox31);
-            this.tabPage7.Controls.Add(this.groupBox27);
-            this.tabPage7.Controls.Add(this.groupBox28);
-            this.tabPage7.Controls.Add(this.groupBox26);
-            this.tabPage7.Controls.Add(this.groupBox25);
-            this.tabPage7.Controls.Add(this.groupBox24);
-            this.tabPage7.Controls.Add(this.groupBox23);
-            this.tabPage7.Controls.Add(this.groupBox22);
-            this.tabPage7.Controls.Add(this.groupBox21);
-            this.tabPage7.Location = new System.Drawing.Point(4, 44);
-            this.tabPage7.Margin = new System.Windows.Forms.Padding(2);
-            this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage7.Size = new System.Drawing.Size(1276, 756);
-            this.tabPage7.TabIndex = 6;
-            this.tabPage7.Text = "手动电机1";
-            this.tabPage7.UseVisualStyleBackColor = true;
             // 
             // groupBox32
             // 
@@ -4376,7 +5665,7 @@
             this.groupBox32.Controls.Add(this.btnBYZ视觉位置1);
             this.groupBox32.Controls.Add(this.btnBYZ上料位置);
             this.groupBox32.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox32.Location = new System.Drawing.Point(998, 362);
+            this.groupBox32.Location = new System.Drawing.Point(998, 403);
             this.groupBox32.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox32.Name = "groupBox32";
             this.groupBox32.Padding = new System.Windows.Forms.Padding(2);
@@ -4388,7 +5677,7 @@
             // btnBYZ平移位置34
             // 
             this.btnBYZ平移位置34.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBYZ平移位置34.Location = new System.Drawing.Point(103, 133);
+            this.btnBYZ平移位置34.Location = new System.Drawing.Point(97, 113);
             this.btnBYZ平移位置34.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYZ平移位置34.Name = "btnBYZ平移位置34";
             this.btnBYZ平移位置34.Size = new System.Drawing.Size(75, 24);
@@ -4401,7 +5690,7 @@
             // btnBYZSok位置34
             // 
             this.btnBYZSok位置34.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBYZSok位置34.Location = new System.Drawing.Point(103, 193);
+            this.btnBYZSok位置34.Location = new System.Drawing.Point(97, 173);
             this.btnBYZSok位置34.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYZSok位置34.Name = "btnBYZSok位置34";
             this.btnBYZSok位置34.Size = new System.Drawing.Size(75, 24);
@@ -4414,7 +5703,7 @@
             // btnBYZ视觉位置3
             // 
             this.btnBYZ视觉位置3.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBYZ视觉位置3.Location = new System.Drawing.Point(15, 162);
+            this.btnBYZ视觉位置3.Location = new System.Drawing.Point(9, 142);
             this.btnBYZ视觉位置3.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYZ视觉位置3.Name = "btnBYZ视觉位置3";
             this.btnBYZ视觉位置3.Size = new System.Drawing.Size(75, 24);
@@ -4427,7 +5716,7 @@
             // btnBYZ上升位置
             // 
             this.btnBYZ上升位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBYZ上升位置.Location = new System.Drawing.Point(103, 74);
+            this.btnBYZ上升位置.Location = new System.Drawing.Point(97, 54);
             this.btnBYZ上升位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYZ上升位置.Name = "btnBYZ上升位置";
             this.btnBYZ上升位置.Size = new System.Drawing.Size(75, 24);
@@ -4440,7 +5729,7 @@
             // btnBYZ下料位置
             // 
             this.btnBYZ下料位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBYZ下料位置.Location = new System.Drawing.Point(103, 163);
+            this.btnBYZ下料位置.Location = new System.Drawing.Point(97, 143);
             this.btnBYZ下料位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYZ下料位置.Name = "btnBYZ下料位置";
             this.btnBYZ下料位置.Size = new System.Drawing.Size(75, 24);
@@ -4515,7 +5804,7 @@
             // btnBYZ回原点
             // 
             this.btnBYZ回原点.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBYZ回原点.Location = new System.Drawing.Point(15, 74);
+            this.btnBYZ回原点.Location = new System.Drawing.Point(9, 54);
             this.btnBYZ回原点.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYZ回原点.Name = "btnBYZ回原点";
             this.btnBYZ回原点.Size = new System.Drawing.Size(75, 24);
@@ -4528,7 +5817,7 @@
             // btnBYZ视觉位置2
             // 
             this.btnBYZ视觉位置2.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBYZ视觉位置2.Location = new System.Drawing.Point(15, 132);
+            this.btnBYZ视觉位置2.Location = new System.Drawing.Point(9, 112);
             this.btnBYZ视觉位置2.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYZ视觉位置2.Name = "btnBYZ视觉位置2";
             this.btnBYZ视觉位置2.Size = new System.Drawing.Size(75, 24);
@@ -4541,7 +5830,7 @@
             // btnBYZ视觉位置1
             // 
             this.btnBYZ视觉位置1.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBYZ视觉位置1.Location = new System.Drawing.Point(15, 103);
+            this.btnBYZ视觉位置1.Location = new System.Drawing.Point(9, 83);
             this.btnBYZ视觉位置1.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYZ视觉位置1.Name = "btnBYZ视觉位置1";
             this.btnBYZ视觉位置1.Size = new System.Drawing.Size(75, 24);
@@ -4554,7 +5843,7 @@
             // btnBYZ上料位置
             // 
             this.btnBYZ上料位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBYZ上料位置.Location = new System.Drawing.Point(103, 103);
+            this.btnBYZ上料位置.Location = new System.Drawing.Point(97, 83);
             this.btnBYZ上料位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYZ上料位置.Name = "btnBYZ上料位置";
             this.btnBYZ上料位置.Size = new System.Drawing.Size(75, 24);
@@ -4566,6 +5855,7 @@
             // 
             // groupBox30
             // 
+            this.groupBox30.Controls.Add(this.btnBYYSokt夹爪2记忆);
             this.groupBox30.Controls.Add(this.btnBYYSokt夹爪1记忆);
             this.groupBox30.Controls.Add(this.btnSokt夹爪4);
             this.groupBox30.Controls.Add(this.btnSokt夹爪3);
@@ -4586,7 +5876,7 @@
             this.groupBox30.Controls.Add(this.btnBYY视觉位置2);
             this.groupBox30.Controls.Add(this.btnBYY视觉位置1);
             this.groupBox30.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox30.Location = new System.Drawing.Point(802, 362);
+            this.groupBox30.Location = new System.Drawing.Point(802, 403);
             this.groupBox30.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox30.Name = "groupBox30";
             this.groupBox30.Padding = new System.Windows.Forms.Padding(2);
@@ -4595,10 +5885,23 @@
             this.groupBox30.TabStop = false;
             this.groupBox30.Text = "搬运Y轴";
             // 
+            // btnBYYSokt夹爪2记忆
+            // 
+            this.btnBYYSokt夹爪2记忆.BackColor = System.Drawing.SystemColors.Control;
+            this.btnBYYSokt夹爪2记忆.Location = new System.Drawing.Point(98, 257);
+            this.btnBYYSokt夹爪2记忆.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBYYSokt夹爪2记忆.Name = "btnBYYSokt夹爪2记忆";
+            this.btnBYYSokt夹爪2记忆.Size = new System.Drawing.Size(88, 24);
+            this.btnBYYSokt夹爪2记忆.TabIndex = 68;
+            this.btnBYYSokt夹爪2记忆.Text = "Sokt夹爪2记忆";
+            this.btnBYYSokt夹爪2记忆.UseVisualStyleBackColor = true;
+            this.btnBYYSokt夹爪2记忆.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnBYYSokt夹爪2记忆_MouseDown);
+            this.btnBYYSokt夹爪2记忆.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnBYYSokt夹爪2记忆_MouseUp);
+            // 
             // btnBYYSokt夹爪1记忆
             // 
             this.btnBYYSokt夹爪1记忆.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBYYSokt夹爪1记忆.Location = new System.Drawing.Point(98, 246);
+            this.btnBYYSokt夹爪1记忆.Location = new System.Drawing.Point(98, 226);
             this.btnBYYSokt夹爪1记忆.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYYSokt夹爪1记忆.Name = "btnBYYSokt夹爪1记忆";
             this.btnBYYSokt夹爪1记忆.Size = new System.Drawing.Size(88, 24);
@@ -4611,7 +5914,7 @@
             // btnSokt夹爪4
             // 
             this.btnSokt夹爪4.BackColor = System.Drawing.SystemColors.Control;
-            this.btnSokt夹爪4.Location = new System.Drawing.Point(8, 246);
+            this.btnSokt夹爪4.Location = new System.Drawing.Point(8, 226);
             this.btnSokt夹爪4.Margin = new System.Windows.Forms.Padding(2);
             this.btnSokt夹爪4.Name = "btnSokt夹爪4";
             this.btnSokt夹爪4.Size = new System.Drawing.Size(75, 24);
@@ -4624,7 +5927,7 @@
             // btnSokt夹爪3
             // 
             this.btnSokt夹爪3.BackColor = System.Drawing.SystemColors.Control;
-            this.btnSokt夹爪3.Location = new System.Drawing.Point(8, 217);
+            this.btnSokt夹爪3.Location = new System.Drawing.Point(8, 197);
             this.btnSokt夹爪3.Margin = new System.Windows.Forms.Padding(2);
             this.btnSokt夹爪3.Name = "btnSokt夹爪3";
             this.btnSokt夹爪3.Size = new System.Drawing.Size(75, 24);
@@ -4637,7 +5940,7 @@
             // btnBYY视觉位置6
             // 
             this.btnBYY视觉位置6.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBYY视觉位置6.Location = new System.Drawing.Point(8, 188);
+            this.btnBYY视觉位置6.Location = new System.Drawing.Point(8, 168);
             this.btnBYY视觉位置6.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYY视觉位置6.Name = "btnBYY视觉位置6";
             this.btnBYY视觉位置6.Size = new System.Drawing.Size(75, 24);
@@ -4650,7 +5953,7 @@
             // btnBYY视觉位置5
             // 
             this.btnBYY视觉位置5.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBYY视觉位置5.Location = new System.Drawing.Point(8, 159);
+            this.btnBYY视觉位置5.Location = new System.Drawing.Point(8, 139);
             this.btnBYY视觉位置5.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYY视觉位置5.Name = "btnBYY视觉位置5";
             this.btnBYY视觉位置5.Size = new System.Drawing.Size(75, 24);
@@ -4663,7 +5966,7 @@
             // btnBYY上料34位置
             // 
             this.btnBYY上料34位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBYY上料34位置.Location = new System.Drawing.Point(98, 161);
+            this.btnBYY上料34位置.Location = new System.Drawing.Point(98, 141);
             this.btnBYY上料34位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYY上料34位置.Name = "btnBYY上料34位置";
             this.btnBYY上料34位置.Size = new System.Drawing.Size(88, 24);
@@ -4676,7 +5979,7 @@
             // btnBYY上料12位置
             // 
             this.btnBYY上料12位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBYY上料12位置.Location = new System.Drawing.Point(98, 133);
+            this.btnBYY上料12位置.Location = new System.Drawing.Point(98, 113);
             this.btnBYY上料12位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYY上料12位置.Name = "btnBYY上料12位置";
             this.btnBYY上料12位置.Size = new System.Drawing.Size(88, 24);
@@ -4689,7 +5992,7 @@
             // btnBYY视觉位置4
             // 
             this.btnBYY视觉位置4.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBYY视觉位置4.Location = new System.Drawing.Point(98, 215);
+            this.btnBYY视觉位置4.Location = new System.Drawing.Point(98, 195);
             this.btnBYY视觉位置4.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYY视觉位置4.Name = "btnBYY视觉位置4";
             this.btnBYY视觉位置4.Size = new System.Drawing.Size(88, 24);
@@ -4702,7 +6005,7 @@
             // btnBYY视觉位置3
             // 
             this.btnBYY视觉位置3.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBYY视觉位置3.Location = new System.Drawing.Point(98, 188);
+            this.btnBYY视觉位置3.Location = new System.Drawing.Point(98, 168);
             this.btnBYY视觉位置3.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYY视觉位置3.Name = "btnBYY视觉位置3";
             this.btnBYY视觉位置3.Size = new System.Drawing.Size(88, 24);
@@ -4715,7 +6018,7 @@
             // btnBYY第一行
             // 
             this.btnBYY第一行.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBYY第一行.Location = new System.Drawing.Point(98, 74);
+            this.btnBYY第一行.Location = new System.Drawing.Point(98, 54);
             this.btnBYY第一行.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYY第一行.Name = "btnBYY第一行";
             this.btnBYY第一行.Size = new System.Drawing.Size(88, 24);
@@ -4728,7 +6031,7 @@
             // btnBYY第二行
             // 
             this.btnBYY第二行.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBYY第二行.Location = new System.Drawing.Point(98, 103);
+            this.btnBYY第二行.Location = new System.Drawing.Point(98, 83);
             this.btnBYY第二行.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYY第二行.Name = "btnBYY第二行";
             this.btnBYY第二行.Size = new System.Drawing.Size(88, 24);
@@ -4803,7 +6106,7 @@
             // btnBYY回原点
             // 
             this.btnBYY回原点.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBYY回原点.Location = new System.Drawing.Point(8, 73);
+            this.btnBYY回原点.Location = new System.Drawing.Point(8, 53);
             this.btnBYY回原点.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYY回原点.Name = "btnBYY回原点";
             this.btnBYY回原点.Size = new System.Drawing.Size(75, 24);
@@ -4816,7 +6119,7 @@
             // btnBYY视觉位置2
             // 
             this.btnBYY视觉位置2.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBYY视觉位置2.Location = new System.Drawing.Point(8, 132);
+            this.btnBYY视觉位置2.Location = new System.Drawing.Point(8, 112);
             this.btnBYY视觉位置2.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYY视觉位置2.Name = "btnBYY视觉位置2";
             this.btnBYY视觉位置2.Size = new System.Drawing.Size(75, 24);
@@ -4829,7 +6132,7 @@
             // btnBYY视觉位置1
             // 
             this.btnBYY视觉位置1.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBYY视觉位置1.Location = new System.Drawing.Point(8, 103);
+            this.btnBYY视觉位置1.Location = new System.Drawing.Point(8, 83);
             this.btnBYY视觉位置1.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYY视觉位置1.Name = "btnBYY视觉位置1";
             this.btnBYY视觉位置1.Size = new System.Drawing.Size(75, 24);
@@ -4850,11 +6153,11 @@
             this.groupBox29.Controls.Add(this.btn旋转2右行);
             this.groupBox29.Controls.Add(this.btn旋转2左行);
             this.groupBox29.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox29.Location = new System.Drawing.Point(214, 401);
+            this.groupBox29.Location = new System.Drawing.Point(606, 188);
             this.groupBox29.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox29.Name = "groupBox29";
             this.groupBox29.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox29.Size = new System.Drawing.Size(191, 315);
+            this.groupBox29.Size = new System.Drawing.Size(191, 211);
             this.groupBox29.TabIndex = 61;
             this.groupBox29.TabStop = false;
             this.groupBox29.Text = "中空旋转2";
@@ -4862,7 +6165,7 @@
             // 旋转二回原点
             // 
             this.旋转二回原点.BackColor = System.Drawing.SystemColors.Control;
-            this.旋转二回原点.Location = new System.Drawing.Point(40, 106);
+            this.旋转二回原点.Location = new System.Drawing.Point(46, 49);
             this.旋转二回原点.Margin = new System.Windows.Forms.Padding(2);
             this.旋转二回原点.Name = "旋转二回原点";
             this.旋转二回原点.Size = new System.Drawing.Size(101, 24);
@@ -4875,7 +6178,7 @@
             // btn旋转二90位置
             // 
             this.btn旋转二90位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btn旋转二90位置.Location = new System.Drawing.Point(40, 134);
+            this.btn旋转二90位置.Location = new System.Drawing.Point(46, 77);
             this.btn旋转二90位置.Margin = new System.Windows.Forms.Padding(2);
             this.btn旋转二90位置.Name = "btn旋转二90位置";
             this.btn旋转二90位置.Size = new System.Drawing.Size(101, 24);
@@ -4888,7 +6191,7 @@
             // btn旋转二180位置
             // 
             this.btn旋转二180位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btn旋转二180位置.Location = new System.Drawing.Point(40, 163);
+            this.btn旋转二180位置.Location = new System.Drawing.Point(46, 106);
             this.btn旋转二180位置.Margin = new System.Windows.Forms.Padding(2);
             this.btn旋转二180位置.Name = "btn旋转二180位置";
             this.btn旋转二180位置.Size = new System.Drawing.Size(101, 24);
@@ -4922,7 +6225,7 @@
             // 
             this.btn旋转2停止.BackColor = System.Drawing.SystemColors.Control;
             this.btn旋转2停止.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn旋转2停止.Location = new System.Drawing.Point(67, 272);
+            this.btn旋转2停止.Location = new System.Drawing.Point(67, 172);
             this.btn旋转2停止.Margin = new System.Windows.Forms.Padding(2);
             this.btn旋转2停止.Name = "btn旋转2停止";
             this.btn旋转2停止.Size = new System.Drawing.Size(50, 31);
@@ -4936,7 +6239,7 @@
             // 
             this.btn旋转2右行.BackColor = System.Drawing.SystemColors.Control;
             this.btn旋转2右行.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn旋转2右行.Location = new System.Drawing.Point(121, 272);
+            this.btn旋转2右行.Location = new System.Drawing.Point(121, 172);
             this.btn旋转2右行.Margin = new System.Windows.Forms.Padding(2);
             this.btn旋转2右行.Name = "btn旋转2右行";
             this.btn旋转2右行.Size = new System.Drawing.Size(35, 31);
@@ -4950,7 +6253,7 @@
             // 
             this.btn旋转2左行.BackColor = System.Drawing.SystemColors.Control;
             this.btn旋转2左行.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn旋转2左行.Location = new System.Drawing.Point(28, 272);
+            this.btn旋转2左行.Location = new System.Drawing.Point(28, 172);
             this.btn旋转2左行.Margin = new System.Windows.Forms.Padding(2);
             this.btn旋转2左行.Name = "btn旋转2左行";
             this.btn旋转2左行.Size = new System.Drawing.Size(35, 31);
@@ -4979,7 +6282,7 @@
             this.groupBox31.Controls.Add(this.btnBYX上料位置);
             this.groupBox31.Controls.Add(this.btnBYX第二列);
             this.groupBox31.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox31.Location = new System.Drawing.Point(606, 362);
+            this.groupBox31.Location = new System.Drawing.Point(606, 403);
             this.groupBox31.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox31.Name = "groupBox31";
             this.groupBox31.Padding = new System.Windows.Forms.Padding(2);
@@ -4991,7 +6294,7 @@
             // btnBYX第八列
             // 
             this.btnBYX第八列.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBYX第八列.Location = new System.Drawing.Point(104, 217);
+            this.btnBYX第八列.Location = new System.Drawing.Point(99, 197);
             this.btnBYX第八列.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYX第八列.Name = "btnBYX第八列";
             this.btnBYX第八列.Size = new System.Drawing.Size(75, 24);
@@ -5004,7 +6307,7 @@
             // btnBYX第七列
             // 
             this.btnBYX第七列.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBYX第七列.Location = new System.Drawing.Point(104, 188);
+            this.btnBYX第七列.Location = new System.Drawing.Point(99, 168);
             this.btnBYX第七列.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYX第七列.Name = "btnBYX第七列";
             this.btnBYX第七列.Size = new System.Drawing.Size(75, 24);
@@ -5017,7 +6320,7 @@
             // btnBYX第六列
             // 
             this.btnBYX第六列.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBYX第六列.Location = new System.Drawing.Point(104, 159);
+            this.btnBYX第六列.Location = new System.Drawing.Point(99, 139);
             this.btnBYX第六列.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYX第六列.Name = "btnBYX第六列";
             this.btnBYX第六列.Size = new System.Drawing.Size(75, 24);
@@ -5030,7 +6333,7 @@
             // btnBYX第五列
             // 
             this.btnBYX第五列.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBYX第五列.Location = new System.Drawing.Point(104, 130);
+            this.btnBYX第五列.Location = new System.Drawing.Point(99, 110);
             this.btnBYX第五列.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYX第五列.Name = "btnBYX第五列";
             this.btnBYX第五列.Size = new System.Drawing.Size(75, 24);
@@ -5043,7 +6346,7 @@
             // btnBYX第四列
             // 
             this.btnBYX第四列.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBYX第四列.Location = new System.Drawing.Point(104, 102);
+            this.btnBYX第四列.Location = new System.Drawing.Point(99, 82);
             this.btnBYX第四列.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYX第四列.Name = "btnBYX第四列";
             this.btnBYX第四列.Size = new System.Drawing.Size(75, 24);
@@ -5056,7 +6359,7 @@
             // btnBYX第三列
             // 
             this.btnBYX第三列.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBYX第三列.Location = new System.Drawing.Point(14, 217);
+            this.btnBYX第三列.Location = new System.Drawing.Point(9, 197);
             this.btnBYX第三列.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYX第三列.Name = "btnBYX第三列";
             this.btnBYX第三列.Size = new System.Drawing.Size(75, 24);
@@ -5131,7 +6434,7 @@
             // btnBYX回原点
             // 
             this.btnBYX回原点.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBYX回原点.Location = new System.Drawing.Point(14, 73);
+            this.btnBYX回原点.Location = new System.Drawing.Point(9, 53);
             this.btnBYX回原点.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYX回原点.Name = "btnBYX回原点";
             this.btnBYX回原点.Size = new System.Drawing.Size(75, 24);
@@ -5144,7 +6447,7 @@
             // btnBYX第一列
             // 
             this.btnBYX第一列.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBYX第一列.Location = new System.Drawing.Point(14, 159);
+            this.btnBYX第一列.Location = new System.Drawing.Point(9, 139);
             this.btnBYX第一列.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYX第一列.Name = "btnBYX第一列";
             this.btnBYX第一列.Size = new System.Drawing.Size(75, 24);
@@ -5157,7 +6460,7 @@
             // btnBYX视觉位置1
             // 
             this.btnBYX视觉位置1.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBYX视觉位置1.Location = new System.Drawing.Point(14, 130);
+            this.btnBYX视觉位置1.Location = new System.Drawing.Point(9, 110);
             this.btnBYX视觉位置1.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYX视觉位置1.Name = "btnBYX视觉位置1";
             this.btnBYX视觉位置1.Size = new System.Drawing.Size(75, 24);
@@ -5170,7 +6473,7 @@
             // btnBYX上料位置
             // 
             this.btnBYX上料位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBYX上料位置.Location = new System.Drawing.Point(14, 102);
+            this.btnBYX上料位置.Location = new System.Drawing.Point(9, 82);
             this.btnBYX上料位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYX上料位置.Name = "btnBYX上料位置";
             this.btnBYX上料位置.Size = new System.Drawing.Size(75, 24);
@@ -5183,7 +6486,7 @@
             // btnBYX第二列
             // 
             this.btnBYX第二列.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBYX第二列.Location = new System.Drawing.Point(14, 188);
+            this.btnBYX第二列.Location = new System.Drawing.Point(9, 168);
             this.btnBYX第二列.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYX第二列.Name = "btnBYX第二列";
             this.btnBYX第二列.Size = new System.Drawing.Size(75, 24);
@@ -5204,11 +6507,11 @@
             this.groupBox27.Controls.Add(this.btn旋转1右行);
             this.groupBox27.Controls.Add(this.btn旋转1左行);
             this.groupBox27.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox27.Location = new System.Drawing.Point(19, 401);
+            this.groupBox27.Location = new System.Drawing.Point(410, 185);
             this.groupBox27.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox27.Name = "groupBox27";
             this.groupBox27.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox27.Size = new System.Drawing.Size(191, 315);
+            this.groupBox27.Size = new System.Drawing.Size(191, 214);
             this.groupBox27.TabIndex = 60;
             this.groupBox27.TabStop = false;
             this.groupBox27.Text = "中空旋转1";
@@ -5216,7 +6519,7 @@
             // 旋转一回原点
             // 
             this.旋转一回原点.BackColor = System.Drawing.SystemColors.Control;
-            this.旋转一回原点.Location = new System.Drawing.Point(40, 106);
+            this.旋转一回原点.Location = new System.Drawing.Point(41, 49);
             this.旋转一回原点.Margin = new System.Windows.Forms.Padding(2);
             this.旋转一回原点.Name = "旋转一回原点";
             this.旋转一回原点.Size = new System.Drawing.Size(101, 24);
@@ -5229,7 +6532,7 @@
             // btn旋转一90位置
             // 
             this.btn旋转一90位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btn旋转一90位置.Location = new System.Drawing.Point(40, 134);
+            this.btn旋转一90位置.Location = new System.Drawing.Point(41, 77);
             this.btn旋转一90位置.Margin = new System.Windows.Forms.Padding(2);
             this.btn旋转一90位置.Name = "btn旋转一90位置";
             this.btn旋转一90位置.Size = new System.Drawing.Size(101, 24);
@@ -5242,7 +6545,7 @@
             // btn旋转一180位置
             // 
             this.btn旋转一180位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btn旋转一180位置.Location = new System.Drawing.Point(40, 163);
+            this.btn旋转一180位置.Location = new System.Drawing.Point(41, 106);
             this.btn旋转一180位置.Margin = new System.Windows.Forms.Padding(2);
             this.btn旋转一180位置.Name = "btn旋转一180位置";
             this.btn旋转一180位置.Size = new System.Drawing.Size(101, 24);
@@ -5276,7 +6579,7 @@
             // 
             this.btn旋转1停止.BackColor = System.Drawing.SystemColors.Control;
             this.btn旋转1停止.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn旋转1停止.Location = new System.Drawing.Point(67, 272);
+            this.btn旋转1停止.Location = new System.Drawing.Point(62, 175);
             this.btn旋转1停止.Margin = new System.Windows.Forms.Padding(2);
             this.btn旋转1停止.Name = "btn旋转1停止";
             this.btn旋转1停止.Size = new System.Drawing.Size(50, 31);
@@ -5290,7 +6593,7 @@
             // 
             this.btn旋转1右行.BackColor = System.Drawing.SystemColors.Control;
             this.btn旋转1右行.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn旋转1右行.Location = new System.Drawing.Point(121, 272);
+            this.btn旋转1右行.Location = new System.Drawing.Point(116, 175);
             this.btn旋转1右行.Margin = new System.Windows.Forms.Padding(2);
             this.btn旋转1右行.Name = "btn旋转1右行";
             this.btn旋转1右行.Size = new System.Drawing.Size(35, 31);
@@ -5304,7 +6607,7 @@
             // 
             this.btn旋转1左行.BackColor = System.Drawing.SystemColors.Control;
             this.btn旋转1左行.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn旋转1左行.Location = new System.Drawing.Point(28, 272);
+            this.btn旋转1左行.Location = new System.Drawing.Point(23, 175);
             this.btn旋转1左行.Margin = new System.Windows.Forms.Padding(2);
             this.btn旋转1左行.Name = "btn旋转1左行";
             this.btn旋转1左行.Size = new System.Drawing.Size(35, 31);
@@ -5326,11 +6629,11 @@
             this.groupBox28.Controls.Add(this.btnBY平移右行);
             this.groupBox28.Controls.Add(this.btnBY平移左行);
             this.groupBox28.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox28.Location = new System.Drawing.Point(410, 362);
+            this.groupBox28.Location = new System.Drawing.Point(806, 188);
             this.groupBox28.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox28.Name = "groupBox28";
             this.groupBox28.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox28.Size = new System.Drawing.Size(191, 354);
+            this.groupBox28.Size = new System.Drawing.Size(187, 211);
             this.groupBox28.TabIndex = 58;
             this.groupBox28.TabStop = false;
             this.groupBox28.Text = "搬运平移";
@@ -5338,7 +6641,7 @@
             // btnBY平移下料位置
             // 
             this.btnBY平移下料位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBY平移下料位置.Location = new System.Drawing.Point(41, 161);
+            this.btnBY平移下料位置.Location = new System.Drawing.Point(41, 140);
             this.btnBY平移下料位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnBY平移下料位置.Name = "btnBY平移下料位置";
             this.btnBY平移下料位置.Size = new System.Drawing.Size(101, 24);
@@ -5351,7 +6654,7 @@
             // btnBY平移中转位置
             // 
             this.btnBY平移中转位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBY平移中转位置.Location = new System.Drawing.Point(41, 132);
+            this.btnBY平移中转位置.Location = new System.Drawing.Point(41, 111);
             this.btnBY平移中转位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnBY平移中转位置.Name = "btnBY平移中转位置";
             this.btnBY平移中转位置.Size = new System.Drawing.Size(101, 24);
@@ -5364,7 +6667,7 @@
             // btnBY平移回原点
             // 
             this.btnBY平移回原点.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBY平移回原点.Location = new System.Drawing.Point(41, 74);
+            this.btnBY平移回原点.Location = new System.Drawing.Point(41, 53);
             this.btnBY平移回原点.Margin = new System.Windows.Forms.Padding(2);
             this.btnBY平移回原点.Name = "btnBY平移回原点";
             this.btnBY平移回原点.Size = new System.Drawing.Size(101, 24);
@@ -5377,7 +6680,7 @@
             // btnBY平移上料位置
             // 
             this.btnBY平移上料位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBY平移上料位置.Location = new System.Drawing.Point(41, 103);
+            this.btnBY平移上料位置.Location = new System.Drawing.Point(41, 82);
             this.btnBY平移上料位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnBY平移上料位置.Name = "btnBY平移上料位置";
             this.btnBY平移上料位置.Size = new System.Drawing.Size(101, 24);
@@ -5411,7 +6714,7 @@
             // 
             this.btnBY平移停止.BackColor = System.Drawing.SystemColors.Control;
             this.btnBY平移停止.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBY平移停止.Location = new System.Drawing.Point(67, 308);
+            this.btnBY平移停止.Location = new System.Drawing.Point(62, 173);
             this.btnBY平移停止.Margin = new System.Windows.Forms.Padding(2);
             this.btnBY平移停止.Name = "btnBY平移停止";
             this.btnBY平移停止.Size = new System.Drawing.Size(50, 31);
@@ -5425,7 +6728,7 @@
             // 
             this.btnBY平移右行.BackColor = System.Drawing.SystemColors.Control;
             this.btnBY平移右行.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBY平移右行.Location = new System.Drawing.Point(121, 308);
+            this.btnBY平移右行.Location = new System.Drawing.Point(116, 173);
             this.btnBY平移右行.Margin = new System.Windows.Forms.Padding(2);
             this.btnBY平移右行.Name = "btnBY平移右行";
             this.btnBY平移右行.Size = new System.Drawing.Size(35, 31);
@@ -5439,7 +6742,7 @@
             // 
             this.btnBY平移左行.BackColor = System.Drawing.SystemColors.Control;
             this.btnBY平移左行.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBY平移左行.Location = new System.Drawing.Point(28, 308);
+            this.btnBY平移左行.Location = new System.Drawing.Point(23, 173);
             this.btnBY平移左行.Margin = new System.Windows.Forms.Padding(2);
             this.btnBY平移左行.Name = "btnBY平移左行";
             this.btnBY平移左行.Size = new System.Drawing.Size(35, 31);
@@ -5463,7 +6766,7 @@
             this.groupBox26.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox26.Name = "groupBox26";
             this.groupBox26.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox26.Size = new System.Drawing.Size(191, 315);
+            this.groupBox26.Size = new System.Drawing.Size(191, 167);
             this.groupBox26.TabIndex = 56;
             this.groupBox26.TabStop = false;
             this.groupBox26.Text = "升降倒NG盘";
@@ -5471,7 +6774,7 @@
             // btn倒NG盘回原点
             // 
             this.btn倒NG盘回原点.BackColor = System.Drawing.SystemColors.Control;
-            this.btn倒NG盘回原点.Location = new System.Drawing.Point(41, 104);
+            this.btn倒NG盘回原点.Location = new System.Drawing.Point(50, 52);
             this.btn倒NG盘回原点.Margin = new System.Windows.Forms.Padding(2);
             this.btn倒NG盘回原点.Name = "btn倒NG盘回原点";
             this.btn倒NG盘回原点.Size = new System.Drawing.Size(101, 24);
@@ -5505,7 +6808,7 @@
             // 
             this.btn倒NG盘停止.BackColor = System.Drawing.SystemColors.Control;
             this.btn倒NG盘停止.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn倒NG盘停止.Location = new System.Drawing.Point(67, 272);
+            this.btn倒NG盘停止.Location = new System.Drawing.Point(71, 126);
             this.btn倒NG盘停止.Margin = new System.Windows.Forms.Padding(2);
             this.btn倒NG盘停止.Name = "btn倒NG盘停止";
             this.btn倒NG盘停止.Size = new System.Drawing.Size(50, 31);
@@ -5519,7 +6822,7 @@
             // 
             this.btn倒NG盘下行.BackColor = System.Drawing.SystemColors.Control;
             this.btn倒NG盘下行.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn倒NG盘下行.Location = new System.Drawing.Point(121, 272);
+            this.btn倒NG盘下行.Location = new System.Drawing.Point(125, 126);
             this.btn倒NG盘下行.Margin = new System.Windows.Forms.Padding(2);
             this.btn倒NG盘下行.Name = "btn倒NG盘下行";
             this.btn倒NG盘下行.Size = new System.Drawing.Size(35, 31);
@@ -5533,7 +6836,7 @@
             // 
             this.btn倒NG盘上行.BackColor = System.Drawing.SystemColors.Control;
             this.btn倒NG盘上行.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn倒NG盘上行.Location = new System.Drawing.Point(28, 272);
+            this.btn倒NG盘上行.Location = new System.Drawing.Point(32, 126);
             this.btn倒NG盘上行.Margin = new System.Windows.Forms.Padding(2);
             this.btn倒NG盘上行.Name = "btn倒NG盘上行";
             this.btn倒NG盘上行.Size = new System.Drawing.Size(35, 31);
@@ -5546,7 +6849,7 @@
             // btn倒NG盘初始位置
             // 
             this.btn倒NG盘初始位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btn倒NG盘初始位置.Location = new System.Drawing.Point(41, 133);
+            this.btn倒NG盘初始位置.Location = new System.Drawing.Point(50, 81);
             this.btn倒NG盘初始位置.Margin = new System.Windows.Forms.Padding(2);
             this.btn倒NG盘初始位置.Name = "btn倒NG盘初始位置";
             this.btn倒NG盘初始位置.Size = new System.Drawing.Size(101, 24);
@@ -5559,19 +6862,17 @@
             // groupBox25
             // 
             this.groupBox25.Controls.Add(this.btn倒实盘回原点);
-            this.groupBox25.Controls.Add(this.btn实盘扫码位置);
             this.groupBox25.Controls.Add(this.txt倒实盘当前位置);
             this.groupBox25.Controls.Add(this.label291);
             this.groupBox25.Controls.Add(this.btn倒实盘停止);
             this.groupBox25.Controls.Add(this.btn倒实盘下行);
             this.groupBox25.Controls.Add(this.btn倒实盘上行);
-            this.groupBox25.Controls.Add(this.btn倒实盘初始位置);
             this.groupBox25.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox25.Location = new System.Drawing.Point(802, 17);
             this.groupBox25.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox25.Name = "groupBox25";
             this.groupBox25.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox25.Size = new System.Drawing.Size(191, 315);
+            this.groupBox25.Size = new System.Drawing.Size(191, 167);
             this.groupBox25.TabIndex = 55;
             this.groupBox25.TabStop = false;
             this.groupBox25.Text = "升降倒实盘";
@@ -5579,7 +6880,7 @@
             // btn倒实盘回原点
             // 
             this.btn倒实盘回原点.BackColor = System.Drawing.SystemColors.Control;
-            this.btn倒实盘回原点.Location = new System.Drawing.Point(41, 104);
+            this.btn倒实盘回原点.Location = new System.Drawing.Point(44, 52);
             this.btn倒实盘回原点.Margin = new System.Windows.Forms.Padding(2);
             this.btn倒实盘回原点.Name = "btn倒实盘回原点";
             this.btn倒实盘回原点.Size = new System.Drawing.Size(101, 24);
@@ -5588,19 +6889,6 @@
             this.btn倒实盘回原点.UseVisualStyleBackColor = true;
             this.btn倒实盘回原点.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn倒实盘回原点_MouseDown);
             this.btn倒实盘回原点.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn倒实盘回原点_MouseUp);
-            // 
-            // btn实盘扫码位置
-            // 
-            this.btn实盘扫码位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btn实盘扫码位置.Location = new System.Drawing.Point(41, 162);
-            this.btn实盘扫码位置.Margin = new System.Windows.Forms.Padding(2);
-            this.btn实盘扫码位置.Name = "btn实盘扫码位置";
-            this.btn实盘扫码位置.Size = new System.Drawing.Size(101, 24);
-            this.btn实盘扫码位置.TabIndex = 52;
-            this.btn实盘扫码位置.Text = "倒实盘扫码位置";
-            this.btn实盘扫码位置.UseVisualStyleBackColor = true;
-            this.btn实盘扫码位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn实盘扫码位置_MouseDown);
-            this.btn实盘扫码位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn实盘扫码位置_MouseUp);
             // 
             // txt倒实盘当前位置
             // 
@@ -5626,7 +6914,7 @@
             // 
             this.btn倒实盘停止.BackColor = System.Drawing.SystemColors.Control;
             this.btn倒实盘停止.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn倒实盘停止.Location = new System.Drawing.Point(67, 272);
+            this.btn倒实盘停止.Location = new System.Drawing.Point(70, 126);
             this.btn倒实盘停止.Margin = new System.Windows.Forms.Padding(2);
             this.btn倒实盘停止.Name = "btn倒实盘停止";
             this.btn倒实盘停止.Size = new System.Drawing.Size(50, 31);
@@ -5640,7 +6928,7 @@
             // 
             this.btn倒实盘下行.BackColor = System.Drawing.SystemColors.Control;
             this.btn倒实盘下行.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn倒实盘下行.Location = new System.Drawing.Point(121, 272);
+            this.btn倒实盘下行.Location = new System.Drawing.Point(124, 126);
             this.btn倒实盘下行.Margin = new System.Windows.Forms.Padding(2);
             this.btn倒实盘下行.Name = "btn倒实盘下行";
             this.btn倒实盘下行.Size = new System.Drawing.Size(35, 31);
@@ -5654,7 +6942,7 @@
             // 
             this.btn倒实盘上行.BackColor = System.Drawing.SystemColors.Control;
             this.btn倒实盘上行.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn倒实盘上行.Location = new System.Drawing.Point(28, 272);
+            this.btn倒实盘上行.Location = new System.Drawing.Point(31, 126);
             this.btn倒实盘上行.Margin = new System.Windows.Forms.Padding(2);
             this.btn倒实盘上行.Name = "btn倒实盘上行";
             this.btn倒实盘上行.Size = new System.Drawing.Size(35, 31);
@@ -5663,19 +6951,6 @@
             this.btn倒实盘上行.UseVisualStyleBackColor = true;
             this.btn倒实盘上行.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn倒实盘上行_MouseDown);
             this.btn倒实盘上行.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn倒实盘上行_MouseUp);
-            // 
-            // btn倒实盘初始位置
-            // 
-            this.btn倒实盘初始位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btn倒实盘初始位置.Location = new System.Drawing.Point(41, 133);
-            this.btn倒实盘初始位置.Margin = new System.Windows.Forms.Padding(2);
-            this.btn倒实盘初始位置.Name = "btn倒实盘初始位置";
-            this.btn倒实盘初始位置.Size = new System.Drawing.Size(101, 24);
-            this.btn倒实盘初始位置.TabIndex = 45;
-            this.btn倒实盘初始位置.Text = "倒实盘初始位置";
-            this.btn倒实盘初始位置.UseVisualStyleBackColor = true;
-            this.btn倒实盘初始位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn倒实盘初始位置_MouseDown);
-            this.btn倒实盘初始位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn倒实盘初始位置_MouseUp);
             // 
             // groupBox24
             // 
@@ -5691,7 +6966,7 @@
             this.groupBox24.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox24.Name = "groupBox24";
             this.groupBox24.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox24.Size = new System.Drawing.Size(191, 315);
+            this.groupBox24.Size = new System.Drawing.Size(191, 167);
             this.groupBox24.TabIndex = 54;
             this.groupBox24.TabStop = false;
             this.groupBox24.Text = "升降NG盘";
@@ -5699,7 +6974,7 @@
             // btnNG盘回原点
             // 
             this.btnNG盘回原点.BackColor = System.Drawing.SystemColors.Control;
-            this.btnNG盘回原点.Location = new System.Drawing.Point(41, 104);
+            this.btnNG盘回原点.Location = new System.Drawing.Point(50, 52);
             this.btnNG盘回原点.Margin = new System.Windows.Forms.Padding(2);
             this.btnNG盘回原点.Name = "btnNG盘回原点";
             this.btnNG盘回原点.Size = new System.Drawing.Size(101, 24);
@@ -5733,7 +7008,7 @@
             // 
             this.btnNG盘停止.BackColor = System.Drawing.SystemColors.Control;
             this.btnNG盘停止.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNG盘停止.Location = new System.Drawing.Point(67, 272);
+            this.btnNG盘停止.Location = new System.Drawing.Point(72, 126);
             this.btnNG盘停止.Margin = new System.Windows.Forms.Padding(2);
             this.btnNG盘停止.Name = "btnNG盘停止";
             this.btnNG盘停止.Size = new System.Drawing.Size(50, 31);
@@ -5747,7 +7022,7 @@
             // 
             this.btnNG盘下行.BackColor = System.Drawing.SystemColors.Control;
             this.btnNG盘下行.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNG盘下行.Location = new System.Drawing.Point(121, 272);
+            this.btnNG盘下行.Location = new System.Drawing.Point(126, 126);
             this.btnNG盘下行.Margin = new System.Windows.Forms.Padding(2);
             this.btnNG盘下行.Name = "btnNG盘下行";
             this.btnNG盘下行.Size = new System.Drawing.Size(35, 31);
@@ -5761,7 +7036,7 @@
             // 
             this.btnNG盘上行.BackColor = System.Drawing.SystemColors.Control;
             this.btnNG盘上行.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNG盘上行.Location = new System.Drawing.Point(28, 272);
+            this.btnNG盘上行.Location = new System.Drawing.Point(33, 126);
             this.btnNG盘上行.Margin = new System.Windows.Forms.Padding(2);
             this.btnNG盘上行.Name = "btnNG盘上行";
             this.btnNG盘上行.Size = new System.Drawing.Size(35, 31);
@@ -5774,7 +7049,7 @@
             // btnNG盘初始位置
             // 
             this.btnNG盘初始位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btnNG盘初始位置.Location = new System.Drawing.Point(41, 133);
+            this.btnNG盘初始位置.Location = new System.Drawing.Point(50, 81);
             this.btnNG盘初始位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnNG盘初始位置.Name = "btnNG盘初始位置";
             this.btnNG盘初始位置.Size = new System.Drawing.Size(101, 24);
@@ -5798,7 +7073,7 @@
             this.groupBox23.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox23.Name = "groupBox23";
             this.groupBox23.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox23.Size = new System.Drawing.Size(191, 315);
+            this.groupBox23.Size = new System.Drawing.Size(191, 167);
             this.groupBox23.TabIndex = 53;
             this.groupBox23.TabStop = false;
             this.groupBox23.Text = "升降实盘";
@@ -5806,7 +7081,7 @@
             // btn实盘回原点
             // 
             this.btn实盘回原点.BackColor = System.Drawing.SystemColors.Control;
-            this.btn实盘回原点.Location = new System.Drawing.Point(41, 104);
+            this.btn实盘回原点.Location = new System.Drawing.Point(41, 52);
             this.btn实盘回原点.Margin = new System.Windows.Forms.Padding(2);
             this.btn实盘回原点.Name = "btn实盘回原点";
             this.btn实盘回原点.Size = new System.Drawing.Size(101, 24);
@@ -5840,7 +7115,7 @@
             // 
             this.btn实盘停止.BackColor = System.Drawing.SystemColors.Control;
             this.btn实盘停止.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn实盘停止.Location = new System.Drawing.Point(67, 272);
+            this.btn实盘停止.Location = new System.Drawing.Point(62, 126);
             this.btn实盘停止.Margin = new System.Windows.Forms.Padding(2);
             this.btn实盘停止.Name = "btn实盘停止";
             this.btn实盘停止.Size = new System.Drawing.Size(50, 31);
@@ -5854,7 +7129,7 @@
             // 
             this.btn实盘下行.BackColor = System.Drawing.SystemColors.Control;
             this.btn实盘下行.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn实盘下行.Location = new System.Drawing.Point(121, 272);
+            this.btn实盘下行.Location = new System.Drawing.Point(116, 126);
             this.btn实盘下行.Margin = new System.Windows.Forms.Padding(2);
             this.btn实盘下行.Name = "btn实盘下行";
             this.btn实盘下行.Size = new System.Drawing.Size(35, 31);
@@ -5868,7 +7143,7 @@
             // 
             this.btn实盘上行.BackColor = System.Drawing.SystemColors.Control;
             this.btn实盘上行.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn实盘上行.Location = new System.Drawing.Point(28, 272);
+            this.btn实盘上行.Location = new System.Drawing.Point(23, 126);
             this.btn实盘上行.Margin = new System.Windows.Forms.Padding(2);
             this.btn实盘上行.Name = "btn实盘上行";
             this.btn实盘上行.Size = new System.Drawing.Size(35, 31);
@@ -5881,7 +7156,7 @@
             // btn实盘初始位置
             // 
             this.btn实盘初始位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btn实盘初始位置.Location = new System.Drawing.Point(41, 133);
+            this.btn实盘初始位置.Location = new System.Drawing.Point(41, 81);
             this.btn实盘初始位置.Margin = new System.Windows.Forms.Padding(2);
             this.btn实盘初始位置.Name = "btn实盘初始位置";
             this.btn实盘初始位置.Size = new System.Drawing.Size(101, 24);
@@ -5893,6 +7168,7 @@
             // 
             // groupBox22
             // 
+            this.groupBox22.Controls.Add(this.btnY下视觉2位置);
             this.groupBox22.Controls.Add(this.btnY下一行);
             this.groupBox22.Controls.Add(this.btnY上一行);
             this.groupBox22.Controls.Add(this.btnY扫码位置);
@@ -5905,8 +7181,6 @@
             this.groupBox22.Controls.Add(this.btnY吸2倒实盘);
             this.groupBox22.Controls.Add(this.btnY吸1倒实盘);
             this.groupBox22.Controls.Add(this.btnY吸2NG盘);
-            this.groupBox22.Controls.Add(this.txtY指定位置);
-            this.groupBox22.Controls.Add(this.label284);
             this.groupBox22.Controls.Add(this.txtY当前位置);
             this.groupBox22.Controls.Add(this.btnY指定位置);
             this.groupBox22.Controls.Add(this.label285);
@@ -5928,10 +7202,23 @@
             this.groupBox22.TabStop = false;
             this.groupBox22.Text = "上料Y轴";
             // 
+            // btnY下视觉2位置
+            // 
+            this.btnY下视觉2位置.BackColor = System.Drawing.SystemColors.Control;
+            this.btnY下视觉2位置.Location = new System.Drawing.Point(13, 282);
+            this.btnY下视觉2位置.Margin = new System.Windows.Forms.Padding(2);
+            this.btnY下视觉2位置.Name = "btnY下视觉2位置";
+            this.btnY下视觉2位置.Size = new System.Drawing.Size(75, 24);
+            this.btnY下视觉2位置.TabIndex = 66;
+            this.btnY下视觉2位置.Text = "下视觉2位置";
+            this.btnY下视觉2位置.UseVisualStyleBackColor = true;
+            this.btnY下视觉2位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnY下视觉2位置_MouseDown);
+            this.btnY下视觉2位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnY下视觉2位置_MouseUp);
+            // 
             // btnY下一行
             // 
             this.btnY下一行.BackColor = System.Drawing.SystemColors.Control;
-            this.btnY下一行.Location = new System.Drawing.Point(104, 306);
+            this.btnY下一行.Location = new System.Drawing.Point(103, 310);
             this.btnY下一行.Margin = new System.Windows.Forms.Padding(2);
             this.btnY下一行.Name = "btnY下一行";
             this.btnY下一行.Size = new System.Drawing.Size(75, 24);
@@ -5944,7 +7231,7 @@
             // btnY上一行
             // 
             this.btnY上一行.BackColor = System.Drawing.SystemColors.Control;
-            this.btnY上一行.Location = new System.Drawing.Point(14, 306);
+            this.btnY上一行.Location = new System.Drawing.Point(14, 310);
             this.btnY上一行.Margin = new System.Windows.Forms.Padding(2);
             this.btnY上一行.Name = "btnY上一行";
             this.btnY上一行.Size = new System.Drawing.Size(75, 24);
@@ -5957,7 +7244,7 @@
             // btnY扫码位置
             // 
             this.btnY扫码位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btnY扫码位置.Location = new System.Drawing.Point(104, 278);
+            this.btnY扫码位置.Location = new System.Drawing.Point(103, 255);
             this.btnY扫码位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnY扫码位置.Name = "btnY扫码位置";
             this.btnY扫码位置.Size = new System.Drawing.Size(75, 24);
@@ -5970,7 +7257,7 @@
             // btnY夹爪位置
             // 
             this.btnY夹爪位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btnY夹爪位置.Location = new System.Drawing.Point(14, 278);
+            this.btnY夹爪位置.Location = new System.Drawing.Point(13, 255);
             this.btnY夹爪位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnY夹爪位置.Name = "btnY夹爪位置";
             this.btnY夹爪位置.Size = new System.Drawing.Size(75, 24);
@@ -5983,7 +7270,7 @@
             // btnY视觉倒实盘位置
             // 
             this.btnY视觉倒实盘位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btnY视觉倒实盘位置.Location = new System.Drawing.Point(104, 249);
+            this.btnY视觉倒实盘位置.Location = new System.Drawing.Point(103, 226);
             this.btnY视觉倒实盘位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnY视觉倒实盘位置.Name = "btnY视觉倒实盘位置";
             this.btnY视觉倒实盘位置.Size = new System.Drawing.Size(75, 24);
@@ -5996,7 +7283,7 @@
             // btnY视觉实盘位置
             // 
             this.btnY视觉实盘位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btnY视觉实盘位置.Location = new System.Drawing.Point(14, 249);
+            this.btnY视觉实盘位置.Location = new System.Drawing.Point(13, 226);
             this.btnY视觉实盘位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnY视觉实盘位置.Name = "btnY视觉实盘位置";
             this.btnY视觉实盘位置.Size = new System.Drawing.Size(75, 24);
@@ -6009,7 +7296,7 @@
             // btnY吸1实盘
             // 
             this.btnY吸1实盘.BackColor = System.Drawing.SystemColors.Control;
-            this.btnY吸1实盘.Location = new System.Drawing.Point(104, 75);
+            this.btnY吸1实盘.Location = new System.Drawing.Point(103, 52);
             this.btnY吸1实盘.Margin = new System.Windows.Forms.Padding(2);
             this.btnY吸1实盘.Name = "btnY吸1实盘";
             this.btnY吸1实盘.Size = new System.Drawing.Size(75, 24);
@@ -6022,7 +7309,7 @@
             // btnY吸2实盘
             // 
             this.btnY吸2实盘.BackColor = System.Drawing.SystemColors.Control;
-            this.btnY吸2实盘.Location = new System.Drawing.Point(104, 104);
+            this.btnY吸2实盘.Location = new System.Drawing.Point(103, 81);
             this.btnY吸2实盘.Margin = new System.Windows.Forms.Padding(2);
             this.btnY吸2实盘.Name = "btnY吸2实盘";
             this.btnY吸2实盘.Size = new System.Drawing.Size(75, 24);
@@ -6035,7 +7322,7 @@
             // btnY吸1NG盘
             // 
             this.btnY吸1NG盘.BackColor = System.Drawing.SystemColors.Control;
-            this.btnY吸1NG盘.Location = new System.Drawing.Point(104, 190);
+            this.btnY吸1NG盘.Location = new System.Drawing.Point(103, 167);
             this.btnY吸1NG盘.Margin = new System.Windows.Forms.Padding(2);
             this.btnY吸1NG盘.Name = "btnY吸1NG盘";
             this.btnY吸1NG盘.Size = new System.Drawing.Size(75, 24);
@@ -6048,7 +7335,7 @@
             // btnY吸2倒实盘
             // 
             this.btnY吸2倒实盘.BackColor = System.Drawing.SystemColors.Control;
-            this.btnY吸2倒实盘.Location = new System.Drawing.Point(104, 162);
+            this.btnY吸2倒实盘.Location = new System.Drawing.Point(103, 139);
             this.btnY吸2倒实盘.Margin = new System.Windows.Forms.Padding(2);
             this.btnY吸2倒实盘.Name = "btnY吸2倒实盘";
             this.btnY吸2倒实盘.Size = new System.Drawing.Size(75, 24);
@@ -6061,7 +7348,7 @@
             // btnY吸1倒实盘
             // 
             this.btnY吸1倒实盘.BackColor = System.Drawing.SystemColors.Control;
-            this.btnY吸1倒实盘.Location = new System.Drawing.Point(104, 133);
+            this.btnY吸1倒实盘.Location = new System.Drawing.Point(103, 110);
             this.btnY吸1倒实盘.Margin = new System.Windows.Forms.Padding(2);
             this.btnY吸1倒实盘.Name = "btnY吸1倒实盘";
             this.btnY吸1倒实盘.Size = new System.Drawing.Size(75, 24);
@@ -6074,7 +7361,7 @@
             // btnY吸2NG盘
             // 
             this.btnY吸2NG盘.BackColor = System.Drawing.SystemColors.Control;
-            this.btnY吸2NG盘.Location = new System.Drawing.Point(104, 219);
+            this.btnY吸2NG盘.Location = new System.Drawing.Point(103, 196);
             this.btnY吸2NG盘.Margin = new System.Windows.Forms.Padding(2);
             this.btnY吸2NG盘.Name = "btnY吸2NG盘";
             this.btnY吸2NG盘.Size = new System.Drawing.Size(75, 24);
@@ -6083,25 +7370,6 @@
             this.btnY吸2NG盘.UseVisualStyleBackColor = true;
             this.btnY吸2NG盘.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnY吸2NG盘_MouseDown);
             this.btnY吸2NG盘.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnY吸2NG盘_MouseUp);
-            // 
-            // txtY指定位置
-            // 
-            this.txtY指定位置.Location = new System.Drawing.Point(84, 45);
-            this.txtY指定位置.Margin = new System.Windows.Forms.Padding(2);
-            this.txtY指定位置.Name = "txtY指定位置";
-            this.txtY指定位置.Size = new System.Drawing.Size(68, 21);
-            this.txtY指定位置.TabIndex = 51;
-            // 
-            // label284
-            // 
-            this.label284.AutoSize = true;
-            this.label284.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label284.Location = new System.Drawing.Point(29, 50);
-            this.label284.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label284.Name = "label284";
-            this.label284.Size = new System.Drawing.Size(55, 15);
-            this.label284.TabIndex = 50;
-            this.label284.Text = "指定位置";
             // 
             // txtY当前位置
             // 
@@ -6115,7 +7383,7 @@
             // btnY指定位置
             // 
             this.btnY指定位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btnY指定位置.Location = new System.Drawing.Point(15, 75);
+            this.btnY指定位置.Location = new System.Drawing.Point(14, 52);
             this.btnY指定位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnY指定位置.Name = "btnY指定位置";
             this.btnY指定位置.Size = new System.Drawing.Size(75, 24);
@@ -6181,7 +7449,7 @@
             // btnY回原点
             // 
             this.btnY回原点.BackColor = System.Drawing.SystemColors.Control;
-            this.btnY回原点.Location = new System.Drawing.Point(15, 104);
+            this.btnY回原点.Location = new System.Drawing.Point(14, 81);
             this.btnY回原点.Margin = new System.Windows.Forms.Padding(2);
             this.btnY回原点.Name = "btnY回原点";
             this.btnY回原点.Size = new System.Drawing.Size(75, 24);
@@ -6194,7 +7462,7 @@
             // btnY倒NG盘位置
             // 
             this.btnY倒NG盘位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btnY倒NG盘位置.Location = new System.Drawing.Point(15, 190);
+            this.btnY倒NG盘位置.Location = new System.Drawing.Point(14, 167);
             this.btnY倒NG盘位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnY倒NG盘位置.Name = "btnY倒NG盘位置";
             this.btnY倒NG盘位置.Size = new System.Drawing.Size(75, 24);
@@ -6207,7 +7475,7 @@
             // btnYNG盘位置
             // 
             this.btnYNG盘位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btnYNG盘位置.Location = new System.Drawing.Point(15, 162);
+            this.btnYNG盘位置.Location = new System.Drawing.Point(14, 139);
             this.btnYNG盘位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnYNG盘位置.Name = "btnYNG盘位置";
             this.btnYNG盘位置.Size = new System.Drawing.Size(75, 24);
@@ -6220,7 +7488,7 @@
             // btnY倒实盘位置
             // 
             this.btnY倒实盘位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btnY倒实盘位置.Location = new System.Drawing.Point(15, 133);
+            this.btnY倒实盘位置.Location = new System.Drawing.Point(14, 110);
             this.btnY倒实盘位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnY倒实盘位置.Name = "btnY倒实盘位置";
             this.btnY倒实盘位置.Size = new System.Drawing.Size(75, 24);
@@ -6233,7 +7501,7 @@
             // btnY实盘位置
             // 
             this.btnY实盘位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btnY实盘位置.Location = new System.Drawing.Point(15, 219);
+            this.btnY实盘位置.Location = new System.Drawing.Point(14, 196);
             this.btnY实盘位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnY实盘位置.Name = "btnY实盘位置";
             this.btnY实盘位置.Size = new System.Drawing.Size(75, 24);
@@ -6245,6 +7513,7 @@
             // 
             // groupBox21
             // 
+            this.groupBox21.Controls.Add(this.btnX下视觉2位置);
             this.groupBox21.Controls.Add(this.btnX吸1倒实盘);
             this.groupBox21.Controls.Add(this.btnX下一列);
             this.groupBox21.Controls.Add(this.btnX上一列);
@@ -6252,8 +7521,6 @@
             this.groupBox21.Controls.Add(this.btnX夹爪位置);
             this.groupBox21.Controls.Add(this.btnX视觉实盘位置);
             this.groupBox21.Controls.Add(this.btnX吸1实盘);
-            this.groupBox21.Controls.Add(this.txtX指定位置);
-            this.groupBox21.Controls.Add(this.label283);
             this.groupBox21.Controls.Add(this.txtX当前位置);
             this.groupBox21.Controls.Add(this.btnX指定位置);
             this.groupBox21.Controls.Add(this.label282);
@@ -6272,10 +7539,23 @@
             this.groupBox21.TabStop = false;
             this.groupBox21.Text = "上料X轴";
             // 
+            // btnX下视觉2位置
+            // 
+            this.btnX下视觉2位置.BackColor = System.Drawing.SystemColors.Control;
+            this.btnX下视觉2位置.Location = new System.Drawing.Point(12, 167);
+            this.btnX下视觉2位置.Margin = new System.Windows.Forms.Padding(2);
+            this.btnX下视觉2位置.Name = "btnX下视觉2位置";
+            this.btnX下视觉2位置.Size = new System.Drawing.Size(75, 24);
+            this.btnX下视觉2位置.TabIndex = 65;
+            this.btnX下视觉2位置.Text = "下视觉2位置";
+            this.btnX下视觉2位置.UseVisualStyleBackColor = true;
+            this.btnX下视觉2位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnX下视觉2位置_MouseDown);
+            this.btnX下视觉2位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnX下视觉2位置_MouseUp);
+            // 
             // btnX吸1倒实盘
             // 
             this.btnX吸1倒实盘.BackColor = System.Drawing.SystemColors.Control;
-            this.btnX吸1倒实盘.Location = new System.Drawing.Point(104, 105);
+            this.btnX吸1倒实盘.Location = new System.Drawing.Point(102, 82);
             this.btnX吸1倒实盘.Margin = new System.Windows.Forms.Padding(2);
             this.btnX吸1倒实盘.Name = "btnX吸1倒实盘";
             this.btnX吸1倒实盘.Size = new System.Drawing.Size(75, 24);
@@ -6288,7 +7568,7 @@
             // btnX下一列
             // 
             this.btnX下一列.BackColor = System.Drawing.SystemColors.Control;
-            this.btnX下一列.Location = new System.Drawing.Point(104, 190);
+            this.btnX下一列.Location = new System.Drawing.Point(102, 196);
             this.btnX下一列.Margin = new System.Windows.Forms.Padding(2);
             this.btnX下一列.Name = "btnX下一列";
             this.btnX下一列.Size = new System.Drawing.Size(75, 24);
@@ -6301,7 +7581,7 @@
             // btnX上一列
             // 
             this.btnX上一列.BackColor = System.Drawing.SystemColors.Control;
-            this.btnX上一列.Location = new System.Drawing.Point(14, 190);
+            this.btnX上一列.Location = new System.Drawing.Point(12, 196);
             this.btnX上一列.Margin = new System.Windows.Forms.Padding(2);
             this.btnX上一列.Name = "btnX上一列";
             this.btnX上一列.Size = new System.Drawing.Size(75, 24);
@@ -6314,7 +7594,7 @@
             // btnX扫码位置
             // 
             this.btnX扫码位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btnX扫码位置.Location = new System.Drawing.Point(14, 162);
+            this.btnX扫码位置.Location = new System.Drawing.Point(12, 139);
             this.btnX扫码位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnX扫码位置.Name = "btnX扫码位置";
             this.btnX扫码位置.Size = new System.Drawing.Size(75, 24);
@@ -6327,7 +7607,7 @@
             // btnX夹爪位置
             // 
             this.btnX夹爪位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btnX夹爪位置.Location = new System.Drawing.Point(104, 162);
+            this.btnX夹爪位置.Location = new System.Drawing.Point(102, 139);
             this.btnX夹爪位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnX夹爪位置.Name = "btnX夹爪位置";
             this.btnX夹爪位置.Size = new System.Drawing.Size(75, 24);
@@ -6340,7 +7620,7 @@
             // btnX视觉实盘位置
             // 
             this.btnX视觉实盘位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btnX视觉实盘位置.Location = new System.Drawing.Point(104, 133);
+            this.btnX视觉实盘位置.Location = new System.Drawing.Point(102, 110);
             this.btnX视觉实盘位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnX视觉实盘位置.Name = "btnX视觉实盘位置";
             this.btnX视觉实盘位置.Size = new System.Drawing.Size(75, 24);
@@ -6353,7 +7633,7 @@
             // btnX吸1实盘
             // 
             this.btnX吸1实盘.BackColor = System.Drawing.SystemColors.Control;
-            this.btnX吸1实盘.Location = new System.Drawing.Point(104, 75);
+            this.btnX吸1实盘.Location = new System.Drawing.Point(102, 52);
             this.btnX吸1实盘.Margin = new System.Windows.Forms.Padding(2);
             this.btnX吸1实盘.Name = "btnX吸1实盘";
             this.btnX吸1实盘.Size = new System.Drawing.Size(75, 24);
@@ -6362,25 +7642,6 @@
             this.btnX吸1实盘.UseVisualStyleBackColor = true;
             this.btnX吸1实盘.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnX吸1实盘_MouseDown);
             this.btnX吸1实盘.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnX吸1实盘_MouseUp);
-            // 
-            // txtX指定位置
-            // 
-            this.txtX指定位置.Location = new System.Drawing.Point(84, 45);
-            this.txtX指定位置.Margin = new System.Windows.Forms.Padding(2);
-            this.txtX指定位置.Name = "txtX指定位置";
-            this.txtX指定位置.Size = new System.Drawing.Size(68, 21);
-            this.txtX指定位置.TabIndex = 51;
-            // 
-            // label283
-            // 
-            this.label283.AutoSize = true;
-            this.label283.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label283.Location = new System.Drawing.Point(29, 50);
-            this.label283.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label283.Name = "label283";
-            this.label283.Size = new System.Drawing.Size(55, 15);
-            this.label283.TabIndex = 50;
-            this.label283.Text = "指定位置";
             // 
             // txtX当前位置
             // 
@@ -6394,7 +7655,7 @@
             // btnX指定位置
             // 
             this.btnX指定位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btnX指定位置.Location = new System.Drawing.Point(14, 75);
+            this.btnX指定位置.Location = new System.Drawing.Point(12, 52);
             this.btnX指定位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnX指定位置.Name = "btnX指定位置";
             this.btnX指定位置.Size = new System.Drawing.Size(75, 24);
@@ -6460,7 +7721,7 @@
             // btnX回原点
             // 
             this.btnX回原点.BackColor = System.Drawing.SystemColors.Control;
-            this.btnX回原点.Location = new System.Drawing.Point(14, 104);
+            this.btnX回原点.Location = new System.Drawing.Point(12, 81);
             this.btnX回原点.Margin = new System.Windows.Forms.Padding(2);
             this.btnX回原点.Name = "btnX回原点";
             this.btnX回原点.Size = new System.Drawing.Size(75, 24);
@@ -6473,7 +7734,7 @@
             // btnX实盘位置
             // 
             this.btnX实盘位置.BackColor = System.Drawing.SystemColors.Control;
-            this.btnX实盘位置.Location = new System.Drawing.Point(14, 133);
+            this.btnX实盘位置.Location = new System.Drawing.Point(12, 110);
             this.btnX实盘位置.Margin = new System.Windows.Forms.Padding(2);
             this.btnX实盘位置.Name = "btnX实盘位置";
             this.btnX实盘位置.Size = new System.Drawing.Size(75, 24);
@@ -7052,7 +8313,11 @@
             // 
             // groupBox44
             // 
+            this.groupBox44.Controls.Add(this.btnJD清除状态4);
+            this.groupBox44.Controls.Add(this.夹爪4状态);
+            this.groupBox44.Controls.Add(this.label276);
             this.groupBox44.Controls.Add(this.btnJD4打开小位置);
+            this.groupBox44.Controls.Add(this.txtR4当前字节);
             this.groupBox44.Controls.Add(this.label281);
             this.groupBox44.Controls.Add(this.btnJD4打开);
             this.groupBox44.Controls.Add(this.txtR4旋转角度);
@@ -7070,6 +8335,43 @@
             this.groupBox44.TabStop = false;
             this.groupBox44.Text = "钧舵4位置";
             // 
+            // btnJD清除状态4
+            // 
+            this.btnJD清除状态4.BackColor = System.Drawing.SystemColors.Control;
+            this.btnJD清除状态4.Location = new System.Drawing.Point(14, 134);
+            this.btnJD清除状态4.Margin = new System.Windows.Forms.Padding(2);
+            this.btnJD清除状态4.Name = "btnJD清除状态4";
+            this.btnJD清除状态4.Size = new System.Drawing.Size(75, 24);
+            this.btnJD清除状态4.TabIndex = 85;
+            this.btnJD清除状态4.Text = "清除状态4";
+            this.btnJD清除状态4.UseVisualStyleBackColor = true;
+            this.btnJD清除状态4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnJD清除状态4_MouseDown);
+            this.btnJD清除状态4.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnJD清除状态4_MouseUp);
+            // 
+            // 夹爪4状态
+            // 
+            this.夹爪4状态.AutoSize = true;
+            this.夹爪4状态.BackColor = System.Drawing.Color.White;
+            this.夹爪4状态.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.夹爪4状态.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.夹爪4状态.Location = new System.Drawing.Point(67, 302);
+            this.夹爪4状态.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.夹爪4状态.Name = "夹爪4状态";
+            this.夹爪4状态.Size = new System.Drawing.Size(63, 17);
+            this.夹爪4状态.TabIndex = 84;
+            this.夹爪4状态.Text = "夹爪4状态";
+            // 
+            // label276
+            // 
+            this.label276.AutoSize = true;
+            this.label276.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label276.Location = new System.Drawing.Point(35, 29);
+            this.label276.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label276.Name = "label276";
+            this.label276.Size = new System.Drawing.Size(55, 15);
+            this.label276.TabIndex = 82;
+            this.label276.Text = "当前字节";
+            // 
             // btnJD4打开小位置
             // 
             this.btnJD4打开小位置.BackColor = System.Drawing.SystemColors.Control;
@@ -7082,6 +8384,14 @@
             this.btnJD4打开小位置.UseVisualStyleBackColor = true;
             this.btnJD4打开小位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnJD4打开小位置_MouseDown);
             this.btnJD4打开小位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnJD4打开小位置_MouseUp);
+            // 
+            // txtR4当前字节
+            // 
+            this.txtR4当前字节.Location = new System.Drawing.Point(94, 27);
+            this.txtR4当前字节.Margin = new System.Windows.Forms.Padding(2);
+            this.txtR4当前字节.Name = "txtR4当前字节";
+            this.txtR4当前字节.Size = new System.Drawing.Size(49, 21);
+            this.txtR4当前字节.TabIndex = 83;
             // 
             // label281
             // 
@@ -7169,7 +8479,11 @@
             // 
             // groupBox43
             // 
+            this.groupBox43.Controls.Add(this.btnJD清除状态3);
+            this.groupBox43.Controls.Add(this.夹爪3状态);
+            this.groupBox43.Controls.Add(this.label275);
             this.groupBox43.Controls.Add(this.btnJD3打开小位置);
+            this.groupBox43.Controls.Add(this.txtR3当前字节);
             this.groupBox43.Controls.Add(this.label267);
             this.groupBox43.Controls.Add(this.btnJD3打开);
             this.groupBox43.Controls.Add(this.txtR3旋转角度);
@@ -7187,6 +8501,43 @@
             this.groupBox43.TabStop = false;
             this.groupBox43.Text = "钧舵3位置";
             // 
+            // btnJD清除状态3
+            // 
+            this.btnJD清除状态3.BackColor = System.Drawing.SystemColors.Control;
+            this.btnJD清除状态3.Location = new System.Drawing.Point(14, 134);
+            this.btnJD清除状态3.Margin = new System.Windows.Forms.Padding(2);
+            this.btnJD清除状态3.Name = "btnJD清除状态3";
+            this.btnJD清除状态3.Size = new System.Drawing.Size(75, 24);
+            this.btnJD清除状态3.TabIndex = 82;
+            this.btnJD清除状态3.Text = "清除状态3";
+            this.btnJD清除状态3.UseVisualStyleBackColor = true;
+            this.btnJD清除状态3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnJD清除状态3_MouseDown);
+            this.btnJD清除状态3.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnJD清除状态3_MouseUp);
+            // 
+            // 夹爪3状态
+            // 
+            this.夹爪3状态.AutoSize = true;
+            this.夹爪3状态.BackColor = System.Drawing.Color.White;
+            this.夹爪3状态.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.夹爪3状态.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.夹爪3状态.Location = new System.Drawing.Point(62, 302);
+            this.夹爪3状态.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.夹爪3状态.Name = "夹爪3状态";
+            this.夹爪3状态.Size = new System.Drawing.Size(63, 17);
+            this.夹爪3状态.TabIndex = 77;
+            this.夹爪3状态.Text = "夹爪3状态";
+            // 
+            // label275
+            // 
+            this.label275.AutoSize = true;
+            this.label275.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label275.Location = new System.Drawing.Point(34, 33);
+            this.label275.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label275.Name = "label275";
+            this.label275.Size = new System.Drawing.Size(55, 15);
+            this.label275.TabIndex = 80;
+            this.label275.Text = "当前字节";
+            // 
             // btnJD3打开小位置
             // 
             this.btnJD3打开小位置.BackColor = System.Drawing.SystemColors.Control;
@@ -7199,6 +8550,14 @@
             this.btnJD3打开小位置.UseVisualStyleBackColor = true;
             this.btnJD3打开小位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnJD3打开小位置_MouseDown);
             this.btnJD3打开小位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnJD3打开小位置_MouseUp);
+            // 
+            // txtR3当前字节
+            // 
+            this.txtR3当前字节.Location = new System.Drawing.Point(93, 31);
+            this.txtR3当前字节.Margin = new System.Windows.Forms.Padding(2);
+            this.txtR3当前字节.Name = "txtR3当前字节";
+            this.txtR3当前字节.Size = new System.Drawing.Size(49, 21);
+            this.txtR3当前字节.TabIndex = 81;
             // 
             // label267
             // 
@@ -7286,6 +8645,10 @@
             // 
             // groupBox42
             // 
+            this.groupBox42.Controls.Add(this.btnJD清除状态2);
+            this.groupBox42.Controls.Add(this.夹爪2状态);
+            this.groupBox42.Controls.Add(this.label274);
+            this.groupBox42.Controls.Add(this.txtR2当前字节);
             this.groupBox42.Controls.Add(this.btnJD2打开小位置);
             this.groupBox42.Controls.Add(this.label256);
             this.groupBox42.Controls.Add(this.btnJD2打开);
@@ -7303,6 +8666,51 @@
             this.groupBox42.TabIndex = 61;
             this.groupBox42.TabStop = false;
             this.groupBox42.Text = "钧舵2位置";
+            // 
+            // btnJD清除状态2
+            // 
+            this.btnJD清除状态2.BackColor = System.Drawing.SystemColors.Control;
+            this.btnJD清除状态2.Location = new System.Drawing.Point(14, 133);
+            this.btnJD清除状态2.Margin = new System.Windows.Forms.Padding(2);
+            this.btnJD清除状态2.Name = "btnJD清除状态2";
+            this.btnJD清除状态2.Size = new System.Drawing.Size(75, 24);
+            this.btnJD清除状态2.TabIndex = 77;
+            this.btnJD清除状态2.Text = "清除状态2";
+            this.btnJD清除状态2.UseVisualStyleBackColor = true;
+            this.btnJD清除状态2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnJD清除状态2_MouseDown);
+            this.btnJD清除状态2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnJD清除状态2_MouseUp);
+            // 
+            // 夹爪2状态
+            // 
+            this.夹爪2状态.AutoSize = true;
+            this.夹爪2状态.BackColor = System.Drawing.Color.White;
+            this.夹爪2状态.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.夹爪2状态.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.夹爪2状态.Location = new System.Drawing.Point(67, 280);
+            this.夹爪2状态.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.夹爪2状态.Name = "夹爪2状态";
+            this.夹爪2状态.Size = new System.Drawing.Size(63, 17);
+            this.夹爪2状态.TabIndex = 77;
+            this.夹爪2状态.Text = "夹爪2状态";
+            // 
+            // label274
+            // 
+            this.label274.AutoSize = true;
+            this.label274.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label274.Location = new System.Drawing.Point(35, 30);
+            this.label274.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label274.Name = "label274";
+            this.label274.Size = new System.Drawing.Size(55, 15);
+            this.label274.TabIndex = 78;
+            this.label274.Text = "当前字节";
+            // 
+            // txtR2当前字节
+            // 
+            this.txtR2当前字节.Location = new System.Drawing.Point(94, 28);
+            this.txtR2当前字节.Margin = new System.Windows.Forms.Padding(2);
+            this.txtR2当前字节.Name = "txtR2当前字节";
+            this.txtR2当前字节.Size = new System.Drawing.Size(49, 21);
+            this.txtR2当前字节.TabIndex = 79;
             // 
             // btnJD2打开小位置
             // 
@@ -7403,6 +8811,8 @@
             // 
             // groupBox41
             // 
+            this.groupBox41.Controls.Add(this.label250);
+            this.groupBox41.Controls.Add(this.txtR1当前字节);
             this.groupBox41.Controls.Add(this.夹爪状态);
             this.groupBox41.Controls.Add(this.label254);
             this.groupBox41.Controls.Add(this.txtR1旋转角度);
@@ -7423,18 +8833,37 @@
             this.groupBox41.TabStop = false;
             this.groupBox41.Text = "钧舵1位置";
             // 
+            // label250
+            // 
+            this.label250.AutoSize = true;
+            this.label250.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label250.Location = new System.Drawing.Point(34, 28);
+            this.label250.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label250.Name = "label250";
+            this.label250.Size = new System.Drawing.Size(55, 15);
+            this.label250.TabIndex = 57;
+            this.label250.Text = "当前字节";
+            // 
+            // txtR1当前字节
+            // 
+            this.txtR1当前字节.Location = new System.Drawing.Point(93, 26);
+            this.txtR1当前字节.Margin = new System.Windows.Forms.Padding(2);
+            this.txtR1当前字节.Name = "txtR1当前字节";
+            this.txtR1当前字节.Size = new System.Drawing.Size(49, 21);
+            this.txtR1当前字节.TabIndex = 76;
+            // 
             // 夹爪状态
             // 
             this.夹爪状态.AutoSize = true;
             this.夹爪状态.BackColor = System.Drawing.Color.White;
             this.夹爪状态.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.夹爪状态.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.夹爪状态.Location = new System.Drawing.Point(25, 158);
+            this.夹爪状态.Location = new System.Drawing.Point(62, 278);
             this.夹爪状态.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.夹爪状态.Name = "夹爪状态";
-            this.夹爪状态.Size = new System.Drawing.Size(57, 17);
+            this.夹爪状态.Size = new System.Drawing.Size(63, 17);
             this.夹爪状态.TabIndex = 75;
-            this.夹爪状态.Text = "夹爪状态";
+            this.夹爪状态.Text = "夹爪1状态";
             // 
             // label254
             // 
@@ -7491,7 +8920,7 @@
             this.btnJD清除状态.Name = "btnJD清除状态";
             this.btnJD清除状态.Size = new System.Drawing.Size(75, 24);
             this.btnJD清除状态.TabIndex = 54;
-            this.btnJD清除状态.Text = "清除状态";
+            this.btnJD清除状态.Text = "清除状态1";
             this.btnJD清除状态.UseVisualStyleBackColor = true;
             this.btnJD清除状态.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnJD清除状态_MouseDown);
             this.btnJD清除状态.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnJD清除状态_MouseUp);
@@ -8766,6 +10195,7 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.groupBox77);
             this.tabPage4.Controls.Add(this.label95);
             this.tabPage4.Controls.Add(this.label93);
             this.tabPage4.Controls.Add(this.groupBox9);
@@ -8862,12 +10292,250 @@
             this.tabPage4.Text = "I/O信息";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // groupBox77
+            // 
+            this.groupBox77.Controls.Add(this.label237);
+            this.groupBox77.Controls.Add(this.label238);
+            this.groupBox77.Controls.Add(this.label239);
+            this.groupBox77.Controls.Add(this.label240);
+            this.groupBox77.Controls.Add(this.X116);
+            this.groupBox77.Controls.Add(this.X117);
+            this.groupBox77.Controls.Add(this.X118);
+            this.groupBox77.Controls.Add(this.X119);
+            this.groupBox77.Controls.Add(this.label236);
+            this.groupBox77.Controls.Add(this.label235);
+            this.groupBox77.Controls.Add(this.label104);
+            this.groupBox77.Controls.Add(this.label334);
+            this.groupBox77.Controls.Add(this.X112);
+            this.groupBox77.Controls.Add(this.X113);
+            this.groupBox77.Controls.Add(this.X114);
+            this.groupBox77.Controls.Add(this.X115);
+            this.groupBox77.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox77.Location = new System.Drawing.Point(916, 16);
+            this.groupBox77.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox77.Name = "groupBox77";
+            this.groupBox77.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox77.Size = new System.Drawing.Size(165, 315);
+            this.groupBox77.TabIndex = 174;
+            this.groupBox77.TabStop = false;
+            this.groupBox77.Text = "测试4";
+            // 
+            // label237
+            // 
+            this.label237.AutoSize = true;
+            this.label237.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label237.Location = new System.Drawing.Point(4, 155);
+            this.label237.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label237.Name = "label237";
+            this.label237.Size = new System.Drawing.Size(109, 15);
+            this.label237.TabIndex = 104;
+            this.label237.Text = "工位4光阑缩回位右";
+            // 
+            // label238
+            // 
+            this.label238.AutoSize = true;
+            this.label238.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label238.Location = new System.Drawing.Point(4, 136);
+            this.label238.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label238.Name = "label238";
+            this.label238.Size = new System.Drawing.Size(109, 15);
+            this.label238.TabIndex = 103;
+            this.label238.Text = "工位4光阑伸出位右";
+            // 
+            // label239
+            // 
+            this.label239.AutoSize = true;
+            this.label239.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label239.Location = new System.Drawing.Point(4, 117);
+            this.label239.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label239.Name = "label239";
+            this.label239.Size = new System.Drawing.Size(109, 15);
+            this.label239.TabIndex = 102;
+            this.label239.Text = "工位3光阑缩回位右";
+            // 
+            // label240
+            // 
+            this.label240.AutoSize = true;
+            this.label240.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label240.Location = new System.Drawing.Point(4, 98);
+            this.label240.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label240.Name = "label240";
+            this.label240.Size = new System.Drawing.Size(109, 15);
+            this.label240.TabIndex = 101;
+            this.label240.Text = "工位3光阑伸出位右";
+            // 
+            // X116
+            // 
+            this.X116.AutoSize = true;
+            this.X116.BackColor = System.Drawing.Color.White;
+            this.X116.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.X116.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.X116.Location = new System.Drawing.Point(125, 97);
+            this.X116.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.X116.Name = "X116";
+            this.X116.Size = new System.Drawing.Size(36, 17);
+            this.X116.TabIndex = 97;
+            this.X116.Text = "X116";
+            // 
+            // X117
+            // 
+            this.X117.AutoSize = true;
+            this.X117.BackColor = System.Drawing.Color.White;
+            this.X117.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.X117.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.X117.Location = new System.Drawing.Point(125, 116);
+            this.X117.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.X117.Name = "X117";
+            this.X117.Size = new System.Drawing.Size(36, 17);
+            this.X117.TabIndex = 98;
+            this.X117.Text = "X117";
+            // 
+            // X118
+            // 
+            this.X118.AutoSize = true;
+            this.X118.BackColor = System.Drawing.Color.White;
+            this.X118.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.X118.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.X118.Location = new System.Drawing.Point(125, 135);
+            this.X118.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.X118.Name = "X118";
+            this.X118.Size = new System.Drawing.Size(36, 17);
+            this.X118.TabIndex = 99;
+            this.X118.Text = "X118";
+            // 
+            // X119
+            // 
+            this.X119.AutoSize = true;
+            this.X119.BackColor = System.Drawing.Color.White;
+            this.X119.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.X119.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.X119.Location = new System.Drawing.Point(125, 154);
+            this.X119.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.X119.Name = "X119";
+            this.X119.Size = new System.Drawing.Size(36, 17);
+            this.X119.TabIndex = 100;
+            this.X119.Text = "X119";
+            // 
+            // label236
+            // 
+            this.label236.AutoSize = true;
+            this.label236.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label236.Location = new System.Drawing.Point(4, 78);
+            this.label236.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label236.Name = "label236";
+            this.label236.Size = new System.Drawing.Size(109, 15);
+            this.label236.TabIndex = 96;
+            this.label236.Text = "工位2光阑缩回位右";
+            // 
+            // label235
+            // 
+            this.label235.AutoSize = true;
+            this.label235.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label235.Location = new System.Drawing.Point(4, 59);
+            this.label235.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label235.Name = "label235";
+            this.label235.Size = new System.Drawing.Size(109, 15);
+            this.label235.TabIndex = 95;
+            this.label235.Text = "工位2光阑伸出位右";
+            // 
+            // label104
+            // 
+            this.label104.AutoSize = true;
+            this.label104.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label104.Location = new System.Drawing.Point(4, 40);
+            this.label104.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label104.Name = "label104";
+            this.label104.Size = new System.Drawing.Size(109, 15);
+            this.label104.TabIndex = 94;
+            this.label104.Text = "工位1光阑缩回位右";
+            // 
+            // label334
+            // 
+            this.label334.AutoSize = true;
+            this.label334.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label334.Location = new System.Drawing.Point(4, 21);
+            this.label334.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label334.Name = "label334";
+            this.label334.Size = new System.Drawing.Size(109, 15);
+            this.label334.TabIndex = 93;
+            this.label334.Text = "工位1光阑伸出位右";
+            // 
+            // X112
+            // 
+            this.X112.AutoSize = true;
+            this.X112.BackColor = System.Drawing.Color.White;
+            this.X112.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.X112.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.X112.Location = new System.Drawing.Point(125, 20);
+            this.X112.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.X112.Name = "X112";
+            this.X112.Size = new System.Drawing.Size(36, 17);
+            this.X112.TabIndex = 2;
+            this.X112.Text = "X112";
+            // 
+            // X113
+            // 
+            this.X113.AutoSize = true;
+            this.X113.BackColor = System.Drawing.Color.White;
+            this.X113.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.X113.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.X113.Location = new System.Drawing.Point(125, 39);
+            this.X113.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.X113.Name = "X113";
+            this.X113.Size = new System.Drawing.Size(36, 17);
+            this.X113.TabIndex = 5;
+            this.X113.Text = "X113";
+            // 
+            // X114
+            // 
+            this.X114.AutoSize = true;
+            this.X114.BackColor = System.Drawing.Color.White;
+            this.X114.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.X114.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.X114.Location = new System.Drawing.Point(125, 58);
+            this.X114.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.X114.Name = "X114";
+            this.X114.Size = new System.Drawing.Size(36, 17);
+            this.X114.TabIndex = 8;
+            this.X114.Text = "X114";
+            // 
+            // X115
+            // 
+            this.X115.AutoSize = true;
+            this.X115.BackColor = System.Drawing.Color.White;
+            this.X115.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.X115.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.X115.Location = new System.Drawing.Point(125, 78);
+            this.X115.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.X115.Name = "X115";
+            this.X115.Size = new System.Drawing.Size(36, 17);
+            this.X115.TabIndex = 11;
+            this.X115.Text = "X115";
+            // 
+            // label95
+            // 
+            this.label95.AutoSize = true;
+            this.label95.Location = new System.Drawing.Point(13, 715);
+            this.label95.Name = "label95";
+            this.label95.Size = new System.Drawing.Size(104, 17);
+            this.label95.TabIndex = 173;
+            this.label95.Text = "界面刷新时间";
+            // 
+            // label93
+            // 
+            this.label93.AutoSize = true;
+            this.label93.Location = new System.Drawing.Point(13, 685);
+            this.label93.Name = "label93";
+            this.label93.Size = new System.Drawing.Size(104, 17);
+            this.label93.TabIndex = 172;
+            this.label93.Text = "数据刷新时间";
+            // 
             // groupBox9
             // 
             this.groupBox9.Controls.Add(this.LB_FW_工位3零度);
             this.groupBox9.Controls.Add(this.LB_FW_工位3光阑右上);
             this.groupBox9.Controls.Add(this.LB_FW_工位3光阑缩回);
-            this.groupBox9.Controls.Add(this.lLB_FW_工位3光阑左上);
+            this.groupBox9.Controls.Add(this.LB_FW_工位3光阑左上);
             this.groupBox9.Controls.Add(this.LB_FW_工位3辐射板下);
             this.groupBox9.Controls.Add(this.LB_FW_工位4光阑右上);
             this.groupBox9.Controls.Add(this.LB_FW_工位4光阑缩回);
@@ -9032,17 +10700,17 @@
             this.LB_FW_工位3光阑缩回.TabIndex = 235;
             this.LB_FW_工位3光阑缩回.Text = " ";
             // 
-            // lLB_FW_工位3光阑左上
+            // LB_FW_工位3光阑左上
             // 
-            this.lLB_FW_工位3光阑左上.BackColor = System.Drawing.Color.White;
-            this.lLB_FW_工位3光阑左上.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lLB_FW_工位3光阑左上.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lLB_FW_工位3光阑左上.Location = new System.Drawing.Point(588, 58);
-            this.lLB_FW_工位3光阑左上.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lLB_FW_工位3光阑左上.Name = "lLB_FW_工位3光阑左上";
-            this.lLB_FW_工位3光阑左上.Size = new System.Drawing.Size(20, 16);
-            this.lLB_FW_工位3光阑左上.TabIndex = 236;
-            this.lLB_FW_工位3光阑左上.Text = " ";
+            this.LB_FW_工位3光阑左上.BackColor = System.Drawing.Color.White;
+            this.LB_FW_工位3光阑左上.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LB_FW_工位3光阑左上.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_FW_工位3光阑左上.Location = new System.Drawing.Point(588, 58);
+            this.LB_FW_工位3光阑左上.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LB_FW_工位3光阑左上.Name = "LB_FW_工位3光阑左上";
+            this.LB_FW_工位3光阑左上.Size = new System.Drawing.Size(20, 16);
+            this.LB_FW_工位3光阑左上.TabIndex = 236;
+            this.LB_FW_工位3光阑左上.Text = " ";
             // 
             // LB_FW_工位3辐射板下
             // 
@@ -10401,6 +12069,8 @@
             // 
             // groupBox82
             // 
+            this.groupBox82.Controls.Add(this.txt控制器时间);
+            this.groupBox82.Controls.Add(this.label68);
             this.groupBox82.Controls.Add(this.label375);
             this.groupBox82.Controls.Add(this.X132);
             this.groupBox82.Controls.Add(this.label418);
@@ -10433,16 +12103,35 @@
             this.groupBox82.TabStop = false;
             this.groupBox82.Text = "上料5";
             // 
+            // txt控制器时间
+            // 
+            this.txt控制器时间.Location = new System.Drawing.Point(17, 283);
+            this.txt控制器时间.Margin = new System.Windows.Forms.Padding(2);
+            this.txt控制器时间.Name = "txt控制器时间";
+            this.txt控制器时间.Size = new System.Drawing.Size(119, 21);
+            this.txt控制器时间.TabIndex = 172;
+            // 
+            // label68
+            // 
+            this.label68.AutoSize = true;
+            this.label68.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label68.Location = new System.Drawing.Point(17, 263);
+            this.label68.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label68.Name = "label68";
+            this.label68.Size = new System.Drawing.Size(91, 15);
+            this.label68.TabIndex = 171;
+            this.label68.Text = "当前控制器时间";
+            // 
             // label375
             // 
             this.label375.AutoSize = true;
             this.label375.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label375.Location = new System.Drawing.Point(15, 61);
+            this.label375.Location = new System.Drawing.Point(15, 57);
             this.label375.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label375.Name = "label375";
-            this.label375.Size = new System.Drawing.Size(97, 15);
+            this.label375.Size = new System.Drawing.Size(91, 15);
             this.label375.TabIndex = 170;
-            this.label375.Text = "倒实整形2级左伸";
+            this.label375.Text = "实盘卡盘缩回位";
             // 
             // X132
             // 
@@ -10450,7 +12139,7 @@
             this.X132.BackColor = System.Drawing.Color.White;
             this.X132.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.X132.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.X132.Location = new System.Drawing.Point(117, 92);
+            this.X132.Location = new System.Drawing.Point(117, 93);
             this.X132.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.X132.Name = "X132";
             this.X132.Size = new System.Drawing.Size(36, 17);
@@ -10461,12 +12150,12 @@
             // 
             this.label418.AutoSize = true;
             this.label418.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label418.Location = new System.Drawing.Point(15, 41);
+            this.label418.Location = new System.Drawing.Point(15, 39);
             this.label418.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label418.Name = "label418";
-            this.label418.Size = new System.Drawing.Size(97, 15);
+            this.label418.Size = new System.Drawing.Size(31, 15);
             this.label418.TabIndex = 169;
-            this.label418.Text = "倒实整形1级右伸";
+            this.label418.Text = "备用";
             // 
             // X128
             // 
@@ -10488,9 +12177,9 @@
             this.label478.Location = new System.Drawing.Point(15, 21);
             this.label478.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label478.Name = "label478";
-            this.label478.Size = new System.Drawing.Size(97, 15);
+            this.label478.Size = new System.Drawing.Size(91, 15);
             this.label478.TabIndex = 168;
-            this.label478.Text = "倒实整形1级左伸";
+            this.label478.Text = "实盘卡盘伸出位";
             // 
             // X129
             // 
@@ -10498,7 +12187,7 @@
             this.X129.BackColor = System.Drawing.Color.White;
             this.X129.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.X129.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.X129.Location = new System.Drawing.Point(117, 38);
+            this.X129.Location = new System.Drawing.Point(117, 39);
             this.X129.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.X129.Name = "X129";
             this.X129.Size = new System.Drawing.Size(36, 17);
@@ -10511,7 +12200,7 @@
             this.X130.BackColor = System.Drawing.Color.White;
             this.X130.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.X130.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.X130.Location = new System.Drawing.Point(117, 56);
+            this.X130.Location = new System.Drawing.Point(117, 57);
             this.X130.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.X130.Name = "X130";
             this.X130.Size = new System.Drawing.Size(36, 17);
@@ -10524,7 +12213,7 @@
             this.X131.BackColor = System.Drawing.Color.White;
             this.X131.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.X131.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.X131.Location = new System.Drawing.Point(117, 74);
+            this.X131.Location = new System.Drawing.Point(117, 76);
             this.X131.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.X131.Name = "X131";
             this.X131.Size = new System.Drawing.Size(36, 17);
@@ -10537,7 +12226,7 @@
             this.X133.BackColor = System.Drawing.Color.White;
             this.X133.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.X133.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.X133.Location = new System.Drawing.Point(117, 110);
+            this.X133.Location = new System.Drawing.Point(117, 111);
             this.X133.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.X133.Name = "X133";
             this.X133.Size = new System.Drawing.Size(36, 17);
@@ -10550,7 +12239,7 @@
             this.X134.BackColor = System.Drawing.Color.White;
             this.X134.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.X134.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.X134.Location = new System.Drawing.Point(117, 128);
+            this.X134.Location = new System.Drawing.Point(117, 129);
             this.X134.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.X134.Name = "X134";
             this.X134.Size = new System.Drawing.Size(36, 17);
@@ -10563,7 +12252,7 @@
             this.X135.BackColor = System.Drawing.Color.White;
             this.X135.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.X135.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.X135.Location = new System.Drawing.Point(117, 146);
+            this.X135.Location = new System.Drawing.Point(117, 148);
             this.X135.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.X135.Name = "X135";
             this.X135.Size = new System.Drawing.Size(36, 17);
@@ -10576,7 +12265,7 @@
             this.label373.BackColor = System.Drawing.Color.White;
             this.label373.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label373.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label373.Location = new System.Drawing.Point(117, 164);
+            this.label373.Location = new System.Drawing.Point(117, 166);
             this.label373.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label373.Name = "label373";
             this.label373.Size = new System.Drawing.Size(36, 17);
@@ -10589,7 +12278,7 @@
             this.label374.BackColor = System.Drawing.Color.White;
             this.label374.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label374.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label374.Location = new System.Drawing.Point(117, 182);
+            this.label374.Location = new System.Drawing.Point(117, 184);
             this.label374.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label374.Name = "label374";
             this.label374.Size = new System.Drawing.Size(36, 17);
@@ -10602,7 +12291,7 @@
             this.label485.BackColor = System.Drawing.Color.White;
             this.label485.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label485.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label485.Location = new System.Drawing.Point(117, 200);
+            this.label485.Location = new System.Drawing.Point(117, 203);
             this.label485.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label485.Name = "label485";
             this.label485.Size = new System.Drawing.Size(36, 17);
@@ -10613,62 +12302,62 @@
             // 
             this.label486.AutoSize = true;
             this.label486.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label486.Location = new System.Drawing.Point(14, 79);
+            this.label486.Location = new System.Drawing.Point(15, 75);
             this.label486.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label486.Name = "label486";
-            this.label486.Size = new System.Drawing.Size(97, 15);
+            this.label486.Size = new System.Drawing.Size(31, 15);
             this.label486.TabIndex = 9;
-            this.label486.Text = "倒实整形2级右伸";
+            this.label486.Text = "备用";
             // 
             // label489
             // 
             this.label489.AutoSize = true;
             this.label489.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label489.Location = new System.Drawing.Point(14, 98);
+            this.label489.Location = new System.Drawing.Point(15, 93);
             this.label489.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label489.Name = "label489";
-            this.label489.Size = new System.Drawing.Size(91, 15);
+            this.label489.Size = new System.Drawing.Size(97, 15);
             this.label489.TabIndex = 13;
-            this.label489.Text = "NG整形1级左伸";
+            this.label489.Text = "NG盘卡盘缩回位";
             // 
             // label526
             // 
             this.label526.AutoSize = true;
             this.label526.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label526.Location = new System.Drawing.Point(14, 116);
+            this.label526.Location = new System.Drawing.Point(15, 111);
             this.label526.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label526.Name = "label526";
-            this.label526.Size = new System.Drawing.Size(91, 15);
+            this.label526.Size = new System.Drawing.Size(31, 15);
             this.label526.TabIndex = 15;
-            this.label526.Text = "NG整形1级右伸";
+            this.label526.Text = "备用";
             // 
             // label527
             // 
             this.label527.AutoSize = true;
             this.label527.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label527.Location = new System.Drawing.Point(14, 134);
+            this.label527.Location = new System.Drawing.Point(15, 129);
             this.label527.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label527.Name = "label527";
-            this.label527.Size = new System.Drawing.Size(91, 15);
+            this.label527.Size = new System.Drawing.Size(97, 15);
             this.label527.TabIndex = 17;
-            this.label527.Text = "NG整形2级左伸";
+            this.label527.Text = "NG盘卡盘伸出位";
             // 
             // label528
             // 
             this.label528.AutoSize = true;
             this.label528.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label528.Location = new System.Drawing.Point(14, 150);
+            this.label528.Location = new System.Drawing.Point(15, 149);
             this.label528.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label528.Name = "label528";
-            this.label528.Size = new System.Drawing.Size(91, 15);
+            this.label528.Size = new System.Drawing.Size(31, 15);
             this.label528.TabIndex = 19;
-            this.label528.Text = "NG整形2级右伸";
+            this.label528.Text = "备用";
             // 
             // label529
             // 
             this.label529.AutoSize = true;
             this.label529.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label529.Location = new System.Drawing.Point(14, 167);
+            this.label529.Location = new System.Drawing.Point(15, 167);
             this.label529.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label529.Name = "label529";
             this.label529.Size = new System.Drawing.Size(31, 15);
@@ -10679,7 +12368,7 @@
             // 
             this.label530.AutoSize = true;
             this.label530.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label530.Location = new System.Drawing.Point(14, 184);
+            this.label530.Location = new System.Drawing.Point(15, 185);
             this.label530.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label530.Name = "label530";
             this.label530.Size = new System.Drawing.Size(31, 15);
@@ -10690,7 +12379,7 @@
             // 
             this.label531.AutoSize = true;
             this.label531.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label531.Location = new System.Drawing.Point(14, 200);
+            this.label531.Location = new System.Drawing.Point(15, 203);
             this.label531.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label531.Name = "label531";
             this.label531.Size = new System.Drawing.Size(31, 15);
@@ -12665,9 +14354,9 @@
             this.label53.Location = new System.Drawing.Point(14, 98);
             this.label53.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(115, 15);
+            this.label53.Size = new System.Drawing.Size(31, 15);
             this.label53.TabIndex = 13;
-            this.label53.Text = "实盘防卡盘左伸出位";
+            this.label53.Text = "备用";
             // 
             // label54
             // 
@@ -12676,9 +14365,9 @@
             this.label54.Location = new System.Drawing.Point(14, 116);
             this.label54.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(115, 15);
+            this.label54.Size = new System.Drawing.Size(31, 15);
             this.label54.TabIndex = 15;
-            this.label54.Text = "实盘防卡盘左缩回位";
+            this.label54.Text = "备用";
             // 
             // label55
             // 
@@ -12687,9 +14376,9 @@
             this.label55.Location = new System.Drawing.Point(14, 134);
             this.label55.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(115, 15);
+            this.label55.Size = new System.Drawing.Size(31, 15);
             this.label55.TabIndex = 17;
-            this.label55.Text = "实盘防卡盘右伸出位";
+            this.label55.Text = "备用";
             // 
             // label56
             // 
@@ -12698,9 +14387,9 @@
             this.label56.Location = new System.Drawing.Point(14, 150);
             this.label56.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(115, 15);
+            this.label56.Size = new System.Drawing.Size(31, 15);
             this.label56.TabIndex = 19;
-            this.label56.Text = "实盘防卡盘右缩回位";
+            this.label56.Text = "备用";
             // 
             // label57
             // 
@@ -12709,9 +14398,9 @@
             this.label57.Location = new System.Drawing.Point(14, 167);
             this.label57.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(121, 15);
+            this.label57.Size = new System.Drawing.Size(31, 15);
             this.label57.TabIndex = 21;
-            this.label57.Text = "NG盘防卡盘左伸出位";
+            this.label57.Text = "备用";
             // 
             // label58
             // 
@@ -12720,9 +14409,9 @@
             this.label58.Location = new System.Drawing.Point(14, 184);
             this.label58.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(121, 15);
+            this.label58.Size = new System.Drawing.Size(31, 15);
             this.label58.TabIndex = 24;
-            this.label58.Text = "NG盘防卡盘左缩回位";
+            this.label58.Text = "备用";
             // 
             // label59
             // 
@@ -12731,9 +14420,9 @@
             this.label59.Location = new System.Drawing.Point(14, 202);
             this.label59.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(121, 15);
+            this.label59.Size = new System.Drawing.Size(31, 15);
             this.label59.TabIndex = 27;
-            this.label59.Text = "NG盘防卡盘右伸出位";
+            this.label59.Text = "备用";
             // 
             // label60
             // 
@@ -12742,9 +14431,9 @@
             this.label60.Location = new System.Drawing.Point(14, 219);
             this.label60.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(121, 15);
+            this.label60.Size = new System.Drawing.Size(31, 15);
             this.label60.TabIndex = 30;
-            this.label60.Text = "NG盘防卡盘右缩回位";
+            this.label60.Text = "备用";
             // 
             // label61
             // 
@@ -14475,6 +16164,9 @@
             // 
             // groupBox54
             // 
+            this.groupBox54.Controls.Add(this.label278);
+            this.groupBox54.Controls.Add(this.txtBYZ示教下视觉位置);
+            this.groupBox54.Controls.Add(this.btnBYZ轴下视觉位置);
             this.groupBox54.Controls.Add(this.label48);
             this.groupBox54.Controls.Add(this.txtBYZ示教视觉位置2);
             this.groupBox54.Controls.Add(this.btnBYZ轴socket视觉位置);
@@ -14501,6 +16193,38 @@
             this.groupBox54.TabIndex = 102;
             this.groupBox54.TabStop = false;
             this.groupBox54.Text = "搬运变动Z轴";
+            // 
+            // label278
+            // 
+            this.label278.AutoSize = true;
+            this.label278.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label278.Location = new System.Drawing.Point(148, 194);
+            this.label278.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label278.Name = "label278";
+            this.label278.Size = new System.Drawing.Size(25, 15);
+            this.label278.TabIndex = 89;
+            this.label278.Text = "mm";
+            // 
+            // txtBYZ示教下视觉位置
+            // 
+            this.txtBYZ示教下视觉位置.Location = new System.Drawing.Point(94, 186);
+            this.txtBYZ示教下视觉位置.Margin = new System.Windows.Forms.Padding(2);
+            this.txtBYZ示教下视觉位置.Name = "txtBYZ示教下视觉位置";
+            this.txtBYZ示教下视觉位置.Size = new System.Drawing.Size(49, 21);
+            this.txtBYZ示教下视觉位置.TabIndex = 90;
+            // 
+            // btnBYZ轴下视觉位置
+            // 
+            this.btnBYZ轴下视觉位置.BackColor = System.Drawing.SystemColors.Control;
+            this.btnBYZ轴下视觉位置.Location = new System.Drawing.Point(4, 186);
+            this.btnBYZ轴下视觉位置.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBYZ轴下视觉位置.Name = "btnBYZ轴下视觉位置";
+            this.btnBYZ轴下视觉位置.Size = new System.Drawing.Size(86, 24);
+            this.btnBYZ轴下视觉位置.TabIndex = 88;
+            this.btnBYZ轴下视觉位置.Text = "下视觉位置";
+            this.btnBYZ轴下视觉位置.UseVisualStyleBackColor = true;
+            this.btnBYZ轴下视觉位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnBYZ轴下视觉位置_MouseDown);
+            this.btnBYZ轴下视觉位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnBYZ轴下视觉位置_MouseUp);
             // 
             // label48
             // 
@@ -15240,6 +16964,9 @@
             // 
             // groupBox46
             // 
+            this.groupBox46.Controls.Add(this.label242);
+            this.groupBox46.Controls.Add(this.txtY示教下视觉2位置);
+            this.groupBox46.Controls.Add(this.btnY示教下视觉2位置);
             this.groupBox46.Controls.Add(this.label490);
             this.groupBox46.Controls.Add(this.txtY示教视觉倒实盘第一列);
             this.groupBox46.Controls.Add(this.btnY示教视觉倒实盘第一列);
@@ -15275,6 +17002,38 @@
             this.groupBox46.TabIndex = 85;
             this.groupBox46.TabStop = false;
             this.groupBox46.Text = "上料变动Y轴";
+            // 
+            // label242
+            // 
+            this.label242.AutoSize = true;
+            this.label242.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label242.Location = new System.Drawing.Point(175, 286);
+            this.label242.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label242.Name = "label242";
+            this.label242.Size = new System.Drawing.Size(25, 15);
+            this.label242.TabIndex = 98;
+            this.label242.Text = "mm";
+            // 
+            // txtY示教下视觉2位置
+            // 
+            this.txtY示教下视觉2位置.Location = new System.Drawing.Point(123, 277);
+            this.txtY示教下视觉2位置.Margin = new System.Windows.Forms.Padding(2);
+            this.txtY示教下视觉2位置.Name = "txtY示教下视觉2位置";
+            this.txtY示教下视觉2位置.Size = new System.Drawing.Size(49, 21);
+            this.txtY示教下视觉2位置.TabIndex = 99;
+            // 
+            // btnY示教下视觉2位置
+            // 
+            this.btnY示教下视觉2位置.BackColor = System.Drawing.SystemColors.Control;
+            this.btnY示教下视觉2位置.Location = new System.Drawing.Point(4, 276);
+            this.btnY示教下视觉2位置.Margin = new System.Windows.Forms.Padding(2);
+            this.btnY示教下视觉2位置.Name = "btnY示教下视觉2位置";
+            this.btnY示教下视觉2位置.Size = new System.Drawing.Size(113, 24);
+            this.btnY示教下视觉2位置.TabIndex = 97;
+            this.btnY示教下视觉2位置.Text = "下视觉2位置";
+            this.btnY示教下视觉2位置.UseVisualStyleBackColor = true;
+            this.btnY示教下视觉2位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnY示教下视觉2位置_MouseDown);
+            this.btnY示教下视觉2位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnY示教下视觉2位置_MouseUp);
             // 
             // label490
             // 
@@ -15554,6 +17313,9 @@
             // 
             // groupBox45
             // 
+            this.groupBox45.Controls.Add(this.label241);
+            this.groupBox45.Controls.Add(this.txtX示教下视觉2位置);
+            this.groupBox45.Controls.Add(this.btnX示教下视觉2位置);
             this.groupBox45.Controls.Add(this.label69);
             this.groupBox45.Controls.Add(this.txtX示教吸1倒实盘第一列);
             this.groupBox45.Controls.Add(this.btnX示教吸1倒实盘第一列);
@@ -15577,6 +17339,38 @@
             this.groupBox45.TabIndex = 15;
             this.groupBox45.TabStop = false;
             this.groupBox45.Text = "上料变动示教X轴";
+            // 
+            // label241
+            // 
+            this.label241.AutoSize = true;
+            this.label241.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label241.Location = new System.Drawing.Point(174, 172);
+            this.label241.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label241.Name = "label241";
+            this.label241.Size = new System.Drawing.Size(25, 15);
+            this.label241.TabIndex = 92;
+            this.label241.Text = "mm";
+            // 
+            // txtX示教下视觉2位置
+            // 
+            this.txtX示教下视觉2位置.Location = new System.Drawing.Point(122, 163);
+            this.txtX示教下视觉2位置.Margin = new System.Windows.Forms.Padding(2);
+            this.txtX示教下视觉2位置.Name = "txtX示教下视觉2位置";
+            this.txtX示教下视觉2位置.Size = new System.Drawing.Size(49, 21);
+            this.txtX示教下视觉2位置.TabIndex = 93;
+            // 
+            // btnX示教下视觉2位置
+            // 
+            this.btnX示教下视觉2位置.BackColor = System.Drawing.SystemColors.Control;
+            this.btnX示教下视觉2位置.Location = new System.Drawing.Point(4, 162);
+            this.btnX示教下视觉2位置.Margin = new System.Windows.Forms.Padding(2);
+            this.btnX示教下视觉2位置.Name = "btnX示教下视觉2位置";
+            this.btnX示教下视觉2位置.Size = new System.Drawing.Size(113, 24);
+            this.btnX示教下视觉2位置.TabIndex = 91;
+            this.btnX示教下视觉2位置.Text = "下视觉2位置";
+            this.btnX示教下视觉2位置.UseVisualStyleBackColor = true;
+            this.btnX示教下视觉2位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnX示教下视觉2位置_MouseDown);
+            this.btnX示教下视觉2位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnX示教下视觉2位置_MouseUp);
             // 
             // label69
             // 
@@ -15637,7 +17431,7 @@
             this.btnX示教视觉实盘第一列.Name = "btnX示教视觉实盘第一列";
             this.btnX示教视觉实盘第一列.Size = new System.Drawing.Size(113, 24);
             this.btnX示教视觉实盘第一列.TabIndex = 85;
-            this.btnX示教视觉实盘第一列.Text = "视觉第一列";
+            this.btnX示教视觉实盘第一列.Text = "上视觉第一列";
             this.btnX示教视觉实盘第一列.UseVisualStyleBackColor = true;
             this.btnX示教视觉实盘第一列.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnX示教视觉实盘第一列_MouseDown);
             this.btnX示教视觉实盘第一列.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnX示教视觉实盘第一列_MouseUp);
@@ -15728,6 +17522,7 @@
             // 
             // tabPage10
             // 
+            this.tabPage10.Controls.Add(this.groupBox71);
             this.tabPage10.Controls.Add(this.groupBox49);
             this.tabPage10.Controls.Add(this.groupBox13);
             this.tabPage10.Controls.Add(this.groupBox12);
@@ -15750,6 +17545,53 @@
             this.tabPage10.TabIndex = 9;
             this.tabPage10.Text = "示教2";
             this.tabPage10.UseVisualStyleBackColor = true;
+            // 
+            // groupBox71
+            // 
+            this.groupBox71.Controls.Add(this.label234);
+            this.groupBox71.Controls.Add(this.txt夹爪2与1距离位置);
+            this.groupBox71.Controls.Add(this.btn夹爪2与夹爪1位置确认);
+            this.groupBox71.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox71.Location = new System.Drawing.Point(809, 276);
+            this.groupBox71.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox71.Name = "groupBox71";
+            this.groupBox71.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox71.Size = new System.Drawing.Size(180, 276);
+            this.groupBox71.TabIndex = 113;
+            this.groupBox71.TabStop = false;
+            this.groupBox71.Text = "夹抓2与夹爪1偏离位置";
+            // 
+            // label234
+            // 
+            this.label234.AutoSize = true;
+            this.label234.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label234.Location = new System.Drawing.Point(142, 49);
+            this.label234.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label234.Name = "label234";
+            this.label234.Size = new System.Drawing.Size(25, 15);
+            this.label234.TabIndex = 68;
+            this.label234.Text = "mm";
+            // 
+            // txt夹爪2与1距离位置
+            // 
+            this.txt夹爪2与1距离位置.Location = new System.Drawing.Point(89, 43);
+            this.txt夹爪2与1距离位置.Margin = new System.Windows.Forms.Padding(2);
+            this.txt夹爪2与1距离位置.Name = "txt夹爪2与1距离位置";
+            this.txt夹爪2与1距离位置.Size = new System.Drawing.Size(49, 21);
+            this.txt夹爪2与1距离位置.TabIndex = 69;
+            // 
+            // btn夹爪2与夹爪1位置确认
+            // 
+            this.btn夹爪2与夹爪1位置确认.BackColor = System.Drawing.SystemColors.Control;
+            this.btn夹爪2与夹爪1位置确认.Location = new System.Drawing.Point(4, 41);
+            this.btn夹爪2与夹爪1位置确认.Margin = new System.Windows.Forms.Padding(2);
+            this.btn夹爪2与夹爪1位置确认.Name = "btn夹爪2与夹爪1位置确认";
+            this.btn夹爪2与夹爪1位置确认.Size = new System.Drawing.Size(78, 24);
+            this.btn夹爪2与夹爪1位置确认.TabIndex = 67;
+            this.btn夹爪2与夹爪1位置确认.Text = "点击确认";
+            this.btn夹爪2与夹爪1位置确认.UseVisualStyleBackColor = true;
+            this.btn夹爪2与夹爪1位置确认.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn夹爪2与夹爪1位置确认_MouseDown);
+            this.btn夹爪2与夹爪1位置确认.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn夹爪2与夹爪1位置确认_MouseUp);
             // 
             // groupBox49
             // 
@@ -18695,8 +20537,7 @@
             this.btn计数功能清零.TabIndex = 108;
             this.btn计数功能清零.Text = "触发";
             this.btn计数功能清零.UseVisualStyleBackColor = true;
-            this.btn计数功能清零.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn计数功能清零_MouseDown);
-            this.btn计数功能清零.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn计数功能清零_MouseUp);
+            this.btn计数功能清零.Click += new System.EventHandler(this.btn计数功能清零_Click);
             // 
             // btn光源关
             // 
@@ -19328,23 +21169,15 @@
             this.label463.TabIndex = 71;
             this.label463.Text = "mm/s";
             // 
-            // label93
+            // BTN_Test
             // 
-            this.label93.AutoSize = true;
-            this.label93.Location = new System.Drawing.Point(13, 685);
-            this.label93.Name = "label93";
-            this.label93.Size = new System.Drawing.Size(104, 17);
-            this.label93.TabIndex = 172;
-            this.label93.Text = "数据刷新时间";
-            // 
-            // label95
-            // 
-            this.label95.AutoSize = true;
-            this.label95.Location = new System.Drawing.Point(13, 715);
-            this.label95.Name = "label95";
-            this.label95.Size = new System.Drawing.Size(104, 17);
-            this.label95.TabIndex = 173;
-            this.label95.Text = "界面刷新时间";
+            this.BTN_Test.Location = new System.Drawing.Point(23, 48);
+            this.BTN_Test.Name = "BTN_Test";
+            this.BTN_Test.Size = new System.Drawing.Size(75, 23);
+            this.BTN_Test.TabIndex = 221;
+            this.BTN_Test.Text = "测试";
+            this.BTN_Test.UseVisualStyleBackColor = true;
+            this.BTN_Test.Click += new System.EventHandler(this.BTN_Test_Click);
             // 
             // Form1
             // 
@@ -19361,7 +21194,7 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.TC_Main.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.groupBox77.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             this.groupBox74.ResumeLayout(false);
             this.groupBox73.ResumeLayout(false);
             this.groupBox73.PerformLayout();
@@ -19381,6 +21214,15 @@
             this.GB_Modify.ResumeLayout(false);
             this.GB_Modify.PerformLayout();
             this.tabPage2.ResumeLayout(false);
+            this.groupBox20.ResumeLayout(false);
+            this.groupBox19.ResumeLayout(false);
+            this.groupBox18.ResumeLayout(false);
+            this.groupBox17.ResumeLayout(false);
+            this.groupBox16.ResumeLayout(false);
+            this.groupBox15.ResumeLayout(false);
+            this.tabPage7.ResumeLayout(false);
+            this.groupBox76.ResumeLayout(false);
+            this.groupBox76.PerformLayout();
             this.groupBox14.ResumeLayout(false);
             this.groupBox14.PerformLayout();
             this.groupBox68.ResumeLayout(false);
@@ -19389,13 +21231,6 @@
             this.groupBox67.PerformLayout();
             this.groupBox66.ResumeLayout(false);
             this.groupBox66.PerformLayout();
-            this.groupBox20.ResumeLayout(false);
-            this.groupBox19.ResumeLayout(false);
-            this.groupBox18.ResumeLayout(false);
-            this.groupBox17.ResumeLayout(false);
-            this.groupBox16.ResumeLayout(false);
-            this.groupBox15.ResumeLayout(false);
-            this.tabPage7.ResumeLayout(false);
             this.groupBox32.ResumeLayout(false);
             this.groupBox32.PerformLayout();
             this.groupBox30.ResumeLayout(false);
@@ -19457,6 +21292,8 @@
             this.GB_Trays.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
+            this.groupBox77.ResumeLayout(false);
+            this.groupBox77.PerformLayout();
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
             this.groupBox82.ResumeLayout(false);
@@ -19493,6 +21330,8 @@
             this.groupBox45.ResumeLayout(false);
             this.groupBox45.PerformLayout();
             this.tabPage10.ResumeLayout(false);
+            this.groupBox71.ResumeLayout(false);
+            this.groupBox71.PerformLayout();
             this.groupBox49.ResumeLayout(false);
             this.groupBox49.PerformLayout();
             this.groupBox13.ResumeLayout(false);
@@ -19854,10 +21693,6 @@
         private System.Windows.Forms.Button btn平移吸嘴1真空;
         private System.Windows.Forms.Button btn上料吸嘴2真空;
         private System.Windows.Forms.Button btn上料吸嘴1真空;
-        private System.Windows.Forms.Button btnNG盘防卡盘缩回;
-        private System.Windows.Forms.Button btnNG盘防卡盘伸出;
-        private System.Windows.Forms.Button btn实盘防卡盘缩回;
-        private System.Windows.Forms.Button btn实盘防卡盘伸出;
         private System.Windows.Forms.Button btn上料机械手缩回;
         private System.Windows.Forms.Button btn上料机械手伸出;
         private System.Windows.Forms.Button btn上料机械手下降;
@@ -19937,8 +21772,6 @@
         private System.Windows.Forms.TabPage tabPage7;
         private System.Windows.Forms.TabPage tabPage8;
         private System.Windows.Forms.GroupBox groupBox22;
-        private System.Windows.Forms.TextBox txtY指定位置;
-        private System.Windows.Forms.Label label284;
         private System.Windows.Forms.TextBox txtY当前位置;
         private System.Windows.Forms.Button btnY指定位置;
         private System.Windows.Forms.Label label285;
@@ -19951,8 +21784,6 @@
         private System.Windows.Forms.Button btnY倒实盘位置;
         private System.Windows.Forms.Button btnY实盘位置;
         private System.Windows.Forms.GroupBox groupBox21;
-        private System.Windows.Forms.TextBox txtX指定位置;
-        private System.Windows.Forms.Label label283;
         private System.Windows.Forms.TextBox txtX当前位置;
         private System.Windows.Forms.Button btnX指定位置;
         private System.Windows.Forms.Label label282;
@@ -19974,7 +21805,6 @@
         private System.Windows.Forms.Button btn倒实盘停止;
         private System.Windows.Forms.Button btn倒实盘下行;
         private System.Windows.Forms.Button btn倒实盘上行;
-        private System.Windows.Forms.Button btn倒实盘初始位置;
         private System.Windows.Forms.GroupBox groupBox24;
         private System.Windows.Forms.TextBox txtNG盘当前位置;
         private System.Windows.Forms.Label label289;
@@ -19983,7 +21813,6 @@
         private System.Windows.Forms.Button btnNG盘上行;
         private System.Windows.Forms.Button btnNG盘初始位置;
         private System.Windows.Forms.GroupBox groupBox23;
-        private System.Windows.Forms.Button btn实盘扫码位置;
         private System.Windows.Forms.TextBox txt实盘当前位置;
         private System.Windows.Forms.Label label287;
         private System.Windows.Forms.Button btn实盘停止;
@@ -20431,11 +22260,7 @@
         private System.Windows.Forms.Label LB_Password;
         private System.Windows.Forms.Label LB_Connection;
         private System.Windows.Forms.Label LB_ConnectionStatus;
-        private System.Windows.Forms.ComboBox CB_TypeOfProduction;
-        private System.Windows.Forms.Label LB_TypeOfProduction;
         private System.Windows.Forms.GroupBox GB_Coonnection;
-        private System.Windows.Forms.Button BTN_关闭端口;
-        private System.Windows.Forms.Button BTN_打开端口;
         private System.Windows.Forms.Button BTN_SwitchUser;
         private System.Windows.Forms.Button BTN_Output;
         private System.Windows.Forms.Label label286;
@@ -20446,30 +22271,7 @@
         private System.Windows.Forms.PictureBox TSTD_IDImg;
         private System.Windows.Forms.Label label288;
         private System.Windows.Forms.ComboBox CB_Socket类;
-        private System.Windows.Forms.GroupBox groupBox68;
-        private System.Windows.Forms.Button btn上视觉2对位;
-        private System.Windows.Forms.Button btn上视觉标定开始;
-        private System.Windows.Forms.GroupBox groupBox67;
-        private System.Windows.Forms.Button btn下视觉对位;
-        private System.Windows.Forms.Button btn下视觉标定开始;
-        private System.Windows.Forms.GroupBox groupBox66;
-        private System.Windows.Forms.Button btn二维码;
-        private System.Windows.Forms.Button btn条形码;
-        private System.Windows.Forms.Button btn上视觉2外观;
         private System.Windows.Forms.GroupBox groupBox69;
-        private System.Windows.Forms.TextBox txt下视觉偏移θ;
-        private System.Windows.Forms.TextBox txt下视觉偏移Y;
-        private System.Windows.Forms.TextBox txt下视觉偏移X;
-        private System.Windows.Forms.TextBox txt扫码信息;
-        private System.Windows.Forms.Label label339;
-        private System.Windows.Forms.Label label341;
-        private System.Windows.Forms.Label label343;
-        private System.Windows.Forms.TextBox txt上视觉偏移θ;
-        private System.Windows.Forms.TextBox txt上视觉偏移Y;
-        private System.Windows.Forms.TextBox txt上视觉偏移X;
-        private System.Windows.Forms.Label label337;
-        private System.Windows.Forms.Label label322;
-        private System.Windows.Forms.Label label290;
         private System.Windows.Forms.GroupBox groupBox10;
         private System.Windows.Forms.TextBox txt夹具4次数;
         private System.Windows.Forms.Label label186;
@@ -20479,21 +22281,13 @@
         private System.Windows.Forms.Label label183;
         private System.Windows.Forms.TextBox txt夹具1次数;
         private System.Windows.Forms.Label label184;
-        private System.Windows.Forms.GroupBox groupBox14;
-        private System.Windows.Forms.Button btn搬运X移动;
         private System.Windows.Forms.Button btnBYY视觉位置6;
         private System.Windows.Forms.Button btnBYY视觉位置5;
-        private System.Windows.Forms.Button btn下视觉标定复位;
-        private System.Windows.Forms.Button btn下视觉标定有效;
-        private System.Windows.Forms.Button btn上视觉标定有效;
-        private System.Windows.Forms.Button btn上视觉标定复位;
         private System.Windows.Forms.Label label245;
         private System.Windows.Forms.Label LB_初始化状态;
         private System.Windows.Forms.Button btnSokt夹爪4;
         private System.Windows.Forms.Button btnSokt夹爪3;
         private System.Windows.Forms.GroupBox groupBox70;
-        private System.Windows.Forms.Label label250;
-        private System.Windows.Forms.Label LB_自动状态;
         private System.Windows.Forms.Label label248;
         private System.Windows.Forms.Label LB_手动状态;
         private System.Windows.Forms.Label label249;
@@ -20564,9 +22358,6 @@
         private System.Windows.Forms.Label 夹爪状态;
         private System.Windows.Forms.Button btn自动模式远程;
         private System.Windows.Forms.Button btn自动模式本地;
-        private System.Windows.Forms.GroupBox groupBox77;
-        private System.Windows.Forms.Button btn下料命令;
-        private System.Windows.Forms.Button btn上料命令;
         private System.Windows.Forms.Label LB_自动远程状态;
         private System.Windows.Forms.Label LB_自动本地状态;
         private System.Windows.Forms.Button btn门开关功能关闭;
@@ -20612,12 +22403,8 @@
         private System.Windows.Forms.Button btnRFB1回原点;
         private System.Windows.Forms.Button btnNG二级缩回;
         private System.Windows.Forms.Button btnNG二级伸出;
-        private System.Windows.Forms.Button btnNG一级缩回;
-        private System.Windows.Forms.Button btnNG一级伸出;
         private System.Windows.Forms.Button btn倒实二级缩回;
         private System.Windows.Forms.Button btn倒实二级伸出;
-        private System.Windows.Forms.Button btn倒实一级缩回;
-        private System.Windows.Forms.Button btn倒实一级伸出;
         private System.Windows.Forms.GroupBox groupBox82;
         private System.Windows.Forms.Label label375;
         private System.Windows.Forms.Label X132;
@@ -20656,23 +22443,12 @@
         private System.Windows.Forms.Button btn光源关;
         private System.Windows.Forms.Label label49;
         private System.Windows.Forms.Button btn光源开;
-        private System.Windows.Forms.Label label66;
-        private System.Windows.Forms.TextBox txt计算偏移θ;
-        private System.Windows.Forms.Label label65;
-        private System.Windows.Forms.TextBox txt计算偏移Y;
-        private System.Windows.Forms.Label label51;
-        private System.Windows.Forms.Label label50;
-        private System.Windows.Forms.TextBox txt计算偏移X;
-        private System.Windows.Forms.Label label67;
-        private System.Windows.Forms.ComboBox CB_选择夹爪;
         private System.Windows.Forms.Button btnX吸1倒实盘;
         private System.Windows.Forms.Label label69;
         private System.Windows.Forms.TextBox txtX示教吸1倒实盘第一列;
         private System.Windows.Forms.Button btnX示教吸1倒实盘第一列;
         private System.Windows.Forms.Label label71;
         private System.Windows.Forms.ComboBox CB_工作盘数;
-        private System.Windows.Forms.TextBox txt控制器时间;
-        private System.Windows.Forms.Label label68;
         private System.Windows.Forms.Label label72;
         private System.Windows.Forms.Button btn计数功能清零;
         private System.Windows.Forms.Button btn人工上下料;
@@ -20908,7 +22684,7 @@
         private System.Windows.Forms.Label LB_FW_工位3零度;
         private System.Windows.Forms.Label LB_FW_工位3光阑右上;
         private System.Windows.Forms.Label LB_FW_工位3光阑缩回;
-        private System.Windows.Forms.Label lLB_FW_工位3光阑左上;
+        private System.Windows.Forms.Label LB_FW_工位3光阑左上;
         private System.Windows.Forms.Label LB_FW_工位3辐射板下;
         private System.Windows.Forms.Label LB_FW_工位4光阑右上;
         private System.Windows.Forms.Label LB_FW_工位4光阑缩回;
@@ -20969,6 +22745,208 @@
         private System.Windows.Forms.Button BTN_查看日志;
         private System.Windows.Forms.Label label95;
         private System.Windows.Forms.Label label93;
+        private System.Windows.Forms.TextBox txt控制器时间;
+        private System.Windows.Forms.Label label68;
+        private System.Windows.Forms.Label label97;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label99;
+        private System.Windows.Forms.Label label98;
+        public System.Windows.Forms.Label LB_实时权限显示;
+        private System.Windows.Forms.Label label100;
+        private System.Windows.Forms.Label label101;
+        private System.Windows.Forms.Button btnBYYSokt夹爪2记忆;
+        private System.Windows.Forms.GroupBox groupBox71;
+        private System.Windows.Forms.Label label234;
+        private System.Windows.Forms.TextBox txt夹爪2与1距离位置;
+        private System.Windows.Forms.Button btn夹爪2与夹爪1位置确认;
+        private System.Windows.Forms.GroupBox groupBox76;
+        private System.Windows.Forms.Button btn下视觉2标定复位;
+        private System.Windows.Forms.Button btn下视觉2标定有效;
+        private System.Windows.Forms.Label label105;
+        private System.Windows.Forms.Label label230;
+        private System.Windows.Forms.Label label232;
+        private System.Windows.Forms.TextBox txt下视觉2偏移θ;
+        private System.Windows.Forms.TextBox txt下视觉2偏移Y;
+        private System.Windows.Forms.TextBox txt下视觉2偏移X;
+        private System.Windows.Forms.Button btn下视觉2对位;
+        private System.Windows.Forms.Button btn下视觉2标定开始;
+        private System.Windows.Forms.GroupBox groupBox14;
+        private System.Windows.Forms.Label label103;
+        private System.Windows.Forms.Label label102;
+        private System.Windows.Forms.Label label67;
+        private System.Windows.Forms.ComboBox CB_选择夹爪;
+        private System.Windows.Forms.Label label66;
+        private System.Windows.Forms.TextBox txt计算偏移θ;
+        private System.Windows.Forms.Label label65;
+        private System.Windows.Forms.TextBox txt计算偏移Y;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.TextBox txt计算偏移X;
+        private System.Windows.Forms.Button btn搬运X移动;
+        private System.Windows.Forms.GroupBox groupBox68;
+        private System.Windows.Forms.Button btn上视觉标定有效;
+        private System.Windows.Forms.Button btn上视觉标定复位;
+        private System.Windows.Forms.Label label339;
+        private System.Windows.Forms.Button btn上视觉2外观;
+        private System.Windows.Forms.Label label341;
+        private System.Windows.Forms.Button btn上视觉2对位;
+        private System.Windows.Forms.Label label343;
+        private System.Windows.Forms.Button btn上视觉标定开始;
+        private System.Windows.Forms.TextBox txt上视觉偏移θ;
+        private System.Windows.Forms.TextBox txt上视觉偏移Y;
+        private System.Windows.Forms.TextBox txt上视觉偏移X;
+        private System.Windows.Forms.GroupBox groupBox67;
+        private System.Windows.Forms.Button btn下视觉标定复位;
+        private System.Windows.Forms.Button btn下视觉标定有效;
+        private System.Windows.Forms.Label label337;
+        private System.Windows.Forms.Label label322;
+        private System.Windows.Forms.Label label290;
+        private System.Windows.Forms.TextBox txt下视觉偏移θ;
+        private System.Windows.Forms.TextBox txt下视觉偏移Y;
+        private System.Windows.Forms.TextBox txt下视觉偏移X;
+        private System.Windows.Forms.Button btn下视觉对位;
+        private System.Windows.Forms.Button btn下视觉标定开始;
+        private System.Windows.Forms.GroupBox groupBox66;
+        private System.Windows.Forms.TextBox txt扫码信息;
+        private System.Windows.Forms.Button btn二维码;
+        private System.Windows.Forms.Button btn条形码;
+        private System.Windows.Forms.GroupBox groupBox77;
+        private System.Windows.Forms.Label label236;
+        private System.Windows.Forms.Label label235;
+        private System.Windows.Forms.Label label104;
+        private System.Windows.Forms.Label label334;
+        private System.Windows.Forms.Label X112;
+        private System.Windows.Forms.Label X113;
+        private System.Windows.Forms.Label X114;
+        private System.Windows.Forms.Label X115;
+        private System.Windows.Forms.Label label237;
+        private System.Windows.Forms.Label label238;
+        private System.Windows.Forms.Label label239;
+        private System.Windows.Forms.Label label240;
+        private System.Windows.Forms.Label X116;
+        private System.Windows.Forms.Label X117;
+        private System.Windows.Forms.Label X118;
+        private System.Windows.Forms.Label X119;
+        private System.Windows.Forms.Button btn工位4光阑缩回右;
+        private System.Windows.Forms.Button btn工位4光阑伸出右;
+        private System.Windows.Forms.Button btn工位3光阑缩回右;
+        private System.Windows.Forms.Button btn工位3光阑伸出右;
+        private System.Windows.Forms.Button btn工位2光阑缩回右;
+        private System.Windows.Forms.Button btn工位2光阑伸出右;
+        private System.Windows.Forms.Button btn工位1光阑缩回右;
+        private System.Windows.Forms.Button btn工位1光阑伸出右;
+        private System.Windows.Forms.Label label242;
+        private System.Windows.Forms.TextBox txtY示教下视觉2位置;
+        private System.Windows.Forms.Button btnY示教下视觉2位置;
+        private System.Windows.Forms.Label label241;
+        private System.Windows.Forms.TextBox txtX示教下视觉2位置;
+        private System.Windows.Forms.Button btnX示教下视觉2位置;
+        private System.Windows.Forms.Label LB实盘卡盘伸出;
+        private System.Windows.Forms.Label LB翻转气缸180;
+        private System.Windows.Forms.Label LB翻转气缸0;
+        private System.Windows.Forms.Label LB平移吸嘴34下降;
+        private System.Windows.Forms.Label LB平移吸嘴34上升;
+        private System.Windows.Forms.Label LB平移吸嘴12下降;
+        private System.Windows.Forms.Label LB平移吸嘴12上升;
+        private System.Windows.Forms.Label LB上料吸嘴2下降;
+        private System.Windows.Forms.Label LB上料吸嘴2上升;
+        private System.Windows.Forms.Label LB上料吸嘴1下降;
+        private System.Windows.Forms.Label LB上料吸嘴1上升;
+        private System.Windows.Forms.Label LB上料机械手张开;
+        private System.Windows.Forms.Label LB上料机械手夹紧;
+        private System.Windows.Forms.Label LB上料机械手下降;
+        private System.Windows.Forms.Label LB上料机械手上升;
+        private System.Windows.Forms.Label LBEFU上电;
+        private System.Windows.Forms.Label LB工位4光阑缩回右;
+        private System.Windows.Forms.Label LB工位4光阑伸出右;
+        private System.Windows.Forms.Label LB工位3光阑缩回右;
+        private System.Windows.Forms.Label LB工位3光阑伸出右;
+        private System.Windows.Forms.Label LB工位2光阑缩回右;
+        private System.Windows.Forms.Label LB工位2光阑伸出右;
+        private System.Windows.Forms.Label LB工位1光阑缩回右;
+        private System.Windows.Forms.Label LB工位1光阑伸出右;
+        private System.Windows.Forms.Label LB工位4翻转90;
+        private System.Windows.Forms.Label LB工位3翻转90;
+        private System.Windows.Forms.Label LB工位4翻转0;
+        private System.Windows.Forms.Label LB工位4辐射板下降;
+        private System.Windows.Forms.Label LB工位3翻转0;
+        private System.Windows.Forms.Label LB工位4辐射板上升;
+        private System.Windows.Forms.Label LB工位4光阑下降;
+        private System.Windows.Forms.Label LB工位3辐射板下降;
+        private System.Windows.Forms.Label LB工位4光阑上升;
+        private System.Windows.Forms.Label LB工位4光阑缩回;
+        private System.Windows.Forms.Label LB工位3辐射板上升;
+        private System.Windows.Forms.Label LB工位4光阑伸出;
+        private System.Windows.Forms.Label LB工位3光阑下降;
+        private System.Windows.Forms.Label LB工位3光阑上升;
+        private System.Windows.Forms.Label LB工位3光阑缩回;
+        private System.Windows.Forms.Label LB工位3光阑伸出;
+        private System.Windows.Forms.Label LB工位1翻转90;
+        private System.Windows.Forms.Label LB工位1翻转0;
+        private System.Windows.Forms.Label LB工位1辐射板下降;
+        private System.Windows.Forms.Label LB工位1辐射板上升;
+        private System.Windows.Forms.Label LB工位1光阑下降;
+        private System.Windows.Forms.Label LB工位1光阑上升;
+        private System.Windows.Forms.Label LB工位1光阑缩回;
+        private System.Windows.Forms.Label LB工位1光阑伸出;
+        private System.Windows.Forms.Label LB工位2翻转90;
+        private System.Windows.Forms.Label LB工位2翻转0;
+        private System.Windows.Forms.Label LB工位2辐射板下降;
+        private System.Windows.Forms.Label LB工位2辐射板上升;
+        private System.Windows.Forms.Label LB工位2光阑下降;
+        private System.Windows.Forms.Label LB工位2光阑上升;
+        private System.Windows.Forms.Label LB工位2光阑缩回;
+        private System.Windows.Forms.Label LB工位2光阑伸出;
+        private System.Windows.Forms.Label LB旋转夹爪4下降;
+        private System.Windows.Forms.Label LB旋转夹爪4上升;
+        private System.Windows.Forms.Label LB旋转夹爪3下降;
+        private System.Windows.Forms.Label LB旋转夹爪3上升;
+        private System.Windows.Forms.Label LB旋转夹爪2下降;
+        private System.Windows.Forms.Label LB旋转夹爪2上升;
+        private System.Windows.Forms.Label LB旋转夹爪1下降;
+        private System.Windows.Forms.Label LB旋转夹爪1上升;
+        private System.Windows.Forms.Label LB除尘器1吹扫;
+        private System.Windows.Forms.Label LB夹爪2闭合1;
+        private System.Windows.Forms.Label LB夹爪2回原点;
+        private System.Windows.Forms.Label LBNG卡盘缩回;
+        private System.Windows.Forms.Label LBNG卡盘伸出;
+        private System.Windows.Forms.Label LB夹爪1闭合1;
+        private System.Windows.Forms.Label LB夹爪1回原点;
+        private System.Windows.Forms.Label LB平移吸嘴4真空;
+        private System.Windows.Forms.Label LB平移吸嘴3真空;
+        private System.Windows.Forms.Label LB平移吸嘴2真空;
+        private System.Windows.Forms.Label LB平移吸嘴1真空;
+        private System.Windows.Forms.Label LB上料吸嘴2真空;
+        private System.Windows.Forms.Label LB上料吸嘴1真空;
+        private System.Windows.Forms.Label LB实盘卡盘缩回;
+        private System.Windows.Forms.Button btnY下视觉2位置;
+        private System.Windows.Forms.Button btnX下视觉2位置;
+        private System.Windows.Forms.Label label278;
+        private System.Windows.Forms.TextBox txtBYZ示教下视觉位置;
+        private System.Windows.Forms.Button btnBYZ轴下视觉位置;
+        private System.Windows.Forms.Label LB工位4光阑右下降;
+        private System.Windows.Forms.Label LB工位4光阑右上升;
+        private System.Windows.Forms.Label LB工位3光阑右下降;
+        private System.Windows.Forms.Label LB工位3光阑右上升;
+        private System.Windows.Forms.Label LB工位2光阑右下降;
+        private System.Windows.Forms.Label LB工位2光阑右上升;
+        private System.Windows.Forms.Label LB工位1光阑右下降;
+        private System.Windows.Forms.Label LB工位1光阑右上升;
+        private System.Windows.Forms.Label label276;
+        private System.Windows.Forms.TextBox txtR4当前字节;
+        private System.Windows.Forms.Label label275;
+        private System.Windows.Forms.TextBox txtR3当前字节;
+        private System.Windows.Forms.Label label274;
+        private System.Windows.Forms.TextBox txtR2当前字节;
+        private System.Windows.Forms.Label label250;
+        private System.Windows.Forms.TextBox txtR1当前字节;
+        private System.Windows.Forms.Button btnJD清除状态4;
+        private System.Windows.Forms.Label 夹爪4状态;
+        private System.Windows.Forms.Button btnJD清除状态3;
+        private System.Windows.Forms.Label 夹爪3状态;
+        private System.Windows.Forms.Button btnJD清除状态2;
+        private System.Windows.Forms.Label 夹爪2状态;
+        private System.Windows.Forms.Button BTN_Test;
     }
 }
 

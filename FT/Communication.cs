@@ -71,22 +71,22 @@ namespace FT
             #endregion
             #region 初始化变量
             //PLC Out IO
-            plcOutIOName = InitializeStringArray("PlcOutIO", 0, 193);
+            plcOutIOName = InitializeStringArray("PlcOutIO", 0, 250);
             PLCIO = InitializeHashtable<bool>(plcOutIOName, false);
             //位置信息
             plcOutLocationName = InitializeStringArray("PlcOutLocation", 0, 180);
             Location = InitializeHashtable<double>(plcOutLocationName, 0);
             //报警信息
-            plcOutAlarmName = InitializeStringArray("PlcOutAlarm", 0, 173);
+            plcOutAlarmName = InitializeStringArray("PlcOutAlarm", 0, 199);
             Alarm = InitializeHashtable<bool>(plcOutAlarmName, false);
             //参数信息
-            plcInPmtName = InitializeStringArray("PlcInPmt", 0, 34);
+            plcInPmtName = InitializeStringArray("PlcInPmt", 0, 38);
             PLCPmt = InitializeHashtable<double>(plcInPmtName, 0);
 
             plcOutFlagName = InitializeStringArray("PLC标志位", 0, 2);
             FlagBits = InitializeHashtable<bool>(plcOutFlagName, false);
 
-            plcTestInfoName = InitializeStringArray("PLC测试信息", 0, 41);
+            plcTestInfoName = InitializeStringArray("PLC测试信息", 0, 49);
             TestInformation = InitializeHashtable<string>(plcTestInfoName, "noData");
             #endregion
         }
@@ -157,19 +157,19 @@ namespace FT
         {
             try
             {
-                #region 方式一更新数据
+                #region 方式一更新数据:直接读（会乱码）
                 //GetValue(compolet.GetHashtable(plcOutIOName), PLCIO);
                 //GetValue(compolet.GetHashtable(plcOutLocationName), Location);
-                //GetValue(compolet.GetHashtable(plcOutAlarmName), Alarm);
+                GetValue(Compolet.GetHashtable(plcOutAlarmName), Alarm);
                 //GetValue(compolet.GetHashtable(plcInPmtName), PLCPmt);
                 //GetValue(compolet.GetHashtable(plcOutFlagName), FlagBits);
                 //GetValue(compolet.GetHashtable(plcTestInfoName), TestInformation);
                 #endregion
 
-                #region 方式二更新数据
+                #region 方式二更新数据：排序
                 HashtableToArray(Compolet.GetHashtable(plcOutIOName), ReadPLCIO);
                 HashtableToArray(Compolet.GetHashtable(plcOutLocationName), ReadLocation);
-                HashtableToArray(Compolet.GetHashtable(plcOutAlarmName), ReadPLCAlarm);
+                //HashtableToArray(Compolet.GetHashtable(plcOutAlarmName), ReadPLCAlarm);
                 HashtableToArray(Compolet.GetHashtable(plcInPmtName), ReadPLCPmt);
                 #endregion
 
@@ -229,14 +229,27 @@ namespace FT
                 ReadTestInformation[40] = Compolet.ReadVariableString("PLC测试信息[40]");
                 //计算对位θ
                 ReadTestInformation[41] = Compolet.ReadVariableString("PLC测试信息[41]");
-
+                //下视觉2对位X
+                ReadTestInformation[42] = Compolet.ReadVariableString("PLC测试信息[42]");
+                //下视觉2对位Y
+                ReadTestInformation[43] = Compolet.ReadVariableString("PLC测试信息[43]");
+                //下视觉2对位θ
+                ReadTestInformation[44] = Compolet.ReadVariableString("PLC测试信息[44]");
+                //钧舵1反馈字节
+                ReadTestInformation[45] = Compolet.ReadVariableString("PLC测试信息[45]");
+                //钧舵2反馈字节
+                ReadTestInformation[46] = Compolet.ReadVariableString("PLC测试信息[46]");
+                //钧舵3反馈字节
+                ReadTestInformation[47] = Compolet.ReadVariableString("PLC测试信息[47]");
+                //钧舵4反馈字节
+                ReadTestInformation[48] = Compolet.ReadVariableString("PLC测试信息[48]");
 
 
                 #endregion
             }
             catch (Exception e)
             {
-                logfile.WriteLog($"PLC数据读取。{e.Message}", "更新数据");
+                //logfile.WriteLog($"PLC数据读取。{e.Message}", "更新数据");
                 this.Error = e.ToString();
             }
         }
