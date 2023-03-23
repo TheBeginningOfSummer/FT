@@ -28,6 +28,8 @@ namespace FT
         string trayType;
         //登录界面
         Form2 loginForm;
+        //测试界面
+        TestForm testForm;
         //是否更新数据
         bool isUpdateData = false;
 
@@ -159,7 +161,7 @@ namespace FT
                             communication.WriteVariable(false, "PLC标志位[1]");
                             communication.WriteVariable(true, "PC标志位[1]");
                             //测试触发器
-                            //auto.Set();
+                            if (testForm != null) testForm.AutoSwitch.Set();
                         }
                         #endregion
                         stopwatch1.Stop();
@@ -6973,22 +6975,10 @@ namespace FT
         #endregion
 
         #region 测试用代码
-        AutoResetEvent auto = new AutoResetEvent(false);
-        private void Test()
+        private void BTN_Test_Click(object sender, EventArgs e)
         {
-            Task.Run(() =>
-            {
-                for (int i = 1; i <= 20; i++)
-                {
-                    communication.WriteVariable(i.ToString(), "PLC测试信息[20]");
-                    for (int j = 1; j <= 40; j++)
-                    {
-                        communication.WriteVariable(j.ToString(), "PLC测试信息[5]");
-                        communication.WriteVariable(true, "PLC标志位[1]");
-                        auto.WaitOne();
-                    }
-                }
-            });
+            testForm = new TestForm();
+            testForm.Show();
         }
 
         private void BTN_Test_Click(object sender, EventArgs e)

@@ -1482,8 +1482,6 @@
             this.LB_InquireTime = new System.Windows.Forms.Label();
             this.DTP_MinTime = new System.Windows.Forms.DateTimePicker();
             this.DTP_MaxTime = new System.Windows.Forms.DateTimePicker();
-            this.PN_Data = new System.Windows.Forms.Panel();
-            this.dataGridView = new System.Windows.Forms.DataGridView();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.groupBox62 = new System.Windows.Forms.GroupBox();
             this.txt热辐射轴手动速度 = new System.Windows.Forms.TextBox();
@@ -1595,6 +1593,8 @@
             this.label469 = new System.Windows.Forms.Label();
             this.label464 = new System.Windows.Forms.Label();
             this.label463 = new System.Windows.Forms.Label();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.PN_Data = new System.Windows.Forms.Panel();
             this.BTN_Test = new System.Windows.Forms.Button();
             this.TC_Main.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -1691,12 +1691,12 @@
             this.groupBox57.SuspendLayout();
             this.tabPage6.SuspendLayout();
             this.InquireCondition.SuspendLayout();
-            this.PN_Data.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.tabPage5.SuspendLayout();
             this.groupBox62.SuspendLayout();
             this.groupBox65.SuspendLayout();
             this.groupBox63.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
+            this.PN_Data.SuspendLayout();
             this.SuspendLayout();
             // 
             // TC_Main
@@ -19883,31 +19883,6 @@
             this.DTP_MaxTime.Size = new System.Drawing.Size(160, 24);
             this.DTP_MaxTime.TabIndex = 11;
             // 
-            // PN_Data
-            // 
-            this.PN_Data.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.PN_Data.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.PN_Data.Controls.Add(this.dataGridView);
-            this.PN_Data.Location = new System.Drawing.Point(3, 3);
-            this.PN_Data.Name = "PN_Data";
-            this.PN_Data.Size = new System.Drawing.Size(1039, 713);
-            this.PN_Data.TabIndex = 16;
-            // 
-            // dataGridView
-            // 
-            this.dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
-            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView.Name = "dataGridView";
-            this.dataGridView.ReadOnly = true;
-            this.dataGridView.RowHeadersWidth = 51;
-            this.dataGridView.RowTemplate.Height = 23;
-            this.dataGridView.Size = new System.Drawing.Size(1039, 713);
-            this.dataGridView.TabIndex = 2;
-            // 
             // tabPage5
             // 
             this.tabPage5.Controls.Add(this.groupBox62);
@@ -21169,6 +21144,31 @@
             this.label463.TabIndex = 71;
             this.label463.Text = "mm/s";
             // 
+            // dataGridView
+            // 
+            this.dataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.ReadOnly = true;
+            this.dataGridView.RowHeadersWidth = 51;
+            this.dataGridView.RowTemplate.Height = 23;
+            this.dataGridView.Size = new System.Drawing.Size(1039, 750);
+            this.dataGridView.TabIndex = 2;
+            // 
+            // PN_Data
+            // 
+            this.PN_Data.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.PN_Data.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.PN_Data.Controls.Add(this.dataGridView);
+            this.PN_Data.Location = new System.Drawing.Point(3, 3);
+            this.PN_Data.Name = "PN_Data";
+            this.PN_Data.Size = new System.Drawing.Size(1039, 750);
+            this.PN_Data.TabIndex = 16;
+            // 
             // BTN_Test
             // 
             this.BTN_Test.Location = new System.Drawing.Point(23, 48);
@@ -21365,8 +21365,6 @@
             this.tabPage6.ResumeLayout(false);
             this.InquireCondition.ResumeLayout(false);
             this.InquireCondition.PerformLayout();
-            this.PN_Data.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.tabPage5.ResumeLayout(false);
             this.groupBox62.ResumeLayout(false);
             this.groupBox62.PerformLayout();
@@ -21374,6 +21372,8 @@
             this.groupBox65.PerformLayout();
             this.groupBox63.ResumeLayout(false);
             this.groupBox63.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
+            this.PN_Data.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -22051,7 +22051,6 @@
         private System.Windows.Forms.TextBox txt实盘示教当前位置;
         private System.Windows.Forms.Button btn实盘示教初始位置;
         private System.Windows.Forms.Label label407;
-        private System.Windows.Forms.DataGridView dataGridView;
         private System.Windows.Forms.Button BTN_SensorInquire;
         private System.Windows.Forms.DateTimePicker DTP_MaxTime;
         private System.Windows.Forms.DateTimePicker DTP_MinTime;
@@ -22245,7 +22244,6 @@
         private System.Windows.Forms.GroupBox InquireCondition;
         private System.Windows.Forms.ComboBox CB_TypeOfTray;
         private System.Windows.Forms.Label LB_TypeOfTray;
-        private System.Windows.Forms.Panel PN_Data;
         private System.Windows.Forms.Button btn报警复位;
         private System.Windows.Forms.Button btn蜂鸣停止;
         private System.Windows.Forms.Button btnX夹爪位置;
