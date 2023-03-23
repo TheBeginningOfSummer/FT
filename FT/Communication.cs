@@ -160,7 +160,7 @@ namespace FT
                 #region 方式一更新数据:直接读（会乱码）
                 //GetValue(compolet.GetHashtable(plcOutIOName), PLCIO);
                 //GetValue(compolet.GetHashtable(plcOutLocationName), Location);
-                GetValue(Compolet.GetHashtable(plcOutAlarmName), Alarm);
+                GetValue(Compolet.GetHashtable(PlcOutAlarm), Alarm);
                 //GetValue(compolet.GetHashtable(plcInPmtName), PLCPmt);
                 //GetValue(compolet.GetHashtable(plcOutFlagName), FlagBits);
                 //GetValue(compolet.GetHashtable(plcTestInfoName), TestInformation);
@@ -169,7 +169,7 @@ namespace FT
                 #region 方式二更新数据
                 HashtableToArray(Compolet.GetHashtable(PlcOutIO), ReadPLCIO);
                 HashtableToArray(Compolet.GetHashtable(PlcOutLocation), ReadLocation);
-                HashtableToArray(Compolet.GetHashtable(PlcOutAlarm), ReadPLCAlarm);
+                //HashtableToArray(Compolet.GetHashtable(PlcOutAlarm), ReadPLCAlarm);
                 HashtableToArray(Compolet.GetHashtable(PlcInPmt), ReadPLCPmt);
                 #endregion
 
@@ -228,21 +228,21 @@ namespace FT
                 //计算对位Y
                 ReadTestInformation[40] = Compolet.ReadVariable<string>("PLC测试信息[40]");
                 //计算对位θ
-                ReadTestInformation[41] = Compolet.ReadVariableString("PLC测试信息[41]");
+                ReadTestInformation[41] = Compolet.ReadVariable<string>("PLC测试信息[41]");
                 //下视觉2对位X
-                ReadTestInformation[42] = Compolet.ReadVariableString("PLC测试信息[42]");
+                ReadTestInformation[42] = Compolet.ReadVariable<string>("PLC测试信息[42]");
                 //下视觉2对位Y
-                ReadTestInformation[43] = Compolet.ReadVariableString("PLC测试信息[43]");
+                ReadTestInformation[43] = Compolet.ReadVariable<string>("PLC测试信息[43]");
                 //下视觉2对位θ
-                ReadTestInformation[44] = Compolet.ReadVariableString("PLC测试信息[44]");
+                ReadTestInformation[44] = Compolet.ReadVariable<string>("PLC测试信息[44]");
                 //钧舵1反馈字节
-                ReadTestInformation[45] = Compolet.ReadVariableString("PLC测试信息[45]");
+                ReadTestInformation[45] = Compolet.ReadVariable<string>("PLC测试信息[45]");
                 //钧舵2反馈字节
-                ReadTestInformation[46] = Compolet.ReadVariableString("PLC测试信息[46]");
+                ReadTestInformation[46] = Compolet.ReadVariable<string>("PLC测试信息[46]");
                 //钧舵3反馈字节
-                ReadTestInformation[47] = Compolet.ReadVariableString("PLC测试信息[47]");
+                ReadTestInformation[47] = Compolet.ReadVariable<string>("PLC测试信息[47]");
                 //钧舵4反馈字节
-                ReadTestInformation[48] = Compolet.ReadVariableString("PLC测试信息[48]");
+                ReadTestInformation[48] = Compolet.ReadVariable<string>("PLC测试信息[48]");
 
 
                 #endregion

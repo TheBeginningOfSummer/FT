@@ -1,4 +1,6 @@
-﻿namespace FT
+﻿using System.Windows.Forms;
+
+namespace FT
 {
     partial class Form1
     {
@@ -22166,6 +22168,8 @@
         private System.Windows.Forms.Label label469;
         private System.Windows.Forms.Label label464;
         private System.Windows.Forms.Label label463;
+        private DataGridView dataGridView;
+        private Panel PN_Data;
         private System.Windows.Forms.TabPage tabPage10;
         private System.Windows.Forms.GroupBox groupBox56;
         private System.Windows.Forms.Label label448;

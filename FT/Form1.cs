@@ -6975,7 +6975,7 @@ namespace FT
         #endregion
 
         #region 测试用代码
-        private void BTN_Test_Click(object sender, EventArgs e)
+        private void BTN_TestForm_Click(object sender, EventArgs e)
         {
             testForm = new TestForm();
             testForm.Show();
@@ -6990,12 +6990,6 @@ namespace FT
                 communication.Alarm[$"PlcOutAlarm[{i}]"] = !(bool)communication.Alarm[$"PlcOutAlarm[{i}]"];
             }
         }
-
-
-
-
-
-
 
         #endregion
 
