@@ -284,6 +284,7 @@ namespace FT.Data
             TrayLabel.ForeColor = Color.Black;
             //TrayLabel.BackColor = Color.LightSkyBlue;
             TrayLabel.Text = trayNumber;
+            TrayLabel.AutoSize = true;
 
             Sensors = new Dictionary<string, Sensor>();
             for (int i = 0; i < length * width; i++)
@@ -306,6 +307,7 @@ namespace FT.Data
             TrayLabel.ForeColor = Color.Black;
             //TrayLabel.BackColor = Color.LightSkyBlue;
             TrayLabel.Text = trayData.TrayNumber;
+            TrayLabel.AutoSize = true;
 
             Sensors = new Dictionary<string, Sensor>();
             foreach (var item in trayData.Sensors)

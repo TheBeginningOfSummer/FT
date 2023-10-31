@@ -28,28 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.LB_ErrorLog = new System.Windows.Forms.ListBox();
+            this.LB_Log = new System.Windows.Forms.ListBox();
             this.DTP_CheckDate = new System.Windows.Forms.DateTimePicker();
             this.BTN_错误日志加载 = new System.Windows.Forms.Button();
             this.BTN_错误日志删除 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // LB_ErrorLog
+            // LB_Log
             // 
-            this.LB_ErrorLog.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.LB_Log.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.LB_ErrorLog.Font = new System.Drawing.Font("宋体", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.LB_ErrorLog.FormattingEnabled = true;
-            this.LB_ErrorLog.ItemHeight = 21;
-            this.LB_ErrorLog.Location = new System.Drawing.Point(12, 74);
-            this.LB_ErrorLog.Name = "LB_ErrorLog";
-            this.LB_ErrorLog.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.LB_ErrorLog.Size = new System.Drawing.Size(776, 361);
-            this.LB_ErrorLog.TabIndex = 0;
+            this.LB_Log.Font = new System.Drawing.Font("宋体", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.LB_Log.FormattingEnabled = true;
+            this.LB_Log.HorizontalScrollbar = true;
+            this.LB_Log.ItemHeight = 21;
+            this.LB_Log.Location = new System.Drawing.Point(12, 74);
+            this.LB_Log.Name = "LB_Log";
+            this.LB_Log.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            this.LB_Log.Size = new System.Drawing.Size(776, 361);
+            this.LB_Log.TabIndex = 0;
             // 
             // DTP_CheckDate
             // 
+            this.DTP_CheckDate.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.DTP_CheckDate.Location = new System.Drawing.Point(202, 26);
             this.DTP_CheckDate.Name = "DTP_CheckDate";
             this.DTP_CheckDate.Size = new System.Drawing.Size(200, 21);
@@ -57,7 +60,8 @@
             // 
             // BTN_错误日志加载
             // 
-            this.BTN_错误日志加载.Location = new System.Drawing.Point(408, 26);
+            this.BTN_错误日志加载.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BTN_错误日志加载.Location = new System.Drawing.Point(408, 25);
             this.BTN_错误日志加载.Name = "BTN_错误日志加载";
             this.BTN_错误日志加载.Size = new System.Drawing.Size(75, 23);
             this.BTN_错误日志加载.TabIndex = 2;
@@ -67,7 +71,8 @@
             // 
             // BTN_错误日志删除
             // 
-            this.BTN_错误日志删除.Location = new System.Drawing.Point(489, 26);
+            this.BTN_错误日志删除.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BTN_错误日志删除.Location = new System.Drawing.Point(488, 25);
             this.BTN_错误日志删除.Name = "BTN_错误日志删除";
             this.BTN_错误日志删除.Size = new System.Drawing.Size(75, 23);
             this.BTN_错误日志删除.TabIndex = 3;
@@ -83,17 +88,17 @@
             this.Controls.Add(this.BTN_错误日志删除);
             this.Controls.Add(this.BTN_错误日志加载);
             this.Controls.Add(this.DTP_CheckDate);
-            this.Controls.Add(this.LB_ErrorLog);
+            this.Controls.Add(this.LB_Log);
             this.Name = "Form3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "错误日志";
+            this.Text = "报警记录";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ListBox LB_ErrorLog;
+        private System.Windows.Forms.ListBox LB_Log;
         private System.Windows.Forms.DateTimePicker DTP_CheckDate;
         private System.Windows.Forms.Button BTN_错误日志加载;
         private System.Windows.Forms.Button BTN_错误日志删除;

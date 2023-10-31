@@ -18,19 +18,16 @@ namespace FT
         //当前所有的上料盘数据
         public List<Tray> Trays = new List<Tray>();
 
-        readonly LogFile logfile = new LogFile();
-
         public TrayManager()
         {
             try
             {
-                if (Trays == null) Trays = new List<Tray>();
                 InitialzeMappingLayout();
                 InitializeTrayType();
             }
             catch (Exception e)
             {
-                logfile.WriteLog("读取托盘配置数据发生错误。" + e.Message, "托盘配置读取");
+                LogManager.WriteLog("读取托盘配置数据发生错误。" + e.Message, LogType.Error);
             }
         }
 
@@ -43,10 +40,12 @@ namespace FT
             MappingLayout = JsonManager.ReadJsonString<List<Position>>(Environment.CurrentDirectory + "\\Configuration\\", "MappingLayout");
             if (MappingLayout == null)
             {
-                MappingLayout = new List<Position>();
-                MappingLayout.Add(new Position(20, 30));
-                MappingLayout.Add(new Position(220, 30));
-                MappingLayout.Add(new Position(420, 30));
+                MappingLayout = new List<Position>
+                {
+                    new Position(20, 30),
+                    new Position(220, 30),
+                    new Position(420, 30)
+                };
                 JsonManager.SaveJsonString($"{Environment.CurrentDirectory}\\Configuration\\", "MappingLayout", MappingLayout);
             }
         }
@@ -116,6 +115,20 @@ namespace FT
             sensor.EndTime = sensorData.EndTime;
         }
 
+        public void SaveTrayType(string key, TypeOfTray typeOfTray)
+        {
+            if (TrayType == null) return;
+            if (TrayType.ContainsKey(key))
+            {
+                TrayType[key] = typeOfTray;
+            }
+            else
+            {
+                TrayType.Add(key, typeOfTray);
+            }
+            JsonManager.SaveJsonString($"{Environment.CurrentDirectory}\\Configuration\\", "TypeOfTray", TrayType);
+        }
+
         /// <summary>
         /// 保存托盘数据
         /// </summary>
@@ -140,9 +153,7 @@ namespace FT
             {
                 Trays.Clear();
                 foreach (TrayData trayData in trays)
-                {
                     Trays.Add(new Tray(trayData));
-                }
             }
             else
             {

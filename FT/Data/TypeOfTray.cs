@@ -30,5 +30,11 @@ namespace FT.Data
         public string TrayType { get; set; }
         public int Length { get; set; }
         public int Width { get; set; }
+        public double LineSpacing { get; set; }
+        public double ColumnSpacing { get; set; }
+        public double TrayHeight { get; set; }
+        public int VacAngle { get; set; }
+        public int ClawsAngle { get; set; }
     }
+       
 }

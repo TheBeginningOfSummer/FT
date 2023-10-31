@@ -47,7 +47,7 @@
             // CB_UserName
             // 
             this.CB_UserName.FormattingEnabled = true;
-            this.CB_UserName.Location = new System.Drawing.Point(203, 67);
+            this.CB_UserName.Location = new System.Drawing.Point(203, 66);
             this.CB_UserName.Name = "CB_UserName";
             this.CB_UserName.Size = new System.Drawing.Size(121, 20);
             this.CB_UserName.TabIndex = 1;
@@ -63,7 +63,7 @@
             // 
             // TB_Password
             // 
-            this.TB_Password.Location = new System.Drawing.Point(203, 106);
+            this.TB_Password.Location = new System.Drawing.Point(203, 105);
             this.TB_Password.Name = "TB_Password";
             this.TB_Password.PasswordChar = '*';
             this.TB_Password.Size = new System.Drawing.Size(121, 21);

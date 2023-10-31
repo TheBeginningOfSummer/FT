@@ -1,15 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Windows.Forms;
 
 namespace FT
 {
     public partial class Form3 : Form
     {
-        readonly List<string> errorList = new List<string>();
-        readonly LogFile logFile = new LogFile();
-        string filePath;
+        readonly List<string> messageList = new List<string>();
+        public string FileName { get; set; } = "报警记录";
+        public string FilePath { get; set; } = "Warning";
 
         public Form3()
         {
@@ -19,29 +18,25 @@ namespace FT
         private void UpdateLog(ListBox listBox)
         {
             listBox.DataSource = null;
-            errorList.Clear();
-            errorList.AddRange(logFile.ReadLog(filePath));
-            listBox.DataSource = errorList;
+            messageList.Clear();
+            messageList.AddRange(LogFile.ReadLog($"{DTP_CheckDate.Value:yyyyMMdd}{FileName}", FilePath));
+            listBox.DataSource = messageList;
         }
 
         private void BTN_错误日志加载_Click(object sender, EventArgs e)
         {
-            filePath = $"{DTP_CheckDate.Value:yyyyMMdd}报警记录";
-            UpdateLog(LB_ErrorLog);
+            UpdateLog(LB_Log);
         }
 
         private void BTN_错误日志删除_Click(object sender, EventArgs e)
         {
             try
             {
-                if (LB_ErrorLog.SelectedItems.Count == 0) return;
-                foreach (object item in LB_ErrorLog.SelectedItems)
-                    errorList.RemoveAll(s => s.Contains(item.ToString()));
-                //File.WriteAllLines($"{AppDomain.CurrentDomain.BaseDirectory}log\\{filePath}.log", errorList.ToArray());
-                //UpdateLog(LB_ErrorLog);
-                LB_ErrorLog.DataSource = null;
-                LB_ErrorLog.DataSource = errorList;
-                //MessageBox.Show("删除成功。", "日志删除");
+                if (LB_Log.SelectedItems.Count == 0) return;
+                foreach (object item in LB_Log.SelectedItems)
+                    messageList.RemoveAll(s => s.Contains(item.ToString()));
+                LB_Log.DataSource = null;
+                LB_Log.DataSource = messageList;
             }
             catch (Exception ex)
             {

@@ -6,12 +6,16 @@ namespace CIPCommunication
 {
     public class NJCompoletLibrary
     {
+        #region 端口
         private CIPPortCompolet portCompolet;
         private NJCompolet compolet;
+        #endregion
 
+        #region 参数
         public DateTime CurrentTime;
         public string PeerAddress;
         public int LocalPort;
+        #endregion
 
         readonly IComparer stringValueComparer = new StringValueComparer();
 
@@ -109,6 +113,19 @@ namespace CIPCommunication
                 return (T)Convert.ChangeType(compolet.ReadVariable(variableName), typeof(T));
         }
         /// <summary>
+        /// 直接读取哈希表
+        /// </summary>
+        /// <param name="variableNames">变量名数组</param>
+        /// <returns></returns>
+        public Hashtable GetHashtable(string[] variableNames)
+        {
+            if (!portCompolet.IsOpened(LocalPort))
+                return null;
+            else
+                return compolet.ReadVariableMultiple(variableNames);
+        }
+
+        /// <summary>
         /// 读多个数据的变量名(按变量名中的数字排序)
         /// </summary>
         /// <param name="variableNames">变量名数组</param>
@@ -155,18 +172,6 @@ namespace CIPCommunication
             Array.Sort(keys, values, stringValueComparer);
             return values;
         }
-        /// <summary>
-        /// 直接读取哈希表
-        /// </summary>
-        /// <param name="variableNames">变量名数组</param>
-        /// <returns></returns>
-        public Hashtable GetHashtable(string[] variableNames)
-        {
-            if (!portCompolet.IsOpened(LocalPort))
-                return null;
-            else
-                return compolet.ReadVariableMultiple(variableNames);
-        }
         #endregion
 
         #region 写数据
@@ -176,10 +181,11 @@ namespace CIPCommunication
             this.compolet.WriteVariable(variableName, writeData);
         }
 
-        public void WriteVariable<T>(string variableName, T variable)
+        public bool WriteVariable<T>(string variableName, T variable)
         {
-            if (!portCompolet.IsOpened(LocalPort)) return;
+            if (!portCompolet.IsOpened(LocalPort)) return false;
             this.compolet.WriteVariable(variableName, variable);
+            return true;
         }
         #endregion
 

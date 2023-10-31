@@ -9,9 +9,7 @@ namespace FT
     {
         public static Communication Singleton = new Communication();
         public NJCompoletLibrary Compolet;
-        public string Error;
         readonly IComparer stringValueComparer = new StringValueComparer();
-        readonly LogFile logfile = new LogFile();
 
         #region 从PLC读取的数据
         /// <summary>
@@ -60,36 +58,37 @@ namespace FT
 
         private Communication()
         {
-            Compolet = CompoletSingleton.GetCompolet();
+            Compolet = new NJCompoletLibrary();
             #region 初始化读取值存储数组
             ReadPLCIO = new bool[400];
             ReadLocation = new double[200];
             ReadFlagBits = new bool[100];
             ReadTestInformation = new string[100];
-            ReadPLCAlarm = new bool[200];
-            ReadPLCPmt = new double[50];
+            ReadPLCAlarm = new bool[250];
+            ReadPLCPmt = new double[150];
             #endregion
             #region 初始化变量
             //PLC Out IO
-            plcOutIOName = InitializeStringArray("PlcOutIO", 0, 193);
+            plcOutIOName = InitializeStringArray("PlcOutIO", 0, 249);
             PLCIO = InitializeHashtable<bool>(plcOutIOName, false);
             //位置信息
-            plcOutLocationName = InitializeStringArray("PlcOutLocation", 0, 180);
+            plcOutLocationName = InitializeStringArray("PlcOutLocation", 0, 199);
             Location = InitializeHashtable<double>(plcOutLocationName, 0);
             //报警信息
-            plcOutAlarmName = InitializeStringArray("PlcOutAlarm", 0, 173);
+            plcOutAlarmName = InitializeStringArray("PlcOutAlarm", 0, 249);
             Alarm = InitializeHashtable<bool>(plcOutAlarmName, false);
             //参数信息
-            plcInPmtName = InitializeStringArray("PlcInPmt", 0, 34);
+            plcInPmtName = InitializeStringArray("PlcInPmt", 0, 149);
             PLCPmt = InitializeHashtable<double>(plcInPmtName, 0);
-
+            //标志位
             plcOutFlagName = InitializeStringArray("PLC标志位", 0, 2);
             FlagBits = InitializeHashtable<bool>(plcOutFlagName, false);
-
-            plcTestInfoName = InitializeStringArray("PLC测试信息", 0, 41);
+            //字符串信息
+            plcTestInfoName = InitializeStringArray("PLC测试信息", 0, 59);
             TestInformation = InitializeHashtable<string>(plcTestInfoName, "noData");
             #endregion
         }
+
         /// <summary>
         /// 初始化一组连续的字符串数组
         /// </summary>
@@ -157,108 +156,135 @@ namespace FT
         {
             try
             {
-                #region 方式一更新数据
+                #region 方式一更新数据:直接读（会乱码）
                 //GetValue(compolet.GetHashtable(plcOutIOName), PLCIO);
                 //GetValue(compolet.GetHashtable(plcOutLocationName), Location);
-                //GetValue(compolet.GetHashtable(plcOutAlarmName), Alarm);
+                GetValue(Compolet.GetHashtable(plcOutAlarmName), Alarm);
                 //GetValue(compolet.GetHashtable(plcInPmtName), PLCPmt);
                 //GetValue(compolet.GetHashtable(plcOutFlagName), FlagBits);
                 //GetValue(compolet.GetHashtable(plcTestInfoName), TestInformation);
                 #endregion
 
-                #region 方式二更新数据
+                #region 方式二更新数据：排序
                 HashtableToArray(Compolet.GetHashtable(plcOutIOName), ReadPLCIO);
                 HashtableToArray(Compolet.GetHashtable(plcOutLocationName), ReadLocation);
-                HashtableToArray(Compolet.GetHashtable(plcOutAlarmName), ReadPLCAlarm);
+                //HashtableToArray(Compolet.GetHashtable(plcOutAlarmName), ReadPLCAlarm);
                 HashtableToArray(Compolet.GetHashtable(plcInPmtName), ReadPLCPmt);
                 #endregion
 
                 #region 从PLC读取标志位
                 //托盘扫码完成
-                ReadFlagBits[0] = Compolet.ReadVariableBool("PLC标志位[0]");
+                ReadFlagBits[0] = Compolet.ReadVariable<bool>("PLC标志位[0]");
                 //探测器测试完成
-                ReadFlagBits[1] = Compolet.ReadVariableBool("PLC标志位[1]");
+                ReadFlagBits[1] = Compolet.ReadVariable<bool>("PLC标志位[1]");
                 //20个托盘已摆好
-                ReadFlagBits[2] = Compolet.ReadVariableBool("PLC标志位[2]");
+                ReadFlagBits[2] = Compolet.ReadVariable<bool>("PLC标志位[2]");
                 #endregion
 
                 #region 读取测试信息（字符串变量）
                 //产品编码
-                ReadTestInformation[0] = Compolet.ReadVariableString("PLC测试信息[0]");
+                ReadTestInformation[0] = Compolet.ReadVariable<string>("PLC测试信息[0]");
                 //类型
-                ReadTestInformation[1] = Compolet.ReadVariableString("PLC测试信息[1]");
+                ReadTestInformation[1] = Compolet.ReadVariable<string>("PLC测试信息[1]");
                 //测试工位
-                ReadTestInformation[2] = Compolet.ReadVariableString("PLC测试信息[2]");
+                ReadTestInformation[2] = Compolet.ReadVariable<string>("PLC测试信息[2]");
                 //结果
-                ReadTestInformation[3] = Compolet.ReadVariableString("PLC测试信息[3]");
+                ReadTestInformation[3] = Compolet.ReadVariable<string>("PLC测试信息[3]");
                 //托盘编号
-                ReadTestInformation[4] = Compolet.ReadVariableString("PLC测试信息[4]");
+                ReadTestInformation[4] = Compolet.ReadVariable<string>("PLC测试信息[4]");
                 //托盘位置
-                ReadTestInformation[5] = Compolet.ReadVariableString("PLC测试信息[5]");
+                ReadTestInformation[5] = Compolet.ReadVariable<string>("PLC测试信息[5]");
                 //外观
-                ReadTestInformation[6] = Compolet.ReadVariableString("PLC测试信息[6]");
+                ReadTestInformation[6] = Compolet.ReadVariable<string>("PLC测试信息[6]");
                 //开始时间
-                ReadTestInformation[7] = Compolet.ReadVariableString("PLC测试信息[7]");
+                ReadTestInformation[7] = Compolet.ReadVariable<string>("PLC测试信息[7]");
                 //完成时间
-                ReadTestInformation[8] = Compolet.ReadVariableString("PLC测试信息[8]");
+                ReadTestInformation[8] = Compolet.ReadVariable<string>("PLC测试信息[8]");
                 //当前托盘索引
-                ReadTestInformation[20] = Compolet.ReadVariableString("PLC测试信息[20]");
+                ReadTestInformation[20] = Compolet.ReadVariable<string>("PLC测试信息[20]");
                 //良率
-                ReadTestInformation[21] = Compolet.ReadVariableString("PLC测试信息[21]");
+                ReadTestInformation[21] = Compolet.ReadVariable<string>("PLC测试信息[21]");
                 //探针次数
-                ReadTestInformation[22] = Compolet.ReadVariableString("PLC测试信息[22]");
+                ReadTestInformation[22] = Compolet.ReadVariable<string>("PLC测试信息[22]");
                 //当前控制器时间
-                ReadTestInformation[29] = Compolet.ReadVariableString("PLC测试信息[29]");
+                ReadTestInformation[29] = Compolet.ReadVariable<string>("PLC测试信息[29]");
                 //上视觉1扫码信息
-                ReadTestInformation[30] = Compolet.ReadVariableString("PLC测试信息[30]");
+                ReadTestInformation[30] = Compolet.ReadVariable<string>("PLC测试信息[30]");
                 //下视觉对位X
-                ReadTestInformation[32] = Compolet.ReadVariableString("PLC测试信息[32]");
+                ReadTestInformation[32] = Compolet.ReadVariable<string>("PLC测试信息[32]");
                 //下视觉对位Y
-                ReadTestInformation[33] = Compolet.ReadVariableString("PLC测试信息[33]");
+                ReadTestInformation[33] = Compolet.ReadVariable<string>("PLC测试信息[33]");
                 //下视觉对位θ
-                ReadTestInformation[34] = Compolet.ReadVariableString("PLC测试信息[34]");
+                ReadTestInformation[34] = Compolet.ReadVariable<string>("PLC测试信息[34]");
                 //上视觉2对位X
-                ReadTestInformation[36] = Compolet.ReadVariableString("PLC测试信息[36]");
+                ReadTestInformation[36] = Compolet.ReadVariable<string>("PLC测试信息[36]");
                 //上视觉2对位Y
-                ReadTestInformation[37] = Compolet.ReadVariableString("PLC测试信息[37]");
+                ReadTestInformation[37] = Compolet.ReadVariable<string>("PLC测试信息[37]");
                 //上视觉2对位θ
-                ReadTestInformation[38] = Compolet.ReadVariableString("PLC测试信息[38]");
+                ReadTestInformation[38] = Compolet.ReadVariable<string>("PLC测试信息[38]");
                 //计算对位X
-                ReadTestInformation[39] = Compolet.ReadVariableString("PLC测试信息[39]");
+                ReadTestInformation[39] = Compolet.ReadVariable<string>("PLC测试信息[39]");
                 //计算对位Y
-                ReadTestInformation[40] = Compolet.ReadVariableString("PLC测试信息[40]");
+                ReadTestInformation[40] = Compolet.ReadVariable<string>("PLC测试信息[40]");
                 //计算对位θ
-                ReadTestInformation[41] = Compolet.ReadVariableString("PLC测试信息[41]");
-
-
+                ReadTestInformation[41] = Compolet.ReadVariable<string>("PLC测试信息[41]");
+                //下视觉2对位X
+                ReadTestInformation[42] = Compolet.ReadVariable<string>("PLC测试信息[42]");
+                //下视觉2对位Y
+                ReadTestInformation[43] = Compolet.ReadVariable<string>("PLC测试信息[43]");
+                //下视觉2对位θ
+                ReadTestInformation[44] = Compolet.ReadVariable<string>("PLC测试信息[44]");
+                //钧舵1反馈字节
+                ReadTestInformation[45] = Compolet.ReadVariable<string>("PLC测试信息[45]");
+                //钧舵2反馈字节
+                ReadTestInformation[46] = Compolet.ReadVariable<string>("PLC测试信息[46]");
+                //钧舵3反馈字节
+                ReadTestInformation[47] = Compolet.ReadVariable<string>("PLC测试信息[47]");
+                //钧舵4反馈字节
+                ReadTestInformation[48] = Compolet.ReadVariable<string>("PLC测试信息[48]");
+                //上视觉1偏移X
+                ReadTestInformation[49] = Compolet.ReadVariable<string>("PLC测试信息[49]");
+                //上视觉1偏移Y
+                ReadTestInformation[50] = Compolet.ReadVariable<string>("PLC测试信息[50]");
+                //上视觉1偏移θ
+                ReadTestInformation[51] = Compolet.ReadVariable<string>("PLC测试信息[51]");
 
                 #endregion
             }
             catch (Exception e)
             {
-                logfile.WriteLog($"PLC数据读取。{e.Message}", "更新数据");
-                this.Error = e.ToString();
+                LogManager.WriteLog($"读取PLC数据。{e.Message}", LogType.Error);
             }
         }
 
-        public void WriteVariables<T>(T[] variableArray, string variableName, int start, int end)
-        {
-            for (int i = start; i <= end; i++)
-            {
-                Compolet.WriteVariable(variableName + "[" + i.ToString() + "]", variableArray[i]);
-            }
-        }
-
-        public void WriteVariable<T>(T variable, string variableName)
+        public bool WriteVariable<T>(T variable, string variableName)
         {
             try
             {
-                Compolet.WriteVariable(variableName, variable);
+                bool result = Compolet.WriteVariable(variableName, variable);
+                if (!result) LogManager.WriteLog($"参数{variableName}写入失败，检查连接状态。", LogType.Error);
+                return result;
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                this.Error = ex.ToString();
-                //throw ex;
+                LogManager.WriteLog($"参数{variableName}写入失败。{e.Message}", LogType.Error);
+                return false;
+            }
+        }
+
+        public bool WriteVariable<T>(string variable, string variableName)
+        {
+            try
+            {
+                T value = (T)Convert.ChangeType(variable, typeof(T));
+                bool result = Compolet.WriteVariable(variableName, value);
+                if (!result) LogManager.WriteLog($"参数{variableName}写入失败，检查连接状态。", LogType.Error);
+                return result;
+            }
+            catch (Exception e)
+            {
+                LogManager.WriteLog($"参数{variableName}写入失败。{e.Message}", LogType.Error);
+                return false;
             }
         }
 

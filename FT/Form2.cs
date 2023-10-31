@@ -8,9 +8,9 @@ namespace FT
 {
     public partial class Form2 : Form
     {
+        public Form1 MainForm;
         public Dictionary<string, UserData> Users = new Dictionary<string, UserData>();
-
-        public Form1 form1;
+        public string CurrentUser { get; set; } = "操作员";
 
         public Form2()
         {
@@ -19,16 +19,39 @@ namespace FT
             CB_UserName.Items.Add("操作员");
             CB_UserName.Items.Add("工程师");
             CB_UserName.Items.Add("管理员");
+
             Users.Add("操作员", new UserData() { UserType = 2, UserName = "操作员", Password = "" });
-            Users.Add("管理员", new UserData() { UserType = 0, UserName = "管理员", Password = "" });
+            Users.Add("管理员", new UserData() { UserType = 0, UserName = "管理员", Password = "666666" });
             UserData engineer = JsonManager.ReadJsonString<UserData>(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + "\\FTData", "engineerData");
             if (engineer == null)
-            {
                 Users.Add("工程师", new UserData() { UserType = 1, UserName = "工程师", Password = "" });
+            else
+                Users.Add(engineer.UserName, engineer);
+        }
+
+        private void Login()
+        {
+            if (MainForm == null)
+            {
+                MainForm = new Form1(this); MainForm.LB_实时权限显示.Text = CurrentUser; MainForm.Show();
+                MainForm.TC_Main.Selecting += new TabControlCancelEventHandler(TC_Main_Selecting);
+                this.Hide();
             }
             else
             {
-                Users.Add(engineer.UserName, engineer);
+                MainForm.LB_实时权限显示.Text = CurrentUser;
+                MainForm.Show();
+                this.Hide();
+            }
+        }
+
+        void TC_Main_Selecting(object sender, TabControlCancelEventArgs e)
+        {
+            if (CurrentUser == "操作员")//禁用某个Tab
+            {
+                if (e.TabPageIndex == 4) e.Cancel = true;
+                if (e.TabPageIndex == 5) e.Cancel = true;
+                if (e.TabPageIndex == 9) e.Cancel = true;
             }
         }
 
@@ -37,31 +60,13 @@ namespace FT
             if (!Users.ContainsKey(CB_UserName.Text)) return;
             if (CB_UserName.Text == "操作员")
             {
-                if (form1 == null)
-                {
-                    form1 = new Form1(this); form1.Show();
-                    form1.TC_Main.Selecting += new TabControlCancelEventHandler(TC_Main_Selecting);
-                    this.Hide();
-                }
-                else
-                {
-                    form1.Show();
-                    this.Hide();
-                }
+                CurrentUser = "操作员";
+                Login();
             }
             else if (Users[CB_UserName.Text].Password == TB_Password.Text)
             {
-                if (form1 == null)
-                {
-                    form1 = new Form1(this); form1.Show();
-                    form1.TC_Main.Selecting += new TabControlCancelEventHandler(TC_Main_Selecting);
-                    this.Hide();
-                }
-                else
-                {
-                    form1.Show();
-                    this.Hide();
-                }
+                CurrentUser = Users[CB_UserName.Text].UserName;
+                Login();
             }
             else
             {
@@ -69,14 +74,5 @@ namespace FT
             }
         }
 
-        void TC_Main_Selecting(object sender, TabControlCancelEventArgs e)
-        {
-            if (CB_UserName.Text == "操作员")//禁用某个Tab
-            {
-                if (e.TabPageIndex == 6) e.Cancel = true;
-                if (e.TabPageIndex == 7) e.Cancel = true;
-                if (e.TabPageIndex == 9) e.Cancel = true;
-            }
-        }
     }
 }
