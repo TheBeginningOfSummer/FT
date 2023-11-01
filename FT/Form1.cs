@@ -38,7 +38,8 @@ namespace FT
         string trayType = "";
         //是否更新
         bool isUpdate = false;
-        //切换产品是否成功
+        //IsWrite用于写入PLC值时判断当前连接是否断开，调用写入方法时的返回布尔值赋给此变量
+        //当值为false时可以弹出提示框，每次调用前需要先赋值为true
         private bool isWrite = true;
         public bool IsWrite
         {
@@ -176,8 +177,7 @@ namespace FT
                                 strLine = strLine + " " + Convert.ToChar(9);
                             else
                             {
-                                string rowstr = "";
-                                rowstr = m_DataView.Rows[i].Cells[j].Value.ToString();
+                                string rowstr = m_DataView.Rows[i].Cells[j].Value.ToString();
                                 if (rowstr.IndexOf("\r\n") > 0)
                                     rowstr = rowstr.Replace("\r\n", " ");
                                 if (rowstr.IndexOf("\t") > 0)
@@ -353,8 +353,6 @@ namespace FT
                             //产品信息录入完成。将PLC标志位[1]置为false，PC标志位置true，表示准备好下一次的录入
                             communication.WriteVariable(false, "PLC标志位[1]");
                             communication.WriteVariable(true, "PC标志位[1]");
-                            //测试触发器
-                            //auto.Set();
                         }
                         #endregion
                         stopwatch1.Stop();
@@ -1044,37 +1042,7 @@ namespace FT
                         CheckCount(communication.ReadPLCPmt[34], 10000, ref isShow4, "工装4使用次数已达上限，请及时更换");
                         SetTextBoxText(txt上料吸嘴1次数, communication.ReadPLCPmt[111]);
                         CheckCount(communication.ReadPLCPmt[111], 10000, ref isShow,"上料吸嘴1使用次数已达上限，请及时更换");
-                        //double Vac1Count = communication.ReadPLCPmt[111] - 2000;
-                        //double Vac1Mod = Vac1Count % 100;
-                        //if (Vac1Count < 0)
-                        //{
-                        //    isShow = true;
-                        //}
-                        //else
-                        //{
-                        //    if (Vac1Count != 0 && Vac1Mod != 0)
-                        //    {
-                        //        isShow = true;
-                        //    }
-                        //}
                         
-                        //if (isShow)
-                        //{
-                        //    if (Vac1Count >= 0)
-                        //    {
-                        //        if (Vac1Count == 0)
-                        //        {
-                        //            DialogResult result = MessageBox.Show($"上料吸嘴1使用次数已达上限，请及时更换", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                        //            if (result == DialogResult.Yes) isShow = false;
-                        //        }
-                        //        if (Vac1Mod == 0)
-                        //        {
-                        //            DialogResult result = MessageBox.Show($"上料吸嘴1使用次数已达上限，请及时更换", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-                        //            if (result == DialogResult.Yes) isShow = false;
-                        //        }
-                        //    } 
-                        //}
-
                         SetTextBoxText(txt上料吸嘴2次数, communication.ReadPLCPmt[112]);
                         CheckCount(communication.ReadPLCPmt[112], 10000, ref isShow5, "上料吸嘴2使用次数已达上限，请及时更换");
                         SetTextBoxText(txt平移吸嘴1次数, communication.ReadPLCPmt[113]);
@@ -5755,13 +5723,13 @@ namespace FT
                     if (this.CB_Socket类.SelectedItem.ToString() == "四目")
                     {
                         communication.WriteVariable(1, "PlcInID[2]");
-                        RecordAndShow($"{trayType}更改为四目", LogType.Modification, TB_Modification);
+                        RecordAndShow($"当前产品为{trayType}，更改为四目", LogType.Modification, TB_Modification);
                     }
 
                     if (this.CB_Socket类.SelectedItem.ToString() == "单目")
                     {
                         communication.WriteVariable(2, "PlcInID[2]");
-                        RecordAndShow($"{trayType}更改为单目", LogType.Modification, TB_Modification);
+                        RecordAndShow($"当前产品为{trayType}，更改为单目", LogType.Modification, TB_Modification);
                     }
                 }
                 else

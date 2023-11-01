@@ -1,11 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -28,15 +24,15 @@ namespace FT
         {
             InitializeComponent();
 
-            CB_VariableName.Items.Add(nameof(updater.PlcOutIO));
-            CB_VariableName.Items.Add(nameof(updater.PlcOutLocation));
-            CB_VariableName.Items.Add(nameof(updater.PlcOutAlarm));
-            CB_VariableName.Items.Add(nameof(updater.PlcInPmt));
-            CB_VariableName.Items.Add(nameof(updater.PLC标志位));
-            CB_VariableName.Items.Add(nameof(updater.PLC测试信息));
+            //CB_VariableName.Items.Add(nameof(updater.PlcOutIO));
+            //CB_VariableName.Items.Add(nameof(updater.PlcOutLocation));
+            //CB_VariableName.Items.Add(nameof(updater.PlcOutAlarm));
+            //CB_VariableName.Items.Add(nameof(updater.PlcInPmt));
+            //CB_VariableName.Items.Add(nameof(updater.PLC标志位));
+            //CB_VariableName.Items.Add(nameof(updater.PLC测试信息));
         }
 
-        #region 界面更新方法
+        #region 界面更新
         public void InitializeDisplayLabel(Control control, int labelCount, List<Label> labels1, List<Label> labels2)
         {
             control.Controls.Clear();
@@ -174,6 +170,55 @@ namespace FT
         }
         #endregion
 
+        private void BNT_WriteData_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (TB_VariableIndex.Text == "") return;
+                if (TB_Variable.Text == "") return;
+                //string variableName = CB_VariableName.Text.Replace("Name", "");
+                string variableName = CB_VariableName.Text;
+                //switch (CB_VariableName.Text)
+                //{
+                //    case nameof(updater.PlcOutIO):
+                //        if (TB_Variable.Text == "0")
+                //            updater.Compolet.WriteVariable($"{variableName}[{TB_VariableIndex.Text}]", false);
+                //        if (TB_Variable.Text == "1")
+                //            updater.Compolet.WriteVariable($"{variableName}[{TB_VariableIndex.Text}]", true);
+                //        break;
+                //    case nameof(updater.PlcOutLocation):
+                //        updater.Compolet.WriteVariable($"{variableName}[{TB_VariableIndex.Text}]", double.Parse(TB_Variable.Text));
+                //        break;
+                //    case nameof(updater.PlcOutAlarm):
+                //        if (TB_Variable.Text == "0")
+                //            updater.Compolet.WriteVariable($"{variableName}[{TB_VariableIndex.Text}]", false);
+                //        if (TB_Variable.Text == "1")
+                //            updater.Compolet.WriteVariable($"{variableName}[{TB_VariableIndex.Text}]", true);
+                //        break;
+                //    case nameof(updater.PlcInPmt):
+                //        updater.Compolet.WriteVariable($"{variableName}[{TB_VariableIndex.Text}]", double.Parse(TB_Variable.Text));
+                //        break;
+                //    case nameof(updater.PLC标志位):
+                //        if (TB_Variable.Text == "0")
+                //            updater.Compolet.WriteVariable($"{variableName}[{TB_VariableIndex.Text}]", false);
+                //        if (TB_Variable.Text == "1")
+                //            updater.Compolet.WriteVariable($"{variableName}[{TB_VariableIndex.Text}]", true);
+                //        break;
+                //    case nameof(updater.PLC测试信息):
+                //        updater.Compolet.WriteVariable($"{variableName}[{TB_VariableIndex.Text}]", TB_Variable.Text);
+                //        break;
+                //    default:
+                //        variableNames = null;
+                //        break;
+                //}
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("写入失败。" + ex.Message);
+            }
+
+        }
+
         private void BTN_Start_Click(object sender, EventArgs e)
         {
             try
@@ -210,55 +255,6 @@ namespace FT
             PN_TestFormData.Controls.Clear();
             BTN_Start.Enabled = true;
             BTN_Stop.Enabled = false;
-        }
-
-        private void BNT_WriteData_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (TB_VariableIndex.Text == "") return;
-                if (TB_Variable.Text == "") return;
-                //string variableName = CB_VariableName.Text.Replace("Name", "");
-                string variableName = CB_VariableName.Text;
-                switch (CB_VariableName.Text)
-                {
-                    case nameof(updater.PlcOutIO):
-                        if (TB_Variable.Text == "0")
-                            updater.Compolet.WriteVariable($"{variableName}[{TB_VariableIndex.Text}]", false);
-                        if (TB_Variable.Text == "1")
-                            updater.Compolet.WriteVariable($"{variableName}[{TB_VariableIndex.Text}]", true);
-                        break;
-                    case nameof(updater.PlcOutLocation):
-                        updater.Compolet.WriteVariable($"{variableName}[{TB_VariableIndex.Text}]", double.Parse(TB_Variable.Text));
-                        break;
-                    case nameof(updater.PlcOutAlarm):
-                        if (TB_Variable.Text == "0")
-                            updater.Compolet.WriteVariable($"{variableName}[{TB_VariableIndex.Text}]", false);
-                        if (TB_Variable.Text == "1")
-                            updater.Compolet.WriteVariable($"{variableName}[{TB_VariableIndex.Text}]", true);
-                        break;
-                    case nameof(updater.PlcInPmt):
-                        updater.Compolet.WriteVariable($"{variableName}[{TB_VariableIndex.Text}]", double.Parse(TB_Variable.Text));
-                        break;
-                    case nameof(updater.PLC标志位):
-                        if (TB_Variable.Text == "0")
-                            updater.Compolet.WriteVariable($"{variableName}[{TB_VariableIndex.Text}]", false);
-                        if (TB_Variable.Text == "1")
-                            updater.Compolet.WriteVariable($"{variableName}[{TB_VariableIndex.Text}]", true);
-                        break;
-                    case nameof(updater.PLC测试信息):
-                        updater.Compolet.WriteVariable($"{variableName}[{TB_VariableIndex.Text}]", TB_Variable.Text);
-                        break;
-                    default:
-                        variableNames = null;
-                        break;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("写入失败。" + ex.Message);
-            }
-
         }
 
         private void CB_VariableName_SelectedIndexChanged(object sender, EventArgs e)

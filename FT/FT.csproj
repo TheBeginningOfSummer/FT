@@ -116,6 +116,12 @@
     <Compile Include="Manager\SensorDataManager.cs" />
     <Compile Include="Manager\TrayManager.cs" />
     <Compile Include="Services\StringValueComparer.cs" />
+    <Compile Include="TestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestForm.Designer.cs">
+      <DependentUpon>TestForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

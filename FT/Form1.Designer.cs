@@ -1948,6 +1948,7 @@
             // 
             // TP报警信息
             // 
+            this.TP报警信息.BackColor = System.Drawing.Color.Transparent;
             this.TP报警信息.Controls.Add(this.BTN查看报警历史);
             this.TP报警信息.Controls.Add(this.BTN报警复位);
             this.TP报警信息.Controls.Add(this.TB_Warning);
@@ -1959,7 +1960,6 @@
             this.TP报警信息.Size = new System.Drawing.Size(267, 492);
             this.TP报警信息.TabIndex = 0;
             this.TP报警信息.Text = "报警信息";
-            this.TP报警信息.UseVisualStyleBackColor = true;
             // 
             // BTN查看报警历史
             // 
@@ -2013,6 +2013,7 @@
             // 
             // TP更改信息
             // 
+            this.TP更改信息.BackColor = System.Drawing.Color.Transparent;
             this.TP更改信息.Controls.Add(this.BTN清除修改信息);
             this.TP更改信息.Controls.Add(this.BTN查看修改历史);
             this.TP更改信息.Controls.Add(this.TB_Modification);
@@ -2022,7 +2023,6 @@
             this.TP更改信息.Size = new System.Drawing.Size(267, 492);
             this.TP更改信息.TabIndex = 1;
             this.TP更改信息.Text = "更改信息";
-            this.TP更改信息.UseVisualStyleBackColor = true;
             // 
             // BTN清除修改信息
             // 
