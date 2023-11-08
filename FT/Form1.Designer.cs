@@ -11529,10 +11529,10 @@
             this.btnSk4示教黑体位置.Name = "btnSk4示教黑体位置";
             this.btnSk4示教黑体位置.Size = new System.Drawing.Size(100, 24);
             this.btnSk4示教黑体位置.TabIndex = 67;
+            this.btnSk4示教黑体位置.Tag = "PlcInIO[151]";
             this.btnSk4示教黑体位置.Text = "黑体位置";
             this.btnSk4示教黑体位置.UseVisualStyleBackColor = true;
-            this.btnSk4示教黑体位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnSk4示教黑体位置_MouseDown);
-            this.btnSk4示教黑体位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnSk4示教黑体位置_MouseUp);
+            this.btnSk4示教黑体位置.Click += new System.EventHandler(this.BTN示教1_Click);
             // 
             // txtSk4示教当前位置1
             // 
@@ -11598,10 +11598,10 @@
             this.btnSk3示教黑体位置.Name = "btnSk3示教黑体位置";
             this.btnSk3示教黑体位置.Size = new System.Drawing.Size(100, 24);
             this.btnSk3示教黑体位置.TabIndex = 67;
+            this.btnSk3示教黑体位置.Tag = "PlcInIO[141]";
             this.btnSk3示教黑体位置.Text = "黑体位置";
             this.btnSk3示教黑体位置.UseVisualStyleBackColor = true;
-            this.btnSk3示教黑体位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnSk3示教黑体位置_MouseDown);
-            this.btnSk3示教黑体位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnSk3示教黑体位置_MouseUp);
+            this.btnSk3示教黑体位置.Click += new System.EventHandler(this.BTN示教1_Click);
             // 
             // txtSk3示教当前位置1
             // 
@@ -11667,10 +11667,10 @@
             this.btnSk2示教黑体位置.Name = "btnSk2示教黑体位置";
             this.btnSk2示教黑体位置.Size = new System.Drawing.Size(100, 24);
             this.btnSk2示教黑体位置.TabIndex = 67;
+            this.btnSk2示教黑体位置.Tag = "PlcInIO[131]";
             this.btnSk2示教黑体位置.Text = "黑体位置";
             this.btnSk2示教黑体位置.UseVisualStyleBackColor = true;
-            this.btnSk2示教黑体位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnSk2示教黑体位置_MouseDown);
-            this.btnSk2示教黑体位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnSk2示教黑体位置_MouseUp);
+            this.btnSk2示教黑体位置.Click += new System.EventHandler(this.BTN示教1_Click);
             // 
             // txtSk2示教当前位置1
             // 
@@ -11736,10 +11736,10 @@
             this.btnSk1示教黑体位置.Name = "btnSk1示教黑体位置";
             this.btnSk1示教黑体位置.Size = new System.Drawing.Size(100, 24);
             this.btnSk1示教黑体位置.TabIndex = 67;
+            this.btnSk1示教黑体位置.Tag = "PlcInIO[121]";
             this.btnSk1示教黑体位置.Text = "黑体位置";
             this.btnSk1示教黑体位置.UseVisualStyleBackColor = true;
-            this.btnSk1示教黑体位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnSk1示教黑体位置_MouseDown);
-            this.btnSk1示教黑体位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnSk1示教黑体位置_MouseUp);
+            this.btnSk1示教黑体位置.Click += new System.EventHandler(this.BTN示教1_Click);
             // 
             // txtSk1示教当前位置1
             // 
@@ -11789,10 +11789,10 @@
             this.btn钧舵1夹紧.Name = "btn钧舵1夹紧";
             this.btn钧舵1夹紧.Size = new System.Drawing.Size(75, 24);
             this.btn钧舵1夹紧.TabIndex = 141;
+            this.btn钧舵1夹紧.Tag = "PlcInIO[600]";
             this.btn钧舵1夹紧.Text = "钧舵1夹紧";
             this.btn钧舵1夹紧.UseVisualStyleBackColor = true;
-            this.btn钧舵1夹紧.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn钧舵1夹紧_MouseDown);
-            this.btn钧舵1夹紧.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn钧舵1夹紧_MouseUp);
+            this.btn钧舵1夹紧.Click += new System.EventHandler(this.BTN示教1_Click);
             // 
             // label355
             // 
@@ -11824,10 +11824,10 @@
             this.btn钧舵夹爪1打开小位置.Name = "btn钧舵夹爪1打开小位置";
             this.btn钧舵夹爪1打开小位置.Size = new System.Drawing.Size(110, 24);
             this.btn钧舵夹爪1打开小位置.TabIndex = 138;
+            this.btn钧舵夹爪1打开小位置.Tag = "PlcInIO[594]";
             this.btn钧舵夹爪1打开小位置.Text = "钧舵1打开小位置";
             this.btn钧舵夹爪1打开小位置.UseVisualStyleBackColor = true;
-            this.btn钧舵夹爪1打开小位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn钧舵夹爪1打开小位置_MouseDown);
-            this.btn钧舵夹爪1打开小位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn钧舵夹爪1打开小位置_MouseUp);
+            this.btn钧舵夹爪1打开小位置.Click += new System.EventHandler(this.BTN示教1_Click);
             // 
             // btn打开小位置值写入
             // 
@@ -12470,10 +12470,10 @@
             this.btnBYY示教Sokt夹爪1记忆.Name = "btnBYY示教Sokt夹爪1记忆";
             this.btnBYY示教Sokt夹爪1记忆.Size = new System.Drawing.Size(110, 24);
             this.btnBYY示教Sokt夹爪1记忆.TabIndex = 103;
+            this.btnBYY示教Sokt夹爪1记忆.Tag = "PlcInIO[95]";
             this.btnBYY示教Sokt夹爪1记忆.Text = "Skt夹爪1放料";
             this.btnBYY示教Sokt夹爪1记忆.UseVisualStyleBackColor = true;
-            this.btnBYY示教Sokt夹爪1记忆.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnBYY示教Sokt夹爪1记忆_MouseDown);
-            this.btnBYY示教Sokt夹爪1记忆.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnBYY示教Sokt夹爪1记忆_MouseUp);
+            this.btnBYY示教Sokt夹爪1记忆.Click += new System.EventHandler(this.BTN示教1_Click);
             // 
             // label246
             // 
@@ -12494,10 +12494,10 @@
             this.btnBYY示教Sokt夹爪3.Name = "btnBYY示教Sokt夹爪3";
             this.btnBYY示教Sokt夹爪3.Size = new System.Drawing.Size(110, 24);
             this.btnBYY示教Sokt夹爪3.TabIndex = 97;
+            this.btnBYY示教Sokt夹爪3.Tag = "PlcInIO[96]";
             this.btnBYY示教Sokt夹爪3.Text = "Skt夹爪3取料";
             this.btnBYY示教Sokt夹爪3.UseVisualStyleBackColor = true;
-            this.btnBYY示教Sokt夹爪3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnBYY示教Sokt夹爪3_MouseDown);
-            this.btnBYY示教Sokt夹爪3.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnBYY示教Sokt夹爪3_MouseUp);
+            this.btnBYY示教Sokt夹爪3.Click += new System.EventHandler(this.BTN示教1_Click);
             // 
             // txtBYY示教Sokt夹爪4
             // 
@@ -12534,10 +12534,10 @@
             this.btnBYY示教Sokt夹爪4.Name = "btnBYY示教Sokt夹爪4";
             this.btnBYY示教Sokt夹爪4.Size = new System.Drawing.Size(110, 24);
             this.btnBYY示教Sokt夹爪4.TabIndex = 100;
+            this.btnBYY示教Sokt夹爪4.Tag = "PlcInIO[97]";
             this.btnBYY示教Sokt夹爪4.Text = "Skt夹爪4取料";
             this.btnBYY示教Sokt夹爪4.UseVisualStyleBackColor = true;
-            this.btnBYY示教Sokt夹爪4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnBYY示教Sokt夹爪4_MouseDown);
-            this.btnBYY示教Sokt夹爪4.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnBYY示教Sokt夹爪4_MouseUp);
+            this.btnBYY示教Sokt夹爪4.Click += new System.EventHandler(this.BTN示教1_Click);
             // 
             // label477
             // 
@@ -12566,10 +12566,10 @@
             this.btnBYY示教上料34位置.Name = "btnBYY示教上料34位置";
             this.btnBYY示教上料34位置.Size = new System.Drawing.Size(110, 24);
             this.btnBYY示教上料34位置.TabIndex = 88;
+            this.btnBYY示教上料34位置.Tag = "PlcInIO[108]";
             this.btnBYY示教上料34位置.Text = "平移夹爪34放料";
             this.btnBYY示教上料34位置.UseVisualStyleBackColor = true;
-            this.btnBYY示教上料34位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnBYY示教上料34位置_MouseDown);
-            this.btnBYY示教上料34位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnBYY示教上料34位置_MouseUp);
+            this.btnBYY示教上料34位置.Click += new System.EventHandler(this.BTN示教1_Click);
             // 
             // label424
             // 
@@ -12598,10 +12598,10 @@
             this.btnBYY示教上料12位置.Name = "btnBYY示教上料12位置";
             this.btnBYY示教上料12位置.Size = new System.Drawing.Size(110, 24);
             this.btnBYY示教上料12位置.TabIndex = 67;
+            this.btnBYY示教上料12位置.Tag = "PlcInIO[100]";
             this.btnBYY示教上料12位置.Text = "平移夹爪12取料";
             this.btnBYY示教上料12位置.UseVisualStyleBackColor = true;
-            this.btnBYY示教上料12位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnBYY示教上料12位置_MouseDown);
-            this.btnBYY示教上料12位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnBYY示教上料12位置_MouseUp);
+            this.btnBYY示教上料12位置.Click += new System.EventHandler(this.BTN示教1_Click);
             // 
             // txtBYY示教当前位置
             // 
@@ -12642,10 +12642,10 @@
             this.btnBYY示教第一行.Name = "btnBYY示教第一行";
             this.btnBYY示教第一行.Size = new System.Drawing.Size(110, 24);
             this.btnBYY示教第一行.TabIndex = 76;
+            this.btnBYY示教第一行.Tag = "PlcInIO[103]";
             this.btnBYY示教第一行.Text = "上视觉第一行";
             this.btnBYY示教第一行.UseVisualStyleBackColor = true;
-            this.btnBYY示教第一行.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnBYY示教第一行_MouseDown);
-            this.btnBYY示教第一行.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnBYY示教第一行_MouseUp);
+            this.btnBYY示教第一行.Click += new System.EventHandler(this.BTN示教1_Click);
             // 
             // txtBYY示教第二行
             // 
@@ -12682,10 +12682,10 @@
             this.btnBYY示教第二行.Name = "btnBYY示教第二行";
             this.btnBYY示教第二行.Size = new System.Drawing.Size(110, 24);
             this.btnBYY示教第二行.TabIndex = 79;
+            this.btnBYY示教第二行.Tag = "PlcInIO[104]";
             this.btnBYY示教第二行.Text = "上视觉第二行";
             this.btnBYY示教第二行.UseVisualStyleBackColor = true;
-            this.btnBYY示教第二行.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnBYY示教第二行_MouseDown);
-            this.btnBYY示教第二行.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnBYY示教第二行_MouseUp);
+            this.btnBYY示教第二行.Click += new System.EventHandler(this.BTN示教1_Click);
             // 
             // groupBox54
             // 
@@ -12746,10 +12746,10 @@
             this.btnBYZ轴下视觉位置.Name = "btnBYZ轴下视觉位置";
             this.btnBYZ轴下视觉位置.Size = new System.Drawing.Size(110, 24);
             this.btnBYZ轴下视觉位置.TabIndex = 88;
+            this.btnBYZ轴下视觉位置.Tag = "PlcInIO[112]";
             this.btnBYZ轴下视觉位置.Text = "下视觉位置";
             this.btnBYZ轴下视觉位置.UseVisualStyleBackColor = true;
-            this.btnBYZ轴下视觉位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnBYZ轴下视觉位置_MouseDown);
-            this.btnBYZ轴下视觉位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnBYZ轴下视觉位置_MouseUp);
+            this.btnBYZ轴下视觉位置.Click += new System.EventHandler(this.BTN示教1_Click);
             // 
             // label48
             // 
@@ -12778,10 +12778,10 @@
             this.btnBYZ轴socket视觉位置.Name = "btnBYZ轴socket视觉位置";
             this.btnBYZ轴socket视觉位置.Size = new System.Drawing.Size(110, 24);
             this.btnBYZ轴socket视觉位置.TabIndex = 85;
+            this.btnBYZ轴socket视觉位置.Tag = "PlcInIO[113]";
             this.btnBYZ轴socket视觉位置.Text = "上视觉Skt位置";
             this.btnBYZ轴socket视觉位置.UseVisualStyleBackColor = true;
-            this.btnBYZ轴socket视觉位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnBYZ示教视觉位置2_MouseDown);
-            this.btnBYZ轴socket视觉位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnBYZ示教视觉位置2_MouseUp);
+            this.btnBYZ轴socket视觉位置.Click += new System.EventHandler(this.BTN示教1_Click);
             // 
             // label468
             // 
@@ -12810,10 +12810,10 @@
             this.btnBYZ示教视觉位置3.Name = "btnBYZ示教视觉位置3";
             this.btnBYZ示教视觉位置3.Size = new System.Drawing.Size(110, 24);
             this.btnBYZ示教视觉位置3.TabIndex = 82;
+            this.btnBYZ示教视觉位置3.Tag = "PlcInIO[116]";
             this.btnBYZ示教视觉位置3.Text = "Skt夹爪34取料";
             this.btnBYZ示教视觉位置3.UseVisualStyleBackColor = true;
-            this.btnBYZ示教视觉位置3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnBYZ示教视觉位置3_MouseDown);
-            this.btnBYZ示教视觉位置3.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnBYZ示教视觉位置3_MouseUp);
+            this.btnBYZ示教视觉位置3.Click += new System.EventHandler(this.BTN示教1_Click);
             // 
             // label417
             // 
@@ -12842,10 +12842,10 @@
             this.btnBYZ下料视觉位置.Name = "btnBYZ下料视觉位置";
             this.btnBYZ下料视觉位置.Size = new System.Drawing.Size(110, 24);
             this.btnBYZ下料视觉位置.TabIndex = 79;
+            this.btnBYZ下料视觉位置.Tag = "PlcInIO[114]";
             this.btnBYZ下料视觉位置.Text = "Skt夹爪12放料";
             this.btnBYZ下料视觉位置.UseVisualStyleBackColor = true;
-            this.btnBYZ下料视觉位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnBYZ下料视觉位置_MouseDown);
-            this.btnBYZ下料视觉位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnBYZ下料视觉位置_MouseUp);
+            this.btnBYZ下料视觉位置.Click += new System.EventHandler(this.BTN示教1_Click);
             // 
             // label419
             // 
@@ -12874,10 +12874,10 @@
             this.btnBYZ示教视觉位置1.Name = "btnBYZ示教视觉位置1";
             this.btnBYZ示教视觉位置1.Size = new System.Drawing.Size(110, 24);
             this.btnBYZ示教视觉位置1.TabIndex = 73;
+            this.btnBYZ示教视觉位置1.Tag = "PlcInIO[117]";
             this.btnBYZ示教视觉位置1.Text = "平移夹爪34放料";
             this.btnBYZ示教视觉位置1.UseVisualStyleBackColor = true;
-            this.btnBYZ示教视觉位置1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnBYZ示教视觉位置1_MouseDown);
-            this.btnBYZ示教视觉位置1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnBYZ示教视觉位置1_MouseUp);
+            this.btnBYZ示教视觉位置1.Click += new System.EventHandler(this.BTN示教1_Click);
             // 
             // label427
             // 
@@ -12906,10 +12906,10 @@
             this.btnBYZ示教上料位置.Name = "btnBYZ示教上料位置";
             this.btnBYZ示教上料位置.Size = new System.Drawing.Size(110, 24);
             this.btnBYZ示教上料位置.TabIndex = 67;
+            this.btnBYZ示教上料位置.Tag = "PlcInIO[111]";
             this.btnBYZ示教上料位置.Text = "平移夹爪12取料";
             this.btnBYZ示教上料位置.UseVisualStyleBackColor = true;
-            this.btnBYZ示教上料位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnBYZ示教上料位置_MouseDown);
-            this.btnBYZ示教上料位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnBYZ示教上料位置_MouseUp);
+            this.btnBYZ示教上料位置.Click += new System.EventHandler(this.BTN示教1_Click);
             // 
             // txtBYZ示教当前位置
             // 
@@ -12999,10 +12999,10 @@
             this.btnBYX示教第八列.Name = "btnBYX示教第八列";
             this.btnBYX示教第八列.Size = new System.Drawing.Size(110, 24);
             this.btnBYX示教第八列.TabIndex = 94;
+            this.btnBYX示教第八列.Tag = "PlcInIO[86]";
             this.btnBYX示教第八列.Text = "第八列";
             this.btnBYX示教第八列.UseVisualStyleBackColor = true;
-            this.btnBYX示教第八列.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnBYX示教第八列_MouseDown);
-            this.btnBYX示教第八列.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnBYX示教第八列_MouseUp);
+            this.btnBYX示教第八列.Click += new System.EventHandler(this.BTN示教1_Click);
             // 
             // label413
             // 
@@ -13031,10 +13031,10 @@
             this.btnBYX示教第七列.Name = "btnBYX示教第七列";
             this.btnBYX示教第七列.Size = new System.Drawing.Size(110, 24);
             this.btnBYX示教第七列.TabIndex = 91;
+            this.btnBYX示教第七列.Tag = "PlcInIO[85]";
             this.btnBYX示教第七列.Text = "第七列";
             this.btnBYX示教第七列.UseVisualStyleBackColor = true;
-            this.btnBYX示教第七列.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnBYX示教第七列_MouseDown);
-            this.btnBYX示教第七列.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnBYX示教第七列_MouseUp);
+            this.btnBYX示教第七列.Click += new System.EventHandler(this.BTN示教1_Click);
             // 
             // label414
             // 
@@ -13063,10 +13063,10 @@
             this.btnBYX示教第六列.Name = "btnBYX示教第六列";
             this.btnBYX示教第六列.Size = new System.Drawing.Size(110, 24);
             this.btnBYX示教第六列.TabIndex = 88;
+            this.btnBYX示教第六列.Tag = "PlcInIO[84]";
             this.btnBYX示教第六列.Text = "第六列";
             this.btnBYX示教第六列.UseVisualStyleBackColor = true;
-            this.btnBYX示教第六列.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnBYX示教第六列_MouseDown);
-            this.btnBYX示教第六列.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnBYX示教第六列_MouseUp);
+            this.btnBYX示教第六列.Click += new System.EventHandler(this.BTN示教1_Click);
             // 
             // label415
             // 
@@ -13095,10 +13095,10 @@
             this.btnBYX示教第五列.Name = "btnBYX示教第五列";
             this.btnBYX示教第五列.Size = new System.Drawing.Size(110, 24);
             this.btnBYX示教第五列.TabIndex = 85;
+            this.btnBYX示教第五列.Tag = "PlcInIO[83]";
             this.btnBYX示教第五列.Text = "第五列";
             this.btnBYX示教第五列.UseVisualStyleBackColor = true;
-            this.btnBYX示教第五列.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnBYX示教第五列_MouseDown);
-            this.btnBYX示教第五列.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnBYX示教第五列_MouseUp);
+            this.btnBYX示教第五列.Click += new System.EventHandler(this.BTN示教1_Click);
             // 
             // label401
             // 
@@ -13127,10 +13127,10 @@
             this.btnBYX示教第四列.Name = "btnBYX示教第四列";
             this.btnBYX示教第四列.Size = new System.Drawing.Size(110, 24);
             this.btnBYX示教第四列.TabIndex = 82;
+            this.btnBYX示教第四列.Tag = "PlcInIO[82]";
             this.btnBYX示教第四列.Text = "第四列";
             this.btnBYX示教第四列.UseVisualStyleBackColor = true;
-            this.btnBYX示教第四列.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnBYX示教第四列_MouseDown);
-            this.btnBYX示教第四列.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnBYX示教第四列_MouseUp);
+            this.btnBYX示教第四列.Click += new System.EventHandler(this.BTN示教1_Click);
             // 
             // label402
             // 
@@ -13159,10 +13159,10 @@
             this.btnBYX示教第三列.Name = "btnBYX示教第三列";
             this.btnBYX示教第三列.Size = new System.Drawing.Size(110, 24);
             this.btnBYX示教第三列.TabIndex = 79;
+            this.btnBYX示教第三列.Tag = "PlcInIO[81]";
             this.btnBYX示教第三列.Text = "第三列";
             this.btnBYX示教第三列.UseVisualStyleBackColor = true;
-            this.btnBYX示教第三列.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnBYX示教第三列_MouseDown);
-            this.btnBYX示教第三列.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnBYX示教第三列_MouseUp);
+            this.btnBYX示教第三列.Click += new System.EventHandler(this.BTN示教1_Click);
             // 
             // label403
             // 
@@ -13191,10 +13191,10 @@
             this.btnBYX示教第二列.Name = "btnBYX示教第二列";
             this.btnBYX示教第二列.Size = new System.Drawing.Size(110, 24);
             this.btnBYX示教第二列.TabIndex = 76;
+            this.btnBYX示教第二列.Tag = "PlcInIO[80]";
             this.btnBYX示教第二列.Text = "第二列";
             this.btnBYX示教第二列.UseVisualStyleBackColor = true;
-            this.btnBYX示教第二列.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnBYX示教第二列_MouseDown);
-            this.btnBYX示教第二列.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnBYX示教第二列_MouseUp);
+            this.btnBYX示教第二列.Click += new System.EventHandler(this.BTN示教1_Click);
             // 
             // label404
             // 
@@ -13223,10 +13223,10 @@
             this.btnBYX示教第一列.Name = "btnBYX示教第一列";
             this.btnBYX示教第一列.Size = new System.Drawing.Size(110, 24);
             this.btnBYX示教第一列.TabIndex = 73;
+            this.btnBYX示教第一列.Tag = "PlcInIO[79]";
             this.btnBYX示教第一列.Text = "第一列";
             this.btnBYX示教第一列.UseVisualStyleBackColor = true;
-            this.btnBYX示教第一列.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnBYX示教第一列_MouseDown);
-            this.btnBYX示教第一列.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnBYX示教第一列_MouseUp);
+            this.btnBYX示教第一列.Click += new System.EventHandler(this.BTN示教1_Click);
             // 
             // label409
             // 
@@ -13255,10 +13255,10 @@
             this.btnBYX示教上料位置.Name = "btnBYX示教上料位置";
             this.btnBYX示教上料位置.Size = new System.Drawing.Size(110, 24);
             this.btnBYX示教上料位置.TabIndex = 67;
+            this.btnBYX示教上料位置.Tag = "PlcInIO[76]";
             this.btnBYX示教上料位置.Text = "上料位置";
             this.btnBYX示教上料位置.UseVisualStyleBackColor = true;
-            this.btnBYX示教上料位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnBYX示教上料位置_MouseDown);
-            this.btnBYX示教上料位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnBYX示教上料位置_MouseUp);
+            this.btnBYX示教上料位置.Click += new System.EventHandler(this.BTN示教1_Click);
             // 
             // txtBYX示教当前位置
             // 
@@ -13333,10 +13333,10 @@
             this.btn倒NG盘示教初始位置.Name = "btn倒NG盘示教初始位置";
             this.btn倒NG盘示教初始位置.Size = new System.Drawing.Size(100, 24);
             this.btn倒NG盘示教初始位置.TabIndex = 44;
+            this.btn倒NG盘示教初始位置.Tag = "PlcInIO[63]";
             this.btn倒NG盘示教初始位置.Text = "初始位置";
             this.btn倒NG盘示教初始位置.UseVisualStyleBackColor = true;
-            this.btn倒NG盘示教初始位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn倒NG盘示教初始位置_MouseDown);
-            this.btn倒NG盘示教初始位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn倒NG盘示教初始位置_MouseUp);
+            this.btn倒NG盘示教初始位置.Click += new System.EventHandler(this.BTN示教1_Click);
             // 
             // label400
             // 
@@ -13402,10 +13402,10 @@
             this.btnNG盘示教初始位置.Name = "btnNG盘示教初始位置";
             this.btnNG盘示教初始位置.Size = new System.Drawing.Size(100, 24);
             this.btnNG盘示教初始位置.TabIndex = 44;
+            this.btnNG盘示教初始位置.Tag = "PlcInIO[61]";
             this.btnNG盘示教初始位置.Text = "初始位置";
             this.btnNG盘示教初始位置.UseVisualStyleBackColor = true;
-            this.btnNG盘示教初始位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnNG盘示教初始位置_MouseDown);
-            this.btnNG盘示教初始位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnNG盘示教初始位置_MouseUp);
+            this.btnNG盘示教初始位置.Click += new System.EventHandler(this.BTN示教1_Click);
             // 
             // label397
             // 
@@ -13471,10 +13471,10 @@
             this.btn实盘示教初始位置.Name = "btn实盘示教初始位置";
             this.btn实盘示教初始位置.Size = new System.Drawing.Size(100, 24);
             this.btn实盘示教初始位置.TabIndex = 44;
+            this.btn实盘示教初始位置.Tag = "PlcInIO[56]";
             this.btn实盘示教初始位置.Text = "初始位置";
             this.btn实盘示教初始位置.UseVisualStyleBackColor = true;
-            this.btn实盘示教初始位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn实盘示教初始位置_MouseDown);
-            this.btn实盘示教初始位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn实盘示教初始位置_MouseUp);
+            this.btn实盘示教初始位置.Click += new System.EventHandler(this.BTN示教1_Click);
             // 
             // label407
             // 
@@ -13549,10 +13549,10 @@
             this.btnY示教下视觉2位置.Name = "btnY示教下视觉2位置";
             this.btnY示教下视觉2位置.Size = new System.Drawing.Size(130, 24);
             this.btnY示教下视觉2位置.TabIndex = 97;
+            this.btnY示教下视觉2位置.Tag = "PlcInIO[55]";
             this.btnY示教下视觉2位置.Text = "吸嘴1下视觉位置";
             this.btnY示教下视觉2位置.UseVisualStyleBackColor = true;
-            this.btnY示教下视觉2位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnY示教下视觉2位置_MouseDown);
-            this.btnY示教下视觉2位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnY示教下视觉2位置_MouseUp);
+            this.btnY示教下视觉2位置.Click += new System.EventHandler(this.BTN示教1_Click);
             // 
             // label490
             // 
@@ -13581,10 +13581,10 @@
             this.btnY示教视觉倒实盘第一列.Name = "btnY示教视觉倒实盘第一列";
             this.btnY示教视觉倒实盘第一列.Size = new System.Drawing.Size(130, 24);
             this.btnY示教视觉倒实盘第一列.TabIndex = 94;
+            this.btnY示教视觉倒实盘第一列.Tag = "PlcInIO[193]";
             this.btnY示教视觉倒实盘第一列.Text = "上视觉NG盘第一行";
             this.btnY示教视觉倒实盘第一列.UseVisualStyleBackColor = true;
-            this.btnY示教视觉倒实盘第一列.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnY示教视觉倒实盘第一列_MouseDown);
-            this.btnY示教视觉倒实盘第一列.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnY示教视觉倒实盘第一列_MouseUp);
+            this.btnY示教视觉倒实盘第一列.Click += new System.EventHandler(this.BTN示教1_Click);
             // 
             // label491
             // 
@@ -13613,10 +13613,10 @@
             this.btnY示教视觉实盘第一列.Name = "btnY示教视觉实盘第一列";
             this.btnY示教视觉实盘第一列.Size = new System.Drawing.Size(130, 24);
             this.btnY示教视觉实盘第一列.TabIndex = 91;
+            this.btnY示教视觉实盘第一列.Tag = "PlcInIO[191]";
             this.btnY示教视觉实盘第一列.Text = "上视觉实盘第一行";
             this.btnY示教视觉实盘第一列.UseVisualStyleBackColor = true;
-            this.btnY示教视觉实盘第一列.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnY示教视觉实盘第一列_MouseDown);
-            this.btnY示教视觉实盘第一列.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnY示教视觉实盘第一列_MouseUp);
+            this.btnY示教视觉实盘第一列.Click += new System.EventHandler(this.BTN示教1_Click);
             // 
             // label388
             // 
@@ -13645,10 +13645,10 @@
             this.btnY示教吸2NG盘第一行.Name = "btnY示教吸2NG盘第一行";
             this.btnY示教吸2NG盘第一行.Size = new System.Drawing.Size(130, 24);
             this.btnY示教吸2NG盘第一行.TabIndex = 64;
+            this.btnY示教吸2NG盘第一行.Tag = "PlcInIO[43]";
             this.btnY示教吸2NG盘第一行.Text = "吸嘴2NG盘第一行";
             this.btnY示教吸2NG盘第一行.UseVisualStyleBackColor = true;
-            this.btnY示教吸2NG盘第一行.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnY示教吸2NG盘第一行_MouseDown);
-            this.btnY示教吸2NG盘第一行.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnY示教吸2NG盘第一行_MouseUp);
+            this.btnY示教吸2NG盘第一行.Click += new System.EventHandler(this.BTN示教1_Click);
             // 
             // label389
             // 
@@ -13677,10 +13677,10 @@
             this.btnY示教吸1NG盘第一行.Name = "btnY示教吸1NG盘第一行";
             this.btnY示教吸1NG盘第一行.Size = new System.Drawing.Size(130, 24);
             this.btnY示教吸1NG盘第一行.TabIndex = 61;
+            this.btnY示教吸1NG盘第一行.Tag = "PlcInIO[41]";
             this.btnY示教吸1NG盘第一行.Text = "吸嘴1NG盘第一行";
             this.btnY示教吸1NG盘第一行.UseVisualStyleBackColor = true;
-            this.btnY示教吸1NG盘第一行.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnY示教吸1NG盘第一行_MouseDown);
-            this.btnY示教吸1NG盘第一行.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnY示教吸1NG盘第一行_MouseUp);
+            this.btnY示教吸1NG盘第一行.Click += new System.EventHandler(this.BTN示教1_Click);
             // 
             // label392
             // 
@@ -13709,10 +13709,10 @@
             this.btnY示教吸2实盘第一行.Name = "btnY示教吸2实盘第一行";
             this.btnY示教吸2实盘第一行.Size = new System.Drawing.Size(130, 24);
             this.btnY示教吸2实盘第一行.TabIndex = 52;
+            this.btnY示教吸2实盘第一行.Tag = "PlcInIO[33]";
             this.btnY示教吸2实盘第一行.Text = "吸嘴2实盘第一行";
             this.btnY示教吸2实盘第一行.UseVisualStyleBackColor = true;
-            this.btnY示教吸2实盘第一行.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnY示教吸2实盘第一行_MouseDown);
-            this.btnY示教吸2实盘第一行.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnY示教吸2实盘第一行_MouseUp);
+            this.btnY示教吸2实盘第一行.Click += new System.EventHandler(this.BTN示教1_Click);
             // 
             // label393
             // 
@@ -13750,10 +13750,10 @@
             this.btnY示教吸1实盘第一行.Name = "btnY示教吸1实盘第一行";
             this.btnY示教吸1实盘第一行.Size = new System.Drawing.Size(130, 24);
             this.btnY示教吸1实盘第一行.TabIndex = 44;
+            this.btnY示教吸1实盘第一行.Tag = "PlcInIO[31]";
             this.btnY示教吸1实盘第一行.Text = "吸嘴1实盘第一行";
             this.btnY示教吸1实盘第一行.UseVisualStyleBackColor = true;
-            this.btnY示教吸1实盘第一行.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnY示教吸1实盘第一行_MouseDown);
-            this.btnY示教吸1实盘第一行.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnY示教吸1实盘第一行_MouseUp);
+            this.btnY示教吸1实盘第一行.Click += new System.EventHandler(this.BTN示教1_Click);
             // 
             // label394
             // 
@@ -13819,10 +13819,10 @@
             this.btnX示教下视觉2位置.Name = "btnX示教下视觉2位置";
             this.btnX示教下视觉2位置.Size = new System.Drawing.Size(113, 24);
             this.btnX示教下视觉2位置.TabIndex = 91;
+            this.btnX示教下视觉2位置.Tag = "PlcInIO[44]";
             this.btnX示教下视觉2位置.Text = "下视觉位置";
             this.btnX示教下视觉2位置.UseVisualStyleBackColor = true;
-            this.btnX示教下视觉2位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnX示教下视觉2位置_MouseDown);
-            this.btnX示教下视觉2位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnX示教下视觉2位置_MouseUp);
+            this.btnX示教下视觉2位置.Click += new System.EventHandler(this.BTN示教1_Click);
             // 
             // label488
             // 
@@ -13851,10 +13851,10 @@
             this.btnX示教视觉实盘第一列.Name = "btnX示教视觉实盘第一列";
             this.btnX示教视觉实盘第一列.Size = new System.Drawing.Size(113, 24);
             this.btnX示教视觉实盘第一列.TabIndex = 85;
+            this.btnX示教视觉实盘第一列.Tag = "PlcInIO[190]";
             this.btnX示教视觉实盘第一列.Text = "上视觉第一列";
             this.btnX示教视觉实盘第一列.UseVisualStyleBackColor = true;
-            this.btnX示教视觉实盘第一列.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnX示教视觉实盘第一列_MouseDown);
-            this.btnX示教视觉实盘第一列.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnX示教视觉实盘第一列_MouseUp);
+            this.btnX示教视觉实盘第一列.Click += new System.EventHandler(this.BTN示教1_Click);
             // 
             // label380
             // 
@@ -13883,10 +13883,10 @@
             this.btnX示教夹爪位置.Name = "btnX示教夹爪位置";
             this.btnX示教夹爪位置.Size = new System.Drawing.Size(113, 24);
             this.btnX示教夹爪位置.TabIndex = 79;
+            this.btnX示教夹爪位置.Tag = "PlcInIO[38]";
             this.btnX示教夹爪位置.Text = "增广夹爪位置";
             this.btnX示教夹爪位置.UseVisualStyleBackColor = true;
-            this.btnX示教夹爪位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnX示教夹爪位置_MouseDown);
-            this.btnX示教夹爪位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnX示教夹爪位置_MouseUp);
+            this.btnX示教夹爪位置.Click += new System.EventHandler(this.BTN示教1_Click);
             // 
             // label369
             // 
@@ -13924,10 +13924,10 @@
             this.btnX示教吸1实盘第一列.Name = "btnX示教吸1实盘第一列";
             this.btnX示教吸1实盘第一列.Size = new System.Drawing.Size(113, 24);
             this.btnX示教吸1实盘第一列.TabIndex = 44;
+            this.btnX示教吸1实盘第一列.Tag = "PlcInIO[30]";
             this.btnX示教吸1实盘第一列.Text = "吸嘴实盘第一列";
             this.btnX示教吸1实盘第一列.UseVisualStyleBackColor = true;
-            this.btnX示教吸1实盘第一列.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnX示教吸1实盘第一列_MouseDown);
-            this.btnX示教吸1实盘第一列.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnX示教吸1实盘第一列_MouseUp);
+            this.btnX示教吸1实盘第一列.Click += new System.EventHandler(this.BTN示教1_Click);
             // 
             // label370
             // 
@@ -14032,10 +14032,10 @@
             this.btn夹爪2与夹爪1位置确认.Name = "btn夹爪2与夹爪1位置确认";
             this.btn夹爪2与夹爪1位置确认.Size = new System.Drawing.Size(78, 24);
             this.btn夹爪2与夹爪1位置确认.TabIndex = 67;
+            this.btn夹爪2与夹爪1位置确认.Tag = "PlcInIO[643]";
             this.btn夹爪2与夹爪1位置确认.Text = "点击确认";
             this.btn夹爪2与夹爪1位置确认.UseVisualStyleBackColor = true;
-            this.btn夹爪2与夹爪1位置确认.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn夹爪2与夹爪1位置确认_MouseDown);
-            this.btn夹爪2与夹爪1位置确认.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn夹爪2与夹爪1位置确认_MouseUp);
+            this.btn夹爪2与夹爪1位置确认.Click += new System.EventHandler(this.BTN示教2_Click);
             // 
             // groupBox49
             // 
@@ -14115,10 +14115,10 @@
             this.btnBYY示教视觉4位置.Name = "btnBYY示教视觉4位置";
             this.btnBYY示教视觉4位置.Size = new System.Drawing.Size(110, 24);
             this.btnBYY示教视觉4位置.TabIndex = 106;
+            this.btnBYY示教视觉4位置.Tag = "PlcInIO[107]";
             this.btnBYY示教视觉4位置.Text = "上视觉产品2位置";
             this.btnBYY示教视觉4位置.UseVisualStyleBackColor = true;
-            this.btnBYY示教视觉4位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnBYY示教视觉4位置_MouseDown);
-            this.btnBYY示教视觉4位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnBYY示教视觉4位置_MouseUp);
+            this.btnBYY示教视觉4位置.Click += new System.EventHandler(this.BTN示教2_Click);
             // 
             // label467
             // 
@@ -14139,10 +14139,10 @@
             this.btnBYY示教视觉6位置.Name = "btnBYY示教视觉6位置";
             this.btnBYY示教视觉6位置.Size = new System.Drawing.Size(110, 24);
             this.btnBYY示教视觉6位置.TabIndex = 112;
+            this.btnBYY示教视觉6位置.Tag = "PlcInIO[99]";
             this.btnBYY示教视觉6位置.Text = "下视觉夹爪4位置";
             this.btnBYY示教视觉6位置.UseVisualStyleBackColor = true;
-            this.btnBYY示教视觉6位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnBYY示教视觉6位置_MouseDown);
-            this.btnBYY示教视觉6位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnBYY示教视觉6位置_MouseUp);
+            this.btnBYY示教视觉6位置.Click += new System.EventHandler(this.BTN示教2_Click);
             // 
             // txtBYY示教视觉3位置
             // 
@@ -14160,10 +14160,10 @@
             this.btnBYY示教视觉3位置.Name = "btnBYY示教视觉3位置";
             this.btnBYY示教视觉3位置.Size = new System.Drawing.Size(110, 24);
             this.btnBYY示教视觉3位置.TabIndex = 103;
+            this.btnBYY示教视觉3位置.Tag = "PlcInIO[106]";
             this.btnBYY示教视觉3位置.Text = "上视觉产品1位置";
             this.btnBYY示教视觉3位置.UseVisualStyleBackColor = true;
-            this.btnBYY示教视觉3位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnBYY示教视觉3位置_MouseDown);
-            this.btnBYY示教视觉3位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnBYY示教视觉3位置_MouseUp);
+            this.btnBYY示教视觉3位置.Click += new System.EventHandler(this.BTN示教2_Click);
             // 
             // label244
             // 
@@ -14212,10 +14212,10 @@
             this.btnBYY示教视觉1位置.Name = "btnBYY示教视觉1位置";
             this.btnBYY示教视觉1位置.Size = new System.Drawing.Size(110, 24);
             this.btnBYY示教视觉1位置.TabIndex = 97;
+            this.btnBYY示教视觉1位置.Tag = "PlcInIO[101]";
             this.btnBYY示教视觉1位置.Text = "下视觉夹爪1位置";
             this.btnBYY示教视觉1位置.UseVisualStyleBackColor = true;
-            this.btnBYY示教视觉1位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnBYY示教视觉1位置_MouseDown);
-            this.btnBYY示教视觉1位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnBYY示教视觉1位置_MouseUp);
+            this.btnBYY示教视觉1位置.Click += new System.EventHandler(this.BTN示教2_Click);
             // 
             // btnBYY示教视觉2位置
             // 
@@ -14225,10 +14225,10 @@
             this.btnBYY示教视觉2位置.Name = "btnBYY示教视觉2位置";
             this.btnBYY示教视觉2位置.Size = new System.Drawing.Size(110, 24);
             this.btnBYY示教视觉2位置.TabIndex = 100;
+            this.btnBYY示教视觉2位置.Tag = "PlcInIO[102]";
             this.btnBYY示教视觉2位置.Text = "下视觉夹爪2位置";
             this.btnBYY示教视觉2位置.UseVisualStyleBackColor = true;
-            this.btnBYY示教视觉2位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnBYY示教视觉2位置_MouseDown);
-            this.btnBYY示教视觉2位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnBYY示教视觉2位置_MouseUp);
+            this.btnBYY示教视觉2位置.Click += new System.EventHandler(this.BTN示教2_Click);
             // 
             // btnBYY示教视觉5位置
             // 
@@ -14238,10 +14238,10 @@
             this.btnBYY示教视觉5位置.Name = "btnBYY示教视觉5位置";
             this.btnBYY示教视觉5位置.Size = new System.Drawing.Size(110, 24);
             this.btnBYY示教视觉5位置.TabIndex = 109;
+            this.btnBYY示教视觉5位置.Tag = "PlcInIO[98]";
             this.btnBYY示教视觉5位置.Text = "下视觉夹爪3位置";
             this.btnBYY示教视觉5位置.UseVisualStyleBackColor = true;
-            this.btnBYY示教视觉5位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnBYY示教视觉5位置_MouseDown);
-            this.btnBYY示教视觉5位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnBYY示教视觉5位置_MouseUp);
+            this.btnBYY示教视觉5位置.Click += new System.EventHandler(this.BTN示教2_Click);
             // 
             // txtBYY示教视觉2位置
             // 
@@ -14328,10 +14328,10 @@
             this.btnBYX示教视觉2位置.Name = "btnBYX示教视觉2位置";
             this.btnBYX示教视觉2位置.Size = new System.Drawing.Size(78, 24);
             this.btnBYX示教视觉2位置.TabIndex = 103;
+            this.btnBYX示教视觉2位置.Tag = "PlcInIO[78]";
             this.btnBYX示教视觉2位置.Text = "下视觉位置";
             this.btnBYX示教视觉2位置.UseVisualStyleBackColor = true;
-            this.btnBYX示教视觉2位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnBYX示教视觉2位置_MouseDown);
-            this.btnBYX示教视觉2位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnBYX示教视觉2位置_MouseUp);
+            this.btnBYX示教视觉2位置.Click += new System.EventHandler(this.BTN示教2_Click);
             // 
             // label408
             // 
@@ -14360,10 +14360,10 @@
             this.btnBYX示教视觉1位置.Name = "btnBYX示教视觉1位置";
             this.btnBYX示教视觉1位置.Size = new System.Drawing.Size(79, 24);
             this.btnBYX示教视觉1位置.TabIndex = 100;
+            this.btnBYX示教视觉1位置.Tag = "PlcInIO[77]";
             this.btnBYX示教视觉1位置.Text = "上视觉位置";
             this.btnBYX示教视觉1位置.UseVisualStyleBackColor = true;
-            this.btnBYX示教视觉1位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnBYX示教视觉1位置_MouseDown);
-            this.btnBYX示教视觉1位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnBYX示教视觉1位置_MouseUp);
+            this.btnBYX示教视觉1位置.Click += new System.EventHandler(this.BTN示教2_Click);
             // 
             // txtBYX示教固定当前位置
             // 
@@ -14429,10 +14429,10 @@
             this.btnBYZ示教上升位置.Name = "btnBYZ示教上升位置";
             this.btnBYZ示教上升位置.Size = new System.Drawing.Size(86, 24);
             this.btnBYZ示教上升位置.TabIndex = 73;
+            this.btnBYZ示教上升位置.Tag = "PlcInIO[110]";
             this.btnBYZ示教上升位置.Text = "上升位置";
             this.btnBYZ示教上升位置.UseVisualStyleBackColor = true;
-            this.btnBYZ示教上升位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnBYZ示教上升位置_MouseDown);
-            this.btnBYZ示教上升位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnBYZ示教上升位置_MouseUp);
+            this.btnBYZ示教上升位置.Click += new System.EventHandler(this.BTN示教2_Click);
             // 
             // txtBYZ示教固定当前位置
             // 
@@ -14513,10 +14513,10 @@
             this.btnY示教扫码位置.Name = "btnY示教扫码位置";
             this.btnY示教扫码位置.Size = new System.Drawing.Size(90, 24);
             this.btnY示教扫码位置.TabIndex = 100;
+            this.btnY示教扫码位置.Tag = "PlcInIO[50]";
             this.btnY示教扫码位置.Text = "托盘扫码位置";
             this.btnY示教扫码位置.UseVisualStyleBackColor = true;
-            this.btnY示教扫码位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnY示教扫码位置_MouseDown);
-            this.btnY示教扫码位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnY示教扫码位置_MouseUp);
+            this.btnY示教扫码位置.Click += new System.EventHandler(this.BTN示教2_Click);
             // 
             // label383
             // 
@@ -14545,10 +14545,10 @@
             this.btnY示教夹爪位置.Name = "btnY示教夹爪位置";
             this.btnY示教夹爪位置.Size = new System.Drawing.Size(90, 24);
             this.btnY示教夹爪位置.TabIndex = 97;
+            this.btnY示教夹爪位置.Tag = "PlcInIO[49]";
             this.btnY示教夹爪位置.Text = "增广夹爪位置";
             this.btnY示教夹爪位置.UseVisualStyleBackColor = true;
-            this.btnY示教夹爪位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnY示教夹爪位置_MouseDown);
-            this.btnY示教夹爪位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnY示教夹爪位置_MouseUp);
+            this.btnY示教夹爪位置.Click += new System.EventHandler(this.BTN示教2_Click);
             // 
             // label384
             // 
@@ -14577,10 +14577,10 @@
             this.btnY示教倒NG盘位置.Name = "btnY示教倒NG盘位置";
             this.btnY示教倒NG盘位置.Size = new System.Drawing.Size(90, 24);
             this.btnY示教倒NG盘位置.TabIndex = 94;
+            this.btnY示教倒NG盘位置.Tag = "PlcInIO[48]";
             this.btnY示教倒NG盘位置.Text = "倒NG盘位置";
             this.btnY示教倒NG盘位置.UseVisualStyleBackColor = true;
-            this.btnY示教倒NG盘位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnY示教倒NG盘位置_MouseDown);
-            this.btnY示教倒NG盘位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnY示教倒NG盘位置_MouseUp);
+            this.btnY示教倒NG盘位置.Click += new System.EventHandler(this.BTN示教2_Click);
             // 
             // label385
             // 
@@ -14609,10 +14609,10 @@
             this.btnY示教NG盘位置.Name = "btnY示教NG盘位置";
             this.btnY示教NG盘位置.Size = new System.Drawing.Size(90, 24);
             this.btnY示教NG盘位置.TabIndex = 91;
+            this.btnY示教NG盘位置.Tag = "PlcInIO[47]";
             this.btnY示教NG盘位置.Text = "NG盘位置";
             this.btnY示教NG盘位置.UseVisualStyleBackColor = true;
-            this.btnY示教NG盘位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnY示教NG盘位置_MouseDown);
-            this.btnY示教NG盘位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnY示教NG盘位置_MouseUp);
+            this.btnY示教NG盘位置.Click += new System.EventHandler(this.BTN示教2_Click);
             // 
             // label386
             // 
@@ -14641,10 +14641,10 @@
             this.btnY示教倒实盘位置.Name = "btnY示教倒实盘位置";
             this.btnY示教倒实盘位置.Size = new System.Drawing.Size(90, 24);
             this.btnY示教倒实盘位置.TabIndex = 88;
+            this.btnY示教倒实盘位置.Tag = "PlcInIO[46]";
             this.btnY示教倒实盘位置.Text = "倒实盘位置";
             this.btnY示教倒实盘位置.UseVisualStyleBackColor = true;
-            this.btnY示教倒实盘位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnY示教倒实盘位置_MouseDown);
-            this.btnY示教倒实盘位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnY示教倒实盘位置_MouseUp);
+            this.btnY示教倒实盘位置.Click += new System.EventHandler(this.BTN示教2_Click);
             // 
             // label387
             // 
@@ -14673,10 +14673,10 @@
             this.btnY示教实盘位置.Name = "btnY示教实盘位置";
             this.btnY示教实盘位置.Size = new System.Drawing.Size(90, 24);
             this.btnY示教实盘位置.TabIndex = 85;
+            this.btnY示教实盘位置.Tag = "PlcInIO[45]";
             this.btnY示教实盘位置.Text = "实盘位置";
             this.btnY示教实盘位置.UseVisualStyleBackColor = true;
-            this.btnY示教实盘位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnY示教实盘位置_MouseDown);
-            this.btnY示教实盘位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnY示教实盘位置_MouseUp);
+            this.btnY示教实盘位置.Click += new System.EventHandler(this.BTN示教2_Click);
             // 
             // txtY示教固定当前位置
             // 
@@ -14774,10 +14774,10 @@
             this.btnX示教扫码位置.Name = "btnX示教扫码位置";
             this.btnX示教扫码位置.Size = new System.Drawing.Size(90, 24);
             this.btnX示教扫码位置.TabIndex = 97;
+            this.btnX示教扫码位置.Tag = "PlcInIO[39]";
             this.btnX示教扫码位置.Text = "托盘扫码位置";
             this.btnX示教扫码位置.UseVisualStyleBackColor = true;
-            this.btnX示教扫码位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnX示教扫码位置_MouseDown);
-            this.btnX示教扫码位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnX示教扫码位置_MouseUp);
+            this.btnX示教扫码位置.Click += new System.EventHandler(this.BTN示教2_Click);
             // 
             // label379
             // 
@@ -14806,10 +14806,10 @@
             this.btnX示教倒NG盘位置.Name = "btnX示教倒NG盘位置";
             this.btnX示教倒NG盘位置.Size = new System.Drawing.Size(90, 24);
             this.btnX示教倒NG盘位置.TabIndex = 94;
+            this.btnX示教倒NG盘位置.Tag = "PlcInIO[37]";
             this.btnX示教倒NG盘位置.Text = "倒NG盘位置";
             this.btnX示教倒NG盘位置.UseVisualStyleBackColor = true;
-            this.btnX示教倒NG盘位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnX示教倒NG盘位置_MouseDown);
-            this.btnX示教倒NG盘位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnX示教倒NG盘位置_MouseUp);
+            this.btnX示教倒NG盘位置.Click += new System.EventHandler(this.BTN示教2_Click);
             // 
             // label378
             // 
@@ -14838,10 +14838,10 @@
             this.btnX示教NG盘位置.Name = "btnX示教NG盘位置";
             this.btnX示教NG盘位置.Size = new System.Drawing.Size(90, 24);
             this.btnX示教NG盘位置.TabIndex = 91;
+            this.btnX示教NG盘位置.Tag = "PlcInIO[36]";
             this.btnX示教NG盘位置.Text = "NG盘位置";
             this.btnX示教NG盘位置.UseVisualStyleBackColor = true;
-            this.btnX示教NG盘位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnX示教NG盘位置_MouseDown);
-            this.btnX示教NG盘位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnX示教NG盘位置_MouseUp);
+            this.btnX示教NG盘位置.Click += new System.EventHandler(this.BTN示教2_Click);
             // 
             // label377
             // 
@@ -14870,10 +14870,10 @@
             this.btnX示教倒实盘位置.Name = "btnX示教倒实盘位置";
             this.btnX示教倒实盘位置.Size = new System.Drawing.Size(90, 24);
             this.btnX示教倒实盘位置.TabIndex = 88;
+            this.btnX示教倒实盘位置.Tag = "PlcInIO[35]";
             this.btnX示教倒实盘位置.Text = "倒实盘位置";
             this.btnX示教倒实盘位置.UseVisualStyleBackColor = true;
-            this.btnX示教倒实盘位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnX示教倒实盘位置_MouseDown);
-            this.btnX示教倒实盘位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnX示教倒实盘位置_MouseUp);
+            this.btnX示教倒实盘位置.Click += new System.EventHandler(this.BTN示教2_Click);
             // 
             // label376
             // 
@@ -14902,10 +14902,10 @@
             this.btnX示教实盘位置.Name = "btnX示教实盘位置";
             this.btnX示教实盘位置.Size = new System.Drawing.Size(90, 24);
             this.btnX示教实盘位置.TabIndex = 85;
+            this.btnX示教实盘位置.Tag = "PlcInIO[34]";
             this.btnX示教实盘位置.Text = "实盘位置";
             this.btnX示教实盘位置.UseVisualStyleBackColor = true;
-            this.btnX示教实盘位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnX示教实盘位置_MouseDown);
-            this.btnX示教实盘位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnX示教实盘位置_MouseUp);
+            this.btnX示教实盘位置.Click += new System.EventHandler(this.BTN示教2_Click);
             // 
             // groupBox64
             // 
@@ -14960,10 +14960,10 @@
             this.btn平移示教中转位置2.Name = "btn平移示教中转位置2";
             this.btn平移示教中转位置2.Size = new System.Drawing.Size(118, 24);
             this.btn平移示教中转位置2.TabIndex = 76;
+            this.btn平移示教中转位置2.Tag = "PlcInIO[74]";
             this.btn平移示教中转位置2.Text = "搬运平移中转位置2";
             this.btn平移示教中转位置2.UseVisualStyleBackColor = true;
-            this.btn平移示教中转位置2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn平移示教中转位置2_MouseDown);
-            this.btn平移示教中转位置2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn平移示教中转位置2_MouseUp);
+            this.btn平移示教中转位置2.Click += new System.EventHandler(this.BTN示教2_Click);
             // 
             // label480
             // 
@@ -14992,10 +14992,10 @@
             this.btn平移示教中转位置.Name = "btn平移示教中转位置";
             this.btn平移示教中转位置.Size = new System.Drawing.Size(118, 24);
             this.btn平移示教中转位置.TabIndex = 73;
+            this.btn平移示教中转位置.Tag = "PlcInIO[73]";
             this.btn平移示教中转位置.Text = "搬运平移中转位置1";
             this.btn平移示教中转位置.UseVisualStyleBackColor = true;
-            this.btn平移示教中转位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn平移示教中转位置_MouseDown);
-            this.btn平移示教中转位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn平移示教中转位置_MouseUp);
+            this.btn平移示教中转位置.Click += new System.EventHandler(this.BTN示教2_Click);
             // 
             // label481
             // 
@@ -15024,10 +15024,10 @@
             this.btn平移示教下料位置.Name = "btn平移示教下料位置";
             this.btn平移示教下料位置.Size = new System.Drawing.Size(118, 24);
             this.btn平移示教下料位置.TabIndex = 70;
+            this.btn平移示教下料位置.Tag = "PlcInIO[72]";
             this.btn平移示教下料位置.Text = "搬运平移下料位置";
             this.btn平移示教下料位置.UseVisualStyleBackColor = true;
-            this.btn平移示教下料位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn平移示教下料位置_MouseDown);
-            this.btn平移示教下料位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn平移示教下料位置_MouseUp);
+            this.btn平移示教下料位置.Click += new System.EventHandler(this.BTN示教2_Click);
             // 
             // label482
             // 
@@ -15056,10 +15056,10 @@
             this.btn平移示教上料位置.Name = "btn平移示教上料位置";
             this.btn平移示教上料位置.Size = new System.Drawing.Size(118, 24);
             this.btn平移示教上料位置.TabIndex = 67;
+            this.btn平移示教上料位置.Tag = "PlcInIO[71]";
             this.btn平移示教上料位置.Text = "搬运平移上料位置";
             this.btn平移示教上料位置.UseVisualStyleBackColor = true;
-            this.btn平移示教上料位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn平移示教上料位置_MouseDown);
-            this.btn平移示教上料位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn平移示教上料位置_MouseUp);
+            this.btn平移示教上料位置.Click += new System.EventHandler(this.BTN示教2_Click);
             // 
             // txt平移示教当前位置
             // 
@@ -15136,10 +15136,10 @@
             this.btnBYX示教矫正位置8.Name = "btnBYX示教矫正位置8";
             this.btnBYX示教矫正位置8.Size = new System.Drawing.Size(110, 24);
             this.btnBYX示教矫正位置8.TabIndex = 121;
+            this.btnBYX示教矫正位置8.Tag = "PlcInIO[642]";
             this.btnBYX示教矫正位置8.Text = "第八列偏差值";
             this.btnBYX示教矫正位置8.UseVisualStyleBackColor = true;
-            this.btnBYX示教矫正位置8.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnBYX示教矫正位置8_MouseDown);
-            this.btnBYX示教矫正位置8.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnBYX示教矫正位置8_MouseUp);
+            this.btnBYX示教矫正位置8.Click += new System.EventHandler(this.BTN示教2_Click);
             // 
             // txtBYX示教矫正位置8
             // 
@@ -15168,10 +15168,10 @@
             this.btnBYX示教矫正位置7.Name = "btnBYX示教矫正位置7";
             this.btnBYX示教矫正位置7.Size = new System.Drawing.Size(110, 24);
             this.btnBYX示教矫正位置7.TabIndex = 118;
+            this.btnBYX示教矫正位置7.Tag = "PlcInIO[641]";
             this.btnBYX示教矫正位置7.Text = "第七列偏差值";
             this.btnBYX示教矫正位置7.UseVisualStyleBackColor = true;
-            this.btnBYX示教矫正位置7.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnBYX示教矫正位置7_MouseDown);
-            this.btnBYX示教矫正位置7.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnBYX示教矫正位置7_MouseUp);
+            this.btnBYX示教矫正位置7.Click += new System.EventHandler(this.BTN示教2_Click);
             // 
             // txtBYX示教矫正位置7
             // 
@@ -15200,10 +15200,10 @@
             this.btnBYX示教矫正位置6.Name = "btnBYX示教矫正位置6";
             this.btnBYX示教矫正位置6.Size = new System.Drawing.Size(110, 24);
             this.btnBYX示教矫正位置6.TabIndex = 115;
+            this.btnBYX示教矫正位置6.Tag = "PlcInIO[640]";
             this.btnBYX示教矫正位置6.Text = "第六列偏差值";
             this.btnBYX示教矫正位置6.UseVisualStyleBackColor = true;
-            this.btnBYX示教矫正位置6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnBYX示教矫正位置6_MouseDown);
-            this.btnBYX示教矫正位置6.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnBYX示教矫正位置6_MouseUp);
+            this.btnBYX示教矫正位置6.Click += new System.EventHandler(this.BTN示教2_Click);
             // 
             // txtBYX示教矫正位置6
             // 
@@ -15243,10 +15243,10 @@
             this.btnBYX示教矫正位置5.Name = "btnBYX示教矫正位置5";
             this.btnBYX示教矫正位置5.Size = new System.Drawing.Size(110, 24);
             this.btnBYX示教矫正位置5.TabIndex = 111;
+            this.btnBYX示教矫正位置5.Tag = "PlcInIO[639]";
             this.btnBYX示教矫正位置5.Text = "第五列偏差值";
             this.btnBYX示教矫正位置5.UseVisualStyleBackColor = true;
-            this.btnBYX示教矫正位置5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnBYX示教矫正位置5_MouseDown);
-            this.btnBYX示教矫正位置5.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnBYX示教矫正位置5_MouseUp);
+            this.btnBYX示教矫正位置5.Click += new System.EventHandler(this.BTN示教2_Click);
             // 
             // txtBYX示教矫正位置5
             // 
@@ -15264,10 +15264,10 @@
             this.btnBYX示教矫正位置4.Name = "btnBYX示教矫正位置4";
             this.btnBYX示教矫正位置4.Size = new System.Drawing.Size(110, 24);
             this.btnBYX示教矫正位置4.TabIndex = 112;
+            this.btnBYX示教矫正位置4.Tag = "PlcInIO[638]";
             this.btnBYX示教矫正位置4.Text = "第四列偏差值";
             this.btnBYX示教矫正位置4.UseVisualStyleBackColor = true;
-            this.btnBYX示教矫正位置4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnBYX示教矫正位置4_MouseDown);
-            this.btnBYX示教矫正位置4.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnBYX示教矫正位置4_MouseUp);
+            this.btnBYX示教矫正位置4.Click += new System.EventHandler(this.BTN示教2_Click);
             // 
             // txtBYX示教矫正位置4
             // 
@@ -15296,10 +15296,10 @@
             this.btnBYX示教矫正位置3.Name = "btnBYX示教矫正位置3";
             this.btnBYX示教矫正位置3.Size = new System.Drawing.Size(110, 24);
             this.btnBYX示教矫正位置3.TabIndex = 109;
+            this.btnBYX示教矫正位置3.Tag = "PlcInIO[637]";
             this.btnBYX示教矫正位置3.Text = "第三列偏差值";
             this.btnBYX示教矫正位置3.UseVisualStyleBackColor = true;
-            this.btnBYX示教矫正位置3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnBYX示教矫正位置3_MouseDown);
-            this.btnBYX示教矫正位置3.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnBYX示教矫正位置3_MouseUp);
+            this.btnBYX示教矫正位置3.Click += new System.EventHandler(this.BTN示教2_Click);
             // 
             // txtBYX示教矫正位置3
             // 
@@ -15328,10 +15328,10 @@
             this.btnBYX示教矫正位置2.Name = "btnBYX示教矫正位置2";
             this.btnBYX示教矫正位置2.Size = new System.Drawing.Size(110, 24);
             this.btnBYX示教矫正位置2.TabIndex = 106;
+            this.btnBYX示教矫正位置2.Tag = "PlcInIO[636]";
             this.btnBYX示教矫正位置2.Text = "第二列偏差值";
             this.btnBYX示教矫正位置2.UseVisualStyleBackColor = true;
-            this.btnBYX示教矫正位置2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnBYX示教矫正位置2_MouseDown);
-            this.btnBYX示教矫正位置2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnBYX示教矫正位置2_MouseUp);
+            this.btnBYX示教矫正位置2.Click += new System.EventHandler(this.BTN示教2_Click);
             // 
             // txtBYX示教矫正位置2
             // 
@@ -15360,10 +15360,10 @@
             this.btnBYX示教矫正位置.Name = "btnBYX示教矫正位置";
             this.btnBYX示教矫正位置.Size = new System.Drawing.Size(110, 24);
             this.btnBYX示教矫正位置.TabIndex = 103;
+            this.btnBYX示教矫正位置.Tag = "PlcInIO[635]";
             this.btnBYX示教矫正位置.Text = "第一列偏差值";
             this.btnBYX示教矫正位置.UseVisualStyleBackColor = true;
-            this.btnBYX示教矫正位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnBYX示教矫正位置_MouseDown_1);
-            this.btnBYX示教矫正位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnBYX示教矫正位置_MouseUp_1);
+            this.btnBYX示教矫正位置.Click += new System.EventHandler(this.BTN示教2_Click);
             // 
             // txtBYX示教矫正位置
             // 
@@ -15420,10 +15420,10 @@
             this.btnBk4示教35位置.Name = "btnBk4示教35位置";
             this.btnBk4示教35位置.Size = new System.Drawing.Size(78, 24);
             this.btnBk4示教35位置.TabIndex = 70;
+            this.btnBk4示教35位置.Tag = "PlcInIO[177]";
             this.btnBk4示教35位置.Text = "35°位置";
             this.btnBk4示教35位置.UseVisualStyleBackColor = true;
-            this.btnBk4示教35位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnBk4示教35位置_MouseDown);
-            this.btnBk4示教35位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnBk4示教35位置_MouseUp);
+            this.btnBk4示教35位置.Click += new System.EventHandler(this.BTN示教2_Click);
             // 
             // label461
             // 
@@ -15452,10 +15452,10 @@
             this.btnBk4示教20位置.Name = "btnBk4示教20位置";
             this.btnBk4示教20位置.Size = new System.Drawing.Size(78, 24);
             this.btnBk4示教20位置.TabIndex = 67;
+            this.btnBk4示教20位置.Tag = "PlcInIO[176]";
             this.btnBk4示教20位置.Text = "20°位置";
             this.btnBk4示教20位置.UseVisualStyleBackColor = true;
-            this.btnBk4示教20位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnBk4示教20位置_MouseDown);
-            this.btnBk4示教20位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnBk4示教20位置_MouseUp);
+            this.btnBk4示教20位置.Click += new System.EventHandler(this.BTN示教2_Click);
             // 
             // txtBk4示教当前位置
             // 
@@ -15524,10 +15524,10 @@
             this.btnBk3示教35位置.Name = "btnBk3示教35位置";
             this.btnBk3示教35位置.Size = new System.Drawing.Size(78, 24);
             this.btnBk3示教35位置.TabIndex = 70;
+            this.btnBk3示教35位置.Tag = "PlcInIO[172]";
             this.btnBk3示教35位置.Text = "35°位置";
             this.btnBk3示教35位置.UseVisualStyleBackColor = true;
-            this.btnBk3示教35位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnBk3示教35位置_MouseDown);
-            this.btnBk3示教35位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnBk3示教35位置_MouseUp);
+            this.btnBk3示教35位置.Click += new System.EventHandler(this.BTN示教2_Click);
             // 
             // label458
             // 
@@ -15556,10 +15556,10 @@
             this.btnBk3示教20位置.Name = "btnBk3示教20位置";
             this.btnBk3示教20位置.Size = new System.Drawing.Size(78, 24);
             this.btnBk3示教20位置.TabIndex = 67;
+            this.btnBk3示教20位置.Tag = "PlcInIO[171]";
             this.btnBk3示教20位置.Text = "20°位置";
             this.btnBk3示教20位置.UseVisualStyleBackColor = true;
-            this.btnBk3示教20位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnBk3示教20位置_MouseDown);
-            this.btnBk3示教20位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnBk3示教20位置_MouseUp);
+            this.btnBk3示教20位置.Click += new System.EventHandler(this.BTN示教2_Click);
             // 
             // txtBk3示教当前位置
             // 
@@ -15628,10 +15628,10 @@
             this.btnBk2示教35位置.Name = "btnBk2示教35位置";
             this.btnBk2示教35位置.Size = new System.Drawing.Size(78, 24);
             this.btnBk2示教35位置.TabIndex = 70;
+            this.btnBk2示教35位置.Tag = "PlcInIO[167]";
             this.btnBk2示教35位置.Text = "35°位置";
             this.btnBk2示教35位置.UseVisualStyleBackColor = true;
-            this.btnBk2示教35位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnBk2示教35位置_MouseDown);
-            this.btnBk2示教35位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnBk2示教35位置_MouseUp);
+            this.btnBk2示教35位置.Click += new System.EventHandler(this.BTN示教2_Click);
             // 
             // label452
             // 
@@ -15660,10 +15660,10 @@
             this.btnBk2示教20位置.Name = "btnBk2示教20位置";
             this.btnBk2示教20位置.Size = new System.Drawing.Size(78, 24);
             this.btnBk2示教20位置.TabIndex = 67;
+            this.btnBk2示教20位置.Tag = "PlcInIO[166]";
             this.btnBk2示教20位置.Text = "20°位置";
             this.btnBk2示教20位置.UseVisualStyleBackColor = true;
-            this.btnBk2示教20位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnBk2示教20位置_MouseDown);
-            this.btnBk2示教20位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnBk2示教20位置_MouseUp);
+            this.btnBk2示教20位置.Click += new System.EventHandler(this.BTN示教2_Click);
             // 
             // txtBk2示教当前位置
             // 
@@ -15732,10 +15732,10 @@
             this.btnBk1示教35位置.Name = "btnBk1示教35位置";
             this.btnBk1示教35位置.Size = new System.Drawing.Size(78, 24);
             this.btnBk1示教35位置.TabIndex = 70;
+            this.btnBk1示教35位置.Tag = "PlcInIO[162]";
             this.btnBk1示教35位置.Text = "35°位置";
             this.btnBk1示教35位置.UseVisualStyleBackColor = true;
-            this.btnBk1示教35位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnBk1示教35位置_MouseDown);
-            this.btnBk1示教35位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnBk1示教35位置_MouseUp);
+            this.btnBk1示教35位置.Click += new System.EventHandler(this.BTN示教2_Click);
             // 
             // label455
             // 
@@ -15764,10 +15764,10 @@
             this.btnBk1示教20位置.Name = "btnBk1示教20位置";
             this.btnBk1示教20位置.Size = new System.Drawing.Size(78, 24);
             this.btnBk1示教20位置.TabIndex = 67;
+            this.btnBk1示教20位置.Tag = "PlcInIO[161]";
             this.btnBk1示教20位置.Text = "20°位置";
             this.btnBk1示教20位置.UseVisualStyleBackColor = true;
-            this.btnBk1示教20位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnBk1示教20位置_MouseDown);
-            this.btnBk1示教20位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnBk1示教20位置_MouseUp);
+            this.btnBk1示教20位置.Click += new System.EventHandler(this.BTN示教2_Click);
             // 
             // txtBk1示教当前位置
             // 
@@ -15833,10 +15833,10 @@
             this.btnSk4示教翻转位置.Name = "btnSk4示教翻转位置";
             this.btnSk4示教翻转位置.Size = new System.Drawing.Size(78, 24);
             this.btnSk4示教翻转位置.TabIndex = 70;
+            this.btnSk4示教翻转位置.Tag = "PlcInIO[152]";
             this.btnSk4示教翻转位置.Text = "翻转位置";
             this.btnSk4示教翻转位置.UseVisualStyleBackColor = true;
-            this.btnSk4示教翻转位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnSk4示教翻转位置_MouseDown);
-            this.btnSk4示教翻转位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnSk4示教翻转位置_MouseUp);
+            this.btnSk4示教翻转位置.Click += new System.EventHandler(this.BTN示教2_Click);
             // 
             // txtSk4示教当前位置
             // 
@@ -15902,10 +15902,10 @@
             this.btnSk3示教翻转位置.Name = "btnSk3示教翻转位置";
             this.btnSk3示教翻转位置.Size = new System.Drawing.Size(78, 24);
             this.btnSk3示教翻转位置.TabIndex = 70;
+            this.btnSk3示教翻转位置.Tag = "PlcInIO[142]";
             this.btnSk3示教翻转位置.Text = "翻转位置";
             this.btnSk3示教翻转位置.UseVisualStyleBackColor = true;
-            this.btnSk3示教翻转位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnSk3示教翻转位置_MouseDown);
-            this.btnSk3示教翻转位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnSk3示教翻转位置_MouseUp);
+            this.btnSk3示教翻转位置.Click += new System.EventHandler(this.BTN示教2_Click);
             // 
             // txtSk3示教当前位置
             // 
@@ -15971,10 +15971,10 @@
             this.btnSk2示教翻转位置.Name = "btnSk2示教翻转位置";
             this.btnSk2示教翻转位置.Size = new System.Drawing.Size(78, 24);
             this.btnSk2示教翻转位置.TabIndex = 70;
+            this.btnSk2示教翻转位置.Tag = "PlcInIO[132]";
             this.btnSk2示教翻转位置.Text = "翻转位置";
             this.btnSk2示教翻转位置.UseVisualStyleBackColor = true;
-            this.btnSk2示教翻转位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnSk2示教翻转位置_MouseDown);
-            this.btnSk2示教翻转位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnSk2示教翻转位置_MouseUp);
+            this.btnSk2示教翻转位置.Click += new System.EventHandler(this.BTN示教2_Click);
             // 
             // txtSk2示教当前位置
             // 
@@ -16040,10 +16040,10 @@
             this.btnSk1示教翻转位置.Name = "btnSk1示教翻转位置";
             this.btnSk1示教翻转位置.Size = new System.Drawing.Size(78, 24);
             this.btnSk1示教翻转位置.TabIndex = 70;
+            this.btnSk1示教翻转位置.Tag = "PlcInIO[122]";
             this.btnSk1示教翻转位置.Text = "翻转位置";
             this.btnSk1示教翻转位置.UseVisualStyleBackColor = true;
-            this.btnSk1示教翻转位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnSk1示教翻转位置_MouseDown);
-            this.btnSk1示教翻转位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnSk1示教翻转位置_MouseUp);
+            this.btnSk1示教翻转位置.Click += new System.EventHandler(this.BTN示教2_Click);
             // 
             // txtSk1示教当前位置
             // 
