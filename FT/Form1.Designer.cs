@@ -77,6 +77,7 @@
             this.btn自动运行 = new System.Windows.Forms.Button();
             this.btn自动模式 = new System.Windows.Forms.Button();
             this.groupBox74 = new System.Windows.Forms.GroupBox();
+            this.btn上料产品对位NG报警跳过 = new System.Windows.Forms.Button();
             this.btn复检报警跳过 = new System.Windows.Forms.Button();
             this.btn穴位报警跳过 = new System.Windows.Forms.Button();
             this.label279 = new System.Windows.Forms.Label();
@@ -2461,6 +2462,7 @@
             // 
             // groupBox74
             // 
+            this.groupBox74.Controls.Add(this.btn上料产品对位NG报警跳过);
             this.groupBox74.Controls.Add(this.btn复检报警跳过);
             this.groupBox74.Controls.Add(this.btn穴位报警跳过);
             this.groupBox74.Controls.Add(this.label279);
@@ -2479,27 +2481,39 @@
             this.groupBox74.TabStop = false;
             this.groupBox74.Text = "功能设置";
             // 
+            // btn上料产品对位NG报警跳过
+            // 
+            this.btn上料产品对位NG报警跳过.BackColor = System.Drawing.SystemColors.Control;
+            this.btn上料产品对位NG报警跳过.Location = new System.Drawing.Point(3, 142);
+            this.btn上料产品对位NG报警跳过.Margin = new System.Windows.Forms.Padding(2);
+            this.btn上料产品对位NG报警跳过.Name = "btn上料产品对位NG报警跳过";
+            this.btn上料产品对位NG报警跳过.Size = new System.Drawing.Size(234, 24);
+            this.btn上料产品对位NG报警跳过.TabIndex = 124;
+            this.btn上料产品对位NG报警跳过.Text = "上料-产品对位NG报警跳过";
+            this.btn上料产品对位NG报警跳过.UseVisualStyleBackColor = true;
+            this.btn上料产品对位NG报警跳过.Click += new System.EventHandler(this.btn上料产品对位NG报警跳过_Click);
+            // 
             // btn复检报警跳过
             // 
             this.btn复检报警跳过.BackColor = System.Drawing.SystemColors.Control;
-            this.btn复检报警跳过.Location = new System.Drawing.Point(11, 178);
+            this.btn复检报警跳过.Location = new System.Drawing.Point(3, 214);
             this.btn复检报警跳过.Margin = new System.Windows.Forms.Padding(2);
             this.btn复检报警跳过.Name = "btn复检报警跳过";
-            this.btn复检报警跳过.Size = new System.Drawing.Size(217, 24);
+            this.btn复检报警跳过.Size = new System.Drawing.Size(234, 24);
             this.btn复检报警跳过.TabIndex = 123;
-            this.btn复检报警跳过.Text = "Socket放料复检NG 报警跳过";
+            this.btn复检报警跳过.Text = "测试-产品复检NG报警跳过";
             this.btn复检报警跳过.UseVisualStyleBackColor = true;
             this.btn复检报警跳过.Click += new System.EventHandler(this.btn复检报警跳过_Click);
             // 
             // btn穴位报警跳过
             // 
             this.btn穴位报警跳过.BackColor = System.Drawing.SystemColors.Control;
-            this.btn穴位报警跳过.Location = new System.Drawing.Point(11, 142);
+            this.btn穴位报警跳过.Location = new System.Drawing.Point(3, 178);
             this.btn穴位报警跳过.Margin = new System.Windows.Forms.Padding(2);
             this.btn穴位报警跳过.Name = "btn穴位报警跳过";
-            this.btn穴位报警跳过.Size = new System.Drawing.Size(217, 24);
+            this.btn穴位报警跳过.Size = new System.Drawing.Size(234, 24);
             this.btn穴位报警跳过.TabIndex = 122;
-            this.btn穴位报警跳过.Text = "托盘穴位对位NG 报警跳过";
+            this.btn穴位报警跳过.Text = "上料-托盘穴位对位NG报警跳过";
             this.btn穴位报警跳过.UseVisualStyleBackColor = true;
             this.btn穴位报警跳过.Click += new System.EventHandler(this.btn穴位报警跳过_Click);
             // 
@@ -2704,8 +2718,7 @@
             this.btn人工上下料.TabIndex = 22;
             this.btn人工上下料.Text = "上料X轴取托盘避让位置";
             this.btn人工上下料.UseVisualStyleBackColor = true;
-            this.btn人工上下料.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn人工上下料_MouseDown);
-            this.btn人工上下料.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn人工上下料_MouseUp);
+            this.btn人工上下料.Click += new System.EventHandler(this.btn人工上下料_Click);
             // 
             // button1
             // 
@@ -2718,8 +2731,7 @@
             this.button1.TabIndex = 55;
             this.button1.Text = "黑体1-4升降一键上升";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn黑体一键上升_MouseDown);
-            this.button1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn黑体一键上升_MouseUp);
+            this.button1.Click += new System.EventHandler(this.btn黑体一键上升_Click);
             // 
             // label97
             // 
@@ -10315,8 +10327,6 @@
             this.btn黑体一键上升.TabIndex = 54;
             this.btn黑体一键上升.Text = "黑体一键上升";
             this.btn黑体一键上升.UseVisualStyleBackColor = true;
-            this.btn黑体一键上升.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn黑体一键上升_MouseDown);
-            this.btn黑体一键上升.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn黑体一键上升_MouseUp);
             // 
             // btnBk1下行
             // 
@@ -14329,7 +14339,7 @@
             this.btnBYX示教视觉2位置.Size = new System.Drawing.Size(78, 24);
             this.btnBYX示教视觉2位置.TabIndex = 103;
             this.btnBYX示教视觉2位置.Tag = "PlcInIO[78]";
-            this.btnBYX示教视觉2位置.Text = "下视觉位置";
+            this.btnBYX示教视觉2位置.Text = "视觉备用位置";
             this.btnBYX示教视觉2位置.UseVisualStyleBackColor = true;
             this.btnBYX示教视觉2位置.Click += new System.EventHandler(this.BTN示教2_Click);
             // 
@@ -14361,7 +14371,7 @@
             this.btnBYX示教视觉1位置.Size = new System.Drawing.Size(79, 24);
             this.btnBYX示教视觉1位置.TabIndex = 100;
             this.btnBYX示教视觉1位置.Tag = "PlcInIO[77]";
-            this.btnBYX示教视觉1位置.Text = "上视觉位置";
+            this.btnBYX示教视觉1位置.Text = "下视觉位置";
             this.btnBYX示教视觉1位置.UseVisualStyleBackColor = true;
             this.btnBYX示教视觉1位置.Click += new System.EventHandler(this.BTN示教2_Click);
             // 
@@ -25243,6 +25253,7 @@
         private System.Windows.Forms.TextBox TB_Modification;
         private System.Windows.Forms.Button BTN清除修改信息;
         private System.Windows.Forms.Button BTN查看修改历史;
+        private System.Windows.Forms.Button btn上料产品对位NG报警跳过;
     }
 }
 

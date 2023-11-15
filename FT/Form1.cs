@@ -35,7 +35,7 @@ namespace FT
 
         #region 其他变量
         //托盘类型
-        string trayType = "";
+        string currentTrayType = "";
         //是否更新
         bool isUpdate = false;
         //IsWrite用于写入PLC值时判断当前连接是否断开，调用写入方法时的返回布尔值赋给此变量
@@ -96,7 +96,7 @@ namespace FT
                 //下拉列表托盘类型加载
                 SetCB_TypeOfTray(trayManager);
                 //加载上次的托盘状态
-                trayManager.LoadTraysData(trayType);
+                trayManager.LoadTraysData(currentTrayType);
                 //更新托盘状态到界面
                 trayManager.UpdateTrayLabels(PN_Trays);
                 #endregion
@@ -321,10 +321,10 @@ namespace FT
                         //托盘数据初始化
                         if (communication.ReadFlagBits[2])
                         {
-                            if (trayType != "" && trayType != " ")
+                            if (currentTrayType != "" && currentTrayType != " ")
                             {
                                 //初始化
-                                trayManager.InitializeTrays(trayType);
+                                trayManager.InitializeTrays(currentTrayType);
                                 trayManager.UpdateTrayLabels(PN_Trays);
                                 //托盘初始化完成,PLC检测到此值为true后，将PLC标志位[2]置为false
                                 communication.WriteVariable(true, "PC标志位[2]");
@@ -4336,34 +4336,37 @@ namespace FT
                 speed.Text = null;
             }
         }
-
         private void BTN写入速度_Click(object sender, EventArgs e)
         {
-            //定位速度
-            WriteSpeed(txt上料X轴定位速度设置, txt上料X轴定位速度, "PLCInPmt[0]", "上料X轴定位速度设置");
-            WriteSpeed(txt上料Y轴定位速度设置, txt上料Y轴定位速度, "PLCInPmt[1]", "上料Y轴定位速度设置");
-            WriteSpeed(txt升降轴定位速度设置, txt升降轴定位速度, "PLCInPmt[2]", "升降轴定位速度设置");
-            WriteSpeed(txt平移轴定位速度设置, txt平移轴定位速度, "PLCInPmt[3]", "平移轴定位速度设置");
-            WriteSpeed(txt中空轴定位速度设置, txt中空轴定位速度, "PLCInPmt[4]", "中空轴定位速度设置");
-            WriteSpeed(txt搬运X轴定位速度设置, txt搬运X轴定位速度, "PLCInPmt[5]", "搬运X轴定位速度设置");
-            WriteSpeed(txt搬运Y轴定位速度设置, txt搬运Y轴定位速度, "PLCInPmt[6]", "搬运Y轴定位速度设置");
-            WriteSpeed(txt搬运Z轴定位速度设置, txt搬运Z轴定位速度, "PLCInPmt[7]", "搬运Z轴定位速度设置");
-            WriteSpeed(txtSocket轴定位速度设置, txtSocket轴定位速度, "PLCInPmt[8]", "Socket轴定位速度设置");
-            WriteSpeed(txt黑体轴定位速度设置, txt黑体轴定位速度, "PLCInPmt[9]", "黑体轴定位速度设置");
-            WriteSpeed(txt热辐射轴定位速度设置, txt热辐射轴定位速度, "PLCInPmt[11]", "热辐射轴定位速度设置");
+            DialogResult result = MessageBox.Show("是否写入对应速度？", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                //定位速度
+                WriteSpeed(txt上料X轴定位速度设置, txt上料X轴定位速度, "PLCInPmt[0]", "上料X轴定位速度设置");
+                WriteSpeed(txt上料Y轴定位速度设置, txt上料Y轴定位速度, "PLCInPmt[1]", "上料Y轴定位速度设置");
+                WriteSpeed(txt升降轴定位速度设置, txt升降轴定位速度, "PLCInPmt[2]", "升降轴定位速度设置");
+                WriteSpeed(txt平移轴定位速度设置, txt平移轴定位速度, "PLCInPmt[3]", "平移轴定位速度设置");
+                WriteSpeed(txt中空轴定位速度设置, txt中空轴定位速度, "PLCInPmt[4]", "中空轴定位速度设置");
+                WriteSpeed(txt搬运X轴定位速度设置, txt搬运X轴定位速度, "PLCInPmt[5]", "搬运X轴定位速度设置");
+                WriteSpeed(txt搬运Y轴定位速度设置, txt搬运Y轴定位速度, "PLCInPmt[6]", "搬运Y轴定位速度设置");
+                WriteSpeed(txt搬运Z轴定位速度设置, txt搬运Z轴定位速度, "PLCInPmt[7]", "搬运Z轴定位速度设置");
+                WriteSpeed(txtSocket轴定位速度设置, txtSocket轴定位速度, "PLCInPmt[8]", "Socket轴定位速度设置");
+                WriteSpeed(txt黑体轴定位速度设置, txt黑体轴定位速度, "PLCInPmt[9]", "黑体轴定位速度设置");
+                WriteSpeed(txt热辐射轴定位速度设置, txt热辐射轴定位速度, "PLCInPmt[11]", "热辐射轴定位速度设置");
 
-            //手动速度
-            WriteSpeed(txt上料X轴手动速度设置, txt上料X轴手动速度, "PLCInPmt[15]", "上料X轴手动速度设置");
-            WriteSpeed(txt上料Y轴手动速度设置, txt上料Y轴手动速度, "PLCInPmt[16]", "上料Y轴手动速度设置");
-            WriteSpeed(txt升降轴手动速度设置, txt升降轴手动速度, "PLCInPmt[17]", "升降轴手动速度设置");
-            WriteSpeed(txt平移轴手动速度设置, txt平移轴手动速度, "PLCInPmt[18]", "平移轴手动速度设置");
-            WriteSpeed(txt中空轴手动速度设置, txt中空轴手动速度, "PLCInPmt[19]", "中空轴手动速度设置");
-            WriteSpeed(txt搬运X轴手动速度设置, txt搬运X轴手动速度, "PLCInPmt[20]", "搬运X轴手动速度设置");
-            WriteSpeed(txt搬运Y轴手动速度设置, txt搬运Y轴手动速度, "PLCInPmt[21]", "搬运Y轴手动速度设置");
-            WriteSpeed(txt搬运Z轴手动速度设置, txt搬运Z轴手动速度, "PLCInPmt[22]", "搬运Z轴手动速度设置");
-            WriteSpeed(txtSocket轴手动速度设置, txtSocket轴手动速度, "PLCInPmt[23]", "Socket轴手动速度设置");
-            WriteSpeed(txt黑体轴手动速度设置, txt黑体轴手动速度, "PLCInPmt[24]", "黑体轴手动速度设置");
-            WriteSpeed(txt热辐射轴手动速度设置, txt热辐射轴手动速度, "PLCInPmt[25]", "热辐射轴手动速度设置");
+                //手动速度
+                WriteSpeed(txt上料X轴手动速度设置, txt上料X轴手动速度, "PLCInPmt[15]", "上料X轴手动速度设置");
+                WriteSpeed(txt上料Y轴手动速度设置, txt上料Y轴手动速度, "PLCInPmt[16]", "上料Y轴手动速度设置");
+                WriteSpeed(txt升降轴手动速度设置, txt升降轴手动速度, "PLCInPmt[17]", "升降轴手动速度设置");
+                WriteSpeed(txt平移轴手动速度设置, txt平移轴手动速度, "PLCInPmt[18]", "平移轴手动速度设置");
+                WriteSpeed(txt中空轴手动速度设置, txt中空轴手动速度, "PLCInPmt[19]", "中空轴手动速度设置");
+                WriteSpeed(txt搬运X轴手动速度设置, txt搬运X轴手动速度, "PLCInPmt[20]", "搬运X轴手动速度设置");
+                WriteSpeed(txt搬运Y轴手动速度设置, txt搬运Y轴手动速度, "PLCInPmt[21]", "搬运Y轴手动速度设置");
+                WriteSpeed(txt搬运Z轴手动速度设置, txt搬运Z轴手动速度, "PLCInPmt[22]", "搬运Z轴手动速度设置");
+                WriteSpeed(txtSocket轴手动速度设置, txtSocket轴手动速度, "PLCInPmt[23]", "Socket轴手动速度设置");
+                WriteSpeed(txt黑体轴手动速度设置, txt黑体轴手动速度, "PLCInPmt[24]", "黑体轴手动速度设置");
+                WriteSpeed(txt热辐射轴手动速度设置, txt热辐射轴手动速度, "PLCInPmt[25]", "热辐射轴手动速度设置");
+            }
         }
 
         //只能输入数字
@@ -4725,31 +4728,31 @@ namespace FT
                     DialogResult result = MessageBox.Show($"您是否选择 “{CB_TypeOfTray.Text}” 型号？", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (result == DialogResult.Yes)
                     {
+                        RecordAndShow($"当前型号为：{currentTrayType}", LogType.Modification, TB_Modification);
                         SetMessage("切换型号。");
-                        trayType = CB_TypeOfTray.Text;
-                        //label336.Text = trayManager.TrayType[CB_TypeOfTray.Text].Index.ToString();//测试用，显示Index数值
-                        IsWrite = communication.WriteVariable(trayType.Substring(2), "PLC测试信息[55]");
-                        IsWrite = communication.WriteVariable(trayType.Substring(2).Length, "PlcInPmt[72]");
+                        currentTrayType = CB_TypeOfTray.Text;
+                        IsWrite = communication.WriteVariable(currentTrayType.Substring(2), "PLC测试信息[55]");
+                        IsWrite = communication.WriteVariable(currentTrayType.Substring(2).Length, "PlcInPmt[72]");
                         if (IsWrite)
-                            RecordAndShow($"当前型号切换为：{trayType}", LogType.Modification, TB_Modification);
+                            RecordAndShow($"当前型号切换为：{currentTrayType}", LogType.Modification, TB_Modification);
 
-                        IsWrite = communication.WriteVariable(trayManager.TrayType[trayType].Length, "PLCInPmt[45]");
-                        IsWrite = communication.WriteVariable(Convert.ToDouble(trayManager.TrayType[trayType].Width), "PLCInPmt[46]");
-                        IsWrite = communication.WriteVariable(trayManager.TrayType[trayType].LineSpacing, "PLCInPmt[47]");
-                        IsWrite = communication.WriteVariable(trayManager.TrayType[trayType].ColumnSpacing, "PLCInPmt[48]");
-                        IsWrite = communication.WriteVariable(trayManager.TrayType[trayType].TrayHeight, "PLCInPmt[49]");
-                        IsWrite = communication.WriteVariable(Convert.ToDouble(trayManager.TrayType[trayType].Length * trayManager.TrayType[trayType].Width), "PLCInPmt[50]");
-                        IsWrite = communication.WriteVariable(trayManager.TrayType[trayType].Index, "PlcInID[1]");
+                        IsWrite = communication.WriteVariable(trayManager.TrayType[currentTrayType].Length, "PLCInPmt[45]");
+                        IsWrite = communication.WriteVariable(Convert.ToDouble(trayManager.TrayType[currentTrayType].Width), "PLCInPmt[46]");
+                        IsWrite = communication.WriteVariable(trayManager.TrayType[currentTrayType].LineSpacing, "PLCInPmt[47]");
+                        IsWrite = communication.WriteVariable(trayManager.TrayType[currentTrayType].ColumnSpacing, "PLCInPmt[48]");
+                        IsWrite = communication.WriteVariable(trayManager.TrayType[currentTrayType].TrayHeight, "PLCInPmt[49]");
+                        IsWrite = communication.WriteVariable(Convert.ToDouble(trayManager.TrayType[currentTrayType].Length * trayManager.TrayType[currentTrayType].Width), "PLCInPmt[50]");
+                        IsWrite = communication.WriteVariable(trayManager.TrayType[currentTrayType].Index, "PlcInID[1]");
 
-                        if (trayManager.TrayType[trayType].VacAngle == -90)
+                        if (trayManager.TrayType[currentTrayType].VacAngle == -90)
                         {
                             IsWrite = communication.WriteVariable(1, "PlcInID[7]");
                         }
-                        else if (trayManager.TrayType[trayType].VacAngle == 0)
+                        else if (trayManager.TrayType[currentTrayType].VacAngle == 0)
                         {
                             IsWrite = communication.WriteVariable(2, "PlcInID[7]");
                         }
-                        else if (trayManager.TrayType[trayType].VacAngle == 90)
+                        else if (trayManager.TrayType[currentTrayType].VacAngle == 90)
                         {
                             IsWrite = communication.WriteVariable(3, "PlcInID[7]");
                         }
@@ -4758,15 +4761,15 @@ namespace FT
                             IsWrite = communication.WriteVariable(-1, "PlcInID[7]");
                         }
 
-                        if (trayManager.TrayType[trayType].ClawsAngle == -90)
+                        if (trayManager.TrayType[currentTrayType].ClawsAngle == -90)
                         {
                             IsWrite = communication.WriteVariable(1, "PlcInID[8]");
                         }
-                        else if (trayManager.TrayType[trayType].ClawsAngle == 0)
+                        else if (trayManager.TrayType[currentTrayType].ClawsAngle == 0)
                         {
                             IsWrite = communication.WriteVariable(2, "PlcInID[8]");
                         }
-                        else if (trayManager.TrayType[trayType].ClawsAngle == 90)
+                        else if (trayManager.TrayType[currentTrayType].ClawsAngle == 90)
                         {
                             IsWrite = communication.WriteVariable(3, "PlcInID[8]");
                         }
@@ -4816,16 +4819,17 @@ namespace FT
                 DialogResult result = MessageBox.Show($"您是否选择 “{CB_Socket类.Text}” ？", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
+                    RecordAndShow($"当前型号为：{CB_TypeOfTray.Text}", LogType.Modification, TB_Modification);
                     if (this.CB_Socket类.SelectedItem.ToString() == "四目")
                     {
                         communication.WriteVariable(1, "PlcInID[2]");
-                        RecordAndShow($"当前产品为{trayType}，更改为四目", LogType.Modification, TB_Modification);
+                        RecordAndShow($"当前产品为{currentTrayType}，更改为四目", LogType.Modification, TB_Modification);
                     }
 
                     if (this.CB_Socket类.SelectedItem.ToString() == "单目")
                     {
                         communication.WriteVariable(2, "PlcInID[2]");
-                        RecordAndShow($"当前产品为{trayType}，更改为单目", LogType.Modification, TB_Modification);
+                        RecordAndShow($"当前产品为{currentTrayType}，更改为单目", LogType.Modification, TB_Modification);
                     }
                 }
                 else
@@ -5653,10 +5657,18 @@ namespace FT
         {
             communication.WriteVariable(false, "PlcInIO[473]");
         }
+        private void btn上料产品对位NG报警跳过_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("是否跳过上料-产品对位NG报警？", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                communication.WriteVariable(true, "PlcInIO[158]");
+            }
+        }
 
         private void btn穴位报警跳过_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("是否跳过托盘穴位对位NG报警？", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show("是否跳过上料-托盘穴位对位NG报警？", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
                 communication.WriteVariable(true, "PlcInIO[156]");
@@ -5665,22 +5677,29 @@ namespace FT
       
         private void btn复检报警跳过_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("是否跳过放料复检NG报警？", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show("是否跳过测试-产品复检NG报警？", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
                 communication.WriteVariable(true, "PlcInIO[157]");
             }
         }
 
-        private void btn黑体一键上升_MouseDown(object sender, MouseEventArgs e)
+       // private void btn黑体一键上升_MouseDown(object sender, MouseEventArgs e)
+        //{
+        //    communication.WriteVariable(true, "PlcInIO[334]");
+       // }
+       // private void btn黑体一键上升_MouseUp(object sender, MouseEventArgs e)
+       // {
+       //     communication.WriteVariable(false, "PlcInIO[334]");
+       // }
+        private void btn黑体一键上升_Click(object sender, EventArgs e)
         {
-            communication.WriteVariable(true, "PlcInIO[334]");
+            DialogResult result = MessageBox.Show("互锁条件：1黑体手动平移轴在指定位置，且黑体到位信号X13有信号；请确认设备满足以上条件，再开启黑体一键上升功能！", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                communication.WriteVariable(true, "PlcInIO[334]");
+            }
         }
-        private void btn黑体一键上升_MouseUp(object sender, MouseEventArgs e)
-        {
-            communication.WriteVariable(false, "PlcInIO[334]");
-        }
-
         private void btn夹爪一键下料_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("互锁条件：1搬运Z轴在上升位置；2钧舵夹爪1、2、3、4气缸都在上升位置；3工位1、2、3、4翻转气缸都在翻0°位置；请确认设备满足以上条件，再开启钧舵夹爪一键下料功能！", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -5825,15 +5844,22 @@ namespace FT
             }
         }
 
-        private void btn人工上下料_MouseDown(object sender, MouseEventArgs e)
+       // private void btn人工上下料_MouseDown(object sender, MouseEventArgs e)
+        //{
+        //    communication.WriteVariable(true, "PlcInIO[210]");
+       // }
+       // private void btn人工上下料_MouseUp(object sender, MouseEventArgs e)
+       // {
+       //     communication.WriteVariable(false, "PlcInIO[210]");
+       // }
+        private void btn人工上下料_Click(object sender, EventArgs e)
         {
-            communication.WriteVariable(true, "PlcInIO[210]");
+            DialogResult result = MessageBox.Show("上料X轴是否移动到取托盘避让位置？", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                communication.WriteVariable(true, "PlcInIO[210]");
+            }
         }
-        private void btn人工上下料_MouseUp(object sender, MouseEventArgs e)
-        {
-            communication.WriteVariable(false, "PlcInIO[210]");
-        }
-
         private void btn手动给测试机触发信号_MouseDown(object sender, MouseEventArgs e)
         {
             communication.WriteVariable(true, "PlcInIO[149]");
