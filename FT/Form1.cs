@@ -63,6 +63,8 @@ namespace FT
             IsWrite = true;
             workState = info;
         }
+        //临时变量存储
+        string tempTrayType = "";
         #endregion
 
         public Form1(Form2 form2)
@@ -4331,7 +4333,7 @@ namespace FT
             if (speed.Text != "")
             {
                 communication.WriteVariable(Convert.ToDouble(speed.Text), address);
-                RecordAndShow($"{message}：{speed.Text}mm/s", LogType.Modification, TB_Modification);
+                RecordAndShow($"{message}：{currentSpeed.Text}更改为{speed.Text}mm/s", LogType.Modification, TB_Modification);
                 currentSpeed.Text = speed.Text;
                 speed.Text = null;
             }
@@ -4368,218 +4370,8 @@ namespace FT
                 WriteSpeed(txt热辐射轴手动速度设置, txt热辐射轴手动速度, "PLCInPmt[25]", "热辐射轴手动速度设置");
             }
         }
-
         //只能输入数字
-        private void txt上料X轴定位速度设置_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar != '\b')//这是允许输入退格键
-            {
-                if ((e.KeyChar < '0') || (e.KeyChar > '9'))//这是允许输入0-9数字
-                {
-                    e.Handled = true;
-                }
-            }
-        }
-
-        private void txt上料Y轴定位速度设置_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar != '\b')//这是允许输入退格键
-            {
-                if ((e.KeyChar < '0') || (e.KeyChar > '9'))//这是允许输入0-9数字
-                {
-                    e.Handled = true;
-                }
-            }
-        }
-
-        private void txt升降轴定位速度设置_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar != '\b')//这是允许输入退格键
-            {
-                if ((e.KeyChar < '0') || (e.KeyChar > '9'))//这是允许输入0-9数字
-                {
-                    e.Handled = true;
-                }
-            }
-        }
-
-        private void txt平移轴定位速度设置_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar != '\b')//这是允许输入退格键
-            {
-                if ((e.KeyChar < '0') || (e.KeyChar > '9'))//这是允许输入0-9数字
-                {
-                    e.Handled = true;
-                }
-            }
-        }
-
-        private void txt中空轴定位速度设置_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar != '\b')//这是允许输入退格键
-            {
-                if ((e.KeyChar < '0') || (e.KeyChar > '9'))//这是允许输入0-9数字
-                {
-                    e.Handled = true;
-                }
-            }
-        }
-
-        private void txt搬运X轴定位速度设置_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar != '\b')//这是允许输入退格键
-            {
-                if ((e.KeyChar < '0') || (e.KeyChar > '9'))//这是允许输入0-9数字
-                {
-                    e.Handled = true;
-                }
-            }
-        }
-
-        private void txt搬运Y轴定位速度设置_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar != '\b')//这是允许输入退格键
-            {
-                if ((e.KeyChar < '0') || (e.KeyChar > '9'))//这是允许输入0-9数字
-                {
-                    e.Handled = true;
-                }
-            }
-        }
-
-        private void txt搬运Z轴定位速度设置_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar != '\b')//这是允许输入退格键
-            {
-                if ((e.KeyChar < '0') || (e.KeyChar > '9'))//这是允许输入0-9数字
-                {
-                    e.Handled = true;
-                }
-            }
-        }
-
-        private void txtSocket轴定位速度设置_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar != '\b')//这是允许输入退格键
-            {
-                if ((e.KeyChar < '0') || (e.KeyChar > '9'))//这是允许输入0-9数字
-                {
-                    e.Handled = true;
-                }
-            }
-        }
-
-        private void txt黑体轴定位速度设置_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar != '\b')//这是允许输入退格键
-            {
-                if ((e.KeyChar < '0') || (e.KeyChar > '9'))//这是允许输入0-9数字
-                {
-                    e.Handled = true;
-                }
-            }
-        }
-
-        private void txt上料X轴手动速度设置_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar != '\b')//这是允许输入退格键
-            {
-                if ((e.KeyChar < '0') || (e.KeyChar > '9'))//这是允许输入0-9数字
-                {
-                    e.Handled = true;
-                }
-            }
-        }
-
-        private void txt上料Y轴手动速度设置_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar != '\b')//这是允许输入退格键
-            {
-                if ((e.KeyChar < '0') || (e.KeyChar > '9'))//这是允许输入0-9数字
-                {
-                    e.Handled = true;
-                }
-            }
-        }
-
-        private void txt升降轴手动速度设置_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar != '\b')//这是允许输入退格键
-            {
-                if ((e.KeyChar < '0') || (e.KeyChar > '9'))//这是允许输入0-9数字
-                {
-                    e.Handled = true;
-                }
-            }
-        }
-
-        private void txt平移轴手动速度设置_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar != '\b')//这是允许输入退格键
-            {
-                if ((e.KeyChar < '0') || (e.KeyChar > '9'))//这是允许输入0-9数字
-                {
-                    e.Handled = true;
-                }
-            }
-        }
-
-        private void txt中空轴手动速度设置_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar != '\b')//这是允许输入退格键
-            {
-                if ((e.KeyChar < '0') || (e.KeyChar > '9'))//这是允许输入0-9数字
-                {
-                    e.Handled = true;
-                }
-            }
-        }
-
-        private void txt搬运X轴手动速度设置_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar != '\b')//这是允许输入退格键
-            {
-                if ((e.KeyChar < '0') || (e.KeyChar > '9'))//这是允许输入0-9数字
-                {
-                    e.Handled = true;
-                }
-            }
-        }
-
-        private void txt搬运Y轴手动速度设置_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar != '\b')//这是允许输入退格键
-            {
-                if ((e.KeyChar < '0') || (e.KeyChar > '9'))//这是允许输入0-9数字
-                {
-                    e.Handled = true;
-                }
-            }
-        }
-
-        private void txt搬运Z轴手动速度设置_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar != '\b')//这是允许输入退格键
-            {
-                if ((e.KeyChar < '0') || (e.KeyChar > '9'))//这是允许输入0-9数字
-                {
-                    e.Handled = true;
-                }
-            }
-        }
-
-        private void txtSocket轴手动速度设置_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar != '\b')//这是允许输入退格键
-            {
-                if ((e.KeyChar < '0') || (e.KeyChar > '9'))//这是允许输入0-9数字
-                {
-                    e.Handled = true;
-                }
-            }
-        }
-
-        private void txt黑体轴手动速度设置_KeyPress(object sender, KeyPressEventArgs e)
+        private void TB速度设置_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar != '\b')//这是允许输入退格键
             {
@@ -4606,25 +4398,12 @@ namespace FT
             TextBox textBox = (TextBox)sender;
             if (textBox.Text != "")
                 if (textBox.Text != "-")
-                    if (double.Parse(textBox.Text) > 90|| double.Parse(textBox.Text)<-90)
-                {
-                    textBox.Text = "90";
-                    MessageBox.Show("输入0-90的值", "提示");
-                }
-        }
-
-        private void TxtSok矫正位置2_TextChanged(object sender, EventArgs e)
-        {
-            TextBox textBox = (TextBox)sender;
-            if (textBox.Text != "")
-                if (textBox.Text != "-")
-                    if (double.Parse(textBox.Text) > 2 || double.Parse(textBox.Text) < -2)
+                    if (double.Parse(textBox.Text) > 90 || double.Parse(textBox.Text) < -90)
                     {
-                        textBox.Text = "0";
-                        MessageBox.Show("输入-2-2的值", "提示");
+                        textBox.Text = "90";
+                        MessageBox.Show("输入0-90的值", "提示");
                     }
         }
-
         #endregion
 
         #region 功能设置
@@ -4728,13 +4507,16 @@ namespace FT
                     DialogResult result = MessageBox.Show($"您是否选择 “{CB_TypeOfTray.Text}” 型号？", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (result == DialogResult.Yes)
                     {
-                        RecordAndShow($"当前型号为：{currentTrayType}", LogType.Modification, TB_Modification);
+                        //RecordAndShow($"当前型号为：{currentTrayType}", LogType.Modification, TB_Modification);
                         SetMessage("切换型号。");
-                        currentTrayType = CB_TypeOfTray.Text;
+                        currentTrayType = CB_TypeOfTray.Text; 
                         IsWrite = communication.WriteVariable(currentTrayType.Substring(2), "PLC测试信息[55]");
                         IsWrite = communication.WriteVariable(currentTrayType.Substring(2).Length, "PlcInPmt[72]");
                         if (IsWrite)
-                            RecordAndShow($"当前型号切换为：{currentTrayType}", LogType.Modification, TB_Modification);
+                        {
+                            RecordAndShow($"{tempTrayType}切换为{currentTrayType}", LogType.Modification, TB_Modification);
+                            tempTrayType = currentTrayType;
+                        }
 
                         IsWrite = communication.WriteVariable(trayManager.TrayType[currentTrayType].Length, "PLCInPmt[45]");
                         IsWrite = communication.WriteVariable(Convert.ToDouble(trayManager.TrayType[currentTrayType].Width), "PLCInPmt[46]");

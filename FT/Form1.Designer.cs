@@ -13916,6 +13916,7 @@
             this.txtX示教吸1实盘第一列.Name = "txtX示教吸1实盘第一列";
             this.txtX示教吸1实盘第一列.Size = new System.Drawing.Size(49, 21);
             this.txtX示教吸1实盘第一列.TabIndex = 51;
+            this.txtX示教吸1实盘第一列.Tag = "PlcInIO[30]";
             // 
             // txtX示教当前位置
             // 
@@ -22267,7 +22268,7 @@
             this.txt平移轴手动速度设置.Size = new System.Drawing.Size(49, 21);
             this.txt平移轴手动速度设置.TabIndex = 81;
             this.txt平移轴手动速度设置.TextChanged += new System.EventHandler(this.SpeedSet_TextChanged);
-            this.txt平移轴手动速度设置.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt平移轴手动速度设置_KeyPress);
+            this.txt平移轴手动速度设置.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB速度设置_KeyPress);
             // 
             // txt黑体轴手动速度设置
             // 
@@ -22277,7 +22278,7 @@
             this.txt黑体轴手动速度设置.Size = new System.Drawing.Size(49, 21);
             this.txt黑体轴手动速度设置.TabIndex = 99;
             this.txt黑体轴手动速度设置.TextChanged += new System.EventHandler(this.SpeedSet_TextChanged);
-            this.txt黑体轴手动速度设置.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt黑体轴手动速度设置_KeyPress);
+            this.txt黑体轴手动速度设置.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB速度设置_KeyPress);
             // 
             // label512
             // 
@@ -22322,7 +22323,7 @@
             this.txtSocket轴手动速度设置.Size = new System.Drawing.Size(49, 21);
             this.txtSocket轴手动速度设置.TabIndex = 96;
             this.txtSocket轴手动速度设置.TextChanged += new System.EventHandler(this.SpeedSet_TextChanged);
-            this.txtSocket轴手动速度设置.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSocket轴手动速度设置_KeyPress);
+            this.txtSocket轴手动速度设置.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB速度设置_KeyPress);
             // 
             // txt搬运X轴手动速度
             // 
@@ -22362,7 +22363,7 @@
             this.txt搬运Z轴手动速度设置.Size = new System.Drawing.Size(49, 21);
             this.txt搬运Z轴手动速度设置.TabIndex = 93;
             this.txt搬运Z轴手动速度设置.TextChanged += new System.EventHandler(this.SpeedSet_TextChanged);
-            this.txt搬运Z轴手动速度设置.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt搬运Z轴手动速度设置_KeyPress);
+            this.txt搬运Z轴手动速度设置.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB速度设置_KeyPress);
             // 
             // label506
             // 
@@ -22405,7 +22406,7 @@
             this.txt搬运Y轴手动速度设置.Size = new System.Drawing.Size(49, 21);
             this.txt搬运Y轴手动速度设置.TabIndex = 90;
             this.txt搬运Y轴手动速度设置.TextChanged += new System.EventHandler(this.SpeedSet_TextChanged);
-            this.txt搬运Y轴手动速度设置.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt搬运Y轴手动速度设置_KeyPress);
+            this.txt搬运Y轴手动速度设置.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB速度设置_KeyPress);
             // 
             // label509
             // 
@@ -22434,7 +22435,7 @@
             this.txt搬运X轴手动速度设置.Size = new System.Drawing.Size(49, 21);
             this.txt搬运X轴手动速度设置.TabIndex = 87;
             this.txt搬运X轴手动速度设置.TextChanged += new System.EventHandler(this.SpeedSet_TextChanged);
-            this.txt搬运X轴手动速度设置.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt搬运X轴手动速度设置_KeyPress);
+            this.txt搬运X轴手动速度设置.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB速度设置_KeyPress);
             // 
             // txt升降轴手动速度
             // 
@@ -22468,7 +22469,7 @@
             this.txt中空轴手动速度设置.Size = new System.Drawing.Size(49, 21);
             this.txt中空轴手动速度设置.TabIndex = 84;
             this.txt中空轴手动速度设置.TextChanged += new System.EventHandler(this.SpeedSet_TextChanged);
-            this.txt中空轴手动速度设置.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt中空轴手动速度设置_KeyPress);
+            this.txt中空轴手动速度设置.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB速度设置_KeyPress);
             // 
             // label510
             // 
@@ -22533,7 +22534,7 @@
             this.txt升降轴手动速度设置.Size = new System.Drawing.Size(49, 21);
             this.txt升降轴手动速度设置.TabIndex = 78;
             this.txt升降轴手动速度设置.TextChanged += new System.EventHandler(this.SpeedSet_TextChanged);
-            this.txt升降轴手动速度设置.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt升降轴手动速度设置_KeyPress);
+            this.txt升降轴手动速度设置.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB速度设置_KeyPress);
             // 
             // label516
             // 
@@ -22576,7 +22577,7 @@
             this.txt上料Y轴手动速度设置.Size = new System.Drawing.Size(49, 21);
             this.txt上料Y轴手动速度设置.TabIndex = 75;
             this.txt上料Y轴手动速度设置.TextChanged += new System.EventHandler(this.SpeedSet_TextChanged);
-            this.txt上料Y轴手动速度设置.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt上料Y轴手动速度设置_KeyPress);
+            this.txt上料Y轴手动速度设置.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB速度设置_KeyPress);
             // 
             // label519
             // 
@@ -22620,7 +22621,7 @@
             this.txt上料X轴手动速度设置.Size = new System.Drawing.Size(49, 21);
             this.txt上料X轴手动速度设置.TabIndex = 72;
             this.txt上料X轴手动速度设置.TextChanged += new System.EventHandler(this.SpeedSet_TextChanged);
-            this.txt上料X轴手动速度设置.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt上料X轴手动速度设置_KeyPress);
+            this.txt上料X轴手动速度设置.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB速度设置_KeyPress);
             // 
             // label523
             // 
@@ -22993,7 +22994,7 @@
             this.txt中空轴定位速度设置.Size = new System.Drawing.Size(49, 21);
             this.txt中空轴定位速度设置.TabIndex = 84;
             this.txt中空轴定位速度设置.TextChanged += new System.EventHandler(this.SpeedSet_TextChanged);
-            this.txt中空轴定位速度设置.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt中空轴定位速度设置_KeyPress);
+            this.txt中空轴定位速度设置.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB速度设置_KeyPress);
             // 
             // txt上料X轴定位速度设置
             // 
@@ -23004,7 +23005,7 @@
             this.txt上料X轴定位速度设置.Size = new System.Drawing.Size(49, 21);
             this.txt上料X轴定位速度设置.TabIndex = 72;
             this.txt上料X轴定位速度设置.TextChanged += new System.EventHandler(this.SpeedSet_TextChanged);
-            this.txt上料X轴定位速度设置.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt上料X轴定位速度设置_KeyPress);
+            this.txt上料X轴定位速度设置.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB速度设置_KeyPress);
             // 
             // txt升降轴定位速度
             // 
@@ -23022,7 +23023,7 @@
             this.txt上料Y轴定位速度设置.Size = new System.Drawing.Size(49, 21);
             this.txt上料Y轴定位速度设置.TabIndex = 75;
             this.txt上料Y轴定位速度设置.TextChanged += new System.EventHandler(this.SpeedSet_TextChanged);
-            this.txt上料Y轴定位速度设置.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt上料Y轴定位速度设置_KeyPress);
+            this.txt上料Y轴定位速度设置.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB速度设置_KeyPress);
             // 
             // txt上料Y轴定位速度
             // 
@@ -23040,7 +23041,7 @@
             this.txt升降轴定位速度设置.Size = new System.Drawing.Size(49, 21);
             this.txt升降轴定位速度设置.TabIndex = 78;
             this.txt升降轴定位速度设置.TextChanged += new System.EventHandler(this.SpeedSet_TextChanged);
-            this.txt升降轴定位速度设置.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt升降轴定位速度设置_KeyPress);
+            this.txt升降轴定位速度设置.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB速度设置_KeyPress);
             // 
             // txt上料X轴定位速度
             // 
@@ -23058,7 +23059,7 @@
             this.txt平移轴定位速度设置.Size = new System.Drawing.Size(49, 21);
             this.txt平移轴定位速度设置.TabIndex = 81;
             this.txt平移轴定位速度设置.TextChanged += new System.EventHandler(this.SpeedSet_TextChanged);
-            this.txt平移轴定位速度设置.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt平移轴定位速度设置_KeyPress);
+            this.txt平移轴定位速度设置.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB速度设置_KeyPress);
             // 
             // label497
             // 
@@ -23145,7 +23146,7 @@
             this.txt黑体轴定位速度设置.Size = new System.Drawing.Size(49, 21);
             this.txt黑体轴定位速度设置.TabIndex = 99;
             this.txt黑体轴定位速度设置.TextChanged += new System.EventHandler(this.SpeedSet_TextChanged);
-            this.txt黑体轴定位速度设置.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt黑体轴定位速度设置_KeyPress);
+            this.txt黑体轴定位速度设置.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB速度设置_KeyPress);
             // 
             // label476
             // 
@@ -23166,7 +23167,7 @@
             this.txtSocket轴定位速度设置.Size = new System.Drawing.Size(49, 21);
             this.txtSocket轴定位速度设置.TabIndex = 96;
             this.txtSocket轴定位速度设置.TextChanged += new System.EventHandler(this.SpeedSet_TextChanged);
-            this.txtSocket轴定位速度设置.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSocket轴定位速度设置_KeyPress);
+            this.txtSocket轴定位速度设置.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB速度设置_KeyPress);
             // 
             // label473
             // 
@@ -23187,7 +23188,7 @@
             this.txt搬运Z轴定位速度设置.Size = new System.Drawing.Size(49, 21);
             this.txt搬运Z轴定位速度设置.TabIndex = 93;
             this.txt搬运Z轴定位速度设置.TextChanged += new System.EventHandler(this.SpeedSet_TextChanged);
-            this.txt搬运Z轴定位速度设置.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt搬运Z轴定位速度设置_KeyPress);
+            this.txt搬运Z轴定位速度设置.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB速度设置_KeyPress);
             // 
             // label474
             // 
@@ -23208,7 +23209,7 @@
             this.txt搬运Y轴定位速度设置.Size = new System.Drawing.Size(49, 21);
             this.txt搬运Y轴定位速度设置.TabIndex = 90;
             this.txt搬运Y轴定位速度设置.TextChanged += new System.EventHandler(this.SpeedSet_TextChanged);
-            this.txt搬运Y轴定位速度设置.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt搬运Y轴定位速度设置_KeyPress);
+            this.txt搬运Y轴定位速度设置.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB速度设置_KeyPress);
             // 
             // label470
             // 
@@ -23229,7 +23230,7 @@
             this.txt搬运X轴定位速度设置.Size = new System.Drawing.Size(49, 21);
             this.txt搬运X轴定位速度设置.TabIndex = 87;
             this.txt搬运X轴定位速度设置.TextChanged += new System.EventHandler(this.SpeedSet_TextChanged);
-            this.txt搬运X轴定位速度设置.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt搬运X轴定位速度设置_KeyPress);
+            this.txt搬运X轴定位速度设置.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB速度设置_KeyPress);
             // 
             // label471
             // 
