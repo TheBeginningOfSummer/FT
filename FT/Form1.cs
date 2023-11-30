@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -31,6 +32,19 @@ namespace FT
         Dictionary<string, string> alarmInformation;
         //当前报警信息
         List<string> warning = new List<string>();
+        #endregion
+
+        #region 控件管理
+        Dictionary<string, string> textBoxInformation;
+        Dictionary<string, TabPage> mainPages;
+        //示教界面TextBox
+        Dictionary<string, GroupBox> calibrationGroups;
+        Dictionary<string, TextBox> calibrationTextBoxes;
+        //主界面TextBox
+        Dictionary<string, TextBox> firstPageTextBoxes;
+        //手动电机TextBox
+        Dictionary<string, GroupBox> manualPageGroups;
+        Dictionary<string, TextBox> manualPageTextBoxes;
         #endregion
 
         #region 其他变量
@@ -76,6 +90,15 @@ namespace FT
             //数据初始化、打开通信端口
             try
             {
+                //获取界面控件
+                mainPages = GetControls<TabPage>(TC_Main);
+                calibrationGroups = GetControls<GroupBox>(mainPages["TP示教界面1"], mainPages["TP示教界面2"]);
+                calibrationTextBoxes = GetControls<TextBox>(calibrationGroups.Values.ToArray());
+                firstPageTextBoxes = GetControls<TextBox>(GB_Connection);
+                manualPageGroups = GetControls<GroupBox>(mainPages["TP手动电机1"], mainPages["TP手动电机2"]);
+                manualPageTextBoxes = GetControls<TextBox>(manualPageGroups.Values.ToArray());
+                //TextBox信息读取地址加载
+                textBoxInformation = JsonManager.ReadJsonString<Dictionary<string, string>>(Environment.CurrentDirectory + "\\Configuration\\", "TextBoxInfo");
                 //报警信息读取
                 alarmInformation = JsonManager.ReadJsonString<Dictionary<string, string>>(Environment.CurrentDirectory + "\\Configuration\\", "Alarm");
 
@@ -137,6 +160,31 @@ namespace FT
         {
             if (variable != null)
                 textBox.Invoke(new Action(() => textBox.Text = variable.ToString()));
+        }
+
+        public Dictionary<string, T> GetControls<T>(params Control[] mainControl)
+        {
+            Dictionary<string, T> controlDic = new Dictionary<string, T>();
+            if (mainControl.Length == 0)
+            {
+                foreach (Control item in Controls)
+                {
+                    if (item is T control)
+                        controlDic.Add(item.Name, control);
+                }
+            }
+            else
+            {
+                foreach (Control item in mainControl)
+                {
+                    foreach (Control child in item.Controls)
+                    {
+                        if (child is T control)
+                            controlDic.Add(child.Name, control);
+                    }
+                }
+            }
+            return controlDic;
         }
         //信息追溯导出EXCEL
         public void DataToExcel(DataGridView m_DataView)
@@ -278,23 +326,6 @@ namespace FT
                 }
             }
         }
-        //将PLC上的bool值改为true一定时间后变回false
-        public async Task BoolSwitchAsync(string variableName, int delay = 1000)
-        {
-            DialogResult result = MessageBox.Show($"您是否确定此操作？", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
-                if (communication.WriteVariable(true, variableName))
-                {
-                    await Task.Delay(delay);
-                    SetMessage("示教中。");
-                    IsWrite = communication.WriteVariable(false, variableName);
-                    SetMessage();
-                }
-                else
-                {
-                    MessageBox.Show("参数写入失败，连接断开。", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-        }
         #endregion
 
         #region 更新
@@ -380,6 +411,7 @@ namespace FT
         {
             Task.Run(() =>
             {
+                #region 是否提示更换次数
                 bool isShow = true;
                 bool isShow1 = true;
                 bool isShow2 = true;
@@ -394,6 +426,7 @@ namespace FT
                 bool isShow11 = true;
                 bool isShow12 = true;
                 bool isShow13 = true;
+                #endregion
                 while (isUpdate)
                 {
                     try
@@ -401,214 +434,64 @@ namespace FT
                         stopwatch2.Restart();
                         Thread.Sleep(150);
                         #region 界面显示更新数据
-                        //示教界面数据更新
-                        SetTextBoxText(txtX示教吸1实盘第一列, communication.ReadLocation[24]);
-                        //SetTextBoxText(txtX示教吸2实盘第一列, communication.ReadLocation[25]);
-                       // SetTextBoxText(txtX示教吸1倒实盘第一列, communication.ReadLocation[26]);
-                        //SetTextBoxText(txtX示教吸2倒实盘第一列, communication.ReadLocation[27]);
-                        //SetTextBoxText(txtX示教吸1NG盘第一列, communication.ReadLocation[28]);
-                        //SetTextBoxText(txtX示教吸2NG盘第一列, communication.ReadLocation[29]);
-                        SetTextBoxText(txtX示教实盘位置, communication.ReadLocation[30]);
-                        SetTextBoxText(txtX示教倒实盘位置, communication.ReadLocation[31]);
-                        SetTextBoxText(txtX示教NG盘位置, communication.ReadLocation[32]);
-                        SetTextBoxText(txtX示教倒NG盘位置, communication.ReadLocation[33]);
-                        SetTextBoxText(txtX示教夹爪位置, communication.ReadLocation[34]);
-                        SetTextBoxText(txtX示教扫码位置, communication.ReadLocation[35]);
-                        SetTextBoxText(txtX示教视觉实盘第一列, communication.ReadLocation[36]);
-                        //SetTextBoxText(txtX示教视觉倒实盘第一列, communication.ReadLocation[37]);
-                        SetTextBoxText(txtX示教下视觉2位置, communication.ReadLocation[38]);
 
-                        SetTextBoxText(txtY示教吸1实盘第一行, communication.ReadLocation[41]);
-                        SetTextBoxText(txtY示教吸2实盘第一行, communication.ReadLocation[42]);
-                        //SetTextBoxText(txtY示教吸1倒实盘第一行, communication.ReadLocation[43]);
-                        //SetTextBoxText(txtY示教吸2倒实盘第一行, communication.ReadLocation[44]);
-                        SetTextBoxText(txtY示教吸1NG盘第一行, communication.ReadLocation[45]);
-                        SetTextBoxText(txtY示教吸2NG盘第一行, communication.ReadLocation[46]);
-                        SetTextBoxText(txtY示教实盘位置, communication.ReadLocation[47]);
-                        SetTextBoxText(txtY示教倒实盘位置, communication.ReadLocation[48]);
-                        SetTextBoxText(txtY示教NG盘位置, communication.ReadLocation[49]);
-                        SetTextBoxText(txtY示教倒NG盘位置, communication.ReadLocation[50]);
-                        SetTextBoxText(txtY示教夹爪位置, communication.ReadLocation[51]);
-                        SetTextBoxText(txtY示教扫码位置, communication.ReadLocation[52]);
-                        SetTextBoxText(txtY示教视觉实盘第一列, communication.ReadLocation[53]);
-                        SetTextBoxText(txtY示教视觉倒实盘第一列, communication.ReadLocation[54]);
-                        SetTextBoxText(txtY示教下视觉2位置, communication.ReadLocation[55]);
+                        #region 示教界面和主界面手动界面部分TextBox更新
+                        foreach (var item in textBoxInformation)
+                        {
+                            if (calibrationTextBoxes.ContainsKey(item.Key))
+                                SetTextBoxText(calibrationTextBoxes[item.Key], (double)communication.Location[item.Value]);
+                            if (firstPageTextBoxes.ContainsKey(item.Key))
+                                SetTextBoxText(firstPageTextBoxes[item.Key], (double)communication.Location[item.Value]);
+                            if (manualPageTextBoxes.ContainsKey(item.Key))
+                                SetTextBoxText(manualPageTextBoxes[item.Key], (double)communication.Location[item.Value]);
+                        }
+                        #endregion
 
-                        SetTextBoxText(txt实盘示教初始位置, communication.ReadLocation[58]);
-                        //SetTextBoxText(txt实盘示教扫码位置, communication.ReadLocation[59]);
+                        #region Lable显示本机当前状态
+                        if (communication.ReadPLCIO[157])
+                        {
+                            LB_手动状态.Invoke(new Action(() => LB_手动状态.Text = "手动模式"));
+                        }
 
-                        SetTextBoxText(txtNG盘示教初始位置, communication.ReadLocation[65]);
+                        if (communication.ReadPLCIO[158])
+                        {
+                            LB_手动状态.Invoke(new Action(() => LB_手动状态.Text = "自动模式"));
+                        }
 
-                        //SetTextBoxText(txt倒实盘示教初始位置, communication.ReadLocation[69]);
+                        if (communication.ReadPLCIO[159])
+                        {
+                            LB_自动运行状态.Invoke(new Action(() => LB_自动运行状态.Text = "运行中"));
+                        }
+                        else
+                        {
+                            LB_自动运行状态.Invoke(new Action(() => LB_自动运行状态.Text = "停止中"));
+                        }
 
-                        SetTextBoxText(txt倒NG盘示教初始位置, communication.ReadLocation[73]);
+                        if (communication.ReadPLCIO[156])
+                        {
+                            LB_初始化状态.Invoke(new Action(() => LB_初始化状态.Text = "初始化完成"));
+                        }
+                        else
+                        {
+                            LB_初始化状态.Invoke(new Action(() => LB_初始化状态.Text = "初始化未完成"));
+                        }
 
-                        SetTextBoxText(txt平移示教上料位置, communication.ReadLocation[77]);
-                        SetTextBoxText(txt平移示教下料位置, communication.ReadLocation[78]);
-                        SetTextBoxText(txt平移示教中转位置, communication.ReadLocation[79]);
-                        SetTextBoxText(txt平移示教中转位置2, communication.ReadLocation[80]);
+                        if (communication.ReadPLCIO[155])
+                        {
+                            LB_Connection.Invoke(new Action(() => LB_Connection.Text = "本机已连接"));
+                        }
+                        else
+                        {
+                            LB_Connection.Invoke(new Action(() => LB_Connection.Text = "本机未连接"));
+                        }
 
-                        SetTextBoxText(txtBYX示教上料位置, communication.ReadLocation[83]);
-                        SetTextBoxText(txtBYX示教视觉1位置, communication.ReadLocation[84]);
-                        SetTextBoxText(txtBYX示教第一列, communication.ReadLocation[85]);
-                        SetTextBoxText(txtBYX示教第二列, communication.ReadLocation[86]);
-                        SetTextBoxText(txtBYX示教第三列, communication.ReadLocation[87]);
-                        SetTextBoxText(txtBYX示教第四列, communication.ReadLocation[88]);
-                        SetTextBoxText(txtBYX示教第五列, communication.ReadLocation[89]);
-                        SetTextBoxText(txtBYX示教第六列, communication.ReadLocation[90]);
-                        SetTextBoxText(txtBYX示教第七列, communication.ReadLocation[91]);
-                        SetTextBoxText(txtBYX示教第八列, communication.ReadLocation[92]);
-                        SetTextBoxText(txtBYX示教视觉2位置, communication.ReadLocation[93]);
-                        SetTextBoxText(txtBYX示教矫正位置, communication.ReadLocation[169]);
-                        SetTextBoxText(txtBYX示教矫正位置2, communication.ReadLocation[170]);
-                        SetTextBoxText(txtBYX示教矫正位置3, communication.ReadLocation[171]);
-                        SetTextBoxText(txtBYX示教矫正位置4, communication.ReadLocation[172]);
-                        SetTextBoxText(txtBYX示教矫正位置5, communication.ReadLocation[173]);
-                        SetTextBoxText(txtBYX示教矫正位置6, communication.ReadLocation[174]);
-                        SetTextBoxText(txtBYX示教矫正位置7, communication.ReadLocation[175]);
-                        SetTextBoxText(txtBYX示教矫正位置8, communication.ReadLocation[176]);
-                        SetTextBoxText(txt夹爪2与1距离位置, communication.ReadLocation[177]);
-                        SetTextBoxText(txt上料X轴Tray盘补偿显示, communication.ReadLocation[178]);
-                        SetTextBoxText(txt上料Y轴Tray盘补偿显示, communication.ReadLocation[179]);
-                        SetTextBoxText(txt吸嘴2实盘补偿显示X, communication.ReadLocation[182]);
-                        SetTextBoxText(txt吸嘴2实盘补偿显示Y, communication.ReadLocation[183]);
-                        SetTextBoxText(txt吸嘴1NG盘补偿显示X, communication.ReadLocation[180]);
-                        SetTextBoxText(txt吸嘴1NG盘补偿显示Y, communication.ReadLocation[181]);
-                        SetTextBoxText(txt吸嘴2NG盘补偿显示X, communication.ReadLocation[184]);
-                        SetTextBoxText(txt吸嘴2NG盘补偿显示Y, communication.ReadLocation[185]);
-                        SetTextBoxText(txt钧舵打开小位置显示, communication.ReadLocation[186]);
-                        SetTextBoxText(txt夹爪1补偿显示, communication.ReadLocation[187]);
-                        SetTextBoxText(txt夹爪2补偿显示, communication.ReadLocation[188]);
-                        SetTextBoxText(txt视觉拍照X显示, communication.ReadLocation[189]);
-                        SetTextBoxText(txt视觉拍照Y显示, communication.ReadLocation[190]);
-                        SetTextBoxText(txtX判断值显示, communication.ReadLocation[191]);
-                        SetTextBoxText(txtY判断值显示, communication.ReadLocation[192]);
-                        SetTextBoxText(txt判断范围显示, communication.ReadLocation[193]);
+                        SetLabelColor(communication.ReadPLCIO[155], LB_Connection);
+                        SetLabelColor(communication.ReadPLCIO[156], LB_初始化状态);
+                        SetLabelColor(communication.ReadPLCIO[158], LB_手动状态);
+                        SetLabelColor(communication.ReadPLCIO[159], LB_自动运行状态);
+                        #endregion
 
-                        SetTextBoxText(txtBYY示教Sokt夹爪3, communication.ReadLocation[95]);
-                        SetTextBoxText(txtBYY示教Sokt夹爪4, communication.ReadLocation[96]);
-
-                        SetTextBoxText(txtBYY示教Sokt夹爪1记忆, communication.ReadLocation[82]);
-                        SetTextBoxText(txtBYY示教上料12位置, communication.ReadLocation[97]);
-                        SetTextBoxText(txtBYY示教视觉1位置, communication.ReadLocation[98]);
-                        SetTextBoxText(txtBYY示教视觉2位置, communication.ReadLocation[99]);
-                        SetTextBoxText(txtBYY示教第一行, communication.ReadLocation[100]);
-                        SetTextBoxText(txtBYY示教第二行, communication.ReadLocation[101]);
-                        SetTextBoxText(txtBYY示教视觉3位置, communication.ReadLocation[102]);
-                        SetTextBoxText(txtBYY示教视觉4位置, communication.ReadLocation[103]);
-                        SetTextBoxText(txtBYY示教上料34位置, communication.ReadLocation[104]);
-                        SetTextBoxText(txtBYY示教视觉5位置, communication.ReadLocation[105]);
-                        SetTextBoxText(txtBYY示教视觉6位置, communication.ReadLocation[106]);
-
-                        SetTextBoxText(txtBYZ示教上料位置, communication.ReadLocation[107]);
-                        SetTextBoxText(txtBYZ示教上升位置, communication.ReadLocation[108]);
-                        SetTextBoxText(txtBYZ示教视觉位置1, communication.ReadLocation[109]);
-                        SetTextBoxText(txtBYZ示教视觉位置2, communication.ReadLocation[110]);
-                        SetTextBoxText(txtBYZ下料视觉位置, communication.ReadLocation[111]);
-                        SetTextBoxText(txtBYZ示教视觉位置3, communication.ReadLocation[112]);
-                        SetTextBoxText(txtBYZ示教下视觉位置, communication.ReadLocation[113]);
-
-
-                        SetTextBoxText(txtSk1示教黑体位置, communication.ReadLocation[117]);
-                        SetTextBoxText(txtSk1示教翻转位置, communication.ReadLocation[118]);
-                        //SetTextBoxText(txtSk1示教测试1位置, communication.ReadLocation[119]);
-                        //SetTextBoxText(txtSk1示教测试2位置, communication.ReadLocation[120]);
-                        //SetTextBoxText(txtSk1示教测试3位置, communication.ReadLocation[121]);
-
-                        SetTextBoxText(txtSk2示教黑体位置, communication.ReadLocation[125]);
-                        SetTextBoxText(txtSk2示教翻转位置, communication.ReadLocation[126]);
-                        //SetTextBoxText(txtSk2示教测试1位置, communication.ReadLocation[127]);
-                        //SetTextBoxText(txtSk2示教测试2位置, communication.ReadLocation[128]);
-                        //SetTextBoxText(txtSk2示教测试3位置, communication.ReadLocation[129]);
-
-                        SetTextBoxText(txtSk3示教黑体位置, communication.ReadLocation[133]);
-                        SetTextBoxText(txtSk3示教翻转位置, communication.ReadLocation[134]);
-                        //SetTextBoxText(txtSk3示教测试1位置, communication.ReadLocation[135]);
-                        //SetTextBoxText(txtSk3示教测试2位置, communication.ReadLocation[136]);
-                        //SetTextBoxText(txtSk3示教测试3位置, communication.ReadLocation[137]);
-
-                        SetTextBoxText(txtSk4示教黑体位置, communication.ReadLocation[141]);
-                        SetTextBoxText(txtSk4示教翻转位置, communication.ReadLocation[142]);
-                        //SetTextBoxText(txtSk4示教测试1位置, communication.ReadLocation[143]);
-                        //SetTextBoxText(txtSk4示教测试2位置, communication.ReadLocation[144]);
-                        //SetTextBoxText(txtSk4示教测试3位置, communication.ReadLocation[145]);
-
-                        SetTextBoxText(txtBk1示教20位置, communication.ReadLocation[149]);
-                        SetTextBoxText(txtBk1示教35位置, communication.ReadLocation[150]);
-
-                        SetTextBoxText(txtBk2示教20位置, communication.ReadLocation[154]);
-                        SetTextBoxText(txtBk2示教35位置, communication.ReadLocation[155]);
-
-                        SetTextBoxText(txtBk3示教20位置, communication.ReadLocation[159]);
-                        SetTextBoxText(txtBk3示教35位置, communication.ReadLocation[160]);
-
-                        SetTextBoxText(txtBk4示教20位置, communication.ReadLocation[164]);
-                        SetTextBoxText(txtBk4示教35位置, communication.ReadLocation[165]);
-
-                        SetTextBoxText(txt托盘上料个数, communication.ReadLocation[60]);
-                        SetTextBoxText(txt托盘下料个数, communication.ReadLocation[61]);
-                        SetTextBoxText(txtSokt上料个数, communication.ReadLocation[122]);
-                        SetTextBoxText(txtSokt下料个数, communication.ReadLocation[123]);
-
-
-
-                        //当前位置
-                        SetTextBoxText(txtX示教当前位置, communication.ReadLocation[0]);
-                        SetTextBoxText(txtY示教当前位置, communication.ReadLocation[1]);
-                        SetTextBoxText(txt实盘示教当前位置, communication.ReadLocation[2]);
-                        SetTextBoxText(txtNG盘示教当前位置, communication.ReadLocation[3]);
-                        //SetTextBoxText(txt倒实盘示教当前位置, communication.ReadLocation[4]);
-                        SetTextBoxText(txt倒NG盘示教当前位置, communication.ReadLocation[5]);
-                        SetTextBoxText(txt平移示教当前位置, communication.ReadLocation[6]);
-                        SetTextBoxText(txtBYX示教当前位置, communication.ReadLocation[7]);
-                        SetTextBoxText(txtBYY示教当前位置, communication.ReadLocation[8]);
-                        SetTextBoxText(txtBYZ示教当前位置, communication.ReadLocation[9]);
-                        SetTextBoxText(txtSk1示教当前位置, communication.ReadLocation[10]);
-                        SetTextBoxText(txtSk2示教当前位置, communication.ReadLocation[11]);
-                        SetTextBoxText(txtSk3示教当前位置, communication.ReadLocation[12]);
-                        SetTextBoxText(txtSk4示教当前位置, communication.ReadLocation[13]);
-                        SetTextBoxText(txtBk1示教当前位置, communication.ReadLocation[14]);
-                        SetTextBoxText(txtBk2示教当前位置, communication.ReadLocation[15]);
-                        SetTextBoxText(txtBk3示教当前位置, communication.ReadLocation[16]);
-                        SetTextBoxText(txtBk4示教当前位置, communication.ReadLocation[17]);
-                        SetTextBoxText(txtSk1示教当前位置1, communication.ReadLocation[10]);
-                        SetTextBoxText(txtSk2示教当前位置1, communication.ReadLocation[11]);
-                        SetTextBoxText(txtSk3示教当前位置1, communication.ReadLocation[12]);
-                        SetTextBoxText(txtSk4示教当前位置1, communication.ReadLocation[13]);
-
-                        SetTextBoxText(txtX当前位置, communication.ReadLocation[0]);
-                        SetTextBoxText(txtY当前位置, communication.ReadLocation[1]);
-                        SetTextBoxText(txt实盘当前位置, communication.ReadLocation[2]);
-                        SetTextBoxText(txtNG盘当前位置, communication.ReadLocation[3]);
-                        SetTextBoxText(txt倒实盘当前位置, communication.ReadLocation[4]);
-                        SetTextBoxText(txt倒NG盘当前位置, communication.ReadLocation[5]);
-                        SetTextBoxText(txtBY平移当前位置, communication.ReadLocation[6]);
-                        SetTextBoxText(txtBYX当前位置, communication.ReadLocation[7]);
-                        SetTextBoxText(txtBYY当前位置, communication.ReadLocation[8]);
-                        SetTextBoxText(txtBYZ当前位置, communication.ReadLocation[9]);
-                        SetTextBoxText(txtSk1当前位置, communication.ReadLocation[10]);
-                        SetTextBoxText(txtSk2当前位置, communication.ReadLocation[11]);
-                        SetTextBoxText(txtSk3当前位置, communication.ReadLocation[12]);
-                        SetTextBoxText(txtSk4当前位置, communication.ReadLocation[13]);
-                        SetTextBoxText(txtBk1当前位置, communication.ReadLocation[14]);
-                        SetTextBoxText(txtBk2当前位置, communication.ReadLocation[15]);
-                        SetTextBoxText(txtBk3当前位置, communication.ReadLocation[16]);
-                        SetTextBoxText(txtBk4当前位置, communication.ReadLocation[17]);
-                        SetTextBoxText(txt中空旋转1当前位置, communication.ReadLocation[18]);
-                        SetTextBoxText(txt中空旋转2当前位置, communication.ReadLocation[19]);
-                        SetTextBoxText(txtRFB1当前位置, communication.ReadLocation[20]);
-                        SetTextBoxText(txtRFB2当前位置, communication.ReadLocation[21]);
-                        SetTextBoxText(txtRFB3当前位置, communication.ReadLocation[22]);
-                        SetTextBoxText(txtRFB4当前位置, communication.ReadLocation[23]);
-
-                        SetTextBoxText(txtX示教固定当前位置, communication.ReadLocation[0]);
-                        SetTextBoxText(txtY示教固定当前位置, communication.ReadLocation[1]);
-                        SetTextBoxText(txtBYX示教固定当前位置, communication.ReadLocation[7]);
-                        SetTextBoxText(txtBYY示教固定当前位置, communication.ReadLocation[8]);
-                        SetTextBoxText(txtBYZ示教固定当前位置, communication.ReadLocation[9]);
-
-                        //IO信息界面
-                        
+                        #region IO信息界面
                         SetLabelColor(communication.ReadPLCIO[0], X00);
                         SetLabelColor(communication.ReadPLCIO[1], X01);
                         SetLabelColor(communication.ReadPLCIO[2], X02);
@@ -753,58 +636,11 @@ namespace FT
                         //SetLabelColor(communication.ReadPLCIO[141], X141);
                         //SetLabelColor(communication.ReadPLCIO[142], X142);
                         //SetLabelColor(communication.ReadPLCIO[143], X143);
-
                         //SetLabelColor(communication.ReadPLCIO[150], Y00);
                         //SetLabelColor(communication.ReadPLCIO[151], Y01);
                         //SetLabelColor(communication.ReadPLCIO[152], Y02);
                         //SetLabelColor(communication.ReadPLCIO[153], Y03);
-                        //SetLabelColor(communication.ReadPLCIO[154], Y04);
-
-                        #region Lable显示本机当前状态
-                        if (communication.ReadPLCIO[157])
-                        {
-                            LB_手动状态.Invoke(new Action(() => LB_手动状态.Text = "手动模式"));
-                        }
-
-                        if (communication.ReadPLCIO[158])
-                        {
-                            LB_手动状态.Invoke(new Action(() => LB_手动状态.Text = "自动模式"));
-                        }
-
-                        if (communication.ReadPLCIO[159])
-                        {
-                            LB_自动运行状态.Invoke(new Action(() => LB_自动运行状态.Text = "运行中"));
-                        }
-                        else
-                        {
-                            LB_自动运行状态.Invoke(new Action(() => LB_自动运行状态.Text = "停止中"));
-                        }
-
-                        if (communication.ReadPLCIO[156])
-                        {
-                            LB_初始化状态.Invoke(new Action(() => LB_初始化状态.Text = "初始化完成"));
-                        }
-                        else
-                        {
-                            LB_初始化状态.Invoke(new Action(() => LB_初始化状态.Text = "初始化未完成"));
-                        }
-
-                        if (communication.ReadPLCIO[155])
-                        {
-                            LB_Connection.Invoke(new Action(() => LB_Connection.Text = "本机已连接"));
-                        }
-                        else
-                        {
-                            LB_Connection.Invoke(new Action(() => LB_Connection.Text = "本机未连接"));
-                        }
-                                                
-                        SetLabelColor(communication.ReadPLCIO[155], LB_Connection);
-                        SetLabelColor(communication.ReadPLCIO[156], LB_初始化状态);
-                        SetLabelColor(communication.ReadPLCIO[158], LB_手动状态);
-                        SetLabelColor(communication.ReadPLCIO[159], LB_自动运行状态);
-
-                        #endregion
-                                               
+                        //SetLabelColor(communication.ReadPLCIO[154], Y04);                  
                         //SetLabelColor(communication.ReadPLCIO[155], Y05);
                         //SetLabelColor(communication.ReadPLCIO[156], Y06);
                         //SetLabelColor(communication.ReadPLCIO[157], Y07);
@@ -848,88 +684,9 @@ namespace FT
                         SetLabelColor(communication.ReadPLCIO[195], 夹爪2状态);
                         SetLabelColor(communication.ReadPLCIO[196], 夹爪3状态);
                         SetLabelColor(communication.ReadPLCIO[197], 夹爪4状态);
-                        //SetLabelColor(communication.ReadPLCIO[198], Y48);
-                        //SetLabelColor(communication.ReadPLCIO[199], Y49);
-                        //SetLabelColor(communication.ReadPLCIO[200], Y50);
-                        //SetLabelColor(communication.ReadPLCIO[201], Y51);
-                        //SetLabelColor(communication.ReadPLCIO[202], Y52);
-                        //SetLabelColor(communication.ReadPLCIO[203], Y53);
-                        //SetLabelColor(communication.ReadPLCIO[204], Y54);
-                        //SetLabelColor(communication.ReadPLCIO[205], Y55);
-                        //SetLabelColor(communication.ReadPLCIO[206], Y56);
-                        //SetLabelColor(communication.ReadPLCIO[207], Y57);
-                        //SetLabelColor(communication.ReadPLCIO[208], Y58);
-                        //SetLabelColor(communication.ReadPLCIO[209], Y59);
-                        //SetLabelColor(communication.ReadPLCIO[210], Y60);
-                        //SetLabelColor(communication.ReadPLCIO[211], Y61);
-                        //SetLabelColor(communication.ReadPLCIO[212], Y62);
-                        //SetLabelColor(communication.ReadPLCIO[213], Y63);
-                        //SetLabelColor(communication.ReadPLCIO[214], Y64);
-                        //SetLabelColor(communication.ReadPLCIO[215], Y65);
-                        //SetLabelColor(communication.ReadPLCIO[216], Y66);
-                        //SetLabelColor(communication.ReadPLCIO[217], Y67);
-                        //SetLabelColor(communication.ReadPLCIO[218], Y68);
-                        //SetLabelColor(communication.ReadPLCIO[219], Y69);
-                        //SetLabelColor(communication.ReadPLCIO[220], Y70);
-                        //SetLabelColor(communication.ReadPLCIO[221], Y71);
-                        //SetLabelColor(communication.ReadPLCIO[222], Y72);
-                        //SetLabelColor(communication.ReadPLCIO[223], Y73);
-                        //SetLabelColor(communication.ReadPLCIO[224], Y74);
-                        //SetLabelColor(communication.ReadPLCIO[225], Y75);
-                        //SetLabelColor(communication.ReadPLCIO[226], Y76);
-                        //SetLabelColor(communication.ReadPLCIO[227], Y77);
-                        //SetLabelColor(communication.ReadPLCIO[228], Y78);
-                        //SetLabelColor(communication.ReadPLCIO[229], Y79);
-                        //SetLabelColor(communication.ReadPLCIO[230], Y80);
-                        //SetLabelColor(communication.ReadPLCIO[231], Y81);
-                        //SetLabelColor(communication.ReadPLCIO[232], Y82);
-                        //SetLabelColor(communication.ReadPLCIO[233], Y83);
-                        //SetLabelColor(communication.ReadPLCIO[234], Y84);
-                        //SetLabelColor(communication.ReadPLCIO[235], Y85);
-                        //SetLabelColor(communication.ReadPLCIO[236], Y86);
-                        //SetLabelColor(communication.ReadPLCIO[237], Y87);
-                        //SetLabelColor(communication.ReadPLCIO[238], Y88);
-                        //SetLabelColor(communication.ReadPLCIO[239], Y89);
-                        //SetLabelColor(communication.ReadPLCIO[240], Y90);
-                        //SetLabelColor(communication.ReadPLCIO[241], Y91);
-                        //SetLabelColor(communication.ReadPLCIO[242], Y92);
-                        //SetLabelColor(communication.ReadPLCIO[243], Y93);
-                        //SetLabelColor(communication.ReadPLCIO[244], Y94);
-                        //SetLabelColor(communication.ReadPLCIO[245], Y95);
-                        //SetLabelColor(communication.ReadPLCIO[246], Y96);
-                        //SetLabelColor(communication.ReadPLCIO[247], Y97);
-                        //SetLabelColor(communication.ReadPLCIO[248], Y98);
-                        //SetLabelColor(communication.ReadPLCIO[249], Y99);
-                        //SetLabelColor(communication.ReadPLCIO[250], Y100);
-                        //SetLabelColor(communication.ReadPLCIO[251], Y101);
-                        //SetLabelColor(communication.ReadPLCIO[252], Y102);
-                        //SetLabelColor(communication.ReadPLCIO[253], Y103);
-                        //SetLabelColor(communication.ReadPLCIO[254], Y104);
-                        //SetLabelColor(communication.ReadPLCIO[255], Y105);
-                        //SetLabelColor(communication.ReadPLCIO[256], Y103);
-                        //SetLabelColor(communication.ReadPLCIO[257], Y107);
-                        //SetLabelColor(communication.ReadPLCIO[258], Y108);
-                        //SetLabelColor(communication.ReadPLCIO[259], Y109);
-                        //SetLabelColor(communication.ReadPLCIO[260], Y110);
-                        //SetLabelColor(communication.ReadPLCIO[261], Y111);
-                        //SetLabelColor(communication.ReadPLCIO[262], Y112);
-                        //SetLabelColor(communication.ReadPLCIO[263], Y113);
-                        //SetLabelColor(communication.ReadPLCIO[264], Y114);
-                        //SetLabelColor(communication.ReadPLCIO[265], Y115);
-                        //SetLabelColor(communication.ReadPLCIO[266], Y116);
-                        //SetLabelColor(communication.ReadPLCIO[267], Y117);
-                        //SetLabelColor(communication.ReadPLCIO[268], Y118);
-                        //SetLabelColor(communication.ReadPLCIO[269], Y119);
-                        //SetLabelColor(communication.ReadPLCIO[270], Y120);
-                        //SetLabelColor(communication.ReadPLCIO[271], Y121);
-                        //SetLabelColor(communication.ReadPLCIO[272], Y122);
-                        //SetLabelColor(communication.ReadPLCIO[273], Y123);
-                        //SetLabelColor(communication.ReadPLCIO[274], Y124);
-                        //SetLabelColor(communication.ReadPLCIO[275], Y125);
-                        //SetLabelColor(communication.ReadPLCIO[276], Y126);
-                        //SetLabelColor(communication.ReadPLCIO[277], Y127);
+                        #endregion
 
-                        //气缸信号显示
+                        #region 气缸信号显示
                         SetLabelColor(communication.ReadPLCIO[16], LB上料机械手上升);
                         SetLabelColor(communication.ReadPLCIO[17], LB上料机械手下降);
                         SetLabelColor(communication.ReadPLCIO[18], LB上料机械手夹紧);
@@ -1016,8 +773,9 @@ namespace FT
                         SetLabelColor(communication.ReadPLCIO[115], LB工位2光阑缩回右);
                         SetLabelColor(communication.ReadPLCIO[117], LB工位3光阑缩回右);
                         SetLabelColor(communication.ReadPLCIO[119], LB工位4光阑缩回右);
+                        #endregion
 
-                        //参数设置
+                        #region 参数设置界面
                         SetTextBoxText(txt上料X轴定位速度, communication.ReadPLCPmt[0]);
                         SetTextBoxText(txt上料Y轴定位速度, communication.ReadPLCPmt[1]);
                         SetTextBoxText(txt升降轴定位速度, communication.ReadPLCPmt[2]);
@@ -1029,7 +787,6 @@ namespace FT
                         SetTextBoxText(txtSocket轴定位速度, communication.ReadPLCPmt[8]);
                         SetTextBoxText(txt黑体轴定位速度, communication.ReadPLCPmt[9]);
                         SetTextBoxText(txt热辐射轴定位速度, communication.ReadPLCPmt[11]);
-
                         SetTextBoxText(txt上料X轴手动速度, communication.ReadPLCPmt[15]);
                         SetTextBoxText(txt上料Y轴手动速度, communication.ReadPLCPmt[16]);
                         SetTextBoxText(txt升降轴手动速度, communication.ReadPLCPmt[17]);
@@ -1041,7 +798,9 @@ namespace FT
                         SetTextBoxText(txtSocket轴手动速度, communication.ReadPLCPmt[23]);
                         SetTextBoxText(txt黑体轴手动速度, communication.ReadPLCPmt[24]);
                         SetTextBoxText(txt热辐射轴手动速度, communication.ReadPLCPmt[25]);
+                        #endregion
 
+                        #region 气缸界面使用次数检测
                         SetTextBoxText(txt夹具1次数, communication.ReadPLCPmt[31]);
                         CheckCount(communication.ReadPLCPmt[31], 10000, ref isShow1, "工装1使用次数已达上限，请及时更换");
                         SetTextBoxText(txt夹具2次数, communication.ReadPLCPmt[32]);
@@ -1052,7 +811,6 @@ namespace FT
                         CheckCount(communication.ReadPLCPmt[34], 10000, ref isShow4, "工装4使用次数已达上限，请及时更换");
                         SetTextBoxText(txt上料吸嘴1次数, communication.ReadPLCPmt[111]);
                         CheckCount(communication.ReadPLCPmt[111], 10000, ref isShow,"上料吸嘴1使用次数已达上限，请及时更换");
-                        
                         SetTextBoxText(txt上料吸嘴2次数, communication.ReadPLCPmt[112]);
                         CheckCount(communication.ReadPLCPmt[112], 10000, ref isShow5, "上料吸嘴2使用次数已达上限，请及时更换");
                         SetTextBoxText(txt平移吸嘴1次数, communication.ReadPLCPmt[113]);
@@ -1071,8 +829,9 @@ namespace FT
                         CheckCount(communication.ReadPLCPmt[119], 10000, ref isShow12, "测试夹爪3使用次数已达上限，请及时更换胶带");
                         SetTextBoxText(txt测试夹爪4次数, communication.ReadPLCPmt[120]);
                         CheckCount(communication.ReadPLCPmt[120], 10000, ref isShow13, "测试夹爪4使用次数已达上限，请及时更换胶带");
+                        #endregion
 
-                        //信息读取
+                        #region 手动电机界面信息
                         SetTextBoxText(txt控制器时间, communication.ReadTestInformation[29]);
                         SetTextBoxText(txt扫码信息, communication.ReadTestInformation[30]);
                         SetTextBoxText(txt下视觉偏移X, communication.ReadTestInformation[32]);
@@ -1094,8 +853,9 @@ namespace FT
                         SetTextBoxText(txt上视觉1偏移X, communication.ReadTestInformation[49]);
                         SetTextBoxText(txt上视觉1偏移Y, communication.ReadTestInformation[50]);
                         SetTextBoxText(txt上视觉1偏移θ, communication.ReadTestInformation[51]);
+                        #endregion
 
-                        //复位信息读取
+                        #region IO信息界面复位信息读取
                         SetLabelColor(communication.ReadPLCIO[50], LB_FW_增广1);
                         SetLabelColor(communication.ReadPLCIO[57], LB_FW_增广2);
                         SetLabelColor(communication.ReadPLCIO[16], LB_FW_夹爪气缸上);
@@ -1129,11 +889,11 @@ namespace FT
                         SetLabelColor(communication.ReadPLCIO[98], LB_FW_工位4光阑左上);
                         SetLabelColor(communication.ReadPLCIO[101], LB_FW_工位4辐射板下);
                         SetLabelColor(communication.ReadPLCIO[102], LB_FW_工位4零度);
+                        #endregion
 
                         #endregion
                         stopwatch2.Stop();
-                        label95.Invoke(new Action(() => label95.Text = $"{stopwatch2.ElapsedMilliseconds}ms"));
-                                                                
+                        label95.Invoke(new Action(() => label95.Text = $"{stopwatch2.ElapsedMilliseconds}ms"));                                  
                     }
                     catch (Exception e)
                     {
@@ -4338,6 +4098,7 @@ namespace FT
                 speed.Text = null;
             }
         }
+
         private void BTN写入速度_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("是否写入对应速度？", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -4415,6 +4176,7 @@ namespace FT
         private void btn门开关功能开关_MouseUp(object sender, MouseEventArgs e)
         {
             communication.WriteVariable(false, "PlcInIO[460]");
+            RecordAndShow($"门开关打开", LogType.Modification, TB_Modification);
         }
 
         private void btn门开关功能关闭_MouseDown(object sender, MouseEventArgs e)
@@ -4425,6 +4187,7 @@ namespace FT
         private void btn门开关功能关闭_MouseUp(object sender, MouseEventArgs e)
         {
             communication.WriteVariable(false, "PlcInIO[469]");
+            RecordAndShow($"门开关关闭", LogType.Modification, TB_Modification);
         }
 
         bool Model_Change = false;//用于切换打开和关闭引脚检测功能的变量，默认关闭引脚检测功能
@@ -4437,6 +4200,7 @@ namespace FT
                 btn引脚检测功能.Text = "关闭";
                 btn引脚检测功能.BackColor = Color.Transparent;
                 Model_Change = false;
+                RecordAndShow($"引脚检测打开", LogType.Modification, TB_Modification);
             }
             else
             {
@@ -4444,6 +4208,7 @@ namespace FT
                 btn引脚检测功能.Text = "打开";
                 btn引脚检测功能.BackColor = Color.LightGreen;
                 Model_Change = true;
+                RecordAndShow($"引脚检测关闭", LogType.Modification, TB_Modification);
             }
         }
 
@@ -4451,9 +4216,9 @@ namespace FT
         {
             communication.WriteVariable(true, "PlcInIO[470]");
         }
-
         private void btn真空发生功能开_MouseUp(object sender, MouseEventArgs e)
         {
+            RecordAndShow($"真空发生打开", LogType.Modification, TB_Modification);
             communication.WriteVariable(false, "PlcInIO[470]");
         }
 
@@ -4461,9 +4226,9 @@ namespace FT
         {
             communication.WriteVariable(true, "PlcInIO[471]");
         }
-
         private void btn真空发生功能关_MouseUp(object sender, MouseEventArgs e)
         {
+            RecordAndShow($"真空发生关闭", LogType.Modification, TB_Modification);
             communication.WriteVariable(false, "PlcInIO[471]");
         }
 
@@ -4702,7 +4467,8 @@ namespace FT
             DialogResult result = MessageBox.Show("是否切换手动模式？", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
-               communication.WriteVariable(true, "PlcInIO[2]");
+                RecordAndShow($"切换为手动模式", LogType.Modification, TB_Modification);
+                communication.WriteVariable(true, "PlcInIO[2]");
             }
         }
 
@@ -4711,6 +4477,7 @@ namespace FT
             DialogResult result = MessageBox.Show("是否切换自动模式？", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
+                RecordAndShow($"切换为自动模式", LogType.Modification, TB_Modification);
                 communication.WriteVariable(true, "PlcInIO[28]");
             }
         }
@@ -4726,12 +4493,14 @@ namespace FT
             DialogResult result = MessageBox.Show("是否开始自动运行？", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
+                RecordAndShow($"自动运行开始", LogType.Modification, TB_Modification);
                 communication.WriteVariable(true, "PlcInIO[4]");
             }
         }
 
         private void btn自动停止_Click(object sender, EventArgs e)
         {
+            RecordAndShow($"自动运行停止", LogType.Modification, TB_Modification);
             communication.WriteVariable(true, "PlcInIO[5]");
         }
 
@@ -4746,6 +4515,7 @@ namespace FT
             DialogResult result = MessageBox.Show("是否初始化？", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
+                RecordAndShow($"初始化", LogType.Modification, TB_Modification);
                 communication.WriteVariable(true, "PlcInIO[6]");
             }
         }
@@ -4819,6 +4589,7 @@ namespace FT
         }
         private void btn光源开_MouseUp(object sender, MouseEventArgs e)
         {
+            RecordAndShow($"光源打开", LogType.Modification, TB_Modification);
             communication.WriteVariable(false, "PlcInIO[467]");
         }
 
@@ -4828,6 +4599,7 @@ namespace FT
         }
         private void btn光源关_MouseUp(object sender, MouseEventArgs e)
         {
+            RecordAndShow($"光源关闭", LogType.Modification, TB_Modification);
             communication.WriteVariable(false, "PlcInIO[468]");
         }
 
@@ -5026,6 +4798,7 @@ namespace FT
             DialogResult result = MessageBox.Show("是否选择自动模式本地？", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
+                RecordAndShow($"选择自动模式本地", LogType.Modification, TB_Modification);
                 communication.WriteVariable(true, "PlcInIO[3]");
                 communication.WriteVariable(false, "PlcInIO[27]");
                 communication.WriteVariable(false, "PlcInIO[29]");
@@ -5037,6 +4810,7 @@ namespace FT
             DialogResult result = MessageBox.Show("是否选择自动模式远程-测试？", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
+                RecordAndShow($"选择自动模式远程-测试", LogType.Modification, TB_Modification);
                 communication.WriteVariable(true, "PlcInIO[29]");
                 communication.WriteVariable(false, "PlcInIO[3]");
                 communication.WriteVariable(false, "PlcInIO[27]");
@@ -5428,6 +5202,7 @@ namespace FT
         }
         private void btn热板上电_MouseUp(object sender, MouseEventArgs e)
         {
+            RecordAndShow($"热板上电", LogType.Modification, TB_Modification);
             communication.WriteVariable(false, "PlcInIO[472]");
         }
 
@@ -5437,48 +5212,43 @@ namespace FT
         }
         private void btn热板断电_MouseUp(object sender, MouseEventArgs e)
         {
+            RecordAndShow($"热板断电", LogType.Modification, TB_Modification);
             communication.WriteVariable(false, "PlcInIO[473]");
         }
+
         private void btn上料产品对位NG报警跳过_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("是否跳过上料-产品对位NG报警？", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
+                RecordAndShow($"跳过上料-产品对位NG报警", LogType.Modification, TB_Modification);
                 communication.WriteVariable(true, "PlcInIO[158]");
             }
         }
-
         private void btn穴位报警跳过_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("是否跳过上料-托盘穴位对位NG报警？", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
+                RecordAndShow($"跳过上料-托盘穴位对位NG报警", LogType.Modification, TB_Modification);
                 communication.WriteVariable(true, "PlcInIO[156]");
             }
         }
-      
         private void btn复检报警跳过_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("是否跳过测试-产品复检NG报警？", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
+                RecordAndShow($"跳过测试-产品复检NG报警", LogType.Modification, TB_Modification);
                 communication.WriteVariable(true, "PlcInIO[157]");
             }
         }
-
-       // private void btn黑体一键上升_MouseDown(object sender, MouseEventArgs e)
-        //{
-        //    communication.WriteVariable(true, "PlcInIO[334]");
-       // }
-       // private void btn黑体一键上升_MouseUp(object sender, MouseEventArgs e)
-       // {
-       //     communication.WriteVariable(false, "PlcInIO[334]");
-       // }
         private void btn黑体一键上升_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("互锁条件：1黑体手动平移轴在指定位置，且黑体到位信号X13有信号；请确认设备满足以上条件，再开启黑体一键上升功能！", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
+                RecordAndShow($"黑体一键上升", LogType.Modification, TB_Modification);
                 communication.WriteVariable(true, "PlcInIO[334]");
             }
         }
@@ -5487,6 +5257,7 @@ namespace FT
             DialogResult result = MessageBox.Show("互锁条件：1搬运Z轴在上升位置；2钧舵夹爪1、2、3、4气缸都在上升位置；3工位1、2、3、4翻转气缸都在翻0°位置；请确认设备满足以上条件，再开启钧舵夹爪一键下料功能！", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
+                RecordAndShow($"钧舵夹爪一键下料", LogType.Modification, TB_Modification);
                 communication.WriteVariable(true, "PlcInIO[150]");
             }
         }
@@ -5510,9 +5281,9 @@ namespace FT
             if (result == DialogResult.Yes)
             {
                 communication.WriteVariable(true, "PlcInIO[474]");
+                RecordAndShow($"使用次数清零", LogType.Modification, TB_Modification);
             }
         }
-
         private void btn上料吸嘴1次数清零_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("使用次数是否清零？", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -5626,28 +5397,23 @@ namespace FT
             }
         }
 
-       // private void btn人工上下料_MouseDown(object sender, MouseEventArgs e)
-        //{
-        //    communication.WriteVariable(true, "PlcInIO[210]");
-       // }
-       // private void btn人工上下料_MouseUp(object sender, MouseEventArgs e)
-       // {
-       //     communication.WriteVariable(false, "PlcInIO[210]");
-       // }
         private void btn人工上下料_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("上料X轴是否移动到取托盘避让位置？", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
+                RecordAndShow($"上料X轴移动到取托盘避让位置", LogType.Modification, TB_Modification);
                 communication.WriteVariable(true, "PlcInIO[210]");
             }
         }
+
         private void btn手动给测试机触发信号_MouseDown(object sender, MouseEventArgs e)
         {
             communication.WriteVariable(true, "PlcInIO[149]");
         }
         private void btn手动给测试机触发信号_MouseUp(object sender, MouseEventArgs e)
         {
+            RecordAndShow($"手动给测试机触发信号", LogType.Modification, TB_Modification);
             communication.WriteVariable(false, "PlcInIO[149]");
         }
 
@@ -6043,16 +5809,41 @@ namespace FT
         #endregion
 
         #region 示教操作
+        //将PLC上的bool值改为true一定时间后变回false
+        private async Task BoolSwitchAsync(string variableName, string message = "", int delay = 1000)
+        {
+            DialogResult result = MessageBox.Show($"您是否确定此操作？", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+                if (communication.WriteVariable(true, variableName))
+                {
+                    await Task.Delay(delay);
+                    SetMessage("示教中。");
+                    RecordAndShow($"{message}", LogType.Modification, TB_Modification);
+                    IsWrite = communication.WriteVariable(false, variableName);
+                    SetMessage();
+                }
+                else
+                {
+                    MessageBox.Show("参数写入失败，连接断开。", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+        }
+
         private async void BTN示教1_Click(object sender, EventArgs e)
         {
-            Button button = (Button)sender; //MessageBox.Show((string)button.Tag);
-            await BoolSwitchAsync((string)button.Tag);
+            Button button = (Button)sender;
+            if (calibrationTextBoxes.ContainsKey($"txt{button.Name.Substring(3)}"))
+                await BoolSwitchAsync((string)button.Tag, $"示教1 [{button.Name.Substring(3)}] 按下，当前值：{calibrationTextBoxes[$"txt{button.Name.Substring(3)}"].Text}");
+            else
+                await BoolSwitchAsync((string)button.Tag, $"示教1 [{button.Name.Substring(3)}] 按下");
         }
 
         private async void BTN示教2_Click(object sender, EventArgs e)
         {
-            Button button = (Button)sender; //MessageBox.Show((string)button.Tag);
-            await BoolSwitchAsync((string)button.Tag);
+            Button button = (Button)sender;
+            if (calibrationTextBoxes.ContainsKey($"txt{button.Name.Substring(3)}"))
+                await BoolSwitchAsync((string)button.Tag, $"示教2 [{button.Name.Substring(3)}] 按下，当前值：{calibrationTextBoxes[$"txt{button.Name.Substring(3)}"].Text}");
+            else
+                await BoolSwitchAsync((string)button.Tag, $"示教2 [{button.Name.Substring(3)}] 按下");
         }
 
         private void btn自动模式远程_Click(object sender, EventArgs e)
@@ -6063,6 +5854,7 @@ namespace FT
                 communication.WriteVariable(true, "PlcInIO[27]");
                 communication.WriteVariable(false, "PlcInIO[3]");
                 communication.WriteVariable(false, "PlcInIO[29]");
+                RecordAndShow($"选择自动模式远程-控料", LogType.Modification, TB_Modification);
             }
         }
         #endregion
@@ -6239,7 +6031,10 @@ namespace FT
             }
         }
 
-        
-
+        private void BTN测试_Click(object sender, EventArgs e)
+        {
+            TestForm testForm = new TestForm();
+            testForm.Show();
+        }
     }
 }

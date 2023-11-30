@@ -120,6 +120,7 @@ namespace FT
             }
             return hashtable;
         }
+
         /// <summary>
         /// 复制哈希表
         /// </summary>
@@ -158,7 +159,7 @@ namespace FT
             {
                 #region 方式一更新数据:直接读（会乱码）
                 //GetValue(compolet.GetHashtable(plcOutIOName), PLCIO);
-                //GetValue(compolet.GetHashtable(plcOutLocationName), Location);
+                GetValue(Compolet.GetHashtable(plcOutLocationName), Location);
                 GetValue(Compolet.GetHashtable(plcOutAlarmName), Alarm);
                 //GetValue(compolet.GetHashtable(plcInPmtName), PLCPmt);
                 //GetValue(compolet.GetHashtable(plcOutFlagName), FlagBits);
@@ -167,7 +168,7 @@ namespace FT
 
                 #region 方式二更新数据：排序
                 HashtableToArray(Compolet.GetHashtable(plcOutIOName), ReadPLCIO);
-                HashtableToArray(Compolet.GetHashtable(plcOutLocationName), ReadLocation);
+                //HashtableToArray(Compolet.GetHashtable(plcOutLocationName), ReadLocation);
                 //HashtableToArray(Compolet.GetHashtable(plcOutAlarmName), ReadPLCAlarm);
                 HashtableToArray(Compolet.GetHashtable(plcInPmtName), ReadPLCPmt);
                 #endregion

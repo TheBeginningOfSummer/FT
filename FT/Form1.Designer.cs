@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.TC_Main = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.TP主界面 = new System.Windows.Forms.TabPage();
             this.TC信息 = new System.Windows.Forms.TabControl();
             this.TP报警信息 = new System.Windows.Forms.TabPage();
             this.BTN查看报警历史 = new System.Windows.Forms.Button();
@@ -42,6 +42,7 @@
             this.BTN查看修改历史 = new System.Windows.Forms.Button();
             this.TB_Modification = new System.Windows.Forms.TextBox();
             this.groupBox85 = new System.Windows.Forms.GroupBox();
+            this.BTN测试 = new System.Windows.Forms.Button();
             this.label101 = new System.Windows.Forms.Label();
             this.groupBox69 = new System.Windows.Forms.GroupBox();
             this.label71 = new System.Windows.Forms.Label();
@@ -53,7 +54,7 @@
             this.CB_TypeOfTray = new System.Windows.Forms.ComboBox();
             this.CB_Socket类 = new System.Windows.Forms.ComboBox();
             this.TSTD_IDImg = new System.Windows.Forms.PictureBox();
-            this.GB_Coonnection = new System.Windows.Forms.GroupBox();
+            this.GB_Connection = new System.Windows.Forms.GroupBox();
             this.txtSokt下料个数 = new System.Windows.Forms.TextBox();
             this.label266 = new System.Windows.Forms.Label();
             this.txtSokt上料个数 = new System.Windows.Forms.TextBox();
@@ -97,7 +98,7 @@
             this.label99 = new System.Windows.Forms.Label();
             this.label98 = new System.Windows.Forms.Label();
             this.btn人工上下料 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn黑体一键上升主界面 = new System.Windows.Forms.Button();
             this.label97 = new System.Windows.Forms.Label();
             this.groupBox73 = new System.Windows.Forms.GroupBox();
             this.LB_自动远程状态测试 = new System.Windows.Forms.Label();
@@ -114,7 +115,7 @@
             this.LB_ConnectionStatus = new System.Windows.Forms.Label();
             this.label249 = new System.Windows.Forms.Label();
             this.label248 = new System.Windows.Forms.Label();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.TP手动气缸 = new System.Windows.Forms.TabPage();
             this.groupBox20 = new System.Windows.Forms.GroupBox();
             this.LBEFU上电 = new System.Windows.Forms.Label();
             this.btnEFU断电 = new System.Windows.Forms.Button();
@@ -346,7 +347,7 @@
             this.label183 = new System.Windows.Forms.Label();
             this.txt夹具1次数 = new System.Windows.Forms.TextBox();
             this.label184 = new System.Windows.Forms.Label();
-            this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.TP手动电机1 = new System.Windows.Forms.TabPage();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
             this.btn上视觉1标定复位 = new System.Windows.Forms.Button();
             this.btn上视觉1标定有效 = new System.Windows.Forms.Button();
@@ -563,7 +564,7 @@
             this.btnX左行 = new System.Windows.Forms.Button();
             this.btnX回原点 = new System.Windows.Forms.Button();
             this.btnX实盘位置 = new System.Windows.Forms.Button();
-            this.tabPage9 = new System.Windows.Forms.TabPage();
+            this.TP手动电机2 = new System.Windows.Forms.TabPage();
             this.groupBox81 = new System.Windows.Forms.GroupBox();
             this.btnRFBsi120位置 = new System.Windows.Forms.Button();
             this.btnRFB4右转 = new System.Windows.Forms.Button();
@@ -742,7 +743,7 @@
             this.label346 = new System.Windows.Forms.Label();
             this.btnSk1停止 = new System.Windows.Forms.Button();
             this.btnSk1回原点 = new System.Windows.Forms.Button();
-            this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.TP示教界面1 = new System.Windows.Forms.TabPage();
             this.groupBox95 = new System.Windows.Forms.GroupBox();
             this.label555 = new System.Windows.Forms.Label();
             this.label553 = new System.Windows.Forms.Label();
@@ -990,7 +991,7 @@
             this.txtX示教当前位置 = new System.Windows.Forms.TextBox();
             this.btnX示教吸1实盘第一列 = new System.Windows.Forms.Button();
             this.label370 = new System.Windows.Forms.Label();
-            this.tabPage10 = new System.Windows.Forms.TabPage();
+            this.TP示教界面2 = new System.Windows.Forms.TabPage();
             this.groupBox71 = new System.Windows.Forms.GroupBox();
             this.LB_自动远程状态 = new System.Windows.Forms.Label();
             this.label234 = new System.Windows.Forms.Label();
@@ -1172,7 +1173,7 @@
             this.btnSk1示教翻转位置 = new System.Windows.Forms.Button();
             this.txtSk1示教当前位置 = new System.Windows.Forms.TextBox();
             this.label432 = new System.Windows.Forms.Label();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.TPIO信息 = new System.Windows.Forms.TabPage();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.LB_FW_工位3零度 = new System.Windows.Forms.Label();
             this.LB_FW_工位3光阑右上 = new System.Windows.Forms.Label();
@@ -1297,7 +1298,7 @@
             this.label111 = new System.Windows.Forms.Label();
             this.label112 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.label95 = new System.Windows.Forms.Label();
+            this.label69 = new System.Windows.Forms.Label();
             this.label121 = new System.Windows.Forms.Label();
             this.label119 = new System.Windows.Forms.Label();
             this.X68 = new System.Windows.Forms.Label();
@@ -1330,6 +1331,7 @@
             this.label175 = new System.Windows.Forms.Label();
             this.label176 = new System.Windows.Forms.Label();
             this.groupBox77 = new System.Windows.Forms.GroupBox();
+            this.label95 = new System.Windows.Forms.Label();
             this.label237 = new System.Windows.Forms.Label();
             this.label93 = new System.Windows.Forms.Label();
             this.label238 = new System.Windows.Forms.Label();
@@ -1620,13 +1622,13 @@
             this.label22 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.TPMapping = new System.Windows.Forms.TabPage();
             this.GB_Trays = new System.Windows.Forms.GroupBox();
             this.label307 = new System.Windows.Forms.Label();
             this.label305 = new System.Windows.Forms.Label();
             this.label286 = new System.Windows.Forms.Label();
             this.PN_Trays = new System.Windows.Forms.Panel();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.TP信息追溯 = new System.Windows.Forms.TabPage();
             this.InquireCondition = new System.Windows.Forms.GroupBox();
             this.BTN_Output = new System.Windows.Forms.Button();
             this.LB_SensorCode = new System.Windows.Forms.Label();
@@ -1639,7 +1641,7 @@
             this.DTP_MaxTime = new System.Windows.Forms.DateTimePicker();
             this.PN_Data = new System.Windows.Forms.Panel();
             this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.TP参数设置 = new System.Windows.Forms.TabPage();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.label374 = new System.Windows.Forms.Label();
             this.label373 = new System.Windows.Forms.Label();
@@ -1767,26 +1769,27 @@
             this.label464 = new System.Windows.Forms.Label();
             this.label463 = new System.Windows.Forms.Label();
             this.TC_Main.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.TP主界面.SuspendLayout();
             this.TC信息.SuspendLayout();
             this.TP报警信息.SuspendLayout();
             this.TP更改信息.SuspendLayout();
+            this.groupBox85.SuspendLayout();
             this.groupBox69.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TSTD_IDImg)).BeginInit();
-            this.GB_Coonnection.SuspendLayout();
+            this.GB_Connection.SuspendLayout();
             this.GB_Modify.SuspendLayout();
             this.groupBox74.SuspendLayout();
             this.groupBox72.SuspendLayout();
             this.groupBox73.SuspendLayout();
             this.groupBox70.SuspendLayout();
-            this.tabPage2.SuspendLayout();
+            this.TP手动气缸.SuspendLayout();
             this.groupBox20.SuspendLayout();
             this.groupBox17.SuspendLayout();
             this.groupBox16.SuspendLayout();
             this.groupBox15.SuspendLayout();
             this.groupBox18.SuspendLayout();
             this.groupBox83.SuspendLayout();
-            this.tabPage7.SuspendLayout();
+            this.TP手动电机1.SuspendLayout();
             this.groupBox14.SuspendLayout();
             this.groupBox90.SuspendLayout();
             this.groupBox89.SuspendLayout();
@@ -1805,7 +1808,7 @@
             this.groupBox22.SuspendLayout();
             this.groupBox31.SuspendLayout();
             this.groupBox21.SuspendLayout();
-            this.tabPage9.SuspendLayout();
+            this.TP手动电机2.SuspendLayout();
             this.groupBox81.SuspendLayout();
             this.groupBox80.SuspendLayout();
             this.groupBox79.SuspendLayout();
@@ -1822,7 +1825,7 @@
             this.groupBox35.SuspendLayout();
             this.groupBox34.SuspendLayout();
             this.groupBox33.SuspendLayout();
-            this.tabPage8.SuspendLayout();
+            this.TP示教界面1.SuspendLayout();
             this.groupBox95.SuspendLayout();
             this.groupBox94.SuspendLayout();
             this.groupBox86.SuspendLayout();
@@ -1842,7 +1845,7 @@
             this.groupBox47.SuspendLayout();
             this.groupBox46.SuspendLayout();
             this.groupBox45.SuspendLayout();
-            this.tabPage10.SuspendLayout();
+            this.TP示教界面2.SuspendLayout();
             this.groupBox71.SuspendLayout();
             this.groupBox49.SuspendLayout();
             this.groupBox13.SuspendLayout();
@@ -1859,7 +1862,7 @@
             this.groupBox55.SuspendLayout();
             this.groupBox53.SuspendLayout();
             this.groupBox57.SuspendLayout();
-            this.tabPage4.SuspendLayout();
+            this.TPIO信息.SuspendLayout();
             this.groupBox9.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox77.SuspendLayout();
@@ -1870,13 +1873,13 @@
             this.groupBox5.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.tabPage3.SuspendLayout();
+            this.TPMapping.SuspendLayout();
             this.GB_Trays.SuspendLayout();
-            this.tabPage6.SuspendLayout();
+            this.TP信息追溯.SuspendLayout();
             this.InquireCondition.SuspendLayout();
             this.PN_Data.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
-            this.tabPage5.SuspendLayout();
+            this.TP参数设置.SuspendLayout();
             this.groupBox10.SuspendLayout();
             this.groupBox62.SuspendLayout();
             this.groupBox65.SuspendLayout();
@@ -1886,16 +1889,16 @@
             // TC_Main
             // 
             this.TC_Main.Appearance = System.Windows.Forms.TabAppearance.Buttons;
-            this.TC_Main.Controls.Add(this.tabPage1);
-            this.TC_Main.Controls.Add(this.tabPage2);
-            this.TC_Main.Controls.Add(this.tabPage7);
-            this.TC_Main.Controls.Add(this.tabPage9);
-            this.TC_Main.Controls.Add(this.tabPage8);
-            this.TC_Main.Controls.Add(this.tabPage10);
-            this.TC_Main.Controls.Add(this.tabPage4);
-            this.TC_Main.Controls.Add(this.tabPage3);
-            this.TC_Main.Controls.Add(this.tabPage6);
-            this.TC_Main.Controls.Add(this.tabPage5);
+            this.TC_Main.Controls.Add(this.TP主界面);
+            this.TC_Main.Controls.Add(this.TP手动气缸);
+            this.TC_Main.Controls.Add(this.TP手动电机1);
+            this.TC_Main.Controls.Add(this.TP手动电机2);
+            this.TC_Main.Controls.Add(this.TP示教界面1);
+            this.TC_Main.Controls.Add(this.TP示教界面2);
+            this.TC_Main.Controls.Add(this.TPIO信息);
+            this.TC_Main.Controls.Add(this.TPMapping);
+            this.TC_Main.Controls.Add(this.TP信息追溯);
+            this.TC_Main.Controls.Add(this.TP参数设置);
             this.TC_Main.Dock = System.Windows.Forms.DockStyle.Fill;
             this.TC_Main.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TC_Main.ItemSize = new System.Drawing.Size(120, 40);
@@ -1908,32 +1911,32 @@
             this.TC_Main.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.TC_Main.TabIndex = 0;
             // 
-            // tabPage1
+            // TP主界面
             // 
-            this.tabPage1.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage1.Controls.Add(this.TC信息);
-            this.tabPage1.Controls.Add(this.groupBox85);
-            this.tabPage1.Controls.Add(this.label101);
-            this.tabPage1.Controls.Add(this.groupBox69);
-            this.tabPage1.Controls.Add(this.TSTD_IDImg);
-            this.tabPage1.Controls.Add(this.GB_Coonnection);
-            this.tabPage1.Controls.Add(this.GB_Modify);
-            this.tabPage1.Controls.Add(this.btn手动模式);
-            this.tabPage1.Controls.Add(this.btn初始化);
-            this.tabPage1.Controls.Add(this.btn自动停止);
-            this.tabPage1.Controls.Add(this.btn自动运行);
-            this.tabPage1.Controls.Add(this.btn自动模式);
-            this.tabPage1.Controls.Add(this.groupBox74);
-            this.tabPage1.Controls.Add(this.groupBox72);
-            this.tabPage1.Controls.Add(this.groupBox73);
-            this.tabPage1.Controls.Add(this.groupBox70);
-            this.tabPage1.Location = new System.Drawing.Point(4, 44);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage1.Size = new System.Drawing.Size(1256, 763);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "主界面";
+            this.TP主界面.BackColor = System.Drawing.SystemColors.Control;
+            this.TP主界面.Controls.Add(this.TC信息);
+            this.TP主界面.Controls.Add(this.groupBox85);
+            this.TP主界面.Controls.Add(this.label101);
+            this.TP主界面.Controls.Add(this.groupBox69);
+            this.TP主界面.Controls.Add(this.TSTD_IDImg);
+            this.TP主界面.Controls.Add(this.GB_Connection);
+            this.TP主界面.Controls.Add(this.GB_Modify);
+            this.TP主界面.Controls.Add(this.btn手动模式);
+            this.TP主界面.Controls.Add(this.btn初始化);
+            this.TP主界面.Controls.Add(this.btn自动停止);
+            this.TP主界面.Controls.Add(this.btn自动运行);
+            this.TP主界面.Controls.Add(this.btn自动模式);
+            this.TP主界面.Controls.Add(this.groupBox74);
+            this.TP主界面.Controls.Add(this.groupBox72);
+            this.TP主界面.Controls.Add(this.groupBox73);
+            this.TP主界面.Controls.Add(this.groupBox70);
+            this.TP主界面.Location = new System.Drawing.Point(4, 44);
+            this.TP主界面.Margin = new System.Windows.Forms.Padding(2);
+            this.TP主界面.Name = "TP主界面";
+            this.TP主界面.Padding = new System.Windows.Forms.Padding(2);
+            this.TP主界面.Size = new System.Drawing.Size(1256, 763);
+            this.TP主界面.TabIndex = 0;
+            this.TP主界面.Text = "主界面";
             // 
             // TC信息
             // 
@@ -2060,12 +2063,23 @@
             // 
             // groupBox85
             // 
+            this.groupBox85.Controls.Add(this.BTN测试);
             this.groupBox85.Location = new System.Drawing.Point(736, 91);
             this.groupBox85.Name = "groupBox85";
             this.groupBox85.Size = new System.Drawing.Size(240, 255);
             this.groupBox85.TabIndex = 221;
             this.groupBox85.TabStop = false;
             this.groupBox85.Text = "备用";
+            // 
+            // BTN测试
+            // 
+            this.BTN测试.Location = new System.Drawing.Point(15, 25);
+            this.BTN测试.Name = "BTN测试";
+            this.BTN测试.Size = new System.Drawing.Size(75, 23);
+            this.BTN测试.TabIndex = 0;
+            this.BTN测试.Text = "测试";
+            this.BTN测试.UseVisualStyleBackColor = true;
+            this.BTN测试.Click += new System.EventHandler(this.BTN测试_Click);
             // 
             // label101
             // 
@@ -2218,22 +2232,22 @@
             this.TSTD_IDImg.TabIndex = 216;
             this.TSTD_IDImg.TabStop = false;
             // 
-            // GB_Coonnection
+            // GB_Connection
             // 
-            this.GB_Coonnection.Controls.Add(this.txtSokt下料个数);
-            this.GB_Coonnection.Controls.Add(this.label266);
-            this.GB_Coonnection.Controls.Add(this.txtSokt上料个数);
-            this.GB_Coonnection.Controls.Add(this.label255);
-            this.GB_Coonnection.Controls.Add(this.txt托盘下料个数);
-            this.GB_Coonnection.Controls.Add(this.label253);
-            this.GB_Coonnection.Controls.Add(this.txt托盘上料个数);
-            this.GB_Coonnection.Controls.Add(this.label251);
-            this.GB_Coonnection.Location = new System.Drawing.Point(490, 91);
-            this.GB_Coonnection.Name = "GB_Coonnection";
-            this.GB_Coonnection.Size = new System.Drawing.Size(240, 255);
-            this.GB_Coonnection.TabIndex = 15;
-            this.GB_Coonnection.TabStop = false;
-            this.GB_Coonnection.Text = "上下料个数统计";
+            this.GB_Connection.Controls.Add(this.txtSokt下料个数);
+            this.GB_Connection.Controls.Add(this.label266);
+            this.GB_Connection.Controls.Add(this.txtSokt上料个数);
+            this.GB_Connection.Controls.Add(this.label255);
+            this.GB_Connection.Controls.Add(this.txt托盘下料个数);
+            this.GB_Connection.Controls.Add(this.label253);
+            this.GB_Connection.Controls.Add(this.txt托盘上料个数);
+            this.GB_Connection.Controls.Add(this.label251);
+            this.GB_Connection.Location = new System.Drawing.Point(490, 91);
+            this.GB_Connection.Name = "GB_Connection";
+            this.GB_Connection.Size = new System.Drawing.Size(240, 255);
+            this.GB_Connection.TabIndex = 15;
+            this.GB_Connection.TabStop = false;
+            this.GB_Connection.Text = "上下料个数统计";
             // 
             // txtSokt下料个数
             // 
@@ -2637,7 +2651,7 @@
             this.groupBox72.Controls.Add(this.label99);
             this.groupBox72.Controls.Add(this.label98);
             this.groupBox72.Controls.Add(this.btn人工上下料);
-            this.groupBox72.Controls.Add(this.button1);
+            this.groupBox72.Controls.Add(this.btn黑体一键上升主界面);
             this.groupBox72.Controls.Add(this.label97);
             this.groupBox72.Location = new System.Drawing.Point(490, 357);
             this.groupBox72.Name = "groupBox72";
@@ -2720,18 +2734,18 @@
             this.btn人工上下料.UseVisualStyleBackColor = true;
             this.btn人工上下料.Click += new System.EventHandler(this.btn人工上下料_Click);
             // 
-            // button1
+            // btn黑体一键上升主界面
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.Control;
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 10.8F);
-            this.button1.Location = new System.Drawing.Point(31, 133);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(180, 24);
-            this.button1.TabIndex = 55;
-            this.button1.Text = "黑体1-4升降一键上升";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.btn黑体一键上升_Click);
+            this.btn黑体一键上升主界面.BackColor = System.Drawing.SystemColors.Control;
+            this.btn黑体一键上升主界面.Font = new System.Drawing.Font("Times New Roman", 10.8F);
+            this.btn黑体一键上升主界面.Location = new System.Drawing.Point(31, 133);
+            this.btn黑体一键上升主界面.Margin = new System.Windows.Forms.Padding(2);
+            this.btn黑体一键上升主界面.Name = "btn黑体一键上升主界面";
+            this.btn黑体一键上升主界面.Size = new System.Drawing.Size(180, 24);
+            this.btn黑体一键上升主界面.TabIndex = 55;
+            this.btn黑体一键上升主界面.Text = "黑体1-4升降一键上升";
+            this.btn黑体一键上升主界面.UseVisualStyleBackColor = true;
+            this.btn黑体一键上升主界面.Click += new System.EventHandler(this.btn黑体一键上升_Click);
             // 
             // label97
             // 
@@ -2900,22 +2914,22 @@
             this.label248.TabIndex = 18;
             this.label248.Text = "设备模式：";
             // 
-            // tabPage2
+            // TP手动气缸
             // 
-            this.tabPage2.Controls.Add(this.groupBox20);
-            this.tabPage2.Controls.Add(this.groupBox17);
-            this.tabPage2.Controls.Add(this.groupBox16);
-            this.tabPage2.Controls.Add(this.groupBox15);
-            this.tabPage2.Controls.Add(this.groupBox18);
-            this.tabPage2.Controls.Add(this.groupBox83);
-            this.tabPage2.Location = new System.Drawing.Point(4, 44);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage2.Size = new System.Drawing.Size(1256, 763);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "手动气缸";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.TP手动气缸.Controls.Add(this.groupBox20);
+            this.TP手动气缸.Controls.Add(this.groupBox17);
+            this.TP手动气缸.Controls.Add(this.groupBox16);
+            this.TP手动气缸.Controls.Add(this.groupBox15);
+            this.TP手动气缸.Controls.Add(this.groupBox18);
+            this.TP手动气缸.Controls.Add(this.groupBox83);
+            this.TP手动气缸.Location = new System.Drawing.Point(4, 44);
+            this.TP手动气缸.Margin = new System.Windows.Forms.Padding(2);
+            this.TP手动气缸.Name = "TP手动气缸";
+            this.TP手动气缸.Padding = new System.Windows.Forms.Padding(2);
+            this.TP手动气缸.Size = new System.Drawing.Size(1256, 763);
+            this.TP手动气缸.TabIndex = 1;
+            this.TP手动气缸.Text = "手动气缸";
+            this.TP手动气缸.UseVisualStyleBackColor = true;
             // 
             // groupBox20
             // 
@@ -5823,38 +5837,38 @@
             this.label184.TabIndex = 26;
             this.label184.Text = "工装1次数：";
             // 
-            // tabPage7
+            // TP手动电机1
             // 
-            this.tabPage7.AutoScroll = true;
-            this.tabPage7.Controls.Add(this.groupBox14);
-            this.tabPage7.Controls.Add(this.groupBox90);
-            this.tabPage7.Controls.Add(this.groupBox89);
-            this.tabPage7.Controls.Add(this.groupBox87);
-            this.tabPage7.Controls.Add(this.groupBox19);
-            this.tabPage7.Controls.Add(this.groupBox88);
-            this.tabPage7.Controls.Add(this.groupBox29);
-            this.tabPage7.Controls.Add(this.groupBox27);
-            this.tabPage7.Controls.Add(this.groupBox28);
-            this.tabPage7.Controls.Add(this.groupBox26);
-            this.tabPage7.Controls.Add(this.btnBYZ停止);
-            this.tabPage7.Controls.Add(this.btnBYZ下行);
-            this.tabPage7.Controls.Add(this.groupBox25);
-            this.tabPage7.Controls.Add(this.btnBYZ上行);
-            this.tabPage7.Controls.Add(this.groupBox24);
-            this.tabPage7.Controls.Add(this.groupBox23);
-            this.tabPage7.Controls.Add(this.groupBox32);
-            this.tabPage7.Controls.Add(this.groupBox30);
-            this.tabPage7.Controls.Add(this.groupBox22);
-            this.tabPage7.Controls.Add(this.groupBox31);
-            this.tabPage7.Controls.Add(this.groupBox21);
-            this.tabPage7.Location = new System.Drawing.Point(4, 44);
-            this.tabPage7.Margin = new System.Windows.Forms.Padding(2);
-            this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage7.Size = new System.Drawing.Size(1256, 763);
-            this.tabPage7.TabIndex = 6;
-            this.tabPage7.Text = "手动电机1";
-            this.tabPage7.UseVisualStyleBackColor = true;
+            this.TP手动电机1.AutoScroll = true;
+            this.TP手动电机1.Controls.Add(this.groupBox14);
+            this.TP手动电机1.Controls.Add(this.groupBox90);
+            this.TP手动电机1.Controls.Add(this.groupBox89);
+            this.TP手动电机1.Controls.Add(this.groupBox87);
+            this.TP手动电机1.Controls.Add(this.groupBox19);
+            this.TP手动电机1.Controls.Add(this.groupBox88);
+            this.TP手动电机1.Controls.Add(this.groupBox29);
+            this.TP手动电机1.Controls.Add(this.groupBox27);
+            this.TP手动电机1.Controls.Add(this.groupBox28);
+            this.TP手动电机1.Controls.Add(this.groupBox26);
+            this.TP手动电机1.Controls.Add(this.btnBYZ停止);
+            this.TP手动电机1.Controls.Add(this.btnBYZ下行);
+            this.TP手动电机1.Controls.Add(this.groupBox25);
+            this.TP手动电机1.Controls.Add(this.btnBYZ上行);
+            this.TP手动电机1.Controls.Add(this.groupBox24);
+            this.TP手动电机1.Controls.Add(this.groupBox23);
+            this.TP手动电机1.Controls.Add(this.groupBox32);
+            this.TP手动电机1.Controls.Add(this.groupBox30);
+            this.TP手动电机1.Controls.Add(this.groupBox22);
+            this.TP手动电机1.Controls.Add(this.groupBox31);
+            this.TP手动电机1.Controls.Add(this.groupBox21);
+            this.TP手动电机1.Location = new System.Drawing.Point(4, 44);
+            this.TP手动电机1.Margin = new System.Windows.Forms.Padding(2);
+            this.TP手动电机1.Name = "TP手动电机1";
+            this.TP手动电机1.Padding = new System.Windows.Forms.Padding(2);
+            this.TP手动电机1.Size = new System.Drawing.Size(1256, 763);
+            this.TP手动电机1.TabIndex = 6;
+            this.TP手动电机1.Text = "手动电机1";
+            this.TP手动电机1.UseVisualStyleBackColor = true;
             // 
             // groupBox14
             // 
@@ -7935,6 +7949,7 @@
             this.btnY下视觉2位置.Name = "btnY下视觉2位置";
             this.btnY下视觉2位置.Size = new System.Drawing.Size(120, 24);
             this.btnY下视觉2位置.TabIndex = 66;
+            this.btnY下视觉2位置.Tag = "PlcInIO[238]";
             this.btnY下视觉2位置.Text = "吸嘴1下视觉位置";
             this.btnY下视觉2位置.UseVisualStyleBackColor = true;
             this.btnY下视觉2位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnY下视觉2位置_MouseDown);
@@ -7948,6 +7963,7 @@
             this.btnY下视觉2位置吸嘴2.Name = "btnY下视觉2位置吸嘴2";
             this.btnY下视觉2位置吸嘴2.Size = new System.Drawing.Size(120, 24);
             this.btnY下视觉2位置吸嘴2.TabIndex = 67;
+            this.btnY下视觉2位置吸嘴2.Tag = "PlcInIO[239]";
             this.btnY下视觉2位置吸嘴2.Text = "吸嘴2下视觉位置";
             this.btnY下视觉2位置吸嘴2.UseVisualStyleBackColor = true;
             this.btnY下视觉2位置吸嘴2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnY下视觉2位置吸嘴2_MouseDown);
@@ -7961,6 +7977,7 @@
             this.btnY下一行.Name = "btnY下一行";
             this.btnY下一行.Size = new System.Drawing.Size(120, 24);
             this.btnY下一行.TabIndex = 65;
+            this.btnY下一行.Tag = "PlcInIO[235]";
             this.btnY下一行.Text = "下一行";
             this.btnY下一行.UseVisualStyleBackColor = true;
             this.btnY下一行.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnY下一行_MouseDown);
@@ -7974,6 +7991,7 @@
             this.btnY上一行.Name = "btnY上一行";
             this.btnY上一行.Size = new System.Drawing.Size(120, 24);
             this.btnY上一行.TabIndex = 64;
+            this.btnY上一行.Tag = "PlcInIO[236]";
             this.btnY上一行.Text = "上一行";
             this.btnY上一行.UseVisualStyleBackColor = true;
             this.btnY上一行.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnY上一行_MouseDown);
@@ -8013,6 +8031,7 @@
             this.btnY视觉倒实盘位置.Name = "btnY视觉倒实盘位置";
             this.btnY视觉倒实盘位置.Size = new System.Drawing.Size(120, 24);
             this.btnY视觉倒实盘位置.TabIndex = 61;
+            this.btnY视觉倒实盘位置.Tag = "PlcInIO[234]";
             this.btnY视觉倒实盘位置.Text = "上视觉NG盘第一行";
             this.btnY视觉倒实盘位置.UseVisualStyleBackColor = true;
             this.btnY视觉倒实盘位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnY视觉倒实盘位置_MouseDown);
@@ -8026,6 +8045,7 @@
             this.btnY回原点.Name = "btnY回原点";
             this.btnY回原点.Size = new System.Drawing.Size(90, 24);
             this.btnY回原点.TabIndex = 45;
+            this.btnY回原点.Tag = "PlcInIO[8]";
             this.btnY回原点.Text = "Y回原点";
             this.btnY回原点.UseVisualStyleBackColor = true;
             this.btnY回原点.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnY回原点_MouseDown);
@@ -8039,6 +8059,7 @@
             this.btnY视觉实盘位置.Name = "btnY视觉实盘位置";
             this.btnY视觉实盘位置.Size = new System.Drawing.Size(120, 24);
             this.btnY视觉实盘位置.TabIndex = 60;
+            this.btnY视觉实盘位置.Tag = "PlcInIO[233]";
             this.btnY视觉实盘位置.Text = "上视觉实盘第一行";
             this.btnY视觉实盘位置.UseVisualStyleBackColor = true;
             this.btnY视觉实盘位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnY视觉实盘位置_MouseDown);
@@ -8052,6 +8073,7 @@
             this.btnY吸1实盘.Name = "btnY吸1实盘";
             this.btnY吸1实盘.Size = new System.Drawing.Size(120, 24);
             this.btnY吸1实盘.TabIndex = 56;
+            this.btnY吸1实盘.Tag = "PlcInIO[220]";
             this.btnY吸1实盘.Text = "吸嘴1实盘第一行";
             this.btnY吸1实盘.UseVisualStyleBackColor = true;
             this.btnY吸1实盘.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnY吸1实盘_MouseDown);
@@ -8065,6 +8087,7 @@
             this.btnY吸2实盘.Name = "btnY吸2实盘";
             this.btnY吸2实盘.Size = new System.Drawing.Size(120, 24);
             this.btnY吸2实盘.TabIndex = 57;
+            this.btnY吸2实盘.Tag = "PlcInIO[221]";
             this.btnY吸2实盘.Text = "吸嘴2实盘第一行";
             this.btnY吸2实盘.UseVisualStyleBackColor = true;
             this.btnY吸2实盘.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnY吸2实盘_MouseDown);
@@ -8078,6 +8101,7 @@
             this.btnY吸1NG盘.Name = "btnY吸1NG盘";
             this.btnY吸1NG盘.Size = new System.Drawing.Size(120, 24);
             this.btnY吸1NG盘.TabIndex = 55;
+            this.btnY吸1NG盘.Tag = "PlcInIO[224]";
             this.btnY吸1NG盘.Text = "吸嘴1NG盘第一行";
             this.btnY吸1NG盘.UseVisualStyleBackColor = true;
             this.btnY吸1NG盘.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnY吸1NG盘_MouseDown);
@@ -8091,6 +8115,7 @@
             this.btnY吸2倒实盘.Name = "btnY吸2倒实盘";
             this.btnY吸2倒实盘.Size = new System.Drawing.Size(120, 24);
             this.btnY吸2倒实盘.TabIndex = 54;
+            this.btnY吸2倒实盘.Tag = "PlcInIO[223]";
             this.btnY吸2倒实盘.Text = "吸嘴2倒实盘第一行";
             this.btnY吸2倒实盘.UseVisualStyleBackColor = true;
             this.btnY吸2倒实盘.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnY吸2倒实盘_MouseDown);
@@ -8104,6 +8129,7 @@
             this.btnY吸1倒实盘.Name = "btnY吸1倒实盘";
             this.btnY吸1倒实盘.Size = new System.Drawing.Size(120, 24);
             this.btnY吸1倒实盘.TabIndex = 53;
+            this.btnY吸1倒实盘.Tag = "PlcInIO[222]";
             this.btnY吸1倒实盘.Text = "吸嘴1倒实盘第一行";
             this.btnY吸1倒实盘.UseVisualStyleBackColor = true;
             this.btnY吸1倒实盘.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnY吸1倒实盘_MouseDown);
@@ -8117,6 +8143,7 @@
             this.btnY吸2NG盘.Name = "btnY吸2NG盘";
             this.btnY吸2NG盘.Size = new System.Drawing.Size(120, 24);
             this.btnY吸2NG盘.TabIndex = 52;
+            this.btnY吸2NG盘.Tag = "PlcInIO[225]";
             this.btnY吸2NG盘.Text = "吸嘴2NG盘第一行";
             this.btnY吸2NG盘.UseVisualStyleBackColor = true;
             this.btnY吸2NG盘.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnY吸2NG盘_MouseDown);
@@ -8165,6 +8192,7 @@
             this.btnY倒实盘位置.Name = "btnY倒实盘位置";
             this.btnY倒实盘位置.Size = new System.Drawing.Size(90, 24);
             this.btnY倒实盘位置.TabIndex = 41;
+            this.btnY倒实盘位置.Tag = "PlcInIO[227]";
             this.btnY倒实盘位置.Text = "倒实盘位置";
             this.btnY倒实盘位置.UseVisualStyleBackColor = true;
             this.btnY倒实盘位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnY倒实盘位置_MouseDown);
@@ -8189,6 +8217,7 @@
             this.btnY实盘位置.Name = "btnY实盘位置";
             this.btnY实盘位置.Size = new System.Drawing.Size(90, 24);
             this.btnY实盘位置.TabIndex = 40;
+            this.btnY实盘位置.Tag = "PlcInIO[226]";
             this.btnY实盘位置.Text = "实盘位置";
             this.btnY实盘位置.UseVisualStyleBackColor = true;
             this.btnY实盘位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnY实盘位置_MouseDown);
@@ -8504,6 +8533,7 @@
             this.btnX下视觉2位置.Name = "btnX下视觉2位置";
             this.btnX下视觉2位置.Size = new System.Drawing.Size(115, 24);
             this.btnX下视觉2位置.TabIndex = 65;
+            this.btnX下视觉2位置.Tag = "PlcInIO[218]";
             this.btnX下视觉2位置.Text = "下视觉位置";
             this.btnX下视觉2位置.UseVisualStyleBackColor = true;
             this.btnX下视觉2位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnX下视觉2位置_MouseDown);
@@ -8517,6 +8547,7 @@
             this.btnX吸1倒实盘.Name = "btnX吸1倒实盘";
             this.btnX吸1倒实盘.Size = new System.Drawing.Size(115, 24);
             this.btnX吸1倒实盘.TabIndex = 64;
+            this.btnX吸1倒实盘.Tag = "PlcInIO[202]";
             this.btnX吸1倒实盘.Text = "吸嘴倒实盘第一列";
             this.btnX吸1倒实盘.UseVisualStyleBackColor = true;
             this.btnX吸1倒实盘.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnX吸1倒实盘_MouseDown);
@@ -8530,6 +8561,7 @@
             this.btnX下一列.Name = "btnX下一列";
             this.btnX下一列.Size = new System.Drawing.Size(115, 24);
             this.btnX下一列.TabIndex = 63;
+            this.btnX下一列.Tag = "PlcInIO[215]";
             this.btnX下一列.Text = "下一列";
             this.btnX下一列.UseVisualStyleBackColor = true;
             this.btnX下一列.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnX下一列_MouseDown);
@@ -8543,6 +8575,7 @@
             this.btnX上一列.Name = "btnX上一列";
             this.btnX上一列.Size = new System.Drawing.Size(115, 24);
             this.btnX上一列.TabIndex = 62;
+            this.btnX上一列.Tag = "PlcInIO[216]";
             this.btnX上一列.Text = "上一列";
             this.btnX上一列.UseVisualStyleBackColor = true;
             this.btnX上一列.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnX上一列_MouseDown);
@@ -8556,6 +8589,7 @@
             this.btnX扫码位置.Name = "btnX扫码位置";
             this.btnX扫码位置.Size = new System.Drawing.Size(100, 24);
             this.btnX扫码位置.TabIndex = 61;
+            this.btnX扫码位置.Tag = "PlcInIO[211]";
             this.btnX扫码位置.Text = "托盘扫码位置";
             this.btnX扫码位置.UseVisualStyleBackColor = true;
             this.btnX扫码位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnX扫码位置_MouseDown);
@@ -8569,6 +8603,7 @@
             this.btnX夹爪位置.Name = "btnX夹爪位置";
             this.btnX夹爪位置.Size = new System.Drawing.Size(100, 24);
             this.btnX夹爪位置.TabIndex = 60;
+            this.btnX夹爪位置.Tag = "PlcInIO[210]";
             this.btnX夹爪位置.Text = "增广夹爪位置";
             this.btnX夹爪位置.UseVisualStyleBackColor = true;
             this.btnX夹爪位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnX夹爪位置_MouseDown);
@@ -8582,6 +8617,7 @@
             this.btnX视觉实盘位置.Name = "btnX视觉实盘位置";
             this.btnX视觉实盘位置.Size = new System.Drawing.Size(115, 24);
             this.btnX视觉实盘位置.TabIndex = 58;
+            this.btnX视觉实盘位置.Tag = "PlcInIO[213]";
             this.btnX视觉实盘位置.Text = "上视觉第一列";
             this.btnX视觉实盘位置.UseVisualStyleBackColor = true;
             this.btnX视觉实盘位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnX视觉实盘位置_MouseDown);
@@ -8595,6 +8631,7 @@
             this.btnX吸1实盘.Name = "btnX吸1实盘";
             this.btnX吸1实盘.Size = new System.Drawing.Size(115, 24);
             this.btnX吸1实盘.TabIndex = 52;
+            this.btnX吸1实盘.Tag = "PlcInIO[200]";
             this.btnX吸1实盘.Text = "吸嘴实盘第一列";
             this.btnX吸1实盘.UseVisualStyleBackColor = true;
             this.btnX吸1实盘.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnX吸1实盘_MouseDown);
@@ -8629,6 +8666,7 @@
             this.btnX停止.Name = "btnX停止";
             this.btnX停止.Size = new System.Drawing.Size(50, 31);
             this.btnX停止.TabIndex = 47;
+            this.btnX停止.Tag = "PlcInIO[360]";
             this.btnX停止.Text = "停止";
             this.btnX停止.UseVisualStyleBackColor = true;
             this.btnX停止.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnX停止_MouseDown);
@@ -8643,6 +8681,7 @@
             this.btnX右行.Name = "btnX右行";
             this.btnX右行.Size = new System.Drawing.Size(35, 31);
             this.btnX右行.TabIndex = 47;
+            this.btnX右行.Tag = "PlcInIO[361]";
             this.btnX右行.Text = "→";
             this.btnX右行.UseVisualStyleBackColor = true;
             this.btnX右行.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnX右行_MouseDown);
@@ -8657,6 +8696,7 @@
             this.btnX左行.Name = "btnX左行";
             this.btnX左行.Size = new System.Drawing.Size(35, 31);
             this.btnX左行.TabIndex = 46;
+            this.btnX左行.Tag = "PlcInIO[362]";
             this.btnX左行.Text = "←";
             this.btnX左行.UseVisualStyleBackColor = true;
             this.btnX左行.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnX左行_MouseDown);
@@ -8670,6 +8710,7 @@
             this.btnX回原点.Name = "btnX回原点";
             this.btnX回原点.Size = new System.Drawing.Size(100, 24);
             this.btnX回原点.TabIndex = 45;
+            this.btnX回原点.Tag = "PlcInIO[7]";
             this.btnX回原点.Text = "X回原点";
             this.btnX回原点.UseVisualStyleBackColor = true;
             this.btnX回原点.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnX回原点_MouseDown);
@@ -8683,37 +8724,38 @@
             this.btnX实盘位置.Name = "btnX实盘位置";
             this.btnX实盘位置.Size = new System.Drawing.Size(100, 24);
             this.btnX实盘位置.TabIndex = 40;
+            this.btnX实盘位置.Tag = "PlcInIO[206]";
             this.btnX实盘位置.Text = "夹爪取盘位置";
             this.btnX实盘位置.UseVisualStyleBackColor = true;
             this.btnX实盘位置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnX实盘位置_MouseDown);
             this.btnX实盘位置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnX实盘位置_MouseUp);
             // 
-            // tabPage9
+            // TP手动电机2
             // 
-            this.tabPage9.Controls.Add(this.groupBox81);
-            this.tabPage9.Controls.Add(this.groupBox80);
-            this.tabPage9.Controls.Add(this.groupBox79);
-            this.tabPage9.Controls.Add(this.groupBox78);
-            this.tabPage9.Controls.Add(this.groupBox44);
-            this.tabPage9.Controls.Add(this.groupBox43);
-            this.tabPage9.Controls.Add(this.groupBox42);
-            this.tabPage9.Controls.Add(this.groupBox41);
-            this.tabPage9.Controls.Add(this.groupBox40);
-            this.tabPage9.Controls.Add(this.groupBox39);
-            this.tabPage9.Controls.Add(this.groupBox38);
-            this.tabPage9.Controls.Add(this.groupBox37);
-            this.tabPage9.Controls.Add(this.groupBox36);
-            this.tabPage9.Controls.Add(this.groupBox35);
-            this.tabPage9.Controls.Add(this.groupBox34);
-            this.tabPage9.Controls.Add(this.groupBox33);
-            this.tabPage9.Location = new System.Drawing.Point(4, 44);
-            this.tabPage9.Margin = new System.Windows.Forms.Padding(2);
-            this.tabPage9.Name = "tabPage9";
-            this.tabPage9.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage9.Size = new System.Drawing.Size(1256, 763);
-            this.tabPage9.TabIndex = 8;
-            this.tabPage9.Text = "手动电机2";
-            this.tabPage9.UseVisualStyleBackColor = true;
+            this.TP手动电机2.Controls.Add(this.groupBox81);
+            this.TP手动电机2.Controls.Add(this.groupBox80);
+            this.TP手动电机2.Controls.Add(this.groupBox79);
+            this.TP手动电机2.Controls.Add(this.groupBox78);
+            this.TP手动电机2.Controls.Add(this.groupBox44);
+            this.TP手动电机2.Controls.Add(this.groupBox43);
+            this.TP手动电机2.Controls.Add(this.groupBox42);
+            this.TP手动电机2.Controls.Add(this.groupBox41);
+            this.TP手动电机2.Controls.Add(this.groupBox40);
+            this.TP手动电机2.Controls.Add(this.groupBox39);
+            this.TP手动电机2.Controls.Add(this.groupBox38);
+            this.TP手动电机2.Controls.Add(this.groupBox37);
+            this.TP手动电机2.Controls.Add(this.groupBox36);
+            this.TP手动电机2.Controls.Add(this.groupBox35);
+            this.TP手动电机2.Controls.Add(this.groupBox34);
+            this.TP手动电机2.Controls.Add(this.groupBox33);
+            this.TP手动电机2.Location = new System.Drawing.Point(4, 44);
+            this.TP手动电机2.Margin = new System.Windows.Forms.Padding(2);
+            this.TP手动电机2.Name = "TP手动电机2";
+            this.TP手动电机2.Padding = new System.Windows.Forms.Padding(2);
+            this.TP手动电机2.Size = new System.Drawing.Size(1256, 763);
+            this.TP手动电机2.TabIndex = 8;
+            this.TP手动电机2.Text = "手动电机2";
+            this.TP手动电机2.UseVisualStyleBackColor = true;
             // 
             // groupBox81
             // 
@@ -11081,35 +11123,35 @@
             this.btnSk1回原点.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnSk1回原点_MouseDown);
             this.btnSk1回原点.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnSk1回原点_MouseUp);
             // 
-            // tabPage8
+            // TP示教界面1
             // 
-            this.tabPage8.Controls.Add(this.groupBox95);
-            this.tabPage8.Controls.Add(this.groupBox94);
-            this.tabPage8.Controls.Add(this.groupBox86);
-            this.tabPage8.Controls.Add(this.groupBox91);
-            this.tabPage8.Controls.Add(this.groupBox92);
-            this.tabPage8.Controls.Add(this.groupBox93);
-            this.tabPage8.Controls.Add(this.groupBox84);
-            this.tabPage8.Controls.Add(this.groupBox66);
-            this.tabPage8.Controls.Add(this.groupBox67);
-            this.tabPage8.Controls.Add(this.groupBox68);
-            this.tabPage8.Controls.Add(this.groupBox76);
-            this.tabPage8.Controls.Add(this.groupBox52);
-            this.tabPage8.Controls.Add(this.groupBox54);
-            this.tabPage8.Controls.Add(this.groupBox51);
-            this.tabPage8.Controls.Add(this.groupBox50);
-            this.tabPage8.Controls.Add(this.groupBox48);
-            this.tabPage8.Controls.Add(this.groupBox47);
-            this.tabPage8.Controls.Add(this.groupBox46);
-            this.tabPage8.Controls.Add(this.groupBox45);
-            this.tabPage8.Location = new System.Drawing.Point(4, 44);
-            this.tabPage8.Margin = new System.Windows.Forms.Padding(2);
-            this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage8.Size = new System.Drawing.Size(1256, 763);
-            this.tabPage8.TabIndex = 7;
-            this.tabPage8.Text = "示教界面1";
-            this.tabPage8.UseVisualStyleBackColor = true;
+            this.TP示教界面1.Controls.Add(this.groupBox95);
+            this.TP示教界面1.Controls.Add(this.groupBox94);
+            this.TP示教界面1.Controls.Add(this.groupBox86);
+            this.TP示教界面1.Controls.Add(this.groupBox91);
+            this.TP示教界面1.Controls.Add(this.groupBox92);
+            this.TP示教界面1.Controls.Add(this.groupBox93);
+            this.TP示教界面1.Controls.Add(this.groupBox84);
+            this.TP示教界面1.Controls.Add(this.groupBox66);
+            this.TP示教界面1.Controls.Add(this.groupBox67);
+            this.TP示教界面1.Controls.Add(this.groupBox68);
+            this.TP示教界面1.Controls.Add(this.groupBox76);
+            this.TP示教界面1.Controls.Add(this.groupBox52);
+            this.TP示教界面1.Controls.Add(this.groupBox54);
+            this.TP示教界面1.Controls.Add(this.groupBox51);
+            this.TP示教界面1.Controls.Add(this.groupBox50);
+            this.TP示教界面1.Controls.Add(this.groupBox48);
+            this.TP示教界面1.Controls.Add(this.groupBox47);
+            this.TP示教界面1.Controls.Add(this.groupBox46);
+            this.TP示教界面1.Controls.Add(this.groupBox45);
+            this.TP示教界面1.Location = new System.Drawing.Point(4, 44);
+            this.TP示教界面1.Margin = new System.Windows.Forms.Padding(2);
+            this.TP示教界面1.Name = "TP示教界面1";
+            this.TP示教界面1.Padding = new System.Windows.Forms.Padding(2);
+            this.TP示教界面1.Size = new System.Drawing.Size(1256, 763);
+            this.TP示教界面1.TabIndex = 7;
+            this.TP示教界面1.Text = "示教界面1";
+            this.TP示教界面1.UseVisualStyleBackColor = true;
             // 
             // groupBox95
             // 
@@ -13916,7 +13958,7 @@
             this.txtX示教吸1实盘第一列.Name = "txtX示教吸1实盘第一列";
             this.txtX示教吸1实盘第一列.Size = new System.Drawing.Size(49, 21);
             this.txtX示教吸1实盘第一列.TabIndex = 51;
-            this.txtX示教吸1实盘第一列.Tag = "PlcInIO[30]";
+            this.txtX示教吸1实盘第一列.Tag = "PlcOutLocation[24]";
             // 
             // txtX示教当前位置
             // 
@@ -13951,32 +13993,32 @@
             this.label370.TabIndex = 48;
             this.label370.Text = "当前位置";
             // 
-            // tabPage10
+            // TP示教界面2
             // 
-            this.tabPage10.Controls.Add(this.groupBox71);
-            this.tabPage10.Controls.Add(this.groupBox49);
-            this.tabPage10.Controls.Add(this.groupBox13);
-            this.tabPage10.Controls.Add(this.groupBox12);
-            this.tabPage10.Controls.Add(this.groupBox11);
-            this.tabPage10.Controls.Add(this.groupBox4);
-            this.tabPage10.Controls.Add(this.groupBox64);
-            this.tabPage10.Controls.Add(this.groupBox75);
-            this.tabPage10.Controls.Add(this.groupBox61);
-            this.tabPage10.Controls.Add(this.groupBox60);
-            this.tabPage10.Controls.Add(this.groupBox59);
-            this.tabPage10.Controls.Add(this.groupBox58);
-            this.tabPage10.Controls.Add(this.groupBox56);
-            this.tabPage10.Controls.Add(this.groupBox55);
-            this.tabPage10.Controls.Add(this.groupBox53);
-            this.tabPage10.Controls.Add(this.groupBox57);
-            this.tabPage10.Location = new System.Drawing.Point(4, 44);
-            this.tabPage10.Margin = new System.Windows.Forms.Padding(2);
-            this.tabPage10.Name = "tabPage10";
-            this.tabPage10.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage10.Size = new System.Drawing.Size(1256, 763);
-            this.tabPage10.TabIndex = 9;
-            this.tabPage10.Text = "示教界面2";
-            this.tabPage10.UseVisualStyleBackColor = true;
+            this.TP示教界面2.Controls.Add(this.groupBox71);
+            this.TP示教界面2.Controls.Add(this.groupBox49);
+            this.TP示教界面2.Controls.Add(this.groupBox13);
+            this.TP示教界面2.Controls.Add(this.groupBox12);
+            this.TP示教界面2.Controls.Add(this.groupBox11);
+            this.TP示教界面2.Controls.Add(this.groupBox4);
+            this.TP示教界面2.Controls.Add(this.groupBox64);
+            this.TP示教界面2.Controls.Add(this.groupBox75);
+            this.TP示教界面2.Controls.Add(this.groupBox61);
+            this.TP示教界面2.Controls.Add(this.groupBox60);
+            this.TP示教界面2.Controls.Add(this.groupBox59);
+            this.TP示教界面2.Controls.Add(this.groupBox58);
+            this.TP示教界面2.Controls.Add(this.groupBox56);
+            this.TP示教界面2.Controls.Add(this.groupBox55);
+            this.TP示教界面2.Controls.Add(this.groupBox53);
+            this.TP示教界面2.Controls.Add(this.groupBox57);
+            this.TP示教界面2.Location = new System.Drawing.Point(4, 44);
+            this.TP示教界面2.Margin = new System.Windows.Forms.Padding(2);
+            this.TP示教界面2.Name = "TP示教界面2";
+            this.TP示教界面2.Padding = new System.Windows.Forms.Padding(2);
+            this.TP示教界面2.Size = new System.Drawing.Size(1256, 763);
+            this.TP示教界面2.TabIndex = 9;
+            this.TP示教界面2.Text = "示教界面2";
+            this.TP示教界面2.UseVisualStyleBackColor = true;
             // 
             // groupBox71
             // 
@@ -16076,82 +16118,82 @@
             this.label432.TabIndex = 48;
             this.label432.Text = "当前位置";
             // 
-            // tabPage4
+            // TPIO信息
             // 
-            this.tabPage4.Controls.Add(this.groupBox9);
-            this.tabPage4.Controls.Add(this.groupBox6);
-            this.tabPage4.Controls.Add(this.groupBox77);
-            this.tabPage4.Controls.Add(this.groupBox82);
-            this.tabPage4.Controls.Add(this.label159);
-            this.tabPage4.Controls.Add(this.label160);
-            this.tabPage4.Controls.Add(this.label161);
-            this.tabPage4.Controls.Add(this.label162);
-            this.tabPage4.Controls.Add(this.label163);
-            this.tabPage4.Controls.Add(this.label177);
-            this.tabPage4.Controls.Add(this.label179);
-            this.tabPage4.Controls.Add(this.label181);
-            this.tabPage4.Controls.Add(this.groupBox8);
-            this.tabPage4.Controls.Add(this.label135);
-            this.tabPage4.Controls.Add(this.label136);
-            this.tabPage4.Controls.Add(this.label137);
-            this.tabPage4.Controls.Add(this.label138);
-            this.tabPage4.Controls.Add(this.label139);
-            this.tabPage4.Controls.Add(this.label153);
-            this.tabPage4.Controls.Add(this.label155);
-            this.tabPage4.Controls.Add(this.label157);
-            this.tabPage4.Controls.Add(this.groupBox7);
-            this.tabPage4.Controls.Add(this.label124);
-            this.tabPage4.Controls.Add(this.label125);
-            this.tabPage4.Controls.Add(this.label126);
-            this.tabPage4.Controls.Add(this.label127);
-            this.tabPage4.Controls.Add(this.label128);
-            this.tabPage4.Controls.Add(this.label129);
-            this.tabPage4.Controls.Add(this.label131);
-            this.tabPage4.Controls.Add(this.label133);
-            this.tabPage4.Controls.Add(this.label3);
-            this.tabPage4.Controls.Add(this.label113);
-            this.tabPage4.Controls.Add(this.label7);
-            this.tabPage4.Controls.Add(this.label114);
-            this.tabPage4.Controls.Add(this.label13);
-            this.tabPage4.Controls.Add(this.label115);
-            this.tabPage4.Controls.Add(this.label15);
-            this.tabPage4.Controls.Add(this.label116);
-            this.tabPage4.Controls.Add(this.label17);
-            this.tabPage4.Controls.Add(this.label117);
-            this.tabPage4.Controls.Add(this.label19);
-            this.tabPage4.Controls.Add(this.label118);
-            this.tabPage4.Controls.Add(this.label23);
-            this.tabPage4.Controls.Add(this.label120);
-            this.tabPage4.Controls.Add(this.label28);
-            this.tabPage4.Controls.Add(this.label122);
-            this.tabPage4.Controls.Add(this.groupBox2);
-            this.tabPage4.Controls.Add(this.groupBox5);
-            this.tabPage4.Controls.Add(this.label34);
-            this.tabPage4.Controls.Add(this.label37);
-            this.tabPage4.Controls.Add(this.label38);
-            this.tabPage4.Controls.Add(this.label39);
-            this.tabPage4.Controls.Add(this.label40);
-            this.tabPage4.Controls.Add(this.label41);
-            this.tabPage4.Controls.Add(this.label43);
-            this.tabPage4.Controls.Add(this.label45);
-            this.tabPage4.Controls.Add(this.groupBox3);
-            this.tabPage4.Controls.Add(this.label26);
-            this.tabPage4.Controls.Add(this.label29);
-            this.tabPage4.Controls.Add(this.label32);
-            this.tabPage4.Controls.Add(this.label35);
-            this.tabPage4.Controls.Add(this.label8);
-            this.tabPage4.Controls.Add(this.label11);
-            this.tabPage4.Controls.Add(this.label5);
-            this.tabPage4.Controls.Add(this.label2);
-            this.tabPage4.Controls.Add(this.groupBox1);
-            this.tabPage4.Location = new System.Drawing.Point(4, 44);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(2);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage4.Size = new System.Drawing.Size(1256, 763);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "   I/O信息";
-            this.tabPage4.UseVisualStyleBackColor = true;
+            this.TPIO信息.Controls.Add(this.groupBox9);
+            this.TPIO信息.Controls.Add(this.groupBox6);
+            this.TPIO信息.Controls.Add(this.groupBox77);
+            this.TPIO信息.Controls.Add(this.groupBox82);
+            this.TPIO信息.Controls.Add(this.label159);
+            this.TPIO信息.Controls.Add(this.label160);
+            this.TPIO信息.Controls.Add(this.label161);
+            this.TPIO信息.Controls.Add(this.label162);
+            this.TPIO信息.Controls.Add(this.label163);
+            this.TPIO信息.Controls.Add(this.label177);
+            this.TPIO信息.Controls.Add(this.label179);
+            this.TPIO信息.Controls.Add(this.label181);
+            this.TPIO信息.Controls.Add(this.groupBox8);
+            this.TPIO信息.Controls.Add(this.label135);
+            this.TPIO信息.Controls.Add(this.label136);
+            this.TPIO信息.Controls.Add(this.label137);
+            this.TPIO信息.Controls.Add(this.label138);
+            this.TPIO信息.Controls.Add(this.label139);
+            this.TPIO信息.Controls.Add(this.label153);
+            this.TPIO信息.Controls.Add(this.label155);
+            this.TPIO信息.Controls.Add(this.label157);
+            this.TPIO信息.Controls.Add(this.groupBox7);
+            this.TPIO信息.Controls.Add(this.label124);
+            this.TPIO信息.Controls.Add(this.label125);
+            this.TPIO信息.Controls.Add(this.label126);
+            this.TPIO信息.Controls.Add(this.label127);
+            this.TPIO信息.Controls.Add(this.label128);
+            this.TPIO信息.Controls.Add(this.label129);
+            this.TPIO信息.Controls.Add(this.label131);
+            this.TPIO信息.Controls.Add(this.label133);
+            this.TPIO信息.Controls.Add(this.label3);
+            this.TPIO信息.Controls.Add(this.label113);
+            this.TPIO信息.Controls.Add(this.label7);
+            this.TPIO信息.Controls.Add(this.label114);
+            this.TPIO信息.Controls.Add(this.label13);
+            this.TPIO信息.Controls.Add(this.label115);
+            this.TPIO信息.Controls.Add(this.label15);
+            this.TPIO信息.Controls.Add(this.label116);
+            this.TPIO信息.Controls.Add(this.label17);
+            this.TPIO信息.Controls.Add(this.label117);
+            this.TPIO信息.Controls.Add(this.label19);
+            this.TPIO信息.Controls.Add(this.label118);
+            this.TPIO信息.Controls.Add(this.label23);
+            this.TPIO信息.Controls.Add(this.label120);
+            this.TPIO信息.Controls.Add(this.label28);
+            this.TPIO信息.Controls.Add(this.label122);
+            this.TPIO信息.Controls.Add(this.groupBox2);
+            this.TPIO信息.Controls.Add(this.groupBox5);
+            this.TPIO信息.Controls.Add(this.label34);
+            this.TPIO信息.Controls.Add(this.label37);
+            this.TPIO信息.Controls.Add(this.label38);
+            this.TPIO信息.Controls.Add(this.label39);
+            this.TPIO信息.Controls.Add(this.label40);
+            this.TPIO信息.Controls.Add(this.label41);
+            this.TPIO信息.Controls.Add(this.label43);
+            this.TPIO信息.Controls.Add(this.label45);
+            this.TPIO信息.Controls.Add(this.groupBox3);
+            this.TPIO信息.Controls.Add(this.label26);
+            this.TPIO信息.Controls.Add(this.label29);
+            this.TPIO信息.Controls.Add(this.label32);
+            this.TPIO信息.Controls.Add(this.label35);
+            this.TPIO信息.Controls.Add(this.label8);
+            this.TPIO信息.Controls.Add(this.label11);
+            this.TPIO信息.Controls.Add(this.label5);
+            this.TPIO信息.Controls.Add(this.label2);
+            this.TPIO信息.Controls.Add(this.groupBox1);
+            this.TPIO信息.Location = new System.Drawing.Point(4, 44);
+            this.TPIO信息.Margin = new System.Windows.Forms.Padding(2);
+            this.TPIO信息.Name = "TPIO信息";
+            this.TPIO信息.Padding = new System.Windows.Forms.Padding(2);
+            this.TPIO信息.Size = new System.Drawing.Size(1256, 763);
+            this.TPIO信息.TabIndex = 3;
+            this.TPIO信息.Text = "   I/O信息";
+            this.TPIO信息.UseVisualStyleBackColor = true;
             // 
             // groupBox9
             // 
@@ -17692,7 +17734,7 @@
             // 
             // groupBox6
             // 
-            this.groupBox6.Controls.Add(this.label95);
+            this.groupBox6.Controls.Add(this.label69);
             this.groupBox6.Controls.Add(this.label121);
             this.groupBox6.Controls.Add(this.label119);
             this.groupBox6.Controls.Add(this.X68);
@@ -17734,16 +17776,16 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "测试输入单元一";
             // 
-            // label95
+            // label69
             // 
-            this.label95.AutoSize = true;
-            this.label95.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label95.Location = new System.Drawing.Point(7, 60);
-            this.label95.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label95.Name = "label95";
-            this.label95.Size = new System.Drawing.Size(97, 15);
-            this.label95.TabIndex = 41;
-            this.label95.Text = "钧舵夹爪2上升位";
+            this.label69.AutoSize = true;
+            this.label69.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label69.Location = new System.Drawing.Point(8, 60);
+            this.label69.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label69.Name = "label69";
+            this.label69.Size = new System.Drawing.Size(97, 15);
+            this.label69.TabIndex = 178;
+            this.label69.Text = "钧舵夹爪2上升位";
             // 
             // label121
             // 
@@ -18120,6 +18162,7 @@
             // 
             // groupBox77
             // 
+            this.groupBox77.Controls.Add(this.label95);
             this.groupBox77.Controls.Add(this.label237);
             this.groupBox77.Controls.Add(this.label93);
             this.groupBox77.Controls.Add(this.label238);
@@ -18149,6 +18192,17 @@
             this.groupBox77.TabStop = false;
             this.groupBox77.Text = "测试输入单元四";
             // 
+            // label95
+            // 
+            this.label95.AutoSize = true;
+            this.label95.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label95.Location = new System.Drawing.Point(7, 299);
+            this.label95.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label95.Name = "label95";
+            this.label95.Size = new System.Drawing.Size(79, 15);
+            this.label95.TabIndex = 41;
+            this.label95.Text = "界面刷新时间";
+            // 
             // label237
             // 
             this.label237.AutoSize = true;
@@ -18163,7 +18217,7 @@
             // label93
             // 
             this.label93.AutoSize = true;
-            this.label93.Location = new System.Drawing.Point(7, 310);
+            this.label93.Location = new System.Drawing.Point(7, 271);
             this.label93.Name = "label93";
             this.label93.Size = new System.Drawing.Size(79, 15);
             this.label93.TabIndex = 177;
@@ -18182,7 +18236,7 @@
             // 
             // txt控制器时间
             // 
-            this.txt控制器时间.Location = new System.Drawing.Point(7, 280);
+            this.txt控制器时间.Location = new System.Drawing.Point(7, 241);
             this.txt控制器时间.Margin = new System.Windows.Forms.Padding(2);
             this.txt控制器时间.Name = "txt控制器时间";
             this.txt控制器时间.Size = new System.Drawing.Size(119, 21);
@@ -18203,7 +18257,7 @@
             // 
             this.label68.AutoSize = true;
             this.label68.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label68.Location = new System.Drawing.Point(7, 260);
+            this.label68.Location = new System.Drawing.Point(7, 221);
             this.label68.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label68.Name = "label68";
             this.label68.Size = new System.Drawing.Size(91, 15);
@@ -21661,17 +21715,17 @@
             this.label18.TabIndex = 39;
             this.label18.Text = "备用";
             // 
-            // tabPage3
+            // TPMapping
             // 
-            this.tabPage3.Controls.Add(this.GB_Trays);
-            this.tabPage3.Location = new System.Drawing.Point(4, 44);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage3.Size = new System.Drawing.Size(1256, 763);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Mapping信息";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.TPMapping.Controls.Add(this.GB_Trays);
+            this.TPMapping.Location = new System.Drawing.Point(4, 44);
+            this.TPMapping.Margin = new System.Windows.Forms.Padding(2);
+            this.TPMapping.Name = "TPMapping";
+            this.TPMapping.Padding = new System.Windows.Forms.Padding(2);
+            this.TPMapping.Size = new System.Drawing.Size(1256, 763);
+            this.TPMapping.TabIndex = 2;
+            this.TPMapping.Text = "Mapping信息";
+            this.TPMapping.UseVisualStyleBackColor = true;
             // 
             // GB_Trays
             // 
@@ -21735,18 +21789,18 @@
             this.PN_Trays.Size = new System.Drawing.Size(1227, 710);
             this.PN_Trays.TabIndex = 0;
             // 
-            // tabPage6
+            // TP信息追溯
             // 
-            this.tabPage6.Controls.Add(this.InquireCondition);
-            this.tabPage6.Controls.Add(this.PN_Data);
-            this.tabPage6.Location = new System.Drawing.Point(4, 44);
-            this.tabPage6.Margin = new System.Windows.Forms.Padding(2);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage6.Size = new System.Drawing.Size(1256, 763);
-            this.tabPage6.TabIndex = 5;
-            this.tabPage6.Text = "信息追溯";
-            this.tabPage6.UseVisualStyleBackColor = true;
+            this.TP信息追溯.Controls.Add(this.InquireCondition);
+            this.TP信息追溯.Controls.Add(this.PN_Data);
+            this.TP信息追溯.Location = new System.Drawing.Point(4, 44);
+            this.TP信息追溯.Margin = new System.Windows.Forms.Padding(2);
+            this.TP信息追溯.Name = "TP信息追溯";
+            this.TP信息追溯.Padding = new System.Windows.Forms.Padding(2);
+            this.TP信息追溯.Size = new System.Drawing.Size(1256, 763);
+            this.TP信息追溯.TabIndex = 5;
+            this.TP信息追溯.Text = "信息追溯";
+            this.TP信息追溯.UseVisualStyleBackColor = true;
             // 
             // InquireCondition
             // 
@@ -21887,21 +21941,21 @@
             this.dataGridView.Size = new System.Drawing.Size(1008, 735);
             this.dataGridView.TabIndex = 2;
             // 
-            // tabPage5
+            // TP参数设置
             // 
-            this.tabPage5.Controls.Add(this.groupBox10);
-            this.tabPage5.Controls.Add(this.groupBox62);
-            this.tabPage5.Controls.Add(this.BTN写入速度);
-            this.tabPage5.Controls.Add(this.groupBox65);
-            this.tabPage5.Controls.Add(this.groupBox63);
-            this.tabPage5.Location = new System.Drawing.Point(4, 44);
-            this.tabPage5.Margin = new System.Windows.Forms.Padding(2);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage5.Size = new System.Drawing.Size(1256, 763);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "参数设置";
-            this.tabPage5.UseVisualStyleBackColor = true;
+            this.TP参数设置.Controls.Add(this.groupBox10);
+            this.TP参数设置.Controls.Add(this.groupBox62);
+            this.TP参数设置.Controls.Add(this.BTN写入速度);
+            this.TP参数设置.Controls.Add(this.groupBox65);
+            this.TP参数设置.Controls.Add(this.groupBox63);
+            this.TP参数设置.Location = new System.Drawing.Point(4, 44);
+            this.TP参数设置.Margin = new System.Windows.Forms.Padding(2);
+            this.TP参数设置.Name = "TP参数设置";
+            this.TP参数设置.Padding = new System.Windows.Forms.Padding(2);
+            this.TP参数设置.Size = new System.Drawing.Size(1256, 763);
+            this.TP参数设置.TabIndex = 4;
+            this.TP参数设置.Text = "参数设置";
+            this.TP参数设置.UseVisualStyleBackColor = true;
             // 
             // groupBox10
             // 
@@ -23302,18 +23356,19 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.TC_Main.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
+            this.TP主界面.ResumeLayout(false);
+            this.TP主界面.PerformLayout();
             this.TC信息.ResumeLayout(false);
             this.TP报警信息.ResumeLayout(false);
             this.TP报警信息.PerformLayout();
             this.TP更改信息.ResumeLayout(false);
             this.TP更改信息.PerformLayout();
+            this.groupBox85.ResumeLayout(false);
             this.groupBox69.ResumeLayout(false);
             this.groupBox69.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TSTD_IDImg)).EndInit();
-            this.GB_Coonnection.ResumeLayout(false);
-            this.GB_Coonnection.PerformLayout();
+            this.GB_Connection.ResumeLayout(false);
+            this.GB_Connection.PerformLayout();
             this.GB_Modify.ResumeLayout(false);
             this.GB_Modify.PerformLayout();
             this.groupBox74.ResumeLayout(false);
@@ -23324,7 +23379,7 @@
             this.groupBox73.PerformLayout();
             this.groupBox70.ResumeLayout(false);
             this.groupBox70.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
+            this.TP手动气缸.ResumeLayout(false);
             this.groupBox20.ResumeLayout(false);
             this.groupBox17.ResumeLayout(false);
             this.groupBox16.ResumeLayout(false);
@@ -23332,7 +23387,7 @@
             this.groupBox18.ResumeLayout(false);
             this.groupBox83.ResumeLayout(false);
             this.groupBox83.PerformLayout();
-            this.tabPage7.ResumeLayout(false);
+            this.TP手动电机1.ResumeLayout(false);
             this.groupBox14.ResumeLayout(false);
             this.groupBox14.PerformLayout();
             this.groupBox90.ResumeLayout(false);
@@ -23369,7 +23424,7 @@
             this.groupBox31.PerformLayout();
             this.groupBox21.ResumeLayout(false);
             this.groupBox21.PerformLayout();
-            this.tabPage9.ResumeLayout(false);
+            this.TP手动电机2.ResumeLayout(false);
             this.groupBox81.ResumeLayout(false);
             this.groupBox81.PerformLayout();
             this.groupBox80.ResumeLayout(false);
@@ -23402,7 +23457,7 @@
             this.groupBox34.PerformLayout();
             this.groupBox33.ResumeLayout(false);
             this.groupBox33.PerformLayout();
-            this.tabPage8.ResumeLayout(false);
+            this.TP示教界面1.ResumeLayout(false);
             this.groupBox95.ResumeLayout(false);
             this.groupBox95.PerformLayout();
             this.groupBox94.ResumeLayout(false);
@@ -23441,7 +23496,7 @@
             this.groupBox46.PerformLayout();
             this.groupBox45.ResumeLayout(false);
             this.groupBox45.PerformLayout();
-            this.tabPage10.ResumeLayout(false);
+            this.TP示教界面2.ResumeLayout(false);
             this.groupBox71.ResumeLayout(false);
             this.groupBox71.PerformLayout();
             this.groupBox49.ResumeLayout(false);
@@ -23474,8 +23529,8 @@
             this.groupBox53.PerformLayout();
             this.groupBox57.ResumeLayout(false);
             this.groupBox57.PerformLayout();
-            this.tabPage4.ResumeLayout(false);
-            this.tabPage4.PerformLayout();
+            this.TPIO信息.ResumeLayout(false);
+            this.TPIO信息.PerformLayout();
             this.groupBox9.ResumeLayout(false);
             this.groupBox9.PerformLayout();
             this.groupBox6.ResumeLayout(false);
@@ -23496,14 +23551,14 @@
             this.groupBox3.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.tabPage3.ResumeLayout(false);
+            this.TPMapping.ResumeLayout(false);
             this.GB_Trays.ResumeLayout(false);
-            this.tabPage6.ResumeLayout(false);
+            this.TP信息追溯.ResumeLayout(false);
             this.InquireCondition.ResumeLayout(false);
             this.InquireCondition.PerformLayout();
             this.PN_Data.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
-            this.tabPage5.ResumeLayout(false);
+            this.TP参数设置.ResumeLayout(false);
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
             this.groupBox62.ResumeLayout(false);
@@ -23519,11 +23574,11 @@
         #endregion
 
         public System.Windows.Forms.TabControl TC_Main;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.TabPage tabPage5;
-        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.TabPage TP手动气缸;
+        private System.Windows.Forms.TabPage TPMapping;
+        private System.Windows.Forms.TabPage TPIO信息;
+        private System.Windows.Forms.TabPage TP参数设置;
+        private System.Windows.Forms.TabPage TP信息追溯;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label8;
@@ -23817,8 +23872,8 @@
         private System.Windows.Forms.Button btn工位3风扇上电;
         private System.Windows.Forms.Button btn工位2风扇上电;
         private System.Windows.Forms.Button btn工位1风扇上电;
-        private System.Windows.Forms.TabPage tabPage7;
-        private System.Windows.Forms.TabPage tabPage8;
+        private System.Windows.Forms.TabPage TP手动电机1;
+        private System.Windows.Forms.TabPage TP示教界面1;
         private System.Windows.Forms.GroupBox groupBox22;
         private System.Windows.Forms.TextBox txtY当前位置;
         private System.Windows.Forms.Label label285;
@@ -23904,7 +23959,7 @@
         private System.Windows.Forms.Button btn旋转1停止;
         private System.Windows.Forms.Button btn旋转1右行;
         private System.Windows.Forms.Button btn旋转1左行;
-        private System.Windows.Forms.TabPage tabPage9;
+        private System.Windows.Forms.TabPage TP手动电机2;
         private System.Windows.Forms.GroupBox groupBox30;
         private System.Windows.Forms.Button btnBYY第一行;
         private System.Windows.Forms.Button btnBYY第二行;
@@ -24750,7 +24805,7 @@
         private System.Windows.Forms.TextBox txt上视觉1偏移X;
         private System.Windows.Forms.Button btn上视觉1对位;
         private System.Windows.Forms.Button btn上视觉1标定开始;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage TP主界面;
         private System.Windows.Forms.Label label101;
         private System.Windows.Forms.TextBox TB_Warning;
         private System.Windows.Forms.GroupBox groupBox69;
@@ -24766,7 +24821,7 @@
         private System.Windows.Forms.Button BTN查看报警历史;
         private System.Windows.Forms.Button BTN报警复位;
         private System.Windows.Forms.Button BTN蜂鸣停止;
-        private System.Windows.Forms.GroupBox GB_Coonnection;
+        private System.Windows.Forms.GroupBox GB_Connection;
         private System.Windows.Forms.TextBox txtSokt下料个数;
         private System.Windows.Forms.Label label266;
         private System.Windows.Forms.TextBox txtSokt上料个数;
@@ -24795,7 +24850,7 @@
         private System.Windows.Forms.Label label98;
         private System.Windows.Forms.Button btn人工上下料;
         private System.Windows.Forms.Label label97;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn黑体一键上升主界面;
         private System.Windows.Forms.GroupBox groupBox73;
         private System.Windows.Forms.Label label368;
         private System.Windows.Forms.Label LB_自动远程状态测试;
@@ -24858,7 +24913,7 @@
         private System.Windows.Forms.TextBox txt上料X轴Tray盘补偿设置;
         private System.Windows.Forms.Label label538;
         private System.Windows.Forms.Label label539;
-        private System.Windows.Forms.TabPage tabPage10;
+        private System.Windows.Forms.TabPage TP示教界面2;
         private System.Windows.Forms.GroupBox groupBox71;
         private System.Windows.Forms.Label LB_自动远程状态;
         private System.Windows.Forms.Label label234;
@@ -25255,6 +25310,8 @@
         private System.Windows.Forms.Button BTN清除修改信息;
         private System.Windows.Forms.Button BTN查看修改历史;
         private System.Windows.Forms.Button btn上料产品对位NG报警跳过;
+        private System.Windows.Forms.Label label69;
+        private System.Windows.Forms.Button BTN测试;
     }
 }
 

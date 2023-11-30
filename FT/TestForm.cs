@@ -1,7 +1,9 @@
-﻿using System;
+﻿using MyToolkit;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -24,6 +26,13 @@ namespace FT
         {
             InitializeComponent();
 
+            info = JsonManager.ReadJsonString<Dictionary<string, string>>($"{Environment.CurrentDirectory}\\Custom\\", "KeyValue");
+            if (info == null) info = new Dictionary<string, string>();
+            else
+            {
+                foreach (var item in info)
+                    TB信息.AppendText($"{item.Key} {item.Value}{Environment.NewLine}");
+            }
             //CB_VariableName.Items.Add(nameof(updater.PlcOutIO));
             //CB_VariableName.Items.Add(nameof(updater.PlcOutLocation));
             //CB_VariableName.Items.Add(nameof(updater.PlcOutAlarm));
@@ -170,6 +179,7 @@ namespace FT
         }
         #endregion
 
+        #region 数据访问
         private void BNT_WriteData_Click(object sender, EventArgs e)
         {
             try
@@ -275,6 +285,65 @@ namespace FT
         {
             //BTN_Test.Enabled = false;
             Test(20, 40);
+        }
+        #endregion
+
+        #region 配置文件生成
+        readonly Dictionary<string, string> info;
+
+        private void BTN添加_Click(object sender, EventArgs e)
+        {
+            if (TB_Key.Text == "") return;
+            if (TB_Value.Text == "") return;
+            try
+            {
+                if (TB_Modify.Text == "")
+                {
+                    info.Add(TB_Key.Text, TB_Value.Text);
+                }
+                else
+                {
+                    info.Add(TB_Key.Text, $"{TB_Modify.Text}[{TB_Value.Text}]");
+                }
+                TB信息.AppendText($"{TB_Key.Text} {info[TB_Key.Text]}{Environment.NewLine}");
+                if (int.TryParse(TB_Value.Text, out int result))
+                {
+                    result++;
+                    TB_Value.Text = result.ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void BTN清除_Click(object sender, EventArgs e)
+        {
+            info.Clear();
+            TB信息.Clear();
+        }
+
+        private void BTN保存_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                JsonManager.SaveJsonString(Environment.CurrentDirectory + "\\Custom\\", "KeyValue", info, FileMode.Create);
+                MessageBox.Show("保存");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        #endregion
+
+        private void BTN查找_Click(object sender, EventArgs e)
+        {
+            if (info.ContainsKey(TB_Key.Text))
+            {
+                MessageBox.Show(info[TB_Key.Text]);
+            }
         }
     }
 }

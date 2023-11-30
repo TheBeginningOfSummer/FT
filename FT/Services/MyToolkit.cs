@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
 using System.IO;
-using System.IO.Ports;
-using System.Net;
-using System.Net.Sockets;
 using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
 using LitJson;
 
 namespace MyToolkit
@@ -77,7 +70,7 @@ namespace MyToolkit
 
     public class JsonManager
     {
-        public static void SaveJsonString(string path, string fileName, object data)
+        public static void SaveJsonString(string path, string fileName, object data, FileMode mode = FileMode.Create)
         {
             if (!Directory.Exists(path))
             {
@@ -87,7 +80,7 @@ namespace MyToolkit
 
             string jsonString = JsonMapper.ToJson(data);
             byte[] jsonBytes = Encoding.UTF8.GetBytes(jsonString);
-            FileStream file = new FileStream(path, FileMode.Create);
+            FileStream file = new FileStream(path, mode);
             file.Write(jsonBytes, 0, jsonBytes.Length);//写入
             file.Flush();
             file.Close();
