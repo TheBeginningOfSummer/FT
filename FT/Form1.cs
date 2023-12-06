@@ -37,11 +37,11 @@ namespace FT
         #region 控件管理
         Dictionary<string, string> textBoxInformation;
         Dictionary<string, TabPage> mainPages;
+        //主界面TextBox
+        Dictionary<string, TextBox> firstPageTextBoxes;
         //示教界面TextBox
         Dictionary<string, GroupBox> calibrationGroups;
         Dictionary<string, TextBox> calibrationTextBoxes;
-        //主界面TextBox
-        Dictionary<string, TextBox> firstPageTextBoxes;
         //手动电机TextBox
         Dictionary<string, GroupBox> manualPageGroups;
         Dictionary<string, TextBox> manualPageTextBoxes;
@@ -91,10 +91,10 @@ namespace FT
             try
             {
                 //获取界面控件
-                mainPages = GetControls<TabPage>(TC_Main);
+                mainPages = GetControls<TabPage>(TC_Main); 
+                firstPageTextBoxes = GetControls<TextBox>(GB_Connection);
                 calibrationGroups = GetControls<GroupBox>(mainPages["TP示教界面1"], mainPages["TP示教界面2"]);
                 calibrationTextBoxes = GetControls<TextBox>(calibrationGroups.Values.ToArray());
-                firstPageTextBoxes = GetControls<TextBox>(GB_Connection);
                 manualPageGroups = GetControls<GroupBox>(mainPages["TP手动电机1"], mainPages["TP手动电机2"]);
                 manualPageTextBoxes = GetControls<TextBox>(manualPageGroups.Values.ToArray());
                 //TextBox信息读取地址加载
@@ -1641,6 +1641,22 @@ namespace FT
         }
         #endregion
 
+        private bool WriteDouble(TextBox valueBox, bool isReset = false)
+        {
+            if (double.TryParse(valueBox.Text, out double value))
+            {
+                communication.WriteVariable(value, (string)valueBox.Tag);
+                //communication.WriteVariable(true, "PlcInIO[658]");
+                if (isReset) valueBox.Text = "";
+                return true;
+            }
+            else
+            {
+                //MessageBox.Show($"输入错误请检查,重新输入{valueBox.Name.Substring(3)}值");
+                return false;
+            }
+        }
+
         #region 手动气缸、电机操作
         private void BTN手动操作_MouseDown(object sender, MouseEventArgs e)
         {
@@ -1666,6 +1682,17 @@ namespace FT
             }
         }
         //手动电机2操作
+        private void BTN钧舵相对旋转_MouseDown(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void BTN钧舵相对旋转_MouseUp(object sender, MouseEventArgs e)
+        {
+            Button button = (Button)sender;
+            communication.WriteVariable(false, (string)button.Tag);
+        }
+
         private void btnJD1相对旋转_MouseDown(object sender, MouseEventArgs e)
         {
             if (txtR1旋转角度.Text != "")
@@ -1676,10 +1703,7 @@ namespace FT
             }
             communication.WriteVariable(true, "PlcInIO[596]");
         }
-        private void btnJD1相对旋转_MouseUp(object sender, MouseEventArgs e)
-        {
-            communication.WriteVariable(false, "PlcInIO[596]");
-        }
+        
         private void btnJD2相对旋转_MouseDown(object sender, MouseEventArgs e)
         {
             if (txtR2旋转角度.Text != "")
@@ -1690,10 +1714,7 @@ namespace FT
             }
             communication.WriteVariable(true, "PlcInIO[597]");
         }
-        private void btnJD2相对旋转_MouseUp(object sender, MouseEventArgs e)
-        {
-            communication.WriteVariable(false, "PlcInIO[597]");
-        }
+        
         private void btnJD3相对旋转_MouseDown(object sender, MouseEventArgs e)
         {
             if (txtR3旋转角度.Text != "")
@@ -1704,24 +1725,18 @@ namespace FT
             }
             communication.WriteVariable(true, "PlcInIO[598]");
         }
-        private void btnJD3相对旋转_MouseUp(object sender, MouseEventArgs e)
-        {
-            communication.WriteVariable(false, "PlcInIO[598]");
-        }
+        
         private void btnJD4相对旋转_MouseDown(object sender, MouseEventArgs e)
         {
             if (txtR4旋转角度.Text != "")
             {
-                Button button = (Button)sender;
+                Button button = (Button)sender; 
                 communication.WriteVariable(Convert.ToDouble(txtR4旋转角度.Text), "PLCInPmt[29]");
                 RecordAndShow($"[{button.Name.Substring(3)}] 旋转角度：{txtR4旋转角度.Text}", LogType.Modification, TB_Modification);
             }
             communication.WriteVariable(true, "PlcInIO[599]");
         }
-        private void btnJD4相对旋转_MouseUp(object sender, MouseEventArgs e)
-        {
-            communication.WriteVariable(false, "PlcInIO[599]");
-        }
+        
         //手动电机1夹爪选择
         private void CB_选择夹爪_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1774,34 +1789,41 @@ namespace FT
             else
                 await BoolSwitchAsync((string)button.Tag, $"示教2 [{button.Name.Substring(3)}] 按下");
         }
+
+        private void BTN值写入_MouseDown(object sender, MouseEventArgs e)
+        {
+            Button button = sender as Button;
+            if (WriteDouble(txt钧舵打开小位置设置))
+                communication.WriteVariable(true, (string)button.Tag);
+        }
+
+        private void BTN值写入_MouseUp(object sender, MouseEventArgs e)
+        {
+            Button button = (Button)sender;
+            communication.WriteVariable(false, (string)button.Tag);
+        }
         //示教1值写入
         private void btn打开小位置值写入_MouseDown(object sender, MouseEventArgs e)
         {
-            try
+            if (double.TryParse(txt钧舵打开小位置设置.Text, out double 小位置值))
             {
-                if (double.TryParse(txt钧舵打开小位置设置.Text, out double 小位置值))
+                if (小位置值 < 0 || 小位置值 > 26)
                 {
-                    if (小位置值 < 0 || 小位置值 > 26)
-                    {
-                        MessageBox.Show("输入错误请检查,请输入0-26之间的整数");
-                        return;
-                    }
-                    if (小位置值 >= 0 && 小位置值 <= 26)
-                    {
-                        communication.WriteVariable(Convert.ToDouble(txt钧舵打开小位置设置.Text), "PLCInPmt[30]");
-                        communication.WriteVariable(true, "PlcInIO[648]");
-                        txt钧舵打开小位置设置.Text = null;
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("输入错误请检查,请输入钧舵夹爪打开小位置值[40-（夹爪夹持方向产品的尺寸+4）。4指的是左右各留2mm的夹持余量，可根据实际情况进行调整]。 如：W9产品-夹爪夹持方向产品的尺寸为24mm，则输入钧舵夹爪打开小位置值为12mm；W7产品-夹爪夹持方向产品的尺寸为18mm，则输入钧舵夹爪打开小位置值为18mm。");
+                    MessageBox.Show("输入错误请检查,请输入0-26之间的整数");
                     return;
                 }
+                if (小位置值 >= 0 && 小位置值 <= 26)
+                {
+                    if (WriteDouble(txt钧舵打开小位置设置))
+                    {
+                        communication.WriteVariable(true, "PlcInIO[648]");
+                    }
+                }
             }
-            catch (Exception)
+            else
             {
-                MessageBox.Show("输入错误请检查!");
+                MessageBox.Show("输入错误请检查,请输入钧舵夹爪打开小位置值[40-（夹爪夹持方向产品的尺寸+4）。4指的是左右各留2mm的夹持余量，可根据实际情况进行调整]。 如：W9产品-夹爪夹持方向产品的尺寸为24mm，则输入钧舵夹爪打开小位置值为12mm；W7产品-夹爪夹持方向产品的尺寸为18mm，则输入钧舵夹爪打开小位置值为18mm。");
+                return;
             }
         }
         private void btn打开小位置值写入_MouseUp(object sender, MouseEventArgs e)
@@ -1812,12 +1834,9 @@ namespace FT
         {
             if (double.TryParse(txtX判断值写入.Text, out double X判断值))
             {
-                if (txtX判断值写入.Text != "")
-                {
-                    communication.WriteVariable(Convert.ToDouble(txtX判断值写入.Text), "PLCInPmt[43]");
-                    communication.WriteVariable(true, "PlcInIO[658]");
-                    txtX判断值写入.Text = null;
-                }
+                communication.WriteVariable(X判断值, "PLCInPmt[43]");
+                communication.WriteVariable(true, "PlcInIO[658]");
+                txtX判断值写入.Text = null;
             }
             else
             {

@@ -605,7 +605,7 @@
             this.label353 = new System.Windows.Forms.Label();
             this.btnRFB1停止 = new System.Windows.Forms.Button();
             this.btnRFB1回原点 = new System.Windows.Forms.Button();
-            this.groupBox44 = new System.Windows.Forms.GroupBox();
+            this.GB钧舵夹爪4 = new System.Windows.Forms.GroupBox();
             this.btnJD清除状态4 = new System.Windows.Forms.Button();
             this.夹爪4状态 = new System.Windows.Forms.Label();
             this.label276 = new System.Windows.Forms.Label();
@@ -618,7 +618,7 @@
             this.btnJD4加紧 = new System.Windows.Forms.Button();
             this.btnJD4指定位置 = new System.Windows.Forms.Button();
             this.btnJD4回原点 = new System.Windows.Forms.Button();
-            this.groupBox43 = new System.Windows.Forms.GroupBox();
+            this.GB钧舵夹爪3 = new System.Windows.Forms.GroupBox();
             this.btnJD清除状态3 = new System.Windows.Forms.Button();
             this.夹爪3状态 = new System.Windows.Forms.Label();
             this.label275 = new System.Windows.Forms.Label();
@@ -631,7 +631,7 @@
             this.btnJD3加紧 = new System.Windows.Forms.Button();
             this.btnJD3指定位置 = new System.Windows.Forms.Button();
             this.btnJD3回原点 = new System.Windows.Forms.Button();
-            this.groupBox42 = new System.Windows.Forms.GroupBox();
+            this.GB钧舵夹爪2 = new System.Windows.Forms.GroupBox();
             this.btnJD清除状态2 = new System.Windows.Forms.Button();
             this.夹爪2状态 = new System.Windows.Forms.Label();
             this.label274 = new System.Windows.Forms.Label();
@@ -644,7 +644,7 @@
             this.btnJD2相对旋转 = new System.Windows.Forms.Button();
             this.btnJD2指定位置 = new System.Windows.Forms.Button();
             this.btnJD2回原点 = new System.Windows.Forms.Button();
-            this.groupBox41 = new System.Windows.Forms.GroupBox();
+            this.GB钧舵夹爪1 = new System.Windows.Forms.GroupBox();
             this.btnJD1234相对旋转90度 = new System.Windows.Forms.Button();
             this.label250 = new System.Windows.Forms.Label();
             this.txtR1当前字节 = new System.Windows.Forms.TextBox();
@@ -1813,10 +1813,10 @@
             this.groupBox80.SuspendLayout();
             this.groupBox79.SuspendLayout();
             this.groupBox78.SuspendLayout();
-            this.groupBox44.SuspendLayout();
-            this.groupBox43.SuspendLayout();
-            this.groupBox42.SuspendLayout();
-            this.groupBox41.SuspendLayout();
+            this.GB钧舵夹爪4.SuspendLayout();
+            this.GB钧舵夹爪3.SuspendLayout();
+            this.GB钧舵夹爪2.SuspendLayout();
+            this.GB钧舵夹爪1.SuspendLayout();
             this.groupBox40.SuspendLayout();
             this.groupBox39.SuspendLayout();
             this.groupBox38.SuspendLayout();
@@ -8957,10 +8957,10 @@
             this.TP手动电机2.Controls.Add(this.groupBox80);
             this.TP手动电机2.Controls.Add(this.groupBox79);
             this.TP手动电机2.Controls.Add(this.groupBox78);
-            this.TP手动电机2.Controls.Add(this.groupBox44);
-            this.TP手动电机2.Controls.Add(this.groupBox43);
-            this.TP手动电机2.Controls.Add(this.groupBox42);
-            this.TP手动电机2.Controls.Add(this.groupBox41);
+            this.TP手动电机2.Controls.Add(this.GB钧舵夹爪4);
+            this.TP手动电机2.Controls.Add(this.GB钧舵夹爪3);
+            this.TP手动电机2.Controls.Add(this.GB钧舵夹爪2);
+            this.TP手动电机2.Controls.Add(this.GB钧舵夹爪1);
             this.TP手动电机2.Controls.Add(this.groupBox40);
             this.TP手动电机2.Controls.Add(this.groupBox39);
             this.TP手动电机2.Controls.Add(this.groupBox38);
@@ -9546,29 +9546,30 @@
             this.btnRFB1回原点.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BTN手动操作_MouseDown);
             this.btnRFB1回原点.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BTN手动操作_MouseUp);
             // 
-            // groupBox44
+            // GB钧舵夹爪4
             // 
-            this.groupBox44.Controls.Add(this.btnJD清除状态4);
-            this.groupBox44.Controls.Add(this.夹爪4状态);
-            this.groupBox44.Controls.Add(this.label276);
-            this.groupBox44.Controls.Add(this.btnJD4打开小位置);
-            this.groupBox44.Controls.Add(this.txtR4当前字节);
-            this.groupBox44.Controls.Add(this.label281);
-            this.groupBox44.Controls.Add(this.btnJD4打开);
-            this.groupBox44.Controls.Add(this.txtR4旋转角度);
-            this.groupBox44.Controls.Add(this.btnJD4相对旋转);
-            this.groupBox44.Controls.Add(this.btnJD4加紧);
-            this.groupBox44.Controls.Add(this.btnJD4指定位置);
-            this.groupBox44.Controls.Add(this.btnJD4回原点);
-            this.groupBox44.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox44.Location = new System.Drawing.Point(1030, 395);
-            this.groupBox44.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox44.Name = "groupBox44";
-            this.groupBox44.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox44.Size = new System.Drawing.Size(205, 355);
-            this.groupBox44.TabIndex = 61;
-            this.groupBox44.TabStop = false;
-            this.groupBox44.Text = "钧舵夹爪4";
+            this.GB钧舵夹爪4.Controls.Add(this.btnJD清除状态4);
+            this.GB钧舵夹爪4.Controls.Add(this.夹爪4状态);
+            this.GB钧舵夹爪4.Controls.Add(this.label276);
+            this.GB钧舵夹爪4.Controls.Add(this.btnJD4打开小位置);
+            this.GB钧舵夹爪4.Controls.Add(this.txtR4当前字节);
+            this.GB钧舵夹爪4.Controls.Add(this.label281);
+            this.GB钧舵夹爪4.Controls.Add(this.btnJD4打开);
+            this.GB钧舵夹爪4.Controls.Add(this.txtR4旋转角度);
+            this.GB钧舵夹爪4.Controls.Add(this.btnJD4相对旋转);
+            this.GB钧舵夹爪4.Controls.Add(this.btnJD4加紧);
+            this.GB钧舵夹爪4.Controls.Add(this.btnJD4指定位置);
+            this.GB钧舵夹爪4.Controls.Add(this.btnJD4回原点);
+            this.GB钧舵夹爪4.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GB钧舵夹爪4.Location = new System.Drawing.Point(1030, 395);
+            this.GB钧舵夹爪4.Margin = new System.Windows.Forms.Padding(2);
+            this.GB钧舵夹爪4.Name = "GB钧舵夹爪4";
+            this.GB钧舵夹爪4.Padding = new System.Windows.Forms.Padding(2);
+            this.GB钧舵夹爪4.Size = new System.Drawing.Size(205, 355);
+            this.GB钧舵夹爪4.TabIndex = 61;
+            this.GB钧舵夹爪4.TabStop = false;
+            this.GB钧舵夹爪4.Tag = "4";
+            this.GB钧舵夹爪4.Text = "钧舵夹爪4";
             // 
             // btnJD清除状态4
             // 
@@ -9663,6 +9664,7 @@
             this.txtR4旋转角度.Name = "txtR4旋转角度";
             this.txtR4旋转角度.Size = new System.Drawing.Size(95, 21);
             this.txtR4旋转角度.TabIndex = 82;
+            this.txtR4旋转角度.Tag = "PLCInPmt[29]";
             this.txtR4旋转角度.TextChanged += new System.EventHandler(this.AngleSet_TextChanged);
             // 
             // btnJD4相对旋转
@@ -9673,10 +9675,11 @@
             this.btnJD4相对旋转.Name = "btnJD4相对旋转";
             this.btnJD4相对旋转.Size = new System.Drawing.Size(75, 24);
             this.btnJD4相对旋转.TabIndex = 81;
+            this.btnJD4相对旋转.Tag = "PlcInIO[599]";
             this.btnJD4相对旋转.Text = "相对旋转";
             this.btnJD4相对旋转.UseVisualStyleBackColor = true;
             this.btnJD4相对旋转.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnJD4相对旋转_MouseDown);
-            this.btnJD4相对旋转.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnJD4相对旋转_MouseUp);
+            this.btnJD4相对旋转.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BTN钧舵相对旋转_MouseUp);
             // 
             // btnJD4加紧
             // 
@@ -9717,29 +9720,30 @@
             this.btnJD4回原点.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BTN手动操作_MouseDown);
             this.btnJD4回原点.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BTN手动操作_MouseUp);
             // 
-            // groupBox43
+            // GB钧舵夹爪3
             // 
-            this.groupBox43.Controls.Add(this.btnJD清除状态3);
-            this.groupBox43.Controls.Add(this.夹爪3状态);
-            this.groupBox43.Controls.Add(this.label275);
-            this.groupBox43.Controls.Add(this.btnJD3打开小位置);
-            this.groupBox43.Controls.Add(this.txtR3当前字节);
-            this.groupBox43.Controls.Add(this.label267);
-            this.groupBox43.Controls.Add(this.btnJD3打开);
-            this.groupBox43.Controls.Add(this.txtR3旋转角度);
-            this.groupBox43.Controls.Add(this.btnJD3相对旋转);
-            this.groupBox43.Controls.Add(this.btnJD3加紧);
-            this.groupBox43.Controls.Add(this.btnJD3指定位置);
-            this.groupBox43.Controls.Add(this.btnJD3回原点);
-            this.groupBox43.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox43.Location = new System.Drawing.Point(818, 395);
-            this.groupBox43.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox43.Name = "groupBox43";
-            this.groupBox43.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox43.Size = new System.Drawing.Size(205, 355);
-            this.groupBox43.TabIndex = 61;
-            this.groupBox43.TabStop = false;
-            this.groupBox43.Text = "钧舵夹爪3";
+            this.GB钧舵夹爪3.Controls.Add(this.btnJD清除状态3);
+            this.GB钧舵夹爪3.Controls.Add(this.夹爪3状态);
+            this.GB钧舵夹爪3.Controls.Add(this.label275);
+            this.GB钧舵夹爪3.Controls.Add(this.btnJD3打开小位置);
+            this.GB钧舵夹爪3.Controls.Add(this.txtR3当前字节);
+            this.GB钧舵夹爪3.Controls.Add(this.label267);
+            this.GB钧舵夹爪3.Controls.Add(this.btnJD3打开);
+            this.GB钧舵夹爪3.Controls.Add(this.txtR3旋转角度);
+            this.GB钧舵夹爪3.Controls.Add(this.btnJD3相对旋转);
+            this.GB钧舵夹爪3.Controls.Add(this.btnJD3加紧);
+            this.GB钧舵夹爪3.Controls.Add(this.btnJD3指定位置);
+            this.GB钧舵夹爪3.Controls.Add(this.btnJD3回原点);
+            this.GB钧舵夹爪3.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GB钧舵夹爪3.Location = new System.Drawing.Point(818, 395);
+            this.GB钧舵夹爪3.Margin = new System.Windows.Forms.Padding(2);
+            this.GB钧舵夹爪3.Name = "GB钧舵夹爪3";
+            this.GB钧舵夹爪3.Padding = new System.Windows.Forms.Padding(2);
+            this.GB钧舵夹爪3.Size = new System.Drawing.Size(205, 355);
+            this.GB钧舵夹爪3.TabIndex = 61;
+            this.GB钧舵夹爪3.TabStop = false;
+            this.GB钧舵夹爪3.Tag = "3";
+            this.GB钧舵夹爪3.Text = "钧舵夹爪3";
             // 
             // btnJD清除状态3
             // 
@@ -9834,6 +9838,7 @@
             this.txtR3旋转角度.Name = "txtR3旋转角度";
             this.txtR3旋转角度.Size = new System.Drawing.Size(95, 21);
             this.txtR3旋转角度.TabIndex = 79;
+            this.txtR3旋转角度.Tag = "PLCInPmt[28]";
             this.txtR3旋转角度.TextChanged += new System.EventHandler(this.AngleSet_TextChanged);
             // 
             // btnJD3相对旋转
@@ -9844,10 +9849,11 @@
             this.btnJD3相对旋转.Name = "btnJD3相对旋转";
             this.btnJD3相对旋转.Size = new System.Drawing.Size(75, 24);
             this.btnJD3相对旋转.TabIndex = 78;
+            this.btnJD3相对旋转.Tag = "PlcInIO[598]";
             this.btnJD3相对旋转.Text = "相对旋转";
             this.btnJD3相对旋转.UseVisualStyleBackColor = true;
             this.btnJD3相对旋转.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnJD3相对旋转_MouseDown);
-            this.btnJD3相对旋转.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnJD3相对旋转_MouseUp);
+            this.btnJD3相对旋转.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BTN钧舵相对旋转_MouseUp);
             // 
             // btnJD3加紧
             // 
@@ -9888,29 +9894,30 @@
             this.btnJD3回原点.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BTN手动操作_MouseDown);
             this.btnJD3回原点.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BTN手动操作_MouseUp);
             // 
-            // groupBox42
+            // GB钧舵夹爪2
             // 
-            this.groupBox42.Controls.Add(this.btnJD清除状态2);
-            this.groupBox42.Controls.Add(this.夹爪2状态);
-            this.groupBox42.Controls.Add(this.label274);
-            this.groupBox42.Controls.Add(this.txtR2当前字节);
-            this.groupBox42.Controls.Add(this.btnJD2打开小位置);
-            this.groupBox42.Controls.Add(this.label256);
-            this.groupBox42.Controls.Add(this.btnJD2打开);
-            this.groupBox42.Controls.Add(this.txtR2旋转角度);
-            this.groupBox42.Controls.Add(this.btnJD2加紧);
-            this.groupBox42.Controls.Add(this.btnJD2相对旋转);
-            this.groupBox42.Controls.Add(this.btnJD2指定位置);
-            this.groupBox42.Controls.Add(this.btnJD2回原点);
-            this.groupBox42.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox42.Location = new System.Drawing.Point(1030, 17);
-            this.groupBox42.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox42.Name = "groupBox42";
-            this.groupBox42.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox42.Size = new System.Drawing.Size(205, 355);
-            this.groupBox42.TabIndex = 61;
-            this.groupBox42.TabStop = false;
-            this.groupBox42.Text = "钧舵夹爪2";
+            this.GB钧舵夹爪2.Controls.Add(this.btnJD清除状态2);
+            this.GB钧舵夹爪2.Controls.Add(this.夹爪2状态);
+            this.GB钧舵夹爪2.Controls.Add(this.label274);
+            this.GB钧舵夹爪2.Controls.Add(this.txtR2当前字节);
+            this.GB钧舵夹爪2.Controls.Add(this.btnJD2打开小位置);
+            this.GB钧舵夹爪2.Controls.Add(this.label256);
+            this.GB钧舵夹爪2.Controls.Add(this.btnJD2打开);
+            this.GB钧舵夹爪2.Controls.Add(this.txtR2旋转角度);
+            this.GB钧舵夹爪2.Controls.Add(this.btnJD2加紧);
+            this.GB钧舵夹爪2.Controls.Add(this.btnJD2相对旋转);
+            this.GB钧舵夹爪2.Controls.Add(this.btnJD2指定位置);
+            this.GB钧舵夹爪2.Controls.Add(this.btnJD2回原点);
+            this.GB钧舵夹爪2.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GB钧舵夹爪2.Location = new System.Drawing.Point(1030, 17);
+            this.GB钧舵夹爪2.Margin = new System.Windows.Forms.Padding(2);
+            this.GB钧舵夹爪2.Name = "GB钧舵夹爪2";
+            this.GB钧舵夹爪2.Padding = new System.Windows.Forms.Padding(2);
+            this.GB钧舵夹爪2.Size = new System.Drawing.Size(205, 355);
+            this.GB钧舵夹爪2.TabIndex = 61;
+            this.GB钧舵夹爪2.TabStop = false;
+            this.GB钧舵夹爪2.Tag = "2";
+            this.GB钧舵夹爪2.Text = "钧舵夹爪2";
             // 
             // btnJD清除状态2
             // 
@@ -10005,6 +10012,7 @@
             this.txtR2旋转角度.Name = "txtR2旋转角度";
             this.txtR2旋转角度.Size = new System.Drawing.Size(95, 21);
             this.txtR2旋转角度.TabIndex = 76;
+            this.txtR2旋转角度.Tag = "PLCInPmt[27]";
             this.txtR2旋转角度.TextChanged += new System.EventHandler(this.AngleSet_TextChanged);
             // 
             // btnJD2加紧
@@ -10029,10 +10037,11 @@
             this.btnJD2相对旋转.Name = "btnJD2相对旋转";
             this.btnJD2相对旋转.Size = new System.Drawing.Size(75, 24);
             this.btnJD2相对旋转.TabIndex = 75;
+            this.btnJD2相对旋转.Tag = "PlcInIO[597]";
             this.btnJD2相对旋转.Text = "相对旋转";
             this.btnJD2相对旋转.UseVisualStyleBackColor = true;
             this.btnJD2相对旋转.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnJD2相对旋转_MouseDown);
-            this.btnJD2相对旋转.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnJD2相对旋转_MouseUp);
+            this.btnJD2相对旋转.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BTN钧舵相对旋转_MouseUp);
             // 
             // btnJD2指定位置
             // 
@@ -10059,30 +10068,31 @@
             this.btnJD2回原点.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BTN手动操作_MouseDown);
             this.btnJD2回原点.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BTN手动操作_MouseUp);
             // 
-            // groupBox41
+            // GB钧舵夹爪1
             // 
-            this.groupBox41.Controls.Add(this.btnJD1234相对旋转90度);
-            this.groupBox41.Controls.Add(this.label250);
-            this.groupBox41.Controls.Add(this.txtR1当前字节);
-            this.groupBox41.Controls.Add(this.夹爪状态);
-            this.groupBox41.Controls.Add(this.label254);
-            this.groupBox41.Controls.Add(this.txtR1旋转角度);
-            this.groupBox41.Controls.Add(this.btnJD1相对旋转);
-            this.groupBox41.Controls.Add(this.btnJD1打开小位置);
-            this.groupBox41.Controls.Add(this.btnJD清除状态);
-            this.groupBox41.Controls.Add(this.btnJD1打开);
-            this.groupBox41.Controls.Add(this.btnJD1加紧);
-            this.groupBox41.Controls.Add(this.btnJD1指定位置);
-            this.groupBox41.Controls.Add(this.btnJD1回原点);
-            this.groupBox41.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox41.Location = new System.Drawing.Point(818, 17);
-            this.groupBox41.Margin = new System.Windows.Forms.Padding(2);
-            this.groupBox41.Name = "groupBox41";
-            this.groupBox41.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox41.Size = new System.Drawing.Size(205, 355);
-            this.groupBox41.TabIndex = 60;
-            this.groupBox41.TabStop = false;
-            this.groupBox41.Text = "钧舵夹爪1";
+            this.GB钧舵夹爪1.Controls.Add(this.btnJD1234相对旋转90度);
+            this.GB钧舵夹爪1.Controls.Add(this.label250);
+            this.GB钧舵夹爪1.Controls.Add(this.txtR1当前字节);
+            this.GB钧舵夹爪1.Controls.Add(this.夹爪状态);
+            this.GB钧舵夹爪1.Controls.Add(this.label254);
+            this.GB钧舵夹爪1.Controls.Add(this.txtR1旋转角度);
+            this.GB钧舵夹爪1.Controls.Add(this.btnJD1相对旋转);
+            this.GB钧舵夹爪1.Controls.Add(this.btnJD1打开小位置);
+            this.GB钧舵夹爪1.Controls.Add(this.btnJD清除状态);
+            this.GB钧舵夹爪1.Controls.Add(this.btnJD1打开);
+            this.GB钧舵夹爪1.Controls.Add(this.btnJD1加紧);
+            this.GB钧舵夹爪1.Controls.Add(this.btnJD1指定位置);
+            this.GB钧舵夹爪1.Controls.Add(this.btnJD1回原点);
+            this.GB钧舵夹爪1.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GB钧舵夹爪1.Location = new System.Drawing.Point(818, 17);
+            this.GB钧舵夹爪1.Margin = new System.Windows.Forms.Padding(2);
+            this.GB钧舵夹爪1.Name = "GB钧舵夹爪1";
+            this.GB钧舵夹爪1.Padding = new System.Windows.Forms.Padding(2);
+            this.GB钧舵夹爪1.Size = new System.Drawing.Size(205, 355);
+            this.GB钧舵夹爪1.TabIndex = 60;
+            this.GB钧舵夹爪1.TabStop = false;
+            this.GB钧舵夹爪1.Tag = "1";
+            this.GB钧舵夹爪1.Text = "钧舵夹爪1";
             // 
             // btnJD1234相对旋转90度
             // 
@@ -10149,6 +10159,7 @@
             this.txtR1旋转角度.Name = "txtR1旋转角度";
             this.txtR1旋转角度.Size = new System.Drawing.Size(95, 21);
             this.txtR1旋转角度.TabIndex = 73;
+            this.txtR1旋转角度.Tag = "PLCInPmt[26]";
             this.txtR1旋转角度.TextChanged += new System.EventHandler(this.AngleSet_TextChanged);
             // 
             // btnJD1相对旋转
@@ -10159,10 +10170,11 @@
             this.btnJD1相对旋转.Name = "btnJD1相对旋转";
             this.btnJD1相对旋转.Size = new System.Drawing.Size(75, 24);
             this.btnJD1相对旋转.TabIndex = 56;
+            this.btnJD1相对旋转.Tag = "PlcInIO[596]";
             this.btnJD1相对旋转.Text = "相对旋转";
             this.btnJD1相对旋转.UseVisualStyleBackColor = true;
             this.btnJD1相对旋转.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnJD1相对旋转_MouseDown);
-            this.btnJD1相对旋转.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnJD1相对旋转_MouseUp);
+            this.btnJD1相对旋转.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BTN钧舵相对旋转_MouseUp);
             // 
             // btnJD1打开小位置
             // 
@@ -12219,6 +12231,7 @@
             this.btn打开小位置值写入.Name = "btn打开小位置值写入";
             this.btn打开小位置值写入.Size = new System.Drawing.Size(49, 27);
             this.btn打开小位置值写入.TabIndex = 136;
+            this.btn打开小位置值写入.Tag = "PlcInIO[648]";
             this.btn打开小位置值写入.Text = "写入";
             this.btn打开小位置值写入.UseVisualStyleBackColor = true;
             this.btn打开小位置值写入.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn打开小位置值写入_MouseDown);
@@ -12239,6 +12252,7 @@
             this.txt钧舵打开小位置设置.Name = "txt钧舵打开小位置设置";
             this.txt钧舵打开小位置设置.Size = new System.Drawing.Size(49, 21);
             this.txt钧舵打开小位置设置.TabIndex = 134;
+            this.txt钧舵打开小位置设置.Tag = "PLCInPmt[30]";
             // 
             // label349
             // 
@@ -23764,14 +23778,14 @@
             this.groupBox79.PerformLayout();
             this.groupBox78.ResumeLayout(false);
             this.groupBox78.PerformLayout();
-            this.groupBox44.ResumeLayout(false);
-            this.groupBox44.PerformLayout();
-            this.groupBox43.ResumeLayout(false);
-            this.groupBox43.PerformLayout();
-            this.groupBox42.ResumeLayout(false);
-            this.groupBox42.PerformLayout();
-            this.groupBox41.ResumeLayout(false);
-            this.groupBox41.PerformLayout();
+            this.GB钧舵夹爪4.ResumeLayout(false);
+            this.GB钧舵夹爪4.PerformLayout();
+            this.GB钧舵夹爪3.ResumeLayout(false);
+            this.GB钧舵夹爪3.PerformLayout();
+            this.GB钧舵夹爪2.ResumeLayout(false);
+            this.GB钧舵夹爪2.PerformLayout();
+            this.GB钧舵夹爪1.ResumeLayout(false);
+            this.GB钧舵夹爪1.PerformLayout();
             this.groupBox40.ResumeLayout(false);
             this.groupBox40.PerformLayout();
             this.groupBox39.ResumeLayout(false);
@@ -24415,22 +24429,22 @@
         private System.Windows.Forms.Label label354;
         private System.Windows.Forms.Button btnBk1停止;
         private System.Windows.Forms.Button btnBk1回原点;
-        private System.Windows.Forms.GroupBox groupBox44;
+        private System.Windows.Forms.GroupBox GB钧舵夹爪4;
         private System.Windows.Forms.Button btnJD4打开;
         private System.Windows.Forms.Button btnJD4加紧;
         private System.Windows.Forms.Button btnJD4指定位置;
         private System.Windows.Forms.Button btnJD4回原点;
-        private System.Windows.Forms.GroupBox groupBox43;
+        private System.Windows.Forms.GroupBox GB钧舵夹爪3;
         private System.Windows.Forms.Button btnJD3打开;
         private System.Windows.Forms.Button btnJD3加紧;
         private System.Windows.Forms.Button btnJD3指定位置;
         private System.Windows.Forms.Button btnJD3回原点;
-        private System.Windows.Forms.GroupBox groupBox42;
+        private System.Windows.Forms.GroupBox GB钧舵夹爪2;
         private System.Windows.Forms.Button btnJD2打开;
         private System.Windows.Forms.Button btnJD2加紧;
         private System.Windows.Forms.Button btnJD2指定位置;
         private System.Windows.Forms.Button btnJD2回原点;
-        private System.Windows.Forms.GroupBox groupBox41;
+        private System.Windows.Forms.GroupBox GB钧舵夹爪1;
         private System.Windows.Forms.Button btnJD1打开;
         private System.Windows.Forms.Button btnJD1加紧;
         private System.Windows.Forms.Button btnJD1指定位置;
