@@ -438,12 +438,12 @@ namespace FT
                         #region 示教界面和主界面手动界面部分TextBox更新
                         foreach (var item in textBoxInformation)
                         {
-                            if (calibrationTextBoxes.ContainsKey(item.Key))
-                                SetTextBoxText(calibrationTextBoxes[item.Key], (double)communication.Location[item.Value]);
                             if (firstPageTextBoxes.ContainsKey(item.Key))
-                                SetTextBoxText(firstPageTextBoxes[item.Key], (double)communication.Location[item.Value]);
+                                SetTextBoxText(firstPageTextBoxes[item.Key], communication.Location[item.Value]);
                             if (manualPageTextBoxes.ContainsKey(item.Key))
-                                SetTextBoxText(manualPageTextBoxes[item.Key], (double)communication.Location[item.Value]);
+                                SetTextBoxText(manualPageTextBoxes[item.Key], communication.Location[item.Value]);
+                            if (calibrationTextBoxes.ContainsKey(item.Key))
+                                SetTextBoxText(calibrationTextBoxes[item.Key], communication.Location[item.Value]);
                         }
                         #endregion
 

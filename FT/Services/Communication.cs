@@ -126,12 +126,12 @@ namespace FT
         /// </summary>
         /// <param name="sourceTable">源表</param>
         /// <param name="targetTable">目标的表</param>
-        public void GetValue(Hashtable sourceTable, Hashtable targetTable)
+        public void GetValue<T>(Hashtable sourceTable, Hashtable targetTable)
         {
             foreach (DictionaryEntry keyValue in sourceTable)
             {
                 if (targetTable.ContainsKey(keyValue.Key))
-                    targetTable[keyValue.Key] = keyValue.Value;
+                    targetTable[keyValue.Key] = Convert.ChangeType(keyValue.Value, typeof(T));
             }
         }
         /// <summary>
@@ -159,8 +159,8 @@ namespace FT
             {
                 #region 方式一更新数据:直接读（会乱码）
                 //GetValue(compolet.GetHashtable(plcOutIOName), PLCIO);
-                GetValue(Compolet.GetHashtable(plcOutLocationName), Location);
-                GetValue(Compolet.GetHashtable(plcOutAlarmName), Alarm);
+                GetValue<double>(Compolet.GetHashtable(plcOutLocationName), Location);
+                GetValue<bool>(Compolet.GetHashtable(plcOutAlarmName), Alarm);
                 //GetValue(compolet.GetHashtable(plcInPmtName), PLCPmt);
                 //GetValue(compolet.GetHashtable(plcOutFlagName), FlagBits);
                 //GetValue(compolet.GetHashtable(plcTestInfoName), TestInformation);
