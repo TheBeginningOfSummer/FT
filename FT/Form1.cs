@@ -107,6 +107,7 @@ namespace FT
                 alarmInformation = JsonManager.ReadJsonString<Dictionary<string, string>>(Environment.CurrentDirectory + "\\Configuration\\", "Alarm");
                 //帮助文档信息加载
                 helpInformation = JsonManager.ReadJsonString<Dictionary<string, string>>(Environment.CurrentDirectory + "\\Configuration\\", "HelpInfo");
+                InitializeHelpMenu();
                 #endregion
 
                 #region 数据查询
@@ -331,6 +332,23 @@ namespace FT
                             TB_Warning.Invoke(new Action(() => TB_Warning.AppendText(item + Environment.NewLine)));
                     }
                 }
+            }
+        }
+
+        private void InitializeHelpMenu()
+        {
+            if (helpInformation == null) return;
+            foreach (var item in helpInformation)
+            {
+                if (item.Key == "BrowserPath") continue;
+                ToolStripMenuItem menu = new ToolStripMenuItem()
+                {
+                    Name = $"TSM{item.Key}",
+                    Tag = item.Key,
+                    Text = item.Key
+                };
+                menu.Click += TSM打开文档_Click;
+                TSM帮助.DropDownItems.Add(menu);
             }
         }
         #endregion

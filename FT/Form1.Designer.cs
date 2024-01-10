@@ -116,9 +116,6 @@
             this.label248 = new System.Windows.Forms.Label();
             this.MUS菜单栏 = new System.Windows.Forms.MenuStrip();
             this.TSM帮助 = new System.Windows.Forms.ToolStripMenuItem();
-            this.TSM常见报警及消除 = new System.Windows.Forms.ToolStripMenuItem();
-            this.TSM设备使用 = new System.Windows.Forms.ToolStripMenuItem();
-            this.TSM新产品导入流程 = new System.Windows.Forms.ToolStripMenuItem();
             this.TP手动气缸 = new System.Windows.Forms.TabPage();
             this.groupBox20 = new System.Windows.Forms.GroupBox();
             this.LBEFU上电 = new System.Windows.Forms.Label();
@@ -2922,37 +2919,9 @@
             // TSM帮助
             // 
             this.TSM帮助.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.TSM帮助.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.TSM常见报警及消除,
-            this.TSM设备使用,
-            this.TSM新产品导入流程});
             this.TSM帮助.Name = "TSM帮助";
             this.TSM帮助.Size = new System.Drawing.Size(44, 21);
             this.TSM帮助.Text = "帮助";
-            // 
-            // TSM常见报警及消除
-            // 
-            this.TSM常见报警及消除.Name = "TSM常见报警及消除";
-            this.TSM常见报警及消除.Size = new System.Drawing.Size(184, 22);
-            this.TSM常见报警及消除.Tag = "常见报警及消除";
-            this.TSM常见报警及消除.Text = "常见报警及消除";
-            this.TSM常见报警及消除.Click += new System.EventHandler(this.TSM打开文档_Click);
-            // 
-            // TSM设备使用
-            // 
-            this.TSM设备使用.Name = "TSM设备使用";
-            this.TSM设备使用.Size = new System.Drawing.Size(184, 22);
-            this.TSM设备使用.Tag = "设备使用";
-            this.TSM设备使用.Text = "设备使用";
-            this.TSM设备使用.Click += new System.EventHandler(this.TSM打开文档_Click);
-            // 
-            // TSM新产品导入流程
-            // 
-            this.TSM新产品导入流程.Name = "TSM新产品导入流程";
-            this.TSM新产品导入流程.Size = new System.Drawing.Size(184, 22);
-            this.TSM新产品导入流程.Tag = "新产品导入流程";
-            this.TSM新产品导入流程.Text = "新产品信息导入流程";
-            this.TSM新产品导入流程.Click += new System.EventHandler(this.TSM打开文档_Click);
             // 
             // TP手动气缸
             // 
@@ -25692,9 +25661,6 @@
         private System.Windows.Forms.Label label69;
         private System.Windows.Forms.MenuStrip MUS菜单栏;
         private System.Windows.Forms.ToolStripMenuItem TSM帮助;
-        private System.Windows.Forms.ToolStripMenuItem TSM常见报警及消除;
-        private System.Windows.Forms.ToolStripMenuItem TSM设备使用;
-        private System.Windows.Forms.ToolStripMenuItem TSM新产品导入流程;
     }
 }
 
