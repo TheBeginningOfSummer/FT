@@ -27,15 +27,15 @@ namespace FT
         readonly Stopwatch stopwatch2 = new Stopwatch();
         #endregion
 
-        #region 报警信息
+        #region 加载的信息
         //加载的报警信息
         Dictionary<string, string> alarmInformation;
         //当前报警信息
         List<string> warning = new List<string>();
-        #endregion
 
-        #region 控件管理
+        //加载的TextBox地址信息
         Dictionary<string, string> textBoxInformation;
+        //所有TabPage
         Dictionary<string, TabPage> mainPages;
         //主界面TextBox
         Dictionary<string, TextBox> firstPageTextBoxes;
@@ -45,6 +45,9 @@ namespace FT
         //手动电机TextBox
         Dictionary<string, GroupBox> manualPageGroups;
         Dictionary<string, TextBox> manualPageTextBoxes;
+
+        //加载的帮助文档信息
+        Dictionary<string, string> helpInformation;
         #endregion
 
         #region 其他变量
@@ -90,6 +93,7 @@ namespace FT
             //数据初始化、打开通信端口
             try
             {
+                #region 配置数据加载
                 //获取界面控件
                 mainPages = GetControls<TabPage>(TC_Main); 
                 firstPageTextBoxes = GetControls<TextBox>(GB_Connection);
@@ -101,6 +105,9 @@ namespace FT
                 textBoxInformation = JsonManager.ReadJsonString<Dictionary<string, string>>(Environment.CurrentDirectory + "\\Configuration\\", "TextBoxInfo");
                 //报警信息读取
                 alarmInformation = JsonManager.ReadJsonString<Dictionary<string, string>>(Environment.CurrentDirectory + "\\Configuration\\", "Alarm");
+                //帮助文档信息加载
+                helpInformation = JsonManager.ReadJsonString<Dictionary<string, string>>(Environment.CurrentDirectory + "\\Configuration\\", "HelpInfo");
+                #endregion
 
                 #region 数据查询
                 //数据库初始化
@@ -1565,6 +1572,42 @@ namespace FT
                 communication.WriteVariable(true, "PlcInIO[334]");
             }
         }
+        private void btn旋转夹爪1下降1_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("人工确认：钧舵夹爪1已打开小位置且夹爪下方无干涉可正常下降！", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                RecordAndShow($"钧舵夹爪1气缸下降", LogType.Modification, TB_Modification);
+                communication.WriteVariable(true, "PlcInIO[537]");
+            }
+        }
+        private void btn旋转夹爪2下降1_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("人工确认：钧舵夹爪2已打开小位置且夹爪下方无干涉可正常下降！", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                RecordAndShow($"钧舵夹爪2气缸下降", LogType.Modification, TB_Modification);
+                communication.WriteVariable(true, "PlcInIO[539]");
+            }
+        }
+        private void btn旋转夹爪3下降1_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("人工确认：钧舵夹爪3已打开小位置且夹爪下方无干涉可正常下降！", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                RecordAndShow($"钧舵夹爪3气缸下降", LogType.Modification, TB_Modification);
+                communication.WriteVariable(true, "PlcInIO[541]");
+            }
+        }
+        private void btn旋转夹爪4下降1_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("人工确认：钧舵夹爪4已打开小位置且夹爪下方无干涉可正常下降！", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                RecordAndShow($"钧舵夹爪4气缸下降", LogType.Modification, TB_Modification);
+                communication.WriteVariable(true, "PlcInIO[543]");
+            }
+        }
 
         private void btn夹爪一键下料_Click(object sender, EventArgs e)
         {
@@ -2183,6 +2226,21 @@ namespace FT
         {
             TestForm testForm = new TestForm();
             testForm.Show();
+        }
+
+        private void TSM打开文档_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ToolStripMenuItem Menu = (ToolStripMenuItem)sender;
+                string path = $"{Environment.CurrentDirectory}\\Documents\\{helpInformation[(string)Menu.Tag]}";
+                path = path.Replace(" ", "\" \"");
+                Process.Start(helpInformation["BrowserPath"], path);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"加载帮助文件失败。{ex.Message}", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

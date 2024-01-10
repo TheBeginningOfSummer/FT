@@ -42,7 +42,6 @@
             this.BTN查看修改历史 = new System.Windows.Forms.Button();
             this.TB_Modification = new System.Windows.Forms.TextBox();
             this.groupBox85 = new System.Windows.Forms.GroupBox();
-            this.BTN测试 = new System.Windows.Forms.Button();
             this.label101 = new System.Windows.Forms.Label();
             this.groupBox69 = new System.Windows.Forms.GroupBox();
             this.label71 = new System.Windows.Forms.Label();
@@ -115,6 +114,11 @@
             this.LB_ConnectionStatus = new System.Windows.Forms.Label();
             this.label249 = new System.Windows.Forms.Label();
             this.label248 = new System.Windows.Forms.Label();
+            this.MUS菜单栏 = new System.Windows.Forms.MenuStrip();
+            this.TSM帮助 = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSM常见报警及消除 = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSM设备使用 = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSM新产品导入流程 = new System.Windows.Forms.ToolStripMenuItem();
             this.TP手动气缸 = new System.Windows.Forms.TabPage();
             this.groupBox20 = new System.Windows.Forms.GroupBox();
             this.LBEFU上电 = new System.Windows.Forms.Label();
@@ -290,13 +294,13 @@
             this.LB旋转夹爪2上升 = new System.Windows.Forms.Label();
             this.LB旋转夹爪1下降 = new System.Windows.Forms.Label();
             this.LB旋转夹爪1上升 = new System.Windows.Forms.Label();
-            this.btn旋转夹爪4下降 = new System.Windows.Forms.Button();
+            this.btn旋转夹爪4下降1 = new System.Windows.Forms.Button();
             this.btn旋转夹爪4上升 = new System.Windows.Forms.Button();
-            this.btn旋转夹爪3下降 = new System.Windows.Forms.Button();
+            this.btn旋转夹爪3下降1 = new System.Windows.Forms.Button();
             this.btn旋转夹爪3上升 = new System.Windows.Forms.Button();
-            this.btn旋转夹爪2下降 = new System.Windows.Forms.Button();
+            this.btn旋转夹爪2下降1 = new System.Windows.Forms.Button();
             this.btn旋转夹爪2上升 = new System.Windows.Forms.Button();
-            this.btn旋转夹爪1下降 = new System.Windows.Forms.Button();
+            this.btn旋转夹爪1下降1 = new System.Windows.Forms.Button();
             this.btn旋转夹爪1上升 = new System.Windows.Forms.Button();
             this.btn工位1光阑伸出 = new System.Windows.Forms.Button();
             this.btn工位1光阑缩回 = new System.Windows.Forms.Button();
@@ -1773,7 +1777,6 @@
             this.TC信息.SuspendLayout();
             this.TP报警信息.SuspendLayout();
             this.TP更改信息.SuspendLayout();
-            this.groupBox85.SuspendLayout();
             this.groupBox69.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TSTD_IDImg)).BeginInit();
             this.GB_Connection.SuspendLayout();
@@ -1782,6 +1785,7 @@
             this.groupBox72.SuspendLayout();
             this.groupBox73.SuspendLayout();
             this.groupBox70.SuspendLayout();
+            this.MUS菜单栏.SuspendLayout();
             this.TP手动气缸.SuspendLayout();
             this.groupBox20.SuspendLayout();
             this.groupBox17.SuspendLayout();
@@ -1930,6 +1934,7 @@
             this.TP主界面.Controls.Add(this.groupBox72);
             this.TP主界面.Controls.Add(this.groupBox73);
             this.TP主界面.Controls.Add(this.groupBox70);
+            this.TP主界面.Controls.Add(this.MUS菜单栏);
             this.TP主界面.Location = new System.Drawing.Point(4, 44);
             this.TP主界面.Margin = new System.Windows.Forms.Padding(2);
             this.TP主界面.Name = "TP主界面";
@@ -2063,23 +2068,12 @@
             // 
             // groupBox85
             // 
-            this.groupBox85.Controls.Add(this.BTN测试);
             this.groupBox85.Location = new System.Drawing.Point(736, 91);
             this.groupBox85.Name = "groupBox85";
             this.groupBox85.Size = new System.Drawing.Size(240, 255);
             this.groupBox85.TabIndex = 221;
             this.groupBox85.TabStop = false;
             this.groupBox85.Text = "备用";
-            // 
-            // BTN测试
-            // 
-            this.BTN测试.Location = new System.Drawing.Point(15, 25);
-            this.BTN测试.Name = "BTN测试";
-            this.BTN测试.Size = new System.Drawing.Size(75, 23);
-            this.BTN测试.TabIndex = 0;
-            this.BTN测试.Text = "测试";
-            this.BTN测试.UseVisualStyleBackColor = true;
-            this.BTN测试.Click += new System.EventHandler(this.BTN测试_Click);
             // 
             // label101
             // 
@@ -2913,6 +2907,52 @@
             this.label248.Size = new System.Drawing.Size(88, 17);
             this.label248.TabIndex = 18;
             this.label248.Text = "设备模式：";
+            // 
+            // MUS菜单栏
+            // 
+            this.MUS菜单栏.BackColor = System.Drawing.Color.Transparent;
+            this.MUS菜单栏.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TSM帮助});
+            this.MUS菜单栏.Location = new System.Drawing.Point(2, 2);
+            this.MUS菜单栏.Name = "MUS菜单栏";
+            this.MUS菜单栏.Size = new System.Drawing.Size(1252, 25);
+            this.MUS菜单栏.TabIndex = 222;
+            this.MUS菜单栏.Text = "menuStrip1";
+            // 
+            // TSM帮助
+            // 
+            this.TSM帮助.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.TSM帮助.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TSM常见报警及消除,
+            this.TSM设备使用,
+            this.TSM新产品导入流程});
+            this.TSM帮助.Name = "TSM帮助";
+            this.TSM帮助.Size = new System.Drawing.Size(44, 21);
+            this.TSM帮助.Text = "帮助";
+            // 
+            // TSM常见报警及消除
+            // 
+            this.TSM常见报警及消除.Name = "TSM常见报警及消除";
+            this.TSM常见报警及消除.Size = new System.Drawing.Size(184, 22);
+            this.TSM常见报警及消除.Tag = "常见报警及消除";
+            this.TSM常见报警及消除.Text = "常见报警及消除";
+            this.TSM常见报警及消除.Click += new System.EventHandler(this.TSM打开文档_Click);
+            // 
+            // TSM设备使用
+            // 
+            this.TSM设备使用.Name = "TSM设备使用";
+            this.TSM设备使用.Size = new System.Drawing.Size(184, 22);
+            this.TSM设备使用.Tag = "设备使用";
+            this.TSM设备使用.Text = "设备使用";
+            this.TSM设备使用.Click += new System.EventHandler(this.TSM打开文档_Click);
+            // 
+            // TSM新产品导入流程
+            // 
+            this.TSM新产品导入流程.Name = "TSM新产品导入流程";
+            this.TSM新产品导入流程.Size = new System.Drawing.Size(184, 22);
+            this.TSM新产品导入流程.Tag = "新产品导入流程";
+            this.TSM新产品导入流程.Text = "新产品信息导入流程";
+            this.TSM新产品导入流程.Click += new System.EventHandler(this.TSM打开文档_Click);
             // 
             // TP手动气缸
             // 
@@ -4166,13 +4206,13 @@
             this.groupBox18.Controls.Add(this.LB旋转夹爪2上升);
             this.groupBox18.Controls.Add(this.LB旋转夹爪1下降);
             this.groupBox18.Controls.Add(this.LB旋转夹爪1上升);
-            this.groupBox18.Controls.Add(this.btn旋转夹爪4下降);
+            this.groupBox18.Controls.Add(this.btn旋转夹爪4下降1);
             this.groupBox18.Controls.Add(this.btn旋转夹爪4上升);
-            this.groupBox18.Controls.Add(this.btn旋转夹爪3下降);
+            this.groupBox18.Controls.Add(this.btn旋转夹爪3下降1);
             this.groupBox18.Controls.Add(this.btn旋转夹爪3上升);
-            this.groupBox18.Controls.Add(this.btn旋转夹爪2下降);
+            this.groupBox18.Controls.Add(this.btn旋转夹爪2下降1);
             this.groupBox18.Controls.Add(this.btn旋转夹爪2上升);
-            this.groupBox18.Controls.Add(this.btn旋转夹爪1下降);
+            this.groupBox18.Controls.Add(this.btn旋转夹爪1下降1);
             this.groupBox18.Controls.Add(this.btn旋转夹爪1上升);
             this.groupBox18.Controls.Add(this.btn工位1光阑伸出);
             this.groupBox18.Controls.Add(this.btn工位1光阑缩回);
@@ -5282,19 +5322,17 @@
             this.LB旋转夹爪1上升.Size = new System.Drawing.Size(8, 23);
             this.LB旋转夹爪1上升.TabIndex = 84;
             // 
-            // btn旋转夹爪4下降
+            // btn旋转夹爪4下降1
             // 
-            this.btn旋转夹爪4下降.BackColor = System.Drawing.SystemColors.Control;
-            this.btn旋转夹爪4下降.Location = new System.Drawing.Point(16, 238);
-            this.btn旋转夹爪4下降.Margin = new System.Windows.Forms.Padding(2);
-            this.btn旋转夹爪4下降.Name = "btn旋转夹爪4下降";
-            this.btn旋转夹爪4下降.Size = new System.Drawing.Size(110, 24);
-            this.btn旋转夹爪4下降.TabIndex = 47;
-            this.btn旋转夹爪4下降.Tag = "PlcInIO[543]";
-            this.btn旋转夹爪4下降.Text = "钧舵夹爪4下降";
-            this.btn旋转夹爪4下降.UseVisualStyleBackColor = true;
-            this.btn旋转夹爪4下降.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BTN手动操作_MouseDown);
-            this.btn旋转夹爪4下降.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BTN手动操作_MouseUp);
+            this.btn旋转夹爪4下降1.BackColor = System.Drawing.SystemColors.Control;
+            this.btn旋转夹爪4下降1.Location = new System.Drawing.Point(16, 238);
+            this.btn旋转夹爪4下降1.Margin = new System.Windows.Forms.Padding(2);
+            this.btn旋转夹爪4下降1.Name = "btn旋转夹爪4下降1";
+            this.btn旋转夹爪4下降1.Size = new System.Drawing.Size(110, 24);
+            this.btn旋转夹爪4下降1.TabIndex = 47;
+            this.btn旋转夹爪4下降1.Text = "钧舵夹爪4下降";
+            this.btn旋转夹爪4下降1.UseVisualStyleBackColor = true;
+            this.btn旋转夹爪4下降1.Click += new System.EventHandler(this.btn旋转夹爪4下降1_Click);
             // 
             // btn旋转夹爪4上升
             // 
@@ -5310,19 +5348,17 @@
             this.btn旋转夹爪4上升.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BTN手动操作_MouseDown);
             this.btn旋转夹爪4上升.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BTN手动操作_MouseUp);
             // 
-            // btn旋转夹爪3下降
+            // btn旋转夹爪3下降1
             // 
-            this.btn旋转夹爪3下降.BackColor = System.Drawing.SystemColors.Control;
-            this.btn旋转夹爪3下降.Location = new System.Drawing.Point(16, 178);
-            this.btn旋转夹爪3下降.Margin = new System.Windows.Forms.Padding(2);
-            this.btn旋转夹爪3下降.Name = "btn旋转夹爪3下降";
-            this.btn旋转夹爪3下降.Size = new System.Drawing.Size(110, 24);
-            this.btn旋转夹爪3下降.TabIndex = 45;
-            this.btn旋转夹爪3下降.Tag = "PlcInIO[541]";
-            this.btn旋转夹爪3下降.Text = "钧舵夹爪3下降";
-            this.btn旋转夹爪3下降.UseVisualStyleBackColor = true;
-            this.btn旋转夹爪3下降.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BTN手动操作_MouseDown);
-            this.btn旋转夹爪3下降.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BTN手动操作_MouseUp);
+            this.btn旋转夹爪3下降1.BackColor = System.Drawing.SystemColors.Control;
+            this.btn旋转夹爪3下降1.Location = new System.Drawing.Point(16, 178);
+            this.btn旋转夹爪3下降1.Margin = new System.Windows.Forms.Padding(2);
+            this.btn旋转夹爪3下降1.Name = "btn旋转夹爪3下降1";
+            this.btn旋转夹爪3下降1.Size = new System.Drawing.Size(110, 24);
+            this.btn旋转夹爪3下降1.TabIndex = 45;
+            this.btn旋转夹爪3下降1.Text = "钧舵夹爪3下降";
+            this.btn旋转夹爪3下降1.UseVisualStyleBackColor = true;
+            this.btn旋转夹爪3下降1.Click += new System.EventHandler(this.btn旋转夹爪3下降1_Click);
             // 
             // btn旋转夹爪3上升
             // 
@@ -5338,19 +5374,17 @@
             this.btn旋转夹爪3上升.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BTN手动操作_MouseDown);
             this.btn旋转夹爪3上升.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BTN手动操作_MouseUp);
             // 
-            // btn旋转夹爪2下降
+            // btn旋转夹爪2下降1
             // 
-            this.btn旋转夹爪2下降.BackColor = System.Drawing.SystemColors.Control;
-            this.btn旋转夹爪2下降.Location = new System.Drawing.Point(16, 118);
-            this.btn旋转夹爪2下降.Margin = new System.Windows.Forms.Padding(2);
-            this.btn旋转夹爪2下降.Name = "btn旋转夹爪2下降";
-            this.btn旋转夹爪2下降.Size = new System.Drawing.Size(110, 24);
-            this.btn旋转夹爪2下降.TabIndex = 43;
-            this.btn旋转夹爪2下降.Tag = "PlcInIO[539]";
-            this.btn旋转夹爪2下降.Text = "钧舵夹爪2下降";
-            this.btn旋转夹爪2下降.UseVisualStyleBackColor = true;
-            this.btn旋转夹爪2下降.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BTN手动操作_MouseDown);
-            this.btn旋转夹爪2下降.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BTN手动操作_MouseUp);
+            this.btn旋转夹爪2下降1.BackColor = System.Drawing.SystemColors.Control;
+            this.btn旋转夹爪2下降1.Location = new System.Drawing.Point(16, 118);
+            this.btn旋转夹爪2下降1.Margin = new System.Windows.Forms.Padding(2);
+            this.btn旋转夹爪2下降1.Name = "btn旋转夹爪2下降1";
+            this.btn旋转夹爪2下降1.Size = new System.Drawing.Size(110, 24);
+            this.btn旋转夹爪2下降1.TabIndex = 43;
+            this.btn旋转夹爪2下降1.Text = "钧舵夹爪2下降";
+            this.btn旋转夹爪2下降1.UseVisualStyleBackColor = true;
+            this.btn旋转夹爪2下降1.Click += new System.EventHandler(this.btn旋转夹爪2下降1_Click);
             // 
             // btn旋转夹爪2上升
             // 
@@ -5366,19 +5400,17 @@
             this.btn旋转夹爪2上升.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BTN手动操作_MouseDown);
             this.btn旋转夹爪2上升.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BTN手动操作_MouseUp);
             // 
-            // btn旋转夹爪1下降
+            // btn旋转夹爪1下降1
             // 
-            this.btn旋转夹爪1下降.BackColor = System.Drawing.SystemColors.Control;
-            this.btn旋转夹爪1下降.Location = new System.Drawing.Point(16, 58);
-            this.btn旋转夹爪1下降.Margin = new System.Windows.Forms.Padding(2);
-            this.btn旋转夹爪1下降.Name = "btn旋转夹爪1下降";
-            this.btn旋转夹爪1下降.Size = new System.Drawing.Size(110, 24);
-            this.btn旋转夹爪1下降.TabIndex = 41;
-            this.btn旋转夹爪1下降.Tag = "PlcInIO[537]";
-            this.btn旋转夹爪1下降.Text = "钧舵夹爪1下降";
-            this.btn旋转夹爪1下降.UseVisualStyleBackColor = true;
-            this.btn旋转夹爪1下降.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BTN手动操作_MouseDown);
-            this.btn旋转夹爪1下降.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BTN手动操作_MouseUp);
+            this.btn旋转夹爪1下降1.BackColor = System.Drawing.SystemColors.Control;
+            this.btn旋转夹爪1下降1.Location = new System.Drawing.Point(16, 58);
+            this.btn旋转夹爪1下降1.Margin = new System.Windows.Forms.Padding(2);
+            this.btn旋转夹爪1下降1.Name = "btn旋转夹爪1下降1";
+            this.btn旋转夹爪1下降1.Size = new System.Drawing.Size(110, 24);
+            this.btn旋转夹爪1下降1.TabIndex = 41;
+            this.btn旋转夹爪1下降1.Text = "钧舵夹爪1下降";
+            this.btn旋转夹爪1下降1.UseVisualStyleBackColor = true;
+            this.btn旋转夹爪1下降1.Click += new System.EventHandler(this.btn旋转夹爪1下降1_Click);
             // 
             // btn旋转夹爪1上升
             // 
@@ -23693,6 +23725,7 @@
             this.ClientSize = new System.Drawing.Size(1264, 811);
             this.Controls.Add(this.TC_Main);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.MUS菜单栏;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -23708,7 +23741,6 @@
             this.TP报警信息.PerformLayout();
             this.TP更改信息.ResumeLayout(false);
             this.TP更改信息.PerformLayout();
-            this.groupBox85.ResumeLayout(false);
             this.groupBox69.ResumeLayout(false);
             this.groupBox69.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TSTD_IDImg)).EndInit();
@@ -23724,6 +23756,8 @@
             this.groupBox73.PerformLayout();
             this.groupBox70.ResumeLayout(false);
             this.groupBox70.PerformLayout();
+            this.MUS菜单栏.ResumeLayout(false);
+            this.MUS菜单栏.PerformLayout();
             this.TP手动气缸.ResumeLayout(false);
             this.groupBox20.ResumeLayout(false);
             this.groupBox17.ResumeLayout(false);
@@ -24198,13 +24232,13 @@
         private System.Windows.Forms.Button btn翻转气缸180;
         private System.Windows.Forms.Button btn翻转气缸0;
         private System.Windows.Forms.GroupBox groupBox18;
-        private System.Windows.Forms.Button btn旋转夹爪4下降;
+        private System.Windows.Forms.Button btn旋转夹爪4下降1;
         private System.Windows.Forms.Button btn旋转夹爪4上升;
-        private System.Windows.Forms.Button btn旋转夹爪3下降;
+        private System.Windows.Forms.Button btn旋转夹爪3下降1;
         private System.Windows.Forms.Button btn旋转夹爪3上升;
-        private System.Windows.Forms.Button btn旋转夹爪2下降;
+        private System.Windows.Forms.Button btn旋转夹爪2下降1;
         private System.Windows.Forms.Button btn旋转夹爪2上升;
-        private System.Windows.Forms.Button btn旋转夹爪1下降;
+        private System.Windows.Forms.Button btn旋转夹爪1下降1;
         private System.Windows.Forms.Button btn旋转夹爪1上升;
         private System.Windows.Forms.GroupBox groupBox20;
         private System.Windows.Forms.Button btnEFU断电;
@@ -25656,7 +25690,11 @@
         private System.Windows.Forms.Button BTN查看修改历史;
         private System.Windows.Forms.Button btn上料产品对位NG报警跳过;
         private System.Windows.Forms.Label label69;
-        private System.Windows.Forms.Button BTN测试;
+        private System.Windows.Forms.MenuStrip MUS菜单栏;
+        private System.Windows.Forms.ToolStripMenuItem TSM帮助;
+        private System.Windows.Forms.ToolStripMenuItem TSM常见报警及消除;
+        private System.Windows.Forms.ToolStripMenuItem TSM设备使用;
+        private System.Windows.Forms.ToolStripMenuItem TSM新产品导入流程;
     }
 }
 
