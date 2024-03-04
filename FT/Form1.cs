@@ -101,12 +101,13 @@ namespace FT
                 calibrationTextBoxes = GetControls<TextBox>(calibrationGroups.Values.ToArray());
                 manualPageGroups = GetControls<GroupBox>(mainPages["TP手动电机1"], mainPages["TP手动电机2"]);
                 manualPageTextBoxes = GetControls<TextBox>(manualPageGroups.Values.ToArray());
-                //TextBox信息读取地址加载
+                //示教手动电机上下料个数统计TextBox信息读取地址加载
                 textBoxInformation = JsonManager.ReadJsonString<Dictionary<string, string>>(Environment.CurrentDirectory + "\\Configuration\\", "TextBoxInfo");
                 //报警信息读取
                 alarmInformation = JsonManager.ReadJsonString<Dictionary<string, string>>(Environment.CurrentDirectory + "\\Configuration\\", "Alarm");
                 //帮助文档信息加载
                 helpInformation = JsonManager.ReadJsonString<Dictionary<string, string>>(Environment.CurrentDirectory + "\\Configuration\\", "HelpInfo");
+                InitializeHelpMenu();
                 #endregion
 
                 #region 数据查询
@@ -331,6 +332,23 @@ namespace FT
                             TB_Warning.Invoke(new Action(() => TB_Warning.AppendText(item + Environment.NewLine)));
                     }
                 }
+            }
+        }
+
+        private void InitializeHelpMenu()
+        {
+            if (helpInformation == null) return;
+            foreach (var item in helpInformation)
+            {
+                if (item.Key == "BrowserPath") continue;
+                ToolStripMenuItem menu = new ToolStripMenuItem()
+                {
+                    Name = $"TSM{item.Key}",
+                    Tag = item.Key,
+                    Text = item.Key
+                };
+                menu.Click += TSM打开文档_Click;
+                TSM帮助.DropDownItems.Add(menu);
             }
         }
         #endregion
@@ -1095,26 +1113,6 @@ namespace FT
         #endregion
 
         #region 功能设置
-        private void btn门开关功能开关_MouseDown(object sender, MouseEventArgs e)
-        {
-            communication.WriteVariable(true, "PlcInIO[460]");
-        }
-        private void btn门开关功能开关_MouseUp(object sender, MouseEventArgs e)
-        {
-            communication.WriteVariable(false, "PlcInIO[460]");
-            RecordAndShow($"门开关打开", LogType.Modification, TB_Modification);
-        }
-
-        private void btn门开关功能关闭_MouseDown(object sender, MouseEventArgs e)
-        {
-            communication.WriteVariable(true, "PlcInIO[469]");
-        }
-        private void btn门开关功能关闭_MouseUp(object sender, MouseEventArgs e)
-        {
-            communication.WriteVariable(false, "PlcInIO[469]");
-            RecordAndShow($"门开关关闭", LogType.Modification, TB_Modification);
-        }
-
         bool Model_Change = false;//用于切换打开和关闭引脚检测功能的变量，默认关闭引脚检测功能
         private void btn引脚检测功能_Click(object sender, EventArgs e)
         {
@@ -1137,91 +1135,39 @@ namespace FT
             }
         }
 
-        private void btn光源开_MouseDown(object sender, MouseEventArgs e)
+        private void BTN打开_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WriteVariable(true, "PlcInIO[467]");
+            Button button = (Button)sender;
+            communication.WriteVariable(true, (string)button.Tag);
         }
-        private void btn光源开_MouseUp(object sender, MouseEventArgs e)
+        private void BTN打开_MouseUp(object sender, MouseEventArgs e)
         {
-            RecordAndShow($"光源打开", LogType.Modification, TB_Modification);
-            communication.WriteVariable(false, "PlcInIO[467]");
-        }
-
-        private void btn光源关_MouseDown(object sender, MouseEventArgs e)
-        {
-            communication.WriteVariable(true, "PlcInIO[468]");
-        }
-        private void btn光源关_MouseUp(object sender, MouseEventArgs e)
-        {
-            RecordAndShow($"光源关闭", LogType.Modification, TB_Modification);
-            communication.WriteVariable(false, "PlcInIO[468]");
+            Button button = (Button)sender;
+            RecordAndShow($"{button.Name.Substring(3)}", LogType.Modification, TB_Modification);
+            communication.WriteVariable(false, (string)button.Tag);
         }
 
-        private void btn真空发生功能开_MouseDown(object sender, MouseEventArgs e)
+        private void BTN关闭_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WriteVariable(true, "PlcInIO[470]");
+            Button button = (Button)sender;
+            communication.WriteVariable(true, (string)button.Tag);
         }
-        private void btn真空发生功能开_MouseUp(object sender, MouseEventArgs e)
+        private void BTN关闭_MouseUp(object sender, MouseEventArgs e)
         {
-            RecordAndShow($"真空发生打开", LogType.Modification, TB_Modification);
-            communication.WriteVariable(false, "PlcInIO[470]");
-        }
-
-        private void btn真空发生功能关_MouseDown(object sender, MouseEventArgs e)
-        {
-            communication.WriteVariable(true, "PlcInIO[471]");
-        }
-        private void btn真空发生功能关_MouseUp(object sender, MouseEventArgs e)
-        {
-            RecordAndShow($"真空发生关闭", LogType.Modification, TB_Modification);
-            communication.WriteVariable(false, "PlcInIO[471]");
+            Button button = (Button)sender;
+            RecordAndShow($"{button.Name.Substring(3)}", LogType.Modification, TB_Modification);
+            communication.WriteVariable(false, (string)button.Tag);
         }
 
-        private void btn热板上电_MouseDown(object sender, MouseEventArgs e)
+        private void BTN提示报警跳过_Click(object sender, EventArgs e)
         {
-            communication.WriteVariable(true, "PlcInIO[472]");
-        }
-        private void btn热板上电_MouseUp(object sender, MouseEventArgs e)
-        {
-            RecordAndShow($"热板上电", LogType.Modification, TB_Modification);
-            communication.WriteVariable(false, "PlcInIO[472]");
-        }
-
-        private void btn热板断电_MouseDown(object sender, MouseEventArgs e)
-        {
-            communication.WriteVariable(true, "PlcInIO[473]");
-        }
-        private void btn热板断电_MouseUp(object sender, MouseEventArgs e)
-        {
-            RecordAndShow($"热板断电", LogType.Modification, TB_Modification);
-            communication.WriteVariable(false, "PlcInIO[473]");
-        }
-
-        private void btn上料产品对位NG报警跳过_Click(object sender, EventArgs e)
-        {
-            DialogResult result = MessageBox.Show("是否跳过上料-产品对位NG报警？", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            Button button = (Button)sender;
+            DialogResult result = MessageBox.Show($"{button.Text}？", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
-                RecordAndShow($"跳过上料-产品对位NG报警", LogType.Modification, TB_Modification);
-                communication.WriteVariable(true, "PlcInIO[158]");
-            }
-        }
-        private void btn穴位报警跳过_Click(object sender, EventArgs e)
-        {
-            DialogResult result = MessageBox.Show("是否跳过上料-托盘穴位对位NG报警？", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
-            {
-                RecordAndShow($"跳过上料-托盘穴位对位NG报警", LogType.Modification, TB_Modification);
-                communication.WriteVariable(true, "PlcInIO[156]");
-            }
-        }
-        private void btn复检报警跳过_Click(object sender, EventArgs e)
-        {
-            DialogResult result = MessageBox.Show("是否跳过测试-产品复检NG报警？", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if (result == DialogResult.Yes)
-            {
-                RecordAndShow($"跳过测试-产品复检NG报警", LogType.Modification, TB_Modification);
-                communication.WriteVariable(true, "PlcInIO[157]");
+                RecordAndShow($"{button.Text}", LogType.Modification, TB_Modification);
+                communication.WriteVariable(true, (string)button.Tag);
+                //MessageBox.Show((string)button.Tag);
             }
         }
         #endregion
@@ -1703,14 +1649,14 @@ namespace FT
         #region 手动气缸、电机操作
         private void BTN手动操作_MouseDown(object sender, MouseEventArgs e)
         {
-            Button button = (Button)sender; //MessageBox.Show((string)button.Tag);
+            Button button = (Button)sender; 
             communication.WriteVariable(true, (string)button.Tag);
             RecordAndShow($"手动操作 [{button.Name.Substring(3)}] 按下", LogType.Modification, TB_Modification);
         }
 
         private void BTN手动操作_MouseUp(object sender, MouseEventArgs e)
         {
-            Button button = (Button)sender; //MessageBox.Show((string)button.Tag);
+            Button button = (Button)sender; 
             communication.WriteVariable(false, (string)button.Tag);
         }
         //吸嘴夹爪工装次数统计清零
@@ -1797,9 +1743,9 @@ namespace FT
 
         #region 示教操作
         //将PLC上的bool值改为true一定时间后变回false
-        private async Task BoolSwitchAsync(string variableName, string message = "", int delay = 1000)
+        private async Task BoolSwitchAsync(string variableName, string message = "", string tip = "您是否确定此操作？", int delay = 1000)
         {
-            DialogResult result = MessageBox.Show($"您是否确定此操作？", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show(tip, "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
                 if (communication.WriteVariable(true, variableName))
                 {
@@ -1815,22 +1761,41 @@ namespace FT
                 }
         }
 
+        private async Task BoolSwitchAsync(Button button, string message = "", string tip = "您是否确定此操作？", int delay = 1000)
+        {
+            DialogResult result = MessageBox.Show(tip, "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+                if (communication.WriteVariable(true, (string)button.Tag))
+                {
+                    await Task.Delay(delay);
+                    SetMessage("示教中。");
+                    RecordAndShow($"{message}", LogType.Modification, TB_Modification);
+                    IsWrite = communication.WriteVariable(false, (string)button.Tag);
+                    SetMessage();
+                    button.BackColor = Color.LightGreen;
+                }
+                else
+                {
+                    MessageBox.Show("参数写入失败，连接断开。", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+        }
+
         private async void BTN示教1_Click(object sender, EventArgs e)
         {
             Button button = (Button)sender;
             if (calibrationTextBoxes.ContainsKey($"txt{button.Name.Substring(3)}"))
-                await BoolSwitchAsync((string)button.Tag, $"示教1 [{button.Name.Substring(3)}] 按下，当前值：{calibrationTextBoxes[$"txt{button.Name.Substring(3)}"].Text}");
+                await BoolSwitchAsync(button, $"示教1 [{button.Name.Substring(3)}] 按下，当前值：{calibrationTextBoxes[$"txt{button.Name.Substring(3)}"].Text}");
             else
-                await BoolSwitchAsync((string)button.Tag, $"示教1 [{button.Name.Substring(3)}] 按下");
+                await BoolSwitchAsync(button, $"示教1 [{button.Name.Substring(3)}] 按下");
         }
 
         private async void BTN示教2_Click(object sender, EventArgs e)
         {
             Button button = (Button)sender;
             if (calibrationTextBoxes.ContainsKey($"txt{button.Name.Substring(3)}"))
-                await BoolSwitchAsync((string)button.Tag, $"示教2 [{button.Name.Substring(3)}] 按下，当前值：{calibrationTextBoxes[$"txt{button.Name.Substring(3)}"].Text}");
+                await BoolSwitchAsync(button, $"示教2 [{button.Name.Substring(3)}] 按下，当前值：{calibrationTextBoxes[$"txt{button.Name.Substring(3)}"].Text}");
             else
-                await BoolSwitchAsync((string)button.Tag, $"示教2 [{button.Name.Substring(3)}] 按下");
+                await BoolSwitchAsync(button, $"示教2 [{button.Name.Substring(3)}] 按下");
         }
 
         private void BTN值写入_MouseDown(object sender, MouseEventArgs e)
@@ -2222,12 +2187,6 @@ namespace FT
             }
         }
 
-        private void BTN测试_Click(object sender, EventArgs e)
-        {
-            TestForm testForm = new TestForm();
-            testForm.Show();
-        }
-
         private void TSM打开文档_Click(object sender, EventArgs e)
         {
             try
@@ -2240,6 +2199,23 @@ namespace FT
             catch (Exception ex)
             {
                 MessageBox.Show($"加载帮助文件失败。{ex.Message}", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private async void BTN配方_Click(object sender, EventArgs e)
+        {
+            Button button = (Button)sender;
+            string address = (string)button.Tag;
+            switch (address)
+            {
+                case "PlcInIO[738]":
+                    await BoolSwitchAsync(address, "配方导出", "确认是否将当前产品示教位置导出。");
+                    break;
+                case "PlcInIO[739]":
+                    await BoolSwitchAsync(address, "配方导入", "确认是否将其他产品示教位置导入到当前产品。");
+                    break;
+                default:
+                    break;
             }
         }
     }

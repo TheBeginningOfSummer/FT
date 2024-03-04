@@ -116,9 +116,6 @@
             this.label248 = new System.Windows.Forms.Label();
             this.MUS菜单栏 = new System.Windows.Forms.MenuStrip();
             this.TSM帮助 = new System.Windows.Forms.ToolStripMenuItem();
-            this.TSM常见报警及消除 = new System.Windows.Forms.ToolStripMenuItem();
-            this.TSM设备使用 = new System.Windows.Forms.ToolStripMenuItem();
-            this.TSM新产品导入流程 = new System.Windows.Forms.ToolStripMenuItem();
             this.TP手动气缸 = new System.Windows.Forms.TabPage();
             this.groupBox20 = new System.Windows.Forms.GroupBox();
             this.LBEFU上电 = new System.Windows.Forms.Label();
@@ -1718,13 +1715,15 @@
             this.label525 = new System.Windows.Forms.Label();
             this.BTN写入速度 = new System.Windows.Forms.Button();
             this.groupBox65 = new System.Windows.Forms.GroupBox();
+            this.BTN配方导入 = new System.Windows.Forms.Button();
+            this.BTN配方导出 = new System.Windows.Forms.Button();
             this.btn引脚检测功能 = new System.Windows.Forms.Button();
             this.LB_信息 = new System.Windows.Forms.Label();
             this.label72 = new System.Windows.Forms.Label();
             this.btn计数功能清零 = new System.Windows.Forms.Button();
             this.btn门开关功能关闭 = new System.Windows.Forms.Button();
             this.label487 = new System.Windows.Forms.Label();
-            this.btn门开关功能开关 = new System.Windows.Forms.Button();
+            this.btn门开关功能开 = new System.Windows.Forms.Button();
             this.groupBox63 = new System.Windows.Forms.GroupBox();
             this.txt热辐射轴定位速度 = new System.Windows.Forms.TextBox();
             this.label363 = new System.Windows.Forms.Label();
@@ -1772,11 +1771,22 @@
             this.label469 = new System.Windows.Forms.Label();
             this.label464 = new System.Windows.Forms.Label();
             this.label463 = new System.Windows.Forms.Label();
+            this.BTN上视觉1托盘码识别NG跳过 = new System.Windows.Forms.Button();
+            this.BTN下视觉1产品对位NG提示跳过 = new System.Windows.Forms.Button();
+            this.BTN工位1一键压合 = new System.Windows.Forms.Button();
+            this.BTN工位1一键开启 = new System.Windows.Forms.Button();
+            this.BTN工位2一键开启 = new System.Windows.Forms.Button();
+            this.BTN工位2一键压合 = new System.Windows.Forms.Button();
+            this.BTN工位3一键开启 = new System.Windows.Forms.Button();
+            this.BTN工位3一键压合 = new System.Windows.Forms.Button();
+            this.BTN工位4一键开启 = new System.Windows.Forms.Button();
+            this.BTN工位4一键压合 = new System.Windows.Forms.Button();
             this.TC_Main.SuspendLayout();
             this.TP主界面.SuspendLayout();
             this.TC信息.SuspendLayout();
             this.TP报警信息.SuspendLayout();
             this.TP更改信息.SuspendLayout();
+            this.groupBox85.SuspendLayout();
             this.groupBox69.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TSTD_IDImg)).BeginInit();
             this.GB_Connection.SuspendLayout();
@@ -2068,6 +2078,15 @@
             // 
             // groupBox85
             // 
+            this.groupBox85.Controls.Add(this.label280);
+            this.groupBox85.Controls.Add(this.label283);
+            this.groupBox85.Controls.Add(this.btn真空发生功能开);
+            this.groupBox85.Controls.Add(this.label279);
+            this.groupBox85.Controls.Add(this.btn真空发生功能关);
+            this.groupBox85.Controls.Add(this.btn热板断电);
+            this.groupBox85.Controls.Add(this.btn光源开);
+            this.groupBox85.Controls.Add(this.btn热板上电);
+            this.groupBox85.Controls.Add(this.btn光源关);
             this.groupBox85.Location = new System.Drawing.Point(736, 91);
             this.groupBox85.Name = "groupBox85";
             this.groupBox85.Size = new System.Drawing.Size(240, 255);
@@ -2470,18 +2489,11 @@
             // 
             // groupBox74
             // 
+            this.groupBox74.Controls.Add(this.BTN下视觉1产品对位NG提示跳过);
+            this.groupBox74.Controls.Add(this.BTN上视觉1托盘码识别NG跳过);
             this.groupBox74.Controls.Add(this.btn上料产品对位NG报警跳过);
             this.groupBox74.Controls.Add(this.btn复检报警跳过);
             this.groupBox74.Controls.Add(this.btn穴位报警跳过);
-            this.groupBox74.Controls.Add(this.label279);
-            this.groupBox74.Controls.Add(this.btn热板断电);
-            this.groupBox74.Controls.Add(this.btn热板上电);
-            this.groupBox74.Controls.Add(this.btn光源关);
-            this.groupBox74.Controls.Add(this.label280);
-            this.groupBox74.Controls.Add(this.btn光源开);
-            this.groupBox74.Controls.Add(this.btn真空发生功能关);
-            this.groupBox74.Controls.Add(this.btn真空发生功能开);
-            this.groupBox74.Controls.Add(this.label283);
             this.groupBox74.Location = new System.Drawing.Point(736, 357);
             this.groupBox74.Name = "groupBox74";
             this.groupBox74.Size = new System.Drawing.Size(240, 255);
@@ -2492,44 +2504,47 @@
             // btn上料产品对位NG报警跳过
             // 
             this.btn上料产品对位NG报警跳过.BackColor = System.Drawing.SystemColors.Control;
-            this.btn上料产品对位NG报警跳过.Location = new System.Drawing.Point(3, 142);
+            this.btn上料产品对位NG报警跳过.Location = new System.Drawing.Point(3, 20);
             this.btn上料产品对位NG报警跳过.Margin = new System.Windows.Forms.Padding(2);
             this.btn上料产品对位NG报警跳过.Name = "btn上料产品对位NG报警跳过";
             this.btn上料产品对位NG报警跳过.Size = new System.Drawing.Size(234, 24);
             this.btn上料产品对位NG报警跳过.TabIndex = 124;
+            this.btn上料产品对位NG报警跳过.Tag = "PlcInIO[158]";
             this.btn上料产品对位NG报警跳过.Text = "上料-产品对位NG报警跳过";
             this.btn上料产品对位NG报警跳过.UseVisualStyleBackColor = true;
-            this.btn上料产品对位NG报警跳过.Click += new System.EventHandler(this.btn上料产品对位NG报警跳过_Click);
+            this.btn上料产品对位NG报警跳过.Click += new System.EventHandler(this.BTN提示报警跳过_Click);
             // 
             // btn复检报警跳过
             // 
             this.btn复检报警跳过.BackColor = System.Drawing.SystemColors.Control;
-            this.btn复检报警跳过.Location = new System.Drawing.Point(3, 214);
+            this.btn复检报警跳过.Location = new System.Drawing.Point(3, 100);
             this.btn复检报警跳过.Margin = new System.Windows.Forms.Padding(2);
             this.btn复检报警跳过.Name = "btn复检报警跳过";
             this.btn复检报警跳过.Size = new System.Drawing.Size(234, 24);
             this.btn复检报警跳过.TabIndex = 123;
+            this.btn复检报警跳过.Tag = "PlcInIO[157]";
             this.btn复检报警跳过.Text = "测试-产品复检NG报警跳过";
             this.btn复检报警跳过.UseVisualStyleBackColor = true;
-            this.btn复检报警跳过.Click += new System.EventHandler(this.btn复检报警跳过_Click);
+            this.btn复检报警跳过.Click += new System.EventHandler(this.BTN提示报警跳过_Click);
             // 
             // btn穴位报警跳过
             // 
             this.btn穴位报警跳过.BackColor = System.Drawing.SystemColors.Control;
-            this.btn穴位报警跳过.Location = new System.Drawing.Point(3, 178);
+            this.btn穴位报警跳过.Location = new System.Drawing.Point(3, 60);
             this.btn穴位报警跳过.Margin = new System.Windows.Forms.Padding(2);
             this.btn穴位报警跳过.Name = "btn穴位报警跳过";
             this.btn穴位报警跳过.Size = new System.Drawing.Size(234, 24);
             this.btn穴位报警跳过.TabIndex = 122;
+            this.btn穴位报警跳过.Tag = "PlcInIO[156]";
             this.btn穴位报警跳过.Text = "上料-托盘穴位对位NG报警跳过";
             this.btn穴位报警跳过.UseVisualStyleBackColor = true;
-            this.btn穴位报警跳过.Click += new System.EventHandler(this.btn穴位报警跳过_Click);
+            this.btn穴位报警跳过.Click += new System.EventHandler(this.BTN提示报警跳过_Click);
             // 
             // label279
             // 
             this.label279.AutoSize = true;
             this.label279.Font = new System.Drawing.Font("Times New Roman", 9F);
-            this.label279.Location = new System.Drawing.Point(11, 110);
+            this.label279.Location = new System.Drawing.Point(5, 91);
             this.label279.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label279.Name = "label279";
             this.label279.Size = new System.Drawing.Size(79, 15);
@@ -2539,47 +2554,50 @@
             // btn热板断电
             // 
             this.btn热板断电.BackColor = System.Drawing.SystemColors.Control;
-            this.btn热板断电.Location = new System.Drawing.Point(169, 105);
+            this.btn热板断电.Location = new System.Drawing.Point(163, 86);
             this.btn热板断电.Margin = new System.Windows.Forms.Padding(2);
             this.btn热板断电.Name = "btn热板断电";
             this.btn热板断电.Size = new System.Drawing.Size(60, 24);
             this.btn热板断电.TabIndex = 120;
+            this.btn热板断电.Tag = "PlcInIO[473]";
             this.btn热板断电.Text = "关闭";
             this.btn热板断电.UseVisualStyleBackColor = true;
-            this.btn热板断电.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn热板断电_MouseDown);
-            this.btn热板断电.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn热板断电_MouseUp);
+            this.btn热板断电.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BTN关闭_MouseDown);
+            this.btn热板断电.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BTN关闭_MouseUp);
             // 
             // btn热板上电
             // 
             this.btn热板上电.BackColor = System.Drawing.SystemColors.Control;
-            this.btn热板上电.Location = new System.Drawing.Point(97, 105);
+            this.btn热板上电.Location = new System.Drawing.Point(91, 86);
             this.btn热板上电.Margin = new System.Windows.Forms.Padding(2);
             this.btn热板上电.Name = "btn热板上电";
             this.btn热板上电.Size = new System.Drawing.Size(60, 24);
             this.btn热板上电.TabIndex = 119;
+            this.btn热板上电.Tag = "PlcInIO[472]";
             this.btn热板上电.Text = "打开";
             this.btn热板上电.UseVisualStyleBackColor = true;
-            this.btn热板上电.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn热板上电_MouseDown);
-            this.btn热板上电.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn热板上电_MouseUp);
+            this.btn热板上电.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BTN打开_MouseDown);
+            this.btn热板上电.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BTN打开_MouseUp);
             // 
             // btn光源关
             // 
             this.btn光源关.BackColor = System.Drawing.SystemColors.Control;
-            this.btn光源关.Location = new System.Drawing.Point(168, 43);
+            this.btn光源关.Location = new System.Drawing.Point(162, 24);
             this.btn光源关.Margin = new System.Windows.Forms.Padding(2);
             this.btn光源关.Name = "btn光源关";
             this.btn光源关.Size = new System.Drawing.Size(60, 24);
             this.btn光源关.TabIndex = 114;
+            this.btn光源关.Tag = "PlcInIO[468]";
             this.btn光源关.Text = "关闭";
             this.btn光源关.UseVisualStyleBackColor = true;
-            this.btn光源关.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn光源关_MouseDown);
-            this.btn光源关.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn光源关_MouseUp);
+            this.btn光源关.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BTN关闭_MouseDown);
+            this.btn光源关.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BTN关闭_MouseUp);
             // 
             // label280
             // 
             this.label280.AutoSize = true;
             this.label280.Font = new System.Drawing.Font("Times New Roman", 9F);
-            this.label280.Location = new System.Drawing.Point(11, 48);
+            this.label280.Location = new System.Drawing.Point(5, 29);
             this.label280.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label280.Name = "label280";
             this.label280.Size = new System.Drawing.Size(79, 15);
@@ -2589,47 +2607,50 @@
             // btn光源开
             // 
             this.btn光源开.BackColor = System.Drawing.SystemColors.Control;
-            this.btn光源开.Location = new System.Drawing.Point(97, 43);
+            this.btn光源开.Location = new System.Drawing.Point(91, 24);
             this.btn光源开.Margin = new System.Windows.Forms.Padding(2);
             this.btn光源开.Name = "btn光源开";
             this.btn光源开.Size = new System.Drawing.Size(60, 24);
             this.btn光源开.TabIndex = 113;
+            this.btn光源开.Tag = "PlcInIO[467]";
             this.btn光源开.Text = "打开";
             this.btn光源开.UseVisualStyleBackColor = true;
-            this.btn光源开.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn光源开_MouseDown);
-            this.btn光源开.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn光源开_MouseUp);
+            this.btn光源开.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BTN打开_MouseDown);
+            this.btn光源开.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BTN打开_MouseUp);
             // 
             // btn真空发生功能关
             // 
             this.btn真空发生功能关.BackColor = System.Drawing.SystemColors.Control;
-            this.btn真空发生功能关.Location = new System.Drawing.Point(169, 74);
+            this.btn真空发生功能关.Location = new System.Drawing.Point(163, 55);
             this.btn真空发生功能关.Margin = new System.Windows.Forms.Padding(2);
             this.btn真空发生功能关.Name = "btn真空发生功能关";
             this.btn真空发生功能关.Size = new System.Drawing.Size(60, 24);
             this.btn真空发生功能关.TabIndex = 117;
+            this.btn真空发生功能关.Tag = "PlcInIO[471]";
             this.btn真空发生功能关.Text = "关闭";
             this.btn真空发生功能关.UseVisualStyleBackColor = true;
-            this.btn真空发生功能关.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn真空发生功能关_MouseDown);
-            this.btn真空发生功能关.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn真空发生功能关_MouseUp);
+            this.btn真空发生功能关.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BTN关闭_MouseDown);
+            this.btn真空发生功能关.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BTN关闭_MouseUp);
             // 
             // btn真空发生功能开
             // 
             this.btn真空发生功能开.BackColor = System.Drawing.SystemColors.Control;
-            this.btn真空发生功能开.Location = new System.Drawing.Point(97, 74);
+            this.btn真空发生功能开.Location = new System.Drawing.Point(91, 55);
             this.btn真空发生功能开.Margin = new System.Windows.Forms.Padding(2);
             this.btn真空发生功能开.Name = "btn真空发生功能开";
             this.btn真空发生功能开.Size = new System.Drawing.Size(60, 24);
             this.btn真空发生功能开.TabIndex = 116;
+            this.btn真空发生功能开.Tag = "PlcInIO[470]";
             this.btn真空发生功能开.Text = "打开";
             this.btn真空发生功能开.UseVisualStyleBackColor = true;
-            this.btn真空发生功能开.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn真空发生功能开_MouseDown);
-            this.btn真空发生功能开.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn真空发生功能开_MouseUp);
+            this.btn真空发生功能开.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BTN打开_MouseDown);
+            this.btn真空发生功能开.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BTN打开_MouseUp);
             // 
             // label283
             // 
             this.label283.AutoSize = true;
             this.label283.Font = new System.Drawing.Font("Times New Roman", 9F);
-            this.label283.Location = new System.Drawing.Point(11, 79);
+            this.label283.Location = new System.Drawing.Point(5, 60);
             this.label283.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label283.Name = "label283";
             this.label283.Size = new System.Drawing.Size(79, 15);
@@ -2797,12 +2818,15 @@
             // 
             // btn自动模式本地
             // 
+            this.btn自动模式本地.BackColor = System.Drawing.Color.Transparent;
+            this.btn自动模式本地.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btn自动模式本地.Location = new System.Drawing.Point(11, 66);
+            this.btn自动模式本地.Margin = new System.Windows.Forms.Padding(0);
             this.btn自动模式本地.Name = "btn自动模式本地";
             this.btn自动模式本地.Size = new System.Drawing.Size(140, 37);
             this.btn自动模式本地.TabIndex = 18;
             this.btn自动模式本地.Text = "自动-设备本地";
-            this.btn自动模式本地.UseVisualStyleBackColor = true;
+            this.btn自动模式本地.UseVisualStyleBackColor = false;
             this.btn自动模式本地.Click += new System.EventHandler(this.btn自动模式本地_Click);
             // 
             // label368
@@ -2922,37 +2946,9 @@
             // TSM帮助
             // 
             this.TSM帮助.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.TSM帮助.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.TSM常见报警及消除,
-            this.TSM设备使用,
-            this.TSM新产品导入流程});
             this.TSM帮助.Name = "TSM帮助";
             this.TSM帮助.Size = new System.Drawing.Size(44, 21);
             this.TSM帮助.Text = "帮助";
-            // 
-            // TSM常见报警及消除
-            // 
-            this.TSM常见报警及消除.Name = "TSM常见报警及消除";
-            this.TSM常见报警及消除.Size = new System.Drawing.Size(184, 22);
-            this.TSM常见报警及消除.Tag = "常见报警及消除";
-            this.TSM常见报警及消除.Text = "常见报警及消除";
-            this.TSM常见报警及消除.Click += new System.EventHandler(this.TSM打开文档_Click);
-            // 
-            // TSM设备使用
-            // 
-            this.TSM设备使用.Name = "TSM设备使用";
-            this.TSM设备使用.Size = new System.Drawing.Size(184, 22);
-            this.TSM设备使用.Tag = "设备使用";
-            this.TSM设备使用.Text = "设备使用";
-            this.TSM设备使用.Click += new System.EventHandler(this.TSM打开文档_Click);
-            // 
-            // TSM新产品导入流程
-            // 
-            this.TSM新产品导入流程.Name = "TSM新产品导入流程";
-            this.TSM新产品导入流程.Size = new System.Drawing.Size(184, 22);
-            this.TSM新产品导入流程.Tag = "新产品导入流程";
-            this.TSM新产品导入流程.Text = "新产品信息导入流程";
-            this.TSM新产品导入流程.Click += new System.EventHandler(this.TSM打开文档_Click);
             // 
             // TP手动气缸
             // 
@@ -4116,6 +4112,14 @@
             // 
             // groupBox18
             // 
+            this.groupBox18.Controls.Add(this.BTN工位4一键开启);
+            this.groupBox18.Controls.Add(this.BTN工位4一键压合);
+            this.groupBox18.Controls.Add(this.BTN工位3一键开启);
+            this.groupBox18.Controls.Add(this.BTN工位3一键压合);
+            this.groupBox18.Controls.Add(this.BTN工位2一键开启);
+            this.groupBox18.Controls.Add(this.BTN工位2一键压合);
+            this.groupBox18.Controls.Add(this.BTN工位1一键开启);
+            this.groupBox18.Controls.Add(this.BTN工位1一键压合);
             this.groupBox18.Controls.Add(this.LB工位4光阑右下降);
             this.groupBox18.Controls.Add(this.LB工位4光阑右上升);
             this.groupBox18.Controls.Add(this.LB工位4光阑缩回右);
@@ -4225,7 +4229,7 @@
             this.groupBox18.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox18.Name = "groupBox18";
             this.groupBox18.Padding = new System.Windows.Forms.Padding(2);
-            this.groupBox18.Size = new System.Drawing.Size(760, 341);
+            this.groupBox18.Size = new System.Drawing.Size(760, 397);
             this.groupBox18.TabIndex = 58;
             this.groupBox18.TabStop = false;
             this.groupBox18.Text = "测试机构 气缸";
@@ -23100,13 +23104,15 @@
             // 
             // groupBox65
             // 
+            this.groupBox65.Controls.Add(this.BTN配方导入);
+            this.groupBox65.Controls.Add(this.BTN配方导出);
             this.groupBox65.Controls.Add(this.btn引脚检测功能);
             this.groupBox65.Controls.Add(this.LB_信息);
             this.groupBox65.Controls.Add(this.label72);
             this.groupBox65.Controls.Add(this.btn计数功能清零);
             this.groupBox65.Controls.Add(this.btn门开关功能关闭);
             this.groupBox65.Controls.Add(this.label487);
-            this.groupBox65.Controls.Add(this.btn门开关功能开关);
+            this.groupBox65.Controls.Add(this.btn门开关功能开);
             this.groupBox65.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox65.Location = new System.Drawing.Point(523, 17);
             this.groupBox65.Margin = new System.Windows.Forms.Padding(2);
@@ -23116,6 +23122,28 @@
             this.groupBox65.TabIndex = 128;
             this.groupBox65.TabStop = false;
             this.groupBox65.Text = "功能设置";
+            // 
+            // BTN配方导入
+            // 
+            this.BTN配方导入.Location = new System.Drawing.Point(104, 143);
+            this.BTN配方导入.Name = "BTN配方导入";
+            this.BTN配方导入.Size = new System.Drawing.Size(75, 25);
+            this.BTN配方导入.TabIndex = 133;
+            this.BTN配方导入.Tag = "PlcInIO[739]";
+            this.BTN配方导入.Text = "配方导入";
+            this.BTN配方导入.UseVisualStyleBackColor = true;
+            this.BTN配方导入.Click += new System.EventHandler(this.BTN配方_Click);
+            // 
+            // BTN配方导出
+            // 
+            this.BTN配方导出.Location = new System.Drawing.Point(11, 143);
+            this.BTN配方导出.Name = "BTN配方导出";
+            this.BTN配方导出.Size = new System.Drawing.Size(75, 25);
+            this.BTN配方导出.TabIndex = 132;
+            this.BTN配方导出.Tag = "PlcInIO[738]";
+            this.BTN配方导出.Text = "配方导出";
+            this.BTN配方导出.UseVisualStyleBackColor = true;
+            this.BTN配方导出.Click += new System.EventHandler(this.BTN配方_Click);
             // 
             // btn引脚检测功能
             // 
@@ -23170,10 +23198,11 @@
             this.btn门开关功能关闭.Name = "btn门开关功能关闭";
             this.btn门开关功能关闭.Size = new System.Drawing.Size(54, 24);
             this.btn门开关功能关闭.TabIndex = 103;
+            this.btn门开关功能关闭.Tag = "PlcInIO[469]";
             this.btn门开关功能关闭.Text = "关闭";
             this.btn门开关功能关闭.UseVisualStyleBackColor = true;
-            this.btn门开关功能关闭.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn门开关功能关闭_MouseDown);
-            this.btn门开关功能关闭.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn门开关功能关闭_MouseUp);
+            this.btn门开关功能关闭.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BTN关闭_MouseDown);
+            this.btn门开关功能关闭.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BTN关闭_MouseUp);
             // 
             // label487
             // 
@@ -23186,18 +23215,19 @@
             this.label487.TabIndex = 102;
             this.label487.Text = "门开关功能";
             // 
-            // btn门开关功能开关
+            // btn门开关功能开
             // 
-            this.btn门开关功能开关.BackColor = System.Drawing.SystemColors.Control;
-            this.btn门开关功能开关.Location = new System.Drawing.Point(114, 48);
-            this.btn门开关功能开关.Margin = new System.Windows.Forms.Padding(2);
-            this.btn门开关功能开关.Name = "btn门开关功能开关";
-            this.btn门开关功能开关.Size = new System.Drawing.Size(54, 24);
-            this.btn门开关功能开关.TabIndex = 70;
-            this.btn门开关功能开关.Text = "打开";
-            this.btn门开关功能开关.UseVisualStyleBackColor = true;
-            this.btn门开关功能开关.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn门开关功能开关_MouseDown);
-            this.btn门开关功能开关.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn门开关功能开关_MouseUp);
+            this.btn门开关功能开.BackColor = System.Drawing.SystemColors.Control;
+            this.btn门开关功能开.Location = new System.Drawing.Point(114, 48);
+            this.btn门开关功能开.Margin = new System.Windows.Forms.Padding(2);
+            this.btn门开关功能开.Name = "btn门开关功能开";
+            this.btn门开关功能开.Size = new System.Drawing.Size(54, 24);
+            this.btn门开关功能开.TabIndex = 70;
+            this.btn门开关功能开.Tag = "PlcInIO[460]";
+            this.btn门开关功能开.Text = "打开";
+            this.btn门开关功能开.UseVisualStyleBackColor = true;
+            this.btn门开关功能开.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BTN打开_MouseDown);
+            this.btn门开关功能开.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BTN打开_MouseUp);
             // 
             // groupBox63
             // 
@@ -23718,6 +23748,124 @@
             this.label463.TabIndex = 71;
             this.label463.Text = "mm/s";
             // 
+            // BTN上视觉1托盘码识别NG跳过
+            // 
+            this.BTN上视觉1托盘码识别NG跳过.Location = new System.Drawing.Point(3, 140);
+            this.BTN上视觉1托盘码识别NG跳过.Name = "BTN上视觉1托盘码识别NG跳过";
+            this.BTN上视觉1托盘码识别NG跳过.Size = new System.Drawing.Size(234, 24);
+            this.BTN上视觉1托盘码识别NG跳过.TabIndex = 125;
+            this.BTN上视觉1托盘码识别NG跳过.Tag = "PlcInIO[159]";
+            this.BTN上视觉1托盘码识别NG跳过.Text = "上视觉1托盘码识别NG跳过";
+            this.BTN上视觉1托盘码识别NG跳过.UseVisualStyleBackColor = true;
+            this.BTN上视觉1托盘码识别NG跳过.Click += new System.EventHandler(this.BTN提示报警跳过_Click);
+            // 
+            // BTN下视觉1产品对位NG提示跳过
+            // 
+            this.BTN下视觉1产品对位NG提示跳过.Location = new System.Drawing.Point(3, 180);
+            this.BTN下视觉1产品对位NG提示跳过.Name = "BTN下视觉1产品对位NG提示跳过";
+            this.BTN下视觉1产品对位NG提示跳过.Size = new System.Drawing.Size(234, 24);
+            this.BTN下视觉1产品对位NG提示跳过.TabIndex = 126;
+            this.BTN下视觉1产品对位NG提示跳过.Tag = "PlcInIO[160]";
+            this.BTN下视觉1产品对位NG提示跳过.Text = "下视觉1产品对位NG提示跳过";
+            this.BTN下视觉1产品对位NG提示跳过.UseVisualStyleBackColor = true;
+            this.BTN下视觉1产品对位NG提示跳过.Click += new System.EventHandler(this.BTN提示报警跳过_Click);
+            // 
+            // BTN工位1一键压合
+            // 
+            this.BTN工位1一键压合.Location = new System.Drawing.Point(161, 327);
+            this.BTN工位1一键压合.Name = "BTN工位1一键压合";
+            this.BTN工位1一键压合.Size = new System.Drawing.Size(120, 24);
+            this.BTN工位1一键压合.TabIndex = 184;
+            this.BTN工位1一键压合.Tag = "PlcInIO[690]";
+            this.BTN工位1一键压合.Text = "工位1一键压合";
+            this.BTN工位1一键压合.UseVisualStyleBackColor = true;
+            this.BTN工位1一键压合.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BTN手动操作_MouseDown);
+            this.BTN工位1一键压合.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BTN手动操作_MouseUp);
+            // 
+            // BTN工位1一键开启
+            // 
+            this.BTN工位1一键开启.Location = new System.Drawing.Point(161, 357);
+            this.BTN工位1一键开启.Name = "BTN工位1一键开启";
+            this.BTN工位1一键开启.Size = new System.Drawing.Size(120, 24);
+            this.BTN工位1一键开启.TabIndex = 185;
+            this.BTN工位1一键开启.Tag = "PlcInIO[694]";
+            this.BTN工位1一键开启.Text = "工位1一键开启";
+            this.BTN工位1一键开启.UseVisualStyleBackColor = true;
+            this.BTN工位1一键开启.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BTN手动操作_MouseDown);
+            this.BTN工位1一键开启.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BTN手动操作_MouseUp);
+            // 
+            // BTN工位2一键开启
+            // 
+            this.BTN工位2一键开启.Location = new System.Drawing.Point(314, 357);
+            this.BTN工位2一键开启.Name = "BTN工位2一键开启";
+            this.BTN工位2一键开启.Size = new System.Drawing.Size(120, 24);
+            this.BTN工位2一键开启.TabIndex = 187;
+            this.BTN工位2一键开启.Tag = "PlcInIO[695]";
+            this.BTN工位2一键开启.Text = "工位2一键开启";
+            this.BTN工位2一键开启.UseVisualStyleBackColor = true;
+            this.BTN工位2一键开启.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BTN手动操作_MouseDown);
+            this.BTN工位2一键开启.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BTN手动操作_MouseUp);
+            // 
+            // BTN工位2一键压合
+            // 
+            this.BTN工位2一键压合.Location = new System.Drawing.Point(314, 327);
+            this.BTN工位2一键压合.Name = "BTN工位2一键压合";
+            this.BTN工位2一键压合.Size = new System.Drawing.Size(120, 24);
+            this.BTN工位2一键压合.TabIndex = 186;
+            this.BTN工位2一键压合.Tag = "PlcInIO[691]";
+            this.BTN工位2一键压合.Text = "工位2一键压合";
+            this.BTN工位2一键压合.UseVisualStyleBackColor = true;
+            this.BTN工位2一键压合.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BTN手动操作_MouseDown);
+            this.BTN工位2一键压合.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BTN手动操作_MouseUp);
+            // 
+            // BTN工位3一键开启
+            // 
+            this.BTN工位3一键开启.Location = new System.Drawing.Point(470, 357);
+            this.BTN工位3一键开启.Name = "BTN工位3一键开启";
+            this.BTN工位3一键开启.Size = new System.Drawing.Size(120, 24);
+            this.BTN工位3一键开启.TabIndex = 189;
+            this.BTN工位3一键开启.Tag = "PlcInIO[696]";
+            this.BTN工位3一键开启.Text = "工位3一键开启";
+            this.BTN工位3一键开启.UseVisualStyleBackColor = true;
+            this.BTN工位3一键开启.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BTN手动操作_MouseDown);
+            this.BTN工位3一键开启.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BTN手动操作_MouseUp);
+            // 
+            // BTN工位3一键压合
+            // 
+            this.BTN工位3一键压合.Location = new System.Drawing.Point(470, 327);
+            this.BTN工位3一键压合.Name = "BTN工位3一键压合";
+            this.BTN工位3一键压合.Size = new System.Drawing.Size(120, 24);
+            this.BTN工位3一键压合.TabIndex = 188;
+            this.BTN工位3一键压合.Tag = "PlcInIO[692]";
+            this.BTN工位3一键压合.Text = "工位3一键压合";
+            this.BTN工位3一键压合.UseVisualStyleBackColor = true;
+            this.BTN工位3一键压合.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BTN手动操作_MouseDown);
+            this.BTN工位3一键压合.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BTN手动操作_MouseUp);
+            // 
+            // BTN工位4一键开启
+            // 
+            this.BTN工位4一键开启.Location = new System.Drawing.Point(623, 357);
+            this.BTN工位4一键开启.Name = "BTN工位4一键开启";
+            this.BTN工位4一键开启.Size = new System.Drawing.Size(120, 24);
+            this.BTN工位4一键开启.TabIndex = 191;
+            this.BTN工位4一键开启.Tag = "PlcInIO[697]";
+            this.BTN工位4一键开启.Text = "工位4一键开启";
+            this.BTN工位4一键开启.UseVisualStyleBackColor = true;
+            this.BTN工位4一键开启.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BTN手动操作_MouseDown);
+            this.BTN工位4一键开启.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BTN手动操作_MouseUp);
+            // 
+            // BTN工位4一键压合
+            // 
+            this.BTN工位4一键压合.Location = new System.Drawing.Point(623, 327);
+            this.BTN工位4一键压合.Name = "BTN工位4一键压合";
+            this.BTN工位4一键压合.Size = new System.Drawing.Size(120, 24);
+            this.BTN工位4一键压合.TabIndex = 190;
+            this.BTN工位4一键压合.Tag = "PlcInIO[693]";
+            this.BTN工位4一键压合.Text = "工位4一键压合";
+            this.BTN工位4一键压合.UseVisualStyleBackColor = true;
+            this.BTN工位4一键压合.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BTN手动操作_MouseDown);
+            this.BTN工位4一键压合.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BTN手动操作_MouseUp);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -23741,6 +23889,8 @@
             this.TP报警信息.PerformLayout();
             this.TP更改信息.ResumeLayout(false);
             this.TP更改信息.PerformLayout();
+            this.groupBox85.ResumeLayout(false);
+            this.groupBox85.PerformLayout();
             this.groupBox69.ResumeLayout(false);
             this.groupBox69.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TSTD_IDImg)).EndInit();
@@ -23749,7 +23899,6 @@
             this.GB_Modify.ResumeLayout(false);
             this.GB_Modify.PerformLayout();
             this.groupBox74.ResumeLayout(false);
-            this.groupBox74.PerformLayout();
             this.groupBox72.ResumeLayout(false);
             this.groupBox72.PerformLayout();
             this.groupBox73.ResumeLayout(false);
@@ -24597,7 +24746,7 @@
         private System.Windows.Forms.Button BTN写入速度;
         private System.Windows.Forms.GroupBox groupBox65;
         private System.Windows.Forms.Label label487;
-        private System.Windows.Forms.Button btn门开关功能开关;
+        private System.Windows.Forms.Button btn门开关功能开;
         private System.Windows.Forms.GroupBox groupBox63;
         private System.Windows.Forms.TextBox txt黑体轴定位速度;
         private System.Windows.Forms.TextBox txtSocket轴定位速度;
@@ -25692,9 +25841,18 @@
         private System.Windows.Forms.Label label69;
         private System.Windows.Forms.MenuStrip MUS菜单栏;
         private System.Windows.Forms.ToolStripMenuItem TSM帮助;
-        private System.Windows.Forms.ToolStripMenuItem TSM常见报警及消除;
-        private System.Windows.Forms.ToolStripMenuItem TSM设备使用;
-        private System.Windows.Forms.ToolStripMenuItem TSM新产品导入流程;
+        private System.Windows.Forms.Button BTN配方导入;
+        private System.Windows.Forms.Button BTN配方导出;
+        private System.Windows.Forms.Button BTN上视觉1托盘码识别NG跳过;
+        private System.Windows.Forms.Button BTN下视觉1产品对位NG提示跳过;
+        private System.Windows.Forms.Button BTN工位1一键压合;
+        private System.Windows.Forms.Button BTN工位4一键开启;
+        private System.Windows.Forms.Button BTN工位4一键压合;
+        private System.Windows.Forms.Button BTN工位3一键开启;
+        private System.Windows.Forms.Button BTN工位3一键压合;
+        private System.Windows.Forms.Button BTN工位2一键开启;
+        private System.Windows.Forms.Button BTN工位2一键压合;
+        private System.Windows.Forms.Button BTN工位1一键开启;
     }
 }
 
