@@ -105,6 +105,7 @@ namespace FT
                 calibrationTextBoxes = GetControls<TextBox>(calibrationGroups.Values.ToArray());
                 manualPageGroups = GetControls<GroupBox>(mainPages["TP手动电机1"], mainPages["TP手动电机2"]);
                 manualPageTextBoxes = GetControls<TextBox>(manualPageGroups.Values.ToArray());
+
                 //示教手动电机上下料个数统计TextBox信息读取地址加载
                 textBoxInformation = JsonManager.ReadJsonString<Dictionary<string, string>>(Environment.CurrentDirectory + "\\Configuration\\", "TextBoxInfo");
                 //报警信息读取
@@ -1610,20 +1611,6 @@ namespace FT
         }
         #endregion
 
-        private bool WriteDouble(TextBox valueBox, bool isReset = false)
-        {
-            if (double.TryParse(valueBox.Text, out double value))
-            {
-                communication.WriteVariable(value, (string)valueBox.Tag);
-                if (isReset) valueBox.Text = "";
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-
         #region 手动气缸、电机操作
         private void BTN手动操作_MouseDown(object sender, MouseEventArgs e)
         {
@@ -1781,240 +1768,126 @@ namespace FT
                 await BoolSwitchAsync(button, $"示教2 [{button.Name.Substring(3)}] 按下");
         }
 
-        private bool WriteValue(string value, string message)
+        private bool WriteValue(TextBox valueBox, string message)
         {
-            if (double.TryParse(txt钧舵打开小位置设置.Text, out double 小位置值))
+            if (double.TryParse(valueBox.Text, out double value))
             {
-                if (小位置值 < 0 || 小位置值 > 26)
+                if (communication.WriteVariable(value, (string)valueBox.Tag))
                 {
-                    MessageBox.Show("输入错误请检查,请输入0-26之间的整数");
-                    return false;
+                    valueBox.Text = "";
+                    return true;
                 }
-                if (小位置值 >= 0 && 小位置值 <= 26)
+                else
                 {
-                    if (WriteDouble(txt钧舵打开小位置设置))
-                    {
-                        communication.WriteVariable(true, "PlcInIO[648]");
-                        return true;
-                    }
+                    MessageBox.Show("参数写入失败，请检查链接");
+                    return false;
                 }
             }
             else
             {
-                MessageBox.Show("输入错误请检查,请输入钧舵夹爪打开小位置值[40-（夹爪夹持方向产品的尺寸+4）。4指的是左右各留2mm的夹持余量，可根据实际情况进行调整]。 如：W9产品-夹爪夹持方向产品的尺寸为24mm，则输入钧舵夹爪打开小位置值为12mm；W7产品-夹爪夹持方向产品的尺寸为18mm，则输入钧舵夹爪打开小位置值为18mm。");
+                MessageBox.Show(message);
                 return false;
             }
-            return false;
         }
 
-        private bool WriteValue(string value, string message, int min, int max)
+        private bool WriteValue(TextBox valueBox, string message, int min = 0)
         {
-            return false;
+            if (double.TryParse(valueBox.Text, out double value))
+            {
+                if (value >= min)
+                {
+                    if (communication.WriteVariable(value, (string)valueBox.Tag))
+                    {
+                        valueBox.Text = "";
+                        return true;
+                    }
+                    else
+                    {
+                        MessageBox.Show("参数写入失败，请检查链接");
+                        return false;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show($"输入错误请检查,值应大于0");
+                    return false;
+                }
+            }
+            else
+            {
+                MessageBox.Show(message);
+                return false;
+            }
+        }
+
+        private bool WriteValue(TextBox valueBox, string message, int min = 0, int max = 26)
+        {
+            if (double.TryParse(valueBox.Text, out double value))
+            {
+                if (value >= min && value <= max)
+                {
+                    if (communication.WriteVariable(value, (string)valueBox.Tag))
+                    {
+                        valueBox.Text = "";
+                        return true;
+                    }
+                    else
+                    {
+                        MessageBox.Show("参数写入失败，请检查链接");
+                        return false;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show($"输入错误请检查,请输入{min}-{max}之间的整数");
+                    return false;
+                }
+            }
+            else
+            {
+                MessageBox.Show(message);
+                return false;
+            }
         }
 
         private void BTN值写入_MouseDown(object sender, MouseEventArgs e)
         {
             Button button = sender as Button;
-            if (WriteDouble(txt钧舵打开小位置设置))
-                communication.WriteVariable(true, (string)button.Tag);
+            string[] info = ((string)button.Tag).Split(';');
+            if (info.Length == 2)
+            {
+                if (button.Name == "btn钧舵打开小位置设置")
+                {
+                    if (WriteValue(calibrationTextBoxes[info[1]],
+                        "输入错误请检查,请输入钧舵夹爪打开小位置值[40-（夹爪夹持方向产品的尺寸+4）。4指的是左右各留2mm的夹持余量，可根据实际情况进行调整]。 如：W9产品-夹爪夹持方向产品的尺寸为24mm，则输入钧舵夹爪打开小位置值为12mm；W7产品-夹爪夹持方向产品的尺寸为18mm，则输入钧舵夹爪打开小位置值为18mm。", 
+                        0, 26))
+                        communication.WriteVariable(true, info[0]);
+                }
+                else if (button.Name == "btn判断范围写入")
+                {
+                    if (WriteValue(calibrationTextBoxes[info[1]], "输入错误请检查", 0))
+                        communication.WriteVariable(true, info[0]);
+                }
+                else
+                {
+                    if (WriteValue(calibrationTextBoxes[info[1]], "输入错误请检查"))
+                        communication.WriteVariable(true, info[0]);
+                }
+            }
+            else if (info.Length == 3)
+            {
+                if (!WriteValue(calibrationTextBoxes[info[1]], "输入错误请检查")) return;
+                if (!WriteValue(calibrationTextBoxes[info[2]], "输入错误请检查")) return;
+                communication.WriteVariable(true, info[0]);
+            }
         }
 
         private void BTN值写入_MouseUp(object sender, MouseEventArgs e)
         {
             Button button = (Button)sender;
-            communication.WriteVariable(false, (string)button.Tag);
-        }
-        //示教1值写入
-        private void btn打开小位置值写入_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (double.TryParse(txt钧舵打开小位置设置.Text, out double 小位置值))
-            {
-                if (小位置值 < 0 || 小位置值 > 26)
-                {
-                    MessageBox.Show("输入错误请检查,请输入0-26之间的整数");
-                    return;
-                }
-                if (小位置值 >= 0 && 小位置值 <= 26)
-                {
-                    if (WriteDouble(txt钧舵打开小位置设置))
-                    {
-                        communication.WriteVariable(true, "PlcInIO[648]");
-                    }
-                }
-            }
-            else
-            {
-                MessageBox.Show("输入错误请检查,请输入钧舵夹爪打开小位置值[40-（夹爪夹持方向产品的尺寸+4）。4指的是左右各留2mm的夹持余量，可根据实际情况进行调整]。 如：W9产品-夹爪夹持方向产品的尺寸为24mm，则输入钧舵夹爪打开小位置值为12mm；W7产品-夹爪夹持方向产品的尺寸为18mm，则输入钧舵夹爪打开小位置值为18mm。");
-                return;
-            }
-        }
-        private void btn打开小位置值写入_MouseUp(object sender, MouseEventArgs e)
-        {
-            communication.WriteVariable(false, "PlcInIO[648]");
-        }
-        private void btnX判断值写入_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (double.TryParse(txtX判断值写入.Text, out double X判断值))
-            {
-                communication.WriteVariable(X判断值, "PLCInPmt[43]");
-                communication.WriteVariable(true, "PlcInIO[658]");
-                txtX判断值写入.Text = null;
-            }
-            else
-            {
-                MessageBox.Show("输入错误请检查,请输入X判断值");
-                return;
-            }
-        }
-        private void btnX判断值写入_MouseUp(object sender, MouseEventArgs e)
-        {
-            communication.WriteVariable(false, "PlcInIO[658]");
-        }
-        private void btnY判断值写入_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (double.TryParse(txtY判断值写入.Text, out double Y判断值))
-            {
-                if (txtY判断值写入.Text != "")
-                {
-                    communication.WriteVariable(Convert.ToDouble(txtY判断值写入.Text), "PLCInPmt[44]");
-                    communication.WriteVariable(true, "PlcInIO[659]");
-                    txtY判断值写入.Text = null;
-                }
-            }
-            else
-            {
-                MessageBox.Show("输入错误请检查,请输入Y判断值");
-                return;
-            }
-        }
-        private void btnY判断值写入_MouseUp(object sender, MouseEventArgs e)
-        {
-            communication.WriteVariable(false, "PlcInIO[659]");
-        }
-        private void btn判断范围写入_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (double.TryParse(txt判断范围写入.Text, out double 判断范围))
-            {
-                if (判断范围 >= 0)
-                {
-                    communication.WriteVariable(Convert.ToDouble(txt判断范围写入.Text), "PLCInPmt[38]");
-                    txt判断范围写入.Text = null;
-                }
-                else
-                {
-                    MessageBox.Show("输入错误请检查,判断范围应大于0");
-                    return;
-                }
-                communication.WriteVariable(true, "PlcInIO[649]");
-            }
-            else
-            {
-                MessageBox.Show("输入错误请检查,请输入判断范围");
-                return;
-            }
-        }
-        private void btn判断范围写入_MouseUp(object sender, MouseEventArgs e)
-        {
-            communication.WriteVariable(false, "PlcInIO[649]");
-        }
-
-        private void Tary盘下料XY位置补偿写入_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (txt上料X轴Tray盘补偿设置.Text != "")
-            {
-                communication.WriteVariable(Convert.ToDouble(txt上料X轴Tray盘补偿设置.Text), "PLCInPmt[35]");
-                txt上料X轴Tray盘补偿设置.Text = null;
-            }
-            if (txt上料Y轴Tray盘补偿设置.Text != "")
-            {
-                communication.WriteVariable(Convert.ToDouble(txt上料Y轴Tray盘补偿设置.Text), "PLCInPmt[36]");
-                txt上料Y轴Tray盘补偿设置.Text = null;
-            }
-            communication.WriteVariable(true, "PlcInIO[644]");
-        }
-        private void Tary盘下料XY位置补偿写入_MouseUp(object sender, MouseEventArgs e)
-        {
-            communication.WriteVariable(false, "PlcInIO[644]");
-        }
-        private void btn吸嘴2实盘位置补偿写入_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (txt吸嘴2实盘补偿设置X.Text != "")
-            {
-                communication.WriteVariable(Convert.ToDouble(txt吸嘴2实盘补偿设置X.Text), "PLCInPmt[35]");
-                txt吸嘴2实盘补偿设置X.Text = null;
-            }
-            if (txt吸嘴2实盘补偿设置Y.Text != "")
-            {
-                communication.WriteVariable(Convert.ToDouble(txt吸嘴2实盘补偿设置Y.Text), "PLCInPmt[36]");
-                txt吸嘴2实盘补偿设置Y.Text = null;
-            }
-            communication.WriteVariable(true, "PlcInIO[646]");
-        }
-        private void btn吸嘴2实盘位置补偿写入_MouseUp(object sender, MouseEventArgs e)
-        {
-            communication.WriteVariable(false, "PlcInIO[646]");
-        }
-        private void btn吸嘴1NG盘位置补偿写入_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (txt吸嘴1NG盘补偿设置X.Text != "")
-            {
-                communication.WriteVariable(Convert.ToDouble(txt吸嘴1NG盘补偿设置X.Text), "PLCInPmt[35]");
-                txt吸嘴1NG盘补偿设置X.Text = null;
-            }
-            if (txt吸嘴1NG盘补偿设置Y.Text != "")
-            {
-                communication.WriteVariable(Convert.ToDouble(txt吸嘴1NG盘补偿设置Y.Text), "PLCInPmt[36]");
-                txt吸嘴1NG盘补偿设置Y.Text = null;
-            }
-            communication.WriteVariable(true, "PlcInIO[645]");
-        }
-        private void btn吸嘴1NG盘位置补偿写入_MouseUp(object sender, MouseEventArgs e)
-        {
-            communication.WriteVariable(false, "PlcInIO[645]");
-        }
-        private void btn吸嘴2NG盘位置补偿写入_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (txt吸嘴2NG盘补偿设置X.Text != "")
-            {
-                communication.WriteVariable(Convert.ToDouble(txt吸嘴2NG盘补偿设置X.Text), "PLCInPmt[35]");
-                txt吸嘴2NG盘补偿设置X.Text = null;
-            }
-            if (txt吸嘴2NG盘补偿设置Y.Text != "")
-            {
-                communication.WriteVariable(Convert.ToDouble(txt吸嘴2NG盘补偿设置Y.Text), "PLCInPmt[36]");
-                txt吸嘴2NG盘补偿设置Y.Text = null;
-            }
-            communication.WriteVariable(true, "PlcInIO[647]");
-        }
-        private void btn吸嘴2NG盘位置补偿写入_MouseUp(object sender, MouseEventArgs e)
-        {
-            communication.WriteVariable(false, "PlcInIO[647]");
-        }
-        private void btn夹爪1补偿值写入_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (txt夹爪1补偿设置.Text != "")
-            {
-                communication.WriteVariable(Convert.ToDouble(txt夹爪1补偿设置.Text), "PLCInPmt[41]");
-                txt夹爪1补偿设置.Text = null;
-            }
-            communication.WriteVariable(true, "PlcInIO[653]");
-        }
-        private void btn夹爪1补偿值写入_MouseUp(object sender, MouseEventArgs e)
-        {
-            communication.WriteVariable(false, "PlcInIO[653]");
-        }
-        private void btn夹爪2补偿值写入_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (txt夹爪2补偿设置.Text != "")
-            {
-                communication.WriteVariable(Convert.ToDouble(txt夹爪2补偿设置.Text), "PLCInPmt[42]");
-                txt夹爪2补偿设置.Text = null;
-            }
-            communication.WriteVariable(true, "PlcInIO[654]");
-        }
-        private void btn夹爪2补偿值写入_MouseUp(object sender, MouseEventArgs e)
-        {
-            communication.WriteVariable(false, "PlcInIO[654]");
+            string[] info = ((string)button.Tag).Split(';');
+            communication.WriteVariable(false, info[0]);
+            RecordAndShow($"示教1值写入 [{button.Name.Substring(3)}]", LogType.Modification, TB_Modification);
         }
         //示教2
         private void btn自动模式远程_Click(object sender, EventArgs e)

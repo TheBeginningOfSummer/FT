@@ -818,7 +818,7 @@
             this.label355 = new System.Windows.Forms.Label();
             this.label351 = new System.Windows.Forms.Label();
             this.btn钧舵夹爪1打开小位置 = new System.Windows.Forms.Button();
-            this.btn打开小位置值写入 = new System.Windows.Forms.Button();
+            this.btn钧舵打开小位置设置 = new System.Windows.Forms.Button();
             this.txt钧舵打开小位置显示 = new System.Windows.Forms.TextBox();
             this.txt钧舵打开小位置设置 = new System.Windows.Forms.TextBox();
             this.label349 = new System.Windows.Forms.Label();
@@ -859,7 +859,7 @@
             this.label532 = new System.Windows.Forms.Label();
             this.label533 = new System.Windows.Forms.Label();
             this.groupBox76 = new System.Windows.Forms.GroupBox();
-            this.Tary盘下料XY位置补偿写入 = new System.Windows.Forms.Button();
+            this.btnTary盘下料XY位置补偿写入 = new System.Windows.Forms.Button();
             this.label534 = new System.Windows.Forms.Label();
             this.label535 = new System.Windows.Forms.Label();
             this.txt上料Y轴Tray盘补偿显示 = new System.Windows.Forms.TextBox();
@@ -11727,10 +11727,11 @@
             this.btn判断范围写入.Name = "btn判断范围写入";
             this.btn判断范围写入.Size = new System.Drawing.Size(87, 27);
             this.btn判断范围写入.TabIndex = 135;
+            this.btn判断范围写入.Tag = "PlcInIO[649];txt判断范围写入";
             this.btn判断范围写入.Text = "判断范围写入";
             this.btn判断范围写入.UseVisualStyleBackColor = true;
-            this.btn判断范围写入.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn判断范围写入_MouseDown);
-            this.btn判断范围写入.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn判断范围写入_MouseUp);
+            this.btn判断范围写入.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BTN值写入_MouseDown);
+            this.btn判断范围写入.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BTN值写入_MouseUp);
             // 
             // txt视觉拍照Y显示
             // 
@@ -11763,6 +11764,7 @@
             this.txt判断范围写入.Name = "txt判断范围写入";
             this.txt判断范围写入.Size = new System.Drawing.Size(49, 21);
             this.txt判断范围写入.TabIndex = 130;
+            this.txt判断范围写入.Tag = "PLCInPmt[38]";
             // 
             // label542
             // 
@@ -11794,10 +11796,11 @@
             this.btnY判断值写入.Name = "btnY判断值写入";
             this.btnY判断值写入.Size = new System.Drawing.Size(87, 27);
             this.btnY判断值写入.TabIndex = 128;
+            this.btnY判断值写入.Tag = "PlcInIO[659];txtY判断值写入";
             this.btnY判断值写入.Text = "Y判断值写入";
             this.btnY判断值写入.UseVisualStyleBackColor = true;
-            this.btnY判断值写入.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnY判断值写入_MouseDown);
-            this.btnY判断值写入.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnY判断值写入_MouseUp);
+            this.btnY判断值写入.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BTN值写入_MouseDown);
+            this.btnY判断值写入.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BTN值写入_MouseUp);
             // 
             // btnX判断值写入
             // 
@@ -11807,10 +11810,11 @@
             this.btnX判断值写入.Name = "btnX判断值写入";
             this.btnX判断值写入.Size = new System.Drawing.Size(87, 27);
             this.btnX判断值写入.TabIndex = 127;
+            this.btnX判断值写入.Tag = "PlcInIO[658];txtX判断值写入";
             this.btnX判断值写入.Text = "X判断值写入";
             this.btnX判断值写入.UseVisualStyleBackColor = true;
-            this.btnX判断值写入.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnX判断值写入_MouseDown);
-            this.btnX判断值写入.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnX判断值写入_MouseUp);
+            this.btnX判断值写入.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BTN值写入_MouseDown);
+            this.btnX判断值写入.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BTN值写入_MouseUp);
             // 
             // label548
             // 
@@ -11857,6 +11861,7 @@
             this.txtY判断值写入.Name = "txtY判断值写入";
             this.txtY判断值写入.Size = new System.Drawing.Size(49, 21);
             this.txtY判断值写入.TabIndex = 75;
+            this.txtY判断值写入.Tag = "PLCInPmt[44]";
             // 
             // txtX判断值写入
             // 
@@ -11865,6 +11870,7 @@
             this.txtX判断值写入.Name = "txtX判断值写入";
             this.txtX判断值写入.Size = new System.Drawing.Size(49, 21);
             this.txtX判断值写入.TabIndex = 72;
+            this.txtX判断值写入.Tag = "PLCInPmt[43]";
             // 
             // label550
             // 
@@ -11944,10 +11950,11 @@
             this.btn夹爪2补偿值写入.Name = "btn夹爪2补偿值写入";
             this.btn夹爪2补偿值写入.Size = new System.Drawing.Size(85, 27);
             this.btn夹爪2补偿值写入.TabIndex = 128;
+            this.btn夹爪2补偿值写入.Tag = "PlcInIO[654];txt夹爪2补偿设置";
             this.btn夹爪2补偿值写入.Text = "夹爪2补偿值";
             this.btn夹爪2补偿值写入.UseVisualStyleBackColor = true;
-            this.btn夹爪2补偿值写入.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn夹爪2补偿值写入_MouseDown);
-            this.btn夹爪2补偿值写入.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn夹爪2补偿值写入_MouseUp);
+            this.btn夹爪2补偿值写入.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BTN值写入_MouseDown);
+            this.btn夹爪2补偿值写入.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BTN值写入_MouseUp);
             // 
             // btn夹爪1补偿值写入
             // 
@@ -11957,10 +11964,11 @@
             this.btn夹爪1补偿值写入.Name = "btn夹爪1补偿值写入";
             this.btn夹爪1补偿值写入.Size = new System.Drawing.Size(85, 27);
             this.btn夹爪1补偿值写入.TabIndex = 127;
+            this.btn夹爪1补偿值写入.Tag = "PlcInIO[653];txt夹爪1补偿设置";
             this.btn夹爪1补偿值写入.Text = "夹爪1补偿值";
             this.btn夹爪1补偿值写入.UseVisualStyleBackColor = true;
-            this.btn夹爪1补偿值写入.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn夹爪1补偿值写入_MouseDown);
-            this.btn夹爪1补偿值写入.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn夹爪1补偿值写入_MouseUp);
+            this.btn夹爪1补偿值写入.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BTN值写入_MouseDown);
+            this.btn夹爪1补偿值写入.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BTN值写入_MouseUp);
             // 
             // label431
             // 
@@ -12007,6 +12015,7 @@
             this.txt夹爪2补偿设置.Name = "txt夹爪2补偿设置";
             this.txt夹爪2补偿设置.Size = new System.Drawing.Size(49, 21);
             this.txt夹爪2补偿设置.TabIndex = 75;
+            this.txt夹爪2补偿设置.Tag = "PLCInPmt[42]";
             // 
             // txt夹爪1补偿设置
             // 
@@ -12015,6 +12024,7 @@
             this.txt夹爪1补偿设置.Name = "txt夹爪1补偿设置";
             this.txt夹爪1补偿设置.Size = new System.Drawing.Size(49, 21);
             this.txt夹爪1补偿设置.TabIndex = 72;
+            this.txt夹爪1补偿设置.Tag = "PLCInPmt[41]";
             // 
             // label485
             // 
@@ -12320,7 +12330,7 @@
             this.groupBox84.Controls.Add(this.label355);
             this.groupBox84.Controls.Add(this.label351);
             this.groupBox84.Controls.Add(this.btn钧舵夹爪1打开小位置);
-            this.groupBox84.Controls.Add(this.btn打开小位置值写入);
+            this.groupBox84.Controls.Add(this.btn钧舵打开小位置设置);
             this.groupBox84.Controls.Add(this.txt钧舵打开小位置显示);
             this.groupBox84.Controls.Add(this.txt钧舵打开小位置设置);
             this.groupBox84.Controls.Add(this.label349);
@@ -12382,19 +12392,19 @@
             this.btn钧舵夹爪1打开小位置.UseVisualStyleBackColor = true;
             this.btn钧舵夹爪1打开小位置.Click += new System.EventHandler(this.BTN示教1_Click);
             // 
-            // btn打开小位置值写入
+            // btn钧舵打开小位置设置
             // 
-            this.btn打开小位置值写入.BackColor = System.Drawing.SystemColors.Control;
-            this.btn打开小位置值写入.Location = new System.Drawing.Point(7, 35);
-            this.btn打开小位置值写入.Margin = new System.Windows.Forms.Padding(2);
-            this.btn打开小位置值写入.Name = "btn打开小位置值写入";
-            this.btn打开小位置值写入.Size = new System.Drawing.Size(49, 27);
-            this.btn打开小位置值写入.TabIndex = 136;
-            this.btn打开小位置值写入.Tag = "PlcInIO[648]";
-            this.btn打开小位置值写入.Text = "写入";
-            this.btn打开小位置值写入.UseVisualStyleBackColor = true;
-            this.btn打开小位置值写入.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn打开小位置值写入_MouseDown);
-            this.btn打开小位置值写入.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn打开小位置值写入_MouseUp);
+            this.btn钧舵打开小位置设置.BackColor = System.Drawing.SystemColors.Control;
+            this.btn钧舵打开小位置设置.Location = new System.Drawing.Point(7, 35);
+            this.btn钧舵打开小位置设置.Margin = new System.Windows.Forms.Padding(2);
+            this.btn钧舵打开小位置设置.Name = "btn钧舵打开小位置设置";
+            this.btn钧舵打开小位置设置.Size = new System.Drawing.Size(49, 27);
+            this.btn钧舵打开小位置设置.TabIndex = 136;
+            this.btn钧舵打开小位置设置.Tag = "PlcInIO[648];txt钧舵打开小位置设置";
+            this.btn钧舵打开小位置设置.Text = "写入";
+            this.btn钧舵打开小位置设置.UseVisualStyleBackColor = true;
+            this.btn钧舵打开小位置设置.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BTN值写入_MouseDown);
+            this.btn钧舵打开小位置设置.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BTN值写入_MouseUp);
             // 
             // txt钧舵打开小位置显示
             // 
@@ -12456,10 +12466,11 @@
             this.btn吸嘴2NG盘位置补偿写入.Name = "btn吸嘴2NG盘位置补偿写入";
             this.btn吸嘴2NG盘位置补偿写入.Size = new System.Drawing.Size(49, 27);
             this.btn吸嘴2NG盘位置补偿写入.TabIndex = 127;
+            this.btn吸嘴2NG盘位置补偿写入.Tag = "PlcInIO[647];txt吸嘴2NG盘补偿设置X;txt吸嘴2NG盘补偿设置Y";
             this.btn吸嘴2NG盘位置补偿写入.Text = "写入";
             this.btn吸嘴2NG盘位置补偿写入.UseVisualStyleBackColor = true;
-            this.btn吸嘴2NG盘位置补偿写入.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn吸嘴2NG盘位置补偿写入_MouseDown);
-            this.btn吸嘴2NG盘位置补偿写入.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn吸嘴2NG盘位置补偿写入_MouseUp);
+            this.btn吸嘴2NG盘位置补偿写入.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BTN值写入_MouseDown);
+            this.btn吸嘴2NG盘位置补偿写入.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BTN值写入_MouseUp);
             // 
             // label66
             // 
@@ -12528,6 +12539,7 @@
             this.txt吸嘴2NG盘补偿设置Y.Name = "txt吸嘴2NG盘补偿设置Y";
             this.txt吸嘴2NG盘补偿设置Y.Size = new System.Drawing.Size(49, 21);
             this.txt吸嘴2NG盘补偿设置Y.TabIndex = 75;
+            this.txt吸嘴2NG盘补偿设置Y.Tag = "PLCInPmt[36]";
             // 
             // txt吸嘴2NG盘补偿设置X
             // 
@@ -12536,6 +12548,7 @@
             this.txt吸嘴2NG盘补偿设置X.Name = "txt吸嘴2NG盘补偿设置X";
             this.txt吸嘴2NG盘补偿设置X.Size = new System.Drawing.Size(49, 21);
             this.txt吸嘴2NG盘补偿设置X.TabIndex = 72;
+            this.txt吸嘴2NG盘补偿设置X.Tag = "PLCInPmt[35]";
             // 
             // label105
             // 
@@ -12592,10 +12605,11 @@
             this.btn吸嘴1NG盘位置补偿写入.Name = "btn吸嘴1NG盘位置补偿写入";
             this.btn吸嘴1NG盘位置补偿写入.Size = new System.Drawing.Size(49, 27);
             this.btn吸嘴1NG盘位置补偿写入.TabIndex = 127;
+            this.btn吸嘴1NG盘位置补偿写入.Tag = "PlcInIO[645];txt吸嘴1NG盘补偿设置X;txt吸嘴1NG盘补偿设置Y";
             this.btn吸嘴1NG盘位置补偿写入.Text = "写入";
             this.btn吸嘴1NG盘位置补偿写入.UseVisualStyleBackColor = true;
-            this.btn吸嘴1NG盘位置补偿写入.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn吸嘴1NG盘位置补偿写入_MouseDown);
-            this.btn吸嘴1NG盘位置补偿写入.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn吸嘴1NG盘位置补偿写入_MouseUp);
+            this.btn吸嘴1NG盘位置补偿写入.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BTN值写入_MouseDown);
+            this.btn吸嘴1NG盘位置补偿写入.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BTN值写入_MouseUp);
             // 
             // label232
             // 
@@ -12664,6 +12678,7 @@
             this.txt吸嘴1NG盘补偿设置Y.Name = "txt吸嘴1NG盘补偿设置Y";
             this.txt吸嘴1NG盘补偿设置Y.Size = new System.Drawing.Size(49, 21);
             this.txt吸嘴1NG盘补偿设置Y.TabIndex = 75;
+            this.txt吸嘴1NG盘补偿设置Y.Tag = "PLCInPmt[36]";
             // 
             // txt吸嘴1NG盘补偿设置X
             // 
@@ -12672,6 +12687,7 @@
             this.txt吸嘴1NG盘补偿设置X.Name = "txt吸嘴1NG盘补偿设置X";
             this.txt吸嘴1NG盘补偿设置X.Size = new System.Drawing.Size(49, 21);
             this.txt吸嘴1NG盘补偿设置X.TabIndex = 72;
+            this.txt吸嘴1NG盘补偿设置X.Tag = "PLCInPmt[35]";
             // 
             // label339
             // 
@@ -12726,10 +12742,11 @@
             this.btn吸嘴2实盘位置补偿写入.Name = "btn吸嘴2实盘位置补偿写入";
             this.btn吸嘴2实盘位置补偿写入.Size = new System.Drawing.Size(49, 27);
             this.btn吸嘴2实盘位置补偿写入.TabIndex = 127;
+            this.btn吸嘴2实盘位置补偿写入.Tag = "PlcInIO[646];txt吸嘴2实盘补偿设置X;txt吸嘴2实盘补偿设置Y";
             this.btn吸嘴2实盘位置补偿写入.Text = "写入";
             this.btn吸嘴2实盘位置补偿写入.UseVisualStyleBackColor = true;
-            this.btn吸嘴2实盘位置补偿写入.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btn吸嘴2实盘位置补偿写入_MouseDown);
-            this.btn吸嘴2实盘位置补偿写入.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btn吸嘴2实盘位置补偿写入_MouseUp);
+            this.btn吸嘴2实盘位置补偿写入.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BTN值写入_MouseDown);
+            this.btn吸嘴2实盘位置补偿写入.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BTN值写入_MouseUp);
             // 
             // label343
             // 
@@ -12798,6 +12815,7 @@
             this.txt吸嘴2实盘补偿设置Y.Name = "txt吸嘴2实盘补偿设置Y";
             this.txt吸嘴2实盘补偿设置Y.Size = new System.Drawing.Size(49, 21);
             this.txt吸嘴2实盘补偿设置Y.TabIndex = 75;
+            this.txt吸嘴2实盘补偿设置Y.Tag = "PLCInPmt[36]";
             // 
             // txt吸嘴2实盘补偿设置X
             // 
@@ -12806,6 +12824,7 @@
             this.txt吸嘴2实盘补偿设置X.Name = "txt吸嘴2实盘补偿设置X";
             this.txt吸嘴2实盘补偿设置X.Size = new System.Drawing.Size(49, 21);
             this.txt吸嘴2实盘补偿设置X.TabIndex = 72;
+            this.txt吸嘴2实盘补偿设置X.Tag = "PLCInPmt[35]";
             // 
             // label532
             // 
@@ -12831,7 +12850,7 @@
             // 
             // groupBox76
             // 
-            this.groupBox76.Controls.Add(this.Tary盘下料XY位置补偿写入);
+            this.groupBox76.Controls.Add(this.btnTary盘下料XY位置补偿写入);
             this.groupBox76.Controls.Add(this.label534);
             this.groupBox76.Controls.Add(this.label535);
             this.groupBox76.Controls.Add(this.txt上料Y轴Tray盘补偿显示);
@@ -12852,18 +12871,19 @@
             this.groupBox76.TabStop = false;
             this.groupBox76.Text = "吸嘴1 实盘下料X/Y位置补偿";
             // 
-            // Tary盘下料XY位置补偿写入
+            // btnTary盘下料XY位置补偿写入
             // 
-            this.Tary盘下料XY位置补偿写入.BackColor = System.Drawing.SystemColors.Control;
-            this.Tary盘下料XY位置补偿写入.Location = new System.Drawing.Point(66, 98);
-            this.Tary盘下料XY位置补偿写入.Margin = new System.Windows.Forms.Padding(2);
-            this.Tary盘下料XY位置补偿写入.Name = "Tary盘下料XY位置补偿写入";
-            this.Tary盘下料XY位置补偿写入.Size = new System.Drawing.Size(49, 27);
-            this.Tary盘下料XY位置补偿写入.TabIndex = 127;
-            this.Tary盘下料XY位置补偿写入.Text = "写入";
-            this.Tary盘下料XY位置补偿写入.UseVisualStyleBackColor = true;
-            this.Tary盘下料XY位置补偿写入.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Tary盘下料XY位置补偿写入_MouseDown);
-            this.Tary盘下料XY位置补偿写入.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Tary盘下料XY位置补偿写入_MouseUp);
+            this.btnTary盘下料XY位置补偿写入.BackColor = System.Drawing.SystemColors.Control;
+            this.btnTary盘下料XY位置补偿写入.Location = new System.Drawing.Point(66, 98);
+            this.btnTary盘下料XY位置补偿写入.Margin = new System.Windows.Forms.Padding(2);
+            this.btnTary盘下料XY位置补偿写入.Name = "btnTary盘下料XY位置补偿写入";
+            this.btnTary盘下料XY位置补偿写入.Size = new System.Drawing.Size(49, 27);
+            this.btnTary盘下料XY位置补偿写入.TabIndex = 127;
+            this.btnTary盘下料XY位置补偿写入.Tag = "PlcInIO[644];txt上料X轴Tray盘补偿设置;txt上料Y轴Tray盘补偿设置";
+            this.btnTary盘下料XY位置补偿写入.Text = "写入";
+            this.btnTary盘下料XY位置补偿写入.UseVisualStyleBackColor = true;
+            this.btnTary盘下料XY位置补偿写入.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BTN值写入_MouseDown);
+            this.btnTary盘下料XY位置补偿写入.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BTN值写入_MouseUp);
             // 
             // label534
             // 
@@ -12932,6 +12952,7 @@
             this.txt上料Y轴Tray盘补偿设置.Name = "txt上料Y轴Tray盘补偿设置";
             this.txt上料Y轴Tray盘补偿设置.Size = new System.Drawing.Size(49, 21);
             this.txt上料Y轴Tray盘补偿设置.TabIndex = 75;
+            this.txt上料Y轴Tray盘补偿设置.Tag = "PLCInPmt[36]";
             // 
             // txt上料X轴Tray盘补偿设置
             // 
@@ -12940,6 +12961,7 @@
             this.txt上料X轴Tray盘补偿设置.Name = "txt上料X轴Tray盘补偿设置";
             this.txt上料X轴Tray盘补偿设置.Size = new System.Drawing.Size(49, 21);
             this.txt上料X轴Tray盘补偿设置.TabIndex = 72;
+            this.txt上料X轴Tray盘补偿设置.Tag = "PLCInPmt[35]";
             // 
             // label538
             // 
@@ -25435,7 +25457,7 @@
         private System.Windows.Forms.Label label532;
         private System.Windows.Forms.Label label533;
         private System.Windows.Forms.GroupBox groupBox76;
-        private System.Windows.Forms.Button Tary盘下料XY位置补偿写入;
+        private System.Windows.Forms.Button btnTary盘下料XY位置补偿写入;
         private System.Windows.Forms.Label label534;
         private System.Windows.Forms.Label label535;
         private System.Windows.Forms.TextBox txt上料Y轴Tray盘补偿显示;
@@ -25741,7 +25763,7 @@
         private System.Windows.Forms.Button btn工装2次数清零;
         private System.Windows.Forms.Button btn工装1次数清零;
         private System.Windows.Forms.GroupBox groupBox84;
-        private System.Windows.Forms.Button btn打开小位置值写入;
+        private System.Windows.Forms.Button btn钧舵打开小位置设置;
         private System.Windows.Forms.TextBox txt钧舵打开小位置显示;
         private System.Windows.Forms.TextBox txt钧舵打开小位置设置;
         private System.Windows.Forms.Label label349;
