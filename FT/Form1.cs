@@ -48,6 +48,8 @@ namespace FT
 
         //加载的帮助文档信息
         Dictionary<string, string> helpInformation;
+        //示教界面按下的按钮
+        List<Button> calibrationButtons = new List<Button>();
         #endregion
 
         #region 其他变量
@@ -76,7 +78,9 @@ namespace FT
                 }
             }
         }
+        //写入参数时的工作状态
         private string workState = "";
+        //写入参数时设置工作状态
         private void SetMessage(string info = "")
         {
             IsWrite = true;
@@ -1167,39 +1171,11 @@ namespace FT
             {
                 RecordAndShow($"{button.Text}", LogType.Modification, TB_Modification);
                 communication.WriteVariable(true, (string)button.Tag);
-                //MessageBox.Show((string)button.Tag);
             }
         }
         #endregion
 
         #region 主界面按钮
-        //private void CB_TypeOfProduction_SelectedIndexChanged(object sender, EventArgs e)//选择产品索引
-        //{
-        //    if (this.CB_TypeOfProduction.SelectedItem.ToString() == "GST212W2")
-        //    {
-        //        communication.WriteVariable(1, "PlcInID[1]");
-        //    }
-
-        //    if (this.CB_TypeOfProduction.SelectedItem.ToString() == "GST612W2")
-        //    {
-        //        communication.WriteVariable(2, "PlcInID[1]");
-        //    }
-
-        //    if (this.CB_TypeOfProduction.SelectedItem.ToString() == "GST412C0")
-        //    {
-        //        communication.WriteVariable(3, "PlcInID[1]");
-        //    }
-
-        //    if (this.CB_TypeOfProduction.SelectedItem.ToString() == "GST612M2")
-        //    {
-        //        communication.WriteVariable(4, "PlcInID[1]");
-        //    }
-
-        //    if (this.CB_TypeOfProduction.SelectedItem.ToString() == "GST612W9")
-        //    {
-        //        communication.WriteVariable(5, "PlcInID[1]");
-        //    }
-        //}
         private void btn手动模式_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("是否切换手动模式？", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -1304,7 +1280,11 @@ namespace FT
                     DialogResult result = MessageBox.Show($"您是否选择 “{CB_TypeOfTray.Text}” 型号？", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     if (result == DialogResult.Yes)
                     {
-                        //RecordAndShow($"当前型号为：{currentTrayType}", LogType.Modification, TB_Modification);
+                        foreach (var button in calibrationButtons)
+                        {
+                            button.BackColor = Color.Transparent;
+                        }
+                        calibrationButtons.Clear();
                         SetMessage("切换型号。");
                         currentTrayType = CB_TypeOfTray.Text; 
                         IsWrite = communication.WriteVariable(currentTrayType.Substring(2), "PLC测试信息[55]");
@@ -1635,13 +1615,11 @@ namespace FT
             if (double.TryParse(valueBox.Text, out double value))
             {
                 communication.WriteVariable(value, (string)valueBox.Tag);
-                //communication.WriteVariable(true, "PlcInIO[658]");
                 if (isReset) valueBox.Text = "";
                 return true;
             }
             else
             {
-                //MessageBox.Show($"输入错误请检查,重新输入{valueBox.Name.Substring(3)}值");
                 return false;
             }
         }
@@ -1760,11 +1738,14 @@ namespace FT
                     MessageBox.Show("参数写入失败，连接断开。", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
         }
-
+        //将PLC上的bool值改为true一定时间后变回false
         private async Task BoolSwitchAsync(Button button, string message = "", string tip = "您是否确定此操作？", int delay = 1000)
         {
             DialogResult result = MessageBox.Show(tip, "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
+            {
+                button.BackColor = Color.LightGreen;
+                calibrationButtons.Add(button);
                 if (communication.WriteVariable(true, (string)button.Tag))
                 {
                     await Task.Delay(delay);
@@ -1773,13 +1754,15 @@ namespace FT
                     IsWrite = communication.WriteVariable(false, (string)button.Tag);
                     SetMessage();
                     button.BackColor = Color.LightGreen;
+                    calibrationButtons.Add(button);
                 }
                 else
                 {
                     MessageBox.Show("参数写入失败，连接断开。", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+            } 
         }
-
+        //示教界面1示教
         private async void BTN示教1_Click(object sender, EventArgs e)
         {
             Button button = (Button)sender;
@@ -1788,7 +1771,7 @@ namespace FT
             else
                 await BoolSwitchAsync(button, $"示教1 [{button.Name.Substring(3)}] 按下");
         }
-
+        //示教界面2示教
         private async void BTN示教2_Click(object sender, EventArgs e)
         {
             Button button = (Button)sender;
@@ -1796,6 +1779,37 @@ namespace FT
                 await BoolSwitchAsync(button, $"示教2 [{button.Name.Substring(3)}] 按下，当前值：{calibrationTextBoxes[$"txt{button.Name.Substring(3)}"].Text}");
             else
                 await BoolSwitchAsync(button, $"示教2 [{button.Name.Substring(3)}] 按下");
+        }
+
+        private bool WriteValue(string value, string message)
+        {
+            if (double.TryParse(txt钧舵打开小位置设置.Text, out double 小位置值))
+            {
+                if (小位置值 < 0 || 小位置值 > 26)
+                {
+                    MessageBox.Show("输入错误请检查,请输入0-26之间的整数");
+                    return false;
+                }
+                if (小位置值 >= 0 && 小位置值 <= 26)
+                {
+                    if (WriteDouble(txt钧舵打开小位置设置))
+                    {
+                        communication.WriteVariable(true, "PlcInIO[648]");
+                        return true;
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("输入错误请检查,请输入钧舵夹爪打开小位置值[40-（夹爪夹持方向产品的尺寸+4）。4指的是左右各留2mm的夹持余量，可根据实际情况进行调整]。 如：W9产品-夹爪夹持方向产品的尺寸为24mm，则输入钧舵夹爪打开小位置值为12mm；W7产品-夹爪夹持方向产品的尺寸为18mm，则输入钧舵夹爪打开小位置值为18mm。");
+                return false;
+            }
+            return false;
+        }
+
+        private bool WriteValue(string value, string message, int min, int max)
+        {
+            return false;
         }
 
         private void BTN值写入_MouseDown(object sender, MouseEventArgs e)
@@ -1903,6 +1917,7 @@ namespace FT
         {
             communication.WriteVariable(false, "PlcInIO[649]");
         }
+
         private void Tary盘下料XY位置补偿写入_MouseDown(object sender, MouseEventArgs e)
         {
             if (txt上料X轴Tray盘补偿设置.Text != "")
