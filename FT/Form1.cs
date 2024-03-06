@@ -356,6 +356,7 @@ namespace FT
                 TSM帮助.DropDownItems.Add(menu);
             }
         }
+
         #endregion
 
         #region 更新
@@ -1611,6 +1612,88 @@ namespace FT
         }
         #endregion
 
+        private bool WriteValue(TextBox valueBox, string message)
+        {
+            if (double.TryParse(valueBox.Text, out double value))
+            {
+                if (communication.WriteVariable(value, (string)valueBox.Tag))
+                {
+                    valueBox.Text = "";
+                    return true;
+                }
+                else
+                {
+                    MessageBox.Show("参数写入失败，请检查链接");
+                    return false;
+                }
+            }
+            else
+            {
+                MessageBox.Show(message);
+                return false;
+            }
+        }
+
+        private bool WriteValue(TextBox valueBox, string message, int min = 0)
+        {
+            if (double.TryParse(valueBox.Text, out double value))
+            {
+                if (value >= min)
+                {
+                    if (communication.WriteVariable(value, (string)valueBox.Tag))
+                    {
+                        valueBox.Text = "";
+                        return true;
+                    }
+                    else
+                    {
+                        MessageBox.Show("参数写入失败，请检查链接");
+                        return false;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show($"输入错误请检查,值应大于0");
+                    return false;
+                }
+            }
+            else
+            {
+                MessageBox.Show(message);
+                return false;
+            }
+        }
+
+        private bool WriteValue(TextBox valueBox, string message, int min = 0, int max = 26)
+        {
+            if (double.TryParse(valueBox.Text, out double value))
+            {
+                if (value >= min && value <= max)
+                {
+                    if (communication.WriteVariable(value, (string)valueBox.Tag))
+                    {
+                        valueBox.Text = "";
+                        return true;
+                    }
+                    else
+                    {
+                        MessageBox.Show("参数写入失败，请检查链接");
+                        return false;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show($"输入错误请检查,请输入{min}-{max}之间的整数");
+                    return false;
+                }
+            }
+            else
+            {
+                MessageBox.Show(message);
+                return false;
+            }
+        }
+
         #region 手动气缸、电机操作
         private void BTN手动操作_MouseDown(object sender, MouseEventArgs e)
         {
@@ -1638,6 +1721,7 @@ namespace FT
         //手动电机2操作
         private void BTN钧舵相对旋转_MouseDown(object sender, MouseEventArgs e)
         {
+            Button button = (Button)sender;
 
         }
 
@@ -1766,88 +1850,6 @@ namespace FT
                 await BoolSwitchAsync(button, $"示教2 [{button.Name.Substring(3)}] 按下，当前值：{calibrationTextBoxes[$"txt{button.Name.Substring(3)}"].Text}");
             else
                 await BoolSwitchAsync(button, $"示教2 [{button.Name.Substring(3)}] 按下");
-        }
-
-        private bool WriteValue(TextBox valueBox, string message)
-        {
-            if (double.TryParse(valueBox.Text, out double value))
-            {
-                if (communication.WriteVariable(value, (string)valueBox.Tag))
-                {
-                    valueBox.Text = "";
-                    return true;
-                }
-                else
-                {
-                    MessageBox.Show("参数写入失败，请检查链接");
-                    return false;
-                }
-            }
-            else
-            {
-                MessageBox.Show(message);
-                return false;
-            }
-        }
-
-        private bool WriteValue(TextBox valueBox, string message, int min = 0)
-        {
-            if (double.TryParse(valueBox.Text, out double value))
-            {
-                if (value >= min)
-                {
-                    if (communication.WriteVariable(value, (string)valueBox.Tag))
-                    {
-                        valueBox.Text = "";
-                        return true;
-                    }
-                    else
-                    {
-                        MessageBox.Show("参数写入失败，请检查链接");
-                        return false;
-                    }
-                }
-                else
-                {
-                    MessageBox.Show($"输入错误请检查,值应大于0");
-                    return false;
-                }
-            }
-            else
-            {
-                MessageBox.Show(message);
-                return false;
-            }
-        }
-
-        private bool WriteValue(TextBox valueBox, string message, int min = 0, int max = 26)
-        {
-            if (double.TryParse(valueBox.Text, out double value))
-            {
-                if (value >= min && value <= max)
-                {
-                    if (communication.WriteVariable(value, (string)valueBox.Tag))
-                    {
-                        valueBox.Text = "";
-                        return true;
-                    }
-                    else
-                    {
-                        MessageBox.Show("参数写入失败，请检查链接");
-                        return false;
-                    }
-                }
-                else
-                {
-                    MessageBox.Show($"输入错误请检查,请输入{min}-{max}之间的整数");
-                    return false;
-                }
-            }
-            else
-            {
-                MessageBox.Show(message);
-                return false;
-            }
         }
 
         private void BTN值写入_MouseDown(object sender, MouseEventArgs e)
