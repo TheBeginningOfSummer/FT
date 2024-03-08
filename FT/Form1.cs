@@ -107,11 +107,11 @@ namespace FT
                 manualPageTextBoxes = GetControls<TextBox>(manualPageGroups.Values.ToArray());
 
                 //示教手动电机上下料个数统计TextBox信息读取地址加载
-                textBoxInformation = JsonManager.ReadJsonString<Dictionary<string, string>>(Environment.CurrentDirectory + "\\Configuration\\", "TextBoxInfo");
+                textBoxInformation = JsonManager.ReadJsonString<Dictionary<string, string>>(Environment.CurrentDirectory + "\\Configuration", "TextBoxInfo");
                 //报警信息读取
-                alarmInformation = JsonManager.ReadJsonString<Dictionary<string, string>>(Environment.CurrentDirectory + "\\Configuration\\", "Alarm");
+                alarmInformation = JsonManager.ReadJsonString<Dictionary<string, string>>(Environment.CurrentDirectory + "\\Configuration", "Alarm");
                 //帮助文档信息加载
-                helpInformation = JsonManager.ReadJsonString<Dictionary<string, string>>(Environment.CurrentDirectory + "\\Configuration\\", "HelpInfo");
+                helpInformation = JsonManager.ReadJsonString<Dictionary<string, string>>(Environment.CurrentDirectory + "\\Configuration", "HelpInfo");
                 InitializeHelpMenu();
                 #endregion
 
@@ -390,6 +390,7 @@ namespace FT
                                 //初始化
                                 trayManager.InitializeTrays(currentTrayType);
                                 trayManager.UpdateTrayLabels(PN_Trays);
+                                communication.WriteVariable(false, "PLC标志位[2]");
                                 //托盘初始化完成,PLC检测到此值为true后，将PLC标志位[2]置为false
                                 communication.WriteVariable(true, "PC标志位[2]");
                             }
@@ -943,40 +944,7 @@ namespace FT
                     try
                     {
                         Thread.Sleep(300);
-
-                        #region 方法一
-                        //for (int i = 0; i < communication.ReadPLCAlarm.Length; i++)
-                        //{
-                        //    if (!alarmInformation.ContainsKey(i.ToString())) continue;
-                        //    if (communication.ReadPLCAlarm[i])
-                        //    {
-                        //        //如果当前报警列表不包含检测到的字符串
-                        //        if (!warning.Contains(alarmInformation[i.ToString()]))
-                        //        {
-                        //            TB_Warning.Invoke(new Action(() => TB_Warning.Clear()));
-                        //            warning.Add(alarmInformation[i.ToString()]);
-                        //            //显示到控件上
-                        //            foreach (var item in warning)
-                        //                TB_Warning.Invoke(new Action(() => TB_Warning.AppendText(item + Environment.NewLine)));
-                        //            logfile.WriteLog(alarmInformation[i.ToString()], "报警记录");
-                        //        }
-                        //    }
-                        //    else
-                        //    {
-                        //        //如果当前报警列表包含已经清除的报警
-                        //        if (warning.Contains(alarmInformation[i.ToString()]))
-                        //        {
-                        //            TB_Warning.Invoke(new Action(() => TB_Warning.Clear()));
-                        //            warning.Remove(alarmInformation[i.ToString()]);
-                        //            //更新显示内容
-                        //            foreach (var item in warning)
-                        //                TB_Warning.Invoke(new Action(() => TB_Warning.AppendText(item + Environment.NewLine)));
-                        //        }
-                        //    }
-                        //}
-                        #endregion
-
-                        //方法二
+                        //方法二 读哈希表
                         for (int i = 0; i < communication.Alarm.Count; i++)
                         {
                             string key = $"PlcOutAlarm[{i}]";
@@ -1233,6 +1201,8 @@ namespace FT
             {
                 RecordAndShow($"初始化", LogType.Modification, TB_Modification);
                 communication.WriteVariable(true, "PlcInIO[6]");
+                InitialForm initialForm = new InitialForm();
+                initialForm.ShowDialog();
             }
         }
 
@@ -1629,7 +1599,6 @@ namespace FT
             }
             else
             {
-                MessageBox.Show(message);
                 return false;
             }
         }
@@ -1878,8 +1847,8 @@ namespace FT
             }
             else if (info.Length == 3)
             {
-                if (!WriteValue(calibrationTextBoxes[info[1]], "输入错误请检查")) return;
-                if (!WriteValue(calibrationTextBoxes[info[2]], "输入错误请检查")) return;
+                WriteValue(calibrationTextBoxes[info[1]], "输入错误请检查");
+                WriteValue(calibrationTextBoxes[info[2]], "输入错误请检查");
                 communication.WriteVariable(true, info[0]);
             }
         }

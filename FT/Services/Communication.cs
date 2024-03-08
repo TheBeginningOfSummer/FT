@@ -17,10 +17,6 @@ namespace FT
         /// </summary>
         public bool[] ReadPLCIO { get; private set; }
         /// <summary>
-        /// 读的位置信息
-        /// </summary>
-        public double[] ReadLocation { get; private set; }
-        /// <summary>
         /// 读的标志位数组
         /// </summary>
         public bool[] ReadFlagBits { get; private set; }
@@ -28,10 +24,6 @@ namespace FT
         /// 读的测试信息
         /// </summary>
         public string[] ReadTestInformation { get; private set; }
-        /// <summary>
-        /// 读报警信息
-        /// </summary>
-        public bool[] ReadPLCAlarm { get; private set; }
         /// <summary>
         /// 读取运动参数
         /// </summary>
@@ -45,6 +37,7 @@ namespace FT
         readonly string[] plcInPmtName;
         readonly string[] plcOutFlagName;
         readonly string[] plcTestInfoName;
+        readonly string[] plcOutFWName;
         #endregion
 
         #region 读取到的哈希表
@@ -54,6 +47,7 @@ namespace FT
         public Hashtable PLCPmt;
         public Hashtable FlagBits;
         public Hashtable TestInformation;
+        public Hashtable PLCFW;
         #endregion
 
         private Communication()
@@ -61,12 +55,11 @@ namespace FT
             Compolet = new NJCompoletLibrary();
             #region 初始化读取值存储数组
             ReadPLCIO = new bool[400];
-            ReadLocation = new double[200];
             ReadFlagBits = new bool[100];
             ReadTestInformation = new string[100];
-            ReadPLCAlarm = new bool[250];
             ReadPLCPmt = new double[150];
             #endregion
+
             #region 初始化变量
             //PLC Out IO
             plcOutIOName = InitializeStringArray("PlcOutIO", 0, 249);
@@ -86,6 +79,9 @@ namespace FT
             //字符串信息
             plcTestInfoName = InitializeStringArray("PLC测试信息", 0, 59);
             TestInformation = InitializeHashtable<string>(plcTestInfoName, "noData");
+            //复位信号
+            plcOutFWName = InitializeStringArray("FW", 100, 150);
+            PLCFW = InitializeHashtable<bool>(plcOutFWName, false);
             #endregion
         }
 
@@ -157,10 +153,11 @@ namespace FT
         {
             try
             {
-                #region 方式一更新数据:直接读（会乱码）
-                //GetValue(compolet.GetHashtable(plcOutIOName), PLCIO);
+                #region 方式一更新数据:直接读
+                GetValue<bool>(Compolet.GetHashtable(plcOutIOName), PLCIO);
                 GetValue<double>(Compolet.GetHashtable(plcOutLocationName), Location);
                 GetValue<bool>(Compolet.GetHashtable(plcOutAlarmName), Alarm);
+                GetValue<bool>(Compolet.GetHashtable(plcOutFWName), PLCFW);
                 //GetValue(compolet.GetHashtable(plcInPmtName), PLCPmt);
                 //GetValue(compolet.GetHashtable(plcOutFlagName), FlagBits);
                 //GetValue(compolet.GetHashtable(plcTestInfoName), TestInformation);
