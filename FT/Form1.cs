@@ -1582,7 +1582,7 @@ namespace FT
         }
         #endregion
 
-        private bool WriteValue(TextBox valueBox, string message)
+        private bool WriteValue(TextBox valueBox)
         {
             if (double.TryParse(valueBox.Text, out double value))
             {
@@ -1841,14 +1841,14 @@ namespace FT
                 }
                 else
                 {
-                    if (WriteValue(calibrationTextBoxes[info[1]], "输入错误请检查"))
+                    if (WriteValue(calibrationTextBoxes[info[1]]))
                         communication.WriteVariable(true, info[0]);
                 }
             }
             else if (info.Length == 3)
             {
-                WriteValue(calibrationTextBoxes[info[1]], "输入错误请检查");
-                WriteValue(calibrationTextBoxes[info[2]], "输入错误请检查");
+                WriteValue(calibrationTextBoxes[info[1]]);
+                WriteValue(calibrationTextBoxes[info[2]]);
                 communication.WriteVariable(true, info[0]);
             }
         }

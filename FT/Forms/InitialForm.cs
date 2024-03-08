@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyToolkit;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Threading;
@@ -21,6 +22,32 @@ namespace FT
             InitializeComponent();
             AddSignals();
             UpdateSignals();
+        }
+
+        public void LoadSignalsInfo()
+        {
+            SignalsInfo.Add("上料X轴", "FW[101]");
+            SignalsInfo.Add("上料Y轴", "FW[102]");
+            SignalsInfo.Add("托盘实盘轴", "FW[103]");
+            SignalsInfo.Add("托盘倒实盘轴", "FW[105]");
+            SignalsInfo.Add("托盘NG盘轴", "FW[104]");
+            SignalsInfo.Add("托盘倒NG盘轴", "FW[106]");
+            SignalsInfo.Add("上料吸嘴1轴", "FW[119]");
+            SignalsInfo.Add("上料吸嘴2轴", "FW[120]");
+            SignalsInfo.Add("实盘卡盘缩回", "PlcOutIO[130]");
+            SignalsInfo.Add("NG盘卡盘缩回", "PlcOutIO[132]");
+            SignalsInfo.Add("上料取托盘上升", "PlcOutIO[16]");
+            SignalsInfo.Add("上料取托盘松开", "PlcOutIO[19]");
+            SignalsInfo.Add("上料吸嘴1上升", "PlcOutIO[32]");
+            SignalsInfo.Add("上料吸嘴2上升", "PlcOutIO[35]");
+            SignalsInfo.Add("next", "next");
+            SignalsInfo.Add("搬运平移轴", "FW[107]");
+            SignalsInfo.Add("增广夹爪1", "PlcOutIO[50]");
+            SignalsInfo.Add("增广夹爪2", "PlcOutIO[57]");
+            SignalsInfo.Add("翻转翻0°", "PlcOutIO[48]");
+            SignalsInfo.Add("平移吸嘴1/2下降", "PlcOutIO[41]");
+            SignalsInfo.Add("平移吸嘴3/4下降", "PlcOutIO[43]");
+            //JsonManager.SaveJsonString(Environment.CurrentDirectory + "\\Configuration", "InitialSignals", SignalsInfo);
         }
 
         public void SetLabelColor(bool io, Label indicator)
