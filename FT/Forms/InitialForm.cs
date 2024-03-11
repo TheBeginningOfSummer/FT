@@ -16,6 +16,7 @@ namespace FT
         public List<Label> Labels = new List<Label>();
 
         private bool isRefresh = true;
+        private readonly string completeAddress = "PlcOutIO[156]";
 
         public InitialForm()
         {
@@ -188,6 +189,20 @@ namespace FT
                         if (connection.PLCFW.ContainsKey(item.Tag))
                             SetLabelColor((bool)connection.PLCFW[item.Tag], item);
                     }
+                    if (connection.PLCIO.ContainsKey(completeAddress))
+                    {
+                        if ((bool)connection.PLCIO[completeAddress])
+                        {
+                            Thread.Sleep(1000);
+                            Invoke(new Action(() => Close()));
+                            break;
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("读取初始化完成信号失败", "提示");
+                        break;
+                    }
                 }
             });
         }
@@ -196,5 +211,6 @@ namespace FT
         {
             isRefresh = false;
         }
+
     }
 }
