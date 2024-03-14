@@ -19,7 +19,7 @@ namespace FT
         //登录界面
         Form2 loginForm;
         //通信
-        Communication communication = Communication.Singleton;
+        Communication connection = Communication.Singleton;
         //托盘数据
         TrayManager trayManager;
         //计时组件
@@ -91,7 +91,7 @@ namespace FT
         public Form1(Form2 form2)
         {
             InitializeComponent();
-
+            
             loginForm = form2;
 
             //数据初始化、打开通信端口
@@ -138,9 +138,9 @@ namespace FT
                 //更新托盘状态到界面
                 trayManager.UpdateTrayLabels(PN_Trays);
                 #endregion
-
+                
                 #region 打开数据通信端口
-                communication.Compolet.Open();
+                connection.Compolet.Open();
                 isUpdate = true;
                 UpdateData();
                 UpdateInterface();
@@ -167,6 +167,43 @@ namespace FT
             {
                 indicator.Invoke(new Action(() => indicator.BackColor = Color.White));
             }
+        }
+        //标签设置
+        public void SetLabel(bool signal, Label label, Color color1, Color color2, string text1 = "  ", string text2 = "  ")
+        {
+            if (label.IsHandleCreated)
+                label.Invoke(new Action(() =>
+                {
+                    if (signal)
+                    {
+                        label.BackColor = color1;
+                        label.Text = text1;
+                    }
+                    else
+                    {
+                        label.BackColor = color2;
+                        label.Text = text2;
+                    }
+                }));
+            else
+            {
+                if (signal)
+                {
+                    label.BackColor = color1;
+                    label.Text = text1;
+                }
+                else
+                {
+                    label.BackColor = color2;
+                    label.Text = text2;
+                }
+            }
+        }
+        //标签更新
+        public void UpdateLabel(Label label, Color color1, Color color2, string text1 = "  ", string text2 = "  ")
+        {
+            if (connection.PLCOutput.ContainsKey(label.Tag))
+                SetLabel((bool)connection.PLCOutput[label.Tag], label, color1, color2, text1, text2);
         }
         //实时显示Text内容方法
         public void SetTextBoxText<T>(TextBox textBox, T variable)
@@ -370,12 +407,12 @@ namespace FT
                     {
                         stopwatch1.Restart();
                         Thread.Sleep(100);
-                        communication.RefreshData();
+                        connection.RefreshData();
                         #region 数据处理
-                        if (communication.ReadTestInformation[20] != "" && communication.ReadTestInformation[20] != null)
+                        if (connection.ReadTestInformation[20] != "" && connection.ReadTestInformation[20] != null)
                         {
                             //当前托盘索引更新
-                            trayManager.TrayIndex = int.Parse(communication.ReadTestInformation[20]);
+                            trayManager.TrayIndex = int.Parse(connection.ReadTestInformation[20]);
                         }
                         else
                         {
@@ -383,40 +420,40 @@ namespace FT
                             trayManager.TrayIndex = 0;
                         }
                         //托盘数据初始化
-                        if (communication.ReadFlagBits[2])
+                        if (connection.ReadFlagBits[2])
                         {
                             if (currentTrayType != "" && currentTrayType != " ")
                             {
                                 //初始化
                                 trayManager.InitializeTrays(currentTrayType);
                                 trayManager.UpdateTrayLabels(PN_Trays);
-                                communication.WriteVariable(false, "PLC标志位[2]");
+                                connection.WriteVariable(false, "PLC标志位[2]");
                                 //托盘初始化完成,PLC检测到此值为true后，将PLC标志位[2]置为false
-                                communication.WriteVariable(true, "PC标志位[2]");
+                                connection.WriteVariable(true, "PC标志位[2]");
                             }
                         }
                         //托盘扫码完成
-                        if (communication.ReadFlagBits[0])
+                        if (connection.ReadFlagBits[0])
                         {
                             //将扫到的托盘码赋值给托盘管理类
-                            trayManager.SetTrayNumber(communication.ReadTestInformation[4]);
+                            trayManager.SetTrayNumber(connection.ReadTestInformation[4]);
                             //托盘扫码完成,PLC检测到此值为true后，将PLC标志位[0]置为false
-                            communication.WriteVariable(false, "PLC标志位[0]");
-                            communication.WriteVariable(true, "PC标志位[0]");
+                            connection.WriteVariable(false, "PLC标志位[0]");
+                            connection.WriteVariable(true, "PC标志位[0]");
                         }
                         //产品测试完成
-                        if (communication.ReadFlagBits[1])
+                        if (connection.ReadFlagBits[1])
                         {
                             Sensor sensor = new Sensor(
-                                communication.ReadTestInformation[0],
-                                communication.ReadTestInformation[1],
-                                communication.ReadTestInformation[2],
-                                int.Parse(communication.ReadTestInformation[3]),
-                                communication.ReadTestInformation[4],
-                                int.Parse(communication.ReadTestInformation[5]),
-                                communication.ReadTestInformation[6],
-                                communication.ReadTestInformation[7],
-                                communication.ReadTestInformation[8]);
+                                connection.ReadTestInformation[0],
+                                connection.ReadTestInformation[1],
+                                connection.ReadTestInformation[2],
+                                int.Parse(connection.ReadTestInformation[3]),
+                                connection.ReadTestInformation[4],
+                                int.Parse(connection.ReadTestInformation[5]),
+                                connection.ReadTestInformation[6],
+                                connection.ReadTestInformation[7],
+                                connection.ReadTestInformation[8]);
                             //Mapping图更新
                             trayManager.SetSensorDataInTray(sensor);
                             //数据存储
@@ -424,8 +461,8 @@ namespace FT
                             //数据库数据存储
                             SensorDataManager.AddSensor(sensor);
                             //产品信息录入完成。将PLC标志位[1]置为false，PC标志位置true，表示准备好下一次的录入
-                            communication.WriteVariable(false, "PLC标志位[1]");
-                            communication.WriteVariable(true, "PC标志位[1]");
+                            connection.WriteVariable(false, "PLC标志位[1]");
+                            connection.WriteVariable(true, "PC标志位[1]");
                         }
                         #endregion
                         stopwatch1.Stop();
@@ -471,179 +508,157 @@ namespace FT
                         foreach (var item in textBoxInformation)
                         {
                             if (firstPageTextBoxes.ContainsKey(item.Key))
-                                SetTextBoxText(firstPageTextBoxes[item.Key], communication.Location[item.Value]);
+                                SetTextBoxText(firstPageTextBoxes[item.Key], connection.Location[item.Value]);
                             if (manualPageTextBoxes.ContainsKey(item.Key))
-                                SetTextBoxText(manualPageTextBoxes[item.Key], communication.Location[item.Value]);
+                                SetTextBoxText(manualPageTextBoxes[item.Key], connection.Location[item.Value]);
                             if (calibrationTextBoxes.ContainsKey(item.Key))
-                                SetTextBoxText(calibrationTextBoxes[item.Key], communication.Location[item.Value]);
+                                SetTextBoxText(calibrationTextBoxes[item.Key], connection.Location[item.Value]);
                         }
                         #endregion
 
                         #region Lable显示本机当前状态
-                        if (communication.ReadPLCIO[157])
+                        if (connection.ReadPLCIO[157])
                         {
                             LB_手动状态.Invoke(new Action(() => LB_手动状态.Text = "手动模式"));
                         }
-
-                        if (communication.ReadPLCIO[158])
+                        if (connection.ReadPLCIO[158])
                         {
                             LB_手动状态.Invoke(new Action(() => LB_手动状态.Text = "自动模式"));
                         }
 
-                        if (communication.ReadPLCIO[159])
-                        {
-                            LB_自动运行状态.Invoke(new Action(() => LB_自动运行状态.Text = "运行中"));
-                        }
-                        else
-                        {
-                            LB_自动运行状态.Invoke(new Action(() => LB_自动运行状态.Text = "停止中"));
-                        }
+                        //SetLabelColor(connection.ReadPLCIO[155], LB_Connection);
+                        //SetLabelColor(connection.ReadPLCIO[156], LB_初始化状态);
+                        SetLabelColor(connection.ReadPLCIO[158], LB_手动状态);
+                        //SetLabelColor(connection.ReadPLCIO[159], LB_自动运行状态);
 
-                        if (communication.ReadPLCIO[156])
-                        {
-                            LB_初始化状态.Invoke(new Action(() => LB_初始化状态.Text = "初始化完成"));
-                        }
-                        else
-                        {
-                            LB_初始化状态.Invoke(new Action(() => LB_初始化状态.Text = "初始化未完成"));
-                        }
-
-                        if (communication.ReadPLCIO[155])
-                        {
-                            LB_Connection.Invoke(new Action(() => LB_Connection.Text = "本机已连接"));
-                        }
-                        else
-                        {
-                            LB_Connection.Invoke(new Action(() => LB_Connection.Text = "本机未连接"));
-                        }
-
-                        SetLabelColor(communication.ReadPLCIO[155], LB_Connection);
-                        SetLabelColor(communication.ReadPLCIO[156], LB_初始化状态);
-                        SetLabelColor(communication.ReadPLCIO[158], LB_手动状态);
-                        SetLabelColor(communication.ReadPLCIO[159], LB_自动运行状态);
+                        UpdateLabel(LB_Connection, Color.Lime, Color.White, "本机已连接", "本机未连接");
+                        UpdateLabel(LB_初始化状态, Color.Lime, Color.White, "初始化完成", "初始化未完成");
+                        //UpdateLabel(LB_手动状态, Color.Lime, Color.White, "自动模式", "手动模式");
+                        UpdateLabel(LB_自动运行状态, Color.Lime, Color.White, "运行中", "停止中");
+                        UpdateLabel(LB_初始化提示, Color.Lime, Color.Red, "无需初始化，可自动运行", "请先将机台初始化，再自动运行");
                         #endregion
 
                         #region IO信息界面
-                        SetLabelColor(communication.ReadPLCIO[0], X00);
-                        SetLabelColor(communication.ReadPLCIO[1], X01);
-                        SetLabelColor(communication.ReadPLCIO[2], X02);
-                        SetLabelColor(communication.ReadPLCIO[3], X03);
-                        SetLabelColor(communication.ReadPLCIO[4], X04);
-                        SetLabelColor(communication.ReadPLCIO[5], X05);
-                        SetLabelColor(communication.ReadPLCIO[6], X06);
-                        SetLabelColor(communication.ReadPLCIO[7], X07);
-                        SetLabelColor(communication.ReadPLCIO[8], X08);
-                        SetLabelColor(communication.ReadPLCIO[9], X09);
-                        SetLabelColor(communication.ReadPLCIO[10], X10);
-                        SetLabelColor(communication.ReadPLCIO[11], X11);
-                        SetLabelColor(communication.ReadPLCIO[12], X12);
-                        SetLabelColor(communication.ReadPLCIO[13], X13);
-                        SetLabelColor(communication.ReadPLCIO[14], X14);
-                        SetLabelColor(communication.ReadPLCIO[15], X15);
-                        SetLabelColor(communication.ReadPLCIO[16], X16);
-                        SetLabelColor(communication.ReadPLCIO[17], X17);
-                        SetLabelColor(communication.ReadPLCIO[18], X18);
-                        SetLabelColor(communication.ReadPLCIO[19], X19);
-                        SetLabelColor(communication.ReadPLCIO[20], X20);
-                        SetLabelColor(communication.ReadPLCIO[21], X21);
-                        SetLabelColor(communication.ReadPLCIO[22], X22);
-                        SetLabelColor(communication.ReadPLCIO[23], X23);
-                        SetLabelColor(communication.ReadPLCIO[24], X24);
-                        SetLabelColor(communication.ReadPLCIO[25], X25);
-                        SetLabelColor(communication.ReadPLCIO[26], X26);
-                        SetLabelColor(communication.ReadPLCIO[27], X27);
-                        SetLabelColor(communication.ReadPLCIO[28], X28);
-                        SetLabelColor(communication.ReadPLCIO[29], X29);
-                        SetLabelColor(communication.ReadPLCIO[30], X30);
-                        SetLabelColor(communication.ReadPLCIO[31], X31);
-                        SetLabelColor(communication.ReadPLCIO[32], X32);
-                        SetLabelColor(communication.ReadPLCIO[33], X33);
-                        SetLabelColor(communication.ReadPLCIO[34], X34);
-                        SetLabelColor(communication.ReadPLCIO[35], X35);
-                        SetLabelColor(communication.ReadPLCIO[36], X36);
-                        SetLabelColor(communication.ReadPLCIO[37], X37);
-                        SetLabelColor(communication.ReadPLCIO[38], X38);
-                        SetLabelColor(communication.ReadPLCIO[39], X39);
-                        SetLabelColor(communication.ReadPLCIO[40], X40);
-                        SetLabelColor(communication.ReadPLCIO[41], X41);
-                        SetLabelColor(communication.ReadPLCIO[42], X42);
-                        SetLabelColor(communication.ReadPLCIO[43], X43);
-                        SetLabelColor(communication.ReadPLCIO[44], X44);
-                        SetLabelColor(communication.ReadPLCIO[45], X45);
-                        SetLabelColor(communication.ReadPLCIO[46], X46);
-                        SetLabelColor(communication.ReadPLCIO[47], X47);
-                        SetLabelColor(communication.ReadPLCIO[48], X48);
-                        SetLabelColor(communication.ReadPLCIO[49], X49);
-                        SetLabelColor(communication.ReadPLCIO[50], X50);
-                        SetLabelColor(communication.ReadPLCIO[51], X51);
-                        SetLabelColor(communication.ReadPLCIO[52], X52);
-                        SetLabelColor(communication.ReadPLCIO[53], X53);
-                        SetLabelColor(communication.ReadPLCIO[54], X54);
-                        SetLabelColor(communication.ReadPLCIO[55], X55);
-                        SetLabelColor(communication.ReadPLCIO[56], X56);
-                        SetLabelColor(communication.ReadPLCIO[57], X57);
-                        SetLabelColor(communication.ReadPLCIO[58], X58);
-                        SetLabelColor(communication.ReadPLCIO[59], X59);
-                        SetLabelColor(communication.ReadPLCIO[60], X60);
-                        SetLabelColor(communication.ReadPLCIO[61], X61);
-                        SetLabelColor(communication.ReadPLCIO[62], X62);
-                        SetLabelColor(communication.ReadPLCIO[63], X63);
-                        SetLabelColor(communication.ReadPLCIO[64], X64);
-                        SetLabelColor(communication.ReadPLCIO[65], X65);
-                        SetLabelColor(communication.ReadPLCIO[66], X66);
-                        SetLabelColor(communication.ReadPLCIO[67], X67);
-                        SetLabelColor(communication.ReadPLCIO[68], X68);
-                        SetLabelColor(communication.ReadPLCIO[69], X69);
-                        SetLabelColor(communication.ReadPLCIO[70], X70);
-                        SetLabelColor(communication.ReadPLCIO[71], X71);
-                        SetLabelColor(communication.ReadPLCIO[72], X72);
-                        SetLabelColor(communication.ReadPLCIO[73], X73);
-                        SetLabelColor(communication.ReadPLCIO[74], X74);
-                        SetLabelColor(communication.ReadPLCIO[75], X75);
-                        SetLabelColor(communication.ReadPLCIO[76], X76);
-                        SetLabelColor(communication.ReadPLCIO[77], X77);
-                        SetLabelColor(communication.ReadPLCIO[78], X78);
-                        SetLabelColor(communication.ReadPLCIO[79], X79);
-                        SetLabelColor(communication.ReadPLCIO[80], X80);
-                        SetLabelColor(communication.ReadPLCIO[81], X81);
-                        SetLabelColor(communication.ReadPLCIO[82], X82);
-                        SetLabelColor(communication.ReadPLCIO[83], X83);
-                        SetLabelColor(communication.ReadPLCIO[84], X84);
-                        SetLabelColor(communication.ReadPLCIO[85], X85);
-                        SetLabelColor(communication.ReadPLCIO[86], X86);
-                        SetLabelColor(communication.ReadPLCIO[87], X87);
-                        SetLabelColor(communication.ReadPLCIO[88], X88);
-                        SetLabelColor(communication.ReadPLCIO[89], X89);
-                        SetLabelColor(communication.ReadPLCIO[90], X90);
-                        SetLabelColor(communication.ReadPLCIO[91], X91);
-                        SetLabelColor(communication.ReadPLCIO[92], X92);
-                        SetLabelColor(communication.ReadPLCIO[93], X93);
-                        SetLabelColor(communication.ReadPLCIO[94], X94);
-                        SetLabelColor(communication.ReadPLCIO[95], X95);
-                        SetLabelColor(communication.ReadPLCIO[96], X96);
-                        SetLabelColor(communication.ReadPLCIO[97], X97);
-                        SetLabelColor(communication.ReadPLCIO[98], X98);
-                        SetLabelColor(communication.ReadPLCIO[99], X99);
-                        SetLabelColor(communication.ReadPLCIO[100], X100);
-                        SetLabelColor(communication.ReadPLCIO[101], X101);
-                        SetLabelColor(communication.ReadPLCIO[102], X102);
-                        SetLabelColor(communication.ReadPLCIO[103], X103);
-                        SetLabelColor(communication.ReadPLCIO[104], X104);
-                        SetLabelColor(communication.ReadPLCIO[105], X105);
-                        SetLabelColor(communication.ReadPLCIO[106], X106);
-                        SetLabelColor(communication.ReadPLCIO[107], X107);
-                        SetLabelColor(communication.ReadPLCIO[108], X108);
-                        SetLabelColor(communication.ReadPLCIO[109], X109);
-                        SetLabelColor(communication.ReadPLCIO[110], X110);
-                        SetLabelColor(communication.ReadPLCIO[111], X111);
-                        SetLabelColor(communication.ReadPLCIO[112], X112);
-                        SetLabelColor(communication.ReadPLCIO[113], X113);
-                        SetLabelColor(communication.ReadPLCIO[114], X114);
-                        SetLabelColor(communication.ReadPLCIO[115], X115);
-                        SetLabelColor(communication.ReadPLCIO[116], X116);
-                        SetLabelColor(communication.ReadPLCIO[117], X117);
-                        SetLabelColor(communication.ReadPLCIO[118], X118);
-                        SetLabelColor(communication.ReadPLCIO[119], X119);
+                        SetLabelColor(connection.ReadPLCIO[0], X00);
+                        SetLabelColor(connection.ReadPLCIO[1], X01);
+                        SetLabelColor(connection.ReadPLCIO[2], X02);
+                        SetLabelColor(connection.ReadPLCIO[3], X03);
+                        SetLabelColor(connection.ReadPLCIO[4], X04);
+                        SetLabelColor(connection.ReadPLCIO[5], X05);
+                        SetLabelColor(connection.ReadPLCIO[6], X06);
+                        SetLabelColor(connection.ReadPLCIO[7], X07);
+                        SetLabelColor(connection.ReadPLCIO[8], X08);
+                        SetLabelColor(connection.ReadPLCIO[9], X09);
+                        SetLabelColor(connection.ReadPLCIO[10], X10);
+                        SetLabelColor(connection.ReadPLCIO[11], X11);
+                        SetLabelColor(connection.ReadPLCIO[12], X12);
+                        SetLabelColor(connection.ReadPLCIO[13], X13);
+                        SetLabelColor(connection.ReadPLCIO[14], X14);
+                        SetLabelColor(connection.ReadPLCIO[15], X15);
+                        SetLabelColor(connection.ReadPLCIO[16], X16);
+                        SetLabelColor(connection.ReadPLCIO[17], X17);
+                        SetLabelColor(connection.ReadPLCIO[18], X18);
+                        SetLabelColor(connection.ReadPLCIO[19], X19);
+                        SetLabelColor(connection.ReadPLCIO[20], X20);
+                        SetLabelColor(connection.ReadPLCIO[21], X21);
+                        SetLabelColor(connection.ReadPLCIO[22], X22);
+                        SetLabelColor(connection.ReadPLCIO[23], X23);
+                        SetLabelColor(connection.ReadPLCIO[24], X24);
+                        SetLabelColor(connection.ReadPLCIO[25], X25);
+                        SetLabelColor(connection.ReadPLCIO[26], X26);
+                        SetLabelColor(connection.ReadPLCIO[27], X27);
+                        SetLabelColor(connection.ReadPLCIO[28], X28);
+                        SetLabelColor(connection.ReadPLCIO[29], X29);
+                        SetLabelColor(connection.ReadPLCIO[30], X30);
+                        SetLabelColor(connection.ReadPLCIO[31], X31);
+                        SetLabelColor(connection.ReadPLCIO[32], X32);
+                        SetLabelColor(connection.ReadPLCIO[33], X33);
+                        SetLabelColor(connection.ReadPLCIO[34], X34);
+                        SetLabelColor(connection.ReadPLCIO[35], X35);
+                        SetLabelColor(connection.ReadPLCIO[36], X36);
+                        SetLabelColor(connection.ReadPLCIO[37], X37);
+                        SetLabelColor(connection.ReadPLCIO[38], X38);
+                        SetLabelColor(connection.ReadPLCIO[39], X39);
+                        SetLabelColor(connection.ReadPLCIO[40], X40);
+                        SetLabelColor(connection.ReadPLCIO[41], X41);
+                        SetLabelColor(connection.ReadPLCIO[42], X42);
+                        SetLabelColor(connection.ReadPLCIO[43], X43);
+                        SetLabelColor(connection.ReadPLCIO[44], X44);
+                        SetLabelColor(connection.ReadPLCIO[45], X45);
+                        SetLabelColor(connection.ReadPLCIO[46], X46);
+                        SetLabelColor(connection.ReadPLCIO[47], X47);
+                        SetLabelColor(connection.ReadPLCIO[48], X48);
+                        SetLabelColor(connection.ReadPLCIO[49], X49);
+                        SetLabelColor(connection.ReadPLCIO[50], X50);
+                        SetLabelColor(connection.ReadPLCIO[51], X51);
+                        SetLabelColor(connection.ReadPLCIO[52], X52);
+                        SetLabelColor(connection.ReadPLCIO[53], X53);
+                        SetLabelColor(connection.ReadPLCIO[54], X54);
+                        SetLabelColor(connection.ReadPLCIO[55], X55);
+                        SetLabelColor(connection.ReadPLCIO[56], X56);
+                        SetLabelColor(connection.ReadPLCIO[57], X57);
+                        SetLabelColor(connection.ReadPLCIO[58], X58);
+                        SetLabelColor(connection.ReadPLCIO[59], X59);
+                        SetLabelColor(connection.ReadPLCIO[60], X60);
+                        SetLabelColor(connection.ReadPLCIO[61], X61);
+                        SetLabelColor(connection.ReadPLCIO[62], X62);
+                        SetLabelColor(connection.ReadPLCIO[63], X63);
+                        SetLabelColor(connection.ReadPLCIO[64], X64);
+                        SetLabelColor(connection.ReadPLCIO[65], X65);
+                        SetLabelColor(connection.ReadPLCIO[66], X66);
+                        SetLabelColor(connection.ReadPLCIO[67], X67);
+                        SetLabelColor(connection.ReadPLCIO[68], X68);
+                        SetLabelColor(connection.ReadPLCIO[69], X69);
+                        SetLabelColor(connection.ReadPLCIO[70], X70);
+                        SetLabelColor(connection.ReadPLCIO[71], X71);
+                        SetLabelColor(connection.ReadPLCIO[72], X72);
+                        SetLabelColor(connection.ReadPLCIO[73], X73);
+                        SetLabelColor(connection.ReadPLCIO[74], X74);
+                        SetLabelColor(connection.ReadPLCIO[75], X75);
+                        SetLabelColor(connection.ReadPLCIO[76], X76);
+                        SetLabelColor(connection.ReadPLCIO[77], X77);
+                        SetLabelColor(connection.ReadPLCIO[78], X78);
+                        SetLabelColor(connection.ReadPLCIO[79], X79);
+                        SetLabelColor(connection.ReadPLCIO[80], X80);
+                        SetLabelColor(connection.ReadPLCIO[81], X81);
+                        SetLabelColor(connection.ReadPLCIO[82], X82);
+                        SetLabelColor(connection.ReadPLCIO[83], X83);
+                        SetLabelColor(connection.ReadPLCIO[84], X84);
+                        SetLabelColor(connection.ReadPLCIO[85], X85);
+                        SetLabelColor(connection.ReadPLCIO[86], X86);
+                        SetLabelColor(connection.ReadPLCIO[87], X87);
+                        SetLabelColor(connection.ReadPLCIO[88], X88);
+                        SetLabelColor(connection.ReadPLCIO[89], X89);
+                        SetLabelColor(connection.ReadPLCIO[90], X90);
+                        SetLabelColor(connection.ReadPLCIO[91], X91);
+                        SetLabelColor(connection.ReadPLCIO[92], X92);
+                        SetLabelColor(connection.ReadPLCIO[93], X93);
+                        SetLabelColor(connection.ReadPLCIO[94], X94);
+                        SetLabelColor(connection.ReadPLCIO[95], X95);
+                        SetLabelColor(connection.ReadPLCIO[96], X96);
+                        SetLabelColor(connection.ReadPLCIO[97], X97);
+                        SetLabelColor(connection.ReadPLCIO[98], X98);
+                        SetLabelColor(connection.ReadPLCIO[99], X99);
+                        SetLabelColor(connection.ReadPLCIO[100], X100);
+                        SetLabelColor(connection.ReadPLCIO[101], X101);
+                        SetLabelColor(connection.ReadPLCIO[102], X102);
+                        SetLabelColor(connection.ReadPLCIO[103], X103);
+                        SetLabelColor(connection.ReadPLCIO[104], X104);
+                        SetLabelColor(connection.ReadPLCIO[105], X105);
+                        SetLabelColor(connection.ReadPLCIO[106], X106);
+                        SetLabelColor(connection.ReadPLCIO[107], X107);
+                        SetLabelColor(connection.ReadPLCIO[108], X108);
+                        SetLabelColor(connection.ReadPLCIO[109], X109);
+                        SetLabelColor(connection.ReadPLCIO[110], X110);
+                        SetLabelColor(connection.ReadPLCIO[111], X111);
+                        SetLabelColor(connection.ReadPLCIO[112], X112);
+                        SetLabelColor(connection.ReadPLCIO[113], X113);
+                        SetLabelColor(connection.ReadPLCIO[114], X114);
+                        SetLabelColor(connection.ReadPLCIO[115], X115);
+                        SetLabelColor(connection.ReadPLCIO[116], X116);
+                        SetLabelColor(connection.ReadPLCIO[117], X117);
+                        SetLabelColor(connection.ReadPLCIO[118], X118);
+                        SetLabelColor(connection.ReadPLCIO[119], X119);
                         //SetLabelColor(communication.ReadPLCIO[120], X120);
                         //SetLabelColor(communication.ReadPLCIO[121], X121);
                         //SetLabelColor(communication.ReadPLCIO[122], X122);
@@ -652,14 +667,14 @@ namespace FT
                         //SetLabelColor(communication.ReadPLCIO[125], X125);
                         //SetLabelColor(communication.ReadPLCIO[126], X126);
                         //SetLabelColor(communication.ReadPLCIO[127], X127);
-                        SetLabelColor(communication.ReadPLCIO[128], X128);
-                        SetLabelColor(communication.ReadPLCIO[129], X129);
-                        SetLabelColor(communication.ReadPLCIO[130], X130);
-                        SetLabelColor(communication.ReadPLCIO[131], X131);
-                        SetLabelColor(communication.ReadPLCIO[132], X132);
-                        SetLabelColor(communication.ReadPLCIO[133], X133);
-                        SetLabelColor(communication.ReadPLCIO[134], X134);
-                        SetLabelColor(communication.ReadPLCIO[135], X135);
+                        SetLabelColor(connection.ReadPLCIO[128], X128);
+                        SetLabelColor(connection.ReadPLCIO[129], X129);
+                        SetLabelColor(connection.ReadPLCIO[130], X130);
+                        SetLabelColor(connection.ReadPLCIO[131], X131);
+                        SetLabelColor(connection.ReadPLCIO[132], X132);
+                        SetLabelColor(connection.ReadPLCIO[133], X133);
+                        SetLabelColor(connection.ReadPLCIO[134], X134);
+                        SetLabelColor(connection.ReadPLCIO[135], X135);
                         //SetLabelColor(communication.ReadPLCIO[136], X136);
                         //SetLabelColor(communication.ReadPLCIO[137], X137);
                         //SetLabelColor(communication.ReadPLCIO[138], X138);
@@ -678,249 +693,249 @@ namespace FT
                         //SetLabelColor(communication.ReadPLCIO[157], Y07);
                         //SetLabelColor(communication.ReadPLCIO[158], Y08);
                         //SetLabelColor(communication.ReadPLCIO[159], Y09);
-                        SetLabelColor(communication.ReadPLCIO[160], 夹爪状态);
-                        SetLabelColor(communication.ReadPLCIO[161], LB_自动本地状态);
-                        SetLabelColor(communication.ReadPLCIO[162], LB_自动远程状态);
-                        SetLabelColor(communication.ReadPLCIO[163], LB_自动远程状态测试);
+                        SetLabelColor(connection.ReadPLCIO[160], 夹爪状态);
+                        SetLabelColor(connection.ReadPLCIO[161], LB_自动本地状态);
+                        SetLabelColor(connection.ReadPLCIO[162], LB_自动远程状态);
+                        SetLabelColor(connection.ReadPLCIO[163], LB_自动远程状态测试);
                         //SetLabelColor(communication.ReadPLCIO[164], Y14);
                         //SetLabelColor(communication.ReadPLCIO[165], Y15);
-                        SetLabelColor(communication.ReadPLCIO[166], LB_FW_上料X);
-                        SetLabelColor(communication.ReadPLCIO[167], LB_FW_上料Y);
-                        SetLabelColor(communication.ReadPLCIO[168], LB_FW_实盘);
-                        SetLabelColor(communication.ReadPLCIO[169], LB_FW_倒实盘);
-                        SetLabelColor(communication.ReadPLCIO[170], LB_FW_NG盘);
-                        SetLabelColor(communication.ReadPLCIO[171], LB_FW_倒NG盘);
-                        SetLabelColor(communication.ReadPLCIO[172], LB_FW_平移);
-                        SetLabelColor(communication.ReadPLCIO[173], LB_FW_搬运X);
-                        SetLabelColor(communication.ReadPLCIO[174], LB_FW_搬运Y);
-                        SetLabelColor(communication.ReadPLCIO[175], LB_FW_搬运Z);
-                        SetLabelColor(communication.ReadPLCIO[176], LB_FW_夹具1);
-                        SetLabelColor(communication.ReadPLCIO[177], LB_FW_夹具2);
-                        SetLabelColor(communication.ReadPLCIO[178], LB_FW_夹具3);
-                        SetLabelColor(communication.ReadPLCIO[179], LB_FW_夹具4);
-                        SetLabelColor(communication.ReadPLCIO[180], LB_FW_黑体1);
-                        SetLabelColor(communication.ReadPLCIO[181], LB_FW_黑体2);
-                        SetLabelColor(communication.ReadPLCIO[182], LB_FW_黑体3);
-                        SetLabelColor(communication.ReadPLCIO[183], LB_FW_黑体4);
-                        SetLabelColor(communication.ReadPLCIO[184], LB_FW_吸嘴1);
-                        SetLabelColor(communication.ReadPLCIO[185], LB_FW_吸嘴2);
-                        SetLabelColor(communication.ReadPLCIO[186], LB_FW_辐射板1);
-                        SetLabelColor(communication.ReadPLCIO[187], LB_FW_辐射板2);
-                        SetLabelColor(communication.ReadPLCIO[188], LB_FW_辐射板3);
-                        SetLabelColor(communication.ReadPLCIO[189], LB_FW_辐射板4);
-                        SetLabelColor(communication.ReadPLCIO[190], LB_FW_钧舵1激活);
-                        SetLabelColor(communication.ReadPLCIO[191], LB_FW_钧舵2激活);
-                        SetLabelColor(communication.ReadPLCIO[192], LB_FW_钧舵3激活);
-                        SetLabelColor(communication.ReadPLCIO[193], LB_FW_钧舵4激活);
+                        SetLabelColor(connection.ReadPLCIO[166], LB_FW_上料X);
+                        SetLabelColor(connection.ReadPLCIO[167], LB_FW_上料Y);
+                        SetLabelColor(connection.ReadPLCIO[168], LB_FW_实盘);
+                        SetLabelColor(connection.ReadPLCIO[169], LB_FW_倒实盘);
+                        SetLabelColor(connection.ReadPLCIO[170], LB_FW_NG盘);
+                        SetLabelColor(connection.ReadPLCIO[171], LB_FW_倒NG盘);
+                        SetLabelColor(connection.ReadPLCIO[172], LB_FW_平移);
+                        SetLabelColor(connection.ReadPLCIO[173], LB_FW_搬运X);
+                        SetLabelColor(connection.ReadPLCIO[174], LB_FW_搬运Y);
+                        SetLabelColor(connection.ReadPLCIO[175], LB_FW_搬运Z);
+                        SetLabelColor(connection.ReadPLCIO[176], LB_FW_夹具1);
+                        SetLabelColor(connection.ReadPLCIO[177], LB_FW_夹具2);
+                        SetLabelColor(connection.ReadPLCIO[178], LB_FW_夹具3);
+                        SetLabelColor(connection.ReadPLCIO[179], LB_FW_夹具4);
+                        SetLabelColor(connection.ReadPLCIO[180], LB_FW_黑体1);
+                        SetLabelColor(connection.ReadPLCIO[181], LB_FW_黑体2);
+                        SetLabelColor(connection.ReadPLCIO[182], LB_FW_黑体3);
+                        SetLabelColor(connection.ReadPLCIO[183], LB_FW_黑体4);
+                        SetLabelColor(connection.ReadPLCIO[184], LB_FW_吸嘴1);
+                        SetLabelColor(connection.ReadPLCIO[185], LB_FW_吸嘴2);
+                        SetLabelColor(connection.ReadPLCIO[186], LB_FW_辐射板1);
+                        SetLabelColor(connection.ReadPLCIO[187], LB_FW_辐射板2);
+                        SetLabelColor(connection.ReadPLCIO[188], LB_FW_辐射板3);
+                        SetLabelColor(connection.ReadPLCIO[189], LB_FW_辐射板4);
+                        SetLabelColor(connection.ReadPLCIO[190], LB_FW_钧舵1激活);
+                        SetLabelColor(connection.ReadPLCIO[191], LB_FW_钧舵2激活);
+                        SetLabelColor(connection.ReadPLCIO[192], LB_FW_钧舵3激活);
+                        SetLabelColor(connection.ReadPLCIO[193], LB_FW_钧舵4激活);
                         //SetLabelColor(communication.ReadPLCIO[194], Y44);
-                        SetLabelColor(communication.ReadPLCIO[195], 夹爪2状态);
-                        SetLabelColor(communication.ReadPLCIO[196], 夹爪3状态);
-                        SetLabelColor(communication.ReadPLCIO[197], 夹爪4状态);
+                        SetLabelColor(connection.ReadPLCIO[195], 夹爪2状态);
+                        SetLabelColor(connection.ReadPLCIO[196], 夹爪3状态);
+                        SetLabelColor(connection.ReadPLCIO[197], 夹爪4状态);
                         #endregion
 
                         #region 气缸信号显示
-                        SetLabelColor(communication.ReadPLCIO[16], LB上料机械手上升);
-                        SetLabelColor(communication.ReadPLCIO[17], LB上料机械手下降);
-                        SetLabelColor(communication.ReadPLCIO[18], LB上料机械手夹紧);
-                        SetLabelColor(communication.ReadPLCIO[19], LB上料机械手张开);
-                        SetLabelColor(communication.ReadPLCIO[32], LB上料吸嘴1上升);
-                        SetLabelColor(communication.ReadPLCIO[33], LB上料吸嘴1下降);
-                        SetLabelColor(communication.ReadPLCIO[35], LB上料吸嘴2上升);
-                        SetLabelColor(communication.ReadPLCIO[36], LB上料吸嘴2下降);
-                        SetLabelColor(communication.ReadPLCIO[40], LB平移吸嘴12上升);
-                        SetLabelColor(communication.ReadPLCIO[41], LB平移吸嘴12下降);
-                        SetLabelColor(communication.ReadPLCIO[42], LB平移吸嘴34上升);
-                        SetLabelColor(communication.ReadPLCIO[43], LB平移吸嘴34下降);
-                        SetLabelColor(communication.ReadPLCIO[48], LB翻转气缸0);
-                        SetLabelColor(communication.ReadPLCIO[49], LB翻转气缸180);
-                        SetLabelColor(communication.ReadPLCIO[128], LB实盘卡盘伸出);
-                        SetLabelColor(communication.ReadPLCIO[130], LB实盘卡盘缩回);
-                        SetLabelColor(communication.ReadPLCIO[134], LBNG卡盘伸出);
-                        SetLabelColor(communication.ReadPLCIO[132], LBNG卡盘缩回);
-                        SetLabelColor(communication.ReadPLCIO[34], LB上料吸嘴1真空);
-                        SetLabelColor(communication.ReadPLCIO[37], LB上料吸嘴2真空);
-                        SetLabelColor(communication.ReadPLCIO[44], LB平移吸嘴1真空);
-                        SetLabelColor(communication.ReadPLCIO[45], LB平移吸嘴2真空);
-                        SetLabelColor(communication.ReadPLCIO[46], LB平移吸嘴3真空);
-                        SetLabelColor(communication.ReadPLCIO[47], LB平移吸嘴4真空);
-                        SetLabelColor(communication.ReadPLCIO[238], LBEFU上电);
-                        SetLabelColor(communication.ReadPLCIO[50], LB夹爪1回原点);
-                        SetLabelColor(communication.ReadPLCIO[57], LB夹爪2回原点);
-                        SetLabelColor(communication.ReadPLCIO[52], LB夹爪1闭合1);
-                        SetLabelColor(communication.ReadPLCIO[59], LB夹爪2闭合1);
-                        SetLabelColor(communication.ReadPLCIO[194], LB除尘器1吹扫);
-                        SetLabelColor(communication.ReadPLCIO[64], LB旋转夹爪1上升);
-                        SetLabelColor(communication.ReadPLCIO[66], LB旋转夹爪2上升);
-                        SetLabelColor(communication.ReadPLCIO[68], LB旋转夹爪3上升);
-                        SetLabelColor(communication.ReadPLCIO[70], LB旋转夹爪4上升);
-                        SetLabelColor(communication.ReadPLCIO[65], LB旋转夹爪1下降);
-                        SetLabelColor(communication.ReadPLCIO[67], LB旋转夹爪2下降);
-                        SetLabelColor(communication.ReadPLCIO[69], LB旋转夹爪3下降);
-                        SetLabelColor(communication.ReadPLCIO[71], LB旋转夹爪4下降);
-                        SetLabelColor(communication.ReadPLCIO[72], LB工位1光阑伸出);
-                        SetLabelColor(communication.ReadPLCIO[80], LB工位2光阑伸出);
-                        SetLabelColor(communication.ReadPLCIO[88], LB工位3光阑伸出);
-                        SetLabelColor(communication.ReadPLCIO[96], LB工位4光阑伸出);
-                        SetLabelColor(communication.ReadPLCIO[73], LB工位1光阑缩回);
-                        SetLabelColor(communication.ReadPLCIO[81], LB工位2光阑缩回);
-                        SetLabelColor(communication.ReadPLCIO[89], LB工位3光阑缩回);
-                        SetLabelColor(communication.ReadPLCIO[97], LB工位4光阑缩回);
-                        SetLabelColor(communication.ReadPLCIO[74], LB工位1光阑上升);
-                        SetLabelColor(communication.ReadPLCIO[82], LB工位2光阑上升);
-                        SetLabelColor(communication.ReadPLCIO[90], LB工位3光阑上升);
-                        SetLabelColor(communication.ReadPLCIO[98], LB工位4光阑上升);
-                        SetLabelColor(communication.ReadPLCIO[104], LB工位1光阑右上升);
-                        SetLabelColor(communication.ReadPLCIO[106], LB工位2光阑右上升);
-                        SetLabelColor(communication.ReadPLCIO[108], LB工位3光阑右上升);
-                        SetLabelColor(communication.ReadPLCIO[110], LB工位4光阑右上升);
-                        SetLabelColor(communication.ReadPLCIO[75], LB工位1光阑下降);
-                        SetLabelColor(communication.ReadPLCIO[83], LB工位2光阑下降);
-                        SetLabelColor(communication.ReadPLCIO[91], LB工位3光阑下降);
-                        SetLabelColor(communication.ReadPLCIO[99], LB工位4光阑下降);
-                        SetLabelColor(communication.ReadPLCIO[105], LB工位1光阑右下降);
-                        SetLabelColor(communication.ReadPLCIO[107], LB工位2光阑右下降);
-                        SetLabelColor(communication.ReadPLCIO[109], LB工位3光阑右下降);
-                        SetLabelColor(communication.ReadPLCIO[111], LB工位4光阑右下降);
-                        SetLabelColor(communication.ReadPLCIO[76], LB工位1辐射板上升);
-                        SetLabelColor(communication.ReadPLCIO[84], LB工位2辐射板上升);
-                        SetLabelColor(communication.ReadPLCIO[92], LB工位3辐射板上升);
-                        SetLabelColor(communication.ReadPLCIO[100], LB工位4辐射板上升);
-                        SetLabelColor(communication.ReadPLCIO[77], LB工位1辐射板下降);
-                        SetLabelColor(communication.ReadPLCIO[85], LB工位2辐射板下降);
-                        SetLabelColor(communication.ReadPLCIO[93], LB工位3辐射板下降);
-                        SetLabelColor(communication.ReadPLCIO[101], LB工位4辐射板下降);
-                        SetLabelColor(communication.ReadPLCIO[78], LB工位1翻转0);
-                        SetLabelColor(communication.ReadPLCIO[86], LB工位2翻转0);
-                        SetLabelColor(communication.ReadPLCIO[94], LB工位3翻转0);
-                        SetLabelColor(communication.ReadPLCIO[102], LB工位4翻转0);
-                        SetLabelColor(communication.ReadPLCIO[79], LB工位1翻转90);
-                        SetLabelColor(communication.ReadPLCIO[87], LB工位2翻转90);
-                        SetLabelColor(communication.ReadPLCIO[95], LB工位3翻转90);
-                        SetLabelColor(communication.ReadPLCIO[103], LB工位4翻转90);
-                        SetLabelColor(communication.ReadPLCIO[112], LB工位1光阑伸出右);
-                        SetLabelColor(communication.ReadPLCIO[114], LB工位2光阑伸出右);
-                        SetLabelColor(communication.ReadPLCIO[116], LB工位3光阑伸出右);
-                        SetLabelColor(communication.ReadPLCIO[118], LB工位4光阑伸出右);
-                        SetLabelColor(communication.ReadPLCIO[113], LB工位1光阑缩回右);
-                        SetLabelColor(communication.ReadPLCIO[115], LB工位2光阑缩回右);
-                        SetLabelColor(communication.ReadPLCIO[117], LB工位3光阑缩回右);
-                        SetLabelColor(communication.ReadPLCIO[119], LB工位4光阑缩回右);
+                        SetLabelColor(connection.ReadPLCIO[16], LB上料机械手上升);
+                        SetLabelColor(connection.ReadPLCIO[17], LB上料机械手下降);
+                        SetLabelColor(connection.ReadPLCIO[18], LB上料机械手夹紧);
+                        SetLabelColor(connection.ReadPLCIO[19], LB上料机械手张开);
+                        SetLabelColor(connection.ReadPLCIO[32], LB上料吸嘴1上升);
+                        SetLabelColor(connection.ReadPLCIO[33], LB上料吸嘴1下降);
+                        SetLabelColor(connection.ReadPLCIO[35], LB上料吸嘴2上升);
+                        SetLabelColor(connection.ReadPLCIO[36], LB上料吸嘴2下降);
+                        SetLabelColor(connection.ReadPLCIO[40], LB平移吸嘴12上升);
+                        SetLabelColor(connection.ReadPLCIO[41], LB平移吸嘴12下降);
+                        SetLabelColor(connection.ReadPLCIO[42], LB平移吸嘴34上升);
+                        SetLabelColor(connection.ReadPLCIO[43], LB平移吸嘴34下降);
+                        SetLabelColor(connection.ReadPLCIO[48], LB翻转气缸0);
+                        SetLabelColor(connection.ReadPLCIO[49], LB翻转气缸180);
+                        SetLabelColor(connection.ReadPLCIO[128], LB实盘卡盘伸出);
+                        SetLabelColor(connection.ReadPLCIO[130], LB实盘卡盘缩回);
+                        SetLabelColor(connection.ReadPLCIO[134], LBNG卡盘伸出);
+                        SetLabelColor(connection.ReadPLCIO[132], LBNG卡盘缩回);
+                        SetLabelColor(connection.ReadPLCIO[34], LB上料吸嘴1真空);
+                        SetLabelColor(connection.ReadPLCIO[37], LB上料吸嘴2真空);
+                        SetLabelColor(connection.ReadPLCIO[44], LB平移吸嘴1真空);
+                        SetLabelColor(connection.ReadPLCIO[45], LB平移吸嘴2真空);
+                        SetLabelColor(connection.ReadPLCIO[46], LB平移吸嘴3真空);
+                        SetLabelColor(connection.ReadPLCIO[47], LB平移吸嘴4真空);
+                        SetLabelColor(connection.ReadPLCIO[238], LBEFU上电);
+                        SetLabelColor(connection.ReadPLCIO[50], LB夹爪1回原点);
+                        SetLabelColor(connection.ReadPLCIO[57], LB夹爪2回原点);
+                        SetLabelColor(connection.ReadPLCIO[52], LB夹爪1闭合1);
+                        SetLabelColor(connection.ReadPLCIO[59], LB夹爪2闭合1);
+                        SetLabelColor(connection.ReadPLCIO[194], LB除尘器1吹扫);
+                        SetLabelColor(connection.ReadPLCIO[64], LB旋转夹爪1上升);
+                        SetLabelColor(connection.ReadPLCIO[66], LB旋转夹爪2上升);
+                        SetLabelColor(connection.ReadPLCIO[68], LB旋转夹爪3上升);
+                        SetLabelColor(connection.ReadPLCIO[70], LB旋转夹爪4上升);
+                        SetLabelColor(connection.ReadPLCIO[65], LB旋转夹爪1下降);
+                        SetLabelColor(connection.ReadPLCIO[67], LB旋转夹爪2下降);
+                        SetLabelColor(connection.ReadPLCIO[69], LB旋转夹爪3下降);
+                        SetLabelColor(connection.ReadPLCIO[71], LB旋转夹爪4下降);
+                        SetLabelColor(connection.ReadPLCIO[72], LB工位1光阑伸出);
+                        SetLabelColor(connection.ReadPLCIO[80], LB工位2光阑伸出);
+                        SetLabelColor(connection.ReadPLCIO[88], LB工位3光阑伸出);
+                        SetLabelColor(connection.ReadPLCIO[96], LB工位4光阑伸出);
+                        SetLabelColor(connection.ReadPLCIO[73], LB工位1光阑缩回);
+                        SetLabelColor(connection.ReadPLCIO[81], LB工位2光阑缩回);
+                        SetLabelColor(connection.ReadPLCIO[89], LB工位3光阑缩回);
+                        SetLabelColor(connection.ReadPLCIO[97], LB工位4光阑缩回);
+                        SetLabelColor(connection.ReadPLCIO[74], LB工位1光阑上升);
+                        SetLabelColor(connection.ReadPLCIO[82], LB工位2光阑上升);
+                        SetLabelColor(connection.ReadPLCIO[90], LB工位3光阑上升);
+                        SetLabelColor(connection.ReadPLCIO[98], LB工位4光阑上升);
+                        SetLabelColor(connection.ReadPLCIO[104], LB工位1光阑右上升);
+                        SetLabelColor(connection.ReadPLCIO[106], LB工位2光阑右上升);
+                        SetLabelColor(connection.ReadPLCIO[108], LB工位3光阑右上升);
+                        SetLabelColor(connection.ReadPLCIO[110], LB工位4光阑右上升);
+                        SetLabelColor(connection.ReadPLCIO[75], LB工位1光阑下降);
+                        SetLabelColor(connection.ReadPLCIO[83], LB工位2光阑下降);
+                        SetLabelColor(connection.ReadPLCIO[91], LB工位3光阑下降);
+                        SetLabelColor(connection.ReadPLCIO[99], LB工位4光阑下降);
+                        SetLabelColor(connection.ReadPLCIO[105], LB工位1光阑右下降);
+                        SetLabelColor(connection.ReadPLCIO[107], LB工位2光阑右下降);
+                        SetLabelColor(connection.ReadPLCIO[109], LB工位3光阑右下降);
+                        SetLabelColor(connection.ReadPLCIO[111], LB工位4光阑右下降);
+                        SetLabelColor(connection.ReadPLCIO[76], LB工位1辐射板上升);
+                        SetLabelColor(connection.ReadPLCIO[84], LB工位2辐射板上升);
+                        SetLabelColor(connection.ReadPLCIO[92], LB工位3辐射板上升);
+                        SetLabelColor(connection.ReadPLCIO[100], LB工位4辐射板上升);
+                        SetLabelColor(connection.ReadPLCIO[77], LB工位1辐射板下降);
+                        SetLabelColor(connection.ReadPLCIO[85], LB工位2辐射板下降);
+                        SetLabelColor(connection.ReadPLCIO[93], LB工位3辐射板下降);
+                        SetLabelColor(connection.ReadPLCIO[101], LB工位4辐射板下降);
+                        SetLabelColor(connection.ReadPLCIO[78], LB工位1翻转0);
+                        SetLabelColor(connection.ReadPLCIO[86], LB工位2翻转0);
+                        SetLabelColor(connection.ReadPLCIO[94], LB工位3翻转0);
+                        SetLabelColor(connection.ReadPLCIO[102], LB工位4翻转0);
+                        SetLabelColor(connection.ReadPLCIO[79], LB工位1翻转90);
+                        SetLabelColor(connection.ReadPLCIO[87], LB工位2翻转90);
+                        SetLabelColor(connection.ReadPLCIO[95], LB工位3翻转90);
+                        SetLabelColor(connection.ReadPLCIO[103], LB工位4翻转90);
+                        SetLabelColor(connection.ReadPLCIO[112], LB工位1光阑伸出右);
+                        SetLabelColor(connection.ReadPLCIO[114], LB工位2光阑伸出右);
+                        SetLabelColor(connection.ReadPLCIO[116], LB工位3光阑伸出右);
+                        SetLabelColor(connection.ReadPLCIO[118], LB工位4光阑伸出右);
+                        SetLabelColor(connection.ReadPLCIO[113], LB工位1光阑缩回右);
+                        SetLabelColor(connection.ReadPLCIO[115], LB工位2光阑缩回右);
+                        SetLabelColor(connection.ReadPLCIO[117], LB工位3光阑缩回右);
+                        SetLabelColor(connection.ReadPLCIO[119], LB工位4光阑缩回右);
                         #endregion
 
                         #region 参数设置界面
-                        SetTextBoxText(txt上料X轴定位速度, communication.ReadPLCPmt[0]);
-                        SetTextBoxText(txt上料Y轴定位速度, communication.ReadPLCPmt[1]);
-                        SetTextBoxText(txt升降轴定位速度, communication.ReadPLCPmt[2]);
-                        SetTextBoxText(txt平移轴定位速度, communication.ReadPLCPmt[3]);
-                        SetTextBoxText(txt中空轴定位速度, communication.ReadPLCPmt[4]);
-                        SetTextBoxText(txt搬运X轴定位速度, communication.ReadPLCPmt[5]);
-                        SetTextBoxText(txt搬运Y轴定位速度, communication.ReadPLCPmt[6]);
-                        SetTextBoxText(txt搬运Z轴定位速度, communication.ReadPLCPmt[7]);
-                        SetTextBoxText(txtSocket轴定位速度, communication.ReadPLCPmt[8]);
-                        SetTextBoxText(txt黑体轴定位速度, communication.ReadPLCPmt[9]);
-                        SetTextBoxText(txt热辐射轴定位速度, communication.ReadPLCPmt[11]);
-                        SetTextBoxText(txt上料X轴手动速度, communication.ReadPLCPmt[15]);
-                        SetTextBoxText(txt上料Y轴手动速度, communication.ReadPLCPmt[16]);
-                        SetTextBoxText(txt升降轴手动速度, communication.ReadPLCPmt[17]);
-                        SetTextBoxText(txt平移轴手动速度, communication.ReadPLCPmt[18]);
-                        SetTextBoxText(txt中空轴手动速度, communication.ReadPLCPmt[19]);
-                        SetTextBoxText(txt搬运X轴手动速度, communication.ReadPLCPmt[20]);
-                        SetTextBoxText(txt搬运Y轴手动速度, communication.ReadPLCPmt[21]);
-                        SetTextBoxText(txt搬运Z轴手动速度, communication.ReadPLCPmt[22]);
-                        SetTextBoxText(txtSocket轴手动速度, communication.ReadPLCPmt[23]);
-                        SetTextBoxText(txt黑体轴手动速度, communication.ReadPLCPmt[24]);
-                        SetTextBoxText(txt热辐射轴手动速度, communication.ReadPLCPmt[25]);
+                        SetTextBoxText(txt上料X轴定位速度, connection.ReadPLCPmt[0]);
+                        SetTextBoxText(txt上料Y轴定位速度, connection.ReadPLCPmt[1]);
+                        SetTextBoxText(txt升降轴定位速度, connection.ReadPLCPmt[2]);
+                        SetTextBoxText(txt平移轴定位速度, connection.ReadPLCPmt[3]);
+                        SetTextBoxText(txt中空轴定位速度, connection.ReadPLCPmt[4]);
+                        SetTextBoxText(txt搬运X轴定位速度, connection.ReadPLCPmt[5]);
+                        SetTextBoxText(txt搬运Y轴定位速度, connection.ReadPLCPmt[6]);
+                        SetTextBoxText(txt搬运Z轴定位速度, connection.ReadPLCPmt[7]);
+                        SetTextBoxText(txtSocket轴定位速度, connection.ReadPLCPmt[8]);
+                        SetTextBoxText(txt黑体轴定位速度, connection.ReadPLCPmt[9]);
+                        SetTextBoxText(txt热辐射轴定位速度, connection.ReadPLCPmt[11]);
+                        SetTextBoxText(txt上料X轴手动速度, connection.ReadPLCPmt[15]);
+                        SetTextBoxText(txt上料Y轴手动速度, connection.ReadPLCPmt[16]);
+                        SetTextBoxText(txt升降轴手动速度, connection.ReadPLCPmt[17]);
+                        SetTextBoxText(txt平移轴手动速度, connection.ReadPLCPmt[18]);
+                        SetTextBoxText(txt中空轴手动速度, connection.ReadPLCPmt[19]);
+                        SetTextBoxText(txt搬运X轴手动速度, connection.ReadPLCPmt[20]);
+                        SetTextBoxText(txt搬运Y轴手动速度, connection.ReadPLCPmt[21]);
+                        SetTextBoxText(txt搬运Z轴手动速度, connection.ReadPLCPmt[22]);
+                        SetTextBoxText(txtSocket轴手动速度, connection.ReadPLCPmt[23]);
+                        SetTextBoxText(txt黑体轴手动速度, connection.ReadPLCPmt[24]);
+                        SetTextBoxText(txt热辐射轴手动速度, connection.ReadPLCPmt[25]);
                         #endregion
 
                         #region 气缸界面使用次数检测
-                        SetTextBoxText(txt夹具1次数, communication.ReadPLCPmt[31]);
-                        CheckCount(communication.ReadPLCPmt[31], 10000, ref isShow1, "工装1使用次数已达上限，请及时更换");
-                        SetTextBoxText(txt夹具2次数, communication.ReadPLCPmt[32]);
-                        CheckCount(communication.ReadPLCPmt[32], 10000, ref isShow2, "工装2使用次数已达上限，请及时更换");
-                        SetTextBoxText(txt夹具3次数, communication.ReadPLCPmt[33]);
-                        CheckCount(communication.ReadPLCPmt[33], 10000, ref isShow3, "工装3使用次数已达上限，请及时更换");
-                        SetTextBoxText(txt夹具4次数, communication.ReadPLCPmt[34]);
-                        CheckCount(communication.ReadPLCPmt[34], 10000, ref isShow4, "工装4使用次数已达上限，请及时更换");
-                        SetTextBoxText(txt上料吸嘴1次数, communication.ReadPLCPmt[111]);
-                        CheckCount(communication.ReadPLCPmt[111], 10000, ref isShow,"上料吸嘴1使用次数已达上限，请及时更换");
-                        SetTextBoxText(txt上料吸嘴2次数, communication.ReadPLCPmt[112]);
-                        CheckCount(communication.ReadPLCPmt[112], 10000, ref isShow5, "上料吸嘴2使用次数已达上限，请及时更换");
-                        SetTextBoxText(txt平移吸嘴1次数, communication.ReadPLCPmt[113]);
-                        CheckCount(communication.ReadPLCPmt[113], 10000, ref isShow6, "平移吸嘴1使用次数已达上限，请及时更换");
-                        SetTextBoxText(txt平移吸嘴2次数, communication.ReadPLCPmt[114]);
-                        CheckCount(communication.ReadPLCPmt[114], 10000, ref isShow7, "平移吸嘴2使用次数已达上限，请及时更换");
-                        SetTextBoxText(txt平移吸嘴3次数, communication.ReadPLCPmt[115]);
-                        CheckCount(communication.ReadPLCPmt[115], 10000, ref isShow8, "平移吸嘴3使用次数已达上限，请及时更换");
-                        SetTextBoxText(txt平移吸嘴4次数, communication.ReadPLCPmt[116]);
-                        CheckCount(communication.ReadPLCPmt[116], 10000, ref isShow9, "平移吸嘴4使用次数已达上限，请及时更换");
-                        SetTextBoxText(txt测试夹爪1次数, communication.ReadPLCPmt[117]);
-                        CheckCount(communication.ReadPLCPmt[117], 10000, ref isShow10, "测试夹爪1使用次数已达上限，请及时更换胶带");
-                        SetTextBoxText(txt测试夹爪2次数, communication.ReadPLCPmt[118]);
-                        CheckCount(communication.ReadPLCPmt[118], 10000, ref isShow11, "测试夹爪2使用次数已达上限，请及时更换胶带");
-                        SetTextBoxText(txt测试夹爪3次数, communication.ReadPLCPmt[119]);
-                        CheckCount(communication.ReadPLCPmt[119], 10000, ref isShow12, "测试夹爪3使用次数已达上限，请及时更换胶带");
-                        SetTextBoxText(txt测试夹爪4次数, communication.ReadPLCPmt[120]);
-                        CheckCount(communication.ReadPLCPmt[120], 10000, ref isShow13, "测试夹爪4使用次数已达上限，请及时更换胶带");
+                        SetTextBoxText(txt夹具1次数, connection.ReadPLCPmt[31]);
+                        CheckCount(connection.ReadPLCPmt[31], 10000, ref isShow1, "工装1使用次数已达上限，请及时更换");
+                        SetTextBoxText(txt夹具2次数, connection.ReadPLCPmt[32]);
+                        CheckCount(connection.ReadPLCPmt[32], 10000, ref isShow2, "工装2使用次数已达上限，请及时更换");
+                        SetTextBoxText(txt夹具3次数, connection.ReadPLCPmt[33]);
+                        CheckCount(connection.ReadPLCPmt[33], 10000, ref isShow3, "工装3使用次数已达上限，请及时更换");
+                        SetTextBoxText(txt夹具4次数, connection.ReadPLCPmt[34]);
+                        CheckCount(connection.ReadPLCPmt[34], 10000, ref isShow4, "工装4使用次数已达上限，请及时更换");
+                        SetTextBoxText(txt上料吸嘴1次数, connection.ReadPLCPmt[111]);
+                        CheckCount(connection.ReadPLCPmt[111], 10000, ref isShow,"上料吸嘴1使用次数已达上限，请及时更换");
+                        SetTextBoxText(txt上料吸嘴2次数, connection.ReadPLCPmt[112]);
+                        CheckCount(connection.ReadPLCPmt[112], 10000, ref isShow5, "上料吸嘴2使用次数已达上限，请及时更换");
+                        SetTextBoxText(txt平移吸嘴1次数, connection.ReadPLCPmt[113]);
+                        CheckCount(connection.ReadPLCPmt[113], 10000, ref isShow6, "平移吸嘴1使用次数已达上限，请及时更换");
+                        SetTextBoxText(txt平移吸嘴2次数, connection.ReadPLCPmt[114]);
+                        CheckCount(connection.ReadPLCPmt[114], 10000, ref isShow7, "平移吸嘴2使用次数已达上限，请及时更换");
+                        SetTextBoxText(txt平移吸嘴3次数, connection.ReadPLCPmt[115]);
+                        CheckCount(connection.ReadPLCPmt[115], 10000, ref isShow8, "平移吸嘴3使用次数已达上限，请及时更换");
+                        SetTextBoxText(txt平移吸嘴4次数, connection.ReadPLCPmt[116]);
+                        CheckCount(connection.ReadPLCPmt[116], 10000, ref isShow9, "平移吸嘴4使用次数已达上限，请及时更换");
+                        SetTextBoxText(txt测试夹爪1次数, connection.ReadPLCPmt[117]);
+                        CheckCount(connection.ReadPLCPmt[117], 10000, ref isShow10, "测试夹爪1使用次数已达上限，请及时更换胶带");
+                        SetTextBoxText(txt测试夹爪2次数, connection.ReadPLCPmt[118]);
+                        CheckCount(connection.ReadPLCPmt[118], 10000, ref isShow11, "测试夹爪2使用次数已达上限，请及时更换胶带");
+                        SetTextBoxText(txt测试夹爪3次数, connection.ReadPLCPmt[119]);
+                        CheckCount(connection.ReadPLCPmt[119], 10000, ref isShow12, "测试夹爪3使用次数已达上限，请及时更换胶带");
+                        SetTextBoxText(txt测试夹爪4次数, connection.ReadPLCPmt[120]);
+                        CheckCount(connection.ReadPLCPmt[120], 10000, ref isShow13, "测试夹爪4使用次数已达上限，请及时更换胶带");
                         #endregion
 
                         #region 手动电机界面信息
-                        SetTextBoxText(txt控制器时间, communication.ReadTestInformation[29]);
-                        SetTextBoxText(txt扫码信息, communication.ReadTestInformation[30]);
-                        SetTextBoxText(txt下视觉偏移X, communication.ReadTestInformation[32]);
-                        SetTextBoxText(txt下视觉偏移Y, communication.ReadTestInformation[33]);
-                        SetTextBoxText(txt下视觉偏移θ, communication.ReadTestInformation[34]);
-                        SetTextBoxText(txt上视觉偏移X, communication.ReadTestInformation[36]);
-                        SetTextBoxText(txt上视觉偏移Y, communication.ReadTestInformation[37]);
-                        SetTextBoxText(txt上视觉偏移θ, communication.ReadTestInformation[38]);
-                        SetTextBoxText(txt计算偏移X, communication.ReadTestInformation[39]);
-                        SetTextBoxText(txt计算偏移Y, communication.ReadTestInformation[40]);
-                        SetTextBoxText(txt计算偏移θ, communication.ReadTestInformation[41]);
-                        SetTextBoxText(txt下视觉2偏移X, communication.ReadTestInformation[42]);
-                        SetTextBoxText(txt下视觉2偏移Y, communication.ReadTestInformation[43]);
-                        SetTextBoxText(txt下视觉2偏移θ, communication.ReadTestInformation[44]);
-                        SetTextBoxText(txtR1当前字节, communication.ReadTestInformation[45]);
-                        SetTextBoxText(txtR2当前字节, communication.ReadTestInformation[46]);
-                        SetTextBoxText(txtR3当前字节, communication.ReadTestInformation[47]);
-                        SetTextBoxText(txtR4当前字节, communication.ReadTestInformation[48]);
-                        SetTextBoxText(txt上视觉1偏移X, communication.ReadTestInformation[49]);
-                        SetTextBoxText(txt上视觉1偏移Y, communication.ReadTestInformation[50]);
-                        SetTextBoxText(txt上视觉1偏移θ, communication.ReadTestInformation[51]);
+                        SetTextBoxText(txt控制器时间, connection.ReadTestInformation[29]);
+                        SetTextBoxText(txt扫码信息, connection.ReadTestInformation[30]);
+                        SetTextBoxText(txt下视觉偏移X, connection.ReadTestInformation[32]);
+                        SetTextBoxText(txt下视觉偏移Y, connection.ReadTestInformation[33]);
+                        SetTextBoxText(txt下视觉偏移θ, connection.ReadTestInformation[34]);
+                        SetTextBoxText(txt上视觉偏移X, connection.ReadTestInformation[36]);
+                        SetTextBoxText(txt上视觉偏移Y, connection.ReadTestInformation[37]);
+                        SetTextBoxText(txt上视觉偏移θ, connection.ReadTestInformation[38]);
+                        SetTextBoxText(txt计算偏移X, connection.ReadTestInformation[39]);
+                        SetTextBoxText(txt计算偏移Y, connection.ReadTestInformation[40]);
+                        SetTextBoxText(txt计算偏移θ, connection.ReadTestInformation[41]);
+                        SetTextBoxText(txt下视觉2偏移X, connection.ReadTestInformation[42]);
+                        SetTextBoxText(txt下视觉2偏移Y, connection.ReadTestInformation[43]);
+                        SetTextBoxText(txt下视觉2偏移θ, connection.ReadTestInformation[44]);
+                        SetTextBoxText(txtR1当前字节, connection.ReadTestInformation[45]);
+                        SetTextBoxText(txtR2当前字节, connection.ReadTestInformation[46]);
+                        SetTextBoxText(txtR3当前字节, connection.ReadTestInformation[47]);
+                        SetTextBoxText(txtR4当前字节, connection.ReadTestInformation[48]);
+                        SetTextBoxText(txt上视觉1偏移X, connection.ReadTestInformation[49]);
+                        SetTextBoxText(txt上视觉1偏移Y, connection.ReadTestInformation[50]);
+                        SetTextBoxText(txt上视觉1偏移θ, connection.ReadTestInformation[51]);
                         #endregion
 
                         #region IO信息界面复位信息读取
-                        SetLabelColor(communication.ReadPLCIO[50], LB_FW_增广1);
-                        SetLabelColor(communication.ReadPLCIO[57], LB_FW_增广2);
-                        SetLabelColor(communication.ReadPLCIO[16], LB_FW_夹爪气缸上);
-                        SetLabelColor(communication.ReadPLCIO[19], LB_FW_夹爪气缸张);
-                        SetLabelColor(communication.ReadPLCIO[32], LB_FW_吸嘴1上);
-                        SetLabelColor(communication.ReadPLCIO[35], LB_FW_吸嘴2上);
-                        SetLabelColor(communication.ReadPLCIO[41], LB_FW_吸嘴12下);
-                        SetLabelColor(communication.ReadPLCIO[43], LB_FW_吸嘴34下);
-                        SetLabelColor(communication.ReadPLCIO[48], LB_FW_翻转0度);
-                        SetLabelColor(communication.ReadPLCIO[64], LB_FW_钧舵1上);
-                        SetLabelColor(communication.ReadPLCIO[66], LB_FW_钧舵2上);
-                        SetLabelColor(communication.ReadPLCIO[68], LB_FW_钧舵3上);
-                        SetLabelColor(communication.ReadPLCIO[70], LB_FW_钧舵4上);
-                        SetLabelColor(communication.ReadPLCIO[104], LB_FW_工位1光阑右上);
-                        SetLabelColor(communication.ReadPLCIO[73], LB_FW_工位1光阑缩回);
-                        SetLabelColor(communication.ReadPLCIO[74], LB_FW_工位1光阑左上);
-                        SetLabelColor(communication.ReadPLCIO[77], LB_FW_工位1辐射板下);
-                        SetLabelColor(communication.ReadPLCIO[78], LB_FW_工位1零度);
-                        SetLabelColor(communication.ReadPLCIO[106], LB_FW_工位2光阑右上);
-                        SetLabelColor(communication.ReadPLCIO[81], LB_FW_工位2光阑缩回);
-                        SetLabelColor(communication.ReadPLCIO[82], LB_FW_工位2光阑左上);
-                        SetLabelColor(communication.ReadPLCIO[85], LB_FW_工位2辐射板下);
-                        SetLabelColor(communication.ReadPLCIO[86], LB_FW_工位2零度);
-                        SetLabelColor(communication.ReadPLCIO[108], LB_FW_工位3光阑右上);
-                        SetLabelColor(communication.ReadPLCIO[89], LB_FW_工位3光阑缩回);
-                        SetLabelColor(communication.ReadPLCIO[90], LB_FW_工位3光阑左上);
-                        SetLabelColor(communication.ReadPLCIO[93], LB_FW_工位3辐射板下);
-                        SetLabelColor(communication.ReadPLCIO[94], LB_FW_工位3零度);
-                        SetLabelColor(communication.ReadPLCIO[110], LB_FW_工位4光阑右上);
-                        SetLabelColor(communication.ReadPLCIO[97], LB_FW_工位4光阑缩回);
-                        SetLabelColor(communication.ReadPLCIO[98], LB_FW_工位4光阑左上);
-                        SetLabelColor(communication.ReadPLCIO[101], LB_FW_工位4辐射板下);
-                        SetLabelColor(communication.ReadPLCIO[102], LB_FW_工位4零度);
+                        SetLabelColor(connection.ReadPLCIO[50], LB_FW_增广1);
+                        SetLabelColor(connection.ReadPLCIO[57], LB_FW_增广2);
+                        SetLabelColor(connection.ReadPLCIO[16], LB_FW_夹爪气缸上);
+                        SetLabelColor(connection.ReadPLCIO[19], LB_FW_夹爪气缸张);
+                        SetLabelColor(connection.ReadPLCIO[32], LB_FW_吸嘴1上);
+                        SetLabelColor(connection.ReadPLCIO[35], LB_FW_吸嘴2上);
+                        SetLabelColor(connection.ReadPLCIO[41], LB_FW_吸嘴12下);
+                        SetLabelColor(connection.ReadPLCIO[43], LB_FW_吸嘴34下);
+                        SetLabelColor(connection.ReadPLCIO[48], LB_FW_翻转0度);
+                        SetLabelColor(connection.ReadPLCIO[64], LB_FW_钧舵1上);
+                        SetLabelColor(connection.ReadPLCIO[66], LB_FW_钧舵2上);
+                        SetLabelColor(connection.ReadPLCIO[68], LB_FW_钧舵3上);
+                        SetLabelColor(connection.ReadPLCIO[70], LB_FW_钧舵4上);
+                        SetLabelColor(connection.ReadPLCIO[104], LB_FW_工位1光阑右上);
+                        SetLabelColor(connection.ReadPLCIO[73], LB_FW_工位1光阑缩回);
+                        SetLabelColor(connection.ReadPLCIO[74], LB_FW_工位1光阑左上);
+                        SetLabelColor(connection.ReadPLCIO[77], LB_FW_工位1辐射板下);
+                        SetLabelColor(connection.ReadPLCIO[78], LB_FW_工位1零度);
+                        SetLabelColor(connection.ReadPLCIO[106], LB_FW_工位2光阑右上);
+                        SetLabelColor(connection.ReadPLCIO[81], LB_FW_工位2光阑缩回);
+                        SetLabelColor(connection.ReadPLCIO[82], LB_FW_工位2光阑左上);
+                        SetLabelColor(connection.ReadPLCIO[85], LB_FW_工位2辐射板下);
+                        SetLabelColor(connection.ReadPLCIO[86], LB_FW_工位2零度);
+                        SetLabelColor(connection.ReadPLCIO[108], LB_FW_工位3光阑右上);
+                        SetLabelColor(connection.ReadPLCIO[89], LB_FW_工位3光阑缩回);
+                        SetLabelColor(connection.ReadPLCIO[90], LB_FW_工位3光阑左上);
+                        SetLabelColor(connection.ReadPLCIO[93], LB_FW_工位3辐射板下);
+                        SetLabelColor(connection.ReadPLCIO[94], LB_FW_工位3零度);
+                        SetLabelColor(connection.ReadPLCIO[110], LB_FW_工位4光阑右上);
+                        SetLabelColor(connection.ReadPLCIO[97], LB_FW_工位4光阑缩回);
+                        SetLabelColor(connection.ReadPLCIO[98], LB_FW_工位4光阑左上);
+                        SetLabelColor(connection.ReadPLCIO[101], LB_FW_工位4辐射板下);
+                        SetLabelColor(connection.ReadPLCIO[102], LB_FW_工位4零度);
                         #endregion
 
                         #endregion
@@ -945,11 +960,11 @@ namespace FT
                     {
                         Thread.Sleep(300);
                         //方法二 读哈希表
-                        for (int i = 0; i < communication.Alarm.Count; i++)
+                        for (int i = 0; i < connection.Alarm.Count; i++)
                         {
                             string key = $"PlcOutAlarm[{i}]";
                             if (!alarmInformation.ContainsKey(i.ToString())) continue;
-                            if ((bool)communication.Alarm[key])
+                            if ((bool)connection.Alarm[key])
                             {
                                 //如果当前报警列表不包含检测到的字符串
                                 if (!warning.Contains(alarmInformation[i.ToString()]))
@@ -1011,7 +1026,7 @@ namespace FT
         {
             if (speed.Text != "")
             {
-                communication.WriteVariable(Convert.ToDouble(speed.Text), address);
+                connection.WriteVariable(Convert.ToDouble(speed.Text), address);
                 RecordAndShow($"{message}：{currentSpeed.Text}更改为{speed.Text}mm/s", LogType.Modification, TB_Modification);
                 currentSpeed.Text = speed.Text;
                 speed.Text = null;
@@ -1093,7 +1108,7 @@ namespace FT
             //打开与关闭引脚检测功能的按钮
             if(Model_Change == true) //也可以简化为if(Model_Change)
             {
-                communication.WriteVariable(false, "PlcInIO[469]");
+                connection.WriteVariable(false, "PlcInIO[469]");
                 btn引脚检测功能.Text = "关闭";
                 btn引脚检测功能.BackColor = Color.Transparent;
                 Model_Change = false;
@@ -1101,7 +1116,7 @@ namespace FT
             }
             else
             {
-                communication.WriteVariable(true, "PlcInIO[469]");
+                connection.WriteVariable(true, "PlcInIO[469]");
                 btn引脚检测功能.Text = "打开";
                 btn引脚检测功能.BackColor = Color.LightGreen;
                 Model_Change = true;
@@ -1112,25 +1127,25 @@ namespace FT
         private void BTN打开_MouseDown(object sender, MouseEventArgs e)
         {
             Button button = (Button)sender;
-            communication.WriteVariable(true, (string)button.Tag);
+            connection.WriteVariable(true, (string)button.Tag);
         }
         private void BTN打开_MouseUp(object sender, MouseEventArgs e)
         {
             Button button = (Button)sender;
             RecordAndShow($"{button.Name.Substring(3)}", LogType.Modification, TB_Modification);
-            communication.WriteVariable(false, (string)button.Tag);
+            connection.WriteVariable(false, (string)button.Tag);
         }
 
         private void BTN关闭_MouseDown(object sender, MouseEventArgs e)
         {
             Button button = (Button)sender;
-            communication.WriteVariable(true, (string)button.Tag);
+            connection.WriteVariable(true, (string)button.Tag);
         }
         private void BTN关闭_MouseUp(object sender, MouseEventArgs e)
         {
             Button button = (Button)sender;
             RecordAndShow($"{button.Name.Substring(3)}", LogType.Modification, TB_Modification);
-            communication.WriteVariable(false, (string)button.Tag);
+            connection.WriteVariable(false, (string)button.Tag);
         }
 
         private void BTN提示报警跳过_Click(object sender, EventArgs e)
@@ -1140,7 +1155,7 @@ namespace FT
             if (result == DialogResult.Yes)
             {
                 RecordAndShow($"{button.Text}", LogType.Modification, TB_Modification);
-                communication.WriteVariable(true, (string)button.Tag);
+                connection.WriteVariable(true, (string)button.Tag);
             }
         }
         #endregion
@@ -1152,7 +1167,7 @@ namespace FT
             if (result == DialogResult.Yes)
             {
                 RecordAndShow($"切换为手动模式", LogType.Modification, TB_Modification);
-                communication.WriteVariable(true, "PlcInIO[2]");
+                connection.WriteVariable(true, "PlcInIO[2]");
             }
         }
 
@@ -1162,7 +1177,7 @@ namespace FT
             if (result == DialogResult.Yes)
             {
                 RecordAndShow($"切换为自动模式", LogType.Modification, TB_Modification);
-                communication.WriteVariable(true, "PlcInIO[28]");
+                connection.WriteVariable(true, "PlcInIO[28]");
             }
         }
 
@@ -1178,14 +1193,14 @@ namespace FT
             if (result == DialogResult.Yes)
             {
                 RecordAndShow($"自动运行开始", LogType.Modification, TB_Modification);
-                communication.WriteVariable(true, "PlcInIO[4]");
+                connection.WriteVariable(true, "PlcInIO[4]");
             }
         }
 
         private void btn自动停止_Click(object sender, EventArgs e)
         {
             RecordAndShow($"自动运行停止", LogType.Modification, TB_Modification);
-            communication.WriteVariable(true, "PlcInIO[5]");
+            connection.WriteVariable(true, "PlcInIO[5]");
         }
 
         private void btn初始化_Click(object sender, EventArgs e)
@@ -1200,7 +1215,8 @@ namespace FT
             if (result == DialogResult.Yes)
             {
                 RecordAndShow($"初始化", LogType.Modification, TB_Modification);
-                communication.WriteVariable(true, "PlcInIO[6]");
+                connection.WriteVariable(true, "PlcInIO[6]");
+                Thread.Sleep(2000);
                 InitialForm initialForm = new InitialForm();
                 initialForm.ShowDialog();
             }
@@ -1259,72 +1275,72 @@ namespace FT
                         calibrationButtons.Clear();
                         SetMessage("切换型号。");
                         currentTrayType = CB_TypeOfTray.Text; 
-                        IsWrite = communication.WriteVariable(currentTrayType.Substring(2), "PLC测试信息[55]");
-                        IsWrite = communication.WriteVariable(currentTrayType.Substring(2).Length, "PlcInPmt[72]");
+                        IsWrite = connection.WriteVariable(currentTrayType.Substring(2), "PLC测试信息[55]");
+                        IsWrite = connection.WriteVariable(currentTrayType.Substring(2).Length, "PlcInPmt[72]");
                         if (IsWrite)
                         {
                             RecordAndShow($"{tempTrayType}切换为{currentTrayType}", LogType.Modification, TB_Modification);
                             tempTrayType = currentTrayType;
                         }
 
-                        IsWrite = communication.WriteVariable(trayManager.TrayType[currentTrayType].Length, "PLCInPmt[45]");
-                        IsWrite = communication.WriteVariable(Convert.ToDouble(trayManager.TrayType[currentTrayType].Width), "PLCInPmt[46]");
-                        IsWrite = communication.WriteVariable(trayManager.TrayType[currentTrayType].LineSpacing, "PLCInPmt[47]");
-                        IsWrite = communication.WriteVariable(trayManager.TrayType[currentTrayType].ColumnSpacing, "PLCInPmt[48]");
-                        IsWrite = communication.WriteVariable(trayManager.TrayType[currentTrayType].TrayHeight, "PLCInPmt[49]");
-                        IsWrite = communication.WriteVariable(Convert.ToDouble(trayManager.TrayType[currentTrayType].Length * trayManager.TrayType[currentTrayType].Width), "PLCInPmt[50]");
-                        IsWrite = communication.WriteVariable(trayManager.TrayType[currentTrayType].Index, "PlcInID[1]");
+                        IsWrite = connection.WriteVariable(trayManager.TrayType[currentTrayType].Length, "PLCInPmt[45]");
+                        IsWrite = connection.WriteVariable(Convert.ToDouble(trayManager.TrayType[currentTrayType].Width), "PLCInPmt[46]");
+                        IsWrite = connection.WriteVariable(trayManager.TrayType[currentTrayType].LineSpacing, "PLCInPmt[47]");
+                        IsWrite = connection.WriteVariable(trayManager.TrayType[currentTrayType].ColumnSpacing, "PLCInPmt[48]");
+                        IsWrite = connection.WriteVariable(trayManager.TrayType[currentTrayType].TrayHeight, "PLCInPmt[49]");
+                        IsWrite = connection.WriteVariable(Convert.ToDouble(trayManager.TrayType[currentTrayType].Length * trayManager.TrayType[currentTrayType].Width), "PLCInPmt[50]");
+                        IsWrite = connection.WriteVariable(trayManager.TrayType[currentTrayType].Index, "PlcInID[1]");
 
                         if (trayManager.TrayType[currentTrayType].VacAngle == -90)
                         {
-                            IsWrite = communication.WriteVariable(1, "PlcInID[7]");
+                            IsWrite = connection.WriteVariable(1, "PlcInID[7]");
                         }
                         else if (trayManager.TrayType[currentTrayType].VacAngle == 0)
                         {
-                            IsWrite = communication.WriteVariable(2, "PlcInID[7]");
+                            IsWrite = connection.WriteVariable(2, "PlcInID[7]");
                         }
                         else if (trayManager.TrayType[currentTrayType].VacAngle == 90)
                         {
-                            IsWrite = communication.WriteVariable(3, "PlcInID[7]");
+                            IsWrite = connection.WriteVariable(3, "PlcInID[7]");
                         }
                         else
                         {
-                            IsWrite = communication.WriteVariable(-1, "PlcInID[7]");
+                            IsWrite = connection.WriteVariable(-1, "PlcInID[7]");
                         }
 
                         if (trayManager.TrayType[currentTrayType].ClawsAngle == -90)
                         {
-                            IsWrite = communication.WriteVariable(1, "PlcInID[8]");
+                            IsWrite = connection.WriteVariable(1, "PlcInID[8]");
                         }
                         else if (trayManager.TrayType[currentTrayType].ClawsAngle == 0)
                         {
-                            IsWrite = communication.WriteVariable(2, "PlcInID[8]");
+                            IsWrite = connection.WriteVariable(2, "PlcInID[8]");
                         }
                         else if (trayManager.TrayType[currentTrayType].ClawsAngle == 90)
                         {
-                            IsWrite = communication.WriteVariable(3, "PlcInID[8]");
+                            IsWrite = connection.WriteVariable(3, "PlcInID[8]");
                         }
                         else
                         {
-                            IsWrite = communication.WriteVariable(-1, "PlcInID[8]");
+                            IsWrite = connection.WriteVariable(-1, "PlcInID[8]");
                         }
 
                         string currentType = trayManager.TrayType[CB_TypeOfTray.Text].TrayType.Substring(0, 2);
                         if (currentType == "晶圆")
                         {
-                            IsWrite = communication.WriteVariable(1, "PlcInID[6]");
+                            IsWrite = connection.WriteVariable(1, "PlcInID[6]");
                         }
                         else if (currentType == "金属")
                         {
-                            IsWrite = communication.WriteVariable(2, "PlcInID[6]");
+                            IsWrite = connection.WriteVariable(2, "PlcInID[6]");
                         }
                         else if (currentType == "陶瓷")
                         {
-                            IsWrite = communication.WriteVariable(3, "PlcInID[6]");
+                            IsWrite = connection.WriteVariable(3, "PlcInID[6]");
                         }
                         else
                         {
-                            IsWrite = communication.WriteVariable(-1, "PlcInID[6]");
+                            IsWrite = connection.WriteVariable(-1, "PlcInID[6]");
                         }
 
                         if (!IsWrite)
@@ -1353,13 +1369,13 @@ namespace FT
                     RecordAndShow($"当前型号为：{CB_TypeOfTray.Text}", LogType.Modification, TB_Modification);
                     if (this.CB_Socket类.SelectedItem.ToString() == "四目")
                     {
-                        communication.WriteVariable(1, "PlcInID[2]");
+                        connection.WriteVariable(1, "PlcInID[2]");
                         RecordAndShow($"当前产品为{currentTrayType}，更改为四目", LogType.Modification, TB_Modification);
                     }
 
                     if (this.CB_Socket类.SelectedItem.ToString() == "单目")
                     {
-                        communication.WriteVariable(2, "PlcInID[2]");
+                        connection.WriteVariable(2, "PlcInID[2]");
                         RecordAndShow($"当前产品为{currentTrayType}，更改为单目", LogType.Modification, TB_Modification);
                     }
                 }
@@ -1380,7 +1396,7 @@ namespace FT
                     string number = System.Text.RegularExpressions.Regex.Replace(CB_工位.Text, @"[^0-9]+", "");
                     if (int.TryParse(number, out int pos))
                     {
-                        communication.WriteVariable(pos, "PlcInID[3]");
+                        connection.WriteVariable(pos, "PlcInID[3]");
                         RecordAndShow($"切换为第{pos}个工位", LogType.Modification, TB_Modification);
                     }
                 }
@@ -1401,7 +1417,7 @@ namespace FT
                     string number = System.Text.RegularExpressions.Regex.Replace(CB_工作盘数.Text, @"[^0-9]+", "");
                     if (int.TryParse(number, out int pos))
                     {
-                        communication.WriteVariable(pos, "PlcInID[5]");
+                        connection.WriteVariable(pos, "PlcInID[5]");
                         RecordAndShow($"工作盘数{pos}盘", LogType.Modification, TB_Modification);
                     }
                 }
@@ -1420,9 +1436,9 @@ namespace FT
             if (result == DialogResult.Yes)
             {
                 RecordAndShow($"选择自动模式本地", LogType.Modification, TB_Modification);
-                communication.WriteVariable(true, "PlcInIO[3]");
-                communication.WriteVariable(false, "PlcInIO[27]");
-                communication.WriteVariable(false, "PlcInIO[29]");
+                connection.WriteVariable(true, "PlcInIO[3]");
+                connection.WriteVariable(false, "PlcInIO[27]");
+                connection.WriteVariable(false, "PlcInIO[29]");
             }
         }
 
@@ -1432,9 +1448,9 @@ namespace FT
             if (result == DialogResult.Yes)
             {
                 RecordAndShow($"选择自动模式远程-测试", LogType.Modification, TB_Modification);
-                communication.WriteVariable(true, "PlcInIO[29]");
-                communication.WriteVariable(false, "PlcInIO[3]");
-                communication.WriteVariable(false, "PlcInIO[27]");
+                connection.WriteVariable(true, "PlcInIO[29]");
+                connection.WriteVariable(false, "PlcInIO[3]");
+                connection.WriteVariable(false, "PlcInIO[27]");
             }
         }
         #endregion
@@ -1442,13 +1458,13 @@ namespace FT
         #region 常用功能
         private void btn手动给测试机触发信号_MouseDown(object sender, MouseEventArgs e)
         {
-            communication.WriteVariable(true, "PlcInIO[149]");
+            connection.WriteVariable(true, "PlcInIO[149]");
         }
 
         private void btn手动给测试机触发信号_MouseUp(object sender, MouseEventArgs e)
         {
             RecordAndShow($"手动给测试机触发信号", LogType.Modification, TB_Modification);
-            communication.WriteVariable(false, "PlcInIO[149]");
+            connection.WriteVariable(false, "PlcInIO[149]");
         }
 
         private void btn人工上下料_Click(object sender, EventArgs e)
@@ -1457,7 +1473,7 @@ namespace FT
             if (result == DialogResult.Yes)
             {
                 RecordAndShow($"上料X轴移动到取托盘避让位置", LogType.Modification, TB_Modification);
-                communication.WriteVariable(true, "PlcInIO[210]");
+                connection.WriteVariable(true, "PlcInIO[210]");
             }
         }
 
@@ -1467,7 +1483,7 @@ namespace FT
             if (result == DialogResult.Yes)
             {
                 RecordAndShow($"黑体一键上升", LogType.Modification, TB_Modification);
-                communication.WriteVariable(true, "PlcInIO[334]");
+                connection.WriteVariable(true, "PlcInIO[334]");
             }
         }
         private void btn旋转夹爪1下降1_Click(object sender, EventArgs e)
@@ -1476,7 +1492,7 @@ namespace FT
             if (result == DialogResult.Yes)
             {
                 RecordAndShow($"钧舵夹爪1气缸下降", LogType.Modification, TB_Modification);
-                communication.WriteVariable(true, "PlcInIO[537]");
+                connection.WriteVariable(true, "PlcInIO[537]");
             }
         }
         private void btn旋转夹爪2下降1_Click(object sender, EventArgs e)
@@ -1485,7 +1501,7 @@ namespace FT
             if (result == DialogResult.Yes)
             {
                 RecordAndShow($"钧舵夹爪2气缸下降", LogType.Modification, TB_Modification);
-                communication.WriteVariable(true, "PlcInIO[539]");
+                connection.WriteVariable(true, "PlcInIO[539]");
             }
         }
         private void btn旋转夹爪3下降1_Click(object sender, EventArgs e)
@@ -1494,7 +1510,7 @@ namespace FT
             if (result == DialogResult.Yes)
             {
                 RecordAndShow($"钧舵夹爪3气缸下降", LogType.Modification, TB_Modification);
-                communication.WriteVariable(true, "PlcInIO[541]");
+                connection.WriteVariable(true, "PlcInIO[541]");
             }
         }
         private void btn旋转夹爪4下降1_Click(object sender, EventArgs e)
@@ -1503,7 +1519,7 @@ namespace FT
             if (result == DialogResult.Yes)
             {
                 RecordAndShow($"钧舵夹爪4气缸下降", LogType.Modification, TB_Modification);
-                communication.WriteVariable(true, "PlcInIO[543]");
+                connection.WriteVariable(true, "PlcInIO[543]");
             }
         }
 
@@ -1513,7 +1529,7 @@ namespace FT
             if (result == DialogResult.Yes)
             {
                 RecordAndShow($"钧舵夹爪一键下料", LogType.Modification, TB_Modification);
-                communication.WriteVariable(true, "PlcInIO[150]");
+                connection.WriteVariable(true, "PlcInIO[150]");
             }
         }
         #endregion
@@ -1527,12 +1543,12 @@ namespace FT
 
         private void BTN报警复位_Click(object sender, EventArgs e)
         {
-            communication.WriteVariable(true, "PlcInIO[0]");
+            connection.WriteVariable(true, "PlcInIO[0]");
         }
 
         private void BTN蜂鸣停止_Click(object sender, EventArgs e)
         {
-            communication.WriteVariable(true, "PlcInIO[1]");
+            connection.WriteVariable(true, "PlcInIO[1]");
         }
 
         private void BTN查看修改历史_Click(object sender, EventArgs e)
@@ -1561,7 +1577,7 @@ namespace FT
             {
                 loginForm.Close();
                 //关闭通信端口
-                communication.Compolet.Close();
+                connection.Compolet.Close();
             }
             catch (Exception)
             {
@@ -1586,7 +1602,7 @@ namespace FT
         {
             if (double.TryParse(valueBox.Text, out double value))
             {
-                if (communication.WriteVariable(value, (string)valueBox.Tag))
+                if (connection.WriteVariable(value, (string)valueBox.Tag))
                 {
                     valueBox.Text = "";
                     return true;
@@ -1609,7 +1625,7 @@ namespace FT
             {
                 if (value >= min)
                 {
-                    if (communication.WriteVariable(value, (string)valueBox.Tag))
+                    if (connection.WriteVariable(value, (string)valueBox.Tag))
                     {
                         valueBox.Text = "";
                         return true;
@@ -1639,7 +1655,7 @@ namespace FT
             {
                 if (value >= min && value <= max)
                 {
-                    if (communication.WriteVariable(value, (string)valueBox.Tag))
+                    if (connection.WriteVariable(value, (string)valueBox.Tag))
                     {
                         valueBox.Text = "";
                         return true;
@@ -1667,14 +1683,14 @@ namespace FT
         private void BTN手动操作_MouseDown(object sender, MouseEventArgs e)
         {
             Button button = (Button)sender; 
-            communication.WriteVariable(true, (string)button.Tag);
+            connection.WriteVariable(true, (string)button.Tag);
             RecordAndShow($"手动操作 [{button.Name.Substring(3)}] 按下", LogType.Modification, TB_Modification);
         }
 
         private void BTN手动操作_MouseUp(object sender, MouseEventArgs e)
         {
             Button button = (Button)sender; 
-            communication.WriteVariable(false, (string)button.Tag);
+            connection.WriteVariable(false, (string)button.Tag);
         }
         //吸嘴夹爪工装次数统计清零
         private void BTN计数清零_Click(object sender, EventArgs e)
@@ -1683,7 +1699,7 @@ namespace FT
             if (result == DialogResult.Yes)
             {
                 Button button = (Button)sender;
-                communication.WriteVariable(true, (string)button.Tag);
+                connection.WriteVariable(true, (string)button.Tag);
                 RecordAndShow($"计数清零 [{button.Name.Substring(3)}]", LogType.Modification, TB_Modification);
             }
         }
@@ -1697,7 +1713,7 @@ namespace FT
         private void BTN钧舵相对旋转_MouseUp(object sender, MouseEventArgs e)
         {
             Button button = (Button)sender;
-            communication.WriteVariable(false, (string)button.Tag);
+            connection.WriteVariable(false, (string)button.Tag);
         }
 
         private void btnJD1相对旋转_MouseDown(object sender, MouseEventArgs e)
@@ -1705,10 +1721,10 @@ namespace FT
             if (txtR1旋转角度.Text != "")
             {
                 Button button = (Button)sender;
-                communication.WriteVariable(Convert.ToDouble(txtR1旋转角度.Text), "PLCInPmt[26]");
+                connection.WriteVariable(Convert.ToDouble(txtR1旋转角度.Text), "PLCInPmt[26]");
                 RecordAndShow($"[{button.Name.Substring(3)}] 旋转角度：{txtR1旋转角度.Text}", LogType.Modification, TB_Modification);
             }
-            communication.WriteVariable(true, "PlcInIO[596]");
+            connection.WriteVariable(true, "PlcInIO[596]");
         }
         
         private void btnJD2相对旋转_MouseDown(object sender, MouseEventArgs e)
@@ -1716,10 +1732,10 @@ namespace FT
             if (txtR2旋转角度.Text != "")
             {
                 Button button = (Button)sender;
-                communication.WriteVariable(Convert.ToDouble(txtR2旋转角度.Text), "PLCInPmt[27]");
+                connection.WriteVariable(Convert.ToDouble(txtR2旋转角度.Text), "PLCInPmt[27]");
                 RecordAndShow($"[{button.Name.Substring(3)}] 旋转角度：{txtR2旋转角度.Text}", LogType.Modification, TB_Modification);
             }
-            communication.WriteVariable(true, "PlcInIO[597]");
+            connection.WriteVariable(true, "PlcInIO[597]");
         }
         
         private void btnJD3相对旋转_MouseDown(object sender, MouseEventArgs e)
@@ -1727,10 +1743,10 @@ namespace FT
             if (txtR3旋转角度.Text != "")
             {
                 Button button = (Button)sender;
-                communication.WriteVariable(Convert.ToDouble(txtR3旋转角度.Text), "PLCInPmt[28]");
+                connection.WriteVariable(Convert.ToDouble(txtR3旋转角度.Text), "PLCInPmt[28]");
                 RecordAndShow($"[{button.Name.Substring(3)}] 旋转角度：{txtR3旋转角度.Text}", LogType.Modification, TB_Modification);
             }
-            communication.WriteVariable(true, "PlcInIO[598]");
+            connection.WriteVariable(true, "PlcInIO[598]");
         }
         
         private void btnJD4相对旋转_MouseDown(object sender, MouseEventArgs e)
@@ -1738,10 +1754,10 @@ namespace FT
             if (txtR4旋转角度.Text != "")
             {
                 Button button = (Button)sender; 
-                communication.WriteVariable(Convert.ToDouble(txtR4旋转角度.Text), "PLCInPmt[29]");
+                connection.WriteVariable(Convert.ToDouble(txtR4旋转角度.Text), "PLCInPmt[29]");
                 RecordAndShow($"[{button.Name.Substring(3)}] 旋转角度：{txtR4旋转角度.Text}", LogType.Modification, TB_Modification);
             }
-            communication.WriteVariable(true, "PlcInIO[599]");
+            connection.WriteVariable(true, "PlcInIO[599]");
         }
         
         //手动电机1夹爪选择
@@ -1749,12 +1765,12 @@ namespace FT
         {
             if (this.CB_选择夹爪.SelectedItem.ToString() == "夹爪1")
             {
-                communication.WriteVariable(1, "PlcInID[4]");
+                connection.WriteVariable(1, "PlcInID[4]");
             }
 
             if (this.CB_选择夹爪.SelectedItem.ToString() == "夹爪2")
             {
-                communication.WriteVariable(2, "PlcInID[4]");
+                connection.WriteVariable(2, "PlcInID[4]");
             }
         }
         #endregion
@@ -1765,12 +1781,12 @@ namespace FT
         {
             DialogResult result = MessageBox.Show(tip, "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
-                if (communication.WriteVariable(true, variableName))
+                if (connection.WriteVariable(true, variableName))
                 {
                     await Task.Delay(delay);
                     SetMessage("示教中。");
                     RecordAndShow($"{message}", LogType.Modification, TB_Modification);
-                    IsWrite = communication.WriteVariable(false, variableName);
+                    IsWrite = connection.WriteVariable(false, variableName);
                     SetMessage();
                 }
                 else
@@ -1786,12 +1802,12 @@ namespace FT
             {
                 button.BackColor = Color.LightGreen;
                 calibrationButtons.Add(button);
-                if (communication.WriteVariable(true, (string)button.Tag))
+                if (connection.WriteVariable(true, (string)button.Tag))
                 {
                     await Task.Delay(delay);
                     SetMessage("示教中。");
                     RecordAndShow($"{message}", LogType.Modification, TB_Modification);
-                    IsWrite = communication.WriteVariable(false, (string)button.Tag);
+                    IsWrite = connection.WriteVariable(false, (string)button.Tag);
                     SetMessage();
                     button.BackColor = Color.LightGreen;
                     calibrationButtons.Add(button);
@@ -1832,24 +1848,24 @@ namespace FT
                     if (WriteValue(calibrationTextBoxes[info[1]],
                         "输入错误请检查,请输入钧舵夹爪打开小位置值[40-（夹爪夹持方向产品的尺寸+4）。4指的是左右各留2mm的夹持余量，可根据实际情况进行调整]。 如：W9产品-夹爪夹持方向产品的尺寸为24mm，则输入钧舵夹爪打开小位置值为12mm；W7产品-夹爪夹持方向产品的尺寸为18mm，则输入钧舵夹爪打开小位置值为18mm。", 
                         0, 26))
-                        communication.WriteVariable(true, info[0]);
+                        connection.WriteVariable(true, info[0]);
                 }
                 else if (button.Name == "btn判断范围写入")
                 {
                     if (WriteValue(calibrationTextBoxes[info[1]], "输入错误请检查", 0))
-                        communication.WriteVariable(true, info[0]);
+                        connection.WriteVariable(true, info[0]);
                 }
                 else
                 {
                     if (WriteValue(calibrationTextBoxes[info[1]]))
-                        communication.WriteVariable(true, info[0]);
+                        connection.WriteVariable(true, info[0]);
                 }
             }
             else if (info.Length == 3)
             {
                 WriteValue(calibrationTextBoxes[info[1]]);
                 WriteValue(calibrationTextBoxes[info[2]]);
-                communication.WriteVariable(true, info[0]);
+                connection.WriteVariable(true, info[0]);
             }
         }
 
@@ -1857,7 +1873,7 @@ namespace FT
         {
             Button button = (Button)sender;
             string[] info = ((string)button.Tag).Split(';');
-            communication.WriteVariable(false, info[0]);
+            connection.WriteVariable(false, info[0]);
             RecordAndShow($"示教1值写入 [{button.Name.Substring(3)}]", LogType.Modification, TB_Modification);
         }
         //示教2
@@ -1866,9 +1882,9 @@ namespace FT
             DialogResult result = MessageBox.Show("是否选择自动模式远程-控料？", "提示", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (result == DialogResult.Yes)
             {
-                communication.WriteVariable(true, "PlcInIO[27]");
-                communication.WriteVariable(false, "PlcInIO[3]");
-                communication.WriteVariable(false, "PlcInIO[29]");
+                connection.WriteVariable(true, "PlcInIO[27]");
+                connection.WriteVariable(false, "PlcInIO[3]");
+                connection.WriteVariable(false, "PlcInIO[29]");
                 RecordAndShow($"选择自动模式远程-控料", LogType.Modification, TB_Modification);
             }
         }

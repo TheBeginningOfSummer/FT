@@ -41,7 +41,7 @@ namespace FT
         #endregion
 
         #region 读取到的哈希表
-        public Hashtable PLCIO;
+        public Hashtable PLCOutput;
         public Hashtable Location;
         public Hashtable Alarm;
         public Hashtable PLCPmt;
@@ -62,8 +62,8 @@ namespace FT
 
             #region 初始化变量
             //PLC Out IO
-            plcOutIOName = InitializeStringArray("PlcOutIO", 0, 249);
-            PLCIO = InitializeHashtable<bool>(plcOutIOName, false);
+            plcOutIOName = InitializeStringArray("PlcOutIO", 0, 299);
+            PLCOutput = InitializeHashtable<bool>(plcOutIOName, false);
             //位置信息
             plcOutLocationName = InitializeStringArray("PlcOutLocation", 0, 199);
             Location = InitializeHashtable<double>(plcOutLocationName, 0);
@@ -154,7 +154,7 @@ namespace FT
             try
             {
                 #region 方式一更新数据:直接读
-                GetValue<bool>(Compolet.GetHashtable(plcOutIOName), PLCIO);
+                GetValue<bool>(Compolet.GetHashtable(plcOutIOName), PLCOutput);
                 GetValue<double>(Compolet.GetHashtable(plcOutLocationName), Location);
                 GetValue<bool>(Compolet.GetHashtable(plcOutAlarmName), Alarm);
                 GetValue<bool>(Compolet.GetHashtable(plcOutFWName), PLCFW);

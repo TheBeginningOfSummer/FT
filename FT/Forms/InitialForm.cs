@@ -101,14 +101,14 @@ namespace FT
         public void AddSignals(int x = 15, int y = 60, int xInterval = 160, int yInterval = 25)
         {
             int count = 0;
-            AddSignal(new Point(x, y + yInterval * count), "上料X轴", new Size(20, 15), Color.Red, "FW[101]"); count++;
-            AddSignal(new Point(x, y + yInterval * count), "上料Y轴", new Size(20, 15), Color.Red, "FW[102]"); count++;
-            AddSignal(new Point(x, y + yInterval * count), "托盘实盘轴", new Size(20, 15), Color.Red, "FW[103]"); count++;
-            AddSignal(new Point(x, y + yInterval * count), "托盘倒实盘轴", new Size(20, 15), Color.Red, "FW[105]"); count++;
-            AddSignal(new Point(x, y + yInterval * count), "托盘NG盘轴", new Size(20, 15), Color.Red, "FW[104]"); count++;
-            AddSignal(new Point(x, y + yInterval * count), "托盘倒NG盘轴", new Size(20, 15), Color.Red, "FW[106]"); count++;
-            AddSignal(new Point(x, y + yInterval * count), "上料吸嘴1轴", new Size(20, 15), Color.Red, "FW[119]"); count++;
-            AddSignal(new Point(x, y + yInterval * count), "上料吸嘴2轴", new Size(20, 15), Color.Red, "FW[120]"); count++;
+            AddSignal(new Point(x, y + yInterval * count), "上料X轴", new Size(20, 15), Color.Red, "PlcOutIO[166]"); count++;
+            AddSignal(new Point(x, y + yInterval * count), "上料Y轴", new Size(20, 15), Color.Red, "PlcOutIO[167]"); count++;
+            AddSignal(new Point(x, y + yInterval * count), "托盘实盘轴", new Size(20, 15), Color.Red, "PlcOutIO[168]"); count++;
+            AddSignal(new Point(x, y + yInterval * count), "托盘倒实盘轴", new Size(20, 15), Color.Red, "PlcOutIO[170]"); count++;
+            AddSignal(new Point(x, y + yInterval * count), "托盘NG盘轴", new Size(20, 15), Color.Red, "PlcOutIO[169]"); count++;
+            AddSignal(new Point(x, y + yInterval * count), "托盘倒NG盘轴", new Size(20, 15), Color.Red, "PlcOutIO[171]"); count++;
+            AddSignal(new Point(x, y + yInterval * count), "上料吸嘴1轴", new Size(20, 15), Color.Red, "PlcOutIO[184]"); count++;
+            AddSignal(new Point(x, y + yInterval * count), "上料吸嘴2轴", new Size(20, 15), Color.Red, "PlcOutIO[185]"); count++;
             AddSignal(new Point(x, y + yInterval * count), "实盘卡盘缩回", new Size(20, 15), Color.Red, "PlcOutIO[130]"); count++;
             AddSignal(new Point(x, y + yInterval * count), "NG盘卡盘缩回", new Size(20, 15), Color.Red, "PlcOutIO[132]"); count++;
             AddSignal(new Point(x, y + yInterval * count), "上料取托盘上升", new Size(20, 15), Color.Red, "PlcOutIO[16]"); count++;
@@ -116,16 +116,16 @@ namespace FT
             AddSignal(new Point(x, y + yInterval * count), "上料吸嘴1上升", new Size(20, 15), Color.Red, "PlcOutIO[32]"); count++;
             AddSignal(new Point(x, y + yInterval * count), "上料吸嘴2上升", new Size(20, 15), Color.Red, "PlcOutIO[35]");
             x += xInterval; count = 0;
-            AddSignal(new Point(x, y + yInterval * count), "搬运平移轴", new Size(20, 15), Color.Red, "FW[107]"); count++;
+            AddSignal(new Point(x, y + yInterval * count), "翻转平移轴", new Size(20, 15), Color.Red, "PlcOutIO[172]"); count++;
             AddSignal(new Point(x, y + yInterval * count), "增广夹爪1", new Size(20, 15), Color.Red, "PlcOutIO[50]"); count++;
             AddSignal(new Point(x, y + yInterval * count), "增广夹爪2", new Size(20, 15), Color.Red, "PlcOutIO[57]"); count++;
             AddSignal(new Point(x, y + yInterval * count), "翻转翻0°", new Size(20, 15), Color.Red, "PlcOutIO[48]"); count++;
             AddSignal(new Point(x, y + yInterval * count), "平移吸嘴1/2下降", new Size(20, 15), Color.Red, "PlcOutIO[41]"); count++;
             AddSignal(new Point(x, y + yInterval * count), "平移吸嘴3/4下降", new Size(20, 15), Color.Red, "PlcOutIO[43]");
             x += xInterval; count = 0;
-            AddSignal(new Point(x, y + yInterval * count), "搬运X轴", new Size(20, 15), Color.Red, "FW[108]"); count++;
-            AddSignal(new Point(x, y + yInterval * count), "搬运Y轴", new Size(20, 15), Color.Red, "FW[109]"); count++;
-            AddSignal(new Point(x, y + yInterval * count), "搬运Z轴", new Size(20, 15), Color.Red, "FW[110]"); count++;
+            AddSignal(new Point(x, y + yInterval * count), "搬运X轴", new Size(20, 15), Color.Red, "PlcOutIO[173]"); count++;
+            AddSignal(new Point(x, y + yInterval * count), "搬运Y轴", new Size(20, 15), Color.Red, "PlcOutIO[174]"); count++;
+            AddSignal(new Point(x, y + yInterval * count), "搬运Z轴", new Size(20, 15), Color.Red, "PlcOutIO[175]"); count++;
             AddSignal(new Point(x, y + yInterval * count), "钧舵1激活完成", new Size(20, 15), Color.Red, "PlcOutIO[190]"); count++;
             AddSignal(new Point(x, y + yInterval * count), "钧舵2激活完成", new Size(20, 15), Color.Red, "PlcOutIO[191]"); count++;
             AddSignal(new Point(x, y + yInterval * count), "钧舵3激活完成", new Size(20, 15), Color.Red, "PlcOutIO[192]"); count++;
@@ -135,18 +135,18 @@ namespace FT
             AddSignal(new Point(x, y + yInterval * count), "钧舵夹爪3上升", new Size(20, 15), Color.Red, "PlcOutIO[68]"); count++;
             AddSignal(new Point(x, y + yInterval * count), "钧舵夹爪4上升", new Size(20, 15), Color.Red, "PlcOutIO[70]");
             x += xInterval; count = 0;
-            AddSignal(new Point(x, y + yInterval * count), "工位平移1轴", new Size(20, 15), Color.Red, "FW[111]"); count++;
-            AddSignal(new Point(x, y + yInterval * count), "工位平移2轴", new Size(20, 15), Color.Red, "FW[112]"); count++;
-            AddSignal(new Point(x, y + yInterval * count), "工位平移3轴", new Size(20, 15), Color.Red, "FW[113]"); count++;
-            AddSignal(new Point(x, y + yInterval * count), "工位平移4轴", new Size(20, 15), Color.Red, "FW[114]"); count++;
-            AddSignal(new Point(x, y + yInterval * count), "黑体升降1轴", new Size(20, 15), Color.Red, "FW[115]"); count++;
-            AddSignal(new Point(x, y + yInterval * count), "黑体升降2轴", new Size(20, 15), Color.Red, "FW[116]"); count++;
-            AddSignal(new Point(x, y + yInterval * count), "黑体升降3轴", new Size(20, 15), Color.Red, "FW[117]"); count++;
-            AddSignal(new Point(x, y + yInterval * count), "黑体升降4轴", new Size(20, 15), Color.Red, "FW[118]"); count++;
-            AddSignal(new Point(x, y + yInterval * count), "热辐射版1轴", new Size(20, 15), Color.Red, "FW[121]"); count++;
-            AddSignal(new Point(x, y + yInterval * count), "热辐射版2轴", new Size(20, 15), Color.Red, "FW[122]"); count++;
-            AddSignal(new Point(x, y + yInterval * count), "热辐射版3轴", new Size(20, 15), Color.Red, "FW[123]"); count++;
-            AddSignal(new Point(x, y + yInterval * count), "热辐射版4轴", new Size(20, 15), Color.Red, "FW[124]");
+            AddSignal(new Point(x, y + yInterval * count), "工位平移1轴", new Size(20, 15), Color.Red, "PlcOutIO[176]"); count++;
+            AddSignal(new Point(x, y + yInterval * count), "工位平移2轴", new Size(20, 15), Color.Red, "PlcOutIO[177]"); count++;
+            AddSignal(new Point(x, y + yInterval * count), "工位平移3轴", new Size(20, 15), Color.Red, "PlcOutIO[178]"); count++;
+            AddSignal(new Point(x, y + yInterval * count), "工位平移4轴", new Size(20, 15), Color.Red, "PlcOutIO[179]"); count++;
+            AddSignal(new Point(x, y + yInterval * count), "黑体升降1轴", new Size(20, 15), Color.Red, "PlcOutIO[180]"); count++;
+            AddSignal(new Point(x, y + yInterval * count), "黑体升降2轴", new Size(20, 15), Color.Red, "PlcOutIO[181]"); count++;
+            AddSignal(new Point(x, y + yInterval * count), "黑体升降3轴", new Size(20, 15), Color.Red, "PlcOutIO[182]"); count++;
+            AddSignal(new Point(x, y + yInterval * count), "黑体升降4轴", new Size(20, 15), Color.Red, "PlcOutIO[183]"); count++;
+            AddSignal(new Point(x, y + yInterval * count), "热辐射版1轴", new Size(20, 15), Color.Red, "PlcOutIO[186]"); count++;
+            AddSignal(new Point(x, y + yInterval * count), "热辐射版2轴", new Size(20, 15), Color.Red, "PlcOutIO[187]"); count++;
+            AddSignal(new Point(x, y + yInterval * count), "热辐射版3轴", new Size(20, 15), Color.Red, "PlcOutIO[188]"); count++;
+            AddSignal(new Point(x, y + yInterval * count), "热辐射版4轴", new Size(20, 15), Color.Red, "PlcOutIO[189]");
             x += xInterval; count = 0;
             AddSignal(new Point(x, y + yInterval * count), "工位1光阑左缩回", new Size(20, 15), Color.Red, "PlcOutIO[73]"); count++;
             AddSignal(new Point(x, y + yInterval * count), "工位1光阑右伸出", new Size(20, 15), Color.Red, "PlcOutIO[112]"); count++;
@@ -184,14 +184,14 @@ namespace FT
                     Thread.Sleep(200);
                     foreach (Label item in Labels)
                     {
-                        if (connection.PLCIO.ContainsKey(item.Tag))
-                            SetLabelColor((bool)connection.PLCIO[item.Tag], item);
+                        if (connection.PLCOutput.ContainsKey(item.Tag))
+                            SetLabelColor((bool)connection.PLCOutput[item.Tag], item);
                         if (connection.PLCFW.ContainsKey(item.Tag))
                             SetLabelColor((bool)connection.PLCFW[item.Tag], item);
                     }
-                    if (connection.PLCIO.ContainsKey(completeAddress))
+                    if (connection.PLCOutput.ContainsKey(completeAddress))
                     {
-                        if ((bool)connection.PLCIO[completeAddress])
+                        if ((bool)connection.PLCOutput[completeAddress])
                         {
                             Thread.Sleep(1000);
                             Invoke(new Action(() => Close()));

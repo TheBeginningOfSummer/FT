@@ -108,6 +108,7 @@
             this.btn自动模式本地 = new System.Windows.Forms.Button();
             this.label368 = new System.Windows.Forms.Label();
             this.groupBox70 = new System.Windows.Forms.GroupBox();
+            this.LB_初始化提示 = new System.Windows.Forms.Label();
             this.LB_初始化状态 = new System.Windows.Forms.Label();
             this.LB_Connection = new System.Windows.Forms.Label();
             this.LB_手动状态 = new System.Windows.Forms.Label();
@@ -492,7 +493,6 @@
             this.btnBYZ下料位置 = new System.Windows.Forms.Button();
             this.txtBYZ当前位置 = new System.Windows.Forms.TextBox();
             this.label344 = new System.Windows.Forms.Label();
-            this.btnBYZ回原点 = new System.Windows.Forms.Button();
             this.btnBYZ视觉位置2 = new System.Windows.Forms.Button();
             this.btnBYZ视觉位置1 = new System.Windows.Forms.Button();
             this.btnBYZ上料位置 = new System.Windows.Forms.Button();
@@ -1040,6 +1040,7 @@
             this.txtBYX示教固定当前位置 = new System.Windows.Forms.TextBox();
             this.label90 = new System.Windows.Forms.Label();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.btnBYZ回原点 = new System.Windows.Forms.Button();
             this.label426 = new System.Windows.Forms.Label();
             this.txtBYZ示教上升位置 = new System.Windows.Forms.TextBox();
             this.btnBYZ示教上升位置 = new System.Windows.Forms.Button();
@@ -2868,6 +2869,7 @@
             // 
             // groupBox70
             // 
+            this.groupBox70.Controls.Add(this.LB_初始化提示);
             this.groupBox70.Controls.Add(this.LB_初始化状态);
             this.groupBox70.Controls.Add(this.LB_Connection);
             this.groupBox70.Controls.Add(this.LB_手动状态);
@@ -2883,6 +2885,18 @@
             this.groupBox70.TabStop = false;
             this.groupBox70.Text = "设备状态";
             // 
+            // LB_初始化提示
+            // 
+            this.LB_初始化提示.AutoSize = true;
+            this.LB_初始化提示.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LB_初始化提示.ForeColor = System.Drawing.Color.White;
+            this.LB_初始化提示.Location = new System.Drawing.Point(8, 217);
+            this.LB_初始化提示.Name = "LB_初始化提示";
+            this.LB_初始化提示.Size = new System.Drawing.Size(83, 17);
+            this.LB_初始化提示.TabIndex = 23;
+            this.LB_初始化提示.Tag = "PlcOutIO[246]";
+            this.LB_初始化提示.Text = "初始化提示";
+            // 
             // LB_初始化状态
             // 
             this.LB_初始化状态.AutoSize = true;
@@ -2891,6 +2905,7 @@
             this.LB_初始化状态.Name = "LB_初始化状态";
             this.LB_初始化状态.Size = new System.Drawing.Size(32, 17);
             this.LB_初始化状态.TabIndex = 15;
+            this.LB_初始化状态.Tag = "PlcOutIO[156]";
             this.LB_初始化状态.Text = "      ";
             // 
             // LB_Connection
@@ -2901,6 +2916,7 @@
             this.LB_Connection.Name = "LB_Connection";
             this.LB_Connection.Size = new System.Drawing.Size(32, 17);
             this.LB_Connection.TabIndex = 11;
+            this.LB_Connection.Tag = "PlcOutIO[155]";
             this.LB_Connection.Text = "      ";
             // 
             // LB_手动状态
@@ -2911,6 +2927,7 @@
             this.LB_手动状态.Name = "LB_手动状态";
             this.LB_手动状态.Size = new System.Drawing.Size(32, 17);
             this.LB_手动状态.TabIndex = 17;
+            this.LB_手动状态.Tag = "PlcOutIO[158]";
             this.LB_手动状态.Text = "      ";
             // 
             // LB_自动运行状态
@@ -2921,6 +2938,7 @@
             this.LB_自动运行状态.Name = "LB_自动运行状态";
             this.LB_自动运行状态.Size = new System.Drawing.Size(32, 17);
             this.LB_自动运行状态.TabIndex = 21;
+            this.LB_自动运行状态.Tag = "PlcOutIO[159]";
             this.LB_自动运行状态.Text = "      ";
             // 
             // label245
@@ -7797,7 +7815,6 @@
             this.groupBox32.Controls.Add(this.btnBYZ下料位置);
             this.groupBox32.Controls.Add(this.txtBYZ当前位置);
             this.groupBox32.Controls.Add(this.label344);
-            this.groupBox32.Controls.Add(this.btnBYZ回原点);
             this.groupBox32.Controls.Add(this.btnBYZ视觉位置2);
             this.groupBox32.Controls.Add(this.btnBYZ视觉位置1);
             this.groupBox32.Controls.Add(this.btnBYZ上料位置);
@@ -7842,7 +7859,7 @@
             // btnBYZ视觉位置3
             // 
             this.btnBYZ视觉位置3.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBYZ视觉位置3.Location = new System.Drawing.Point(112, 137);
+            this.btnBYZ视觉位置3.Location = new System.Drawing.Point(112, 47);
             this.btnBYZ视觉位置3.Margin = new System.Windows.Forms.Padding(2);
             this.btnBYZ视觉位置3.Name = "btnBYZ视觉位置3";
             this.btnBYZ视觉位置3.Size = new System.Drawing.Size(100, 24);
@@ -7900,20 +7917,6 @@
             this.label344.Size = new System.Drawing.Size(55, 15);
             this.label344.TabIndex = 48;
             this.label344.Text = "当前位置";
-            // 
-            // btnBYZ回原点
-            // 
-            this.btnBYZ回原点.BackColor = System.Drawing.SystemColors.Control;
-            this.btnBYZ回原点.Location = new System.Drawing.Point(112, 47);
-            this.btnBYZ回原点.Margin = new System.Windows.Forms.Padding(2);
-            this.btnBYZ回原点.Name = "btnBYZ回原点";
-            this.btnBYZ回原点.Size = new System.Drawing.Size(100, 24);
-            this.btnBYZ回原点.TabIndex = 45;
-            this.btnBYZ回原点.Tag = "PlcInIO[16]";
-            this.btnBYZ回原点.Text = "Z回原点";
-            this.btnBYZ回原点.UseVisualStyleBackColor = true;
-            this.btnBYZ回原点.MouseDown += new System.Windows.Forms.MouseEventHandler(this.BTN手动操作_MouseDown);
-            this.btnBYZ回原点.MouseUp += new System.Windows.Forms.MouseEventHandler(this.BTN手动操作_MouseUp);
             // 
             // btnBYZ视觉位置2
             // 
@@ -14965,6 +14968,7 @@
             // 
             // groupBox12
             // 
+            this.groupBox12.Controls.Add(this.btnBYZ回原点);
             this.groupBox12.Controls.Add(this.label426);
             this.groupBox12.Controls.Add(this.txtBYZ示教上升位置);
             this.groupBox12.Controls.Add(this.btnBYZ示教上升位置);
@@ -14979,6 +14983,18 @@
             this.groupBox12.TabIndex = 109;
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "搬运Z轴-通用";
+            // 
+            // btnBYZ回原点
+            // 
+            this.btnBYZ回原点.BackColor = System.Drawing.SystemColors.Control;
+            this.btnBYZ回原点.Location = new System.Drawing.Point(7, 88);
+            this.btnBYZ回原点.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBYZ回原点.Name = "btnBYZ回原点";
+            this.btnBYZ回原点.Size = new System.Drawing.Size(100, 24);
+            this.btnBYZ回原点.TabIndex = 76;
+            this.btnBYZ回原点.Tag = "PlcInIO[16]";
+            this.btnBYZ回原点.Text = "Z回原点";
+            this.btnBYZ回原点.UseVisualStyleBackColor = true;
             // 
             // label426
             // 
@@ -24551,7 +24567,6 @@
         private System.Windows.Forms.Button btnBYZ停止;
         private System.Windows.Forms.Button btnBYZ下行;
         private System.Windows.Forms.Button btnBYZ上行;
-        private System.Windows.Forms.Button btnBYZ回原点;
         private System.Windows.Forms.Button btnBYZ视觉位置2;
         private System.Windows.Forms.Button btnBYZ视觉位置1;
         private System.Windows.Forms.Button btnBYZ上料位置;
@@ -25880,6 +25895,8 @@
         private System.Windows.Forms.Button BTN工位2一键开启;
         private System.Windows.Forms.Button BTN工位2一键压合;
         private System.Windows.Forms.Button BTN工位1一键开启;
+        private System.Windows.Forms.Button btnBYZ回原点;
+        private System.Windows.Forms.Label LB_初始化提示;
     }
 }
 
